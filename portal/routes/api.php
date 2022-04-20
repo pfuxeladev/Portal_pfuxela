@@ -1,0 +1,40 @@
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+Route::post('register', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'register']);
+Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'login']);
+
+Route::group(['middleware'=>['api']],function () {
+    Route::get('/user', [\App\Http\Controllers\API\BACK\AuthenticationController::class, 'user']);
+    Route::post('/logout', [\App\Http\Controllers\API\BACK\AuthenticationController::class, 'logout']);
+    Route::resource('/fabricante', App\Http\Controllers\API\BACK\FabricanteController::class);
+    Route::get('/marca', [App\Http\Controllers\API\BACK\ViaturaController::class, 'getMarca']);
+    Route::get('todasRotas', [App\Http\Controllers\API\BACK\RotaController::class, 'todasRotas']);
+    Route::get('listarViaturas', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'ListarViaturas']);
+    Route::get('/listProject', [App\Http\Controllers\API\Back\ProjectoController::class, 'listProjecto']);
+Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::class, 'getCombustivel']);
+    Route::get('getQtdDisponivel/{viatura_id}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'getQtdDisponivel']);
+    Route::get('viaturaHistorico/{id}', [App\Http\Controllers\API\BACK\ViaturaController::class, 'HistoricoAbastecimento']);
+    Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'RotaByProject']);
+
+    Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'show']);
+
+    Route::apiResources(
+        ['viaturas' => App\Http\Controllers\API\BACK\ViaturaController::class,
+        'modelos' => App\Http\Controllers\API\BACK\ModeloController::class,
+        'Rotas'=>App\Http\Controllers\API\BACK\RotaController::class,
+        'bombas'=> App\Http\Controllers\API\BACK\BombaController::class,
+        'Abastecimento'=>App\Http\Controllers\API\BACK\AbastecimentoController::class,
+        'Ordems'=>App\Http\Controllers\API\BACK\OrdemController::class,
+        'Projectos'=>App\Http\Controllers\API\BACK\ProjectoController::class,
+        'Ocorrencia'=>App\Http\Controllers\API\BACK\OcorrenciaController::class
+        ]);
+});
+
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return auth()->user();
+
+
+// });
