@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API\BACK;
 
 use App\Http\Controllers\Controller;
-use App\Models\Abastecimento;
+use App\Models\abastecimento;
 use Illuminate\Http\Request;
 use App\Models\Ordem;
 use App\Models\Viatura;

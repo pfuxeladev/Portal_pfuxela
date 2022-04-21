@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\BACK;
 use App\Http\Controllers\Controller;
 use App\Models\projecto;
 use App\Models\Rota;
+use App\Models\Horario;
 use Illuminate\Http\Request;
 
 class RotaController extends Controller
@@ -45,13 +46,21 @@ class RotaController extends Controller
 
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
-        $rota->horaInicio = $request->horaInicio;
-        $rota->horaFim = $request->horaFim;
         $rota->distancia_km = $request->distancia_km;
-        $rota->periodo = $request->periodo;
+        $rota->turno = $request->periodo;
         $rota->tipoRota = $request->tipoRota;
         $rota->projecto_id  = $request->projecto_id ;
         $rota->save();
+
+        foreach($rota->horarios as $horario){
+            Horario::create([
+                'rota_id' => $rota->id,
+                'horaPartida' => $horario->horaPartida,
+                'horaChegada' => $horario->horaChegada,
+                'turno' => $horario->turno,
+            ]);
+        }
+
         if ($rota) {
            return response()->json(['message'=>'rota adicionada com sucesso'],200);
         }else{
