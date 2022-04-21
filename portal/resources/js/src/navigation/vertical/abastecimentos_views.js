@@ -4,6 +4,11 @@ export default [
     icon: 'folderIcon',
     children: [
       {
+        title: 'Orders',
+        route: 'Orders',
+        icon: 'mapIcon',
+      },
+      {
         title: 'Supply',
         route: 'Supply',
         icon: 'circleIcon',

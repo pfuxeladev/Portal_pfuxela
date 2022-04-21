@@ -71,31 +71,16 @@ class AbastecimentoController extends Controller
         ],[
             'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico'
         ]);
-
+        
+        $uuid = Str::uuid()->toString();
         $viatura = Viatura::where('id', $request->viatura_id)->first();
         if ($viatura->qtd_disponivel > 0 && $viatura->locate == 'IN') {
             return response()->json(['erro'=>'essa viatura ja foi abastecida e ainda nao saiu do parque', 'err'=>true]);
         }else if($viatura->$viatura == 'OUT'){
             return response()->json(['erro'=>'essa viatura ja foi abastecida e est&aacute; fora do parque', 'err'=>true]);
         }else{
-            $ordem = new Ordem();
-            $counter = 10000;
-            $uuid = Str::uuid()->toString();
             $totalCombustivel = 0;
-
-            $last_order = Ordem::latest()->first();
-            if (!empty($last_order)) {
-                $new_code = ($last_order->codigo_ordem + 1);
-                $ordem->codigo_ordem = $new_code;
-            } else {
-                $ordem->codigo_ordem = $counter;
-            }
-            $ordem->refs = $uuid;
-            $ordem->bombas_id = $request->bombas_id;
-            $ordem->projecto_id = $request->projecto_id;
-            $ordem->viatura_id = $request->viatura_id;
-            $ordem->createdBy = auth()->user()->id;
-            $ordem->save();
+            $ordem = Ordem::where('refs', $request->refs)->first();
             // inicializar rotas
             $rt_total = 0;
             foreach ($request->abastecer as $key => $item) {

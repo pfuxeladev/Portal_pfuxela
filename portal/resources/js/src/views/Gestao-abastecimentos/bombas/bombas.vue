@@ -86,15 +86,19 @@
           ref="my-modal"
           size="lg"
           hide-footer
-          title="Nova Bomba"
+          title="Bomba"
         >
           <form
-            @submit.prevent="onSubmit"
+            @submit.prevent="editMode ? onSubmit : onUpdateForm"
             @reset="onReset"
             @keydown="form.onKeydown($event)"
           >
             <b-row>
               <b-col cols="4">
+                <input
+                  v-model="form.id"
+                  type="hidden"
+                >
                 <b-form-group
                   id="input-group-1"
                   label="Nome da bomba:"
@@ -142,14 +146,14 @@
                     v-model="form.tipo_bomba"
                     :options="['interna', 'externa']"
                   />
-                   <small
+                  <small
                     v-if="form.errors.has('tipo_bomba')"
                     class=" alert text-danger"
                     v-html="form.errors.get( 'tipo_bomba')"
                   />
                 </b-form-group>
               </b-col>
-                <b-col cols="12">
+              <b-col cols="12">
                 <b-form-checkbox-group
                   v-model="form.combustivel_tipos"
                   :options="options"
@@ -164,16 +168,16 @@
                 <hr>
               </b-col>
 
-               <b-col cols="12">
+              <b-col cols="12">
                 <h4 class="card-title">
                   Responsavel
                 </h4>
-                <span v-on:click="add()" class="btn btn-sm btn-outline-primary">
-                    <i class="fas fa-plus"></i>
+                <span class="btn btn-sm btn-outline-primary" v-on:click="add()">
+                  <i class="fas fa-plus"></i>
                 </span>
               </b-col>
             </b-row>
-            <b-row ref="responsavel" v-for="(resp, index) in form.responsavel" :key="index">
+            <b-row v-for="(resp, index) in form.responsavel" ref="responsavel" :key="index">
               <b-col cols="6">
                 <b-form-group
                   id="input-group-2"
@@ -246,9 +250,9 @@
                 </b-form-group>
               </b-col>
               <b-col>
-                  <span class="btn btn-sm btn-outline-primary" @click="rmRow">
-                      <i class="fas fa-remove"></i>
-                  </span>
+                <span class="btn btn-sm btn-outline-primary" @click="rmRow">
+                  <i class="fas fa-remove"></i>
+                </span>
               </b-col>
             </b-row>
             <b-row>
@@ -392,7 +396,7 @@ export default {
         contacto_alt: '',
       })
     },
-     rmRow(index) {
+    rmRow(index) {
       this.form.responsavel.splice(index, 1)
     },
     returnBombas() {
@@ -426,6 +430,30 @@ export default {
       this.$refs['my-modal'].show()
       this.form.fill(b)
       this.editMode = true
+    },
+    onUpdateForm() {
+      this.$Progress.start()
+      this.form.put(`/api/bombas/${this.form.id}`).then(res => {
+        this.$swal.fire({
+          icon: 'success',
+          title: res.data.message,
+        })
+        Fire.$emit('afterAction')
+        this.form.clear()
+        this.form.reset()
+        this.$Progress.finish()
+        this.returnBombas()
+        this.hideModal()
+      }).catch(err => {
+        if (err) {
+          this.$swal.fire({
+            icon: 'error',
+            title: 'Erro ao tentar adicionar!',
+          })
+        }
+
+        this.$Progress.fail()
+      })
     },
     onReset(event) {
       event.preventDefault()

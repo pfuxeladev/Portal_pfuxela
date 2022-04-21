@@ -46,4 +46,12 @@ export default
       authOnly: true,
     },
   },
+  {
+    path: '/Supply/Orders',
+    name: 'Orders',
+    component: () => import('@/views/Gestao-abastecimentos/ordens/lista.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
 ]

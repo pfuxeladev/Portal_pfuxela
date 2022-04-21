@@ -92,8 +92,9 @@
       </b-row>
     </div>
     <b-modal ref="my-modal" size="lg" hide-footer title="Nova ocorrencia">
-      <b-form @submit.prevent="onSubmit" @reset="onReset">
+      <b-form @submit.prevent="editMode ? onSubmit : onUpdate" @reset="onReset">
         <b-row>
+            <input type="hidden" v-model="form.id">
           <b-col cols="12" md="6" lg="6">
             <b-form-group label="viatura:">
               <v-select v-model="form.viatura_id"></v-select>
@@ -272,7 +273,7 @@ export default {
   },
   setup(props, { emit }) {
     const PIQUECT_STORE_MODULE_NAME = 'Picket';
-
+    const editMode = false
     // Register module
     if (!store.hasModule(PIQUECT_STORE_MODULE_NAME)) {
       store.registerModule(PIQUECT_STORE_MODULE_NAME, storeOcorrenciaModule)
@@ -297,6 +298,7 @@ export default {
     ]
 
     function showModal() {
+      this.editMode = false
       this.$refs['my-modal'].show()
     }
 
@@ -313,6 +315,7 @@ export default {
       JSON.parse(
         JSON.stringify(
           new Form({
+            id: '',
             viatura_id: '',
             motorista_id: '',
             descricao_ocorrencia: '',
@@ -339,7 +342,38 @@ export default {
           this.form.reset()
           this.$Progress.finish()
         })
-        .catch(err => {})
+        .catch(err => {
+          if (err) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+          }
+        })
+    }
+    function onUpdate() {
+      this.form
+        .put(`/api/Ocorrencia/${this.form.id}`)
+        .then(response => {
+          this.$swal.fire({
+            icon: 'success',
+            title: response.data.success,
+          })
+          emit('afterAction')
+          this.form.clear()
+          this.form.reset()
+          this.$Progress.finish()
+        })
+        .catch(err => {
+          if (err) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+          }
+
+          this.$Progress.fail()
+        })
     }
     const options = {
       time: {
@@ -384,6 +418,7 @@ export default {
       onReset,
       form,
       onSubmit,
+      onUpdate,
       statusOptions,
       options,
       // Extra Filters
