@@ -22,4 +22,8 @@ class Rota extends Model
     public function viatura(){
         return $this->belongsToMany(viatura::class);
     }
+
+    public function horario(){
+        return $this->hasMany(Horario::class);
+    }
 }

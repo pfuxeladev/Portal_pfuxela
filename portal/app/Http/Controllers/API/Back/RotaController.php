@@ -18,7 +18,7 @@ class RotaController extends Controller
     public function index()
     {
 
-        return $this->rota->with(['projecto'])->orderBy('nome_rota', 'asc')->paginate(15);
+        return $this->rota->with(['projecto', 'horario'])->orderBy('nome_rota', 'asc')->paginate(15);
     }
 
     function todasRotas()
@@ -36,10 +36,11 @@ class RotaController extends Controller
         $this->validate($request, [
             'nome_rota'=>'required|string|max:191',
             'endereco'=>'required|string|max:255',
-            'horaInicio'=>'required',
-            'horaFim'=>'required',
             'distancia_km'=>'required|numeric|min:0',
-            'periodo'=>'required',
+            'horario'=>'required|array|min:1',
+                'horario.*.horaPartida'=>'required',
+                'horario.*.horaChegada'=>'required',
+                'horario.*.turno'=>'required',
             'tipoRota'=>'required',
             'projecto_id'=>'required|integer'
         ], ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]);
@@ -47,17 +48,17 @@ class RotaController extends Controller
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
         $rota->distancia_km = $request->distancia_km;
-        $rota->turno = $request->periodo;
+        $rota->turno = $request->turno;
         $rota->tipoRota = $request->tipoRota;
         $rota->projecto_id  = $request->projecto_id ;
         $rota->save();
 
-        foreach($rota->horarios as $horario){
+        foreach($request->horario as $horario){
             Horario::create([
                 'rota_id' => $rota->id,
-                'horaPartida' => $horario->horaPartida,
-                'horaChegada' => $horario->horaChegada,
-                'turno' => $horario->turno,
+                'horaPartida' => $horario['horaPartida'],
+                'horaChegada' => $horario['horaChegada'],
+                'turno' => $horario['turno'],
             ]);
         }
 
