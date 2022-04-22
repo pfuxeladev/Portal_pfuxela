@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
 use App\Models\motorista;
+use App\Models\Person;
 use Illuminate\Http\Request;
 
 class MotoristaController extends Controller
@@ -27,7 +28,30 @@ class MotoristaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'cartaConducao' => 'required|string|min:5',
+            'bilheteIdentidade' => 'required|string|min:9',
+            'person_id' => 'required|numeric|min:1',
+        ]);
+
+        $motorista = new motorista();
+
+        $motorista->carta_conducao = $request->cartaConducao;
+        $motorista->bilhete_identidade = $request->bilheteIdentidade;
+        
+        $person = Person::where('id', $request->person_id)->first();
+
+        if(empty($person)){
+            return response()->json(['error' => 'A pessoa desejada não existe'], 404);
+        }
+
+        $motorista->person_id = $request->person_id;
+        $motorista->save();
+
+        return response()->json(['message' => 'Motorista criado com sucesso'], 201);
+
+
     }
 
     /**
