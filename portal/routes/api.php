@@ -10,7 +10,6 @@ Route::group(['middleware'=>['api']],function () {
     Route::get('/user', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'user']);
     Route::post('/logout', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'logout']);
     Route::resource('/fabricante', App\Http\Controllers\API\Back\FabricanteController::class);
-    Route::get('/marca', [App\Http\Controllers\API\Back\ViaturaController::class, 'getMarca']);
     Route::get('todasRotas', [App\Http\Controllers\API\Back\RotaController::class, 'todasRotas']);
     Route::get('listarViaturas', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'ListarViaturas']);
     Route::get('/listProject', [App\Http\Controllers\API\Back\ProjectoController::class, 'listProjecto']);
@@ -29,7 +28,10 @@ Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::
         'Abastecimento'=>App\Http\Controllers\API\Back\AbastecimentoController::class,
         'Ordems'=>App\Http\Controllers\API\Back\OrdemController::class,
         'Projectos'=>App\Http\Controllers\API\Back\ProjectoController::class,
-        'Ocorrencia'=>App\Http\Controllers\API\Back\OcorrenciaController::class
+        'Ocorrencia'=>App\Http\Controllers\API\Back\OcorrenciaController::class,
+        'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
+        'marca' => App\Http\Controllers\API\MarcaController::class,
+        'combustivel' => App\Http\Controllers\API\CombustivelController::class,
         ]);
 });
 
