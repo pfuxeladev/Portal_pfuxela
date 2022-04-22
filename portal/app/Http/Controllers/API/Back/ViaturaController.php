@@ -26,10 +26,7 @@ class ViaturaController extends Controller
         return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
     }
 
-    function getMarca()
-    {
-        return Response::json(marca::all(), 200);
-    }
+
     function getCombustivel(){
         return Response::json(combustivel::all(), 200);
     }
