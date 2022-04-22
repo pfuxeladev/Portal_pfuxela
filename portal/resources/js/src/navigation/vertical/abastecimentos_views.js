@@ -14,11 +14,6 @@ export default [
         icon: 'circleIcon',
       },
       {
-        title: 'New supply order',
-        route: 'New supply order',
-        icon: 'circleIcon',
-      },
-      {
         title: 'Fuel pumps',
         route: 'Fuel pumps',
         icon: 'circleIcon',

@@ -15,10 +15,11 @@ export default function useOrdersList() {
   // Table Handlers
   const tableColumns = [
     { key: 'cogido_ordem', sortable: true },
-    { key: 'data', sortable: true },
+    { key: 'data_de_emissao', sortable: true },
     { key: 'bomba', sortable: true },
     { key: 'status', sortable: true },
-    { key: 'actions' },
+    { Key: 'emitida_por', sortable: true },
+    { key: 'acções' },
   ]
   const perPage = ref(10)
   const totalOrders = ref(0)
@@ -61,10 +62,10 @@ export default function useOrdersList() {
         status: statusFilter.value,
       })
       .then(response => {
-        const { Orderss, total } = response.data
+        const Orders = response.data
 
-        callback(Orderss)
-        totalOrders.value = total
+        callback(Orders.data)
+        totalOrders.value = Orders.total
       })
       .catch(() => {
         toast({

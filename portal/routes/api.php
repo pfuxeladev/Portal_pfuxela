@@ -20,6 +20,7 @@ Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::
     Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'RotaByProject']);
 
     Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'show']);
+    Route::get('/Abastecer/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'abastecer']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
