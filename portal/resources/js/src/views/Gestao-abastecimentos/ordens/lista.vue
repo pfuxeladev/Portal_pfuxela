@@ -6,7 +6,11 @@
       </b-card-header>
       <b-card-body>
         <b-row>
-          <b-col cols="12" md="4" class="mb-md-0 mb-2">
+          <b-col
+            cols="12"
+            md="4"
+            class="mb-md-0 mb-2"
+          >
             <label>Estado</label>
             <v-select
               v-model="statusFilter"
@@ -18,7 +22,11 @@
               @input="(val) => $emit('update:roleFilter', val)"
             />
           </b-col>
-          <b-col cols="12" md="4" class="mb-md-0 mb-2">
+          <b-col
+            cols="12"
+            md="4"
+            class="mb-md-0 mb-2"
+          >
             <b-form-group>
               <h5>Filtrar por intervalos</h5>
               <flat-pickr
@@ -28,7 +36,11 @@
               />
             </b-form-group>
           </b-col>
-          <b-col cols="12" md="4" class="mb-md-0 mb-2">
+          <b-col
+            cols="12"
+            md="4"
+            class="mb-md-0 mb-2"
+          >
             <label>Bombas</label>
             <v-select
               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
@@ -38,7 +50,10 @@
         </b-row>
       </b-card-body>
     </b-card>
-    <b-card no-body class="mb-0">
+    <b-card
+      no-body
+      class="mb-0"
+    >
       <div class="m-2">
         <!-- Table Top -->
         <b-row>
@@ -60,14 +75,20 @@
           </b-col>
 
           <!-- Search -->
-          <b-col cols="12" md="6">
+          <b-col
+            cols="12"
+            md="6"
+          >
             <div class="d-flex align-items-center justify-content-end">
               <b-form-input
                 v-model="searchQuery"
                 class="d-inline-block mr-1"
                 placeholder="Search..."
               />
-              <b-button variant="primary">
+              <b-button
+                variant="primary"
+                @click="showModal"
+              >
                 <span class="text-nowrap">Nova Ordem</span>
               </b-button>
             </div>
@@ -85,24 +106,82 @@
         show-empty
         empty-text="Nenhuma ordem listada"
         :sort-desc.sync="isSortDirDesc"
-      />
-       <div class="mx-2 mb-2">
-        <b-row>
+      >
+        <template #cell(cogido_ordem)="data">
+          {{ data.item.codigo_ordem }}
+        </template>
+        <template #cell(data_de_emissao)="data">
+          {{ dateTime(data.item.created_at) }}
+        </template>
+        <template #cell(bomba)="data">
+          {{ data.item.bombas.nome_bombas }}
+        </template>
+        <template #cell(status)="data">
+          {{ data.item.estado }}
+        </template>
+        <template #cell(emitida_por)="data">
+          {{ data.item.created_by.name }}
+        </template>
+        <template #cell(acções)="data">
+          <b-dropdown
+            variant="link"
+            no-caret
+            :right="$store.state.appConfig.isRTL"
+          >
+            <template #button-content>
+              <feather-icon
+                icon="MoreVerticalIcon"
+                size="16"
+                class="align-middle text-body"
+              />
+            </template>
+            <b-dropdown-item
+              :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
+            >
+              <feather-icon icon="FileTextIcon" />
+              <span class="align-middle ml-50">Details</span>
+            </b-dropdown-item>
 
+            <b-dropdown-item
+              :to="{ name: 'apps-users-edit', params: { id: data.item.refs } }"
+            >
+              <feather-icon icon="EditIcon" />
+              <span class="align-middle ml-50">Edit</span>
+            </b-dropdown-item>
+
+            <b-dropdown-item>
+              <feather-icon icon="TrashIcon" />
+              <span class="align-middle ml-50">Delete</span>
+            </b-dropdown-item>
+          </b-dropdown>
+        </template>
+      </b-table>
+      <div class="mx-2 mb-2">
+        <b-row>
           <b-col
             cols="12"
             sm="6"
-            class="d-flex align-items-center justify-content-center justify-content-sm-start"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-start
+            "
           >
-            <span class="text-muted">mostrar {{ dataMeta.from }} para {{ dataMeta.to }} de {{ dataMeta.of }} entradas</span>
+            <span
+              class="text-muted"
+            >mostrar {{ dataMeta.from }} para {{ dataMeta.to }} de
+              {{ dataMeta.of }} entradas</span>
           </b-col>
           <!-- Pagination -->
           <b-col
             cols="12"
             sm="6"
-            class="d-flex align-items-center justify-content-center justify-content-sm-end"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-end
+            "
           >
-
             <b-pagination
               v-model="currentPage"
               :total-rows="totalOrders"
@@ -126,12 +205,44 @@
                 />
               </template>
             </b-pagination>
-
           </b-col>
-
         </b-row>
       </div>
     </b-card>
+    <b-modal
+      ref="OrderModal"
+      size="lg"
+      hide-footer
+      title="Criar Ordem de Abastecimento"
+    >
+      <b-form
+        @submit.prevent="onSubmit"
+      >
+        <b-row>
+          <b-col cols="12" md="12">
+            <b-form-group label="selecionar bombas a emitir ordem">
+              <v-select
+                v-model="form.bomba_id"
+                label="nome_bombas"
+                :options="bombas"
+                :reduce="bombas => bombas.id"
+              />
+            </b-form-group>
+          </b-col>
+          <b-col cols="6" md="6" xl="6">
+            <b-button
+              variant="outline-danger"
+              @click="hideModal"
+            >Fechar</b-button>
+          </b-col>
+          <b-col cols="6" md="6" xl="6">
+            <b-button type="submit" variant="outline-primary">
+              criar ordem
+            </b-button>
+          </b-col>
+        </b-row>
+      </b-form>
+    </b-modal>
   </section>
 </template>
 
@@ -151,15 +262,18 @@ import {
   BPagination,
   BCardBody,
   BCardHeader,
+  BForm,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
+import { ref, onUnmounted } from '@vue/composition-api'
+import moment from 'moment'
+import Form from 'vform'
 import useOrdersList from './orderList.js'
 import store from '@/store'
-import { ref, onUnmounted } from '@vue/composition-api'
 import storeOrderModule from './storeOrderModule'
-export default {
 
+export default {
   components: {
     BCard,
     BCardHeader,
@@ -175,25 +289,65 @@ export default {
     BPagination,
     BFormGroup,
     BCardBody,
-
+    BForm,
     flatPickr,
     vSelect,
+  },
+  created() {
+    this.$http.get('/api/bombas').then(res => {
+      this.bombas = res.data
+    })
   },
   setup() {
     const ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply'
     // Register module
-    if (!store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) store.registerModule(ORDER_SUPPLY_STORE_MODULE_NAME, storeOrderModule)
+    if (!store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.registerModule(ORDER_SUPPLY_STORE_MODULE_NAME, storeOrderModule) }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME)
+      if (store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME) }
     })
     const statusOptions = [
-      { label: 'pendente', value: 'pendente' },
-      { label: 'aprovado', value: 'aprovado' },
-      { label: 'cancelada', value: 'cancelada' },
+      {
+        label: 'pendente',
+        value: 'pendente',
+      },
+      {
+        label: 'aprovado',
+        value: 'aprovado',
+      },
+      {
+        label: 'cancelada',
+        value: 'cancelada',
+      },
     ]
 
+    function dateTime(value) {
+      return moment(value).format('DD/MM/YYYY hh:mm')
+    }
+    function showModal() {
+      this.$refs.OrderModal.show()
+    }
+    function hideModal() {
+      this.$refs.OrderModal.hide()
+    }
+    function toggleModal() {
+      this.$refs.OrderModal.toggle('#toggle-btn')
+    }
+
+    function onSubmit() {
+      this.form.post('./../api/Ordems').then(res => {
+        //   console.log(res.data)
+        this.$router.push({ name: 'New-supply-order', params: { refs: res.data.refs } })
+      }).catch(err => {
+        if (err) {
+          this.$swal.fire({
+            icon: 'error',
+            title: err.data.erro,
+          })
+        }
+      })
+    }
     const {
       fetchOrders,
       tableColumns,
@@ -230,14 +384,24 @@ export default {
       refetchData,
 
       // Extra Filters
+      bombas: [],
       rangeDate,
       bombasFilter,
       statusOptions,
       statusFilter,
+      dateTime,
+      showModal,
+      hideModal,
+      toggleModal,
+      onSubmit,
+      form: new Form({
+        bombas_id: null,
+      }),
     }
   },
 }
 </script>
+
 <style lang="scss">
 @import "@core/scss/vue/libs/vue-flatpicker.scss";
 </style>

@@ -16,14 +16,6 @@
                         <b-form-input v-model="searchQuery" class="d-inline-block mr-1" placeholder="pesquisar..." />
                     </div>
                 </b-col>
-                <b-col cols="6" md="6">
-
-                    <b-link :to="{ name: 'New supply order'}" class="font-weight-bold">
-                        Novo abastecimento
-                    </b-link>
-
-                </b-col>
-
             </b-row>
         </div>
         <b-row>

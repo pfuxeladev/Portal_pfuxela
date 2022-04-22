@@ -9,7 +9,7 @@ export default {
     fetchOrders(ctx, queryParams) {
       return new Promise((resolve, reject) => {
         axios
-          .get('/api/Orders', { params: queryParams })
+          .get('/api/Ordems', { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -17,7 +17,7 @@ export default {
     fetchOrder(ctx, { id }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/Orders/${id}`)
+          .get(`/api/Ordems/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -25,7 +25,7 @@ export default {
     addViatura(ctx, orderData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/Orders', { order: orderData })
+          .post('/api/Ordems', { order: orderData })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
