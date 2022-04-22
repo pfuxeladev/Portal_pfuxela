@@ -48,7 +48,6 @@ class RotaController extends Controller
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
         $rota->distancia_km = $request->distancia_km;
-        $rota->turno = $request->turno;
         $rota->tipoRota = $request->tipoRota;
         $rota->projecto_id  = $request->projecto_id ;
         $rota->save();
