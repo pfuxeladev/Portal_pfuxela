@@ -77,10 +77,9 @@
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Edit</span>
             </b-dropdown-item>
-
             <b-dropdown-item>
-              <feather-icon icon="TrashIcon" />
-              <span class="align-middle ml-50">Delete</span>
+              <feather-icon icon="PlusCircleIcon" />
+              <span class="align-middle ml-50">alocar rotas</span>
             </b-dropdown-item>
           </b-dropdown>
         </template>
@@ -235,7 +234,7 @@ export default {
       isSortDirDesc,
       refViaturaListTable,
       refetchData,
-      
+
       statusOptions,
 
       // Extra Filters

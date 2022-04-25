@@ -49,6 +49,7 @@
             <b-form-input
               type="number"
               id="input-2"
+              step="0.001"
               v-model="form.distancia_km"
             />
             <small
@@ -128,10 +129,10 @@
 
 
         <b-col cols="12" md="12" class="mt-2">
-          <b-button type="submit" variant="outline-primary">
+          <b-button type="reset" variant="danger"> limpar campos </b-button>
+           <b-button type="submit" variant="outline-primary">
             Cadastrar
           </b-button>
-          <b-button type="reset" variant="danger"> limpar campos </b-button>
         </b-col>
       </b-row>
     </b-form>

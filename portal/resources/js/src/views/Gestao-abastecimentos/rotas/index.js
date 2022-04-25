@@ -18,18 +18,18 @@ export default function useRotaList() {
     { key: 'endereco', sortable: true },
     { key: 'distancia_km', sortable: true },
     {
-      key: 'horaInicio',
+      key: 'horaPartida',
       sortable: true,
     },
     {
-      key: 'horaFim',
+      key: 'horaChegada',
       sortable: true,
     },
     {
       key: 'projecto.name',
       sortable: true,
     },
-    { key: 'periodo', sortable: true },
+    { key: 'Tipo_da_rota', sortable: true },
     { key: 'actions' },
   ]
   const perPage = ref(10)

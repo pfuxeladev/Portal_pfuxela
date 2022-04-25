@@ -9,12 +9,16 @@ class combustivel extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'tipo_combustivel'
+    ];
+
     function viatura(){
         return $this->belongsTo(viatura::class);
     }
 
     public function bomba(){
-        return $this->belongsToMany(bomba::class, 'combustivel_bombas', 'combustivel_id', 'bomba_id');
+        return $this->belongsToMany(bomba::class, 'combustivel_bombas', 'bomba_id', 'combustivel_id');
     }
-   
+
 }

@@ -41,6 +41,7 @@
                   <th>disponibilidade</th>
                   <th>tipo</th>
                   <th>Combustivel</th>
+                  <th>Cadastrado por</th>
                   <th>
                     <i class="fas fa-cogs" />
                   </th>
@@ -53,18 +54,21 @@
                 >
                   <td>{{ 1+index }}</td>
                   <td>{{ b.nome_bombas }}</td>
-                  <td>{{ b.capacidade_bombas }}</td>
+                  <td>{{ b.capacidade }}</td>
                   <td>
-                    <span v-if="b.status == true">
+                    <span v-if="b.status == 'disponivel'">
                       <b-badge variant="success">disponivel</b-badge>
                     </span>
-                    <span v-if="b.status == false">
+                    <span v-if="b.status == 'indisponivel'">
                       <b-badge variant="danger">indiponivel</b-badge>
                     </span>
-
+                    <span v-if="b.status == 'manutencao'">
+                      <b-badge variant="danger">Sub manutencao</b-badge>
+                    </span>
                   </td>
                   <td>{{ b.tipo_bomba }}</td>
                   <td>{{b.combustivel_bombas}}</td>
+                  <td>{{b.created_by.name}}</td>
                   <td class="d-flex justify-content-around">
                     <span class="btn btn-sm btn-outline-primary">
                       <i class="fas fa-users" />
@@ -76,6 +80,7 @@
                       <i class="fas fa-wrench" />
                     </span>
                   </td>
+
                 </tr>
               </tbody>
             </table>
@@ -89,7 +94,7 @@
           title="Bomba"
         >
           <form
-            @submit.prevent="editMode ? onSubmit : onUpdateForm"
+            @submit.prevent="editMode ? onUpdateForm(): onSubmit() "
             @reset="onReset"
             @keydown="form.onKeydown($event)"
           >
@@ -311,6 +316,7 @@ import
 Form
 from 'vform'
 
+
 export default {
   name: 'Bombas',
   show: true,
@@ -338,6 +344,7 @@ export default {
   },
   data() {
     return {
+      editMode: false,
       options: [{
         item: 'Gasolina',
         name: 'Gasolina',
@@ -379,6 +386,7 @@ export default {
   },
   methods: {
     showModal() {
+        this.editMode = false
       this.$refs['my-modal'].show()
       this.form.reset()
     },

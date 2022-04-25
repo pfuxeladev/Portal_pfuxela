@@ -23,9 +23,8 @@ class CreateOrdemsTable extends Migration
             $table->uuid('refs');
             $table->string('codigo_ordem');
             $table->string('estado')->default('pendente');
-            $table->foreignIdFor(Bombas::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignIdFor(projecto::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignIdFor(Viatura::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(Bombas::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(projecto::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('createdBy');
             $table->unsignedBigInteger('approvedBy')->nullable();
             $table->foreign('createdBy')->references('id')->on('users')->onDelete('cascade');

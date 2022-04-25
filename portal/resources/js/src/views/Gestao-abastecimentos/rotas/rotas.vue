@@ -74,14 +74,29 @@
         <template #cell(Tamanho)="data">
             {{data.item.distance}} km's
         </template>
-        <template #cell(Hora_de_partida)="data">
-            {{data.item.timeBegin}} hr's
+        <template #cell(horaPartida)="data">
+            <span v-for="(hr, index) in data.item.horario" :key="hr.id">
+                <span v-if="index === 0">
+                <b>Turno1</b>: {{hr.turno}}, <b>{{hr.horaPartida}}</b>hr's
+                </span>
+                 <span v-if="index === 1">
+                <b>Turno2</b>: {{hr.turno}}, <b>{{hr.horaPartida}}</b>hr's
+                </span>
+            </span>
+
         </template>
-        <template #cell(Hora_de_chegada)="data">
-            {{data.item.timeEnd}} hr's
+        <template #cell(horaChegada)="data">
+            <span v-for="(hr, index) in data.item.horario" :key="hr.id">
+                <span v-if="index === 0">
+                     <b>Turno1</b>: {{hr.turno}}, <b>{{hr.horaChegada}}</b>hr's
+                </span>
+                 <span v-if="index === 1">
+                     <b>Turno2</b>: {{hr.turno}}, <b>{{hr.horaChegada}}</b>hr's
+                </span>
+            </span>
         </template>
-        <template #cell(Turno)="data">
-            {{data.item.period}}
+        <template #cell(Tipo_da_rota)="data">
+            {{data.item.tipoRota}}
         </template>
         <!-- Column: Actions -->
         <template #cell(actions)="data">
@@ -164,6 +179,7 @@
       <b-modal
         ref="rotaModal"
         size="lg"
+        hide-footer
         title="Cadastro de rotas"
       >
         <rota-form @refetch-data="refetchData" />

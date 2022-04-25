@@ -10,23 +10,23 @@ class Bombas extends Model
     use HasFactory;
 
     protected $fillable = [
-        'refs',
         'nome_bombas',
         'tipo_bomba',
-        'capacidade_bombas',
-        'combustivel_bombas',
+        'capacidade',
         'createdBy',
         // 'updatedBy'
     ];
 
     public function responsavel(){
-        return $this->hasMany(responsavelBombas::class, 'bomba_id', 'id');
+        return $this->hasMany(responsavelBombas::class, 'bombas_id', 'id');
     }
 
     public function combustivel(){
-        return $this->belongsToMany(combustivel::class, 'bomba_id', 'combustivel_id');
+        return $this->belongsToMany(combustivel::class, 'combustivel_bombas', 'combustivel_id', 'bomba_id');
     }
 
-   
+    public function createdBy(){
+        return $this->belongsTo(User::class, 'createdBy', 'id');
+    }
 
 }

@@ -18,12 +18,11 @@ class CreateAbastecimentosTable extends Migration
         Schema::create('abastecimentos', function (Blueprint $table) {
             $table->id();
             $table->foreignUuid('refs');
-            $table->string('qtd_ant');
-            $table->string('qtd_rec');
+            $table->string('qtd_ant')->nullable();
+            $table->string('qtd_rec')->nullable();
             $table->string('file_ordem')->nullable();
             $table->foreignIdFor(Bombas::class)->nullable()->constrained()->nullOnDelete('cascade')->cascadeOnUpdate();
-            $table->foreignIdFor(Ordem::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignIdFor(Viatura::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(Ordem::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
              $table->timestamps();
         });
     }

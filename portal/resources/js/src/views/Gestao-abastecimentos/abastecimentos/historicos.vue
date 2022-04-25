@@ -38,12 +38,6 @@
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Details</span>
                             </b-dropdown-item>
-
-                            <b-dropdown-item :to="{ name: 'apps-users-edit', params: { id: data.item.refs } }">
-                                <feather-icon icon="EditIcon" />
-                                <span class="align-middle ml-50">Edit</span>
-                            </b-dropdown-item>
-
                             <b-dropdown-item>
                                 <feather-icon icon="TrashIcon" />
                                 <span class="align-middle ml-50">Delete</span>

@@ -28,7 +28,7 @@
                 class="pull-right ml-auto"
               >
                 <b-list-group>
-                  <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.email }}</b-list-group-item>
+                  <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.ordem.created_by.name }}</b-list-group-item>
                   <b-list-group-item><b>Estado</b>:<span v-if="SupplyData.ordem.estado === 'pendente'">
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>

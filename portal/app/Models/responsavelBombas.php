@@ -9,10 +9,10 @@ class responsavelBombas extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome', 'email_bomba', 'contacto', 'contacto_alt', 'bomba_id', 'createdBy', 'updatedBy'];
+    protected $fillable = ['nome', 'email_bomba', 'contacto', 'contacto_alt', 'bombas_id', 'createdBy', 'updatedBy'];
 
     public function bomba(){
-        return $this->belongsTo(Bombas::class, 'bomba_id', 'id');
+        return $this->belongsTo(Bombas::class, 'bombas_id', 'id');
     }
 
     public function order(){

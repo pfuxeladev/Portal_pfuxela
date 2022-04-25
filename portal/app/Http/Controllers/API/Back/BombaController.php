@@ -19,7 +19,7 @@ class BombaController extends Controller
     }
     public function index()
     {
-        return Bombas::with(['responsavel'])->get();
+        return Bombas::with(['responsavel', 'createdBy', 'combustivel'])->get();
     }
 
     /**
@@ -30,12 +30,12 @@ class BombaController extends Controller
      */
     public function store(Request $request)
     {
-        $uuid = Str::uuid()->toString();
+        // $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
         $this->validate($request, [
             'nome_bombas'=>'required|string',
-            'capacidade_bombas'=>'required| string',
+            'capacidade'=>'required| string',
             'tipo_bomba'=>'required|string',
             'responsavel'=>'required|array|min:1',
             'responsavel*nome'=>'required|string',
@@ -52,14 +52,13 @@ class BombaController extends Controller
 
 
         $bombas = $this->bombas->create([
-            'refs'=>$uuid,
             'nome_bombas'=>$request->nome_bombas,
-            'capacidade_bombas'=>$request->capacidade_bombas,
-            'combustivel_bombas'=>json_encode($request->combustivel_tipos),
+            'capacidade'=>$request->capacidade,
             'tipo_bomba'=>$request->tipo_bomba,
             'createdBy'=>auth()->user()->id,
             // 'updatedBy'=>auth()->user()->id,
         ]);
+
 if ($bombas) {
        $bomba = Bombas::where('id', $bombas->id)->first();
 
@@ -69,7 +68,7 @@ if ($bombas) {
                     'email_bomba'=>$resp['email_bomba'][$key],
                     'contacto'=>$resp['contacto'][$key],
                     'contacto_alt'=>$resp['contacto_alt'][$key],
-                    'bomba_id'=>$bomba->id,
+                    'bombas_id'=>$bomba->id,
                     'createdBy'=>auth()->user()->id,
                     'updatedBy'=>auth()->user()->id,
                 ]);

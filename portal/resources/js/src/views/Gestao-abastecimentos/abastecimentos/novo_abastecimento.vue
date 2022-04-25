@@ -25,17 +25,17 @@
           >
             <b-row>
               <b-col
-                md="6"
-                xl="6"
+                md="12"
+                xl="12"
               >
-                <b-form-group label="Nova Ordem de Abastecimento" />
+               <b>Refs</b>:  {{form.ordem_id}}
               </b-col>
+              <hr>
             </b-row>
             <b-row>
-              <!-- basic select -->
               <b-col
                 md="6"
-                xl="3"
+                xl="6"
               >
                 <b-form-group label="Selecionar projecto base">
                   <v-select
@@ -68,24 +68,6 @@
                     v-if="form.errors.has('viatura_id')"
                     class=" alert text-danger"
                     v-html="form.errors.get( 'viatura_id')"
-                  />
-                </b-form-group>
-              </b-col>
-              <b-col
-                md="6"
-                xl="3"
-              >
-                <b-form-group label="Selecionar a bomba">
-                  <v-select
-                    v-model="form.bombas_id"
-                    label="nome_bombas"
-                    :options="bombas"
-                    :reduce="(bombas) => bombas.id"
-                  />
-                  <small
-                    v-if="form.errors.has('bombas_id')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'bombas_id')"
                   />
                 </b-form-group>
               </b-col>
@@ -284,7 +266,7 @@ export default {
       bombas: [],
       form: new Form({
         viatura_id: null,
-        bombas_id: null,
+        ordem_id: this.$route.params.refs,
         projecto_id: null,
         abastecer: [{
           rota_id: null,

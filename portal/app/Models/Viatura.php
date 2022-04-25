@@ -35,6 +35,8 @@ class Viatura extends Model
     }
 
     function abastecimento(){
-        return $this->hasMany(abastecimento::class);
+        return $this->belongsToMany(abastecimento::class, 'abastecimento_viaturas', 'viatura_id', 'abastecimento_id');
     }
+   
+
 }

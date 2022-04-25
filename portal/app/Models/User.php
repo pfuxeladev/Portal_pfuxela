@@ -26,6 +26,9 @@ class User extends Authenticatable
     public function ordem(){
         return $this->hasMany(Ordem::class, 'createdBy', 'id');
     }
+    public function bomba(){
+        return $this->hasMany(Bombas::class, 'createdBy', 'id');
+    }
 
     protected $fillable = [
         'name',

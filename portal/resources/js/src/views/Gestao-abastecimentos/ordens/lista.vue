@@ -117,7 +117,13 @@
           {{ data.item.bombas.nome_bombas }}
         </template>
         <template #cell(status)="data">
+             <b-badge
+            pill
+            :variant="`light-${resolveUserStatusVariant(data.item.status)}`"
+            class="text-capitalize"
+          >
           {{ data.item.estado }}
+             </b-badge>
         </template>
         <template #cell(emitida_por)="data">
           {{ data.item.created_by.name }}
@@ -139,19 +145,21 @@
               :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="FileTextIcon" />
-              <span class="align-middle ml-50">Details</span>
+              <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
 
             <b-dropdown-item
-              :to="{ name: 'apps-users-edit', params: { id: data.item.refs } }"
+              :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />
-              <span class="align-middle ml-50">Edit</span>
+              <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
 
-            <b-dropdown-item>
-              <feather-icon icon="TrashIcon" />
-              <span class="align-middle ml-50">Delete</span>
+            <b-dropdown-item
+            :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
+            >
+              <feather-icon icon="FilePlusIcon" />
+              <span class="align-middle ml-50">ad.mais</span>
             </b-dropdown-item>
           </b-dropdown>
         </template>
@@ -309,6 +317,10 @@ export default {
     })
     const statusOptions = [
       {
+        label: 'aberta',
+        value: 'aberta',
+      },
+      {
         label: 'pendente',
         value: 'pendente',
       },
@@ -338,7 +350,7 @@ export default {
     function onSubmit() {
       this.form.post('./../api/Ordems').then(res => {
         //   console.log(res.data)
-        this.$router.push({ name: 'New-supply-order', params: { refs: res.data.refs } })
+        this.$router.push({ name: 'New-supply-order', params: { refs: res.data } })
       }).catch(err => {
         if (err) {
           this.$swal.fire({

@@ -62,7 +62,7 @@ class AbastecimentoController extends Controller
         $totalAbastecer = 0;
         $this->validate($request, [
             'viatura_id' => 'required|integer|exists:viaturas,id',
-            'bombas_id' => 'required|integer|exists:bombas,id',
+            // 'bombas_id' => 'required|integer|exists:bombas,id',
             'projecto_id' => 'required|integer',
             'abastecer' => 'required|array|min:1',
             'abastecer.*.rota_id' => 'required|integer|exists:rotas,id',
@@ -71,16 +71,13 @@ class AbastecimentoController extends Controller
         ],[
             'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico'
         ]);
-        
+
         $uuid = Str::uuid()->toString();
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        if ($viatura->qtd_disponivel > 0 && $viatura->locate == 'IN') {
-            return response()->json(['erro'=>'essa viatura ja foi abastecida e ainda nao saiu do parque', 'err'=>true]);
-        }else if($viatura->$viatura == 'OUT'){
-            return response()->json(['erro'=>'essa viatura ja foi abastecida e est&aacute; fora do parque', 'err'=>true]);
-        }else{
+
             $totalCombustivel = 0;
-            $ordem = Ordem::where('refs', $request->refs)->first();
+            $ordem = Ordem::where('refs', $request->ordem_id)->first();
+            // return $ordem->id;
             // inicializar rotas
             $rt_total = 0;
             foreach ($request->abastecer as $key => $item) {
@@ -89,8 +86,7 @@ class AbastecimentoController extends Controller
 
                 $rota = Rota::where('id', $item['rota_id'])->get();
 
-                foreach ($rota as $key => $rt) {
-                    if ($viatura->capacidade_tanque < $totalAbastecer && ($rt->distancia_km * $viatura->capacidade_media) < $totalAbastecer) {
+                    // if ($viatura->capacidade_tanque < $totalAbastecer) {
                         $abastecimento_rota[$key] = Abastecimento_rota::create([
                             'ordem_id' => $ordem->id,
                             'rota_id' => $item['rota_id'],
@@ -98,10 +94,10 @@ class AbastecimentoController extends Controller
                             'turno' => $item['turno'],
                             'razao_abastecimento' => $item['observacao']
                         ]);
-                    } else {
-                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err'=>true]);
-                    }
-                }
+                    // } else {
+                    //     return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err'=>true]);
+                    // }
+
 
 
                 $totalCombustivel += $item['qtd_abastecer'];
@@ -127,7 +123,7 @@ class AbastecimentoController extends Controller
                 $abastecimento->save();
             }
             return response()->json(['success' => 'submetido com sucesso','err'=>false]);
-        }
+
     }
 
     /**
@@ -138,7 +134,7 @@ class AbastecimentoController extends Controller
      */
     public function show($refs)
     {
-        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'viatura', 'ordem.abastecimento_rota.rota'])->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->join('users', 'ordems.createdBy', '=', 'users.id')->where('abastecimentos.refs', $refs)->first();
+        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy'])->where('abastecimentos.refs', $refs)->first();
 
         return response()->json($abastecimento, 200);
     }
