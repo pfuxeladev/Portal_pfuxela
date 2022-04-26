@@ -1,293 +1,185 @@
 <template>
-  <div id="bombas">
+<div id="bombas">
     <section>
-      <b-card no-body>
-        <b-card-header class="pb-50">
-          <h5>Filtros</h5>
-          <span class="floa-right pull-right" />
-          <b-button
-            variant="outline-primary"
-            @click="showModal()"
-          >
-            Adicionar nova
-          </b-button>
-        </b-card-header>
-        <b-card-body>
-          <b-row>
-            <b-col
-              cols="12"
-              md="6"
-              class="mb-md-0 mb-2"
-            >
-              <label>Bombas Registadas</label>
-              <v-select />
-            </b-col>
+        <b-card no-body>
+            <b-card-header class="pb-50">
+                <h5>Filtros</h5>
+                <span class="floa-right pull-right" />
+                <b-button variant="outline-primary" @click="showModal()">
+                    Adicionar nova
+                </b-button>
+            </b-card-header>
+            <b-card-body>
+                <b-row>
+                    <b-col cols="12" md="6" class="mb-md-0 mb-2">
+                        <label>Bombas Registadas</label>
+                        <v-select />
+                    </b-col>
 
-          </b-row>
-        </b-card-body>
-      </b-card>
-      <b-card
-        no-body
-        class="mb-0"
-      >
-        <b-row>
-          <div class="col-12 col-md-12 table-responsive">
-            <table class="table table-striped table-bordered table-inverse">
-              <thead class="thead-inverse">
-                <tr>
-                  <th>#</th>
-                  <th>Nome da bomba</th>
-                  <th>Capacidade</th>
-                  <th>disponibilidade</th>
-                  <th>tipo</th>
-                  <th>Combustivel</th>
-                  <th>Cadastrado por</th>
-                  <th>
-                    <i class="fas fa-cogs" />
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr
-                  v-for="(b, index) in bombas"
-                  :key="b.id"
-                >
-                  <td>{{ 1+index }}</td>
-                  <td>{{ b.nome_bombas }}</td>
-                  <td>{{ b.capacidade }}</td>
-                  <td>
-                    <span v-if="b.status == 'disponivel'">
-                      <b-badge variant="success">disponivel</b-badge>
-                    </span>
-                    <span v-if="b.status == 'indisponivel'">
-                      <b-badge variant="danger">indiponivel</b-badge>
-                    </span>
-                    <span v-if="b.status == 'manutencao'">
-                      <b-badge variant="danger">Sub manutencao</b-badge>
-                    </span>
-                  </td>
-                  <td>{{ b.tipo_bomba }}</td>
-                  <td>{{b.combustivel_bombas}}</td>
-                  <td>{{b.created_by.name}}</td>
-                  <td class="d-flex justify-content-around">
-                    <span class="btn btn-sm btn-outline-primary">
-                      <i class="fas fa-users" />
-                    </span>
-                    <span class="btn btn-sm btn-outline-warning ml-1" v-on:click="openUpdate(b)">
-                      <i class="fas fa-edit" />
-                    </span>
-                    <span class="btn btn-sm btn-outline-danger ml-1">
-                      <i class="fas fa-wrench" />
-                    </span>
-                  </td>
-
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </b-row>
-        <b-modal
-          id="formBombas"
-          ref="my-modal"
-          size="lg"
-          hide-footer
-          title="Bomba"
-        >
-          <form
-            @submit.prevent="editMode ? onUpdateForm(): onSubmit() "
-            @reset="onReset"
-            @keydown="form.onKeydown($event)"
-          >
+                </b-row>
+            </b-card-body>
+        </b-card>
+        <b-card no-body class="mb-0">
             <b-row>
-              <b-col cols="4">
-                <input
-                  v-model="form.id"
-                  type="hidden"
-                >
-                <b-form-group
-                  id="input-group-1"
-                  label="Nome da bomba:"
-                  label-for="input-1"
-                >
-                  <b-form-input
-                    id="input-1"
-                    v-model="form.nome_bombas"
-                    type="text"
-                    placeholder="Digite o nome da bomba"
-                  />
-                  <small
-                    v-if="form.errors.has('nome_bombas')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'nome_bombas')"
-                  />
+                <div class="col-12 col-md-12 table-responsive">
+                    <table class="table table-striped table-bordered table-inverse">
+                        <thead class="thead-inverse">
+                            <tr>
+                                <th>#</th>
+                                <th>Nome da bomba</th>
+                                <th>Capacidade</th>
+                                <th>disponibilidade</th>
+                                <th>tipo</th>
+                                <th>Combustivel</th>
+                                <th>Cadastrado por</th>
+                                <th>
+                                    <i class="fas fa-cogs" />
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(b, index) in bombas" :key="b.id">
+                                <td>{{ 1+index }}</td>
+                                <td>{{ b.nome_bombas }}</td>
+                                <td>{{ b.capacidade }}</td>
+                                <td>
+                                    <span v-if="b.status == 'disponivel'">
+                                        <b-badge variant="success">disponivel</b-badge>
+                                    </span>
+                                    <span v-if="b.status == 'indisponivel'">
+                                        <b-badge variant="danger">indiponivel</b-badge>
+                                    </span>
+                                    <span v-if="b.status == 'manutencao'">
+                                        <b-badge variant="danger">Sub manutencao</b-badge>
+                                    </span>
+                                </td>
+                                <td>{{ b.tipo_bomba }}</td>
+                                <td>
+                                    <span v-for="comb in b.combustivel" :key="comb.id">
+                                        {{comb.tipo_combustivel}},
 
-                </b-form-group>
-              </b-col>
-              <b-col cols="4">
-                <b-form-group
-                  id="input-group-1"
-                  label="Capacidade:"
-                  label-for="input-1"
-                >
-                  <b-form-input
-                    id="input-1"
-                    v-model="form.capacidade_bombas"
-                    type="text"
-                  />
-                  <small
-                    v-if="form.errors.has('capacidade_bombas')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'capacidade_bombas')"
-                  />
-                </b-form-group>
-              </b-col>
-              <b-col cols="4">
-                <b-form-group
-                  id="input-group-1"
-                  label="Tipo:"
-                  label-for="input-1"
-                >
-                  <v-select
-                    v-model="form.tipo_bomba"
-                    :options="['interna', 'externa']"
-                  />
-                  <small
-                    v-if="form.errors.has('tipo_bomba')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'tipo_bomba')"
-                  />
-                </b-form-group>
-              </b-col>
-              <b-col cols="12">
-                <b-form-checkbox-group
-                  v-model="form.combustivel_tipos"
-                  :options="options"
-                  class="mb-1"
-                  value-field="item"
-                  text-field="name"
-                  disabled-field="notEnabled"
-                />
-                <div class="mb-1">
-                  Selected: <strong>{{ form.combustivel_tipos }}</strong>
+                                        </span>
+                                </td>
+                                <td>{{b.created_by.name}}</td>
+                                <td class="d-flex justify-content-around">
+                                    <span class="btn btn-sm btn-outline-primary">
+                                        <i class="fas fa-users" />
+                                    </span>
+                                    <span class="btn btn-sm btn-outline-warning ml-1" v-on:click="openUpdate(b)">
+                                        <i class="fas fa-edit" />
+                                    </span>
+                                    <span v-if="b.tipo_bomba ==='interna'" class="btn btn-sm btn-outline-success ml-1">
+                                        <i class="fas fa-gas-pump" />
+                                    </span>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <hr>
-              </b-col>
-
-              <b-col cols="12">
-                <h4 class="card-title">
-                  Responsavel
-                </h4>
-                <span class="btn btn-sm btn-outline-primary" v-on:click="add()">
-                  <i class="fas fa-plus"></i>
-                </span>
-              </b-col>
             </b-row>
-            <b-row v-for="(resp, index) in form.responsavel" ref="responsavel" :key="index">
-              <b-col cols="6">
-                <b-form-group
-                  id="input-group-2"
-                  label="Nome do responsavel:"
-                  label-for="input-2"
-                >
-                  <b-form-input
-                    id="input-2"
-                    v-model="resp.nome"
-                    type="text"
-                  />
-                  <!-- <small
+            <b-modal id="formBombas" ref="my-modal" size="lg" hide-footer title="Bomba">
+                <form @submit.prevent="editMode ? onUpdateForm(): onSubmit() " @reset="onReset" @keydown="form.onKeydown($event)">
+                    <b-row>
+                        <b-col cols="4">
+                            <input v-model="form.id" type="hidden">
+                            <b-form-group id="input-group-1" label="Nome da bomba:" label-for="input-1">
+                                <b-form-input id="input-1" v-model="form.nome_bombas" type="text" placeholder="Digite o nome da bomba" />
+                                <small v-if="form.errors.has('nome_bombas')" class=" alert text-danger" v-html="form.errors.get( 'nome_bombas')" />
+
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="4">
+                            <b-form-group id="input-group-1" label="Capacidade:" label-for="input-1">
+                                <b-form-input id="input-1" v-model="form.capacidade" type="text" />
+                                <small v-if="form.errors.has('capacidade')" class=" alert text-danger" v-html="form.errors.get( 'capacidade')" />
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="4">
+                            <b-form-group id="input-group-1" label="Tipo:" label-for="input-1">
+                                <v-select v-model="form.tipo_bomba" :options="['interna', 'externa']" />
+                                <small v-if="form.errors.has('tipo_bomba')" class=" alert text-danger" v-html="form.errors.get( 'tipo_bomba')" />
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="12">
+                            <b-form-checkbox-group v-model="form.combustivel_tipos" :options="options" class="mb-1" value-field="item" text-field="name" disabled-field="notEnabled" />
+                            <div class="mb-1">
+                                Selected: <strong>{{ form.combustivel_tipos }}</strong>
+                            </div>
+                            <hr>
+                        </b-col>
+
+                        <b-col cols="12">
+                            <h4 class="card-title">
+                                Responsavel
+                            </h4>
+                            <span class="btn btn-sm btn-outline-primary" v-on:click="add()">
+                                <i class="fas fa-plus"></i>
+                            </span>
+                        </b-col>
+                    </b-row>
+                    <b-row v-for="(resp, index) in form.responsavel" ref="responsavel" :key="index">
+                        <b-col cols="6">
+                            <b-form-group id="input-group-2" label="Nome do responsavel:" label-for="input-2">
+                                <b-form-input id="input-2" v-model="resp.nome" type="text" />
+                                <!-- <small
                     v-if="form.responsavel[index].errors.has('nome')"
                     class=" alert text-danger"
                     v-html="form.responsavel[index].errors.get( 'nome')"
                   /> -->
-                </b-form-group>
-              </b-col>
-              <b-col cols="6">
-                <b-form-group
-                  id="input-group-3"
-                  label="Email:"
-                  label-for="input-3"
-                >
-                  <b-form-input
-                    id="input-3"
-                    v-model="resp.email_bomba"
-                    type="email"
-                    placeholder="Digite endereco"
-                  />
-                  <!-- <small
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="6">
+                            <b-form-group id="input-group-3" label="Email:" label-for="input-3">
+                                <b-form-input id="input-3" v-model="resp.email_bomba" type="email" placeholder="Digite endereco" />
+                                <!-- <small
                     v-if="form.responsavel[index].errors.has('email_bomba')"
                     class=" alert text-danger"
                     v-html="form.responsavel[index].errors.get( 'email_bomba')"
                   /> -->
-                </b-form-group>
-              </b-col>
-              <b-col cols="6">
-                <b-form-group
-                  id="input-group-4"
-                  label="Contacto:"
-                  label-for="input-4"
-                >
-                  <b-form-input
-                    id="input-4"
-                    v-model="resp.contacto"
-                    type="tel"
-                    placeholder="Digite contacto"
-                  />
-                  <!-- <small
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="6">
+                            <b-form-group id="input-group-4" label="Contacto:" label-for="input-4">
+                                <b-form-input id="input-4" v-model="resp.contacto" type="tel" placeholder="Digite contacto" />
+                                <!-- <small
                     v-if="form.responsavel[index].errors.has('contacto')"
                     class=" alert text-danger"
                     v-html="form.responsavel[index].errors.get( 'contacto')"
                   /> -->
-                </b-form-group>
-              </b-col>
-              <b-col cols="6">
-                <b-form-group
-                  id="input-group-4"
-                  label="Contacto alternativo:"
-                  label-for="input-4"
-                >
-                  <b-form-input
-                    id="input-4"
-                    v-model="resp.contacto_alt"
-                    type="tel"
-                    placeholder="Digite contacto"
-                  />
+                            </b-form-group>
+                        </b-col>
+                        <b-col cols="6">
+                            <b-form-group id="input-group-4" label="Contacto alternativo:" label-for="input-4">
+                                <b-form-input id="input-4" v-model="resp.contacto_alt" type="tel" placeholder="Digite contacto" />
 
-                </b-form-group>
-              </b-col>
-              <b-col>
-                <span class="btn btn-sm btn-outline-primary" @click="rmRow">
-                  <i class="fas fa-remove"></i>
-                </span>
-              </b-col>
-            </b-row>
-            <b-row>
+                            </b-form-group>
+                        </b-col>
+                        <b-col>
+                            <span class="btn btn-sm btn-outline-primary" @click="rmRow">
+                                <i class="fas fa-remove"></i>
+                            </span>
+                        </b-col>
+                    </b-row>
+                    <b-row>
 
-              <b-col cols="2">
-                <b-button
-                  class="mt-2"
-                  variant="outline-warning"
-                  block
-                  @click="toggleModal"
-                >
-                  Fechar
-                </b-button>
-              </b-col>
-              <b-col cols="10">
-                <b-button
-                  type="submit"
-                  class="mt-2 pull-right"
-                  variant="outline-primary"
-                >
-                  {{ editMode ? "Actualizar" : "Adicionar" }}
-                </b-button>
-              </b-col>
-            </b-row>
-          </form>
+                        <b-col cols="2">
+                            <b-button class="mt-2" variant="outline-warning" block @click="toggleModal">
+                                Fechar
+                            </b-button>
+                        </b-col>
+                        <b-col cols="10">
+                            <b-button type="submit" class="mt-2 pull-right" variant="outline-primary">
+                                {{ editMode ? "Actualizar" : "Adicionar" }}
+                            </b-button>
+                        </b-col>
+                    </b-row>
+                </form>
 
-        </b-modal>
-      </b-card>
+            </b-modal>
+        </b-card>
     </section>
-  </div>
+</div>
 </template>
 
 <script>
@@ -315,7 +207,6 @@ import vSelect from 'vue-select'
 import
 Form
 from 'vform'
-
 
 export default {
   name: 'Bombas',
@@ -362,18 +253,16 @@ export default {
       form: new Form({
         id: null,
         nome_bombas: '',
-        capacidade_bombas: '',
+        capacidade: '',
         tipo_bomba: '',
         combustivel_tipos: [],
         //   responsavel
-        responsavel: [
-          {
-            nome: '',
-            email_bomba: '',
-            contacto: '',
-            contacto_alt: '',
-          },
-        ],
+        responsavel: [{
+          nome: '',
+          email_bomba: '',
+          contacto: '',
+          contacto_alt: '',
+        }, ],
         unit_measure: null,
 
       }),
@@ -386,7 +275,7 @@ export default {
   },
   methods: {
     showModal() {
-        this.editMode = false
+      this.editMode = false
       this.$refs['my-modal'].show()
       this.form.reset()
     },

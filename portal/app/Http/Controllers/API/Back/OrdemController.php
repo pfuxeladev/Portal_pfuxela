@@ -45,7 +45,7 @@ class OrdemController extends Controller
             }
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bomba_id;
-            $ordem->status = 'aberta';
+            $ordem->estado = 'aberta';
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 

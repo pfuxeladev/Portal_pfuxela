@@ -34,66 +34,6 @@
             </b-row>
             <b-row>
               <b-col
-                md="6"
-                xl="6"
-              >
-                <b-form-group label="Selecionar projecto base">
-                  <v-select
-                    v-model="form.projecto_id"
-                    label="name"
-                    :options="projecto"
-                    :reduce="(projecto) => projecto.id"
-                    @input="fetchRotas()"
-                  />
-                  <small
-                    v-if="form.errors.has('projecto_id')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'projecto_id')"
-                  />
-                </b-form-group>
-              </b-col>
-              <b-col
-                md="6"
-                xl="3"
-              >
-                <b-form-group label="Selecionar matricula da viatura">
-                  <v-select
-                    v-model="form.viatura_id"
-                    label="matricula"
-                    :options="viatura"
-                    :reduce="(viatura) => viatura.id"
-                    @input="getQtd"
-                  />
-                  <small
-                    v-if="form.errors.has('viatura_id')"
-                    class=" alert text-danger"
-                    v-html="form.errors.get( 'viatura_id')"
-                  />
-                </b-form-group>
-              </b-col>
-              <b-col
-                md="6"
-                xl="3"
-              >
-                <!-- with helper text -->
-                <b-form-group
-                  label="Qtd disponivel"
-                  label-for="Qtd em litros"
-                  description="Quantidade disponivel no tanque"
-                >
-                  <b-form-input
-                    v-model="rec_abast"
-                    type="number"
-                    placeholder="Qtd em litros"
-                    readonly
-                  />
-
-                </b-form-group>
-              </b-col>
-
-            </b-row>
-            <b-row>
-              <b-col
                 cols="12"
                 md="12"
                 xl="12"
@@ -106,6 +46,7 @@
                           <th class="text-danger">
                             <i class="fas fa-remove" />
                           </th>
+                          <th>viatura(matricula)</th>
                           <th>Rota</th>
                           <th>Qtd(<small class="text-lowercase">ltr</small>)</th>
                           <th>Turno(manh&atilde;/tarde)</th>
@@ -127,7 +68,16 @@
 
                           </td>
                           <td style="width:30%">
+                              <v-select
+                            v-model="abs.viatura_id"
+                            label="matricula"
+                            :options="viatura"
+                            :reduce="(viatura) => viatura.id"
+                        />
+                        </td>
+                          <td style="width:30%">
                             <v-select
+                              multiple
                               v-model="abs.rota_id"
                               label="nome_rota"
                               :options="rota"
@@ -162,7 +112,7 @@
                       <tfoot>
                         <tr>
                           <td
-                            colspan="5"
+                            colspan="6"
                             class="content-align-right"
                           >
                             <span
@@ -265,10 +215,10 @@ export default {
       rec_abast: null,
       bombas: [],
       form: new Form({
-        viatura_id: null,
         ordem_id: this.$route.params.refs,
         projecto_id: null,
         abastecer: [{
+          viatura_id: null,
           rota_id: null,
           qtd_abastecer: 0,
           observacao: null,
@@ -278,8 +228,8 @@ export default {
     }
   },
   created() {
-    this.fetchProjectos()
-    // this.fetchRotas()
+    // this.fetchProjectos()
+    this.fetchRotas()
     this.fetchViaturas()
     this.fetchBombas()
     // single data
@@ -288,6 +238,7 @@ export default {
   methods: {
     add() {
       this.form.abastecer.push({
+        viatura_id: null,
         rota_id: null,
         qtd_abastecer: 0,
         observacao: null,
@@ -299,7 +250,7 @@ export default {
     getQtd(a) {
       const viatura_id = a
       //   alert(viatura_id)
-      this.$http.get(`/api/getQtdDisponivel/${this.form.viatura_id}`).then(res => {
+      this.$http.get(`/api/getQtdDisponivel/${this.form.abastecer.viatura_id}`).then(res => {
         this.rec_abast = res.data
         console.log(this.rec_abast)
       }).catch(err => {
@@ -317,12 +268,12 @@ export default {
 
     fetchRotas() {
       // alert(this.form.projecto_id)
-      this.$http.get(`/api/RotaByProject/${this.form.projecto_id}`).then(res => {
+      this.$http.get('/api/todasRotas').then(res => {
         this.rota = res.data
-        if (res.data === null) {
+        if (res.data === '') {
           this.$swal.fire({
             icon: 'error',
-            title: 'Nao existe nenhuma rota alocada ao projecto!',
+            title: 'Nao existe nenhuma rota cadastrada!',
           })
         }
       }).catch(err => {

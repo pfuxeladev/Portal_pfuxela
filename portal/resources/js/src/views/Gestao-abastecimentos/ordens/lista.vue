@@ -119,7 +119,7 @@
         <template #cell(status)="data">
              <b-badge
             pill
-            :variant="`light-${resolveUserStatusVariant(data.item.status)}`"
+            :variant="`light-${resolveOrdersStatusVariant(data.item.estado)}`"
             class="text-capitalize"
           >
           {{ data.item.estado }}

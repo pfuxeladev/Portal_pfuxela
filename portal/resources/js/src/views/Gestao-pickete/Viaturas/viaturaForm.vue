@@ -1,5 +1,11 @@
 <template>
   <section class="invoice-add-wrapper mt-3">
+       <b-row class="mb-1 ml-1">
+          <b-col>
+              <b-button variant="outline-primary">criar marca da viatura</b-button>
+          </b-col>
+          <b-col></b-col>
+      </b-row>
     <b-row class="invoice-add">
       <b-col
         cols="12"
@@ -443,12 +449,7 @@
                               v-html="form.errors.get('kilometragem')"
                             />
                           </b-form-group>
-                        </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
-                          <b-form-group
+                           <b-form-group
                             id="fieldset-12"
                             label="Capacidade do tanque:"
                             label-for="input-12"
@@ -630,6 +631,7 @@ export default {
       combustivel: [],
       filename: '',
       file: null,
+      userData: JSON.parse(localStorage.getItem('userData')),
       form: new Form({
         modelo: null,
         marca_id: null,

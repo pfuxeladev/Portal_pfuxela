@@ -9,6 +9,7 @@ use App\Models\combustivelBomba;
 use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+
 class BombaController extends Controller
 {
     private $bombas;
@@ -33,62 +34,66 @@ class BombaController extends Controller
         // $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-        $this->validate($request, [
-            'nome_bombas'=>'required|string',
-            'capacidade'=>'required| string',
-            'tipo_bomba'=>'required|string',
-            'responsavel'=>'required|array|min:1',
-            'responsavel*nome'=>'required|string',
-            'responsavel*email_bomba'=>'required|string|email', 'max:255', 'unique:responsavel_bombas',
-            'responsavel*contacto'=>'required|string',
-            'responsavel*combustivel_tipos'=>'required',
+        $this->validate(
+            $request,
+            [
+                'nome_bombas' => 'required|string',
+                'capacidade' => 'required| string',
+                'tipo_bomba' => 'required|string',
+                'responsavel' => 'required|array|min:1',
+                'responsavel*nome' => 'required|string',
+                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
+                'responsavel*contacto' => 'required|string',
+                'responsavel*combustivel_tipos' => 'required',
 
-        ],
-    [
-      'required'=>'O campo :attribute &eacute; obrigat&oacute;rio',
-      'unique'=>'O :attribute Ja existe um utilizador cadastrado com esse email'
-    ]);
+            ],
+            [
+                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
+                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
+            ]
+        );
 
 
 
         $bombas = $this->bombas->create([
-            'nome_bombas'=>$request->nome_bombas,
-            'capacidade'=>$request->capacidade,
-            'tipo_bomba'=>$request->tipo_bomba,
-            'createdBy'=>auth()->user()->id,
+            'nome_bombas' => $request->nome_bombas,
+            'capacidade' => $request->capacidade,
+            'tipo_bomba' => $request->tipo_bomba,
+            'createdBy' => auth()->user()->id,
             // 'updatedBy'=>auth()->user()->id,
         ]);
 
-if ($bombas) {
-       $bomba = Bombas::where('id', $bombas->id)->first();
+        if ($bombas) {
+            $bomba = Bombas::where('id', $bombas->id)->first();
 
             foreach ($request->responsavel as $key => $resp) {
                 $responsavel = responsavelBombas::create([
-                    'nome'=>$resp['nome'][$key],
-                    'email_bomba'=>$resp['email_bomba'][$key],
-                    'contacto'=>$resp['contacto'][$key],
-                    'contacto_alt'=>$resp['contacto_alt'][$key],
-                    'bombas_id'=>$bomba->id,
-                    'createdBy'=>auth()->user()->id,
-                    'updatedBy'=>auth()->user()->id,
+                    'nome' => $resp['nome'],
+                    'email_bomba' => $resp['email_bomba'],
+                    'contacto' => $resp['contacto'],
+                    'contacto_alt' => $resp['contacto_alt'],
+                    'bombas_id' => $bomba->id,
+                    'createdBy' => auth()->user()->id,
+                    'updatedBy' => auth()->user()->id,
                 ]);
             }
 
 
             foreach ($request->combustivel_tipos as $key => $comb) {
-               $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
-               foreach ($combustivel as $key => $c) {
-                 $conustivel_bombas = combustivelBomba::create(['bomba_id'=>$bombas->id, 'combustivel_id'=>$c->id]);
-               }
+                $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
+                foreach ($combustivel as $key => $c) {
+                    $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id]);
+                }
             }
 
             if ($responsavel) {
-               return response()->json(['message'=>'cadastrou a bomba com sucesso']);
+                return response()->json(['message' => 'cadastrou a bomba com sucesso']);
             }
         }
     }
 
-    function adicionarResponsavel(Request $request){
+    function adicionarResponsavel(Request $request)
+    {
         $responsavel = new responsavelBombas();
         $responsavel->bomba()->associate($request->bomba_id);
         $responsavel->nome = $request->nome;
@@ -109,63 +114,66 @@ if ($bombas) {
      * @param  \App\Models\Bombas  $bombas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bombas $bombas)
+    public function update(Request $request, $id)
     {
         $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-        $this->validate($request, [
-            'nome_bombas'=>'required|string',
-            'capacidade_bombas'=>'required| string',
-            'tipo_bomba'=>'required|string',
-            'responsavel'=>'required|array|min:1',
-            'responsavel*nome'=>'required|string',
-            'responsavel*email_bomba'=>'required|string|email', 'max:255', 'unique:responsavel_bombas',
-            'responsavel*contacto'=>'required|string',
-            'responsavel*combustivel_tipos'=>'required',
+        $this->validate(
+            $request,
+            [
+                'nome_bombas' => 'required|string',
+                'capacidade' => 'required| string',
+                'tipo_bomba' => 'required|string',
+                'responsavel' => 'required|array|min:1',
+                'responsavel*nome' => 'required|string',
+                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
+                'responsavel*contacto' => 'required|string',
+                'responsavel*combustivel_tipos' => 'required',
 
-        ],
-    [
-      'required'=>'O campo :attribute &eacute; obrigat&oacute;rio',
-      'unique'=>'O :attribute Ja existe um utilizador cadastrado com esse email'
-    ]);
+            ],
+            [
+                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
+                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
+            ]
+        );
 
 
 
-        $bombas = $this->bombas->create([
-            'refs'=>$uuid,
-            'nome_bombas'=>$request->nome_bombas,
-            'capacidade_bombas'=>$request->capacidade_bombas,
-            'combustivel_bombas'=>json_encode($request->combustivel_tipos),
-            'tipo_bomba'=>$request->tipo_bomba,
-            'createdBy'=>auth()->user()->id,
+        $bombas = Bombas::where('id', $id)->update([
+            'nome_bombas' => $request->nome_bombas,
+            'capacidade' => $request->capacidade,
+            'tipo_bomba' => $request->tipo_bomba,
+            'createdBy' => auth()->user()->id,
             // 'updatedBy'=>auth()->user()->id,
         ]);
-if ($bombas) {
-       $bomba = Bombas::where('id', $bombas->id)->first();
+        if ($bombas) {
+            $bomba = Bombas::where('id', $id)->first();
 
             foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::create([
-                    'nome'=>$resp['nome'][$key],
-                    'email_bomba'=>$resp['email_bomba'][$key],
-                    'contacto'=>$resp['contacto'][$key],
-                    'contacto_alt'=>$resp['contacto_alt'][$key],
-                    'bomba_id'=>$bomba->id,
-                    'createdBy'=>auth()->user()->id,
-                    'updatedBy'=>auth()->user()->id,
+                $responsavel = responsavelBombas::where('bombas_id', $id)->update([
+                    'nome' => $resp['nome'],
+                    'email_bomba' => $resp['email_bomba'],
+                    'contacto' => $resp['contacto'],
+                    'contacto_alt' => $resp['contacto_alt'],
+                    'bombas_id' => $bomba->id,
+                    'createdBy' => auth()->user()->id,
+                    'updatedBy' => auth()->user()->id,
                 ]);
             }
 
+            if ($request->tipo_combustivel != null) {
 
-            foreach ($request->combustivel_tipos as $key => $comb) {
-               $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
-               foreach ($combustivel as $key => $c) {
-                 $conustivel_bombas = combustivelBomba::create(['bomba_id'=>$bombas->id, 'combustivel_id'=>$c->id]);
-               }
+                foreach ($request->combustivel_tipos as $key => $comb) {
+                    $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
+                    foreach ($combustivel as $key => $c) {
+                        $conustivel_bombas = combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id]);
+                    }
+                }
             }
 
             if ($responsavel) {
-               return response()->json(['message'=>'cadastrou a bomba com sucesso']);
+                return response()->json(['message' => 'actualizou a bomba com sucesso']);
             }
         }
     }

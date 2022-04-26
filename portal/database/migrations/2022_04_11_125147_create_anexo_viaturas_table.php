@@ -17,6 +17,7 @@ class CreateAnexoViaturasTable extends Migration
         Schema::create('anexo_viaturas', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Viatura::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('tipo_ficheiro')->nullable();
             $table->string('anexos',255);
             $table->timestamps();
         });
