@@ -32,4 +32,12 @@ export default
       authOnly: true,
     },
   },
+  {
+    path: '/Picket/drivers',
+    name: 'Drivers',
+    component: () => import('@/views/Gestao-pickete/relatorios/motoristas/lista.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
 ]

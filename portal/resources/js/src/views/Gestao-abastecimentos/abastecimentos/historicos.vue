@@ -22,10 +22,10 @@
             <b-col cols="12" xl="12" md="12" class="table-responsive">
                 <b-table ref="refAbastecimentoListTable" :items="fetchAbastecimentos" responsive :fields="tableColumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="No matching records found" :sort-desc.sync="isSortDirDesc" class="position-relative">
                     <template #cell(Ordem)="data">
-                        {{ data.item.ordem.codigo_ordem }}
+                        {{ data.item.codigo_ordem }}
                     </template>
                     <template #cell(bombas)="data">
-                        {{data.item.ordem.bombas.nome_bombas}}
+                        {{data.item.nome_bombas}}
                     </template>
 
                     <template #cell(acções)="data">

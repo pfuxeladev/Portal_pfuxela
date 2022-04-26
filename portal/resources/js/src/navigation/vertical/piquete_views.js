@@ -23,6 +23,11 @@ export default [
         route: 'Vehicle-movements',
         icon: 'plus-circleIcon',
       },
+      {
+        title: 'Drivers',
+        route: 'Drivers',
+        icon: 'plus-circleIcon',
+      },
     ],
   },
 ]

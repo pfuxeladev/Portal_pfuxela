@@ -154,13 +154,6 @@
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
-
-            <b-dropdown-item
-            :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
-            >
-              <feather-icon icon="FilePlusIcon" />
-              <span class="align-middle ml-50">ad.mais</span>
-            </b-dropdown-item>
           </b-dropdown>
         </template>
       </b-table>

@@ -304,10 +304,10 @@ export default {
           this.$Progress.fail()
         } else {
           this.$Progress.finish()
-          this.$router.push({
-            name: 'Supply',
-          })
-          this.form.reset()
+        //   this.$router.push({
+        //     name: 'Supply',
+        //   })
+        //   this.form.reset()
         }
       }).catch(err => {
         if (err) {

@@ -12,8 +12,4 @@ class abastecimento extends Model
     public function ordem(){
         return $this->belongsTo(ordem::class);
     }
-
-    public function viatura(){
-        return $this->belongsToMany(viatura::class, 'abastecimento_viaturas', 'abastecimento_id', 'viatura_id');
-    }
 }
