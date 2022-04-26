@@ -21,6 +21,10 @@ class ordem_viatura extends Model
     }
     public function ordem()
     {
-        return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
+        return $this->belongsTo(Ordem::class, 'ordem_id', 'id')->withPivot('qtd_abastecida');
+    }
+
+    public function ordemAbastecer(){
+        return $this->belongsTo(ordem::class, 'ordem_id', 'id');
     }
 }

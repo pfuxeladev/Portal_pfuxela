@@ -19,7 +19,6 @@
                   <b-list-group-item><b>Ref</b>: {{ SupplyData.refs }}</b-list-group-item>
                   <b-list-group-item><b>Ordem</b>: {{ SupplyData.ordem.codigo_ordem }}</b-list-group-item>
                   <b-list-group-item><b>Bombas</b>: {{ SupplyData.ordem.bombas.nome_bombas }} </b-list-group-item>
-                  <b-list-group-item><b>Viatura</b>: {{ SupplyData.viatura.nome_viatura }}, matricula: {{ SupplyData.viatura.matricula }}</b-list-group-item>
                   <b-list-group-item><b>Qtd de combustivel abastecido</b>: {{ SupplyData.qtd_rec }}</b-list-group-item>
                 </b-list-group>
               </b-col>
@@ -40,6 +39,22 @@
                 </b-list-group>
               </b-col>
 
+            </b-row>
+            <b-row>
+                <b-col><b>Matricula</b></b-col>
+                <b-col><b>Qtd abastecida</b></b-col>
+                <b-col><b>Data</b></b-col>
+            </b-row>
+            <b-row v-for="(vt, index) in SupplyData.ordem.ordem_viatura" :key="index">
+                <b-col cols="4" md="4">
+                    {{vt.viatura.matricula}}
+                </b-col>
+                <b-col cols="4" md="4">
+                     {{vt.qtd_abastecida}}
+                </b-col>
+                <b-col cols="4" md="4">
+                    {{vt.updated_at}}
+                </b-col>
             </b-row>
           </b-card-body>
           <b-table-lite
@@ -174,7 +189,7 @@ export default {
     const printInvoice = () => {
       window.print()
     }
-    const fields = ['Rota', 'qtd', 'razao_abastecimento', 'turno']
+    const fields = ['Rota', 'razao_abastecimento', 'turno']
 
     return {
       SupplyData,

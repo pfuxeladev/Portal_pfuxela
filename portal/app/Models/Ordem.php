@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Models\API\BACK\Abastecimento;
+use App\Models\abastecimento;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,11 +16,14 @@ class Ordem extends Model
     }
 
     public function viatura(){
-        return $this->belongsTo(Viatura::class);
+        return $this->belongsToMany(Viatura::class, 'ordem_viaturas', 'ordem_id', 'viatura_id');
+    }
+    public function ordem_viatura(){
+        return $this->hasMany(ordem_viatura::class);
     }
 
-    function abastecimento(){
-        return $this->hasMany(Abastecimento::class);
+    public function abastecimento(){
+        return $this->hasMany(abastecimento::class);
     }
     function abastecimento_rota(){
         return $this->hasMany(Abastecimento_rota::class);

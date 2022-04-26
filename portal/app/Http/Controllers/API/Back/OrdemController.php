@@ -21,7 +21,7 @@ class OrdemController extends Controller
    }
     public function index()
     {
-        return $this->ordem->with(['bombas', 'viatura', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
+        return $this->ordem->with(['bombas', 'createdBy', 'abastecimento'])->orderBy('id', 'desc')->paginate(15);
     }
 
     /**

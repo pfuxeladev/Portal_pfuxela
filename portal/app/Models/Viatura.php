@@ -34,9 +34,11 @@ class Viatura extends Model
         return $this->hasMany(anexoViaturas::class, 'viatura_id', 'id');
     }
 
-    function abastecimento(){
-        return $this->belongsToMany(abastecimento::class, 'abastecimento_viaturas', 'viatura_id', 'abastecimento_id');
+    function ordem(){
+        return $this->belongsToMany(Ordem::class, 'ordem_viaturas', 'viatura_id', 'ordem_id');
     }
-   
+
+
+
 
 }

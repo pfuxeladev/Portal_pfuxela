@@ -10,6 +10,6 @@ class abastecimento extends Model
     use HasFactory;
 
     public function ordem(){
-        return $this->belongsTo(ordem::class);
+        return $this->belongsTo(Ordem::class);
     }
 }

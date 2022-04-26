@@ -140,7 +140,7 @@ class AbastecimentoController extends Controller
      */
     public function show($refs)
     {
-        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy'])->where('abastecimentos.refs', $refs)->first();
+        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy', 'ordem.ordem_viatura.viatura'])->where('abastecimentos.refs', $refs)->first();
 
         return response()->json($abastecimento, 200);
     }
