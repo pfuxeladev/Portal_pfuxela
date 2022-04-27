@@ -31,24 +31,26 @@ tag
 tagVariant
 
 */
-import dashboard from "./dashboard";
-import appsAndPages from "./apps-and-pages";
-import others from "./others";
+import dashboard from './dashboard'
+import appsAndPages from './apps-and-pages'
+import others from './others'
 // import chartsAndMaps from "./charts-and-maps";
 // import uiElements from "./ui-elements";
 // import formAndTable from "./forms-and-table";
 // eslint-disable-next-line camelcase
-import abastecimentos_views from "./abastecimentos_views";
-import piquete_views from "./piquete_views";
+import abastecimentos_views from './abastecimentos_views'
+import piquete_views from './piquete_views'
+import utilizadores from './utilizadores'
 
 // Array of sections
 export default [
   ...dashboard,
-//   ...appsAndPages,
+  //   ...appsAndPages,
   // ...uiElements,
-//   ...formAndTable,
-//   ...chartsAndMaps,
+  //   ...formAndTable,
+  //   ...chartsAndMaps,
   ...abastecimentos_views,
   ...piquete_views,
+  ...utilizadores,
 //   ...others,
-];
+]

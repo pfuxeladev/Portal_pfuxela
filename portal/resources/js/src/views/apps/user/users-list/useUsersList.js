@@ -34,7 +34,7 @@ export default function useUsersList() {
   const sortBy = ref('id')
   const isSortDirDesc = ref(true)
   const roleFilter = ref(null)
-  const planFilter = ref(null)
+  const departmentFilter = ref(null)
   const statusFilter = ref(null)
 
   const dataMeta = computed(() => {
@@ -50,7 +50,7 @@ export default function useUsersList() {
     refUserListTable.value.refresh()
   }
 
-  watch([currentPage, perPage, searchQuery, roleFilter, planFilter, statusFilter], () => {
+  watch([currentPage, perPage, searchQuery, roleFilter, departmentFilter, statusFilter], () => {
     refetchData()
   })
 
@@ -63,7 +63,7 @@ export default function useUsersList() {
         sortBy: sortBy.value,
         sortDesc: isSortDirDesc.value,
         role: roleFilter.value,
-        plan: planFilter.value,
+        plan: departmentFilter.value,
         status: statusFilter.value,
       })
       .then(response => {
@@ -107,7 +107,6 @@ export default function useUsersList() {
   }
 
   const resolveUserStatusVariant = status => {
-    if (status === 'pending') return 'warning'
     if (status === 'active') return 'success'
     if (status === 'inactive') return 'secondary'
     return 'primary'
@@ -133,7 +132,7 @@ export default function useUsersList() {
 
     // Extra Filters
     roleFilter,
-    planFilter,
+    departmentFilter,
     statusFilter,
   }
 }

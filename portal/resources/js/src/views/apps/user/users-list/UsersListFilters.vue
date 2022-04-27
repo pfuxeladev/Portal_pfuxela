@@ -15,11 +15,11 @@
           <label>Role</label>
           <v-select
             :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-            :value="roleFilter"
+            :value="departmentFilter"
             :options="roleOptions"
             class="w-100"
             :reduce="val => val.value"
-            @input="(val) => $emit('update:roleFilter', val)"
+            @input="(val) => $emit('update:departmentFilter', val)"
           />
         </b-col>
         <b-col
@@ -71,7 +71,7 @@ export default {
     vSelect,
   },
   props: {
-    roleFilter: {
+    departmentFilter: {
       type: [String, null],
       default: null,
     },

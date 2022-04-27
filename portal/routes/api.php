@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
 Route::post('register', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'register']);
 Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'login']);
 
-Route::group(['middleware'=>['api']],function () {
+Route::middleware('auth:api')->group(function () {
     Route::get('/user', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'user']);
     Route::post('/logout', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'logout']);
     Route::resource('/fabricante', App\Http\Controllers\API\Back\FabricanteController::class);
@@ -33,6 +33,7 @@ Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::
         'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
         'marca' => App\Http\Controllers\API\MarcaController::class,
         'combustivel' => App\Http\Controllers\API\CombustivelController::class,
+        'users' => \App\Http\Controllers\API\BACK\UserController::class,
         ]);
 });
 

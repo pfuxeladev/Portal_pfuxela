@@ -12,7 +12,8 @@ import chartsMaps from './routes/charts-maps'
 import formsTable from './routes/forms-tables'
 // eslint-disable-next-line camelcase
 import abastecimentos_rotas from './routes/abastecimentos_rotas'
-import piquects_rotas from './routes/piquects_rotas'
+import piquectsRotas from './routes/piquects_rotas'
+import utilizadores from './routes/utilizadores'
 
 Vue.use(VueRouter)
 
@@ -35,7 +36,8 @@ const router = new VueRouter({
     // ...formsTable,
     // eslint-disable-next-line camelcase
     ...abastecimentos_rotas,
-    ...piquects_rotas,
+    ...piquectsRotas,
+    ...utilizadores,
     // ...others,
     {
       path: '*',

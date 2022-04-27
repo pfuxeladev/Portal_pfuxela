@@ -39,19 +39,19 @@
           @reset.prevent="resetForm"
         >
 
-          <!-- Full Name -->
+          <!-- Nome completo -->
           <validation-provider
             #default="validationContext"
-            name="Full Name"
+            name="Nome completo"
             rules="required"
           >
             <b-form-group
-              label="Full Name"
+              label="Nome completo"
               label-for="full-name"
             >
               <b-form-input
                 id="full-name"
-                v-model="userData.fullName"
+                v-model="userData.nome_completo"
                 autofocus
                 :state="getValidationState(validationContext)"
                 trim
@@ -110,19 +110,19 @@
             </b-form-group>
           </validation-provider>
 
-          <!-- Company -->
+          <!-- departamento -->
           <validation-provider
             #default="validationContext"
-            name="Contact"
+            name="Contacto"
             rules="required"
           >
             <b-form-group
-              label="Contact"
-              label-for="contact"
+              label="Contacto"
+              label-for="contacto"
             >
               <b-form-input
-                id="contact"
-                v-model="userData.contact"
+                id="contacto"
+                v-model="userData.contacto"
                 :state="getValidationState(validationContext)"
                 trim
               />
@@ -133,28 +133,6 @@
             </b-form-group>
           </validation-provider>
 
-          <!-- Company -->
-          <validation-provider
-            #default="validationContext"
-            name="Company"
-            rules="required"
-          >
-            <b-form-group
-              label="Company"
-              label-for="company"
-            >
-              <b-form-input
-                id="company"
-                v-model="userData.company"
-                :state="getValidationState(validationContext)"
-                trim
-              />
-
-              <b-form-invalid-feedback>
-                {{ validationContext.errors[0] }}
-              </b-form-invalid-feedback>
-            </b-form-group>
-          </validation-provider>
 
           <!-- Country -->
           <validation-provider
@@ -163,16 +141,16 @@
             rules="required"
           >
             <b-form-group
-              label="Country"
-              label-for="country"
+              label="Departamento"
+              label-for="departamento"
               :state="getValidationState(validationContext)"
             >
               <v-select
-                v-model="userData.country"
+                v-model="userData.departamento"
                 :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                 :options="countries"
                 :clearable="false"
-                input-id="country"
+                input-id="departamento"
               />
               <b-form-invalid-feedback :state="getValidationState(validationContext)">
                 {{ validationContext.errors[0] }}
@@ -183,11 +161,11 @@
           <!-- User Role -->
           <validation-provider
             #default="validationContext"
-            name="User Role"
+            name="Função"
             rules="required"
           >
             <b-form-group
-              label="User Role"
+              label="Função"
               label-for="user-role"
               :state="getValidationState(validationContext)"
             >
@@ -198,31 +176,6 @@
                 :reduce="val => val.value"
                 :clearable="false"
                 input-id="user-role"
-              />
-              <b-form-invalid-feedback :state="getValidationState(validationContext)">
-                {{ validationContext.errors[0] }}
-              </b-form-invalid-feedback>
-            </b-form-group>
-          </validation-provider>
-
-          <!-- Plan -->
-          <validation-provider
-            #default="validationContext"
-            name="Plan"
-            rules="required"
-          >
-            <b-form-group
-              label="Plan"
-              label-for="plan"
-              :state="getValidationState(validationContext)"
-            >
-              <v-select
-                v-model="userData.currentPlan"
-                :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                :options="planOptions"
-                :reduce="val => val.value"
-                :clearable="false"
-                input-id="plan"
               />
               <b-form-invalid-feedback :state="getValidationState(validationContext)">
                 {{ validationContext.errors[0] }}
@@ -312,14 +265,12 @@ export default {
   },
   setup(props, { emit }) {
     const blankUserData = {
-      fullName: '',
+      nome_completo: '',
       username: '',
       email: '',
       role: null,
-      currentPlan: null,
-      company: '',
-      country: '',
-      contact: '',
+      departamento: '',
+      contacto: '',
     }
 
     const userData = ref(JSON.parse(JSON.stringify(blankUserData)))
@@ -339,7 +290,6 @@ export default {
     return {
       userData,
       onSubmit,
-
       refFormObserver,
       getValidationState,
       resetForm,

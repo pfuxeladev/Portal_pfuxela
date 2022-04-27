@@ -5,7 +5,7 @@
     <user-list-add-new
       :is-add-new-user-sidebar-active.sync="isAddNewUserSidebarActive"
       :role-options="roleOptions"
-      :plan-options="planOptions"
+      :plan-options="departmentFilter"
       @refetch-data="refetchData"
     />
 
@@ -15,7 +15,7 @@
       :plan-filter.sync="planFilter"
       :status-filter.sync="statusFilter"
       :role-options="roleOptions"
-      :plan-options="planOptions"
+      :plan-options="departmentFilter"
       :status-options="statusOptions"
     />
 
@@ -278,7 +278,7 @@ export default {
       { label: 'Subscriber', value: 'subscriber' },
     ]
 
-    const planOptions = [
+    const departmentFilter = [
       { label: 'Basic', value: 'basic' },
       { label: 'Company', value: 'company' },
       { label: 'Enterprise', value: 'enterprise' },
@@ -286,7 +286,6 @@ export default {
     ]
 
     const statusOptions = [
-      { label: 'Pending', value: 'pending' },
       { label: 'Active', value: 'active' },
       { label: 'Inactive', value: 'inactive' },
     ]
@@ -342,7 +341,7 @@ export default {
       resolveUserStatusVariant,
 
       roleOptions,
-      planOptions,
+      departmentFilter,
       statusOptions,
 
       // Extra Filters
