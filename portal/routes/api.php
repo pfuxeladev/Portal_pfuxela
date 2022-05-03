@@ -7,19 +7,41 @@ Route::post('register', [\App\Http\Controllers\API\Back\AuthenticationController
 Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'login']);
 
 Route::middleware('auth:api')->group(function () {
+
+    Route::get('/permissions', [App\Http\Controllers\API\Back\UserController::class, 'permissionsIndex'])
+        ->name('permissions.index')
+        ->middleware('permission:View All Permissions');
+
+    Route::get('/roles', [App\Http\Controllers\API\Back\UserController::class, 'rolesIndex'])
+        ->name('roles.index')
+        ->middleware('permission:View All Roles');
+
+    Route::post('/roles/{role}/assign/{user}', [\App\Http\Controllers\API\Back\UserController::class, 'rolesAddUser'])
+        ->name('roles.addUser')
+        ->middleware('permission:Assign Role');
+
+    Route::post('/roles/{role}/unassign/{user}', [App\Http\Controllers\API\Back\UserController::class, 'rolesRemoveUser'])
+        ->name('roles.removeUser')
+        ->middleware('permission:Unassign Role');
+
     Route::get('/user', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'user']);
     Route::post('/logout', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'logout']);
     Route::resource('/fabricante', App\Http\Controllers\API\Back\FabricanteController::class);
     Route::get('todasRotas', [App\Http\Controllers\API\Back\RotaController::class, 'todasRotas']);
     Route::get('listarViaturas', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'ListarViaturas']);
     Route::get('/listProject', [App\Http\Controllers\API\Back\ProjectoController::class, 'listProjecto']);
-Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::class, 'getCombustivel']);
+    Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::class, 'getCombustivel']);
     Route::get('getQtdDisponivel/{viatura_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getQtdDisponivel']);
     Route::get('viaturaHistorico/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'HistoricoAbastecimento']);
     Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'RotaByProject']);
 
     Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'show']);
+
     Route::get('/Abastecer/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'abastecer']);
+
+    Route::get('/listEmpresa', [App\Http\Controllers\API\Back\UserController::class, 'listEmpresas']);
+
+    Route::get('/listDeps', [App\Http\Controllers\API\Back\UserController::class, 'listDepartamentos']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,

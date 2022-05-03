@@ -361,7 +361,7 @@
                           </b-form-group>
                           <b-form-group
                             id="input-group-10_1"
-                            label="Parazo radio difusao:"
+                            label="Prazo radio difusao:"
                             label-for="input-10_1"
                             description="Prazo do documento radio difusao."
                           >

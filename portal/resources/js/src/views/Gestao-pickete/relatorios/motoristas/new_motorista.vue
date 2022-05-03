@@ -79,7 +79,7 @@
 
       <!-- personal details -->
       <tab-content
-        title="Personal Info"
+        title="Informacao Pessoal"
         icon="feather icon-user"
       >
         <b-row>
@@ -88,29 +88,27 @@
             class="mb-2"
           >
             <h5 class="mb-0">
-              Personal Info
+              Informa&ccedil;&atilde;o Pessoal
             </h5>
-            <small class="text-muted">Enter Your Personal Info.</small>
+            <small class="text-muted">Introduza a Informa&ccedil;&atilde;o Pessoal.</small>
           </b-col>
           <b-col md="6">
             <b-form-group
               label-for="i-first-name"
-              label="First Name"
+              label="Nome e sobrenome"
             >
               <b-form-input
                 id="i-first-name"
-                placeholder="John"
               />
             </b-form-group>
           </b-col>
           <b-col md="6">
             <b-form-group
-              label="Last Name"
+              label="apelido"
               label-for="i-last-name"
             >
               <b-form-input
                 id="i-last-name"
-                placeholder="Doe"
               />
             </b-form-group>
           </b-col>
@@ -208,68 +206,6 @@
           </b-col>
         </b-row>
       </tab-content>
-
-      <!-- social link -->
-      <tab-content
-        title="Social Links"
-        icon="feather icon-link"
-      >
-        <b-row>
-          <b-col
-            cols="12"
-            class="mb-2"
-          >
-            <h5 class="mb-0">
-              Social Links
-            </h5>
-            <small class="text-muted">Enter Your Social Links</small>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Twitter"
-              label-for="i-twitter"
-            >
-              <b-form-input
-                id="i-twitter"
-                placeholder="https://twitter.com/abc"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Facebook"
-              label-for="i-facebook"
-            >
-              <b-form-input
-                id="i-facebook"
-                placeholder="https://facebook.com/abc"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Google+"
-              label-for="i-google-plus"
-            >
-              <b-form-input
-                id="i-google-plus"
-                placeholder="https://plus.google.com/abc"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="LinkedIn"
-              label-for="i-linked-in"
-            >
-              <b-form-input
-                id="i-linked-in"
-                placeholder="https://linkedin.com/abc"
-              />
-            </b-form-group>
-          </b-col>
-        </b-row>
-      </tab-content>
     </form-wizard>
     </b-col>
 </b-row>
@@ -284,7 +220,7 @@ import vSelect from "vue-select";
 import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
 import "vue-form-wizard/dist/vue-form-wizard.min.css";
 import { BRow, BCol, BFormGroup, BFormInput } from "bootstrap-vue";
-import { codeIconInfo } from "./code";
+// import { codeIconInfo } from "./code";
 
 export default {
   components: {

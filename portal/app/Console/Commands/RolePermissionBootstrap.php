@@ -42,6 +42,12 @@ class RolePermissionBootstrap extends Command
         $roles = ["SuperAdmin", "Administrator","Contabilidade","Comercial", "Piquete", "Tecnologias", "RH"];
 
         $permissions = [
+            "View All Users",
+            "Edit All Users",
+            "Assign Role",
+            "Unassign Role",
+            "View All Permissions",
+            "View All Roles",
             "Create",
             "Edit",
             "Update",

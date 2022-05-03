@@ -8,7 +8,7 @@
       <span v-for="usr in userData" :key="usr.id">
         <div class="d-sm-flex d-none user-nav">
           <p class="user-name font-weight-bolder mb-0">
-            {{ usr.email || usr.name }}
+            {{ usr.name || usr.name }}
           </p>
           <span class="user-status">{{ usr.role }}</span>
         </div>

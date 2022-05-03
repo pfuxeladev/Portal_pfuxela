@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->foreignIdFor(\App\Models\Person::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignIdFor(\App\Models\Departamento::class)->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->string('avatar')->default('');
             $table->boolean('is_active')->default(false);
             $table->string('password');
             $table->rememberToken();

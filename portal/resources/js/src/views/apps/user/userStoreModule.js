@@ -25,7 +25,7 @@ export default {
     addUser(ctx, userData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/users', { user: userData })
+          .post('/api/users', userData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

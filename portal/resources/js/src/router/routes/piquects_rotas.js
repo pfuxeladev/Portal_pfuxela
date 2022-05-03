@@ -40,4 +40,12 @@ export default
       authOnly: true,
     },
   },
+  {
+    path: '/Picket/drivers/New-Driver',
+    name: 'New-Driver',
+    component: () => import('@/views/Gestao-pickete/relatorios/motoristas/new_motorista.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
 ]

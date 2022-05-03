@@ -69,7 +69,6 @@
         </b-row>
 
       </div>
-
       <b-table
         ref="refUserListTable"
         class="position-relative"
@@ -79,7 +78,7 @@
         primary-key="id"
         :sort-by.sync="sortBy"
         show-empty
-        empty-text="No matching records found"
+        empty-text="Nenhum utilizador registado"
         :sort-desc.sync="isSortDirDesc"
       >
 
@@ -90,7 +89,7 @@
               <b-avatar
                 size="32"
                 :src="data.item.avatar"
-                :text="avatarText(data.item.fullName)"
+                :text="avatarText(data.item.person.nome_completo)"
                 :variant="`light-${resolveUserRoleVariant(data.item.role)}`"
                 :to="{ name: 'apps-users-view', params: { id: data.item.id } }"
               />
@@ -99,7 +98,7 @@
               :to="{ name: 'apps-users-view', params: { id: data.item.id } }"
               class="font-weight-bold d-block text-nowrap"
             >
-              {{ data.item.fullName }}
+              {{ data.item.person.nome_completo }}
             </b-link>
             <small class="text-muted">@{{ data.item.username }}</small>
           </b-media>

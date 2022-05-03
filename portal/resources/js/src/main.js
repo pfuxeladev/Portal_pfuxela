@@ -8,12 +8,12 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import axios from 'axios'
 import Swal from 'sweetalert2'
+import Permissions from '@core/mixins/Permissions.vue'
 import i18n from '@/libs/i18n'
 import router from './router'
 import store from './store'
 import App from './App.vue'
 // Global Components
-
 import './global-components'
 
 // 3rd party plugins
@@ -25,6 +25,7 @@ import '@/libs/toastification'
 import '@/libs/sweet-alerts'
 import '@/libs/vue-select'
 import '@/libs/tour'
+
 
 // Axios Mock Adapter
 import '@/@fake-db/db'
@@ -68,7 +69,7 @@ Vue.use(VueProgressBar, options)
 
 // Composition API
 Vue.use(VueCompositionAPI)
-
+Vue.mixin(Permissions)
 // Feather font icon - For form-wizard
 // * Shall remove it if not using font-icons of feather-icons - For form-wizard
 require('@core/assets/fonts/feather/iconfont.css') // For form-wizard

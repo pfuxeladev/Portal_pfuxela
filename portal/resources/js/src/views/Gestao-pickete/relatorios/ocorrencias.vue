@@ -1,5 +1,5 @@
 <template>
-    <section ></section>
+    <section >entrada e saidas</section>
 </template>
 
 <script>
