@@ -106,7 +106,7 @@ export default {
     vSelect,
   },
   setup(props) {
-    const DRIVER_STORE_MODULE_NAME = 'piquet-motorista'
+    const DRIVER_STORE_MODULE_NAME = 'piquet'
 
     // Register module
     if (!store.hasModule(DRIVER_STORE_MODULE_NAME)) { store.registerModule(DRIVER_STORE_MODULE_NAME, storeMotoristaModule) }

@@ -27,7 +27,7 @@ class UserController extends Controller
     public function index()
     {
 
-        return $this->user->with(['departamento', 'person'])->paginate(10)->except(auth()->user()->id);
+        return $this->user->with(['departamento', 'person', 'roles'])->paginate(10)->except(auth()->user()->id);
     }
 
     public function permissionsIndex()
@@ -134,9 +134,9 @@ class UserController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
-        //
+        return Response::json($this->user->with(['departamento', 'person', 'roles'])->findOrFail($id));
     }
 
     /**

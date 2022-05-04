@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { ref, watch, computed } from '@vue/composition-api'
 import store from '@/store'
 import { title } from '@core/utils/filter'
@@ -18,8 +19,8 @@ export default function useUsersList() {
     { key: 'email', sortable: true },
     { key: 'role', sortable: true },
     {
-      key: 'currentPlan',
-      label: 'Plan',
+      key: 'departamento.nome',
+      label: 'departamento',
       formatter: title,
       sortable: true,
     },
@@ -63,8 +64,8 @@ export default function useUsersList() {
         sortBy: sortBy.value,
         sortDesc: isSortDirDesc.value,
         role: roleFilter.value,
-        plan: departmentFilter.value,
-        status: statusFilter.value,
+        departamento: departmentFilter.value,
+        is_active: statusFilter.value,
       })
       .then(response => {
         const users = response.data
@@ -106,9 +107,9 @@ export default function useUsersList() {
     return 'UserIcon'
   }
 
-  const resolveUserStatusVariant = status => {
-    if (status === 'active') return 'success'
-    if (status === 'inactive') return 'secondary'
+  const resolveUserStatusVariant = is_active => {
+    if (is_active === 1) return 'success'
+    if (is_active === 0) return 'secondary'
     return 'primary'
   }
 

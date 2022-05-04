@@ -1,277 +1,243 @@
 <template>
-<b-row>
-    <b-col cols="12">
-        <form-wizard
-      color="#7367F0"
-      :title="null"
-      :subtitle="null"
-      finish-button-text="Submit"
-      back-button-text="Previous"
-      class="steps-transparent mb-3"
-      @on-complete="formSubmitted"
-    >
-      <!-- account detail tab -->
-      <tab-content
-        title="Account Details"
-        icon="feather icon-file-text"
-      >
+  <b-card no-body>
+    <b-card-body>
+      <b-form @submit.prevent="onSubmit">
         <b-row>
-          <b-col
-            cols="12"
-            class="mb-2"
-          >
-            <h5 class="mb-0">
-              Detalhes dos dados corporativos
-            </h5>
-            <small class="text-muted">
-              Digitar os dados pessoais.
-            </small>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Username"
-              label-for="i-username"
-            >
-              <b-form-input
-                id="i-username"
-                placeholder="johndoe"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Nomes">
+              <b-form-input v-model="form.nome"></b-form-input>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Email"
-              label-for="i-email"
-            >
-              <b-form-input
-                id="i-email"
-                type="email"
-                placeholder="john.doe@email.com"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Apelido">
+              <b-form-input v-model="form.apelido"></b-form-input>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Password"
-              label-for="i-password"
-            >
-              <b-form-input
-                id="i-password"
-                type="password"
-                placeholder="Password"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Data de nascimento">
+              <b-form-datepicker
+                v-model="form.data_nascimento"
+                :min="min"
+                :max="max"
+                value-type="format"
+                format="YYYY-MM-DD"
+                locale="pt"
+              ></b-form-datepicker>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Confirm Password"
-              label-for="i-c-password"
-            >
-              <b-form-input
-                id="i-c-password"
-                type="password"
-                placeholder="Re-type Password"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="NUIT">
+              <b-form-input v-model="form.NUIT"></b-form-input>
             </b-form-group>
           </b-col>
-        </b-row>
-      </tab-content>
-
-      <!-- personal details -->
-      <tab-content
-        title="Informacao Pessoal"
-        icon="feather icon-user"
-      >
-        <b-row>
-          <b-col
-            cols="12"
-            class="mb-2"
-          >
-            <h5 class="mb-0">
-              Informa&ccedil;&atilde;o Pessoal
-            </h5>
-            <small class="text-muted">Introduza a Informa&ccedil;&atilde;o Pessoal.</small>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label-for="i-first-name"
-              label="Nome e sobrenome"
-            >
-              <b-form-input
-                id="i-first-name"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Endereço">
+              <b-form-input v-model="form.endereco"></b-form-input>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="apelido"
-              label-for="i-last-name"
-            >
-              <b-form-input
-                id="i-last-name"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Gênero">
+              <v-select v-model="form.genero" :options="['M', 'F']"></v-select>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Country"
-              label-for="i-country"
-            >
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Cargo">
+              <b-form-input v-model="form.cargo"></b-form-input>
+            </b-form-group>
+          </b-col>
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Carta de Condução">
+              <b-form-input v-model="form.carta_conducao"></b-form-input>
+            </b-form-group>
+          </b-col>
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Tipo de documento">
               <v-select
-                id="i-country"
-                v-model="selectedContry"
-                :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                :options="countryName"
-                :selectable="option => ! option.value.includes('select_value')"
-                label="text"
-              />
+                v-model="form.doc_type"
+                :options="[
+                  'BI',
+                  'Passaporte',
+                  'Cedula pessoal',
+                  'DIRE',
+                  'Cedula Militar',
+                ]"
+              ></v-select>
             </b-form-group>
           </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Language"
-              label-for="i-language"
-            >
-              <v-select
-                id="i-language"
-                v-model="selectedLanguage"
-                :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                :options="languageName"
-                :selectable="option => ! option.value.includes('select_value')"
-                label="text"
-              />
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Nr do documento">
+              <b-form-input v-model="form.nr_documento"></b-form-input>
+            </b-form-group>
+          </b-col>
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Contacto">
+              <b-input-group>
+                <b-input-group-prepend is-text>
+                  MZ (+258)
+                </b-input-group-prepend>
+                <cleave
+                  id="phone"
+                  v-model="form.contacto"
+                  class="form-control"
+                  :raw="false"
+                  :options="options.phone"
+                  placeholder="1234 567 8900"
+                />
+              </b-input-group>
+            </b-form-group>
+          </b-col>
+          <b-col cols="12" md="4" lg="4">
+            <b-form-group label="Contacto alternativo">
+              <b-input-group>
+                <b-input-group-prepend is-text>
+                  MZ (+258)
+                </b-input-group-prepend>
+                <cleave
+                  id="phone2"
+                  v-model="form.contacto_alt"
+                  class="form-control"
+                  :raw="false"
+                  :options="options.phone"
+                  placeholder="1234 567 8900"
+                />
+              </b-input-group>
             </b-form-group>
           </b-col>
         </b-row>
-      </tab-content>
-
-      <!-- address -->
-      <tab-content
-        title="Address"
-        icon="feather icon-map-pin"
-      >
         <b-row>
-          <b-col
-            cols="12"
-            class="mb-2"
-          >
-            <h5 class="mb-0">
-              Address
-            </h5>
-            <small class="text-muted">Enter Your Address.</small>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Address"
-              label-for="i-address"
+          <b-col cols="12" md="4">
+            <b-button type="submit" variant="outline-primary"
+              >cadastrar</b-button
             >
-              <b-form-input
-                id="i-address"
-                placeholder="98 Borough bridge Road, Birmingham"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Landmark"
-              label-for="i-landmark"
-            >
-              <b-form-input
-                id="i-landmark"
-                placeholder="Borough bridge"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label="Pincode"
-              label-for="i-pincode"
-            >
-              <b-form-input
-                id="i-pincode"
-                placeholder="658921"
-              />
-            </b-form-group>
-          </b-col>
-          <b-col md="6">
-            <b-form-group
-              label-for="i-city"
-              label="City"
-            >
-              <b-form-input
-                id="i-city"
-                placeholder="Birmingham"
-              />
-            </b-form-group>
           </b-col>
         </b-row>
-      </tab-content>
-    </form-wizard>
-    </b-col>
-</b-row>
-
-
-  </div>
+      </b-form>
+    </b-card-body>
+  </b-card>
 </template>
 
 <script>
-import { FormWizard, TabContent } from "vue-form-wizard";
+import {
+  BCard,
+  BRow,
+  BCol,
+  BFormInput,
+  BFormGroup,
+  BButton,
+  BTable,
+  BLink,
+  BBadge,
+  BCardBody,
+  BForm,
+  BFormDatepicker,
+  BInputGroup,
+  BInputGroupPrepend,
+} from "bootstrap-vue";
 import vSelect from "vue-select";
-import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
-import "vue-form-wizard/dist/vue-form-wizard.min.css";
-import { BRow, BCol, BFormGroup, BFormInput } from "bootstrap-vue";
-// import { codeIconInfo } from "./code";
+import { ref, onUnmounted } from "@vue/composition-api";
+
+import Form from "vform";
+
+import Cleave from "vue-cleave-component";
+import store from "@/store";
+
+import "cleave.js/dist/addons/cleave-phone.us";
+
+import storeMotoristaModule from "./storeMotoritaModules";
 
 export default {
-  components: {
-    FormWizard,
-    TabContent,
-    BRow,
-    BCol,
-    BFormGroup,
-    BFormInput,
-    vSelect,
-    // eslint-disable-next-line vue/no-unused-components
-    ToastificationContent,
-  },
   data() {
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    // 15th two months prior
+    const minDate = new Date(today);
+    minDate.setFullYear(minDate.getFullYear() - 40);
+    minDate.setDate(15);
+    // 15th in two months
+    const maxDate = new Date(today);
+    maxDate.setFullYear(maxDate.getFullYear() - 20);
+    maxDate.setDate(15);
+
     return {
-      selectedContry: "select_value",
-      selectedLanguage: "nothing_selected",
-      codeIconInfo,
-      countryName: [
-        { value: "select_value", text: "Select Value" },
-        { value: "Russia", text: "Russia" },
-        { value: "Canada", text: "Canada" },
-        { value: "China", text: "China" },
-        { value: "United States", text: "United States" },
-        { value: "Brazil", text: "Brazil" },
-        { value: "Australia", text: "Australia" },
-        { value: "India", text: "India" },
-      ],
-      languageName: [
-        { value: "nothing_selected", text: "Nothing Selected" },
-        { value: "English", text: "English" },
-        { value: "Chinese", text: "Mandarin Chinese" },
-        { value: "Hindi", text: "Hindi" },
-        { value: "Spanish", text: "Spanish" },
-        { value: "Arabic", text: "Arabic" },
-        { value: "Malay", text: "Malay" },
-        { value: "Russian", text: "Russian" },
-      ],
+      value: "",
+      min: minDate,
+      max: maxDate,
     };
   },
-  methods: {
-    formSubmitted() {
-      this.$toast({
-        component: ToastificationContent,
-        props: {
-          title: "Form Submitted",
-          icon: "EditIcon",
-          variant: "success",
+  components: {
+    BCard,
+    BRow,
+    BCol,
+    BFormInput,
+    BButton,
+    BTable,
+    BLink,
+    BBadge,
+    BCardBody,
+    BForm,
+    BFormGroup,
+    vSelect,
+    BFormDatepicker,
+    Cleave,
+    BInputGroup,
+    BInputGroupPrepend,
+  },
+  setup(props) {
+    const PIQUECT_STORE_MODULE_NAME = "Picket";
+
+    if (!store.hasModule(PIQUECT_STORE_MODULE_NAME))
+      store.registerModule(PIQUECT_STORE_MODULE_NAME, storeMotoristaModule);
+
+    // UnRegister on leave
+    onUnmounted(() => {
+      if (store.hasModule(PIQUECT_STORE_MODULE_NAME))
+        store.unregisterModule(PIQUECT_STORE_MODULE_NAME);
+    });
+    const form = ref(
+      JSON.parse(
+        JSON.stringify(
+          new Form({
+            id: null,
+            nome: "",
+            apelido: "",
+            NUIT: null,
+            endereco: "",
+            genero: "",
+            cargo: "",
+            carta_conducao: "",
+            doc_type: "",
+            data_nascimento: null,
+            // eslint-disable-next-line comma-dangle
+            contacto: null,
+            contacto_alt: null,
+            nr_documento: "",
+          })
+        )
+      )
+    );
+    // const driverData = ref(JSON.parse(JSON.stringify(form)))
+    const options = [
+      {
+        phone: {
+          phone: true,
+          phoneRegionCode: "MZ",
         },
+      },
+    ];
+    const resetdriverData = () => {
+      form.value = JSON.parse(JSON.stringify(form));
+    };
+
+    function onSubmit() {
+      store.dispatch("Picket/addDriver", form.value).then(() => {
+        emit("refetch-data");
       });
-    },
+    }
+    return {
+      onSubmit,
+      form,
+      options,
+    };
   },
 };
 </script>

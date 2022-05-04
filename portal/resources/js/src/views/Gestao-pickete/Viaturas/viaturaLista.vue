@@ -7,9 +7,9 @@
             <b-row>
                 <!-- Per Page -->
                 <b-col cols="12" md="6" class="d-flex align-items-center justify-content-start mb-1 mb-md-0">
-                    <label>Show</label>
+                    <label>mostrar</label>
                     <v-select v-model="perPage" :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'" :options="perPageOptions" :clearable="false" class="per-page-selector d-inline-block mx-50" />
-                    <label>entries</label>
+                    <label>entradas</label>
                 </b-col>
 
                 <!-- Search -->

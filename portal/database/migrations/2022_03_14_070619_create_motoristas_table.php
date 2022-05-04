@@ -18,7 +18,8 @@ class CreateMotoristasTable extends Migration
         Schema::create('motoristas', function (Blueprint $table) {
             $table->id();
             $table->string('carta_conducao');
-            $table->string('bilhete_identidade');
+            $table->string('doc_type');
+            $table->string('nr_documento');
             $table->foreignIdFor(Person::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignIdFor(Viatura::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();

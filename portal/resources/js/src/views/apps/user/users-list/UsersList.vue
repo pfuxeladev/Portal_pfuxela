@@ -113,7 +113,8 @@
               class="mr-50"
               :class="`text-${resolveUserRoleVariant(data.item.role)}`"
             />
-            <span class="align-text-top text-capitalize">{{ data.item.role }}</span>
+            <span class="align-text-top text-capitalize">{{ data.item.roles[0].name }}</span>
+
           </div>
         </template>
 
@@ -121,10 +122,11 @@
         <template #cell(status)="data">
           <b-badge
             pill
-            :variant="`light-${resolveUserStatusVariant(data.item.status)}`"
+            :variant="`light-${resolveUserStatusVariant(data.item.is_active)}`"
             class="text-capitalize"
           >
-            {{ data.item.status }}
+            <span v-if="data.item.is_active === true">Activo</span>
+            <span v-else>Inactivo</span>
           </b-badge>
         </template>
 
@@ -285,8 +287,8 @@ export default {
     ]
 
     const statusOptions = [
-      { label: 'Active', value: 'active' },
-      { label: 'Inactive', value: 'inactive' },
+      { label: 'Active', value: true },
+      { label: 'Inactive', value: false },
     ]
 
     const {

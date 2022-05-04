@@ -272,7 +272,7 @@ export default {
     DatePicker,
   },
   setup(props, { emit }) {
-    const PIQUECT_STORE_MODULE_NAME = 'Picket';
+    const PIQUECT_STORE_MODULE_NAME = 'Picket'
     const editMode = false
     // Register module
     if (!store.hasModule(PIQUECT_STORE_MODULE_NAME)) {

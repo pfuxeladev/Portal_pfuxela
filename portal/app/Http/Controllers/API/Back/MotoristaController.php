@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contactos;
 use App\Models\motorista;
 use App\Models\Person;
 use Illuminate\Http\Request;
@@ -37,21 +38,36 @@ class MotoristaController extends Controller
 
         $motorista = new motorista();
 
-        $motorista->carta_conducao = $request->cartaConducao;
-        $motorista->bilhete_identidade = $request->bilheteIdentidade;
-        
-        $person = Person::where('id', $request->person_id)->first();
 
-        if(empty($person)){
-            return response()->json(['error' => 'A pessoa desejada não existe'], 404);
+        $people = new Person();
+
+        $people->nome_completo = $request->nome;
+        $people->apelido = $request->apelido;
+        $people->data_nascimento = $request->data_nascimento;
+        $people->NUIT = $request->NUIT;
+        $people->endereco = $request->endereco;
+        $people->cargo = $request->cargo;
+        $people->save();
+
+        if ($people) {
+            $contact = new Contactos();
+            $contact->content = $request->contacto;
+            $contact->person_id = $people->id;
+            $contact->save();
+            if ($contact) {
+                $contact1 = new Contactos();
+                $contact1->content = $request->contacto_alt;
+                $contact1->person_id = $people->id;
+                $contact1->save();
+            }
+
+            $motorista->carta_conducao = $request->cartaConducao;
+            $motorista->doc_type = $request->tipo_documento;
+            $motorista->nr_documento = $request->nr_documento;
+            $motorista->person_id = $people->id;
+            $motorista->save();
         }
-
-        $motorista->person_id = $request->person_id;
-        $motorista->save();
-
         return response()->json(['message' => 'Motorista criado com sucesso'], 201);
-
-
     }
 
     /**

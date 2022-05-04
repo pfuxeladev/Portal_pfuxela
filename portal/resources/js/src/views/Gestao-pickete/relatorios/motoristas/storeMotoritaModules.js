@@ -9,7 +9,7 @@ export default {
     fetchDrivers(ctx, queryParams) {
       return new Promise((resolve, reject) => {
         axios
-          .get('/api/motoristas', { params: queryParams })
+          .get('/api/motorista', { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -17,7 +17,7 @@ export default {
     fetchDriver(ctx, { id }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/motoristas/${id}`)
+          .get(`/api/motorista/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -25,7 +25,7 @@ export default {
     addDriver(ctx, driverData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/motoristas', driverData)
+          .post('/api/motorista', driverData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
