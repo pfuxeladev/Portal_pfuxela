@@ -15,9 +15,7 @@ class UpdateOrdemsTableRedeteRows extends Migration
     {
         Schema::table('ordems', function(Blueprint $table){
             $table->dropForeign(['projecto_id']);
-            $table->dropForeign(['viatura_id']);
             $table->dropColumn('projecto_id');
-            $table->dropColumn('viatura_id');
         });
     }
 
