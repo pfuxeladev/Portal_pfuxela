@@ -1,6 +1,10 @@
 <?php
 
 use App\Models\CheckListOut;
+use App\Models\motorista;
+use App\Models\User;
+use App\Models\Viatura;
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,9 +20,9 @@ class CreateChecklistIn extends Migration
     {
         Schema::create('checklist_in', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(CheckListOut::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Viatura::class)->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->foreignIdFor(motorista::class)->constrained()->cascadeOnUpdate()->cascadeOnDelete();
+            $table->unsignedBigInteger('check_list_out_id');
             $table->bigInteger('km_fim');
             $table->time('hr_fim')->nullable();
             $table->boolean('carta_conducao')->default(false);
@@ -44,6 +48,7 @@ class CreateChecklistIn extends Migration
             $table->text('relatorio_geral')->nullable();
             $table->string('anexos');
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('check_list_out_id')->references('id')->on('checklist_out')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
