@@ -17,8 +17,10 @@ class CreateCheckListRotasTable extends Migration
     {
         Schema::create('check_list_rotas', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(CheckListOut::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->unsignedBigInteger('check_list_out_id');
+            // $table->foreignIdFor(CheckListOut::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Rota::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('check_list_out_id')->references('id')->on('checklist_out')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
