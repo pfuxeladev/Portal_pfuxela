@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class motorista extends Model
 {
     use HasFactory;
-    
+
+    function person(){
+        return $this->belongsTo(Person::class);
+    }
 }

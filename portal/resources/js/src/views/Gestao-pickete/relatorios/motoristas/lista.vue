@@ -1,70 +1,73 @@
 <template>
-  <b-card no-body>
+<b-card no-body>
     <div class="m-2">
-      <b-row>
-        <!-- Per Page -->
-        <b-col
-          cols="12"
-          md="6"
-          class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
-        >
-          <label>Entradas</label>
-          <v-select
-            v-model="perPage"
-            :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-            :options="perPageOptions"
-            :clearable="false"
-            class="per-page-selector d-inline-block ml-50 mr-1"
-          />
-          <b-button
-            variant="outline-primary"
-            :to="{ name: 'New-Driver' }"
-          >
-            Novo motorista
-          </b-button>
-        </b-col>
+        <b-row>
+            <!-- Per Page -->
+            <b-col cols="12" md="6" class="d-flex align-items-center justify-content-start mb-1 mb-md-0">
+                <label>Entradas</label>
+                <v-select v-model="perPage" :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'" :options="perPageOptions" :clearable="false" class="per-page-selector d-inline-block ml-50 mr-1" />
+                <b-button variant="outline-primary" :to="{ name: 'New-Driver' }">
+                    Novo motorista
+                </b-button>
+            </b-col>
 
-        <!-- Search -->
-        <b-col
-          cols="12"
-          md="6"
-        >
-          <div class="d-flex align-items-center justify-content-end">
-            <b-form-input
-              v-model="searchQuery"
-              class="d-inline-block mr-1"
-              placeholder="Search..."
-            />
-            <v-select
-              v-model="departmentFilter"
-              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-              :options="statusOptions"
-              class="invoice-filter-select"
-              placeholder="Select Status"
-            >
-              <template #selected-option="{ label }">
-                <span class="text-truncate overflow-hidden">
-                  {{ label }}
-                </span>
-              </template>
-            </v-select>
-          </div>
-        </b-col>
-      </b-row>
+            <!-- Search -->
+            <b-col cols="12" md="6">
+                <div class="d-flex align-items-center justify-content-end">
+                    <b-form-input v-model="searchQuery" class="d-inline-block mr-1" placeholder="Search..." />
+                    <v-select v-model="departmentFilter" :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'" :options="statusOptions" class="invoice-filter-select" placeholder="Select Status">
+                        <template #selected-option="{ label }">
+                            <span class="text-truncate overflow-hidden">
+                                {{ label }}
+                            </span>
+                        </template>
+                    </v-select>
+                </div>
+            </b-col>
+        </b-row>
     </div>
-    <b-table
-      ref="refDriverTableList"
-      class="position-relative"
-      :items="fetctDriver"
-      responsive
-      :fields="tableColumns"
-      primary-key="id"
-      :sort-by.sync="sortBy"
-      show-empty
-      empty-text="Nenhum motorista registado"
-      :sort-desc.sync="isSortDirDesc"
-    />
-  </b-card>
+    <b-table ref="refDriverTableList" class="position-relative" :items="fetctDriver" responsive :fields="tableColumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="Nenhum motorista registado" :sort-desc.sync="isSortDirDesc">
+        <template #cell(nome_completo)="data">
+            {{data.item.person.nome_completo}} {{data.item.person.apelido}}
+        </template>
+        <template #cell(Endereço)="data">
+            {{data.item.person.endereco}}
+        </template>
+        <template #cell(cargo)="data">
+            {{data.item.person.cargo}}
+        </template>
+        <template #cell(NUIT)="data">
+            {{data.item.person.NUIT}}
+        </template>
+        <template #cell(Documento)="data">
+            {{data.item.doc_type}}
+        </template>
+        <template #cell(Nr_do_documento)="data">
+            {{data.item.nr_documento}}
+        </template>
+        <template #cell(Carta_de_Condução)="data">
+            {{data.item.carta_conducao}}
+        </template>
+        <template #cell(acções)="data">
+            <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
+                <template #button-content>
+                    <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
+                </template>
+                <b-dropdown-item :to="{ name: 'supply-details', params: { id: data.item.id } }">
+                    <feather-icon icon="FileTextIcon" />
+                    <span class="align-middle ml-50">Detalhes</span>
+                </b-dropdown-item>
+
+                <b-dropdown-item :to="{ name: 'New-supply-order', params: { id: data.item.id } }">
+                    <feather-icon icon="EditIcon" />
+                    <span class="align-middle ml-50">Editar</span>
+                </b-dropdown-item>
+            </b-dropdown>
+            </b-dropdown>
+        </template>
+
+    </b-table>
+</b-card>
 </template>
 
 <script>
@@ -81,12 +84,14 @@ import {
   BDropdownItem,
   BPagination,
   BTooltip,
-} from 'bootstrap-vue'
-import vSelect from 'vue-select'
-import { onUnmounted } from '@vue/composition-api'
-import store from '@/store'
-import useMotoristasList from './useMotoristasList'
-import storeMotoristaModule from './storeMotoritaModules'
+} from "bootstrap-vue";
+import vSelect from "vue-select";
+import {
+  onUnmounted
+} from "@vue/composition-api";
+import store from "@/store";
+import useMotoristasList from "./useMotoristasList";
+import storeMotoristaModule from "./storeMotoritaModules";
 
 export default {
   components: {
@@ -106,20 +111,29 @@ export default {
     vSelect,
   },
   setup(props) {
-    const DRIVER_STORE_MODULE_NAME = 'piquet'
+    const DRIVER_STORE_MODULE_NAME = "Picket";
 
     // Register module
-    if (!store.hasModule(DRIVER_STORE_MODULE_NAME)) { store.registerModule(DRIVER_STORE_MODULE_NAME, storeMotoristaModule) }
+    if (!store.hasModule(DRIVER_STORE_MODULE_NAME)) {
+      store.registerModule(DRIVER_STORE_MODULE_NAME, storeMotoristaModule);
+    }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(DRIVER_STORE_MODULE_NAME)) { store.unregisterModule(DRIVER_STORE_MODULE_NAME) }
-    })
+      if (store.hasModule(DRIVER_STORE_MODULE_NAME)) {
+        store.unregisterModule(DRIVER_STORE_MODULE_NAME);
+      }
+    });
 
-    const statusOptions = [
-      { label: 'Active', value: 'active' },
-      { label: 'Inactive', value: 'inactive' },
-    ]
+    const statusOptions = [{
+      label: "Active",
+      value: "active"
+    },
+    {
+      label: "Inactive",
+      value: "inactive"
+    },
+    ];
 
     const {
       fetctDriver,
@@ -137,7 +151,7 @@ export default {
 
       // Extra Filters
       departmentFilter,
-    } = useMotoristasList()
+    } = useMotoristasList();
 
     return {
       fetctDriver,

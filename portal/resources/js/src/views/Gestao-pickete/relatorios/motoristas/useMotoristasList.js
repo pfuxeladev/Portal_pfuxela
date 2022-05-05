@@ -14,18 +14,14 @@ export default function useMotoristasList() {
 
   // Table Handlers
   const tableColumns = [
-    { key: 'Nome_completo', sortable: true },
-    { key: 'Endere&ccedil;o', sortable: true },
+    { key: 'nome_completo', sortable: true },
+    { key: 'Endereço', sortable: true },
     { key: 'Cargo', sortable: true },
-    { key: 'Departamento', sortable: true },
-    { key: 'data_de_nascimento', sortable: true },
     { Key: 'NUIT', sortable: true },
-    { key: 'Genero', sortable: true },
     { key: 'Documento', sortable: true },
     { key: 'Nr_do_documento', sortable: true },
-    { Key: 'Carta_de_conducao', sortable: true },
-    { key: 'Departamento', sortable: true },
-    { key: 'actions' },
+    { Key: 'Carta_de_Condução', sortable: true },
+    { key: 'acções' },
   ]
   const perPage = ref(10)
   const totalDrivers = ref(0)
@@ -55,7 +51,7 @@ export default function useMotoristasList() {
 
   const fetctDriver = (ctx, callback) => {
     store
-      .dispatch('piquet-motorista/fetchDrivers', {
+      .dispatch('Picket/fetchDrivers', {
         q: searchQuery.value,
         perPage: perPage.value,
         page: currentPage.value,
@@ -66,14 +62,14 @@ export default function useMotoristasList() {
       .then(response => {
         const motoristas = response.data
 
-        callback(motoristas)
+        callback(motoristas.data)
         totalDrivers.value = motoristas.total
       })
       .catch(() => {
         toast({
           component: ToastificationContent,
           props: {
-            title: 'Error fetching motoristas list',
+            title: 'Erro na listagem de motoristas',
             icon: 'AlertTriangleIcon',
             variant: 'danger',
           },

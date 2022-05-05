@@ -18,7 +18,7 @@ class MotoristaController extends Controller
     }
     public function index()
     {
-        return $this->motorista->orderBy('created_at', 'desc')->paginate(10);
+        return $this->motorista->with(['person'])->orderBy('created_at', 'desc')->paginate(10);
     }
 
     /**
@@ -32,8 +32,7 @@ class MotoristaController extends Controller
 
         $request->validate([
             'cartaConducao' => 'required|string|min:5',
-            'bilheteIdentidade' => 'required|string|min:9',
-            'person_id' => 'required|numeric|min:1',
+            'nr_documento' => 'required|string|min:9',
         ]);
 
         $motorista = new motorista();
@@ -46,6 +45,7 @@ class MotoristaController extends Controller
         $people->data_nascimento = $request->data_nascimento;
         $people->NUIT = $request->NUIT;
         $people->endereco = $request->endereco;
+        $people->empresa_id = 1;
         $people->cargo = $request->cargo;
         $people->save();
 
@@ -62,7 +62,7 @@ class MotoristaController extends Controller
             }
 
             $motorista->carta_conducao = $request->cartaConducao;
-            $motorista->doc_type = $request->tipo_documento;
+            $motorista->doc_type = $request->doc_type;
             $motorista->nr_documento = $request->nr_documento;
             $motorista->person_id = $people->id;
             $motorista->save();

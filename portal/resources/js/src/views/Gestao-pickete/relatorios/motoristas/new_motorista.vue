@@ -46,12 +46,12 @@
             </b-form-group>
           </b-col>
           <b-col cols="12" md="4" lg="4">
-            <b-form-group label="Carta de Condução">
-              <b-form-input v-model="form.carta_conducao"></b-form-input>
+            <b-form-group label="ID da Carta de Condução">
+              <b-form-input v-model="form.cartaConducao"></b-form-input>
             </b-form-group>
           </b-col>
           <b-col cols="12" md="4" lg="4">
-            <b-form-group label="Tipo de documento">
+            <b-form-group label="Documento Adicional">
               <v-select
                 v-model="form.doc_type"
                 :options="[
@@ -65,7 +65,7 @@
             </b-form-group>
           </b-col>
           <b-col cols="12" md="4" lg="4">
-            <b-form-group label="Nr do documento">
+            <b-form-group label="Nr do Documento">
               <b-form-input v-model="form.nr_documento"></b-form-input>
             </b-form-group>
           </b-col>
@@ -75,10 +75,9 @@
                 <b-input-group-prepend is-text>
                   MZ (+258)
                 </b-input-group-prepend>
-                <cleave
+                <b-form-input
                   id="phone"
-                  v-model="form.contacto"
-                  class="form-control"
+                  type="tel" v-model="form.contacto"
                   :raw="false"
                   :options="options.phone"
                   placeholder="1234 567 8900"
@@ -87,15 +86,14 @@
             </b-form-group>
           </b-col>
           <b-col cols="12" md="4" lg="4">
-            <b-form-group label="Contacto alternativo">
+            <b-form-group label="Contacto Alternativo">
               <b-input-group>
                 <b-input-group-prepend is-text>
                   MZ (+258)
                 </b-input-group-prepend>
-                <cleave
+                <b-form-input
                   id="phone2"
-                  v-model="form.contacto_alt"
-                  class="form-control"
+                  type="tel" v-model="form.contacto_alt"
                   :raw="false"
                   :options="options.phone"
                   placeholder="1234 567 8900"
@@ -132,18 +130,19 @@ import {
   BFormDatepicker,
   BInputGroup,
   BInputGroupPrepend,
-} from "bootstrap-vue";
-import vSelect from "vue-select";
-import { ref, onUnmounted } from "@vue/composition-api";
+} from 'bootstrap-vue';
+import vSelect from 'vue-select';
+import { ref, onUnmounted } from '@vue/composition-api'
 
-import Form from "vform";
+import Form from 'vform'
 
-import Cleave from "vue-cleave-component";
-import store from "@/store";
+import store from '@/store'
 
-import "cleave.js/dist/addons/cleave-phone.us";
 
-import storeMotoristaModule from "./storeMotoritaModules";
+
+import storeMotoristaModule from './storeMotoritaModules'
+import { useToast } from 'vue-toastification/composition'
+import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 
 export default {
   data() {
@@ -159,7 +158,7 @@ export default {
     maxDate.setDate(15);
 
     return {
-      value: "",
+      value: '',
       min: minDate,
       max: maxDate,
     };
@@ -178,60 +177,79 @@ export default {
     BFormGroup,
     vSelect,
     BFormDatepicker,
-    Cleave,
     BInputGroup,
     BInputGroupPrepend,
   },
   setup(props) {
-    const PIQUECT_STORE_MODULE_NAME = "Picket";
+    const PIQUECT_STORE_MODULE_NAME = 'Picket'
 
-    if (!store.hasModule(PIQUECT_STORE_MODULE_NAME))
-      store.registerModule(PIQUECT_STORE_MODULE_NAME, storeMotoristaModule);
+    if (!store.hasModule(PIQUECT_STORE_MODULE_NAME)) store.registerModule(PIQUECT_STORE_MODULE_NAME, storeMotoristaModule)
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(PIQUECT_STORE_MODULE_NAME))
-        store.unregisterModule(PIQUECT_STORE_MODULE_NAME);
-    });
+      if (store.hasModule(PIQUECT_STORE_MODULE_NAME)) store.unregisterModule(PIQUECT_STORE_MODULE_NAME)
+    })
+
+    const toast = useToast()
+
     const form = ref(
       JSON.parse(
         JSON.stringify(
           new Form({
             id: null,
-            nome: "",
-            apelido: "",
+            nome: '',
+            apelido: '',
             NUIT: null,
-            endereco: "",
-            genero: "",
-            cargo: "",
-            carta_conducao: "",
-            doc_type: "",
+            endereco: '',
+            genero: '',
+            cargo: '',
+            cartaConducao: '',
+            doc_type: '',
             data_nascimento: null,
             // eslint-disable-next-line comma-dangle
             contacto: null,
             contacto_alt: null,
-            nr_documento: "",
-          })
-        )
-      )
-    );
+            nr_documento: '',
+          }),
+        ),
+      ),
+    )
     // const driverData = ref(JSON.parse(JSON.stringify(form)))
     const options = [
       {
         phone: {
           phone: true,
-          phoneRegionCode: "MZ",
+          phoneRegionCode: 'MZ',
         },
       },
-    ];
+    ]
     const resetdriverData = () => {
-      form.value = JSON.parse(JSON.stringify(form));
-    };
+      form.value = JSON.parse(JSON.stringify(form))
+    }
 
     function onSubmit() {
-      store.dispatch("Picket/addDriver", form.value).then(() => {
-        emit("refetch-data");
-      });
+      store.dispatch('Picket/addDriver', form.value).then(response => {
+        toast({
+          component: ToastificationContent,
+          props: {
+            title: response.data.message,
+            icon: 'CheckSquareIcon',
+            variant: 'success',
+          },
+        })
+        this.$router.push({ name: 'Drivers' })
+      }).catch(err => {
+        if (err) {
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: 'Erro no cadastro do motorista verifique os campos',
+              icon: 'AlertTriangleIcon',
+              variant: 'danger',
+            },
+          })
+        }
+      })
     }
     return {
       onSubmit,
