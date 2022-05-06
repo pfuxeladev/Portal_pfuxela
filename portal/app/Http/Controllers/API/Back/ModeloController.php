@@ -5,23 +5,23 @@ namespace App\Http\Controllers\API\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Modelo;
 use Illuminate\Http\Request;
-use App\Models\fabricante;
+use App\Models\marca;
 use App\Models\Viatura;
 class ModeloController extends Controller
 {
-    private $fabricante;
     private $modelo;
+    private $marca;
 
-    function __construct(Modelo $modelo, fabricante $fabricante)
+    function __construct(Modelo $modelo, marca $marca)
     {
         $this->modelo = $modelo;
-        $this->fabricante = $fabricante;
+        $this->marca = $marca;
     }
 
     public function index()
     {
 
-        return response()->json($this->modelo->with('fabricante')->orderBy('id', 'asc')->get(), 200);
+        return response()->json($this->modelo->with('marca')->orderBy('id', 'asc')->get(), 200);
     }
 
     public function SearchViaturaByModelo(Request $request){
@@ -52,12 +52,12 @@ class ModeloController extends Controller
         $this->validate($request, [
             'nome_modelo'=>'required|string',
             'ref_modelo'=>'required|string|unique:modelos,ref_modelo,except,id',
-            'fabricante_id'=>'required|integer|exists:fabricantes,id'
+            'fabricante_id'=>'required|integer|exists:marcas,id'
         ]);
 
         $modelo->nome_modelo = $request->nome_modelo;
         $modelo->ref_modelo = $request->ref_modelo;
-        $modelo->fabricante()->associate($request->fabricante_id);
+        $modelo->marca_id = $request->fabricante_id;
         $modelo->createdBy = auth()->user()->id;
         $modelo->save();
 
