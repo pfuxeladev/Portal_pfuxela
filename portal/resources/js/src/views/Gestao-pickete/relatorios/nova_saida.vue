@@ -84,7 +84,6 @@
                       v-model="form.limpezaState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -96,7 +95,6 @@
                       v-model="form.vasoEspansorState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -108,7 +106,6 @@
                       v-model="form.LiquidoVidroState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -120,7 +117,6 @@
                       v-model="form.OleoMotorState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -132,7 +128,6 @@
                       v-model="form.OleoDirecaoState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -144,7 +139,6 @@
                       v-model="form.OleoTravoesState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -156,7 +150,6 @@
                       v-model="form.ACState"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>
@@ -168,7 +161,6 @@
                       v-model="form.SistemaABS_State"
                         :options="options"
                         :state="state"
-                        name="radio-validation"
                       >
                       </b-form-radio-group>
                     </td>

@@ -9,7 +9,7 @@ export default {
     fetchSaidas(ctx, queryParams) {
       return new Promise((resolve, reject) => {
         axios
-          .get('/api/checkListOut', { params: queryParams })
+          .get('/api/CheckListOut', { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -17,7 +17,7 @@ export default {
     fetchSaida(ctx, { id }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/checkListOut/${id}`)
+          .get(`/api/CheckListOut/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -25,7 +25,7 @@ export default {
     addCheckListOut(ctx, CheckListOutData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/checkListOut', CheckListOutData)
+          .post('/api/CheckListOut', CheckListOutData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

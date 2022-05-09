@@ -61,6 +61,7 @@ Route::middleware('auth:api')->group(function () {
         'marca' => App\Http\Controllers\API\MarcaController::class,
         'combustivel' => App\Http\Controllers\API\CombustivelController::class,
         'users' => \App\Http\Controllers\API\BACK\UserController::class,
+        'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class
         ]);
 });
 

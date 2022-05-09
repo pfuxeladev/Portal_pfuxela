@@ -4,11 +4,6 @@
          <div class="mb-2">
         <b-row>
             <b-col>
-                <b-link class="btn btn-outline-primary">
-                    <span class="text-nowrap">Registar nova entrada</span>
-                </b-link>
-            </b-col>
-            <b-col>
                 <b-form-input v-model="searchQuery" class="d-inline-block mr-1" placeholder="Search..." />
             </b-col>
             <b-col>
