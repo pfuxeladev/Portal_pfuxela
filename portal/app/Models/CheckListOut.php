@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class CheckListOut extends Model
 {
+    protected $table = 'checklist_out';
     use HasFactory;
 }

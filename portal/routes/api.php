@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::post('register', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'register']);
 Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::class, 'login']);
+Route::get('checklists', [ChecklistController::class, 'index']);
+Route::post('checklist-out', [ChecklistController::class, 'saveChacklistOut']);
 
 Route::middleware('auth:api')->group(function () {
 
