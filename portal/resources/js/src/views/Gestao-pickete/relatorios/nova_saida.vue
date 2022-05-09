@@ -243,6 +243,12 @@
                       <b-form-checkbox v-model="form.macaco_saida" switch size="lg"></b-form-checkbox>
                     </td>
                   </tr>
+                   <tr>
+                    <td>Licen&ccedil;a na saida</td>
+                    <td>
+                      <b-form-checkbox v-model="form.licenca_saida" switch size="lg"></b-form-checkbox>
+                    </td>
+                  </tr>
                   <tr>
                     <td>Documento de inspen&ccedil;&atilde;o</td>
                     <td>
@@ -393,48 +399,6 @@ export default {
         { text: 'Outros Servicos', value: false },
         { text: 'Expediente', value: false },
       ],
-      form: new Form({
-        motorista_id: null,
-        viatura_id: null,
-        isRota: false,
-        isOuthers: false,
-        carta_conducao: true,
-        km_inicio: 0,
-        hora_inicio: '0:00',
-        limpezaState: '',
-        vasoEspansorState: '',
-        LiquidoVidroState: '',
-        OleoMotorState: '',
-        OleoDirecaoState: '',
-        OleoTravoesState: '',
-        SistemaABS_State: '',
-        ACState: '',
-        tipo_saida: null,
-        uniforme: false,
-        CintoSeguracaState: false,
-        colete_saida: false,
-        lista_presenca: false,
-        pneu_sobr_saida: false,
-        macaco_saida: false,
-        inspencao_saida: false,
-        triangulo_saida: false,
-        chave_roda_saida: false,
-        kit_reboque_saida: false,
-        kit_1_socorro_saida: false,
-        extintor_saida: false,
-        livrete_saida: false,
-        seguros_saida: false,
-        taxaradio_saida: false,
-        motorista_dss: false,
-        // rotas
-        rotas_Lista: [
-          { rota_id: null },
-        ],
-        // outro trajecto
-        trajecto: '',
-        horaPrevistaSaida: '0:00',
-        horaPrevistaEntrada: '0:00',
-      }),
     }
   },
   computed: {
@@ -487,8 +451,58 @@ export default {
     })
 
     const toast = useToast()
+    const form = ref(
+      JSON.parse(
+        JSON.stringify(
+          new Form({
+            motorista_id: null,
+            viatura_id: null,
+            isRota: false,
+            isOuthers: false,
+            carta_conducao: true,
+            km_inicio: 0,
+            hora_inicio: '0:00',
+            limpezaState: '',
+            vasoEspansorState: '',
+            LiquidoVidroState: '',
+            OleoMotorState: '',
+            OleoDirecaoState: '',
+            OleoTravoesState: '',
+            SistemaABS_State: '',
+            ACState: '',
+            tipo_saida: null,
+            uniforme: false,
+            CintoSeguracaState: false,
+            colete_saida: false,
+            lista_presenca: false,
+            pneu_sobr_saida: false,
+            macaco_saida: false,
+            inspencao_saida: false,
+            triangulo_saida: false,
+            chave_roda_saida: false,
+            kit_reboque_saida: false,
+            kit_1_socorro_saida: false,
+            licenca_saida: false,
+            extintor_saida: false,
+            livrete_saida: false,
+            seguros_saida: false,
+            taxaradio_saida: false,
+            motorista_dss: false,
+            // rotas
+            rotas_Lista: [
+              { rota_id: null },
+            ],
+            // outro trajecto
+            trajecto: '',
+            horaPrevistaSaida: '0:00',
+            horaPrevistaEntrada: '0:00',
+          }),
+        ),
+      ),
+    )
+
     function OnSubmit() {
-      store.dispatch('Picket/addCheckListOut', this.form.value).then(response => {
+      store.dispatch('Picket/addCheckListOut', form.value).then(response => {
         toast({
           component: ToastificationContent,
           props: {
@@ -513,6 +527,7 @@ export default {
     }
     return {
       OnSubmit,
+      form,
     }
   },
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\motorista;
+use App\Models\User;
 use App\Models\Viatura;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -48,6 +49,7 @@ class CreateChecklistOut extends Migration
             $table->boolean('licenca_saida')->default(false);
             $table->boolean('seguros_saida')->default(false);
             $table->boolean('taxaradio_saida')->default(false);
+            $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

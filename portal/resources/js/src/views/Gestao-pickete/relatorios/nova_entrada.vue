@@ -55,7 +55,7 @@
         <b-form @submit.prevent="OnSubmit">
           <b-row>
             <b-col cols="12" md="3" lg="6" xl="6">
-              <b-form-group label="Matricula">
+              <b-form-group label="Matricula da viatura reserva">
                 <v-select v-model="form.viatura_id" label="matricula" :options="viatura" :reduce="viatura => viatura.id"></v-select>
               </b-form-group>
             </b-col>
@@ -65,126 +65,39 @@
               </b-form-group>
             </b-col>
             <b-col cols="12" md="3" lg="6" xl="6">
-              <b-form-group label="Kilometragem">
-                <b-form-input type="number" v-model="form.km_inicio"></b-form-input>
+              <b-form-group label="Kilometragem na entrada">
+                <b-form-input type="number" v-model="form.km_fim"></b-form-input>
               </b-form-group>
             </b-col>
             <b-col cols="12" md="3" lg="6" xl="6">
-              <b-form-group label="hora de partida">
-                <b-form-timepicker v-model="form.hora_inicio" locale="pt-Br" />
+              <b-form-group label="hora de entrada">
+                <b-form-timepicker v-model="form.hr_fim" locale="pt-Br" />
               </b-form-group>
             </b-col>
+
             <b-col cols="12" md="6" lg="8" xl="10">
               <table class="table table-bordered">
                 <tbody>
                   <tr>
-                    <td>Limpeza</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.limpezaState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nível do Vaso Expansor</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.vasoEspansorState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nível Liquido Vidro</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.LiquidoVidroState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nível Oleo de Motor</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.OleoMotorState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nível Oleo de Direcção</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.OleoDirecaoState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Nível Oleo de Travões</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.OleoTravoesState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Ar Condicionado</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.ACState"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Sistema ABS</td>
-                    <td>
-                      <b-form-radio-group
-                      v-model="form.SistemaABS_State"
-                        :options="options"
-                        :state="state"
-                      >
-                      </b-form-radio-group>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Cinto de Segurança</td>
-                    <td>
-                      <b-form-checkbox v-model="form.CintoSeguracaState"  switch size="lg"></b-form-checkbox>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Tinha Carta de condu&ccedil;&atilde;o</td>
+                    <td style="width:30%">Tinha Carta de condu&ccedil;&atilde;o</td>
                     <td>
                       <b-form-checkbox v-model="form.carta_conducao" switch size="lg"></b-form-checkbox>
                     </td>
                   </tr>
                   <tr>
-                    <td>O Motorista Paticipou no DSS?</td>
+                    <td style="width:30%">O Motorista Paticipou no DSS?</td>
                     <td>
                       <b-form-checkbox v-model="form.motorista_dss" switch size="lg"></b-form-checkbox>
                     </td>
                   </tr>
                   <tr>
-                    <td>Kit de primeiros socorros</td>
+                    <td style="width:30%">Teste de &aacute;lcool</td>
+                    <td>
+                      <b-form-checkbox v-model="form.teste_alcool" switch size="lg"></b-form-checkbox>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width:30%">Kit de primeiros socorros</td>
                     <td>
                       <b-form-checkbox v-model="form.kit_1_socorro_saida" switch size="lg"></b-form-checkbox>
                     </td>
@@ -268,46 +181,26 @@
                     </td>
                   </tr>
                   <tr>
-                    <td>Tipo de saida</td>
+                    <td>Houve algum incidente</td>
                     <td>
-                            Rota: <b-form-checkbox v-model="form.isRota" switch size="lg" v-on:input="changeOption"></b-form-checkbox>
-                            <br>
-                            Outros: <b-form-checkbox v-model="form.isOuthers" switch size="lg" v-on:input="changeOption1"></b-form-checkbox>
+                         <b-form-checkbox v-model="form.is_incidente" switch size="lg"></b-form-checkbox>
+
                     </td>
                   </tr>
-                  <tr id="rotas" v-show="form.isRota === true">
+                  <tr id="rotas" v-show="form.is_incidente === true">
                     <td colspan="2">
-                      <b-form-group label="Rotas a tomar">
-                        <v-select multiple v-model="form.rota_id" label="nome_rota" :options="rota" :reduce="rota => rota.id"></v-select>
+                      <b-form-group label="Listar incidentes">
+
                       </b-form-group>
                     </td>
                   </tr>
-                  <tr id="others" v-show="form.isOuthers === true">
-                    <td colspan="2">
-                      <b-row>
-                        <b-col>
-                            <b-form-group label="Descreva o proposito do seu trajecto">
-                                <b-form-textarea
-                                id="textarea-small"
-                                size="sm"
-                                placeholder="descreva o trajeto a tomar"
-                            ></b-form-textarea>
-                            </b-form-group>
-
-                        </b-col>
-                        <b-col>
-                            <b-form-group label="hora prevista de partida">
-                          <b-form-timepicker v-model="form.horaPrevistaSaida"  locale="pt-Br"></b-form-timepicker>
-                            </b-form-group>
-                        </b-col>
-                        <b-col>
-                            <b-form-group label="hora prevista de chagada">
-                          <b-form-timepicker v-model="form.horaPrevistaEntrada"  locale="pt-Br"></b-form-timepicker>
-                          </b-form-group>
-                        </b-col>
-                      </b-row>
-                    </td>
+                  <tr>
+                      <td>Relat&oacute;rio geral</td>
+                      <td>
+                          <b-form-textarea v-model="form.relatorio_geral"></b-form-textarea>
+                      </td>
                   </tr>
+
                 </tbody>
               </table>
             </b-col>
@@ -399,17 +292,9 @@ export default {
         isRota: false,
         isOuthers: false,
         carta_conducao: true,
-        km_inicio: 0,
-        hora_inicio: '0:00',
-        limpezaState: '',
-        vasoEspansorState: '',
-        LiquidoVidroState: '',
-        OleoMotorState: '',
-        OleoDirecaoState: '',
-        OleoTravoesState: '',
-        SistemaABS_State: '',
-        ACState: '',
-        tipo_saida: null,
+        km_fim: 0,
+        hr_fim: '0:00',
+        teste_alcool: false,
         uniforme: false,
         CintoSeguracaState: false,
         colete_saida: false,
@@ -426,14 +311,12 @@ export default {
         seguros_saida: false,
         taxaradio_saida: false,
         motorista_dss: false,
+        relatorio_geral: '',
+        is_incidente: false,
         // rotas
         rotas_Lista: [
           { rota_id: null },
         ],
-        // outro trajecto
-        trajecto: '',
-        horaPrevistaSaida: '0:00',
-        horaPrevistaEntrada: '0:00',
       }),
     }
   },
@@ -464,16 +347,11 @@ export default {
         this.motoristas = res.data
       })
     },
-    changeOption() {
-      if (this.form.isRota === true) {
-        this.form.isOuthers = false
-      }
-    },
-    changeOption1() {
-      if (this.form.isOuthers === true) {
-        this.form.isRota = false
-      }
-    },
+    // changeOption() {
+    //   if (this.form.is_incidente === true) {
+    //     this.form.isOuthers = false
+    //   }
+    // },
   },
 
   setup(props) {

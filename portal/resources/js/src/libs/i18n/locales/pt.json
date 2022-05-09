@@ -196,5 +196,6 @@
   "Orders": "Ordens",
   "Drivers":"Motoristas",
   "New Driver": "Novo Motorista",
-  "CheckList-Out": "CheckList de Saida"
+  "CheckList-Out": "CheckList de Saida",
+  "CheckList-In":"CheckList de entrada"
 }

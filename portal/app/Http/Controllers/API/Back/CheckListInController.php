@@ -8,14 +8,15 @@ use Illuminate\Http\Request;
 
 class CheckListInController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $checkListIn;
+
+    function __construct(CheckListIn $checkListIn)
+    {
+        $this->checkListIn = $checkListIn;
+    }
     public function index()
     {
-        //
+
     }
 
     /**

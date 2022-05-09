@@ -41,7 +41,7 @@ export default
     },
   },
   {
-    path: '/Picket/vehicle-movements/CheckListIn',
+    path: '/Picket/vehicle-movements/:id/CheckListIn',
     name: 'CheckList-In',
     component: () => import('@/views/Gestao-pickete/relatorios/nova_entrada.vue'),
     meta: {

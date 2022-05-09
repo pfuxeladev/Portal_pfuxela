@@ -191,5 +191,6 @@
   "Orders": "Orders",
   "Drivers":"Drivers",
   "New Driver":"New Driver",
-  "CheckList-Out": "CheckList-Out"
+  "CheckList-Out": "CheckList-Out",
+  "CheckList-In":"CheckList-In"
 }

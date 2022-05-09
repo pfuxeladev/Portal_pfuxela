@@ -10,14 +10,15 @@ use Illuminate\Http\Request;
 
 class CheckListOutController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $checkListOut;
+
+    function __construct(CheckListOut $checkListOut)
+    {
+        $this->checkListOut = $checkListOut;
+    }
     public function index()
     {
-
+        return $this->checkListOut->with(['viatura', 'motorista.person'])->orderBy('id', 'desc')->paginate(10);
     }
 
    function ListViaturas(){
@@ -29,7 +30,91 @@ class CheckListOutController extends Controller
    }
     public function store(Request $request)
     {
-        return $request->all();
+        $this->validate($request, [
+            // 'tipo_saida'=>'required',
+            'viatura_id'=>'required|integer|exists:viaturas,id',
+            'motorista_id'=>'required|integer|exists:motoristas,id',
+            'km_inicio'=>'required|numeric|min:0',
+            'hora_inicio'=>'required'
+        ]);
+        $viatuara = Viatura::where('id', $request->viatura_id)->first();
+        $motorista = motorista::where('id', $request->motorista_id)->first();
+
+        if(empty($motorista)){
+            return response()->json(['error' => 'O motorista não foi encontrado!'], 404);
+        }
+
+        if(empty($viatuara)){
+            return response()->json(['error' => 'A viatura não foi encontrada!'], 404);
+        }
+
+        if($viatuara->estado == false || $viatuara->locate == 'OUT'){
+            return response()->json(['error' => 'A viatura desejada não se encontra disponível!'], 404);
+        }
+
+
+
+        $checkListOut = new CheckListOut();
+        $checkListOut->viatura_id = $viatuara->id;
+        $checkListOut->motorista_id = $motorista->id;
+        $checkListOut->carta_conducao = $request->carta_conducao;
+        $checkListOut->km_inicio = $request->km_inicio;
+        $checkListOut->hr_inicio = $request->hora_inicio;
+        $checkListOut->uniforme = $request->uniforme;
+        $checkListOut->limpezaState = $request->limpezaState;
+        $checkListOut->vasoEspansorState = $request->vasoEspansorState;
+        $checkListOut->LiquidoVidroState = $request->LiquidoVidroState;
+        $checkListOut->OleoMotorState = $request->OleoMotorState;
+        $checkListOut->OleoDirecaoState = $request->OleoDirecaoState;
+        $checkListOut->OleoTravoesState = $request->OleoTravoesState;
+        $checkListOut->ACState = $request->ACState;
+        $checkListOut->SistemaABS_State = $request->SistemaABS_State;
+        $checkListOut->CintoSeguracaState = $request->CintoSeguracaState;
+        if ($request->isRota == true) {
+            $checkListOut->tipo_saida = 'ROTAS';
+          }
+          if ($request->isOuthers == true) {
+              $checkListOut->tipo_saida = 'OUTROS';
+            }
+        $checkListOut->motorista_dss = $request->motorista_dss;
+        $checkListOut->lista_presenca = $request->lista_presenca;
+        $checkListOut->colete_saida = $request->colete_saida;
+        $checkListOut->pneu_sobr_saida = $request->pneu_sobr_saida;
+        $checkListOut->macaco_saida = $request->macaco_saida;
+        $checkListOut->inspencao_saida = $request->inspencao_saida;
+        $checkListOut->triangulo_saida = $request->triangulo_saida;
+        $checkListOut->chave_roda_saida = $request->chave_roda_saida;
+        $checkListOut->kit_reboque_saida = $request->kit_reboque_saida;
+        $checkListOut->kit_1_socorros_saida = $request->kit_1_socorro_saida;
+        $checkListOut->extintor_saida = $request->extintor_saida;
+        $checkListOut->livrete_saida = $request->livrete_saida;
+        $checkListOut->licenca_saida = $request->licenca_saida;
+        $checkListOut->seguros_saida = $request->seguros_saida;
+        $checkListOut->taxaradio_saida = $request->taxaradio_saida;
+        $checkListOut->user_id = auth()->user()->id;
+        $checkListOut->save();
+
+        if($checkListOut){
+
+            if ($checkListOut->tipo_saida === 'OUTROS') {
+                $checkListOut->checklistOutDestination()->create([
+                    'descricao_trajecto'=>$request->trajecto,
+                    'horaPrevistaSaida'=>$request->horaPrevistaSaida,
+                    'horaPrevistaEntrada'=>$request->horaPrevistaEntrada,
+                ]);
+            }
+            else if($checkListOut->tipo_saida === 'ROTAS'){
+                    foreach ($request->rota_id as $key => $rota_id) {
+                        $checkListOut->checkListRota()->create([
+                            'rota_id'=>$rota_id
+                        ]);
+                    }
+
+            }
+
+            $viatuara->locate = 'OUT';
+            $viatuara->update();
+        }
     }
 
     /**
@@ -38,9 +123,9 @@ class CheckListOutController extends Controller
      * @param  \App\Models\CheckListOut  $checkListOut
      * @return \Illuminate\Http\Response
      */
-    public function show(CheckListOut $checkListOut)
+    public function show($id)
     {
-        //
+        return $this->checkListOut->with(['viatura', 'motorista'])->findOrFail($id);
     }
 
     /**
