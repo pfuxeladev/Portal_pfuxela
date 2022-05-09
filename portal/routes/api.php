@@ -43,6 +43,8 @@ Route::middleware('auth:api')->group(function () {
 
     Route::get('/listDeps', [App\Http\Controllers\API\Back\UserController::class, 'listDepartamentos']);
 
+    Route::get('/listMotoristas', [App\Http\Controllers\API\Back\CheckListOutController::class, 'ListMotoristas']);
+
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
         'modelos' => App\Http\Controllers\API\Back\ModeloController::class,

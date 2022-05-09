@@ -15,13 +15,6 @@
             <b-col cols="12" md="6">
                 <div class="d-flex align-items-center justify-content-end">
                     <b-form-input v-model="searchQuery" class="d-inline-block mr-1" placeholder="Search..." />
-                    <v-select v-model="departmentFilter" :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'" :options="statusOptions" class="invoice-filter-select" placeholder="Select Status">
-                        <template #selected-option="{ label }">
-                            <span class="text-truncate overflow-hidden">
-                                {{ label }}
-                            </span>
-                        </template>
-                    </v-select>
                 </div>
             </b-col>
         </b-row>
@@ -53,12 +46,12 @@
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>
-                <b-dropdown-item :to="{ name: 'supply-details', params: { id: data.item.id } }">
+                <b-dropdown-item :to="{ name: 'driver-details', params: { id: data.item.id } }">
                     <feather-icon icon="FileTextIcon" />
                     <span class="align-middle ml-50">Detalhes</span>
                 </b-dropdown-item>
 
-                <b-dropdown-item :to="{ name: 'New-supply-order', params: { id: data.item.id } }">
+                <b-dropdown-item :to="{ name: 'driver-edit', params: { id: data.item.id } }">
                     <feather-icon icon="EditIcon" />
                     <span class="align-middle ml-50">Editar</span>
                 </b-dropdown-item>
@@ -67,6 +60,58 @@
         </template>
 
     </b-table>
+    <div class="mx-2 mb-2">
+        <b-row>
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-start
+            "
+          >
+            <span
+              class="text-muted"
+            >mostrar {{ dataMeta.from }} para {{ dataMeta.to }} de
+              {{ dataMeta.of }} entradas</span>
+          </b-col>
+          <!-- Pagination -->
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-end
+            "
+          >
+            <b-pagination
+              v-model="currentPage"
+              :total-rows="totalDrivers"
+              :per-page="perPage"
+              first-number
+              last-number
+              class="mb-0 mt-1 mt-sm-0"
+              prev-class="prev-item"
+              next-class="next-item"
+            >
+              <template #prev-text>
+                <feather-icon
+                  icon="ChevronLeftIcon"
+                  size="18"
+                />
+              </template>
+              <template #next-text>
+                <feather-icon
+                  icon="ChevronRightIcon"
+                  size="18"
+                />
+              </template>
+            </b-pagination>
+          </b-col>
+        </b-row>
+      </div>
 </b-card>
 </template>
 

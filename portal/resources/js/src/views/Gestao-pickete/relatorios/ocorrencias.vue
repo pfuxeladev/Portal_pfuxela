@@ -3,6 +3,9 @@
     no-body
     class="mb-0"
   >
+  <b-card-header>
+      <b-card-title>Gest&atilde;o e controle de entrada e saida de viaturas</b-card-title>
+  </b-card-header>
     <div class="m-2">
       <b-tabs
         content-class="mt-3"
@@ -12,23 +15,10 @@
           title="Saidas de viaturas"
           active
         >
-          <b-row>
-            <b-col>
-              <b-link class="btn btn-outline-primary">
-                <span class="text-nowrap">Nova autoriza&ccedil;&atilde;o de saida</span>
-              </b-link>
-            </b-col>
-             <b-col>
-              <b-form-input
-                v-model="searchQuery"
-                class="d-inline-block mr-1"
-                placeholder="Search..."
-              />
-            </b-col>
-          </b-row>
+          <relatorio-saida/>
         </b-tab>
         <b-tab title="Entradas de viaturas">
-          <p>I'm the second tab</p>
+         <relatorio-entrada />
         </b-tab>
       </b-tabs>
     </div>
@@ -37,7 +27,7 @@
 
 <script>
 import {
-  BCard, BRow, BCol, BTabs, BTab,
+  BCard, BCardHeader, BCardTitle, BRow, BCol, BTabs, BTab,
   BForm,
   BFormGroup,
   BFormInput,
@@ -47,10 +37,13 @@ import { ref, onUnmounted } from '@vue/composition-api'
 import Cleave from 'vue-cleave-component'
 import DatePicker from 'vue2-datepicker'
 import store from '@/store'
-
+import relatorioSaida from './relatorio_saida.vue'
+import relatorioEntrada from './relatorio_entrada.vue'
 export default {
   components: {
     BCard,
+    BCardHeader,
+    BCardTitle,
     BRow,
     BCol,
     BTabs,
@@ -61,6 +54,8 @@ export default {
     BFormInput,
     Cleave,
     DatePicker,
+    relatorioSaida,
+    relatorioEntrada,
   },
   setup(props, { emit }) {
     const PIQUECT_STORE_MODULE_NAME = 'Picket'

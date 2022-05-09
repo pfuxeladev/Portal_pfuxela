@@ -33,6 +33,14 @@ export default
     },
   },
   {
+    path: '/Picket/vehicle-movements/CheckListOut',
+    name: 'CheckList-Out',
+    component: () => import('@/views/Gestao-pickete/relatorios/nova_saida.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Picket/drivers',
     name: 'Drivers',
     component: () => import('@/views/Gestao-pickete/relatorios/motoristas/lista.vue'),
@@ -43,6 +51,22 @@ export default
   {
     path: '/Picket/drivers/New-Driver',
     name: 'New-Driver',
+    component: () => import('@/views/Gestao-pickete/relatorios/motoristas/new_motorista.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
+    path: '/Picket/:id/driver-details',
+    name: 'driver-details',
+    component: () => import('@/views/Gestao-pickete/relatorios/motoristas/details.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
+    path: '/Picket/drivers/driver-edit',
+    name: 'driver-edit',
     component: () => import('@/views/Gestao-pickete/relatorios/motoristas/new_motorista.vue'),
     meta: {
       authOnly: true,

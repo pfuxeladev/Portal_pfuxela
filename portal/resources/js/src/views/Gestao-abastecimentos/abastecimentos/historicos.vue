@@ -149,13 +149,11 @@ export default {
     const SUPPLY_STORE_MODULE_NAME = "Supply";
 
     // Register module
-    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME))
-      store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
+    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(SUPPLY_STORE_MODULE_NAME))
-        store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
 
     const {

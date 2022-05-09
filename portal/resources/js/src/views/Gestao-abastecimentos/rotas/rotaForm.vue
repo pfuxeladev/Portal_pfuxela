@@ -152,14 +152,14 @@ import {
   BButton,
   BLink,
   BFormTimepicker,
-} from 'bootstrap-vue';
-import vSelect from 'vue-select';
-import { ref } from '@vue/composition-api';
-import Form from 'vform';
-import store from '@/store';
-import Ripple from 'vue-ripple-directive';
-import { useToast } from 'vue-toastification/composition';
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue';
+} from 'bootstrap-vue'
+import vSelect from 'vue-select'
+import { ref } from '@vue/composition-api'
+import Form from 'vform'
+import store from '@/store'
+import Ripple from 'vue-ripple-directive'
+import { useToast } from 'vue-toastification/composition'
+import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 export default {
   components: {
     BForm,
@@ -199,7 +199,7 @@ export default {
     }
   },
   mounted() {
-    this.printProjectos();
+    this.printProjectos()
   },
   methods: {
     printProjectos() {
@@ -228,40 +228,40 @@ export default {
       }
     },
     onSubmit(event) {
-      event.preventDefault();
-      this.$Progress.start();
+      event.preventDefault()
+      this.$Progress.start()
       this.form
         .post('/api/Rotas')
         .then((response) => {
           this.$swal.fire({
             icon: 'success',
             title: response.data.message,
-          });
-          this.$emit('refetch-data');
-          this.form.clear();
-          this.form.reset();
-          this.$Progress.finish();
+          })
+          this.$emit('refetch-data')
+          this.form.clear()
+          this.form.reset()
+          this.$Progress.finish()
         })
         .catch((err) => {
           this.$swal.fire({
             icon: 'error',
             title: 'Erro ao tentar adicionar!',
-          });
-          this.$Progress.fail();
-        });
+          })
+          this.$Progress.fail()
+        })
     },
     onReset(event) {
-      event.preventDefault();
+      event.preventDefault()
       // Reset our form values
-      this.form.reset();
+      this.form.reset()
       // Trick to reset/clear native browser form validation state
-      this.show = false;
+      this.show = false
       this.$nextTick(() => {
-        this.show = true;
-      });
+        this.show = true
+      })
     },
   },
-};
+}
 </script>
 
 <style lang="scss">
