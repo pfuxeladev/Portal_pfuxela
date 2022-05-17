@@ -232,7 +232,7 @@ export default {
       this.$Progress.start()
       this.form
         .post('/api/Rotas')
-        .then((response) => {
+        .then(response => {
           this.$swal.fire({
             icon: 'success',
             title: response.data.message,
@@ -242,12 +242,24 @@ export default {
           this.form.reset()
           this.$Progress.finish()
         })
-        .catch((err) => {
-          this.$swal.fire({
-            icon: 'error',
-            title: 'Erro ao tentar adicionar!',
-          })
-          this.$Progress.fail()
+        .catch(err => {
+// console.log(err.response.status)
+          if (err.response.status === 401) {
+
+            this.$router.push({ name: 'auth-login' })
+          } else if (err.response.status === 422) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro! Verifique se os campos estao devidamente preenchidos',
+            })
+            this.$Progress.fail()
+          } else if (err.response.status === 421) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+            this.$Progress.fail()
+          }
         })
     },
     onReset(event) {

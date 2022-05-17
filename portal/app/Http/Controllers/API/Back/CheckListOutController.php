@@ -18,11 +18,18 @@ class CheckListOutController extends Controller
     }
     public function index()
     {
-        return $this->checkListOut->with(['viatura', 'motorista.person'])->orderBy('id', 'desc')->paginate(10);
+        return $this->checkListOut->with(['viatura', 'motorista.person', 'checkListIn'])->orderBy('id', 'desc')->paginate(10);
     }
 
-   function ListViaturas(){
-       return Viatura::all();
+   function listViaturaDentro(){
+       return Viatura::where('locate', 'IN')->where('estado', true)->get();
+   }
+   function kmActual(Request $request){
+        if ($request->viatura_id) {
+            return response()->json(Viatura::where('id', $request->viatura_id)->select('kilometragem')->first(), 200);
+        }else{
+            return 0;
+        }
    }
 
    function ListMotoristas(){
@@ -35,27 +42,39 @@ class CheckListOutController extends Controller
             'viatura_id'=>'required|integer|exists:viaturas,id',
             'motorista_id'=>'required|integer|exists:motoristas,id',
             'km_inicio'=>'required|numeric|min:0',
-            'hora_inicio'=>'required'
+            'hora_inicio'=>'required',
+            'limpezaState'=> 'required',
+            'vasoEspansorState' =>'required|string',
+            'LiquidoVidroState' =>'required|string',
+            'OleoMotorState' =>'required|string',
+            'OleoDirecaoState' =>'required|string',
+            'OleoTravoesState' =>'required|string',
+            'SistemaABS_State' =>'required|string',
+        ], [
+            'required'=>'O :attribute é obrigatório'
         ]);
-        $viatuara = Viatura::where('id', $request->viatura_id)->first();
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+
+        if ($viatura->kilometragem > $request->km_inicio) {
+            return response()->json(['error'=>'kilometragem registada é menor que a kilometragem actual da viatura, Kilometragem actual: '.$viatura->kilometragem], 421);
+        }
+
+        if($viatura->estado == false || $viatura->locate == 'OUT'){
+            return response()->json(['error' => 'A viatura desejada não se encontra fora do parque!'], 404);
+        }
+
         $motorista = motorista::where('id', $request->motorista_id)->first();
 
         if(empty($motorista)){
             return response()->json(['error' => 'O motorista não foi encontrado!'], 404);
         }
 
-        if(empty($viatuara)){
-            return response()->json(['error' => 'A viatura não foi encontrada!'], 404);
-        }
 
-        if($viatuara->estado == false || $viatuara->locate == 'OUT'){
-            return response()->json(['error' => 'A viatura desejada não se encontra disponível!'], 404);
-        }
 
 
 
         $checkListOut = new CheckListOut();
-        $checkListOut->viatura_id = $viatuara->id;
+        $checkListOut->viatura_id = $viatura->id;
         $checkListOut->motorista_id = $motorista->id;
         $checkListOut->carta_conducao = $request->carta_conducao;
         $checkListOut->km_inicio = $request->km_inicio;
@@ -112,8 +131,10 @@ class CheckListOutController extends Controller
 
             }
 
-            $viatuara->locate = 'OUT';
-            $viatuara->update();
+            $viatura->locate = 'OUT';
+            $viatura->update();
+
+            return response()->json(['message'=>'viatura  inspencionada com sucesso']);
         }
     }
 

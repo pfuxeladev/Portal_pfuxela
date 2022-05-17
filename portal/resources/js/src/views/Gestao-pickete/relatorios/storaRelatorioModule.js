@@ -35,7 +35,7 @@ export default {
     fetchEntradas(ctx, queryParams) {
       return new Promise((resolve, reject) => {
         axios
-          .get('/api/checkListIn', { params: queryParams })
+          .get('/api/CheckListIn', { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -44,7 +44,7 @@ export default {
     fetchEntrada(ctx, { id }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/checkListIn/${id}`)
+          .get(`/api/CheckListIn/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -53,7 +53,7 @@ export default {
     addCheckListIn(ctx, CheckListInData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/checkListIn', CheckListInData)
+          .post('/api/CheckListIn', CheckListInData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

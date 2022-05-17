@@ -23,7 +23,7 @@ class RotaController extends Controller
 
     function todasRotas()
     {
-        return $this->rota->all();
+        return $this->rota->with('projecto')->get();
     }
 
     function todosProjectos(){
@@ -64,7 +64,7 @@ class RotaController extends Controller
         if ($rota) {
            return response()->json(['message'=>'rota adicionada com sucesso'],200);
         }else{
-            return response()->json(['err'=>'erro na insercao de dados'],421);
+            return response()->json(['err'=>'erro na insercao de dados'], 421);
         }
     }
 

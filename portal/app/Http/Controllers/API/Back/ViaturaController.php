@@ -30,6 +30,10 @@ class ViaturaController extends Controller
     function getCombustivel(){
         return Response::json(combustivel::all(), 200);
     }
+
+    function listViatura(){
+        return Viatura::where('estado', true)->orderBy('id', 'desc')->get();
+    }
     public function store(Request $request)
     {
         $modelo = new modelo;

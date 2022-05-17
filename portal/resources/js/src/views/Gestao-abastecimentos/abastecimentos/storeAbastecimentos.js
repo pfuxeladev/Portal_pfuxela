@@ -30,5 +30,13 @@ export default {
           .catch(error => reject(error))
       })
     },
+    addAbastecimentoRecorrente(ctx, SupplyDatas) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post('/api/Abastecimento/extra', { abastecimento: SupplyDatas })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

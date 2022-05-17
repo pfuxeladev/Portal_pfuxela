@@ -28,6 +28,11 @@ export default [
         route: 'Routes Supply',
         icon: 'mapIcon',
       },
+      {
+        title: 'recurring supply',
+        route: 'recurring supply',
+        icon: 'folderIcon',
+      },
     ],
   },
 ]

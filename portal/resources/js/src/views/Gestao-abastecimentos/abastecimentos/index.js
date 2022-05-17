@@ -14,10 +14,9 @@ export default function useAbastecimentoList() {
 
   // Table Handlers
   const tableColumns = [
-    { key: 'Ordem', sortable: true },
+    { key: 'ordem', sortable: true },
     { key: 'qtd_ant', sortable: true },
     { key: 'qtd_rec', sortable: true },
-    { key: 'matricula', sortable: true },
     { key: 'estado', sortable: true },
     { key: 'bombas', sortable: true },
     // { key: 'rota', sortable: true },

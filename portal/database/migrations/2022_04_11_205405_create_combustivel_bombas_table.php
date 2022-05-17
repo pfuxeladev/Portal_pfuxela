@@ -19,6 +19,7 @@ class CreateCombustivelBombasTable extends Migration
             $table->unsignedBigInteger('bomba_id');
             $table->foreign('bomba_id')->references('id')->on('bombas')->onDelete('cascade');
             $table->foreignIdFor(combustivel::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->double('preco_actual')->nullable();
             $table->timestamps();
         });
     }

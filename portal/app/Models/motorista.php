@@ -12,4 +12,12 @@ class motorista extends Model
     function person(){
         return $this->belongsTo(Person::class);
     }
+
+    public function checkListOut(){
+        return $this->hasMany(checkListOut::class);
+    }
+    
+    public function checkListIn(){
+        return $this->hasMany(checkListIn::class);
+    }
 }

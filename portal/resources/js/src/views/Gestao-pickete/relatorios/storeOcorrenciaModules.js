@@ -22,6 +22,12 @@ export default {
           .catch(error => reject(error))
       })
     },
+    addOcorrencia(ctx, ocorrenciaData) {
+      return new Promise((resolve, reject) => {
+        axios.post('/api/Ocorrencia', ocorrenciaData)
+          .then(response => resolve(response)).catch(error => reject(error))
+      })
+    },
     // addViatura(ctx, userData) {
     //   return new Promise((resolve, reject) => {
     //     axios

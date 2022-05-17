@@ -14,9 +14,13 @@ export default function useRotaList() {
 
   // Table Handlers
   const tableColumns = [
+    {
+      key: 'projecto.name',
+      sortable: true,
+    },
     { key: 'nome_rota', sortable: true },
+    { key: 'Tipo_da_rota', sortable: true },
     { key: 'endereco', sortable: true },
-    { key: 'distancia_km', sortable: true },
     {
       key: 'horaPartida',
       sortable: true,
@@ -25,11 +29,8 @@ export default function useRotaList() {
       key: 'horaChegada',
       sortable: true,
     },
-    {
-      key: 'projecto.name',
-      sortable: true,
-    },
-    { key: 'Tipo_da_rota', sortable: true },
+    { key: 'distancia_km', sortable: true },
+
     { key: 'actions' },
   ]
   const perPage = ref(10)

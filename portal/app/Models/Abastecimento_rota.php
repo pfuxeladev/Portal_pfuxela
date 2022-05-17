@@ -9,7 +9,7 @@ class Abastecimento_rota extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['ordem_id', 'rota_id', 'qtd', 'razao_abastecimento', 'turno'];
+    protected $fillable = ['ordem_id', 'rota_id', 'qtd', 'turno'];
 
     public function rota(){
         return $this->belongsTo(Rota::class);

@@ -5,7 +5,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCkecklistOutDestinationsTable extends Migration
+class CreateChecklistOutDestinationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class CreateCkecklistOutDestinationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ckecklist_out_destinations', function (Blueprint $table) {
+        Schema::create('checklist_out_destinations', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(CheckListOut::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->text('descricao_trajecto');
@@ -35,6 +35,6 @@ class CreateCkecklistOutDestinationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ckecklist_out_destinations');
+        Schema::dropIfExists('checklist_out_destinations');
     }
 }

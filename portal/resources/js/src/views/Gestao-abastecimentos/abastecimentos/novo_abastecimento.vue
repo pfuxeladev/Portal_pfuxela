@@ -28,14 +28,13 @@
                 md="12"
                 xl="12"
               >
-               <b>Refs</b>:  {{form.ordem_id}}
+                <b>Refs</b>:  {{form.ordem_id}}
               </b-col>
               <hr>
             </b-row>
             <b-row>
               <b-col
                 cols="12"
-                md="12"
                 xl="12"
               >
                 <b-card-body class="invoice-padding form-item-section">
@@ -46,11 +45,11 @@
                           <th class="text-danger">
                             <i class="fas fa-remove" />
                           </th>
-                          <th>viatura(matricula)</th>
+                          <th>viatura(matr)</th>
+                          <th>projecto</th>
                           <th>Rota</th>
                           <th>Qtd(<small class="text-lowercase">ltr</small>)</th>
-                          <th>Turno(manh&atilde;/tarde)</th>
-                          <th>Justifica&ccedil;ao</th>
+                          <th>Turno</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -58,7 +57,7 @@
                           v-for="(abs, index) in form.abastecer"
                           :key="index"
                         >
-                          <td>
+                          <td style="width:2%">
                             <span
                               class="btn btn-sm btn-outline-danger"
                               @click="rmRow(index)"
@@ -67,14 +66,19 @@
                             </span>
 
                           </td>
-                          <td style="width:30%">
-                              <v-select
-                            v-model="abs.viatura_id"
-                            label="matricula"
-                            :options="viatura"
-                            :reduce="(viatura) => viatura.id"
-                        />
-                        </td>
+                          <td style="width:20%">
+                            <v-select
+                              v-model="abs.viatura_id"
+                              label="matricula"
+                              :options="viatura"
+                              :reduce="(viatura) => viatura.id"
+                            />
+                            ({{rec_abast}})
+                          </td>
+                          <td style="width:20%">
+                            <v-select label="name" v-model="abs.projecto_id" :options="projecto" :reduce="projecto=>projecto.id"
+                             @input="fetchRotas"/>
+                          </td>
                           <td style="width:30%">
                             <v-select
                               multiple
@@ -93,19 +97,12 @@
                             />
 
                           </td>
-                          <td>
+                          <td style="width:10%">
                             <v-select
                               v-model="abs.turno"
                               :options="['manha','tarde']"
                             />
 
-                          </td>
-                          <td>
-                            <b-form-input
-                              v-model="abs.observacao"
-                              type="text"
-                              placeholder="Razoes de abastecimento"
-                            />
                           </td>
                         </tr>
                       </tbody>
@@ -216,8 +213,9 @@ export default {
       bombas: [],
       form: new Form({
         ordem_id: this.$route.params.refs,
-        projecto_id: null,
+
         abastecer: [{
+          projecto_id: null,
           viatura_id: null,
           rota_id: null,
           qtd_abastecer: 0,
@@ -228,8 +226,8 @@ export default {
     }
   },
   created() {
-    // this.fetchProjectos()
-    this.fetchRotas()
+    this.fetchProjectos()
+    // this.fetchRotas()
     this.fetchViaturas()
     this.fetchBombas()
     // single data
@@ -238,6 +236,7 @@ export default {
   methods: {
     add() {
       this.form.abastecer.push({
+        projecto_id: null,
         viatura_id: null,
         rota_id: null,
         qtd_abastecer: 0,
@@ -247,8 +246,7 @@ export default {
     rmRow(index) {
       this.form.abastecer.splice(index, 1)
     },
-    getQtd(a) {
-      const viatura_id = a
+    getQtd() {
       //   alert(viatura_id)
       this.$http.get(`/api/getQtdDisponivel/${this.form.abastecer.viatura_id}`).then(res => {
         this.rec_abast = res.data
@@ -260,28 +258,29 @@ export default {
     fetchProjectos() {
       this.$http.get('/api/listProject').then(response => {
         this.projecto = response.data
-        // console.log(this.projecto.data)
       }).catch(err => {
         console.log(err)
       })
     },
 
     fetchRotas() {
-      // alert(this.form.projecto_id)
-      this.$http.get('/api/todasRotas').then(res => {
-        this.rota = res.data
-        if (res.data === '') {
+      console.log(this.form.abastecer)
+      for (let i = 0; i < this.form.abastecer.length; i++ ) {
+        this.$http.get(`/api/RotaByProject/${this.form.abastecer[i].projecto_id}`).then(res => {
+          this.rota = res.data
+          if (res.data === '') {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Nao existe nenhuma rota cadastrada!',
+            })
+          }
+        }).catch(err => {
           this.$swal.fire({
             icon: 'error',
-            title: 'Nao existe nenhuma rota cadastrada!',
+            title: 'Erro ao tentar buscar!',
           })
-        }
-      }).catch(err => {
-        this.$swal.fire({
-          icon: 'error',
-          title: 'Erro ao tentar buscar!',
         })
-      })
+      }
     },
     fetchBombas() {
       this.$http.get('/api/bombas').then(res => {
@@ -296,19 +295,16 @@ export default {
     NovaOrdem() {
       this.$Progress.start()
       this.form.post('/api/Abastecimento').then(res => {
-        if (res.data.err === true) {
-          this.$swal.fire({
-            icon: 'error',
-            title: res.data.erro,
-          })
-          this.$Progress.fail()
-        } else {
-          this.$Progress.finish()
-        //   this.$router.push({
-        //     name: 'Supply',
-        //   })
-        //   this.form.reset()
-        }
+
+        this.$swal.fire({
+          icon: 'error',
+          title: res.data.success,
+        })
+        this.$Progress.finish()
+        this.$router.push({
+          name: 'Supply',
+        })
+        this.form.reset()
       }).catch(err => {
         if (err) {
           this.$swal.fire({

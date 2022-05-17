@@ -11,7 +11,14 @@
             </b-col>
         </b-row>
          </div>
-        <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns1" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative"></b-table>
+        <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns1" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative">
+            <template #cell(Data_de_registo)="data">
+                {{ dateTime(data.item.created_at) }}
+            </template>
+            <template #cell(Matricula)="data">
+                {{ data.item.check_list_out.viatura.matricula }}
+            </template>
+        </b-table>
     </b-card>
 
 </section>
@@ -36,6 +43,7 @@ import {
   ref,
   onUnmounted
 } from '@vue/composition-api'
+import moment from 'moment'
 import useOcorrenciaList from './relatorioOcorrencia'
 import storeRelatorioModule from './storaRelatorioModule'
 import store from '@/store'
@@ -64,6 +72,9 @@ export default {
     onUnmounted(() => {
       if (store.hasModule(ENTRADAS_STORE_MODULE_NAME)) store.unregisterModule(ENTRADAS_STORE_MODULE_NAME)
     })
+    function dateTime(value) {
+      return moment(value).format('DD/MM/YYYY hh:mm')
+    }
     const {
       fetchEntradas,
       tableColumns1,
@@ -93,6 +104,7 @@ export default {
       refEntradasTableList,
       refetchData1,
       rotaFilter,
+      dateTime,
     }
   },
 }

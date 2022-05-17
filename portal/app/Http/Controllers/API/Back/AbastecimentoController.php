@@ -29,16 +29,16 @@ class AbastecimentoController extends Controller
     {
         $abastecimento = $this->abastecimento->join('ordems', 'abastecimentos.ordem_id','=','ordems.id')
         ->join('bombas', 'ordems.bombas_id','=','bombas.id')
-        ->join('ordem_viaturas', 'ordems.id', '=','ordem_viaturas.ordem_id')
-        ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
-        ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec','bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'viaturas.matricula', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
+        ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec','bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
 
         return $abastecimento;
     }
 
     function ListarViaturas()
     {
-        return Viatura::where('locate', 'IN')->get();
+        return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')
+        ->where('viaturas.estado', true)
+        ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
     function RotaByProject(Request $request)
@@ -51,14 +51,14 @@ class AbastecimentoController extends Controller
         $qtdDisponivel = 0;
 
 
-        $capTanque = Viatura::where('id', $request->viatura_id)->first();
-        $qtdRec = Abastecimento::where('viatura_id', $request->viatura_id)->select('qtd_rec')->orderBy('id', 'desc')->first();
-        if ($qtdRec) {
-            $qtdDisponivel =  $capTanque->qtd_disponivel;
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+        if ($viatura) {
+            $qtdDisponivel =  $viatura->qtd_disponivel;
 
             if (!empty($qtdDisponivel)) {
                 return $qtdDisponivel;
             } else {
+                return 0;
             }
         }
         return 0;
@@ -98,8 +98,7 @@ class AbastecimentoController extends Controller
                 Abastecimento_rota::create([
                     'ordem_id' => $ordem->id,
                     'rota_id' => $rt,
-                    'turno' => $abst['turno'],
-                    'razao_abastecimento' => $abst['observacao']
+                    'turno' => $abst['turno']
                 ]);
 
                 // alocar viatura a rota
@@ -128,7 +127,8 @@ class AbastecimentoController extends Controller
                 $abastecimento->qtd_rec = $totalAbastecer;
                 $abastecimento->save();
             }
-
+            $ordem->estado = 'pendente';
+            $ordem->update();
             return response()->json(['success' => 'submetido com sucesso','err'=>false]);
     }
 

@@ -32,7 +32,7 @@
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>
                     <span v-else-if="SupplyData.ordem.estado === 'aprovado'">
-                      <b>Aprovado por</b>: {{ SupplyData.ordem.codigo_ordem }}
+                      <b>Aprovado por</b>: {{ SupplyData.created_by.name }}
                     </span>
                     <span v-else>Ordem rejeitada</span>
                   </b-list-group-item>
@@ -42,7 +42,7 @@
             </b-row>
             <b-row>
                 <b-col><b>Matricula</b></b-col>
-                <b-col><b>Qtd abastecida</b></b-col>
+                <b-col><b>Qtd a abastecer</b></b-col>
                 <b-col><b>Data</b></b-col>
             </b-row>
             <b-row v-for="(vt, index) in SupplyData.ordem.ordem_viatura" :key="index">

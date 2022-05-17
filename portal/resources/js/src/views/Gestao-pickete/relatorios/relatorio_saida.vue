@@ -39,7 +39,7 @@
       >
         <template #cell(Data_de_registo)="data">
           {{ dateTime(data.item.created_at) }} </template
-        >y
+        >
         <template #cell(Matricula)="data">
           {{ data.item.viatura.matricula }}
         </template>

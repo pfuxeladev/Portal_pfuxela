@@ -9,6 +9,14 @@ export default
     },
   },
   {
+    path: '/Supply/recurring-supply',
+    name: 'recurring supply',
+    component: () => import('@/views/Gestao-abastecimentos/abastecimentos/Abastecimento_recorrente.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/Orders/:refs/supply-order',
     name: 'New-supply-order',
     component: () => import('@/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue'),

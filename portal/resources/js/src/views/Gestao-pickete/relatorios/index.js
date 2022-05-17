@@ -14,12 +14,11 @@ export default function OcorrenciasList() {
 
   // Table Handlers
   const tableColumns = [
+    { key: 'codigo', sortable: true },
     { key: 'Data', sortable: true },
     { key: 'Hora', sortable: true },
     { key: 'motorista', sortable: true },
-    { key: 'cogido_da_ocorrencia', sortable: true },
-    { key: 'detalhes', sortable: true },
-    { key: 'estado_ocorrencia', sortable: true },
+    { key: 'Desrição', sortable: true },
     { key: 'viatura', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'created_by.email', sortable: true },

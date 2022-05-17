@@ -44,7 +44,17 @@
       show-empty
       empty-text="No matching records found"
       :sort-desc.sync="isSortDirDesc"
-    />
+    >
+    <template #cell(Data)="data">
+        {{data.item.data_ocorrencia}}
+    </template>
+    <template #cell(Hora)="data">
+        {{data.item.hora_da_ocorrencia}}
+    </template>
+    <template #cell(Desrição)="data">
+        {{data.item.descricao_ocorrencia}}
+    </template>
+    </b-table>
     <div class="mx-2 mb-2">
       <b-row>
         <b-col
@@ -92,122 +102,172 @@
       </b-row>
     </div>
     <b-modal ref="my-modal" size="lg" hide-footer title="Nova ocorrencia">
-      <b-form @submit.prevent="editMode ? onSubmit : onUpdate" @reset="onReset">
-        <b-row>
-            <input type="hidden" v-model="form.id">
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="viatura:">
-              <v-select v-model="form.viatura_id"></v-select>
-              <!-- <small
-                v-if="form.errors.has('viatura_id')"
-                class="alert text-danger"
-                v-html="form.errors.get('viatura_id')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="motorista:">
-              <v-select v-model="form.motorista_id"></v-select>
-              <!-- <small
-                v-if="form.errors.has('motorista_id')"
-                class="alert text-danger"
-                v-html="form.errors.get('motorista_id')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="data da ocorrencia:">
-              <date-picker
-                v-model="form.data_ocorrencia"
-                value-type="format"
-                format="YYYY-MM-DD"
-                style="width: 100%"
-              ></date-picker>
-              <!-- <small
-                v-if="form.errors.has('data_ocorrencia')"
-                class="alert text-danger"
-                v-html="form.errors.get('data_ocorrencia')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="hora:">
-              <cleave
-                id="time"
-                v-model="form.hora_da_ocorrencia"
-                class="form-control"
-                :raw="false"
-                :options="options.time"
-                placeholder="hh:mm:ss"
-              />
-              <!-- <small
-                v-if="form.errors.has('hora_da_ocorrencia')"
-                class="alert text-danger"
-                v-html="form.errors.get('hora_da_ocorrencia')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="periodo da ocorrencia:">
-              <v-select
-                v-model="form.periodo"
-                :options="['Diurno', 'Noturno']"
-              />
-              <!-- <small
-                v-if="form.errors.has('periodo')"
-                class="alert text-danger"
-                v-html="form.errors.get('periodo')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="kilmetragem da viatura:">
-              <b-form-input
-                type="number"
-                v-model="form.kilomatragem"
-              ></b-form-input>
-              <!-- <small
-                v-if="form.errors.has('kilomatragem')"
-                class="alert text-danger"
-                v-html="form.errors.get('kilomatragem')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="6" lg="6">
-            <b-form-group label="tipo de ocorrencia:">
-              <v-select
-                v-model="form.tipo_ocorrencia"
-                :options="['Informativa', 'Necessita reparacao']"
-              ></v-select>
-              <!-- <small
-                v-if="form.errors.has('tipo_ocorrencia')"
-                class="alert text-danger"
-                v-html="form.errors.get('tipo_ocorrencia')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" md="12" lg="12">
-            <b-form-group label="descricao:">
-              <b-form-textarea
-                id="textarea"
-                v-model="form.descricao_ocorrencia"
-                placeholder="Faça o Relato dos factos"
-              ></b-form-textarea>
-              <!-- <small
-                v-if="form.errors.has('tipo_ocorrencia')"
-                class="alert text-danger"
-                v-html="form.errors.get('tipo_ocorrencia')"
-              ></small> -->
-            </b-form-group>
-          </b-col>
+      <validation-observer #default="{ handleSubmit }" ref="refFormObserver">
+        <b-form @submit.prevent="handleSubmit(onSubmit)" @reset="onReset">
+          <b-row>
+            <input type="hidden" v-model="form.id" />
+            <b-col cols="12" md="6" lg="6">
+              <validation-provider
+                #default="validationContext"
+                name="viatura"
+                rules="required"
+              >
+                <b-form-group label="viatura" :state="getValidationState(validationContext)">
+                  <v-select v-model="form.viatura_id" label="matricula"
+                :options="viaturas" :reduce="viaturas=>viaturas.id" ></v-select>
+                  <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+                </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+                 <validation-provider
+                #default="validationContext"
+                name="motorista"
+                rules="required"
+              >
+              <b-form-group label="motorista">
+                <v-select v-model="form.motorista_id" label="nome" :options="motoristas" :reduce="motoristas => motoristas.id" ></v-select>
+               <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+                <validation-provider
+                #default="validationContext"
+                name="data da ocorrencia"
+                rules="required"
+              >
+              <b-form-group label="data da ocorrencia:">
+                <date-picker
+                  v-model="form.data_ocorrencia"
+                  value-type="format"
+                  format="YYYY-MM-DD"
+                  style="width: 100%"
+                  :state="getValidationState(validationContext)"
+                trim
+                />
+                 <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+                 <validation-provider
+                #default="validationContext"
+                name="hora"
+                rules="required"
+              >
+              <b-form-group label="hora">
+                <cleave
+                  id="time"
+                  v-model="form.hora_da_ocorrencia"
+                  class="form-control"
+                  :raw="false"
+                  :options="options.time"
+                  placeholder="hh:mm:ss"
+                  :state="getValidationState(validationContext)"
+                trim
+                />
+                 <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+                 <validation-provider
+                #default="validationContext"
+                name="periodo da ocorrencia"
+                rules="required"
+              >
+              <b-form-group label="periodo da ocorrencia"
+                  :state="getValidationState(validationContext)">
+                <v-select
+                  v-model="form.periodo"
+                  :options="['Diurno', 'Noturno']"
+                trim
+                />
+                <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+                 </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+                 <validation-provider
+                #default="validationContext"
+                name="kilometragem actual da viatura"
+                rules="required"
+              >
+              <b-form-group label="kilometragem actual da viatura">
+                <b-form-input
+                  type="number"
+                  v-model="form.kilometragem"
+                  :state="getValidationState(validationContext)"
+                trim
+                ></b-form-input>
+                 <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="6" lg="6">
+               <validation-provider
+                #default="validationContext"
+                name="tipo de ocorrencia"
+                rules="required"
+              >
+              <b-form-group label="tipo de ocorrencia"
+                  :state="getValidationState(validationContext)"
+                  >
+                <v-select
+                  v-model="form.tipo_ocorrencia"
+                  :options="['Informativa', 'Necessita reparacao']"
+                trim
+                ></v-select>
+                 <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
+            <b-col cols="12" md="12" lg="12">
+               <validation-provider
+                #default="validationContext"
+                name="descricao"
+                rules="required"
+              >
+               <b-form-group label="descricao">
+                <b-form-textarea
+                  id="textarea"
+                  v-model="form.descricao_ocorrencia"
+                  placeholder="Faça o Relato dos factos"
+                  :state="getValidationState(validationContext)"
+                trim
+                ></b-form-textarea>
+                 <b-form-invalid-feedback>
+                    {{ validationContext.errors[0] }}
+                  </b-form-invalid-feedback>
+              </b-form-group>
+              </validation-provider>
+            </b-col>
 
-          <b-col cols="12" md="6" lg="6">
-            <b-button type="submit" variant="outline-success"
-              >emitir ocorr&ecirc;ncia</b-button
-            >
-          </b-col>
-        </b-row>
-      </b-form>
+            <b-col cols="12" md="6" lg="6">
+              <b-button type="submit" variant="outline-success"
+                >emitir ocorr&ecirc;ncia</b-button
+              >
+            </b-col>
+          </b-row>
+        </b-form>
+      </validation-observer>
+
       <b-row>
         <b-col cols="12" md="12" lg="12">
           <b-button
@@ -229,6 +289,7 @@ import {
   BRow,
   BCol,
   BFormInput,
+  BFormInvalidFeedback,
   BButton,
   BTable,
   BLink,
@@ -239,17 +300,23 @@ import {
   BForm,
   BFormGroup,
   BFormTextarea,
-} from 'bootstrap-vue'
-import vSelect from 'vue-select'
-import { ref, onUnmounted } from '@vue/composition-api'
-import Form from 'vform'
-import Cleave from 'vue-cleave-component'
-import DatePicker from 'vue2-datepicker'
-import storeOcorrenciaModule from './storeOcorrenciaModules'
-import OcorrenciasList from './index'
-import 'vue2-datepicker/index.css'
+} from 'bootstrap-vue';
+import { ValidationProvider, ValidationObserver } from 'vee-validate';
+import { required, alphaNum, email } from '@validations'
+import formValidation from '@core/comp-functions/forms/form-validation';
+import Ripple from 'vue-ripple-directive';
+import vSelect from 'vue-select';
+import { ref, onUnmounted } from '@vue/composition-api';
+import Form from 'vform';
+import Cleave from 'vue-cleave-component';
+import DatePicker from 'vue2-datepicker';
+import storeOcorrenciaModule from './storeOcorrenciaModules';
+import OcorrenciasList from './index';
+import 'vue2-datepicker/index.css';
+import { useToast } from 'vue-toastification/composition';
+import ToastificationContent from '@core/components/toastification/ToastificationContent.vue';
 
-import store from '@/store'
+import store from '@/store';
 
 export default {
   components: {
@@ -257,6 +324,7 @@ export default {
     BRow,
     BCol,
     BFormInput,
+    BFormInvalidFeedback,
     BButton,
     BTable,
     BLink,
@@ -270,19 +338,50 @@ export default {
     BFormTextarea,
     Cleave,
     DatePicker,
+    // Form Validation
+    ValidationProvider,
+    ValidationObserver,
   },
-  setup(props, { emit }) {
-    const PIQUECT_STORE_MODULE_NAME = 'Picket'
-    const editMode = false
+  data() {
+    return {
+      required,
+      alphaNum,
+      email,
+      viaturas: [],
+      motoristas: [],
+    }
+  },
+  directives: {
+    Ripple,
+  },
+  created() {
+    this.listViaturas()
+    this.listMotoristas()
+  },
+  methods: {
+    listViaturas() {
+      this.$http.get('/api/listAllViaturas').then(response => {
+        this.viaturas = response.data
+      })
+    },
+    listMotoristas() {
+      this.$http.get('/api/listMotoristas').then(response => {
+        this.motoristas = response.data
+      })
+    },
+  },
+  setup({ emit }) {
+    const PIQUECT_STORE_MODULE_NAME = 'Picket';
+    const editMode = false;
     // Register module
     if (!store.hasModule(PIQUECT_STORE_MODULE_NAME)) {
-      store.registerModule(PIQUECT_STORE_MODULE_NAME, storeOcorrenciaModule)
+      store.registerModule(PIQUECT_STORE_MODULE_NAME, storeOcorrenciaModule);
     }
 
     // UnRegister on leave
     onUnmounted(() => {
       if (store.hasModule(PIQUECT_STORE_MODULE_NAME)) {
-        store.unregisterModule(PIQUECT_STORE_MODULE_NAME)
+        store.unregisterModule(PIQUECT_STORE_MODULE_NAME);
       }
     })
 
@@ -298,19 +397,20 @@ export default {
     ]
 
     function showModal() {
-      this.editMode = false
-      this.$refs['my-modal'].show()
+      this.editMode = false;
+      this.$refs['my-modal'].show();
     }
 
     function toggleModal() {
-      this.$refs['my-modal'].toggle('#toggle-btn')
+      this.$refs['my-modal'].toggle('#toggle-btn');
     }
 
     function onReset(e) {
-      e.preventDefault()
+      e.preventDefault();
       // Reset our form values
-      this.form.reset()
+      this.form.reset();
     }
+    const toast = useToast();
     const form = ref(
       JSON.parse(
         JSON.stringify(
@@ -320,7 +420,7 @@ export default {
             motorista_id: '',
             descricao_ocorrencia: '',
             hora_da_ocorrencia: '',
-            kilomatragem: '',
+            kilometragem: '',
             tipo_ocorrencia: '',
             periodo: '',
             data_ocorrencia: '',
@@ -330,57 +430,42 @@ export default {
     )
 
     function onSubmit() {
-      this.form
-        .post('/api/Ocorrencia')
-        .then(response => {
-          this.$swal.fire({
-            icon: 'success',
-            title: response.data.success,
+      this.editMode = false;
+      store
+        .dispatch('Picket/addOcorrencia', form.value)
+        .then((response) => {
+          this.$emit('refetch-data')
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: response.data.message,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
           })
-          emit('afterAction')
-          this.form.clear()
-          this.form.reset()
-          this.$Progress.finish()
+          this.toggleModal()
         })
         .catch(err => {
+          console.log(err)
           if (err) {
-            this.$swal.fire({
-              icon: 'error',
-              title: 'Erro ao tentar adicionar!',
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.error,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
             })
           }
         })
     }
-    function onUpdate() {
-      this.form
-        .put(`/api/Ocorrencia/${this.form.id}`)
-        .then(response => {
-          this.$swal.fire({
-            icon: 'success',
-            title: response.data.success,
-          })
-          emit('afterAction')
-          this.form.clear()
-          this.form.reset()
-          this.$Progress.finish()
-        })
-        .catch(err => {
-          if (err) {
-            this.$swal.fire({
-              icon: 'error',
-              title: 'Erro ao tentar adicionar!',
-            })
-          }
-
-          this.$Progress.fail()
-        })
-    }
+    const { refFormObserver, getValidationState } = formValidation(form)
     const options = {
       time: {
         time: true,
         timePattern: ['h', 'm', 's'],
       },
-    }
+    };
     const {
       fetchOcorrencias,
       tableColumns,
@@ -396,7 +481,7 @@ export default {
       refetchData,
 
       statusFilter,
-    } = OcorrenciasList()
+    } = OcorrenciasList();
 
     return {
       // Sidebar
@@ -418,12 +503,13 @@ export default {
       onReset,
       form,
       onSubmit,
-      onUpdate,
       statusOptions,
       options,
       // Extra Filters
       statusFilter,
+      refFormObserver,
+      getValidationState,
     }
   },
-}
+};
 </script>

@@ -10,29 +10,58 @@ use App\Models\Rota;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
 use App\Models\abastecimento;
+use App\Models\ordem_viatura;
 use App\Models\Viatura;
+
 class OrdemController extends Controller
 {
-   private $ordem;
+    private $ordem;
 
-   function __construct(Ordem $ordem)
-   {
-       $this->ordem = $ordem;
-   }
+    function __construct(Ordem $ordem)
+    {
+        $this->ordem = $ordem;
+    }
     public function index()
     {
         return $this->ordem->with(['bombas', 'createdBy', 'abastecimento'])->orderBy('id', 'desc')->paginate(15);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    function AprovarOrdem(Request $request)
+    {
+        $ordem = Ordem::where('refs', $request->refs)->first();
+        $ordem->estado = 'Aprovada';
+        $ordem->update();
+
+        return response()->json(['message' => 'Ordem aprovada a encaminhar para as bombas']);
+    }
+
+    function CancelarOrdem(Request $request)
+    {
+        try {
+            $ordem = Ordem::where('refs', $request->refs)->first();
+            $ordem->estado = 'Cancelada';
+            $ordem->update();
+
+            if ($ordem) {
+
+                $ordem_viatura = ordem_viatura::where('ordem_id', $ordem->id)->get();
+                foreach ($ordem_viatura as $ov => $ordVi) {
+                    $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
+                    $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $ordVi->qtd_abastecida);
+                    $viatura->update();
+                }
+
+                return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Ordem cancelada com sucesso', $e->getMessage()], 421);
+        }
+    }
+
     public function store(Request $request)
     {
-        $ordem = new Ordem();
+        try {
+            $ordem = new Ordem();
             $counter = 10000;
             $uuid = Str::uuid()->toString();
 
@@ -51,13 +80,15 @@ class OrdemController extends Controller
 
             if ($ordem) {
                 return $ordem->refs;
-            }else {
-                return response()->json(['error'=>'erro na abertura da ordem', 'erro'=>true]);
             }
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'erro na abertura da ordem', 'erro' => true]);
+        }
     }
 
 
-    public function abastecer(Request $request, $refs){
+    public function abastecer(Request $request, $refs)
+    {
         $totalAbastecer = 0;
         $this->validate($request, [
             'viatura_id' => 'required|integer|exists:viaturas,id',
@@ -66,17 +97,18 @@ class OrdemController extends Controller
             'abastecer.*.rota_id' => 'required|integer|exists:rotas,id',
             'abastecer.*.qtd_abastecer' => 'required|numeric|min:0',
             'abastecer.*.turno' => 'required|string|max:255',
-        ],[
-            'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico'
+        ], [
+            'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric' => 'O campo :attribute deve ser valor numerico'
         ]);
 
         $uuid = Str::uuid()->toString();
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
-            $totalCombustivel = 0;
-            $ordem = Ordem::where('refs', $refs)->first();
-            // inicializar rotas
-            $rt_total = 0;
+        $totalCombustivel = 0;
+        $ordem = Ordem::where('refs', $refs)->first();
+        // inicializar rotas
+        $rt_total = 0;
+        try {
             foreach ($request->abastecer as $key => $item) {
                 // return $item;
                 $totalAbastecer += $item['qtd_abastecer'];
@@ -93,16 +125,16 @@ class OrdemController extends Controller
                             'razao_abastecimento' => $item['observacao']
                         ]);
                     } else {
-                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err'=>true]);
+                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err' => true]);
                     }
                 }
 
 
                 $totalCombustivel += $item['qtd_abastecer'];
             }
-              //abastecer viatura
-              $abastecer_viatura = DB::table('viaturas')->where('id', $viatura->id)
-              ->update(['qtd_disponivel' => $totalCombustivel]);
+            //abastecer viatura
+            $abastecer_viatura = DB::table('viaturas')->where('id', $viatura->id)
+                ->update(['qtd_disponivel' => $totalCombustivel]);
             $abastecimento = new Abastecimento();
             $abastecimento_ant = Abastecimento::where('viatura_id', $request->viatura_id)->orderBy('id', 'desc')->first();
             if (!empty($abastecimento_ant)) {
@@ -120,15 +152,17 @@ class OrdemController extends Controller
                 $abastecimento->viatura_id = $request->viatura_id;
                 $abastecimento->save();
             }
-            return response()->json(['success' => 'submetido com sucesso','err'=>false]);
-
+            return response()->json(['success' => 'submetido com sucesso', 'err' => false]);
+        } catch (\Throwable $th) {
+            return response()->json(['error' => 'Erro no insercao de pedido de abastecimento', 'err' => true]);
+        }
     }
 
     public function show(Ordem $ordem, $refs)
     {
         $ordem  = Ordem::where('refs', $refs)->with(['abastecimento', 'abastecimento_rota.viatura', 'bombas'])->first();
 
-     return response()->json($ordem, 200);
+        return response()->json($ordem, 200);
     }
 
     /**

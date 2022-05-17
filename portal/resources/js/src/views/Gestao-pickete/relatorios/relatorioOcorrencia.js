@@ -25,10 +25,6 @@ export default function useOcorrenciaList() {
   const tableColumns1 = [
     { key: 'Data_de_registo', sortable: true },
     { key: 'Matricula', sortable: true },
-    { Key: 'Matricula2', sortable: true },
-    { key: 'Motorista', sortable: true },
-    { key: 'Motorista2', sortable: true },
-    { key: 'Tipo', sortable: true },
     { Key: 'Criado_por', sortable: true },
     { key: 'acções' },
   ]

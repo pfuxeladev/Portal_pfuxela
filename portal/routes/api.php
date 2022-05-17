@@ -47,6 +47,13 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/listDeps', [App\Http\Controllers\API\Back\UserController::class, 'listDepartamentos']);
 
     Route::get('/listMotoristas', [App\Http\Controllers\API\Back\CheckListOutController::class, 'ListMotoristas']);
+    Route::get('/listaIncedentes', [App\Http\Controllers\API\Back\CheckListInController::class, 'listaIncedentes']);
+
+    Route::get('/listAllViaturas', [App\Http\Controllers\API\Back\ViaturaController::class, 'listViatura']);
+
+    Route::get('/listViaturaDentro', [App\Http\Controllers\API\Back\CheckListOutController::class, 'listViaturaDentro']);
+    Route::get('/listViaturaFora', [App\Http\Controllers\API\Back\CheckListInController::class, 'listViaturaFora']);
+    Route::get('/kmActual/{viatura_id}', [\App\Http\Controllers\API\Back\CheckListOutController::class, 'kmActual']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
@@ -61,7 +68,8 @@ Route::middleware('auth:api')->group(function () {
         'marca' => App\Http\Controllers\API\MarcaController::class,
         'combustivel' => App\Http\Controllers\API\CombustivelController::class,
         'users' => \App\Http\Controllers\API\BACK\UserController::class,
-        'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class
+        'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
+        'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
         ]);
 });
 

@@ -20,7 +20,7 @@ class CreateAbastecimentoRotasTable extends Migration
             $table->foreignIdFor(Ordem::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Rota::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->integer('qtd');
-            $table->string('razao_abastecimento');
+            $table->string('razao_abastecimento')->nullable();
             $table->string('turno');
             $table->timestamps();
         });

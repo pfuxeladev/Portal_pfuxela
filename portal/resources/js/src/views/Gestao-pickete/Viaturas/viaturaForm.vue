@@ -1,11 +1,5 @@
 <template>
   <section class="invoice-add-wrapper mt-3">
-       <b-row class="mb-1 ml-1">
-          <b-col>
-              <b-button variant="outline-primary">criar marca da viatura</b-button>
-          </b-col>
-          <b-col></b-col>
-      </b-row>
     <b-row class="invoice-add">
       <b-col
         cols="12"
@@ -694,7 +688,6 @@ export default {
       }
     },
     submitViatura() {
-
       this.$Progress.start()
       this.form
         .post('/api/viaturas')
@@ -703,17 +696,30 @@ export default {
             icon: 'success',
             title: response.data.success,
           })
-          Fire.$emit('afterAction')
+          //   Fire.$emit('afterAction')
           this.form.clear()
           this.form.reset()
           this.$Progress.finish()
           this.$router.push({ name: 'Cars' })
         })
-        .catch(err => {
-          this.$swal.fire({
-            icon: 'error',
-            title: 'Erro ao tentar adicionar!',
-          })
+        .catch(error => {
+          if (error.response.data.status === 401) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+            this.$router.push({ name: 'auth-login' })
+          } else if (error.response.data.status === 422) {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+          } else {
+            this.$swal.fire({
+              icon: 'error',
+              title: 'Erro ao tentar adicionar!',
+            })
+          }
           this.$Progress.fail()
         })
     },
