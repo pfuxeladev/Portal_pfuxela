@@ -32,4 +32,7 @@ class Ordem extends Model
     function createdBy(){
         return $this->belongsTo(User::class, 'createdBy', 'id');
     }
+    function approvedBy(){
+        return $this->belongsTo(User::class, 'approvedBy', 'id');
+    }
 }

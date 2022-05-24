@@ -198,5 +198,6 @@
   "New Driver": "Novo Motorista",
   "CheckList-Out": "CheckList de Saida",
   "CheckList-In":"CheckList de entrada",
-  "recurring supply":"Abastecimento recorrente"
+  "recurring supply":"Abastecimento recorrente",
+  "Edit-Order":"Actualizar Ordem"
 }

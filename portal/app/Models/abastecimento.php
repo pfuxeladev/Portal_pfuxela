@@ -12,4 +12,9 @@ class abastecimento extends Model
     public function ordem(){
         return $this->belongsTo(Ordem::class);
     }
+
+    public function abastecimento_extra(){
+        return $this->hasMany(abastecimentoExtra::class);
+    }
+
 }

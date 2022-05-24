@@ -28,13 +28,16 @@
               >
                 <b-list-group>
                   <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.ordem.created_by.name }}</b-list-group-item>
-                  <b-list-group-item><b>Estado</b>:<span v-if="SupplyData.ordem.estado === 'pendente'">
+                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.ordem.estado === 'pendente'">
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>
-                    <span v-else-if="SupplyData.ordem.estado === 'aprovado'">
-                      <b>Aprovado por</b>: {{ SupplyData.created_by.name }}
+                    <span v-else-if="SupplyData.ordem.estado === 'Autorizado'">
+                        <b-badge variant="success">Autorizada</b-badge>
                     </span>
                     <span v-else>Ordem rejeitada</span>
+                  </b-list-group-item>
+                  <b-list-group-item v-if="SupplyData.ordem.approved_by !== null">
+                      <b>Autorizado por</b>: {{ SupplyData.ordem.approved_by.name }}
                   </b-list-group-item>
                 </b-list-group>
               </b-col>
@@ -53,7 +56,7 @@
                      {{vt.qtd_abastecida}}
                 </b-col>
                 <b-col cols="4" md="4">
-                    {{vt.updated_at}}
+                    {{dateTime(vt.updated_at)}}
                 </b-col>
             </b-row>
           </b-card-body>
@@ -85,24 +88,33 @@
         xl="2"
         md="2"
       >
-        <b-button
+      <span v-if="SupplyData.ordem.estado ==='pendente'">
+       <b-button
           variant="outline-success"
           @click="Aprovar(SupplyData.ordem.refs)"
         >
-          Aprovar
+          Autorizar
         </b-button>
+      </span>
+
+
       </b-col>
       <b-col
         cols="12"
         xl="2"
         md="2"
       >
+       <span v-if="SupplyData.ordem.estado ==='Cancelado'">
+       <b-button variant="warning">Reabrir</b-button>
+      </span>
+      <span v-else>
         <b-button
           variant="outline-danger"
           @click="Reprovar(SupplyData.ordem.refs)"
         >
-          reprovar
+          Cancelar
         </b-button>
+      </span>
       </b-col>
     </b-row>
   </section>
@@ -129,9 +141,13 @@ import {
   BBadge,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
+import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
+import { useToast } from 'vue-toastification/composition'
 import store from '@/store'
 import router from '@/router'
 import storeAbastecimentos from './storeAbastecimentos'
+import 'animate.css'
+import moment from 'moment'
 
 export default {
   directives: {
@@ -155,8 +171,7 @@ export default {
   setup() {
     const SupplyData = ref(null)
 
-    // Invoice Description
-    // ? Your real data will contain this information
+    const toast = useToast()
 
     const SUPPLY_STORE_MODULE_NAME = 'Supply'
 
@@ -180,16 +195,69 @@ export default {
       })
 
     function Aprovar(refs) {
-      console.log(refs)
+      this.$swal({
+        title: 'Deseja permitir envio da ordem ?',
+        showCancelButton: true,
+        showClass: {
+          popup: 'animate__animated animate__flipInX',
+        },
+        confirmButtonText: 'Sim',
+      }).then(result => {
+        if (result.isConfirmed) {
+          store.dispatch('Supply/ApproveOrder', { refs })
+            .then(res => {
+              this.$emit('refetch-data')
+              toast({
+                component: ToastificationContent,
+                props: {
+                  title: res.data.success,
+                  icon: 'CheckSquareIcon',
+                  variant: 'success',
+                },
+              })
+            }).catch(err => {
+              if (err.response.status === 421) {
+                toast({
+                  component: ToastificationContent,
+                  props: {
+                    title: err.response.data.erro,
+                    icon: 'AlertTriangleIcon',
+                    variant: 'danger',
+                  },
+                })
+              } else if (err.response.status === 500) {
+                toast({
+                  component: ToastificationContent,
+                  props: {
+                    title: 'Erro do sistema contacte o administrador',
+                    icon: 'AlertTriangleIcon',
+                    variant: 'danger',
+                  },
+                })
+              }
+            })
+        //   this.$swal('Saved!', '', 'success')
+        } else if (result.isDenied) {
+          this.$swal('Nenhuma ordem foi enviada', '', 'info')
+        }
+      })
+    }
+     function dateTime(value) {
+      return moment(value).format('DD/MM/YYYY hh:mm')
     }
     function Reprovar(refs) {
-      console.log(refs)
+      store.dispatch('Supply/CancelarOrdem', { refs })
+        .then(res => {
+          console.log(res)
+        }).catch(err => {
+          console.log(err)
+        })
     }
 
     const printInvoice = () => {
       window.print()
     }
-    const fields = ['Rota', 'razao_abastecimento', 'turno']
+    const fields = ['Rota', 'turno']
 
     return {
       SupplyData,
@@ -197,6 +265,7 @@ export default {
       fields,
       Aprovar,
       Reprovar,
+      dateTime,
     }
   },
 }

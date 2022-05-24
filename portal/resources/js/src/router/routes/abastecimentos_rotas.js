@@ -25,6 +25,14 @@ export default
     },
   },
   {
+    path: '/Supply/Orders/:refs/edit',
+    name: 'Edit-Order',
+    component: () => import('@/views/Gestao-abastecimentos/ordens/orderEdit.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/:refs/supply-details',
     name: 'supply-details',
     params: { refs: null },

@@ -5,28 +5,28 @@
     class="dropdown-user"
   >
     <template #button-content>
-      <span v-for="usr in userData" :key="usr.id">
+      <!-- <span v-for="usr in userData" :key="usr.id"> -->
         <div class="d-sm-flex d-none user-nav">
           <p class="user-name font-weight-bolder mb-0">
-            {{ usr.name || usr.name }}
+            {{ userData[0].name || userData[0].name }}
           </p>
-          <span class="user-status">{{ usr.role }}</span>
+          <span class="user-status">{{ userData[0].role }}</span>
         </div>
         <b-avatar
           size="40"
-          :src="usr.avatar"
+          :src="userData[0].avatar"
           variant="light-primary"
           badge
           class="badge-minimal"
           badge-variant="success"
         >
           <feather-icon
-            v-if="!usr.email"
+            v-if="!userData[0].email"
             icon="UserIcon"
             size="22"
           />
         </b-avatar>
-      </span>
+      <!-- </span> -->
     </template>
 
     <b-dropdown-item

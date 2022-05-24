@@ -20,7 +20,7 @@ class BombaController extends Controller
     }
     public function index()
     {
-        return Bombas::with(['responsavel', 'createdBy', 'combustivel'])->get();
+        return Bombas::with(['responsavel', 'createdBy', 'combustivel_bomba.combustivel', 'combustivel'])->get();
     }
 
     /**
@@ -138,20 +138,17 @@ class BombaController extends Controller
             ]
         );
 
+        $bomba = Bombas::findOrFail($id);
 
+        $bomba->nome_bombas = $request->nome_bombas;
+        $bomba->capacidade = $request->capacidade;
+        $bomba->tipo_bomba = $request->tipo_bomba;
+        $bomba->createdBy = auth()->user()->id;
+        $bomba->update();
 
-        $bombas = Bombas::where('id', $id)->update([
-            'nome_bombas' => $request->nome_bombas,
-            'capacidade' => $request->capacidade,
-            'tipo_bomba' => $request->tipo_bomba,
-            'createdBy' => auth()->user()->id,
-            // 'updatedBy'=>auth()->user()->id,
-        ]);
-        if ($bombas) {
-            $bomba = Bombas::where('id', $id)->first();
 
             foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::where('bombas_id', $id)->update([
+                $responsavel = responsavelBombas::updateOrCreate([
                     'nome' => $resp['nome'],
                     'email_bomba' => $resp['email_bomba'],
                     'contacto' => $resp['contacto'],
@@ -172,10 +169,10 @@ class BombaController extends Controller
                 }
             }
 
-            if ($responsavel) {
+            // if ($responsavel) {
                 return response()->json(['message' => 'actualizou a bomba com sucesso']);
-            }
-        }
+            // /}
+        // }
     }
 
     /**

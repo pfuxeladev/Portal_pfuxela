@@ -33,10 +33,39 @@ export default {
     addAbastecimentoRecorrente(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/Abastecimento/extra', { abastecimento: SupplyDatas })
+          .post('/api/abastecimento_extra', SupplyDatas)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
+    ApproveOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.post(`/api/AprovarOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    CancelOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.post(`/api/CancelarOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    AbastecimentoRecorrente(ctx, abstData) {
+      return new Promise((resolve, reject) => {
+        axios.get('/api/AbastecimentoRecorrente', abstData)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    fetchAbstRecDetails(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios
+          .get(`/api/AbstCorrDetails/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    }
   },
 }

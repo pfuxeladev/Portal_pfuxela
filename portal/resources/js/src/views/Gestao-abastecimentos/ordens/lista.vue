@@ -149,7 +149,7 @@
             </b-dropdown-item>
 
             <b-dropdown-item
-              :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
+              :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
@@ -256,7 +256,6 @@ import {
   BFormGroup,
   BButton,
   BTable,
-  BLink,
   BBadge,
   BDropdown,
   BDropdownItem,
@@ -283,7 +282,6 @@ export default {
     BFormInput,
     BButton,
     BTable,
-    BLink,
     BBadge,
     BDropdown,
     BDropdownItem,

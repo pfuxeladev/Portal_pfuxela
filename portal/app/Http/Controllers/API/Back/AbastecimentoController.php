@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Ordem;
 use App\Models\Viatura;
 use App\Models\Abastecimento_rota;
+use App\Models\abastecimentoExtra;
 use App\Models\abastecimentoRotaViatura;
 use App\Models\ordem_viatura;
 use App\Models\Rota;
@@ -84,6 +85,7 @@ class AbastecimentoController extends Controller
 
         foreach ($request->abastecer as $key => $abst) {
             $totalAbastecer += $abst['qtd_abastecer'];
+
             ordem_viatura::create([
                 'ordem_id' => $ordem->id,
                 'viatura_id' => $abst['viatura_id'],
@@ -91,7 +93,20 @@ class AbastecimentoController extends Controller
                 'user_id' => auth()->user()->id,
             ]);
 
-            $viatura = Viatura::where('id', $abst['viatura_id'])->update(['qtd_disponivel'=>$totalAbastecer]);
+            $viatura = Viatura::where('id', $abst['viatura_id'])->get();
+            foreach ($viatura as $key => $via) {
+
+                if($via->capacidade_tanque < $abst['qtd_abastecer']){
+                    return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+                }else if($via->capacidade_tanque < ($via->qtd_disponivel + $abst['qtd_abastecer'])){
+                    return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'],421);
+                }else{
+                    $qtdAbastecer = ($via->qtd_disponivel + $abst['qtd_abastecer']);
+
+                    $via->qtd_disponivel = $qtdAbastecer;
+                    $via->update();
+                }
+            }
 
             //abastecer por rota
             foreach ($abst['rota_id'] as $key => $rt) {
@@ -133,25 +148,124 @@ class AbastecimentoController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * Abastecimento Extra fora da rota dos projectos da empresa.
      */
+
+     function abastecer(Request $request){
+
+        // return $request->all();
+
+         $ordem = new Ordem();
+         $abastecimento = new abastecimento();
+         $ordem_viatura = new ordem_viatura();
+
+         $counter = 10000;
+         $uuid = Str::uuid()->toString();
+
+
+            $last_order = Ordem::latest()->first();
+            if (!empty($last_order)) {
+                $new_code = ($last_order->codigo_ordem + 1);
+                $ordem->codigo_ordem = $new_code;
+            } else {
+                $ordem->codigo_ordem = $counter;
+            }
+            $ordem->refs = $uuid;
+            $ordem->bombas_id = $request->bombas_id;
+            $ordem->estado = 'pendente';
+            $ordem->createdBy = auth()->user()->id;
+            $ordem->save();
+
+            // verificar disponibilidade da viatura
+            $viatura = Viatura::where('id', $request->viatura_id)->first();
+            if($viatura->capacidade_tanque < $request->qtd){
+                return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+            }else if($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)){
+                return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'],421);
+            }else{
+                $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd);
+
+                $viatura->qtd_disponivel = $qtdAbastecer;
+                $viatura->update();
+            }
+
+            try {
+            $ordem_viatura->viatura_id = $request->viatura_id;
+            $ordem_viatura->ordem_id = $ordem->id;
+            $ordem_viatura->qtd_abastecida = $request->qtd;
+            $ordem_viatura->user_id = auth()->user()->id;
+            $ordem_viatura->save();
+
+            $abastecimento_extra = new abastecimentoExtra();
+
+            $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
+            if (!empty($abastecimento_ant)) {
+                $abastecimento->ordem_id = $ordem->id;
+                $abastecimento->bombas_id = $request->bombas_id;
+                $abastecimento->refs = $uuid;
+                $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
+                $abastecimento->qtd_rec = $request->qtd;
+                $abastecimento->save();
+
+                $abastecimento_extra->abastecimento_id = $abastecimento->id;
+            } else {
+                $abastecimento->ordem_id = $ordem->id;
+                $abastecimento->bombas_id = $request->bombas_id;
+                $abastecimento->refs = $uuid;
+                $abastecimento->qtd_ant = 0;
+                $abastecimento->qtd_rec = $request->qtd;
+                $abastecimento->save();
+
+                $abastecimento_extra->abastecimento_id = $abastecimento->id;
+            }
+
+            $abastecimento_extra->viatura_id = $request->viatura_id;
+            $abastecimento_extra->motorista_id = $request->motorista_id;
+            $abastecimento_extra->qtd = $request->qtd;
+            $abastecimento_extra->horaSaida = $request->horaSaida;
+            $abastecimento_extra->destino = $request->destino;
+            $abastecimento_extra->descricao = $request->descricao;
+            $abastecimento_extra->createdBy = auth()->user()->id;
+            $abastecimento_extra->save();
+
+            return response()->json(['success'=>'Requisicao feita com sucesso!'], 200);
+
+        } catch (\Exception $e) {
+            return response()->json(['erro'=>'Erro! Ocorreu algum problema contacte o administrador'], 421);
+        }
+     }
+
     public function show($refs)
     {
-        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy', 'ordem.ordem_viatura.viatura'])->where('abastecimentos.refs', $refs)->first();
+        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy','ordem.approvedBy', 'ordem.ordem_viatura.viatura'])->where('abastecimentos.refs', $refs)->first();
 
         return response()->json($abastecimento, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   function abastecimentoRecorrente(Request $request){
+    if ($search = $request->q) {
+       return abastecimentoExtra::join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('abastecimentos', 'abastecimentos.ordem_id', '=', 'ordems.id')->join('viaturas', 'viaturas.id', '=', 'abastecimento_extras.viatura_id')
+        ->join('motoristas', 'abastecimento_extras.motorista_id', '=', 'motoristas.id')
+        ->when(request('q'), function ($query) use ($search) {
+            $query->where('ordems.codigo', 'like', '%'.request('q').'%')
+            ->orWhere('viaturas.matricula', 'like', '%'.request('q').'%')
+            ->orWhere('bombas.nome_bombas', 'like', '%'.request('q').'%');
+
+        })->with(['abastecimento.ordem', 'viatura', 'motorista.person'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
+    }else{
+        return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
+    }
+
+   }
+
+   public function AbstRecDetails(Request $request, $refs){
+
+    $order = Ordem::where('ordems.refs', $refs)->first();
+
+    $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $order->id)->first();
+
+    return response()->json($abastecimento_extra);
+   }
     public function update(Request $request, $id)
     {
         //

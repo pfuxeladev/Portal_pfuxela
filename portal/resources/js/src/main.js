@@ -7,7 +7,7 @@ import '@fortawesome/fontawesome-free/js/all.min'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import axios from 'axios'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 import Permissions from '@core/mixins/Permissions.vue'
 import i18n from '@/libs/i18n'
 import router from './router'
@@ -43,24 +43,24 @@ const options = {
   location: 'left',
   inverse: false,
 }
-const Toast = Swal.mixin({
-  confirmButtonColor: '#41b882',
-  cancelButtonColor: '#ff7674',
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000,
-  timerProgressBar: true,
-  onOpen: toast => {
-    toast.addEventListener('mouseenter')
-    toast.addEventListener('mouseleave')
-  },
-})
-window.Swal = Swal
-window.toast = Toast
+// const Toast = Swal.mixin({
+//   confirmButtonColor: '#41b882',
+//   cancelButtonColor: '#ff7674',
+//   toast: true,
+//   position: 'top-end',
+//   showConfirmButton: false,
+//   timer: 3000,
+//   timerProgressBar: true,
+//   onOpen: toast => {
+//     toast.addEventListener('mouseenter')
+//     toast.addEventListener('mouseleave')
+//   },
+// })
+// window.Swal = Swal
+// window.toast = Toast
 const Fire = new Vue()
 window.Fire = Fire
-Vue.use(VueSweetalert2, Toast)
+// Vue.use(VueSweetalert2, Toast)
 
 // BSV Plugin Registration
 Vue.use(ToastPlugin)

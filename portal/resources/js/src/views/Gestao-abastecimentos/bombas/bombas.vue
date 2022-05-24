@@ -62,7 +62,7 @@
                                 </td>
                                 <td>{{b.created_by.name}}</td>
                                 <td class="d-flex justify-content-around">
-                                    <span class="btn btn-sm btn-outline-primary">
+                                    <span class="btn btn-sm btn-outline-primary" v-on:click="openDetails(b)">
                                         <i class="fas fa-users" />
                                     </span>
                                     <span class="btn btn-sm btn-outline-warning ml-1" v-on:click="openUpdate(b)">
@@ -177,6 +177,39 @@
                 </form>
 
             </b-modal>
+            <b-modal ref="responsavel" id="ResponsavelBomba" size="lg" hide-footer title="Responsavel da bomba">
+                <b-card>
+                    <b-row>
+                        <b-col cols="6" md="6" v-for="responsaveis in details.responsavel" :key="responsaveis.id">
+                        <b-list-group>
+                            <b-list-group-item>Nome: {{responsaveis.nome}}</b-list-group-item>
+                            <b-list-group-item>Email: {{responsaveis.email_bomba}}</b-list-group-item>
+                            <b-list-group-item>Contacto: {{responsaveis.contacto}}</b-list-group-item>
+                            <b-list-group-item>Contacto alternativo: {{responsaveis.contacto_alt}}</b-list-group-item>
+                        </b-list-group>
+                        </b-col>
+                    </b-row>
+                    <b-form>
+                    <b-row class="mt-1">
+                        <b-col cols="12" md="12">
+                            <b-list-group>
+                                <b-list-group-item v-for="comb in details.combustivel_bomba" :key="comb.id">
+                                    <div class="form-group">
+                                      <label for="combustivel"> {{comb.combustivel.tipo_combustivel}} </label>
+                                      <b-form-input v-model="comb.preco_actual"></b-form-input>
+                                    </div>
+                                </b-list-group-item>
+                            </b-list-group>
+                        </b-col>
+                    </b-row>
+                    <b-row>
+                        <b-col>
+                            <b-button type="submit" variant="success">actualizar pre&ccedil;o de combustivel</b-button>
+                        </b-col>
+                    </b-row>
+                    </b-form>
+                </b-card>
+            </b-modal>
         </b-card>
     </section>
 </div>
@@ -202,6 +235,8 @@ import {
   BFormGroup,
   BFormCheckboxGroup,
   BFormCheckbox,
+  BListGroup,
+  BListGroupItem,
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import
@@ -232,6 +267,8 @@ export default {
     BFormText,
     BFormCheckboxGroup,
     BFormCheckbox,
+    BListGroup,
+    BListGroupItem,
   },
   data() {
     return {
@@ -250,6 +287,10 @@ export default {
       },
       ],
       bombas: [],
+      details: {
+        responsavel: [],
+        combustivel: [],
+      },
       form: new Form({
         id: null,
         nome_bombas: '',
@@ -328,6 +369,11 @@ export default {
       this.form.fill(b)
       this.editMode = true
     },
+    openDetails(b) {
+      this.details = b
+      //   document.getElementById('ResponsavelBomba').show()
+      this.$refs['responsavel'].show()
+    },
     onUpdateForm() {
       this.$Progress.start()
       this.form.put(`/api/bombas/${this.form.id}`).then(res => {
@@ -335,9 +381,7 @@ export default {
           icon: 'success',
           title: res.data.message,
         })
-        Fire.$emit('afterAction')
         this.form.clear()
-        this.form.reset()
         this.$Progress.finish()
         this.returnBombas()
         this.hideModal()

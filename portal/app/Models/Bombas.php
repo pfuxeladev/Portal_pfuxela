@@ -24,9 +24,15 @@ class Bombas extends Model
     public function combustivel(){
         return $this->belongsToMany(combustivel::class, 'combustivel_bombas', 'bomba_id', 'combustivel_id');
     }
-
+    public function combustivel_bomba(){
+        return $this->hasMany(combustivelBomba::class, 'bomba_id', 'id');
+    }
     public function createdBy(){
         return $this->belongsTo(User::class, 'createdBy', 'id');
+    }
+
+    function ordem(){
+        return $this->hasMany(Ordem::class);
     }
 
 }

@@ -54,6 +54,13 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/listViaturaDentro', [App\Http\Controllers\API\Back\CheckListOutController::class, 'listViaturaDentro']);
     Route::get('/listViaturaFora', [App\Http\Controllers\API\Back\CheckListInController::class, 'listViaturaFora']);
     Route::get('/kmActual/{viatura_id}', [\App\Http\Controllers\API\Back\CheckListOutController::class, 'kmActual']);
+    Route::post('/abastecimento_extra', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecer']);
+
+    // Aprovar abastecimento e reprovar
+    Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
+    Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
+    Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
+    Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'AbstRecDetails']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,

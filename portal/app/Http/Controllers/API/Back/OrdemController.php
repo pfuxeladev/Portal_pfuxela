@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 use App\Models\abastecimento;
 use App\Models\ordem_viatura;
 use App\Models\Viatura;
-
+use App\Models\abastecimentoExtra;
 class OrdemController extends Controller
 {
     private $ordem;
@@ -23,16 +23,26 @@ class OrdemController extends Controller
     }
     public function index()
     {
-        return $this->ordem->with(['bombas', 'createdBy', 'abastecimento'])->orderBy('id', 'desc')->paginate(15);
+        $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->get();
+
+        foreach ($abastecimento_extra as $key => $ab_ex) {
+
+        return $ab_ex->ordem_id;
+
+        return $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->whereNot('id', '!=', $ab_ex->ordem_id)->orderBy('id', 'desc')->paginate(15);
+
+        }
+
     }
 
     function AprovarOrdem(Request $request)
     {
         $ordem = Ordem::where('refs', $request->refs)->first();
-        $ordem->estado = 'Aprovada';
+        $ordem->estado = 'Autorizado';
+        $ordem->approvedBy = auth()->user()->id;
         $ordem->update();
 
-        return response()->json(['message' => 'Ordem aprovada a encaminhar para as bombas']);
+        return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
     }
 
     function CancelarOrdem(Request $request)
@@ -40,21 +50,22 @@ class OrdemController extends Controller
         try {
             $ordem = Ordem::where('refs', $request->refs)->first();
             $ordem->estado = 'Cancelada';
+            $ordem->approvedBy = auth()->user()->id;
             $ordem->update();
 
             if ($ordem) {
 
                 $ordem_viatura = ordem_viatura::where('ordem_id', $ordem->id)->get();
                 foreach ($ordem_viatura as $ov => $ordVi) {
-                    $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
-                    $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $ordVi->qtd_abastecida);
-                    $viatura->update();
+                    $viatura[$ov] = Viatura::where('id', $ordVi->viatura_id)->get();
+                    $viatura[$ov]->qtd_disponivel = ($viatura[$ov]->qtd_disponivel - $ordVi->qtd_abastecida);
+                    $viatura[$ov]->update();
                 }
 
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
             }
         } catch (\Exception $e) {
-            return response()->json(['error' => 'Ordem cancelada com sucesso', $e->getMessage()], 421);
+            return response()->json(['error' => 'Erro na transacao, contacte o administrador', $e->getMessage()], 421);
         }
     }
 
