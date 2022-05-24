@@ -16,7 +16,8 @@ class CreateChecklistOutDestinationsTable extends Migration
     {
         Schema::create('checklist_out_destinations', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(CheckListOut::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->unsignedBigInteger('checklist_out_id');
+            $table->foreign('checklist_out_id')->references('id')->on('checklist_out')->onDelete('cascade');
             $table->text('descricao_trajecto');
             $table->time('horaPrevistaSaida');
             $table->time('horaPrevistaEntrada');
