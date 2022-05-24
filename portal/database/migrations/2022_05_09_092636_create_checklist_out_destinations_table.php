@@ -23,7 +23,7 @@ class CreateChecklistOutDestinationsTable extends Migration
             $table->time('horaPrevistaEntrada');
             $table->timestamps();
         });
-        Schema::table('check_list_in', function(Blueprint $table){
+        Schema::table('checklist_in', function(Blueprint $table){
             $table->string('nrPassageiros')->nullable()->after('hr_inicio');
         });
 
