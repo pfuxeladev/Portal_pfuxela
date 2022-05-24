@@ -52,11 +52,9 @@
             show
           >
             <div class="alert-body font-small-2">
+
               <p>
-                <small class="mr-50"><span class="font-weight-bold">Admin:</span> admin@demo.com | admin</small>
-              </p>
-              <p>
-                <small class="mr-50"><span class="font-weight-bold">Client:</span> client@demo.com | client</small>
+                <small class="mr-50"><span class="font-weight-bold">Ensira Email e password</span></small>
               </p>
             </div>
             <feather-icon
@@ -275,8 +273,8 @@ export default {
   data() {
     return {
       status: '',
-      password: 'admin',
-      userEmail: 'admin@demo.com',
+      password: '',
+      userEmail: '',
       sideImg: require('@/assets/images/pages/login-v2.svg'),
 
       // validation rules
