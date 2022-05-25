@@ -102,9 +102,16 @@
                             </b-form-group>
                         </b-col>
                         <b-col cols="12">
-                            <b-form-checkbox-group v-model="form.combustivel_tipos" :options="options" class="mb-1" value-field="item" text-field="name" disabled-field="notEnabled" />
+                            <b-form-checkbox-group v-model="form.combustivel_tipos" :options="options" class="mb-1 d-block" value-field="item" text-field="name" disabled-field="notEnabled" />
                             <div class="mb-1">
-                                Selected: <strong>{{ form.combustivel_tipos }}</strong>
+                                <!-- Selected: <strong>{{ form.combustivel_tipos }}</strong> -->
+                                <b-form-group label="Preco do diesel">
+                                <b-form-input type="number" step="0.01" min="0" v-model="form.preco_diesel"></b-form-input>
+                                </b-form-group>
+                                <b-form-group label="Preco da gasolina">
+                                <b-form-input type="number" step="0.01" min="0" v-model="form.preco_gasolina"></b-form-input>
+                                </b-form-group>
+
                             </div>
                             <hr>
                         </b-col>
@@ -281,10 +288,6 @@ export default {
         item: 'Gasoleo',
         name: 'Diesel',
       },
-      {
-        item: 'Gas',
-        name: 'Gas',
-      },
       ],
       bombas: [],
       details: {
@@ -298,6 +301,8 @@ export default {
         tipo_bomba: '',
         combustivel_tipos: [],
         //   responsavel
+        preco_diesel: 0,
+        preco_gasolina: 0,
         responsavel: [{
           nome: '',
           email_bomba: '',

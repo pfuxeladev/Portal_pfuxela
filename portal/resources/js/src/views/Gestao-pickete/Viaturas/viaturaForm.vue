@@ -1,32 +1,16 @@
 <template>
   <section class="invoice-add-wrapper mt-3">
     <b-row class="invoice-add">
-      <b-col
-        cols="12"
-        xl="12"
-        md="12"
-      >
+      <b-col cols="12" xl="12" md="12">
         <b-form @submit.prevent="submitViatura()">
-          <b-card
-            no-body
-            class="invoice-preview-card"
-          >
+          <b-card no-body class="invoice-preview-card">
             <b-card-body class="invoice-padding form-item-section">
-              <div
-                ref="form"
-                class="repeater-form"
-              >
-                <b-row
-                  ref="row"
-                  class="pb-2"
-                >
+              <div ref="form" class="repeater-form">
+                <b-row ref="row" class="pb-2">
                   <b-col cols="12">
                     <div class="d-none d-lg-flex">
                       <b-row class="flex-grow-1 px-1">
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-0"
                             label="Marca:"
@@ -46,10 +30,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-1"
                             label="Modelo:"
@@ -69,10 +50,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-1"
                             label="Descricao:"
@@ -92,10 +70,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-2"
                             label="Ano de fabrico:"
@@ -115,10 +90,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-3"
                             label="Nr do motor:"
@@ -138,10 +110,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-4"
                             label="Nr de Chassi:"
@@ -160,10 +129,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-5"
                             label="Livrete:"
@@ -182,10 +148,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="3"
-                        >
+                        <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-6"
                             label="Matricula:"
@@ -205,17 +168,17 @@
                           </b-form-group>
                         </b-col>
 
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="input-group-7"
                             label="Data da inspencao:"
                             label-for="input-7"
                             description="Quando foi feita a primeira inspencao."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker2"
                               v-model="form.data_inspencao"
                               locale="pt"
@@ -233,7 +196,10 @@
                             label-for="input-7_1"
                             description="Prazo do documento de inspencao."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker2_1"
                               v-model="form.prazo_inspencao"
                               locale="pt"
@@ -246,17 +212,17 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="input-group-8"
                             label="Data cadastro de viatura:"
                             label-for="input-8"
                             description="Data cadastro de viatura."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker1"
                               v-model="form.data_licenca"
                               locale="pt"
@@ -274,7 +240,10 @@
                             label-for="input-8_1"
                             description="Prazo da licenca."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker1_1"
                               v-model="form.prazo_licenca"
                               locale="pt"
@@ -287,17 +256,17 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="input-group-9"
                             label="Data cadastro de manifeto:"
                             label-for="input-9"
                             description="Manifesto da viatura."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker3"
                               v-model="form.data_manifesto"
                               locale="pt"
@@ -315,7 +284,10 @@
                             label-for="input-9_1"
                             description="prazo do manifesto da viatura."
                           >
-                            <b-form-datepicker
+                            <date-picker
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                               id="example-datepicker3_1"
                               v-model="form.prazo_manifesto"
                               locale="pt"
@@ -328,24 +300,17 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
-                            id="input-group-10"
-                            label="Data radio difusao:"
-                            label-for="input-10"
-                            description="Data de cadastro de radio difusao."
+                           label="Data radio difusao:"
+                           description="Data de cadastro de radio difusao."
                           >
-                            <flat-pickr
+                            <date-picker
                               v-model="form.data_radio_difusao"
                               class="form-control mb-1"
-                              :config="{
-                                altInput: true,
-                                altFormat: 'F j, Y',
-                                dateFormat: 'Y-m-d',
-                              }"
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                             />
                             <small
                               v-if="form.errors.has('data_radio_difusao')"
@@ -354,19 +319,15 @@
                             />
                           </b-form-group>
                           <b-form-group
-                            id="input-group-10_1"
                             label="Prazo radio difusao:"
-                            label-for="input-10_1"
                             description="Prazo do documento radio difusao."
                           >
-                            <flat-pickr
+                            <date-picker
                               v-model="form.prazo_radio_difusao"
                               class="form-control mb-1"
-                              :config="{
-                                altInput: true,
-                                altFormat: 'F j, Y',
-                                dateFormat: 'Y-m-d',
-                              }"
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                             />
                             <small
                               v-if="form.errors.has('prazo_radio_difusao')"
@@ -375,24 +336,19 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="input-group-11"
                             label="Data Seguros:"
                             label-for="input-11"
                             description="Data de seguros automovel."
                           >
-                            <flat-pickr
+                            <date-picker
                               v-model="form.data_seguros"
                               class="form-control mb-1"
-                              :config="{
-                                altInput: true,
-                                altFormat: 'F j, Y',
-                                dateFormat: 'Y-m-d',
-                              }"
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                             />
                             <small
                               v-if="form.errors.has('data_seguros')"
@@ -406,14 +362,12 @@
                             label-for="input-11_1"
                             description="Prazo de seguros automovel."
                           >
-                            <flat-pickr
+                            <date-picker
                               v-model="form.prazo_seguros"
                               class="form-control mb-1"
-                              :config="{
-                                altInput: true,
-                                altFormat: 'F j, Y',
-                                dateFormat: 'Y-m-d',
-                              }"
+                              value-type="format"
+                              format="YYYY-MM-DD"
+                              style="width: 100%"
                             />
                             <small
                               v-if="form.errors.has('prazo_seguros')"
@@ -422,10 +376,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="fieldset-11"
                             description="Kilometragem."
@@ -443,7 +394,7 @@
                               v-html="form.errors.get('kilometragem')"
                             />
                           </b-form-group>
-                           <b-form-group
+                          <b-form-group
                             id="fieldset-12"
                             label="Capacidade do tanque:"
                             label-for="input-12"
@@ -461,10 +412,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="fieldset-13"
                             description="consumo medio por km."
@@ -484,10 +432,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="fieldset-14"
                             description="Tipo de combustivel."
@@ -507,10 +452,7 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="4"
-                        >
+                        <b-col cols="12" lg="4">
                           <b-form-group
                             id="fieldset-15"
                             description="Lotacao da viatura."
@@ -529,16 +471,18 @@
                             />
                           </b-form-group>
                         </b-col>
-                        <b-col
-                          cols="12"
-                          lg="8"
-                        >
+                        <b-col cols="12" lg="8">
                           <b-form-group
                             id="fieldset-images"
                             description="Documentos da viatura"
                             label="Carregar documentos da viatura:"
                           >
-                             <input type="file" @change="onFileChange" class="form-control" multiple />
+                            <input
+                              type="file"
+                              @change="onFileChange"
+                              class="form-control"
+                              multiple
+                            />
                           </b-form-group>
                         </b-col>
                       </b-row>
@@ -550,7 +494,8 @@
                     <b-link
                       class="btn btn-outline-primary waves-effect"
                       :to="{ name: 'Cars' }"
-                    >cancelar</b-link>
+                      >cancelar</b-link
+                    >
                   </b-col>
                   <b-col cols="6">
                     <b-button
@@ -558,7 +503,7 @@
                       variant="success"
                       class="mr-2"
                       type="submit"
-                    >cadastrar <i class="fas fa-paper-plane" />
+                      >cadastrar <i class="fas fa-paper-plane" />
                     </b-button>
                   </b-col>
                 </b-row>
@@ -595,7 +540,8 @@ import {
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
 import store from '@/store'
-
+import DatePicker from 'vue2-datepicker'
+import 'vue2-datepicker/index.css'
 export default {
   components: {
     BFormFile,
@@ -613,6 +559,7 @@ export default {
     vSelect,
     Cleave,
     BFormDatepicker,
+    DatePicker,
   },
   directives: {
     Ripple,
@@ -654,21 +601,19 @@ export default {
       }),
     }
   },
-  mounted() {
-
-  },
+  mounted() {},
   created() {
     this.getMarcas()
     this.getCombustivel()
   },
   methods: {
     getMarcas() {
-      this.$http.get('/api/marca').then(response => {
+      this.$http.get('/api/marca').then((response) => {
         this.marcas = response.data
       })
     },
     getCombustivel() {
-      this.$http.get('/api/getCombustivel').then(response => {
+      this.$http.get('/api/getCombustivel').then((response) => {
         this.combustivel = response.data
       })
     },
@@ -683,7 +628,7 @@ export default {
         const reader = new FileReader()
         reader.onload = function (e) {
           self.form.documentos.push(e.target.result)
-        }
+        };
         reader.readAsDataURL(this.file[i])
       }
     },
@@ -691,7 +636,7 @@ export default {
       this.$Progress.start()
       this.form
         .post('/api/viaturas')
-        .then(response => {
+        .then((response) => {
           this.$swal.fire({
             icon: 'success',
             title: response.data.success,
@@ -700,15 +645,19 @@ export default {
           this.form.clear()
           this.form.reset()
           this.$Progress.finish()
-          this.$router.push({ name: 'Cars' })
+          this.$router.push({
+            name: 'Cars',
+          })
         })
-        .catch(error => {
+        .catch((error) => {
           if (error.response.data.status === 401) {
             this.$swal.fire({
               icon: 'error',
               title: 'Erro ao tentar adicionar!',
             })
-            this.$router.push({ name: 'auth-login' })
+            this.$router.push({
+              name: 'auth-login',
+            })
           } else if (error.response.data.status === 422) {
             this.$swal.fire({
               icon: 'error',
@@ -726,6 +675,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss">
 @import "@core/scss/vue/libs/vue-flatpicker.scss";
 </style>

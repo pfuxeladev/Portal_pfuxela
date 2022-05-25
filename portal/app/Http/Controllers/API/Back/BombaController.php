@@ -82,7 +82,12 @@ class BombaController extends Controller
             foreach ($request->combustivel_tipos as $key => $comb) {
                 $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
                 foreach ($combustivel as $key => $c) {
-                    $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id]);
+
+                    if ($c->tipo_combustivel === 'diesel') {
+                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_diesel]);
+                    }else if ($c->tipo_combustivel === 'diesel') {
+                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_gasolina]);
+                    }
                 }
             }
 
