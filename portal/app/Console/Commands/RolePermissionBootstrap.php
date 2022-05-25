@@ -39,7 +39,7 @@ class RolePermissionBootstrap extends Command
  public function handle()
     {
 
-        $roles = ["SuperAdmin", "Administrator","Contabilidade","Comercial", "Piquete", "Tecnologias", "RH"];
+        $roles = ["SuperAdmin", "Administrator","Contabilidade","Comercial", "Piquete", "Tecnologias", "RH", "Guarita", "Recepcao", "Marketing"];
 
         $permissions = [
             "View All Users",
@@ -74,8 +74,19 @@ class RolePermissionBootstrap extends Command
             "Create Bombas",
             "Update Bombas",
             "View Bombas",
-            "Create Checklist",
-            "Update Checklist",
+            "Create Checklist_in",
+            "Update Checklist_in",
+            "Create Checklist_out",
+            "Update Checklist_out",
+            "Create Ordem",
+            "Update Ordem",
+            "Approve Ordem",
+            "Cancel Ordem",
+            "Create Ocorrencia",
+            "Create Abastecimento_recorrente",
+            "Create Abastecimento",
+            "Update Abastecimento",
+
         ];
 
 

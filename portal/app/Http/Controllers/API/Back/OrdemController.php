@@ -23,15 +23,10 @@ class OrdemController extends Controller
     }
     public function index()
     {
-        $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->get();
 
-        foreach ($abastecimento_extra as $key => $ab_ex) {
+        $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->orderBy('id', 'desc')->paginate(15);
 
-        return $ab_ex->ordem_id;
-
-        return $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->whereNot('id', '!=', $ab_ex->ordem_id)->orderBy('id', 'desc')->paginate(15);
-
-        }
+        return response()->json($ordem, 200);
 
     }
 
@@ -171,7 +166,7 @@ class OrdemController extends Controller
 
     public function show(Ordem $ordem, $refs)
     {
-        $ordem  = Ordem::where('refs', $refs)->with(['abastecimento', 'abastecimento_rota.viatura', 'bombas'])->first();
+        $ordem  = Ordem::where('refs', $refs)->with(['abastecimento', 'abastecimento_rota.viatura', 'bombas', 'abastecimento_extra'])->first();
 
         return response()->json($ordem, 200);
     }

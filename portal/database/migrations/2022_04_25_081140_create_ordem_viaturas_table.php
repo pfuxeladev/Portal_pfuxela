@@ -24,6 +24,9 @@ class CreateOrdemViaturasTable extends Migration
             $table->bigInteger('qtd_abastecida');
             $table->decimal('preco_cunsumo', 10,2)->default(1);
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->unsignedBigInteger('updatedBy')->nullable();
+            $table->foreign('updatedBy')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

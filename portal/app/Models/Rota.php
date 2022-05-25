@@ -23,6 +23,10 @@ class Rota extends Model
         return $this->belongsToMany(viatura::class);
     }
 
+    function ordemViaturaRota(){
+        return $this->hasMany(OrdemViaturaRota::class);
+    }
+
     public function horario(){
         return $this->hasMany(Horario::class);
     }

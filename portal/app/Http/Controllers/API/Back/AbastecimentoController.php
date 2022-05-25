@@ -10,7 +10,9 @@ use App\Models\Viatura;
 use App\Models\Abastecimento_rota;
 use App\Models\abastecimentoExtra;
 use App\Models\abastecimentoRotaViatura;
+use App\Models\combustivelBomba;
 use App\Models\ordem_viatura;
+use App\Models\OrdemViaturaRota;
 use App\Models\Rota;
 use App\Models\rotaViatura;
 use Illuminate\Support\Str;
@@ -83,17 +85,24 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
 
+        $combustivel = combustivelBomba::where('bombas_id',$ordem->bombas_id)->first();
+
+        $preco = 0;
+
         foreach ($request->abastecer as $key => $abst) {
             $totalAbastecer += $abst['qtd_abastecer'];
-
-            ordem_viatura::create([
+            // ordem viatura
+            $preco = $combustivel->preco_actual * $abst['qtd_abastecer'];
+           $ordemViatura = ordem_viatura::create([
                 'ordem_id' => $ordem->id,
                 'viatura_id' => $abst['viatura_id'],
                 'qtd_abastecida' => $abst['qtd_abastecer'],
+                'preco_consumo'=>$preco,
                 'user_id' => auth()->user()->id,
             ]);
 
             $viatura = Viatura::where('id', $abst['viatura_id'])->get();
+
             foreach ($viatura as $key => $via) {
 
                 if($via->capacidade_tanque < $abst['qtd_abastecer']){
@@ -110,21 +119,12 @@ class AbastecimentoController extends Controller
 
             //abastecer por rota
             foreach ($abst['rota_id'] as $key => $rt) {
-                Abastecimento_rota::create([
-                    'ordem_id' => $ordem->id,
-                    'rota_id' => $rt,
-                    'turno' => $abst['turno']
-                ]);
 
-                // alocar viatura a rota
-                abastecimentoRotaViatura::updateOrCreate([
-                    'viatura_id' => $abst['viatura_id'],
-                    'abastecimento_rota_id' => $rt,
-                    'createdBy'=>auth()->user()->id,
-                    'updatedBy'=>auth()->user()->id
+                $ordemViatura->rota()->updateOrCreate([
+                    'qtd'=>$abst['qtd_abastecer'],
+                    'preco_total' => $preco,
                 ]);
             }
-
         }
         $abastecimento = new Abastecimento();
 
@@ -237,7 +237,7 @@ class AbastecimentoController extends Controller
 
     public function show($refs)
     {
-        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy','ordem.approvedBy', 'ordem.ordem_viatura.viatura'])->where('abastecimentos.refs', $refs)->first();
+        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy','ordem.approvedBy', 'ordem.ordem_viatura.viatura', 'abastecimento_extra'])->where('abastecimentos.refs', $refs)->first();
 
         return response()->json($abastecimento, 200);
     }

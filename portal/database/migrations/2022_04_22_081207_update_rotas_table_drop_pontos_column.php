@@ -17,10 +17,6 @@ class UpdateRotasTableDropPontosColumn extends Migration
             $table->dropColumn('pontos');
         });
 
-        Schema::table('abastecimento_rotas', function(Blueprint $table){
-            $table->dropColumn('qtd');
-        });
-
     }
     /**
      * Reverse the migrations.

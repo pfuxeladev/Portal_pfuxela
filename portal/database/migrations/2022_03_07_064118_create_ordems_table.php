@@ -24,7 +24,6 @@ class CreateOrdemsTable extends Migration
             $table->string('codigo_ordem');
             $table->string('estado')->default('pendente');
             $table->foreignIdFor(Bombas::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreignIdFor(projecto::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('createdBy');
             $table->unsignedBigInteger('approvedBy')->nullable();
             $table->foreign('createdBy')->references('id')->on('users')->onDelete('cascade');

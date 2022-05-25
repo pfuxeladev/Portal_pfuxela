@@ -19,7 +19,7 @@
                   <b-list-group-item><b>Ref</b>: {{ SupplyData.refs }}</b-list-group-item>
                   <b-list-group-item><b>Ordem</b>: {{ SupplyData.ordem.codigo_ordem }}</b-list-group-item>
                   <b-list-group-item><b>Bombas</b>: {{ SupplyData.ordem.bombas.nome_bombas }} </b-list-group-item>
-                  <b-list-group-item><b>Qtd de combustivel abastecido</b>: {{ SupplyData.qtd_rec }}</b-list-group-item>
+                  <b-list-group-item><b>Qtd total requisitad0</b>: {{ SupplyData.qtd_rec }}</b-list-group-item>
                 </b-list-group>
               </b-col>
               <b-col
@@ -60,7 +60,8 @@
                 </b-col>
             </b-row>
           </b-card-body>
-          <b-table-lite
+          <span v-if="SupplyData.ordem.abastecimento_rota.length > 0">
+            <b-table-lite
             responsive
             :items="SupplyData.ordem.abastecimento_rota"
             :fields="fields"
@@ -69,6 +70,19 @@
               {{ data.item.rota.nome_rota }}
             </template>
           </b-table-lite>
+          </span>
+          <span v-else>
+              <b-row class="m-1">
+                  <b-col><b>Descri&ccedil;&atilde;o</b></b-col>
+                  <b-col><b>Destino</b></b-col>
+                  <b-col><b>Hora de partida</b></b-col>
+              </b-row>
+              <b-row class="m-1" v-for="extra in SupplyData.abastecimento_extra" :key="extra.id">
+                  <b-col>{{extra.descricao}}</b-col>
+                  <b-col>{{extra.destino}}</b-col>
+                  <b-col>{{extra.horaSaida}}</b-col>
+              </b-row>
+          </span>
         </b-card>
       </b-col>
       <b-col

@@ -26,12 +26,13 @@ class ProjectoController extends Controller
     }
     public function store(Request $request)
     {
-     $projecto = new projecto();
+     $projecto = array();
      $api_resource = Http::get('http://clientes.pfuxela.co.mz/api/allProjects')->json();
      foreach ($api_resource['data'] as $key => $project) {
          $key++;
 
          $projecto = projecto::updateOrCreate(
+             ['id'=>$project['id']],
              ['name'=>$project['name']],
              ['email'=>$project['email'],
              'telephone'=>$project['telephone'],

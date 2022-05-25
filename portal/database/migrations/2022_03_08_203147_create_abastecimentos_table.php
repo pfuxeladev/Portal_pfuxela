@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Models\Ordem;
+use App\Models\User;
+
 class CreateAbastecimentosTable extends Migration
 {
     /**
@@ -23,6 +25,7 @@ class CreateAbastecimentosTable extends Migration
             $table->string('file_ordem')->nullable();
             $table->foreignIdFor(Bombas::class)->nullable()->constrained()->nullOnDelete('cascade')->cascadeOnUpdate();
             $table->foreignIdFor(Ordem::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
              $table->timestamps();
         });
     }

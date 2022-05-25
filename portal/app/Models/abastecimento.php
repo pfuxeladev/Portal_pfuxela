@@ -17,4 +17,8 @@ class abastecimento extends Model
         return $this->hasMany(abastecimentoExtra::class);
     }
 
+    function abastecimentoRotaViatura(){
+        return $this->hasMany(abastecimentoRotaViatura::class);
+    }
+
 }
