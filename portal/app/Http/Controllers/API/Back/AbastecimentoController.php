@@ -30,9 +30,9 @@ class AbastecimentoController extends Controller
     }
     public function index()
     {
-        $abastecimento = $this->abastecimento->join('ordems', 'abastecimentos.ordem_id','=','ordems.id')
-        ->join('bombas', 'ordems.bombas_id','=','bombas.id')
-        ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec','bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
+        $abastecimento = $this->abastecimento->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')
+            ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
+            ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec', 'bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
 
         return $abastecimento;
     }
@@ -40,8 +40,8 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
         return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')
-        ->where('viaturas.estado', true)
-        ->select('viaturas.matricula', 'viaturas.id')->get();
+            ->where('viaturas.estado', true)
+            ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
     function RotaByProject(Request $request)
@@ -72,11 +72,10 @@ class AbastecimentoController extends Controller
         // return $request->all();
         $totalAbastecer = 0;
         $this->validate($request, [
-            'abastecer' => 'required|array|min:1',
-            'abastecer.*.viatura_id' => 'required|integer|exists:viaturas,id',
-            'abastecer.*.rota_id' => 'required',
-            'abastecer.*.qtd_abastecer' => 'required|numeric|min:0',
-            'abastecer.*.turno' => 'required|string|max:255',
+            'viatura_id' => 'required|integer|exists:viaturas,id',
+            'rota_id' => 'required',
+            'qtd_abastecer' => 'required|numeric|min:0',
+            'turno' => 'required|string|max:255',
         ], [
             'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric' => 'O campo :attribute deve ser valor numerico'
         ]);
@@ -85,111 +84,104 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
 
-        $combustivel = combustivelBomba::where('bombas_id',$ordem->bombas_id)->first();
+        $combustivel = combustivelBomba::where('bombas_id', $ordem->bombas_id)->first();
 
         $preco = 0;
+        // $totalAbastecer += $request['qtd_abastecer'];
+        // ordem viatura
+        $preco = $combustivel->preco_actual * $request->qtd_abastecer;
+        $ordemViatura = ordem_viatura::create([
+            'ordem_id' => $ordem->id,
+            'viatura_id' => $request->viatura_id,
+            'qtd_abastecida' => $request->qtd_abastecer,
+            'preco_consumo' => $preco,
+            'user_id' => auth()->user()->id,
+        ]);
 
-        foreach ($request->abastecer as $key => $abst) {
-            $totalAbastecer += $abst['qtd_abastecer'];
-            // ordem viatura
-            $preco = $combustivel->preco_actual * $abst['qtd_abastecer'];
-           $ordemViatura = ordem_viatura::create([
-                'ordem_id' => $ordem->id,
-                'viatura_id' => $abst['viatura_id'],
-                'qtd_abastecida' => $abst['qtd_abastecer'],
-                'preco_consumo'=>$preco,
-                'user_id' => auth()->user()->id,
-            ]);
+        $viatura = Viatura::where('id', $request->viatura_id)->get();
 
-            $viatura = Viatura::where('id', $abst['viatura_id'])->get();
+        foreach ($viatura as $key => $via) {
 
-            foreach ($viatura as $key => $via) {
+            if ($via->capacidade_tanque < $request->qtd_abastecer) {
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+            } else if ($via->capacidade_tanque < ($via->qtd_disponivel + $request->qtd_abastecer)) {
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+            } else {
+                $qtdAbastecer = ($via->qtd_disponivel + $request->qtd_abastecer);
 
-                if($via->capacidade_tanque < $abst['qtd_abastecer']){
-                    return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
-                }else if($via->capacidade_tanque < ($via->qtd_disponivel + $abst['qtd_abastecer'])){
-                    return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'],421);
-                }else{
-                    $qtdAbastecer = ($via->qtd_disponivel + $abst['qtd_abastecer']);
-
-                    $via->qtd_disponivel = $qtdAbastecer;
-                    $via->update();
-                }
-            }
-
-            //abastecer por rota
-            foreach ($abst['rota_id'] as $key => $rt) {
-
-                $ordemViatura->rota()->updateOrCreate([
-                    'qtd'=>$abst['qtd_abastecer'],
-                    'preco_total' => $preco,
-                ]);
+                $via->qtd_disponivel = $qtdAbastecer;
+                $via->update();
             }
         }
-        $abastecimento = new Abastecimento();
 
-        $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
-            if (!empty($abastecimento_ant)) {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
-                $abastecimento->qtd_rec = $totalAbastecer;
-                $abastecimento->save();
-            } else {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = 0;
-                $abastecimento->qtd_rec = $totalAbastecer;
-                $abastecimento->save();
-            }
-            $ordem->estado = 'pendente';
-            $ordem->update();
-            return response()->json(['success' => 'submetido com sucesso','err'=>false]);
+        //abastecer por rota
+        foreach ($request->rota_id as $key => $rt) {
+
+            $ordemViatura->rota()->updateOrCreate([
+                'qtd' => $request->qtd_abastecer,
+                'preco_total' => $preco,
+            ]);
+        }
+        $ordem->estado = 'pendente';
+        $ordem->update();
+        return response()->json(['success' => 'submetido com sucesso', 'err' => false]);
+    }
+
+    function PedidoForm($refs)
+    {
+        $ordem = ordem_viatura::with(['rota', 'ordem.viatura'])->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.refs', $refs)->get();
+
+        return response()->json($ordem, 200);
+    }
+    // submeter a ordem apos preenchida
+    function submeterAbst()
+    {
     }
 
     /**
      * Abastecimento Extra fora da rota dos projectos da empresa.
      */
 
-     function abastecer(Request $request){
+    function abastecer(Request $request)
+    {
 
         // return $request->all();
 
-         $ordem = new Ordem();
-         $abastecimento = new abastecimento();
-         $ordem_viatura = new ordem_viatura();
+        $ordem = new Ordem();
+        $abastecimento = new abastecimento();
+        $ordem_viatura = new ordem_viatura();
 
-         $counter = 10000;
-         $uuid = Str::uuid()->toString();
+        $counter = 10000;
+        $uuid = Str::uuid()->toString();
 
 
-            $last_order = Ordem::latest()->first();
-            if (!empty($last_order)) {
-                $new_code = ($last_order->codigo_ordem + 1);
-                $ordem->codigo_ordem = $new_code;
-            } else {
-                $ordem->codigo_ordem = $counter;
-            }
-            $ordem->refs = $uuid;
-            $ordem->bombas_id = $request->bombas_id;
-            $ordem->estado = 'pendente';
-            $ordem->createdBy = auth()->user()->id;
-            $ordem->save();
+        $last_order = Ordem::latest()->first();
+        if (!empty($last_order)) {
+            $new_code = ($last_order->codigo_ordem + 1);
+            $ordem->codigo_ordem = $new_code;
+        } else {
+            $ordem->codigo_ordem = $counter;
+        }
+        $ordem->refs = $uuid;
+        $ordem->bombas_id = $request->bombas_id;
+        $ordem->estado = 'pendente';
+        $ordem->createdBy = auth()->user()->id;
+        $ordem->save();
 
-            // verificar disponibilidade da viatura
-            $viatura = Viatura::where('id', $request->viatura_id)->first();
-            if($viatura->capacidade_tanque < $request->qtd){
-                return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
-            }else if($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)){
-                return response()->json(['erro'=> 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'],421);
-            }else{
-                $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd);
+        // verificar disponibilidade da viatura
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+        if ($viatura->capacidade_tanque < $request->qtd) {
+            return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+        } else if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)) {
+            return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
+        } else {
+            $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd);
 
-                $viatura->qtd_disponivel = $qtdAbastecer;
-                $viatura->update();
-            }
+            $viatura->qtd_disponivel = $qtdAbastecer;
+            $viatura->update();
+        }
 
-            try {
+        try {
             $ordem_viatura->viatura_id = $request->viatura_id;
             $ordem_viatura->ordem_id = $ordem->id;
             $ordem_viatura->qtd_abastecida = $request->qtd;
@@ -228,44 +220,43 @@ class AbastecimentoController extends Controller
             $abastecimento_extra->createdBy = auth()->user()->id;
             $abastecimento_extra->save();
 
-            return response()->json(['success'=>'Requisicao feita com sucesso!'], 200);
-
+            return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
         } catch (\Exception $e) {
-            return response()->json(['erro'=>'Erro! Ocorreu algum problema contacte o administrador'], 421);
+            return response()->json(['erro' => 'Erro! Ocorreu algum problema contacte o administrador'], 421);
         }
-     }
+    }
 
     public function show($refs)
     {
-        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy','ordem.approvedBy', 'ordem.ordem_viatura.viatura', 'abastecimento_extra'])->where('abastecimentos.refs', $refs)->first();
+        $abastecimento = $this->abastecimento->with(['ordem.bombas', 'ordem.viatura', 'ordem.abastecimento_rota.rota', 'ordem.createdBy', 'ordem.approvedBy', 'ordem.ordem_viatura.viatura', 'abastecimento_extra'])->where('abastecimentos.refs', $refs)->first();
 
         return response()->json($abastecimento, 200);
     }
 
-   function abastecimentoRecorrente(Request $request){
-    if ($search = $request->q) {
-       return abastecimentoExtra::join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('abastecimentos', 'abastecimentos.ordem_id', '=', 'ordems.id')->join('viaturas', 'viaturas.id', '=', 'abastecimento_extras.viatura_id')
-        ->join('motoristas', 'abastecimento_extras.motorista_id', '=', 'motoristas.id')
-        ->when(request('q'), function ($query) use ($search) {
-            $query->where('ordems.codigo', 'like', '%'.request('q').'%')
-            ->orWhere('viaturas.matricula', 'like', '%'.request('q').'%')
-            ->orWhere('bombas.nome_bombas', 'like', '%'.request('q').'%');
-
-        })->with(['abastecimento.ordem', 'viatura', 'motorista.person'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
-    }else{
-        return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
+    function abastecimentoRecorrente(Request $request)
+    {
+        if ($search = $request->q) {
+            return abastecimentoExtra::join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('abastecimentos', 'abastecimentos.ordem_id', '=', 'ordems.id')->join('viaturas', 'viaturas.id', '=', 'abastecimento_extras.viatura_id')
+                ->join('motoristas', 'abastecimento_extras.motorista_id', '=', 'motoristas.id')
+                ->when(request('q'), function ($query) use ($search) {
+                    $query->where('ordems.codigo', 'like', '%' . request('q') . '%')
+                        ->orWhere('viaturas.matricula', 'like', '%' . request('q') . '%')
+                        ->orWhere('bombas.nome_bombas', 'like', '%' . request('q') . '%');
+                })->with(['abastecimento.ordem', 'viatura', 'motorista.person'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
+        } else {
+            return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
+        }
     }
 
-   }
+    public function requestRecDetails(Request $request, $refs)
+    {
 
-   public function AbstRecDetails(Request $request, $refs){
+        $order = Ordem::where('ordems.refs', $refs)->first();
 
-    $order = Ordem::where('ordems.refs', $refs)->first();
+        $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $order->id)->first();
 
-    $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $order->id)->first();
-
-    return response()->json($abastecimento_extra);
-   }
+        return response()->json($abastecimento_extra);
+    }
     public function update(Request $request, $id)
     {
         //

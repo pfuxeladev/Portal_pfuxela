@@ -1,123 +1,75 @@
 <template>
-  <section
-    title="Novo-abastecimento"
-    class="invoice-add-wrapper"
-  >
+  <section title="Novo-abastecimento" class="invoice-add-wrapper">
     <b-card no-body>
       <b-card-header class="pb-50">
         <h3>Novo Abastecimento</h3>
       </b-card-header>
     </b-card>
     <b-row>
-      <b-col
-        cols="12"
-        class="invoice-add"
-      >
+      <b-col cols="12" class="invoice-add">
 
-        <b-form
-          @submit.prevent="NovaOrdem()"
-          @reset="onReset"
-          @keydown="form.onKeydown($event)"
-        >
-          <b-card
-            no-body
-            class="invoice-preview-card p-2"
-          >
+        <b-form @submit.prevent="NovaOrdem()" @reset="onReset" @keydown="form.onKeydown($event)">
+          <b-card no-body class="invoice-preview-card p-2">
             <b-row>
-              <b-col
-                md="12"
-                xl="12"
-              >
-                <b>Refs</b>:  {{form.ordem_id}}
+              <b-col cols="6" md="6">
+                <b>Refs</b>: {{form.ordem_id}}
+              </b-col>
+              <b-col cols="6" md="6">
+                <b>bombas</b>:
+                {{bombas.bombas}}
               </b-col>
               <hr>
             </b-row>
             <b-row>
-              <b-col
-                cols="12"
-                xl="12"
-              >
+              <b-col cols="12" xl="12">
                 <b-card-body class="invoice-padding form-item-section">
                   <div class="table-responsive">
                     <table class="table table-bordered table-stripped">
                       <thead class="thead-light">
                         <tr>
                           <th class="text-danger">
-                            <i class="fas fa-remove" />
+                            viatura(matr)
                           </th>
-                          <th>viatura(matr)</th>
                           <th>projecto</th>
                           <th>Rota</th>
-                          <th>Qtd(<small class="text-lowercase">ltr</small>)</th>
-                          <th>Turno</th>
+                          <th>
+                            Qtd(<small class="text-lowercase">ltr</small>)
+                          </th>
+                          <th>
+                            Turno
+                          </th>
+                          <!-- <th>justifica&ccedil;&atilde;o</th> -->
                         </tr>
                       </thead>
                       <tbody>
-                        <tr
-                          v-for="(abs, index) in form.abastecer"
-                          :key="index"
-                        >
-                          <td style="width:2%">
-                            <span
-                              class="btn btn-sm btn-outline-danger"
-                              @click="rmRow(index)"
-                            >
-                              <i class="fas fa-trash" />
-                            </span>
+                        <tr>
+                          <td style="width:20%">
+                            <v-select v-model="form.viatura_id" label="matricula" :options="viatura" :reduce="(viatura) => viatura.id" />
+                            ({{rec_abast}})
 
                           </td>
                           <td style="width:20%">
-                            <v-select
-                              v-model="abs.viatura_id"
-                              label="matricula"
-                              :options="viatura"
-                              :reduce="(viatura) => viatura.id"
-                            />
-                            ({{rec_abast}})
-                          </td>
-                          <td style="width:20%">
-                            <v-select label="name" v-model="abs.projecto_id" :options="projecto" :reduce="projecto=>projecto.id"
-                             @input="fetchRotas"/>
+                            <v-select label="name" v-model="form.projecto_id" :options="projecto" :reduce="projecto=>projecto.id" @input="fetchRotas" />
                           </td>
                           <td style="width:30%">
-                            <v-select
-                              multiple
-                              v-model="abs.rota_id"
-                              label="nome_rota"
-                              :options="rota"
-                              :reduce="(rota)=>rota.id"
-                            />
-
+                            <v-select multiple v-model="form.rota_id" label="nome_rota" :options="rota" :reduce="(rota)=>rota.id" />
                           </td>
                           <td>
-                            <b-form-input
-                              v-model="abs.qtd_abastecer"
-                              type="number"
-                              placeholder="Qtd em litros"
-                            />
+
+                            <b-form-input v-model="form.qtd_abastecer" type="number" placeholder="Qtd em litros" />
 
                           </td>
-                          <td style="width:10%">
-                            <v-select
-                              v-model="abs.turno"
-                              :options="['manha','tarde']"
-                            />
-
+                          <td style="width:30%">
+                            <v-select v-model="form.turno" :options="['manha','tarde']" />
                           </td>
                         </tr>
                       </tbody>
                       <tfoot>
                         <tr>
-                          <td
-                            colspan="6"
-                            class="content-align-right"
-                          >
-                            <span
-                              class="btn btn-outline-primary btn-sm"
-                              @click="add()"
-                            >
-                              <i class="fas fa-plus" />
-                            </span>
+                          <td colspan="5" class="content-align-right">
+                                <b-form-group label="Justificação">
+                                    <b-form-textarea v-model="form.observacao"></b-form-textarea>
+                                </b-form-group>
                           </td>
                         </tr>
                       </tfoot>
@@ -129,21 +81,12 @@
             </b-row>
             <b-row>
               <b-col cols="10">
-                <b-button
-                  type="reset"
-                  variant="secondary"
-                >
+                <b-button type="reset" variant="secondary">
                   limpar campos
                 </b-button>
               </b-col>
-              <b-col
-                cols="2"
-                class="pull-right float-right"
-              >
-                <b-button
-                  type="submit"
-                  variant="outline-success"
-                >
+              <b-col cols="2" class="pull-right float-right">
+                <b-button type="submit" variant="outline-success">
                   enviar
                 </b-button>
 
@@ -153,7 +96,38 @@
         </b-form>
 
       </b-col>
-
+     <b-col cols="12">
+         <table class="table table-light">
+             <thead class="thead-light">
+                 <tr>
+                     <th>Viatura</th>
+                     <th>Km(inicial)</th>
+                     <th>Bombas</th>
+                     <th>Qtd disponivel</th>
+                     <th>Qtd a abastecer</th>
+                     <th>pre&ccedil;o/(ltr)</th>
+                     <th>Projecto</th>
+                     <th>Rotas</th>
+                     <th>Subtotal</th>
+                     <th>editar</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                 </tr>
+             </tbody>
+         </table>
+     </b-col>
     </b-row>
   </section>
 </template>
@@ -210,45 +184,30 @@ export default {
       rota: [],
       projecto: [],
       rec_abast: null,
-      bombas: [],
+      bombas: {},
+      abastecimento: [],
       form: new Form({
         ordem_id: this.$route.params.refs,
-
-        abastecer: [{
-          projecto_id: null,
-          viatura_id: null,
-          rota_id: null,
-          qtd_abastecer: 0,
-          observacao: null,
-        }],
+        projecto_id: null,
+        viatura_id: null,
+        rota_id: null,
+        qtd_abastecer: 0,
+        observacao: null,
       }),
 
     }
   },
   created() {
     this.fetchProjectos()
-    // this.fetchRotas()
     this.fetchViaturas()
     this.fetchBombas()
     // single data
     this.getQtd()
   },
   methods: {
-    add() {
-      this.form.abastecer.push({
-        projecto_id: null,
-        viatura_id: null,
-        rota_id: null,
-        qtd_abastecer: 0,
-        observacao: null,
-      })
-    },
-    rmRow(index) {
-      this.form.abastecer.splice(index, 1)
-    },
     getQtd() {
       //   alert(viatura_id)
-      this.$http.get(`/api/getQtdDisponivel/${this.form.abastecer.viatura_id}`).then(res => {
+      this.$http.get(`/api/getQtdDisponivel/${this.form.viatura_id}`).then(res => {
         this.rec_abast = res.data
         console.log(this.rec_abast)
       }).catch(err => {
@@ -265,31 +224,36 @@ export default {
 
     fetchRotas() {
       console.log(this.form.abastecer)
-      for (let i = 0; i < this.form.abastecer.length; i++ ) {
-        this.$http.get(`/api/RotaByProject/${this.form.abastecer[i].projecto_id}`).then(res => {
-          this.rota = res.data
-          if (res.data === '') {
-            this.$swal.fire({
-              icon: 'error',
-              title: 'Nao existe nenhuma rota cadastrada!',
-            })
-          }
-        }).catch(err => {
+      //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
+      this.$http.get(`/api/RotaByProject/${this.form.projecto_id}`).then(res => {
+        this.rota = res.data
+        if (res.data === '') {
           this.$swal.fire({
             icon: 'error',
-            title: 'Erro ao tentar buscar!',
+            title: 'Nao existe nenhuma rota cadastrada!',
           })
+        }
+      }).catch(err => {
+        this.$swal.fire({
+          icon: 'error',
+          title: 'Erro ao tentar buscar!',
         })
-      }
+      })
+      //   }
     },
     fetchBombas() {
-      this.$http.get('/api/bombas').then(res => {
+      this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
         this.bombas = res.data
       })
     },
     fetchViaturas() {
       this.$http.get('/api/listarViaturas').then(res => {
         this.viatura = res.data
+      })
+    },
+    returnAbastecimento() {
+      this.$http.get(`/api/CurrentAbst/${this.$route.params.refs}`).then(res => {
+        this.abastecimento = res.data
       })
     },
     NovaOrdem() {

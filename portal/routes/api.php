@@ -55,12 +55,16 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/listViaturaFora', [App\Http\Controllers\API\Back\CheckListInController::class, 'listViaturaFora']);
     Route::get('/kmActual/{viatura_id}', [\App\Http\Controllers\API\Back\CheckListOutController::class, 'kmActual']);
     Route::post('/abastecimento_extra', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecer']);
+    Route::get('/listCombustivel', [\App\Http\Controllers\API\Back\BombaController::class, 'fetchCombustivel']);
+    Route::post('/updateCombustivel', [App\Http\Controllers\API\Back\BombaController::class, 'updtFuel']);
 
     // Aprovar abastecimento e reprovar
     Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
     Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
     Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'AbstRecDetails']);
+    Route::get('activeVehicle/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'activarViatura']);
+    Route::get('deativateVehicle/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'DesativarViatura']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
@@ -69,7 +73,7 @@ Route::middleware('auth:api')->group(function () {
         'bombas'=> App\Http\Controllers\API\Back\BombaController::class,
         'Abastecimento'=>App\Http\Controllers\API\Back\AbastecimentoController::class,
         'Ordems'=>App\Http\Controllers\API\Back\OrdemController::class,
-        'Projectos'=>App\Http\Controllers\API\Back\ProjectoController::class,
+        // 'Projectos'=>App\Http\Controllers\API\Back\ProjectoController::class,
         'Ocorrencia'=>App\Http\Controllers\API\Back\OcorrenciaController::class,
         'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
         'marca' => App\Http\Controllers\API\MarcaController::class,
@@ -78,10 +82,8 @@ Route::middleware('auth:api')->group(function () {
         'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
         'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
         ]);
+
+    // Ordem Abastecimento params
+    Route::get('/bomba/{refs}', [\App\Http\Controllers\API\Back\OrdemController::class, 'getBomba']);
 });
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return auth()->user();
-
-
-// });

@@ -20,15 +20,23 @@ class BombaController extends Controller
     }
     public function index()
     {
-        return Bombas::with(['responsavel', 'createdBy', 'combustivel_bomba.combustivel', 'combustivel'])->get();
+        return Bombas::with(['responsavel', 'createdBy', 'combustivel'])->get();
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    function fetchCombustivel(){
+        return combustivel::all();
+    }
+
+    function updtFuel(Request $request){
+        foreach ($request->all() as $val) {
+             combustivel::where(['tipo_combustivel'=>$val['tipo_combustivel']])->update([
+                'tipo_combustivel'=>$val['tipo_combustivel'],
+                'preco_actual'=>$val['preco_actual']
+            ]);
+        }
+        return response()->json(['success'=>'actualizado com sucesso'], 200);
+
+    }
     public function store(Request $request)
     {
         // $uuid = Str::uuid()->toString();
@@ -82,12 +90,7 @@ class BombaController extends Controller
             foreach ($request->combustivel_tipos as $key => $comb) {
                 $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
                 foreach ($combustivel as $key => $c) {
-
-                    if ($c->tipo_combustivel === 'diesel') {
-                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_diesel]);
-                    }else if ($c->tipo_combustivel === 'diesel') {
-                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_gasolina]);
-                    }
+                    $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id]);
                 }
             }
 
@@ -143,17 +146,20 @@ class BombaController extends Controller
             ]
         );
 
-        $bomba = Bombas::findOrFail($id);
 
-        $bomba->nome_bombas = $request->nome_bombas;
-        $bomba->capacidade = $request->capacidade;
-        $bomba->tipo_bomba = $request->tipo_bomba;
-        $bomba->createdBy = auth()->user()->id;
-        $bomba->update();
 
+        $bombas = Bombas::where('id', $id)->update([
+            'nome_bombas' => $request->nome_bombas,
+            'capacidade' => $request->capacidade,
+            'tipo_bomba' => $request->tipo_bomba,
+            'createdBy' => auth()->user()->id,
+            // 'updatedBy'=>auth()->user()->id,
+        ]);
+        if ($bombas) {
+            $bomba = Bombas::where('id', $id)->first();
 
             foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::updateOrCreate([
+                $responsavel = responsavelBombas::where('bombas_id', $id)->update([
                     'nome' => $resp['nome'],
                     'email_bomba' => $resp['email_bomba'],
                     'contacto' => $resp['contacto'],
@@ -174,10 +180,10 @@ class BombaController extends Controller
                 }
             }
 
-            // if ($responsavel) {
+            if ($responsavel) {
                 return response()->json(['message' => 'actualizou a bomba com sucesso']);
-            // /}
-        // }
+            }
+        }
     }
 
     /**

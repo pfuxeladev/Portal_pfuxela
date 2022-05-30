@@ -51,11 +51,13 @@ class MotoristaController extends Controller
 
         if ($people) {
             $contact = new Contactos();
+            $contact->cont_type = 'mobile';
             $contact->content = $request->contacto;
             $contact->person_id = $people->id;
             $contact->save();
             if ($contact) {
                 $contact1 = new Contactos();
+                $contact1->cont_type = 'mobile';
                 $contact1->content = $request->contacto_alt;
                 $contact1->person_id = $people->id;
                 $contact1->save();

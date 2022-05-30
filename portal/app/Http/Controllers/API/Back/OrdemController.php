@@ -13,6 +13,8 @@ use App\Models\abastecimento;
 use App\Models\ordem_viatura;
 use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
+use App\Models\Bombas;
+
 class OrdemController extends Controller
 {
     private $ordem;
@@ -38,6 +40,10 @@ class OrdemController extends Controller
         $ordem->update();
 
         return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
+    }
+
+    function getBomba($refs){
+       return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
     }
 
     function CancelarOrdem(Request $request)

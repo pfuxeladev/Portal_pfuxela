@@ -32,26 +32,15 @@ class ProjectoController extends Controller
          $key++;
 
          $projecto = projecto::updateOrCreate(
-             ['id'=>$project['id']],
-             ['name'=>$project['name']],
-             ['email'=>$project['email'],
+             ['id'=>$project['id'],
+             'name'=>$project['name'],
+             'email'=>$project['email'],
              'telephone'=>$project['telephone'],
              'address_xtense'=>$project['address_xtense'],
              'contact_emg'=>$project['contact_emg'],
              'nrPassagers'=>$project['nrPassagers'],
-             'recomendation'=>$project['recomendation'],
-             'createdBy'=>auth()->user()->id,
-             'updatedBy'=>auth()->user()->id],
-            );
-        //  $projecto->name = $project['name'];
-        //  $projecto->email = $project['email'];
-        //  $projecto->address_xtense = $project['address_xtense'];
-        //  $projecto->contact_emg = $project['contact_emg'];
-        //  $projecto->nrPassagers = $project['nrPassagers'];
-        //  $projecto->recomendation = $project['recomendation'];
-        //  $projecto->createdBy = auth()->user()->id;
-        //  $projecto->updatedBy = auth()->user()->id;
-        //  $projecto->save();
+             'recomendation'=>$project['recomendation']],
+           );
      }
      return $projecto;
     }

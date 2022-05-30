@@ -149,12 +149,30 @@ class ViaturaController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Viatura  $viatura
-     * @return \Illuminate\Http\Response
-     */
+    function activarViatura(Request $request, $id){
+        $viatura = Viatura::findOrFail($id);
+        try {
+            $viatura->status = true;
+        $viatura->update();
+
+        return response(['sucess'=>'viatura activada pronta para o uso'], 200);
+        } catch (\Exception $e) {
+           return response(['erro'=>'Ocorreu um erro contacte o administrador'], 421);
+        }
+
+    }
+    function DesativarViatura(Request $request, $id){
+        $viatura = Viatura::findOrFail($id);
+        try {
+            $viatura->status = false;
+        $viatura->update();
+
+        return response(['sucess'=>'viatura Inativa'], 200);
+        } catch (\Exception $e) {
+           return response(['erro'=>'Ocorreu um erro contacte o administrador'], 421);
+        }
+
+    }
     public function show(Viatura $viatura)
     {
         return $this->viatura->with(['fabricante', 'modelo', 'createdBy'])->findOrFail($viatura);

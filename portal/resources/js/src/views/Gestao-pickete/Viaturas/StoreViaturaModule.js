@@ -30,5 +30,19 @@ export default {
           .catch(error => reject(error))
       })
     },
+    activateViatura(ctx, { id }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/activeVehicle/${id}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    inactivateViatura(ctx, { id }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/deativateVehicle/${id}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }
