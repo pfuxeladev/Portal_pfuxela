@@ -482,7 +482,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/assets/images/pages/under-maintenance-dark.svg";
+module.exports = "/images/_/_/_/_/portal/resources/js/src/assets/images/pages/under-maintenance-dark.svg";
 
 /***/ }),
 
@@ -493,7 +493,7 @@ module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/assets/images/pages/under-maintenance.svg";
+module.exports = "/images/_/_/_/_/portal/resources/js/src/assets/images/pages/under-maintenance.svg";
 
 /***/ }),
 

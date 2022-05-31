@@ -86,6 +86,7 @@
                 placeholder="Search..."
               />
               <b-button
+              
                 variant="primary"
                 @click="showModal"
               >
@@ -142,17 +143,24 @@
               />
             </template>
             <b-dropdown-item
-              :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
+            v-if="data.item.estado !=='aberta'"  :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
 
-            <b-dropdown-item
+            <b-dropdown-item v-if="data.item.estado !=='aberta'"
               :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
+            </b-dropdown-item>
+              <b-dropdown-item
+              :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
+
+            >
+              <feather-icon icon="RepeatIcon" />
+              <span class="align-middle ml-50">Continuar</span>
             </b-dropdown-item>
           </b-dropdown>
         </template>

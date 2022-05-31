@@ -353,6 +353,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1333,43 +1341,75 @@ var render = function () {
                       },
                       [
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "supply-details",
-                                params: { refs: data.item.refs },
+                        data.item.estado !== "aberta"
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "supply-details",
+                                    params: { refs: data.item.refs },
+                                  },
+                                },
                               },
-                            },
-                          },
-                          [
-                            _c("feather-icon", {
-                              attrs: { icon: "FileTextIcon" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Detalhes"),
-                            ]),
-                          ],
-                          1
-                        ),
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "FileTextIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Detalhes")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
+                        _vm._v(" "),
+                        data.item.estado !== "aberta"
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "Edit-Order",
+                                    params: { refs: data.item.refs },
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "EditIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Editar")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
                         _c(
                           "b-dropdown-item",
                           {
                             attrs: {
                               to: {
-                                name: "Edit-Order",
+                                name: "New-supply-order",
                                 params: { refs: data.item.refs },
                               },
                             },
                           },
                           [
-                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
+                            _c("feather-icon", {
+                              attrs: { icon: "RepeatIcon" },
+                            }),
                             _vm._v(" "),
                             _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Editar"),
+                              _vm._v("Continuar"),
                             ]),
                           ],
                           1
@@ -1807,8 +1847,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
-/* harmony import */ var C_wamp64_www_portal_pfuxela_abastecimento_pfuxela_co_mz_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var C_wamp64_www_portal_pfuxela_abastecimento_pfuxela_co_mz_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var C_wamp64_www_abastecimento_portal_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_abastecimento_portal_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
 
@@ -1817,7 +1857,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var isObject = function isObject(obj) {
-  return Object(C_wamp64_www_portal_pfuxela_abastecimento_pfuxela_co_mz_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+  return Object(C_wamp64_www_abastecimento_portal_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
 };
 var isToday = function isToday(date) {
   var today = new Date();
@@ -1855,7 +1895,7 @@ var useRouter = function useRouter() {
   }, function (r) {
     state.route = r;
   });
-  return Object(C_wamp64_www_portal_pfuxela_abastecimento_pfuxela_co_mz_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_abastecimento_pfuxela_co_mz_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+  return Object(C_wamp64_www_abastecimento_portal_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_abastecimento_portal_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
     router: vm.$router
   });
 };

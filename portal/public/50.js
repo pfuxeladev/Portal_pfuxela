@@ -2537,7 +2537,7 @@ var lineChartOptions = {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/assets/images/elements/decore-left.png";
+module.exports = "/images/_/_/_/_/portal/resources/js/src/assets/images/elements/decore-left.png";
 
 /***/ }),
 
@@ -2548,7 +2548,7 @@ module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/assets/images/elements/decore-right.png";
+module.exports = "/images/_/_/_/_/portal/resources/js/src/assets/images/elements/decore-right.png";
 
 /***/ }),
 

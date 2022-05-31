@@ -46,6 +46,10 @@ class OrdemController extends Controller
        return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
     }
 
+    function OrdensAberta(){
+        return $this->ordem->where('estado', 'aberta')->first();
+    }
+
     function CancelarOrdem(Request $request)
     {
         try {

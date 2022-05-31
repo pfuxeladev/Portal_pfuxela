@@ -1260,7 +1260,7 @@ render._withStripped = true
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento.pfuxela.co.mz/resources/js/src/assets/images/icons/pdf.png";
+module.exports = "/images/_/_/_/_/portal/resources/js/src/assets/images/icons/pdf.png";
 
 /***/ }),
 
