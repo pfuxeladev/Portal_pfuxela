@@ -15,9 +15,8 @@ class CombustivelTableSeeder extends Seeder
     {
 
         $combustivel = [
-            ['tipo_combustivel'=>'Gasolina'],
-            ['tipo_combustivel'=>'Diesel'],
-            ['tipo_combustivel'=>'Gas']
+            ['tipo_combustivel'=>'Gasolina', 'preco_actual'=>83.3],
+            ['tipo_combustivel'=>'Diesel', 'preco_actual'=>70.970]
         ];
 
         foreach ($combustivel as $key => $c) {
