@@ -102,33 +102,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1881,35 +1854,6 @@ var render = function () {
             "b-col",
             { attrs: { lg: "4", md: "6" } },
             [_c("ecommerce-meetup", { attrs: { data: _vm.data.meetup } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { lg: "4", md: "6" } },
-            [_c("ecommerce-browser-states")],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { lg: "4", md: "6" } },
-            [
-              _c("ecommerce-goal-overview", {
-                attrs: { data: _vm.data.goalOverview },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { lg: "4", md: "6" } },
-            [
-              _c("ecommerce-transactions", {
-                attrs: { data: _vm.data.transactionData },
-              }),
-            ],
             1
           ),
         ],

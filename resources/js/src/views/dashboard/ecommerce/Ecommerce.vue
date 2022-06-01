@@ -65,33 +65,6 @@
         <ecommerce-meetup :data="data.meetup" />
       </b-col>
       <!--/ Developer Meetup Card -->
-
-      <!-- Browser States Card -->
-      <b-col
-        lg="4"
-        md="6"
-      >
-        <ecommerce-browser-states />
-      </b-col>
-      <!--/ Browser States Card -->
-
-      <!-- Goal Overview Card -->
-      <b-col
-        lg="4"
-        md="6"
-      >
-        <ecommerce-goal-overview :data="data.goalOverview" />
-      </b-col>
-      <!--/ Goal Overview Card -->
-
-      <!-- Transaction Card -->
-      <b-col
-        lg="4"
-        md="6"
-      >
-        <ecommerce-transactions :data="data.transactionData" />
-      </b-col>
-      <!--/ Transaction Card -->
     </b-row>
   </section>
 </template>
