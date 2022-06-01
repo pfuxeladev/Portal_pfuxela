@@ -1364,27 +1364,31 @@ var render = function () {
                             )
                           : _vm._e(),
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "New-supply-order",
-                                params: { refs: data.item.refs },
+                        data.item.estado === "aberta"
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "New-supply-order",
+                                    params: { refs: data.item.refs },
+                                  },
+                                },
                               },
-                            },
-                          },
-                          [
-                            _c("feather-icon", {
-                              attrs: { icon: "RepeatIcon" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("continuar"),
-                            ]),
-                          ],
-                          1
-                        ),
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "RepeatIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("continuar")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
                         data.item.estado !== "aberta"
                           ? _c(

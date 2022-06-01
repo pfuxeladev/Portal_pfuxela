@@ -17,9 +17,82 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
 /* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
 /* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -170,6 +243,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCollapse"],
@@ -216,6 +290,9 @@ __webpack_require__.r(__webpack_exports__);
     this.fetchBombas(); // single data
 
     this.getQtd();
+  },
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   methods: {
     getQtd: function getQtd() {
@@ -320,13 +397,13 @@ __webpack_require__.r(__webpack_exports__);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
     var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__["default"]); // UnRegister on leave
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
-    _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/getOpenOrder', {
-      refs: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.refs
+    _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/getOpenOrder', {
+      refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
     }).then(function (response) {
       OpenOrder.value = response.data;
     })["catch"](function (error) {
@@ -334,8 +411,58 @@ __webpack_require__.r(__webpack_exports__);
         OpenOrder.value = undefined;
       }
     });
+
+    function enviarPedido(order) {
+      var _this9 = this;
+
+      this.$swal({
+        title: 'Tem certeza que deseja submeter a ordem?',
+        text: 'Nao podera reverter essa accao!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim!',
+        customClass: {
+          confirmButton: 'btn btn-primary',
+          cancelButton: 'btn btn-outline-danger ml-1'
+        },
+        buttonsStyling: false
+      }).then(function (result) {
+        if (result.value) {
+          _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/addAbastecimento', order).then(function (response) {
+            toast({
+              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+              props: {
+                title: response.data.success,
+                icon: 'CheckSquareIcon',
+                variant: 'success'
+              }
+            });
+
+            _this9.$route.push({
+              name: 'supply-details',
+              params: {
+                refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
+              }
+            });
+          })["catch"](function (err) {
+            if (err.response.status === 421) {
+              toast({
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+                props: {
+                  title: err.response.data.erro,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger'
+                }
+              });
+            }
+          });
+        }
+      }); //   console.log(order)
+    }
+
     return {
-      OpenOrder: OpenOrder
+      OpenOrder: OpenOrder,
+      enviarPedido: enviarPedido
     };
   }
 });
@@ -511,11 +638,7 @@ var render = function () {
                                                   ),
                                                 ]),
                                                 _vm._v(" "),
-                                                _c("th", [
-                                                  _vm._v(
-                                                    "\n                          Turno\n                        "
-                                                  ),
-                                                ]),
+                                                _c("th", [_vm._v("Turno")]),
                                               ]),
                                             ]
                                           ),
@@ -555,7 +678,7 @@ var render = function () {
                                                   _vm._v(
                                                     "\n                          (" +
                                                       _vm._s(_vm.rec_abast) +
-                                                      ")\n\n                        "
+                                                      ")\n                        "
                                                   ),
                                                 ],
                                                 1
@@ -749,7 +872,7 @@ var render = function () {
                         [
                           _c(
                             "b-col",
-                            { attrs: { cols: "10" } },
+                            { attrs: { cols: "9" } },
                             [
                               _c(
                                 "b-button",
@@ -773,7 +896,7 @@ var render = function () {
                             "b-col",
                             {
                               staticClass: "pull-right float-right",
-                              attrs: { cols: "2" },
+                              attrs: { cols: "3" },
                             },
                             [
                               _c(
@@ -781,12 +904,12 @@ var render = function () {
                                 {
                                   attrs: {
                                     type: "submit",
-                                    variant: "outline-success",
+                                    variant: "outline-primary",
                                   },
                                 },
                                 [
                                   _vm._v(
-                                    "\n                enviar\n              "
+                                    "\n                adicionar a ordem\n              "
                                   ),
                                 ]
                               ),
@@ -806,89 +929,137 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _c("b-col", { attrs: { cols: "12" } }, [
-            _c("table", { staticClass: "table table-light" }, [
-              _c("thead", { staticClass: "thead-light" }, [
-                _c("tr", [
-                  _c("th", [_vm._v("Viatura")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Km(actual)")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Bombas")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Qtd a abastecer")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("preço/(ltr)")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Rotas")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Subtotal")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("editar")]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c(
-                "tbody",
-                _vm._l(_vm.OpenOrder, function (order) {
-                  return _c("tr", { key: order }, [
-                    _c("td", [
-                      _vm._v(" " + _vm._s(order.viatura.matricula) + " "),
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(order.viatura.kilometragem))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(order.ordem.bombas.nome_bombas))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(
-                        "(" +
-                          _vm._s(order.preco_cunsumo / order.qtd_abastecida) +
-                          ") MZN"
+          _vm.bombas.estado === "aberta"
+            ? _c(
+                "b-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
+                    "b-row",
+                    [
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "4" } },
+                        [
+                          _c(
+                            "b-button",
+                            {
+                              directives: [
+                                {
+                                  name: "ripple",
+                                  rawName: "v-ripple.400",
+                                  value: "rgba(113, 102, 240, 0.15)",
+                                  expression: "'rgba(113, 102, 240, 0.15)'",
+                                  modifiers: { 400: true },
+                                },
+                              ],
+                              attrs: { variant: "outline-success" },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.enviarPedido(_vm.OpenOrder)
+                                },
+                              },
+                            },
+                            [_vm._v("enviar pedido de abastecimento")]
+                          ),
+                        ],
+                        1
                       ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("table", { staticClass: "table table-light" }, [
+                    _c("thead", { staticClass: "thead-light" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("Viatura")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Km(actual)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Bombas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Qtd a abastecer")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("preço/(ltr)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Rotas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Subtotal")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("editar")]),
+                      ]),
                     ]),
                     _vm._v(" "),
                     _c(
-                      "td",
-                      _vm._l(order.ordem_viatura_rota, function (rotas) {
-                        return _c("span", { key: rotas }, [
-                          _vm._v(
-                            "\n                          " +
-                              _vm._s(rotas.rota.nome_rota) +
-                              ",\n                       "
+                      "tbody",
+                      _vm._l(_vm.OpenOrder, function (order) {
+                        return _c("tr", { key: order }, [
+                          _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.viatura.kilometragem)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.ordem.bombas.nome_bombas)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "(" +
+                                _vm._s(
+                                  order.preco_cunsumo / order.qtd_abastecida
+                                ) +
+                                ") MZN"
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            _vm._l(order.ordem_viatura_rota, function (rotas) {
+                              return _c("span", { key: rotas }, [
+                                _vm._v(
+                                  "\n                " +
+                                    _vm._s(rotas.rota.nome_rota) +
+                                    ",\n              "
+                                ),
+                              ])
+                            }),
+                            0
+                          ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(
+                              "\n              " +
+                                _vm._s(order.preco_cunsumo) +
+                                "\n            "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: { sm: "", variant: "outline-primary" },
+                                },
+                                [_c("i", { staticClass: "fas fa-edit" })]
+                              ),
+                            ],
+                            1
                           ),
                         ])
                       }),
                       0
                     ),
-                    _vm._v(" "),
-                    _c("td", [
-                      _vm._v(
-                        "\n                       " +
-                          _vm._s(order.preco_cunsumo) +
-                          "\n                   "
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "td",
-                      [
-                        _c(
-                          "b-button",
-                          { attrs: { sm: "", variant: "outline-primary" } },
-                          [_c("i", { staticClass: "fas fa-edit" })]
-                        ),
-                      ],
-                      1
-                    ),
-                  ])
-                }),
-                0
-              ),
-            ]),
-          ]),
+                  ]),
+                ],
+                1
+              )
+            : _vm._e(),
         ],
         1
       ),

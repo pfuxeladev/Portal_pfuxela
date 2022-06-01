@@ -147,7 +147,7 @@
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
-             <b-dropdown-item
+             <b-dropdown-item  v-if="data.item.estado === 'aberta'"
               :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="RepeatIcon" />

@@ -84,6 +84,7 @@ Route::middleware('auth:api')->group(function () {
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);
 Route::get('ordemAberta/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'OrdensAberta']);
+Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'submeterAbst']);
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return auth()->user();

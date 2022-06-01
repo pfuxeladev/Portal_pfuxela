@@ -93,15 +93,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -430,10 +421,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
     BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
     BAvatar: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BAvatar"],
     BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"]
@@ -449,20 +442,20 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       fields: [{
-        key: 'company',
-        label: 'COMPANY'
+        key: 'Cliente',
+        label: 'Cliente'
       }, {
-        key: 'category',
-        label: 'CATEGORY'
+        key: 'Viaturas',
+        label: 'Viaturas'
       }, {
-        key: 'views',
-        label: 'VIEWS'
+        key: 'Nr_Pessoas',
+        label: 'Nr_Pessoas'
       }, {
-        key: 'revenue',
-        label: 'REVENUE'
+        key: 'Total_pago',
+        label: 'Total_pago'
       }, {
-        key: 'sales',
-        label: 'SALES'
+        key: 'Data_reserva',
+        label: 'Data_reserva'
       }]
     };
   }
@@ -1841,19 +1834,12 @@ var render = function () {
         [
           _c(
             "b-col",
-            { attrs: { lg: "8" } },
+            { attrs: { lg: "12" } },
             [
               _c("ecommerce-company-table", {
                 attrs: { "table-data": _vm.data.companyTable },
               }),
             ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { lg: "4", md: "6" } },
-            [_c("ecommerce-meetup", { attrs: { data: _vm.data.meetup } })],
             1
           ),
         ],
@@ -2036,6 +2022,10 @@ var render = function () {
         "b-card",
         { staticClass: "card-company-table", attrs: { "no-body": "" } },
         [
+          _c("b-card-title", { staticClass: "pl-3 mt-2" }, [
+            _vm._v("Lista das reservas recém feitas"),
+          ]),
+          _vm._v(" "),
           _c("b-table", {
             staticClass: "mb-0",
             attrs: { items: _vm.tableData, responsive: "", fields: _vm.fields },

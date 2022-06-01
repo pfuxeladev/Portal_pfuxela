@@ -10,6 +10,7 @@ use App\Models\Viatura;
 use App\Models\Abastecimento_rota;
 use App\Models\abastecimentoExtra;
 use App\Models\abastecimentoRotaViatura;
+use App\Models\abastecimentoViatura;
 use App\Models\Bombas;
 use App\Models\combustivelBomba;
 use App\Models\ordem_viatura;
@@ -89,7 +90,7 @@ class AbastecimentoController extends Controller
 
         $uuid = Str::uuid()->toString();
 
-        $ordem = Ordem::where('refs', $request->ordem_id)->first();
+        $ordem = Ordem::where('refs',$request->refs)->first();
 
         $combustivel = combustivelBomba::where('bomba_id', $ordem->bombas_id)->first();
 
@@ -118,7 +119,7 @@ class AbastecimentoController extends Controller
             }
 
 
-            $ordemViatura->ordemViaturaRota()->updateOrCreate([
+            $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt,
                 'qtd' => $request->qtd_abastecer,
                 'preco_total' => $preco,
@@ -155,8 +156,50 @@ class AbastecimentoController extends Controller
         return response()->json($ordem, 200);
     }
     // submeter a ordem apos preenchida
-    function submeterAbst()
+    function submeterAbst(Request $request)
     {
+       $totalAbst = 0;
+      foreach ($request->abastecimento as $key => $abst) {
+          $totalAbst += $abst['qtd_abastecida'];
+      }
+
+        $ordem = Ordem::where('id', $abst['ordem_id'])->first();
+
+
+        $abastecimento = new abastecimento();
+        try {
+            $uuid = Str::uuid()->toString();
+
+            $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
+            if (!empty($abastecimento_ant)) {
+                $abastecimento->ordem_id = $ordem->id;
+                $abastecimento->bombas_id = $ordem->bombas_id;
+                $abastecimento->refs = $uuid;
+                $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
+                $abastecimento->qtd_rec = $totalAbst;
+                $abastecimento->user_id = auth()->user()->id;
+                $abastecimento->save();
+
+                $ordem->estado = 'pendente';
+                $ordem->update();
+            } else {
+                $abastecimento->ordem_id = $ordem->id;
+                $abastecimento->bombas_id = $ordem->bombas_id;
+                $abastecimento->refs = $uuid;
+                $abastecimento->qtd_ant = 0;
+                $abastecimento->qtd_rec = $totalAbst;
+                $abastecimento->user_id = auth()->user()->id;
+                $abastecimento->save();
+
+                $ordem->estado = 'pendente';
+                $ordem->update();
+            }
+            return response()->json(['success'=>'ordem submetida com sucesso aguarde a confirmacao'], 200);
+
+        } catch (\Exception $e) {
+            return response()->json(['erro'=>'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema'], 421);
+        }
+
     }
 
     /**

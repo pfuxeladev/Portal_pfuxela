@@ -52,19 +52,10 @@
 
     <b-row class="match-height">
       <!-- Company Table Card -->
-      <b-col lg="8">
+      <b-col lg="12">
         <ecommerce-company-table :table-data="data.companyTable" />
       </b-col>
       <!--/ Company Table Card -->
-
-      <!-- Developer Meetup Card -->
-      <b-col
-        lg="4"
-        md="6"
-      >
-        <ecommerce-meetup :data="data.meetup" />
-      </b-col>
-      <!--/ Developer Meetup Card -->
     </b-row>
   </section>
 </template>

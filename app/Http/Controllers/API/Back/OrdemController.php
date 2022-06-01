@@ -34,6 +34,9 @@ class OrdemController extends Controller
 
     public function OrdensAberta($refs){
         $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
+        if (empty($ordem)) {
+            return response()->json(['message'=>'nenhuma'], 200);
+        }
         $ordem_viatura = ordem_viatura::with('ordem.bombas.combustivel_bomba', 'viatura', 'ordemViaturaRota.rota')->where('ordem_id', $ordem->id)->get();
 
         return response()->json($ordem_viatura, 200);
@@ -179,7 +182,7 @@ class OrdemController extends Controller
 
     public function show(Ordem $ordem, $refs)
     {
-        $ordem  = Ordem::where('refs', $refs)->with(['abastecimento', 'abastecimento_rota.viatura', 'bombas', 'abastecimento_extra'])->first();
+        $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'viatura', 'ordem_viatura.ordemViaturaRota.rota', 'abastecimento'])->first();
 
         return response()->json($ordem, 200);
     }

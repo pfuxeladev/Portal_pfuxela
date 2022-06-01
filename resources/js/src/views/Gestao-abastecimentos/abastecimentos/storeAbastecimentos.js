@@ -18,7 +18,7 @@ export default {
     fetchAbastecimentoDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/Abastecimento/${refs}`)
+          .get(`/api/Ordems/${refs}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -27,7 +27,7 @@ export default {
     addAbastecimento(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/Abastecimento', { abastecimento: SupplyDatas })
+          .post('/api/submeterAbst', { abastecimento: SupplyDatas })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
