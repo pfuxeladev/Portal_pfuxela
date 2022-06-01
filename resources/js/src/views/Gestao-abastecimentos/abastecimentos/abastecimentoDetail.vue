@@ -17,9 +17,9 @@
               <b-col cols="6">
                 <b-list-group>
                   <b-list-group-item><b>Ref</b>: {{ SupplyData.refs }}</b-list-group-item>
-                  <b-list-group-item><b>Ordem</b>: {{ SupplyData.ordem.codigo_ordem }}</b-list-group-item>
-                  <b-list-group-item><b>Bombas</b>: {{ SupplyData.ordem.bombas.nome_bombas }} </b-list-group-item>
-                  <b-list-group-item><b>Qtd total requisitad0</b>: {{ SupplyData.qtd_rec }}</b-list-group-item>
+                  <b-list-group-item><b>Ordem</b>: {{ SupplyData.codigo_ordem }}</b-list-group-item>
+                  <b-list-group-item><b>Bombas</b>: {{ SupplyData.bombas.nome_bombas }} </b-list-group-item>
+                  <b-list-group-item><b>Qtd total requisitad0</b>: {{ SupplyData.abastecimento[0].qtd_rec }}</b-list-group-item>
                 </b-list-group>
               </b-col>
               <b-col
@@ -27,61 +27,55 @@
                 class="pull-right ml-auto"
               >
                 <b-list-group>
-                  <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.ordem.created_by.name }}</b-list-group-item>
-                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.ordem.estado === 'pendente'">
+                  <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.created_by.name }}</b-list-group-item>
+                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.estado === 'pendente'">
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>
-                    <span v-else-if="SupplyData.ordem.estado === 'Autorizado'">
+                    <span v-else-if="SupplyData.estado === 'Autorizado'">
                         <b-badge variant="success">Autorizada</b-badge>
                     </span>
                     <span v-else>Ordem rejeitada</span>
                   </b-list-group-item>
-                  <b-list-group-item v-if="SupplyData.ordem.approved_by !== null">
-                      <b>Autorizado por</b>: {{ SupplyData.ordem.approved_by.name }}
+                  <b-list-group-item v-if="SupplyData.approved_by !== null">
+                      <b>Autorizado por</b>: {{ SupplyData.approved_by.name }}
                   </b-list-group-item>
                 </b-list-group>
               </b-col>
 
             </b-row>
-            <b-row>
-                <b-col><b>Matricula</b></b-col>
-                <b-col><b>Qtd a abastecer</b></b-col>
-                <b-col><b>Data</b></b-col>
-            </b-row>
-            <b-row v-for="(vt, index) in SupplyData.ordem.ordem_viatura" :key="index">
-                <b-col cols="4" md="4">
-                    {{vt.viatura.matricula}}
-                </b-col>
-                <b-col cols="4" md="4">
-                     {{vt.qtd_abastecida}}
-                </b-col>
-                <b-col cols="4" md="4">
-                    {{dateTime(vt.updated_at)}}
-                </b-col>
-            </b-row>
           </b-card-body>
-          <span v-if="SupplyData.ordem.abastecimento_rota.length > 0">
-            <b-table-lite
-            responsive
-            :items="SupplyData.ordem.abastecimento_rota"
-            :fields="fields"
-          >
-            <template #cell(rota)="data">
-              {{ data.item.rota.nome_rota }}
-            </template>
-          </b-table-lite>
-          </span>
-          <span v-else>
-              <b-row class="m-1">
-                  <b-col><b>Descri&ccedil;&atilde;o</b></b-col>
-                  <b-col><b>Destino</b></b-col>
-                  <b-col><b>Hora de partida</b></b-col>
-              </b-row>
-              <b-row class="m-1" v-for="extra in SupplyData.abastecimento_extra" :key="extra.id">
-                  <b-col>{{extra.descricao}}</b-col>
-                  <b-col>{{extra.destino}}</b-col>
-                  <b-col>{{extra.horaSaida}}</b-col>
-              </b-row>
+          <span v-if="SupplyData.ordem_viatura.length > 0">
+            <table class="table table-bordered table-stripped table-light">
+                <thead class="thead-light">
+                    <tr>
+                        <th rowspan="2">Matricula</th>
+                        <th rowspan="2">tipo(combustivel)</th>
+                        <th rowspan="2">km(actual)</th>
+                        <th rowspan="2">qtd</th>
+                        <th rowspan="2">Val. a pagar</th>
+                        <th colspan="2">Rota & projecto</th>
+                    </tr>
+                    <tr>
+                        <th>rota</th>
+                        <th>projecto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="ordem_viatura in SupplyData.ordem_viatura" :key="ordem_viatura">
+                        <td>{{ordem_viatura.viatura.matricula}}</td>
+                        <td>{{ordem_viatura.viatura.tipo_combustivel}}</td>
+                        <td>{{ordem_viatura.viatura.kilometragem}}</td>
+                        <td>{{ordem_viatura.qtd_abastecida}}</td>
+                        <td>{{ordem_viatura.preco_cunsumo}}</td>
+                        <td colspan="2">
+                            <tr v-for="(viatura_rota, index) in ordem_viatura.ordem_viatura_rota" :key="index">
+                            <td>{{viatura_rota.rota.nome_rota}}</td>
+                            <td>{{viatura_rota.rota.projecto.name}}</td>
+                            </tr>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
           </span>
         </b-card>
       </b-col>
@@ -102,10 +96,10 @@
         xl="2"
         md="2"
       >
-      <span v-if="SupplyData.ordem.estado ==='pendente'">
+      <span v-if="SupplyData.estado ==='pendente'">
        <b-button
           variant="outline-success"
-          @click="Aprovar(SupplyData.ordem.refs)"
+          @click="Aprovar(SupplyData.refs)"
         >
           Autorizar
         </b-button>
@@ -118,13 +112,13 @@
         xl="2"
         md="2"
       >
-       <span v-if="SupplyData.ordem.estado ==='Cancelado'">
+       <span v-if="SupplyData.estado ==='Cancelado'">
        <b-button variant="warning">Reabrir</b-button>
       </span>
       <span v-else>
         <b-button
           variant="outline-danger"
-          @click="Reprovar(SupplyData.ordem.refs)"
+          @click="Reprovar(SupplyData.refs)"
         >
           Cancelar
         </b-button>

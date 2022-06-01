@@ -152,12 +152,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -748,9 +742,7 @@ var render = function () {
                                         _c("b", [_vm._v("Ordem")]),
                                         _vm._v(
                                           ": " +
-                                            _vm._s(
-                                              _vm.SupplyData.ordem.codigo_ordem
-                                            )
+                                            _vm._s(_vm.SupplyData.codigo_ordem)
                                         ),
                                       ]),
                                       _vm._v(" "),
@@ -759,8 +751,7 @@ var render = function () {
                                         _vm._v(
                                           ": " +
                                             _vm._s(
-                                              _vm.SupplyData.ordem.bombas
-                                                .nome_bombas
+                                              _vm.SupplyData.bombas.nome_bombas
                                             ) +
                                             " "
                                         ),
@@ -771,7 +762,11 @@ var render = function () {
                                           _vm._v("Qtd total requisitad0"),
                                         ]),
                                         _vm._v(
-                                          ": " + _vm._s(_vm.SupplyData.qtd_rec)
+                                          ": " +
+                                            _vm._s(
+                                              _vm.SupplyData.abastecimento[0]
+                                                .qtd_rec
+                                            )
                                         ),
                                       ]),
                                     ],
@@ -796,8 +791,7 @@ var render = function () {
                                         _vm._v(
                                           ": " +
                                             _vm._s(
-                                              _vm.SupplyData.ordem.created_by
-                                                .name
+                                              _vm.SupplyData.created_by.name
                                             )
                                         ),
                                       ]),
@@ -805,8 +799,7 @@ var render = function () {
                                       _c("b-list-group-item", [
                                         _c("b", [_vm._v("Estado")]),
                                         _vm._v(": "),
-                                        _vm.SupplyData.ordem.estado ===
-                                        "pendente"
+                                        _vm.SupplyData.estado === "pendente"
                                           ? _c(
                                               "span",
                                               [
@@ -822,7 +815,7 @@ var render = function () {
                                               ],
                                               1
                                             )
-                                          : _vm.SupplyData.ordem.estado ===
+                                          : _vm.SupplyData.estado ===
                                             "Autorizado"
                                           ? _c(
                                               "span",
@@ -844,14 +837,14 @@ var render = function () {
                                             ]),
                                       ]),
                                       _vm._v(" "),
-                                      _vm.SupplyData.ordem.approved_by !== null
+                                      _vm.SupplyData.approved_by !== null
                                         ? _c("b-list-group-item", [
                                             _c("b", [_vm._v("Autorizado por")]),
                                             _vm._v(
                                               ": " +
                                                 _vm._s(
-                                                  _vm.SupplyData.ordem
-                                                    .approved_by.name
+                                                  _vm.SupplyData.approved_by
+                                                    .name
                                                 ) +
                                                 "\n                "
                                             ),
@@ -866,150 +859,134 @@ var render = function () {
                             ],
                             1
                           ),
-                          _vm._v(" "),
-                          _c(
-                            "b-row",
-                            [
-                              _c("b-col", [_c("b", [_vm._v("Matricula")])]),
-                              _vm._v(" "),
-                              _c("b-col", [
-                                _c("b", [_vm._v("Qtd a abastecer")]),
-                              ]),
-                              _vm._v(" "),
-                              _c("b-col", [_c("b", [_vm._v("Data")])]),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _vm._l(
-                            _vm.SupplyData.ordem.ordem_viatura,
-                            function (vt, index) {
-                              return _c(
-                                "b-row",
-                                { key: index },
-                                [
-                                  _c(
-                                    "b-col",
-                                    { attrs: { cols: "4", md: "4" } },
-                                    [
-                                      _vm._v(
-                                        "\n                  " +
-                                          _vm._s(vt.viatura.matricula) +
-                                          "\n              "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-col",
-                                    { attrs: { cols: "4", md: "4" } },
-                                    [
-                                      _vm._v(
-                                        "\n                   " +
-                                          _vm._s(vt.qtd_abastecida) +
-                                          "\n              "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-col",
-                                    { attrs: { cols: "4", md: "4" } },
-                                    [
-                                      _vm._v(
-                                        "\n                  " +
-                                          _vm._s(_vm.dateTime(vt.updated_at)) +
-                                          "\n              "
-                                      ),
-                                    ]
-                                  ),
-                                ],
-                                1
-                              )
-                            }
-                          ),
                         ],
-                        2
+                        1
                       ),
                       _vm._v(" "),
-                      _vm.SupplyData.ordem.abastecimento_rota.length > 0
-                        ? _c(
-                            "span",
-                            [
-                              _c("b-table-lite", {
-                                attrs: {
-                                  responsive: "",
-                                  items:
-                                    _vm.SupplyData.ordem.abastecimento_rota,
-                                  fields: _vm.fields,
-                                },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "cell(rota)",
-                                      fn: function (data) {
-                                        return [
-                                          _vm._v(
-                                            "\n            " +
-                                              _vm._s(data.item.rota.nome_rota) +
-                                              "\n          "
-                                          ),
-                                        ]
-                                      },
-                                    },
-                                  ],
-                                  null,
-                                  false,
-                                  2890230046
-                                ),
-                              }),
-                            ],
-                            1
-                          )
-                        : _c(
-                            "span",
-                            [
-                              _c(
-                                "b-row",
-                                { staticClass: "m-1" },
-                                [
-                                  _c("b-col", [_c("b", [_vm._v("Descrição")])]),
-                                  _vm._v(" "),
-                                  _c("b-col", [_c("b", [_vm._v("Destino")])]),
-                                  _vm._v(" "),
-                                  _c("b-col", [
-                                    _c("b", [_vm._v("Hora de partida")]),
+                      _vm.SupplyData.ordem_viatura.length > 0
+                        ? _c("span", [
+                            _c(
+                              "table",
+                              {
+                                staticClass:
+                                  "table table-bordered table-stripped table-light",
+                              },
+                              [
+                                _c("thead", { staticClass: "thead-light" }, [
+                                  _c("tr", [
+                                    _c("th", { attrs: { rowspan: "2" } }, [
+                                      _vm._v("Matricula"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { rowspan: "2" } }, [
+                                      _vm._v("tipo(combustivel)"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { rowspan: "2" } }, [
+                                      _vm._v("km(actual)"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { rowspan: "2" } }, [
+                                      _vm._v("qtd"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { rowspan: "2" } }, [
+                                      _vm._v("Val. a pagar"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { attrs: { colspan: "2" } }, [
+                                      _vm._v("Rota & projecto"),
+                                    ]),
                                   ]),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _vm._l(
-                                _vm.SupplyData.abastecimento_extra,
-                                function (extra) {
-                                  return _c(
-                                    "b-row",
-                                    { key: extra.id, staticClass: "m-1" },
-                                    [
-                                      _c("b-col", [
-                                        _vm._v(_vm._s(extra.descricao)),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-col", [
-                                        _vm._v(_vm._s(extra.destino)),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-col", [
-                                        _vm._v(_vm._s(extra.horaSaida)),
-                                      ]),
-                                    ],
-                                    1
-                                  )
-                                }
-                              ),
-                            ],
-                            2
-                          ),
+                                  _vm._v(" "),
+                                  _c("tr", [
+                                    _c("th", [_vm._v("rota")]),
+                                    _vm._v(" "),
+                                    _c("th", [_vm._v("projecto")]),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(
+                                    _vm.SupplyData.ordem_viatura,
+                                    function (ordem_viatura) {
+                                      return _c("tr", { key: ordem_viatura }, [
+                                        _c("td", [
+                                          _vm._v(
+                                            _vm._s(
+                                              ordem_viatura.viatura.matricula
+                                            )
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("td", [
+                                          _vm._v(
+                                            _vm._s(
+                                              ordem_viatura.viatura
+                                                .tipo_combustivel
+                                            )
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("td", [
+                                          _vm._v(
+                                            _vm._s(
+                                              ordem_viatura.viatura.kilometragem
+                                            )
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("td", [
+                                          _vm._v(
+                                            _vm._s(ordem_viatura.qtd_abastecida)
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("td", [
+                                          _vm._v(
+                                            _vm._s(ordem_viatura.preco_cunsumo)
+                                          ),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "td",
+                                          { attrs: { colspan: "2" } },
+                                          _vm._l(
+                                            ordem_viatura.ordem_viatura_rota,
+                                            function (viatura_rota, index) {
+                                              return _c("tr", { key: index }, [
+                                                _c("td", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      viatura_rota.rota
+                                                        .nome_rota
+                                                    )
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("td", [
+                                                  _vm._v(
+                                                    _vm._s(
+                                                      viatura_rota.rota.projecto
+                                                        .name
+                                                    )
+                                                  ),
+                                                ]),
+                                              ])
+                                            }
+                                          ),
+                                          0
+                                        ),
+                                      ])
+                                    }
+                                  ),
+                                  0
+                                ),
+                              ]
+                            ),
+                          ])
+                        : _vm._e(),
                     ],
                     1
                   ),
@@ -1034,7 +1011,7 @@ var render = function () {
               ),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.ordem.estado === "pendente"
+                _vm.SupplyData.estado === "pendente"
                   ? _c(
                       "span",
                       [
@@ -1044,7 +1021,7 @@ var render = function () {
                             attrs: { variant: "outline-success" },
                             on: {
                               click: function ($event) {
-                                return _vm.Aprovar(_vm.SupplyData.ordem.refs)
+                                return _vm.Aprovar(_vm.SupplyData.refs)
                               },
                             },
                           },
@@ -1057,7 +1034,7 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.ordem.estado === "Cancelado"
+                _vm.SupplyData.estado === "Cancelado"
                   ? _c(
                       "span",
                       [
@@ -1076,7 +1053,7 @@ var render = function () {
                             attrs: { variant: "outline-danger" },
                             on: {
                               click: function ($event) {
-                                return _vm.Reprovar(_vm.SupplyData.ordem.refs)
+                                return _vm.Reprovar(_vm.SupplyData.refs)
                               },
                             },
                           },

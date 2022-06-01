@@ -14,7 +14,8 @@ use App\Models\ordem_viatura;
 use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
 use App\Models\Bombas;
-
+use PDF;
+use Mail;
 class OrdemController extends Controller
 {
     private $ordem;
@@ -182,18 +183,25 @@ class OrdemController extends Controller
 
     public function show(Ordem $ordem, $refs)
     {
-        $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'viatura', 'ordem_viatura.ordemViaturaRota.rota', 'abastecimento'])->first();
+        $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
         return response()->json($ordem, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Ordem  $ordem
-     * @return \Illuminate\Http\Response
-     */
+   function imprimirOrdem(){
+    $data["email"] = "aatmaninfotech@gmail.com";
+    $data["title"] = "From ItSolutionStuff.com";
+    $data["body"] = "This is Demo";
+
+    $pdf = PDF::loadView('emails.myTestMail', $data);
+
+    Mail::send('emails.myTestMail', $data, function($message)use($data, $pdf) {
+        $message->to($data["email"], $data["email"])
+                ->subject($data["title"])
+                ->attachData($pdf->output(), "text.pdf");
+    });
+
+   }
     public function update(Request $request, Ordem $ordem)
     {
         //
