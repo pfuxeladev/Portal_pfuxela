@@ -13,7 +13,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -150,6 +162,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 
  // eslint-disable-next-line import/no-extraneous-dependencies
+
+
+
+
+
 
 
 
@@ -297,6 +314,29 @@ __webpack_require__.r(__webpack_exports__);
         _this8.show = true;
       });
     }
+  },
+  setup: function setup() {
+    var OpenOrder = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
+    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+
+    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+    });
+    _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/getOpenOrder', {
+      refs: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.refs
+    }).then(function (response) {
+      OpenOrder.value = response.data;
+    })["catch"](function (error) {
+      if (error.response.status === 404) {
+        OpenOrder.value = undefined;
+      }
+    });
+    return {
+      OpenOrder: OpenOrder
+    };
   }
 });
 
@@ -772,17 +812,13 @@ var render = function () {
                 _c("tr", [
                   _c("th", [_vm._v("Viatura")]),
                   _vm._v(" "),
-                  _c("th", [_vm._v("Km(inicial)")]),
+                  _c("th", [_vm._v("Km(actual)")]),
                   _vm._v(" "),
                   _c("th", [_vm._v("Bombas")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Qtd disponivel")]),
                   _vm._v(" "),
                   _c("th", [_vm._v("Qtd a abastecer")]),
                   _vm._v(" "),
                   _c("th", [_vm._v("preço/(ltr)")]),
-                  _vm._v(" "),
-                  _c("th", [_vm._v("Projecto")]),
                   _vm._v(" "),
                   _c("th", [_vm._v("Rotas")]),
                   _vm._v(" "),
@@ -792,29 +828,65 @@ var render = function () {
                 ]),
               ]),
               _vm._v(" "),
-              _c("tbody", [
-                _c("tr", [
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                  _vm._v(" "),
-                  _c("td"),
-                ]),
-              ]),
+              _c(
+                "tbody",
+                _vm._l(_vm.OpenOrder, function (order) {
+                  return _c("tr", { key: order }, [
+                    _c("td", [
+                      _vm._v(" " + _vm._s(order.viatura.matricula) + " "),
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(order.viatura.kilometragem))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(order.ordem.bombas.nome_bombas))]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        "(" +
+                          _vm._s(order.preco_cunsumo / order.qtd_abastecida) +
+                          ") MZN"
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      _vm._l(order.ordem_viatura_rota, function (rotas) {
+                        return _c("span", { key: rotas }, [
+                          _vm._v(
+                            "\n                          " +
+                              _vm._s(rotas.rota.nome_rota) +
+                              ",\n                       "
+                          ),
+                        ])
+                      }),
+                      0
+                    ),
+                    _vm._v(" "),
+                    _c("td", [
+                      _vm._v(
+                        "\n                       " +
+                          _vm._s(order.preco_cunsumo) +
+                          "\n                   "
+                      ),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "td",
+                      [
+                        _c(
+                          "b-button",
+                          { attrs: { sm: "", variant: "outline-primary" } },
+                          [_c("i", { staticClass: "fas fa-edit" })]
+                        ),
+                      ],
+                      1
+                    ),
+                  ])
+                }),
+                0
+              ),
             ]),
           ]),
         ],
@@ -897,121 +969,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  namespaced: true,
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {
-    fetchAbastecimentos: function fetchAbastecimentos(ctx, queryParams) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/Abastecimento', {
-          params: queryParams
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    fetchAbastecimentoDetails: function fetchAbastecimentoDetails(ctx, _ref) {
-      var refs = _ref.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Abastecimento/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addAbastecimento: function addAbastecimento(ctx, SupplyDatas) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/Abastecimento', {
-          abastecimento: SupplyDatas
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addAbastecimentoRecorrente: function addAbastecimentoRecorrente(ctx, SupplyDatas) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/abastecimento_extra', SupplyDatas).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    ApproveOrder: function ApproveOrder(ctx, _ref2) {
-      var refs = _ref2.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/AprovarOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    CancelOrder: function CancelOrder(ctx, _ref3) {
-      var refs = _ref3.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/CancelarOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    AbastecimentoRecorrente: function AbastecimentoRecorrente(ctx, abstData) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/AbastecimentoRecorrente', abstData).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    fetchAbstRecDetails: function fetchAbstRecDetails(ctx, _ref4) {
-      var refs = _ref4.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/AbstCorrDetails/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    getOpenOrder: function getOpenOrder(ctx, _ref5) {
-      var refs = _ref5.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ordemAberta/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    }
-  }
-});
 
 /***/ })
 
