@@ -38,7 +38,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('viaturaHistorico/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'HistoricoAbastecimento']);
     Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'RotaByProject']);
 
-    Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'show']);
+    Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'show']);
 
     Route::get('/Abastecer/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'abastecer']);
 
@@ -76,7 +76,7 @@ Route::middleware('auth:api')->group(function () {
         'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
         'marca' => App\Http\Controllers\API\MarcaController::class,
         'combustivel' => App\Http\Controllers\API\CombustivelController::class,
-        'users' => \App\Http\Controllers\API\BACK\UserController::class,
+        'users' => \App\Http\Controllers\API\Back\UserController::class,
         'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
         'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
         ]);
