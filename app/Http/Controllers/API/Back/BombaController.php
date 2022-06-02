@@ -67,7 +67,7 @@ class BombaController extends Controller
             'nome_bombas' => $request->nome_bombas,
             'capacidade' => $request->capacidade,
             'tipo_bomba' => $request->tipo_bomba,
-            'createdBy' => auth()->user()->id,
+            'createdBy' => auth('api')->user()->id,
             // 'updatedBy'=>auth()->user()->id,
         ]);
 

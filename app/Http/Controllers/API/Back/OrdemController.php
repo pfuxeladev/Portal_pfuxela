@@ -188,18 +188,22 @@ class OrdemController extends Controller
         return response()->json($ordem, 200);
     }
 
-   function imprimirOrdem(){
-    $data["email"] = "aatmaninfotech@gmail.com";
-    $data["title"] = "From ItSolutionStuff.com";
-    $data["body"] = "This is Demo";
+   function imprimirOrdem($refs){
+    $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-    $pdf = PDF::loadView('emails.myTestMail', $data);
+    // $data["email"] = "leochima@gmail.com";
+    // $data["title"] = "From ItSolutionStuff.com";
+    // $data["body"] = "This is Demo";
 
-    Mail::send('emails.myTestMail', $data, function($message)use($data, $pdf) {
-        $message->to($data["email"], $data["email"])
-                ->subject($data["title"])
-                ->attachData($pdf->output(), "text.pdf");
-    });
+    $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+
+    // Mail::send('orderMail.mail_order', $data, function($message)use($data, $pdf) {
+    //     $message->to($data["email"], $data["email"])
+    //             ->subject($data["title"])
+    //             ->attachData($pdf->output(), "ordem_abastecimento.pdf");
+    // });
+    return $pdf->download('ordem.pdf');
+   return view('orderMail.mail_order',compact('ordem'));
 
    }
     public function update(Request $request, Ordem $ordem)

@@ -86,6 +86,8 @@ Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoControlle
 Route::get('ordemAberta/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'OrdensAberta']);
 Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'submeterAbst']);
 
+Route::get('imprimirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'imprimirOrdem']);
+
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return auth()->user();
 
