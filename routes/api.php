@@ -9,7 +9,7 @@ Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::c
 Route::get('checklists', [ChecklistController::class, 'index']);
 Route::post('checklist-out', [ChecklistController::class, 'saveChacklistOut']);
 
-Route::middleware('auth:api')->group(function () {
+Route::middleware('api')->group(function () {
 
     Route::get('/permissions', [App\Http\Controllers\API\Back\UserController::class, 'permissionsIndex'])
         ->name('permissions.index')
