@@ -13,7 +13,6 @@ use Illuminate\Support\Carbon;
 use GuzzleHttp\Client;
 use Laravel\Passport\Client as OClient;
 use Exception;
-
 class AuthenticationController extends Controller
 {
     // public function __construct()
@@ -59,21 +58,23 @@ class AuthenticationController extends Controller
             'password' => $request->password
         ];
 
-        if (auth()->attempt($data)) {
-            $token = auth()->user()->createToken('access_token')->accessToken;
-            $user = auth()->user();
-            // $token->expires_at = Carbon::now()->addWeeks(1)->toDateTimeString();
-            // $token->save();
+        if (Auth::attempt($data)) {
+            $user = $request->user();
+            $tokenResult = $user->createToken('access_token');
+            $token = $tokenResult->token;
+            $token->expires_at = Carbon::now()->addWeeks(1)->toDateTimeString();
+            $token->save();
             return response()->json([
                 'userData' => [
-                    new UserResource(auth()->user()),
+                    new UserResource($user),
                     'ability' => [
                         'action' => $user->getPermissionNames(), 'subject' => $user->getRoleNames(),
                     ],
                     'role' => $user->getRoleNames()
                 ],
-                'refreshToken' => $token,
-                'accessToken' => $token
+                'refreshToken' => $tokenResult->access_token,
+                'accessToken' => $token->access_token,
+                'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
         } else {
             return response()->json(['error' => 'Unauthorised'], 401);
