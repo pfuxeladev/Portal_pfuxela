@@ -90,9 +90,14 @@ class AbastecimentoController extends Controller
 
         $uuid = Str::uuid()->toString();
 
-        $ordem = Ordem::where('refs',$request->refs)->first();
+        $ordem = Ordem::where('refs',$request->ordem_id)->first();
 
-        $combustivel = combustivelBomba::where('bomba_id', $ordem->bombas_id)->first();
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+
+        $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)
+        ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->first();
+
+        return $combustivel->preco_actual;
 
         $preco = 0;
         // $totalAbastecer += $request['qtd_abastecer'];
@@ -103,7 +108,7 @@ class AbastecimentoController extends Controller
             'ordem_id' => $ordem->id,
             'viatura_id' => $request->viatura_id,
             'qtd_abastecida' => $request->qtd_abastecer,
-            'preco_consumo' => $preco,
+            'preco_consumo' => $combustivel->preco_actual,
             'user_id' => auth()->user()->id,
         ]);
 
@@ -118,19 +123,20 @@ class AbastecimentoController extends Controller
                 $distanciaTotal += $dist->distancia_km;
             }
 
-
             $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt,
                 'qtd' => $request->qtd_abastecer,
                 'preco_total' => $preco,
+                'justificacao'=>$request->observacao,
             ]);
         }
 
-        $viatura = Viatura::where('id', $request->viatura_id)->first();
 
-        $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media);
 
-        if ($viatura->capacidade_media < $qtdNecessaria) {
+        $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media) + 15;
+
+
+        if ($request->qtd_abastecer > $qtdNecessaria) {
             return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita'], 421);
         }
 

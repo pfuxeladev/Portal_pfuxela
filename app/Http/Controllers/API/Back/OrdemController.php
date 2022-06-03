@@ -53,15 +53,14 @@ class OrdemController extends Controller
         if ($ordem) {
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
+            // return $ordem->bombas->responsavel;
 
-            foreach ($ordem->responsaavel as $key => $responsavel) {
+            foreach ($ordem->bombas->responsavel as $key => $responsavel) {
                 $data["email"] = $responsavel->email_bomba;
                 $data["title"] = "info@pfuxela.co.mz";
                 $data["body"] = "Teste";
             }
-
-
-
+            
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
             Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
             Mail::send('orderMail.mail_order', $data, function($message)use($data, $pdf) {

@@ -13,6 +13,7 @@ class OrdemViaturaRota extends Model
         'rota_id',
         'qtd',
         'preco_total',
+        'justificacao'
     ];
 
     function rota(){

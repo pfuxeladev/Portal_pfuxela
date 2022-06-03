@@ -93,7 +93,7 @@ class BombaController extends Controller
 
                 foreach ($combustivel[$key] as $key => $c) {
 
-                 combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id]);
+                 combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_atual'=>$c->preco_actual]);
                 }
             }
 
@@ -180,7 +180,7 @@ class BombaController extends Controller
 
                 foreach ($combustivel[$key] as $key => $c) {
 
-                 combustivelBomba::updateOrCreate(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id]);
+                 combustivelBomba::updateOrCreate(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_atual'=>$c->preco_actual]);
                 }
             }
 
