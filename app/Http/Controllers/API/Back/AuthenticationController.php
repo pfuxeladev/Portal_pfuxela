@@ -64,6 +64,8 @@ class AuthenticationController extends Controller
             $token = $tokenResult->token;
             $token->expires_at = Carbon::now()->addWeeks(1)->toDateTimeString();
             $token->save();
+
+            $token2 = $user->createToken('access_token')->accessToken;
             return response()->json([
                 'userData' => [
                     new UserResource($user),
@@ -72,8 +74,8 @@ class AuthenticationController extends Controller
                     ],
                     'role' => $user->getRoleNames()
                 ],
-                'refreshToken' => $tokenResult->token,
-                'accessToken' => $tokenResult->token,
+                'refreshToken' =>  $token2,
+                'accessToken' => $token2,
                 'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
         } else {
