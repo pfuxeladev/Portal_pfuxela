@@ -73,7 +73,7 @@ class AuthenticationController extends Controller
                     'role' => $user->getRoleNames()
                 ],
                 'refreshToken' => $tokenResult->token,
-                'accessToken' => $token->access_token,
+                'accessToken' => $tokenResult->access_token,
                 'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
         } else {
