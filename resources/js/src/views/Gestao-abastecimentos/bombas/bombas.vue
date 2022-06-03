@@ -17,7 +17,7 @@
             <b-col cols="12" md="6" class="mb-md-0 mb-2">
               <label>Bombas Registadas</label>
               <v-select
-                v-model="form.tipo_bomba"
+                v-model="tipo_bomba"
                 :options="['interna', 'externa']"
               />
             </b-col>
@@ -333,13 +333,6 @@
                   </b-list-group>
                 </b-col>
               </b-row>
-              <b-row>
-                <b-col>
-                  <b-button type="submit" variant="success">
-                    actualizar pre&ccedil;o de combustivel
-                  </b-button>
-                </b-col>
-              </b-row>
             </b-form>
           </b-card>
         </b-modal>
@@ -411,10 +404,11 @@ export default {
           name: 'Gasolina',
         },
         {
-          item: 'Gasoleo',
+          item: 'Diesel',
           name: 'Diesel',
         },
       ],
+      tipo_bomba: null,
       bombas: [],
       details: {
         responsavel: [],

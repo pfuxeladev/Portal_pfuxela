@@ -362,13 +362,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -407,9 +400,10 @@ __webpack_require__.r(__webpack_exports__);
         item: 'Gasolina',
         name: 'Gasolina'
       }, {
-        item: 'Gasoleo',
+        item: 'Diesel',
         name: 'Diesel'
       }],
+      tipo_bomba: null,
       bombas: [],
       details: {
         responsavel: [],
@@ -717,11 +711,11 @@ var render = function () {
                         _c("v-select", {
                           attrs: { options: ["interna", "externa"] },
                           model: {
-                            value: _vm.form.tipo_bomba,
+                            value: _vm.tipo_bomba,
                             callback: function ($$v) {
-                              _vm.$set(_vm.form, "tipo_bomba", $$v)
+                              _vm.tipo_bomba = $$v
                             },
-                            expression: "form.tipo_bomba",
+                            expression: "tipo_bomba",
                           },
                         }),
                       ],
@@ -1586,33 +1580,6 @@ var render = function () {
                                     }
                                   ),
                                   1
-                                ),
-                              ],
-                              1
-                            ),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-row",
-                          [
-                            _c(
-                              "b-col",
-                              [
-                                _c(
-                                  "b-button",
-                                  {
-                                    attrs: {
-                                      type: "submit",
-                                      variant: "success",
-                                    },
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                  actualizar preço de combustivel\n                "
-                                    ),
-                                  ]
                                 ),
                               ],
                               1
