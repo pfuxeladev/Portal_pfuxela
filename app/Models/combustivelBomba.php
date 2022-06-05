@@ -11,7 +11,7 @@ class combustivelBomba extends Model
 
     protected $table = "combustivel_bombas";
 
-    protected $fillable = ['bomba_id', 'combustivel_id'];
+    protected $fillable = ['bomba_id', 'combustivel_id', 'preco_actual'];
 
     function combustivel(){
         return $this->belongsTo(combustivel::class, 'combustivel_id', 'id');

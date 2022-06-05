@@ -38,7 +38,6 @@
             lg="12"
             md="6"
           >
-            <ecommerce-earnings-chart :data="data.earningsChart" />
           </b-col>
         </b-row>
       </b-col>
@@ -69,12 +68,7 @@ import EcommerceStatistics from './EcommerceStatistics.vue'
 import EcommerceRevenueReport from './EcommerceRevenueReport.vue'
 import EcommerceOrderChart from './EcommerceOrderChart.vue'
 import EcommerceProfitChart from './EcommerceProfitChart.vue'
-import EcommerceEarningsChart from './EcommerceEarningsChart.vue'
 import EcommerceCompanyTable from './EcommerceCompanyTable.vue'
-import EcommerceMeetup from './EcommerceMeetup.vue'
-import EcommerceBrowserStates from './EcommerceBrowserStates.vue'
-import EcommerceGoalOverview from './EcommerceGoalOverview.vue'
-import EcommerceTransactions from './EcommerceTransactions.vue'
 
 export default {
   components: {
@@ -86,12 +80,8 @@ export default {
     EcommerceRevenueReport,
     EcommerceOrderChart,
     EcommerceProfitChart,
-    EcommerceEarningsChart,
     EcommerceCompanyTable,
-    EcommerceMeetup,
-    EcommerceBrowserStates,
-    EcommerceGoalOverview,
-    EcommerceTransactions,
+
   },
   data() {
     return {

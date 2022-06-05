@@ -4,7 +4,7 @@
     class="card-tiny-line-stats"
     body-class="pb-50"
   >
-    <h6>Profit</h6>
+    <h6>Requisi&ccedil;&otilde;es</h6>
     <h2 class="font-weight-bolder mb-1">
       6,24k
     </h2>

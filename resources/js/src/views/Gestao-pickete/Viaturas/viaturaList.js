@@ -23,7 +23,7 @@ export default function viaturaList() {
     { key: 'modelo.nome_modelo', sortable: true },
     { key: 'marca.nome', sortable: true },
     { key: 'created_by.email', sortable: true },
-    { key: 'status', sortable: true },
+    { key: 'estado', sortable: true },
     { key: 'actions' },
   ]
   const perPage = ref(10)

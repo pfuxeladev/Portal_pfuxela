@@ -182,7 +182,13 @@
               <td>{{ order.viatura.kilometragem }}</td>
               <td>{{ order.ordem.bombas.nome_bombas }}</td>
               <td>{{ order.qtd_abastecida }}</td>
-              <td>({{ order.preco_cunsumo / order.qtd_abastecida }}) MZN</td>
+              <td>
+ <span
+                  v-for="rotas in order.ordem_viatura_rota"
+                  :key="rotas"
+                >
+                  ({{ rotas.preco_total / order.qtd_abastecida }})
+ </span> MZN</td>
               <td>
                 <span
                   v-for="rotas in order.ordem_viatura_rota"
@@ -192,7 +198,13 @@
                 </span>
               </td>
               <td>
-                {{ order.preco_cunsumo }}
+                  <span
+                  v-for="rotas in order.ordem_viatura_rota"
+                  :key="rotas"
+                >
+                {{ rotas.preco_total }}
+                </span>
+
               </td>
               <td>
                 <b-button
@@ -352,7 +364,7 @@ export default {
       this.$Progress.start()
       this.form.post('/api/Abastecimento').then(res => {
         this.$swal.fire({
-          icon: 'error',
+          icon: 'success',
           title: res.data.success,
         })
         this.$Progress.finish()
@@ -361,7 +373,7 @@ export default {
         if (err) {
           this.$swal.fire({
             icon: 'error',
-            title: 'Erro ao tentar adicionar!',
+            title: err.response.data.erro,
           })
           this.$Progress.fail()
         }

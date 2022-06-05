@@ -233,6 +233,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -361,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$Progress.start();
       this.form.post('/api/Abastecimento').then(function (res) {
         _this7.$swal.fire({
-          icon: 'error',
+          icon: 'success',
           title: res.data.success
         });
 
@@ -372,7 +384,7 @@ __webpack_require__.r(__webpack_exports__);
         if (err) {
           _this7.$swal.fire({
             icon: 'error',
-            title: 'Erro ao tentar adicionar!'
+            title: err.response.data.erro
           });
 
           _this7.$Progress.fail();
@@ -557,16 +569,16 @@ var render = function () {
                             _vm._v(
                               ": " +
                                 _vm._s(_vm.form.ordem_id) +
-                                "\n            "
+                                "\n             "
                             ),
                           ]),
                           _vm._v(" "),
                           _c("b-col", { attrs: { cols: "6", md: "6" } }, [
                             _c("b", [_vm._v("bombas")]),
                             _vm._v(
-                              ":\n              " +
+                              ":\n               " +
                                 _vm._s(_vm.bombas.nome_bombas) +
-                                "\n            "
+                                "\n             "
                             ),
                           ]),
                           _vm._v(" "),
@@ -612,7 +624,7 @@ var render = function () {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                          viatura(matr)\n                        "
+                                                      "\n                           viatura(matr)\n                         "
                                                     ),
                                                   ]
                                                 ),
@@ -623,7 +635,7 @@ var render = function () {
                                                 _vm._v(" "),
                                                 _c("th", [
                                                   _vm._v(
-                                                    "\n                          Qtd("
+                                                    "\n                           Qtd("
                                                   ),
                                                   _c(
                                                     "small",
@@ -634,7 +646,7 @@ var render = function () {
                                                     [_vm._v("ltr")]
                                                   ),
                                                   _vm._v(
-                                                    ")\n                        "
+                                                    ")\n                         "
                                                   ),
                                                 ]),
                                                 _vm._v(" "),
@@ -676,9 +688,9 @@ var render = function () {
                                                     },
                                                   }),
                                                   _vm._v(
-                                                    "\n                          (" +
+                                                    "\n                           (" +
                                                       _vm._s(_vm.rec_abast) +
-                                                      ")\n                        "
+                                                      ")\n                         "
                                                   ),
                                                 ],
                                                 1
@@ -884,7 +896,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                limpar campos\n              "
+                                    "\n                 limpar campos\n               "
                                   ),
                                 ]
                               ),
@@ -909,7 +921,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                adicionar a ordem\n              "
+                                    "\n                 adicionar a ordem\n               "
                                   ),
                                 ]
                               ),
@@ -1006,37 +1018,56 @@ var render = function () {
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
                           _vm._v(" "),
-                          _c("td", [
-                            _vm._v(
-                              "(" +
-                                _vm._s(
-                                  order.preco_cunsumo / order.qtd_abastecida
-                                ) +
-                                ") MZN"
-                            ),
-                          ]),
+                          _c(
+                            "td",
+                            [
+                              _vm._l(
+                                order.ordem_viatura_rota,
+                                function (rotas) {
+                                  return _c("span", { key: rotas }, [
+                                    _vm._v(
+                                      "\n                 (" +
+                                        _vm._s(
+                                          rotas.preco_total /
+                                            order.qtd_abastecida
+                                        ) +
+                                        ")\n"
+                                    ),
+                                  ])
+                                }
+                              ),
+                              _vm._v(" MZN"),
+                            ],
+                            2
+                          ),
                           _vm._v(" "),
                           _c(
                             "td",
                             _vm._l(order.ordem_viatura_rota, function (rotas) {
                               return _c("span", { key: rotas }, [
                                 _vm._v(
-                                  "\n                " +
+                                  "\n                 " +
                                     _vm._s(rotas.rota.nome_rota) +
-                                    ",\n              "
+                                    ",\n               "
                                 ),
                               ])
                             }),
                             0
                           ),
                           _vm._v(" "),
-                          _c("td", [
-                            _vm._v(
-                              "\n              " +
-                                _vm._s(order.preco_cunsumo) +
-                                "\n            "
-                            ),
-                          ]),
+                          _c(
+                            "td",
+                            _vm._l(order.ordem_viatura_rota, function (rotas) {
+                              return _c("span", { key: rotas }, [
+                                _vm._v(
+                                  "\n               " +
+                                    _vm._s(rotas.preco_total) +
+                                    "\n               "
+                                ),
+                              ])
+                            }),
+                            0
+                          ),
                           _vm._v(" "),
                           _c(
                             "td",

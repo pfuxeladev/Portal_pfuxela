@@ -255,6 +255,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -762,10 +763,10 @@ var render = function () {
             },
             scopedSlots: _vm._u([
               {
-                key: "cell(status)",
+                key: "cell(estado)",
                 fn: function (data) {
                   return [
-                    data.item.estado === 0
+                    data.item.estado == 0
                       ? _c(
                           "span",
                           [
@@ -777,7 +778,7 @@ var render = function () {
                         )
                       : _vm._e(),
                     _vm._v(" "),
-                    data.item.estado === 1
+                    data.item.estado == 1
                       ? _c(
                           "span",
                           [
@@ -1430,7 +1431,7 @@ function viaturaList() {
     key: 'created_by.email',
     sortable: true
   }, {
-    key: 'status',
+    key: 'estado',
     sortable: true
   }, {
     key: 'actions'

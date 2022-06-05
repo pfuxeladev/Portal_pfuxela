@@ -94,33 +94,48 @@ class AbastecimentoController extends Controller
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
-        $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)
-        ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->first();
-
-        return $combustivel->preco_actual;
-
         $preco = 0;
-        // $totalAbastecer += $request['qtd_abastecer'];
-        // ordem viatura
-        $preco = $combustivel->preco_actual * $request->qtd_abastecer;
+
+        $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
+        ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
+
+        if ($combustivel) {
+            if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
+                # code...
+                $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
+            }else {
+                return response()->json(['erro', 'A Bomba nao tem '.$viatura->tipo_combustivel.' so pode abastecer '.$combustivel->tipo_combustivel], 421);
+            }
+        }else{
+            return response()->json(['erro'=> 'A Bomba nao tem '.$viatura->tipo_combustivel], 421);
+        }
+
+
 
         $ordemViatura = ordem_viatura::create([
             'ordem_id' => $ordem->id,
             'viatura_id' => $request->viatura_id,
             'qtd_abastecida' => $request->qtd_abastecer,
-            'preco_consumo' => $combustivel->preco_actual,
+            'preco_consumo' => $preco,
             'user_id' => auth()->user()->id,
         ]);
 
-
-
         //abastecer por rota
         $distanciaTotal = 0;
+
         foreach ($request->rota_id as $key => $rt) {
             $rotas = Rota::where('id', $rt)->get();
 
             foreach ($rotas as $key => $dist) {
                 $distanciaTotal += $dist->distancia_km;
+            }
+            $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media) + 15;
+
+            if ($request->qtd_abastecer > $qtdNecessaria) {
+
+                $ordemViatura->delete();
+
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita'], 421);
             }
 
             $ordemViatura->ordemViaturaRota()->create([
@@ -131,15 +146,6 @@ class AbastecimentoController extends Controller
             ]);
         }
 
-
-
-        $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media) + 15;
-
-
-        if ($request->qtd_abastecer > $qtdNecessaria) {
-            return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita'], 421);
-        }
-
         if ($viatura->capacidade_tanque < $request->qtd_abastecer || $viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) || $viatura->capacidade_tanque < $qtdNecessaria) {
             return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
         } else {
@@ -148,7 +154,6 @@ class AbastecimentoController extends Controller
             $viatura->qtd_disponivel = $qtdAbastecer;
             $viatura->update();
         }
-
 
         $ordem->estado = 'aberta';
         $ordem->update();
@@ -329,7 +334,8 @@ class AbastecimentoController extends Controller
     }
     public function update(Request $request, $id)
     {
-        //
+        $ordemViatura = OrdemViaturaRota::with(['rota.projecto', 'viatura'])->findOrFail($id);
+        return $ordemViatura;
     }
 
     /**

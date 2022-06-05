@@ -59,11 +59,12 @@
         empty-text="No matching records found"
         :sort-desc.sync="isSortDirDesc"
       >
-        <template #cell(status)="data">
-          <span v-if="data.item.estado === 0">
+        <template #cell(estado)="data">
+            <!-- {{data.item.estado}} -->
+          <span v-if="data.item.estado==0">
             <b-badge variant="warning">inactivo</b-badge>
           </span>
-          <span v-if="data.item.estado === 1">
+          <span v-if="data.item.estado==1">
             <b-badge variant="sucess">activo</b-badge>
           </span>
         </template>

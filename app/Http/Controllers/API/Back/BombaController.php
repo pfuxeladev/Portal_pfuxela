@@ -159,7 +159,7 @@ class BombaController extends Controller
             // 'updatedBy'=>auth()->user()->id,
         ]);
         if ($bombas) {
-            $bomba = Bombas::where('id', $bombas->id)->first();
+            // $bomba = Bombas::where('id', $bombas->id)->first();
 
             foreach ($request->responsavel as $key => $resp) {
                 $responsavel = responsavelBombas::firstOrCreate([
@@ -167,7 +167,7 @@ class BombaController extends Controller
                     'email_bomba' => $resp['email_bomba'],
                     'contacto' => $resp['contacto'],
                     'contacto_alt' => $resp['contacto_alt'],
-                    'bombas_id' => $bomba->id,
+                    'bombas_id' => $id,
                     'createdBy' => auth()->user()->id,
                     'updatedBy' => auth()->user()->id,
                 ]);
@@ -180,12 +180,12 @@ class BombaController extends Controller
 
                 foreach ($combustivel[$key] as $key => $c) {
 
-                 combustivelBomba::updateOrCreate(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_atual'=>$c->preco_actual]);
+                 combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual'=>$c->preco_actual]);
                 }
             }
 
             if ($responsavel) {
-                return response()->json(['message' => 'cadastrou a bomba com sucesso']);
+                return response()->json(['message' => 'Actualizou a bomba com sucesso']);
             }
         }
     }
