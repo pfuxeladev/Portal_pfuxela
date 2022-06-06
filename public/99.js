@@ -245,6 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -376,6 +377,8 @@ __webpack_require__.r(__webpack_exports__);
           icon: 'success',
           title: res.data.success
         });
+
+        location.reload();
 
         _this7.$Progress.finish();
 
@@ -671,6 +674,11 @@ var render = function () {
                                                         viatura
                                                       ) {
                                                         return viatura.id
+                                                      },
+                                                    },
+                                                    on: {
+                                                      input: function ($event) {
+                                                        return _vm.getQtd()
                                                       },
                                                     },
                                                     model: {

@@ -68,6 +68,7 @@
                               label="matricula"
                               :options="viatura"
                               :reduce="(viatura) => viatura.id"
+                              @input="getQtd()"
                             />
                             ({{ rec_abast }})
                           </td>
@@ -367,6 +368,7 @@ export default {
           icon: 'success',
           title: res.data.success,
         })
+        location.reload()
         this.$Progress.finish()
         this.form.reset()
       }).catch(err => {
