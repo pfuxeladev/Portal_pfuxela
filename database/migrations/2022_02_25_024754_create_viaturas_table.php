@@ -30,6 +30,7 @@ class CreateViaturasTable extends Migration
             $table->bigInteger('kilometragem')->nullable();
             $table->boolean('estado')->default(false);
             $table->string('locate')->default('IN');
+            $table->string('viatura_avatar')->nullable();
             $table->foreignIdFor(\App\Models\Modelo::class)->constrained()->cascadeOnUpdate();
             $table->foreignIdFor(\App\Models\marca::class)->constrained()->cascadeOnUpdate();
             $table->unsignedBigInteger('createdBy');

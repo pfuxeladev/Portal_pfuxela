@@ -17,6 +17,14 @@ export default
     },
   },
   {
+    path: '/Picket/Cars/:id/details',
+    name: 'cars-details',
+    component: () => import('@/views/Gestao-pickete/Viaturas/viatura-details.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Picket/Occurrences',
     name: 'Occurrences',
     component: () => import('@/views/Gestao-pickete/relatorios/gestao_ocorrencias.vue'),

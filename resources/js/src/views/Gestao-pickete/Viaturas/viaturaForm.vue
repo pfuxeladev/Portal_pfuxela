@@ -539,8 +539,8 @@ import {
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
-import store from '@/store'
 import DatePicker from 'vue2-datepicker'
+import store from '@/store'
 import 'vue2-datepicker/index.css'
 export default {
   components: {
@@ -636,7 +636,7 @@ export default {
       this.$Progress.start()
       this.form
         .post('/api/viaturas')
-        .then((response) => {
+        .then(response => {
           this.$swal.fire({
             icon: 'success',
             title: response.data.success,
@@ -649,7 +649,7 @@ export default {
             name: 'Cars',
           })
         })
-        .catch((error) => {
+        .catch(error => {
           if (error.response.data.status === 401) {
             this.$swal.fire({
               icon: 'error',
