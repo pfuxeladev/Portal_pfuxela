@@ -170,6 +170,7 @@ class AbastecimentoController extends Controller
     function submeterAbst(Request $request)
     {
        $totalAbst = 0;
+       try {
       foreach ($request->abastecimento as $key => $abst) {
           $totalAbst += $abst['qtd_abastecida'];
       }
@@ -178,7 +179,7 @@ class AbastecimentoController extends Controller
 
 
         $abastecimento = new abastecimento();
-        try {
+
             $uuid = Str::uuid()->toString();
 
             $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
@@ -208,7 +209,7 @@ class AbastecimentoController extends Controller
             return response()->json(['success'=>'ordem submetida com sucesso aguarde a confirmacao'], 200);
 
         } catch (\Exception $e) {
-            return response()->json(['erro'=>'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema'], 421);
+            return response()->json(['erro'=>'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema ou verifique os dados'], 421);
         }
 
     }
