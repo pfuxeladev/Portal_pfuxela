@@ -122,7 +122,7 @@
               </b-form-invalid-feedback>
             </b-form-group>
           </validation-provider>
- <validation-provider
+            <validation-provider
             #default="validationContext"
             name="Empresa"
             rules="required"
@@ -204,7 +204,26 @@
               </b-form-invalid-feedback>
             </b-form-group>
           </validation-provider>
+  <!-- departamento -->
+          <validation-provider
+            #default="validationContext"
+            name="password"
+            rules="required"
+          >
+            <b-form-group label="password" label-for="password">
+              <b-form-input
+                id="password"
+                type="password"
+                v-model="userData.password"
+                :state="getValidationState(validationContext)"
+                trim
+              />
 
+              <b-form-invalid-feedback>
+                {{ validationContext.errors[0] }}
+              </b-form-invalid-feedback>
+            </b-form-group>
+          </validation-provider>
           <!-- Form Actions -->
           <div class="d-flex mt-2">
             <b-button
@@ -325,6 +344,7 @@ export default {
       departamento: '',
       contacto: '',
       empresa: '',
+      password: '',
     })
 
     const userData = ref(JSON.parse(JSON.stringify(form)))

@@ -89,7 +89,7 @@ class UserController extends Controller
         ]);
 
 
-        $password = Str::random(8);
+        $password = $request->password;
 
         Log::info($password);
 
