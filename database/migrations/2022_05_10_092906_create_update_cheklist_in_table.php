@@ -16,7 +16,7 @@ class CreateUpdateCheklistInTable extends Migration
     {
         Schema::table('checklist_in', function(Blueprint $table){
             $table->string('nrPassageiros')->nullable()->after('hr_fim');
-            $table->foreignIdFor(incidente::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(incidente::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

@@ -258,12 +258,89 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function Reprovar(refs) {
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/CancelarOrdem', {
+      var _this2 = this;
+
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/CancelOrder', {
         refs: refs
       }).then(function (res) {
-        console.log(res);
+        _this2.$emit('refetch-data');
+
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+          props: {
+            title: res.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
+          name: 'Orders'
+        });
       })["catch"](function (err) {
-        console.log(err);
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        } else if (err.response.status === 500) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: 'Erro do sistema contacte o administrador',
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    function reabrirOrdem(refs) {
+      var _this3 = this;
+
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReabrirOrdem', {
+        refs: refs
+      }).then(function (res) {
+        _this3.$emit('refetch-data');
+
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+          props: {
+            title: res.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
+          name: 'New-supply-order',
+          params: {
+            refs: refs
+          }
+        });
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        } else if (err.response.status === 500) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: 'Erro do sistema contacte o administrador',
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
       });
     }
 
@@ -278,7 +355,8 @@ __webpack_require__.r(__webpack_exports__);
       fields: fields,
       Aprovar: Aprovar,
       Reprovar: Reprovar,
-      dateTime: dateTime
+      dateTime: dateTime,
+      reabrirOrdem: reabrirOrdem
     };
   }
 });
@@ -1034,13 +1112,22 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Cancelado"
+                _vm.SupplyData.estado === "Cancelada"
                   ? _c(
                       "span",
                       [
-                        _c("b-button", { attrs: { variant: "warning" } }, [
-                          _vm._v("Reabrir"),
-                        ]),
+                        _c(
+                          "b-button",
+                          {
+                            attrs: { variant: "warning" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.reabrirOrdem(_vm.SupplyData.refs)
+                              },
+                            },
+                          },
+                          [_vm._v("Reabrir")]
+                        ),
                       ],
                       1
                     )

@@ -25,6 +25,7 @@ class CreateAbastecimentoExtrasTable extends Migration
             $table->time('horaSaida');
             $table->string('destino');
             $table->text('descricao');
+            $table->string('estado')->default('pendente');
             $table->unsignedBigInteger('createdBy');
             $table->foreign('createdBy')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

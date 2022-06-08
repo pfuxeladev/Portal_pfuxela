@@ -116,7 +116,7 @@ class AbastecimentoController extends Controller
             'ordem_id' => $ordem->id,
             'viatura_id' => $request->viatura_id,
             'qtd_abastecida' => $request->qtd_abastecer,
-            'preco_consumo' => $preco,
+            'preco_consumo' => $combustivel->preco_actual,
             'user_id' => auth()->user()->id,
         ]);
 
@@ -135,7 +135,9 @@ class AbastecimentoController extends Controller
 
                 $ordemViatura->delete();
 
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita'], 421);
+                // return $qtdNecessaria;
+
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de '.$qtdNecessaria], 421);
             }
 
             $ordemViatura->ordemViaturaRota()->create([
@@ -146,7 +148,7 @@ class AbastecimentoController extends Controller
             ]);
         }
 
-        if ($viatura->capacidade_tanque < $request->qtd_abastecer || $viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) || $viatura->capacidade_tanque < $qtdNecessaria) {
+        if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) && $viatura->capacidade_tanque < $qtdNecessaria) {
             return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
         } else {
             $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd_abastecer);
@@ -192,7 +194,7 @@ class AbastecimentoController extends Controller
                 $abastecimento->user_id = auth()->user()->id;
                 $abastecimento->save();
 
-                $ordem->estado = 'pendente';
+                $ordem->estado = 'Pendente';
                 $ordem->update();
             } else {
                 $abastecimento->ordem_id = $ordem->id;
@@ -203,7 +205,7 @@ class AbastecimentoController extends Controller
                 $abastecimento->user_id = auth()->user()->id;
                 $abastecimento->save();
 
-                $ordem->estado = 'pendente';
+                $ordem->estado = 'Pendente';
                 $ordem->update();
             }
             return response()->json(['success'=>'ordem submetida com sucesso aguarde a confirmacao'], 200);
@@ -240,7 +242,7 @@ class AbastecimentoController extends Controller
         }
         $ordem->refs = $uuid;
         $ordem->bombas_id = $request->bombas_id;
-        $ordem->estado = 'pendente';
+        $ordem->estado = 'Pendente';
         $ordem->createdBy = auth()->user()->id;
         $ordem->save();
 

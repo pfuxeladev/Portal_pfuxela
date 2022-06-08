@@ -46,7 +46,7 @@ class CreateChecklistIn extends Migration
             $table->boolean('is_incidente')->default(false);
             $table->string('chefe_operacao')->nullable();
             $table->text('relatorio_geral')->nullable();
-            $table->string('anexos');
+            $table->string('anexos')->nullable();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('check_list_out_id')->references('id')->on('checklist_out')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();

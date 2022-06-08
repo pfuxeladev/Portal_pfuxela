@@ -35,13 +35,13 @@ class OrdemController extends Controller
     }
 
     public function OrdensAberta($refs){
-        $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
+        // $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
+        $ordem  = ordem_viatura::with(['ordemViaturaRota.rota', 'ordem.viatura', 'viatura'])->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.refs', $refs)->get();
         if (empty($ordem)) {
             return response()->json(['message'=>'nenhuma'], 200);
         }
-        $ordem_viatura = ordem_viatura::with('ordem.bombas.combustivel_bomba', 'viatura', 'ordemViaturaRota.rota')->where('ordem_id', $ordem->id)->get();
 
-        return response()->json($ordem_viatura, 200);
+        return response()->json($ordem, 200);
     }
 
     function AprovarOrdem(Request $request)
@@ -60,7 +60,7 @@ class OrdemController extends Controller
                 $data["title"] = "info@pfuxela.co.mz";
                 $data["body"] = "Teste";
             }
-            
+
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
             Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
             Mail::send('orderMail.mail_order', $data, function($message)use($data, $pdf) {
@@ -90,9 +90,12 @@ class OrdemController extends Controller
 
                 $ordem_viatura = ordem_viatura::where('ordem_id', $ordem->id)->get();
                 foreach ($ordem_viatura as $ov => $ordVi) {
-                    $viatura[$ov] = Viatura::where('id', $ordVi->viatura_id)->get();
-                    $viatura[$ov]->qtd_disponivel = ($viatura[$ov]->qtd_disponivel - $ordVi->qtd_abastecida);
-                    $viatura[$ov]->update();
+                    $viatura = Viatura::where('id', $ordVi->viatura_id)->get();
+                    foreach ($viatura as $key => $v) {
+                        $v->qtd_disponivel = ($v->qtd_disponivel - $ordVi->qtd_abastecida);
+                        $v->update();
+                    }
+
                 }
 
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
@@ -100,6 +103,22 @@ class OrdemController extends Controller
         } catch (\Exception $e) {
             return response()->json(['error' => 'Erro na transacao, contacte o administrador', $e->getMessage()], 421);
         }
+    }
+
+    function ReabrirOrdem($refs){
+        try {
+            $ordem = Ordem::where('refs', $refs)->first();
+            $ordem->estado = 'aberta';
+            $ordem->approvedBy = auth()->user()->id;
+            $ordem->update();
+
+            return response()->json(['success'=>'Ordem Reaberta'], 200);
+        } catch (\Exception $e) {
+           return response()->json(['erro'=> 'Erro! nao conseguiu reabrir a ordem', $e->getMessage()], 421);
+        }
+
+
+
     }
 
     public function store(Request $request)
@@ -118,7 +137,7 @@ class OrdemController extends Controller
             }
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bomba_id;
-            $ordem->estado = 'aberta';
+            $ordem->estado = 'Aberta';
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 

@@ -355,9 +355,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -1253,18 +1250,6 @@ var render = function () {
                 },
               },
               {
-                key: "cell(bomba)",
-                fn: function (data) {
-                  return [
-                    _vm._v(
-                      "\n        " +
-                        _vm._s(data.item.bombas.nome_bombas) +
-                        "\n      "
-                    ),
-                  ]
-                },
-              },
-              {
                 key: "cell(status)",
                 fn: function (data) {
                   return [
@@ -1338,7 +1323,7 @@ var render = function () {
                       },
                       [
                         _vm._v(" "),
-                        data.item.estado !== "aberta"
+                        data.item.estado !== "Aberta"
                           ? _c(
                               "b-dropdown-item",
                               {
@@ -1364,7 +1349,7 @@ var render = function () {
                             )
                           : _vm._e(),
                         _vm._v(" "),
-                        data.item.estado === "aberta"
+                        data.item.estado === "Aberta"
                           ? _c(
                               "b-dropdown-item",
                               {
@@ -1390,7 +1375,7 @@ var render = function () {
                             )
                           : _vm._e(),
                         _vm._v(" "),
-                        data.item.estado !== "aberta"
+                        data.item.estado !== "Aberta"
                           ? _c(
                               "b-dropdown-item",
                               {
@@ -2050,7 +2035,7 @@ function useOrdersList() {
     key: 'data_de_emissao',
     sortable: true
   }, {
-    key: 'bomba',
+    key: 'bombas.nome_bombas',
     sortable: true
   }, {
     key: 'status',
@@ -2120,7 +2105,7 @@ function useOrdersList() {
   var resolveOrdersStatusVariant = function resolveOrdersStatusVariant(status) {
     if (status === 'pendente') return 'warning';
     if (status === 'aprovada') return 'success';
-    if (status === 'cancelada') return 'secondary';
+    if (status === 'cancelada') return 'danger';
     return 'primary';
   };
 

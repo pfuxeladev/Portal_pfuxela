@@ -18,6 +18,47 @@
                   </b-form-group>
               </b-col>
           </b-form-row>
+          <b-form-row>
+              <b-col cols="12">
+                  <table class="table table-light">
+                      <thead>
+                          <tr>
+                              <th>viatura</th>
+                              <th>projecto</th>
+                              <th>rotas</th>
+                              <th>qtd</th>
+                              <th>turno</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>
+                                  <v-select></v-select>
+                              </td>
+                              <td>
+                                  <v-select></v-select>
+                              </td>
+                              <td>
+                                  <v-select></v-select>
+                              </td>
+                              <td>
+                                  <b-form-input></b-form-input>
+                              </td>
+                              <td>
+                                  <v-select></v-select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td colspan="5">
+                                  <b-form-group label="Justificacao">
+                                    <b-form-textarea></b-form-textarea>
+                                  </b-form-group>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </b-col>
+          </b-form-row>
           </b-form>
       </b-card-body>
     </b-card>

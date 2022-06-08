@@ -399,8 +399,20 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    getOpenOrder: function getOpenOrder(ctx, _ref5) {
+    // ReabrirOrdem
+    ReopenOrder: function ReopenOrder(ctx, _ref5) {
       var refs = _ref5.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ReabrirOrdem/".concat(refs)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    // verOrdensAbertas
+    getOpenOrder: function getOpenOrder(ctx, _ref6) {
+      var refs = _ref6.refs;
       return new Promise(function (resolve, reject) {
         _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ordemAberta/".concat(refs)).then(function (response) {
           return resolve(response);

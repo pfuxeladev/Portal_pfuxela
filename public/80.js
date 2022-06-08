@@ -133,6 +133,47 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -447,6 +488,60 @@ var render = function () {
                         ],
                         1
                       ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-form-row",
+                    [
+                      _c("b-col", { attrs: { cols: "12" } }, [
+                        _c("table", { staticClass: "table table-light" }, [
+                          _c("thead", [
+                            _c("tr", [
+                              _c("th", [_vm._v("viatura")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("projecto")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("rotas")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("qtd")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("turno")]),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("tbody", [
+                            _c("tr", [
+                              _c("td", [_c("v-select")], 1),
+                              _vm._v(" "),
+                              _c("td", [_c("v-select")], 1),
+                              _vm._v(" "),
+                              _c("td", [_c("v-select")], 1),
+                              _vm._v(" "),
+                              _c("td", [_c("b-form-input")], 1),
+                              _vm._v(" "),
+                              _c("td", [_c("v-select")], 1),
+                            ]),
+                            _vm._v(" "),
+                            _c("tr", [
+                              _c(
+                                "td",
+                                { attrs: { colspan: "5" } },
+                                [
+                                  _c(
+                                    "b-form-group",
+                                    { attrs: { label: "Justificacao" } },
+                                    [_c("b-form-textarea")],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ]),
+                          ]),
+                        ]),
+                      ]),
                     ],
                     1
                   ),

@@ -22,11 +22,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
 /* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
+/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_11__);
 
+//
+//
+//
+//
 //
 //
 //
@@ -573,7 +577,7 @@ __webpack_require__.r(__webpack_exports__);
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_7___default.a,
     Cleave: vue_cleave_component__WEBPACK_IMPORTED_MODULE_5___default.a,
     BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormDatepicker"],
-    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_10__["default"]
+    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_9__["default"]
   },
   directives: {
     Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -1764,13 +1768,13 @@ var render = function () {
                                                   },
                                                   [
                                                     _c("date-picker", {
-                                                      staticClass:
-                                                        "form-control mb-1",
+                                                      staticClass: "mb-1",
                                                       staticStyle: {
                                                         width: "100%",
                                                       },
                                                       attrs: {
                                                         "value-type": "format",
+                                                        locate: "pt-Br",
                                                         format: "YYYY-MM-DD",
                                                       },
                                                       model: {
@@ -1822,13 +1826,13 @@ var render = function () {
                                                   },
                                                   [
                                                     _c("date-picker", {
-                                                      staticClass:
-                                                        "form-control mb-1",
+                                                      staticClass: "mb-1",
                                                       staticStyle: {
                                                         width: "100%",
                                                       },
                                                       attrs: {
                                                         "value-type": "format",
+                                                        locate: "pt-Br",
                                                         format: "YYYY-MM-DD",
                                                       },
                                                       model: {
@@ -1890,13 +1894,13 @@ var render = function () {
                                                   },
                                                   [
                                                     _c("date-picker", {
-                                                      staticClass:
-                                                        "form-control mb-1",
+                                                      staticClass: "mb-1",
                                                       staticStyle: {
                                                         width: "100%",
                                                       },
                                                       attrs: {
                                                         "value-type": "format",
+                                                        locate: "pt-Br",
                                                         format: "YYYY-MM-DD",
                                                       },
                                                       model: {
@@ -1948,13 +1952,13 @@ var render = function () {
                                                   },
                                                   [
                                                     _c("date-picker", {
-                                                      staticClass:
-                                                        "form-control mb-1",
+                                                      staticClass: "mb-1",
                                                       staticStyle: {
                                                         width: "100%",
                                                       },
                                                       attrs: {
                                                         "value-type": "format",
+                                                        locate: "pt-Br",
                                                         format: "YYYY-MM-DD",
                                                       },
                                                       model: {

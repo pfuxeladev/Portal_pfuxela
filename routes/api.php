@@ -80,6 +80,8 @@ Route::group(['middleware'=>'auth:api'], function () {
         'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
         'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
         ]);
+
+    Route::get('ReabrirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'ReabrirOrdem']);
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

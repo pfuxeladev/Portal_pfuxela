@@ -169,7 +169,7 @@
               <th>Bombas</th>
               <th>Qtd a abastecer</th>
               <th>pre&ccedil;o/(ltr)</th>
-              <th>Rotas</th>
+              <th v-if="OpenOrder[0].ordem_viatura_rota[0] !== ''">Rotas</th>
               <th>Subtotal</th>
               <th>editar</th>
             </tr>
@@ -190,7 +190,7 @@
                 >
                   ({{ rotas.preco_total / order.qtd_abastecida }})
  </span> MZN</td>
-              <td>
+              <td v-if="order.ordem_viatura_rota[0] !== ''">
                 <span
                   v-for="rotas in order.ordem_viatura_rota"
                   :key="rotas"
@@ -364,15 +364,19 @@ export default {
     NovaOrdem() {
       this.$Progress.start()
       this.form.post('/api/Abastecimento').then(res => {
-        this.$swal.fire({
-          icon: 'success',
-          title: res.data.success,
-        })
-        location.reload()
-        this.$Progress.finish()
-        this.form.reset()
+        if (res.status === 200) {
+          this.$swal.fire({
+            icon: 'success',
+            title: res.data.success,
+          })
+          // location.reload()
+          this.$Progress.finish()
+          this.form.reset()
+          // eslint-disable-next-line no-restricted-globals
+          window.location.reload()
+        }
       }).catch(err => {
-        if (err) {
+        if (err.response.status === 421) {
           this.$swal.fire({
             icon: 'error',
             title: err.response.data.erro,
@@ -443,7 +447,7 @@ export default {
                   variant: 'success',
                 },
               })
-              this.$route.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
               if (err.response.status === 421) {

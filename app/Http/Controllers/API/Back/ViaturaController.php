@@ -175,7 +175,7 @@ class ViaturaController extends Controller
     }
     public function show($id)
     {
-        return $this->Viatura->with(['marca', 'modelo', 'createdBy', 'ordem_viatura.ordem', 'viaturaDocument'])->where('id', $id)->first();
+        return $this->Viatura->with(['marca', 'modelo', 'createdBy', 'ordem_viatura.ordem.bombas.combustivel', 'viaturaDocument'])->where('id', $id)->first();
     }
 
     function HistoricoAbastecimento($id){

@@ -307,8 +307,9 @@
                           >
                             <date-picker
                               v-model="form.data_radio_difusao"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -324,8 +325,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_radio_difusao"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -345,8 +347,9 @@
                           >
                             <date-picker
                               v-model="form.data_seguros"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -364,8 +367,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_seguros"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />

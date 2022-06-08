@@ -113,9 +113,6 @@
         <template #cell(data_de_emissao)="data">
           {{ dateTime(data.item.created_at) }}
         </template>
-        <template #cell(bomba)="data">
-          {{ data.item.bombas.nome_bombas }}
-        </template>
         <template #cell(status)="data">
              <b-badge
             pill
@@ -141,19 +138,19 @@
                 class="align-middle text-body"
               />
             </template>
-            <b-dropdown-item v-if="data.item.estado !== 'aberta'"
+            <b-dropdown-item v-if="data.item.estado !== 'Aberta'"
               :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
-             <b-dropdown-item  v-if="data.item.estado === 'aberta'"
+             <b-dropdown-item  v-if="data.item.estado === 'Aberta'"
               :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="RepeatIcon" />
               <span class="align-middle ml-50">continuar</span>
             </b-dropdown-item>
-            <b-dropdown-item v-if="data.item.estado !== 'aberta'"
+            <b-dropdown-item v-if="data.item.estado !== 'Aberta'"
               :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />
