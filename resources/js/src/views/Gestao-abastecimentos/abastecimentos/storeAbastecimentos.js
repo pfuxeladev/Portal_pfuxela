@@ -91,5 +91,13 @@ export default {
           .catch(error => reject(error))
       })
     },
+
+    removeLine(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/removeLine/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

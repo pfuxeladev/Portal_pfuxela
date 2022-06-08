@@ -21,6 +21,6 @@ class OrdemViaturaRota extends Model
     }
 
     function ordem_viatura(){
-        return $this->belongsTo(ordem_viatura::class);
+        return $this->belongsTo(ordem_viatura::class, 'ordem_viatura_id', 'id');
     }
 }

@@ -92,7 +92,11 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs',$request->ordem_id)->first();
 
+
+
         $viatura = Viatura::where('id', $request->viatura_id)->first();
+        if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
+           return response()->json(['erro'=>'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
 
         $preco = 0;
 
@@ -116,7 +120,7 @@ class AbastecimentoController extends Controller
             'ordem_id' => $ordem->id,
             'viatura_id' => $request->viatura_id,
             'qtd_abastecida' => $request->qtd_abastecer,
-            'preco_consumo' => $combustivel->preco_actual,
+            'preco_cunsumo' => $preco,
             'user_id' => auth()->user()->id,
         ]);
 
@@ -157,16 +161,38 @@ class AbastecimentoController extends Controller
             $viatura->update();
         }
 
-        $ordem->estado = 'aberta';
+        $ordem->estado = 'Aberta';
         $ordem->update();
         return response()->json(['success' => 'submetido com sucesso', 'err' => false]);
     }
 
     function PedidoForm($refs)
     {
-        $ordem = ordem_viatura::with(['rota', 'ordem.viatura'])->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.refs', $refs)->get();
+        $ordem = ordem::where('refs', $refs)->first();
+        $ordem_viatura = ordem_viatura::with(['rota', 'ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
 
-        return response()->json($ordem, 200);
+        return response()->json($ordem_viatura, 200);
+    }
+    // remover linha
+    function removeLine($refs){
+        try {
+            $ordem = ordem::where('refs', $refs)->first();
+        $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
+        foreach ($ordem_viatura as $key => $ordVi) {
+
+            $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
+            $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $ordVi->qtd_abastecida);
+            $viatura->update();
+
+            $ordem_viatura_rota = OrdemViaturaRota::where('ordem_viatura_id', $ordVi->id)->delete();
+            $ordVi->delete();
+        }
+        return response()->json(['success'=>'removido pode reabastecer a viatura'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['erro'=>'Erro! '.$e->getMessage()], 421);
+        }
+
+
     }
     // submeter a ordem apos preenchida
     function submeterAbst(Request $request)

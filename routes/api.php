@@ -82,6 +82,7 @@ Route::group(['middleware'=>'auth:api'], function () {
         ]);
 
     Route::get('ReabrirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'ReabrirOrdem']);
+    Route::get('removeLine/{refs}', [\App\Http\Controllers\API\Back\AbastecimentoController::class, 'removeLine']);
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

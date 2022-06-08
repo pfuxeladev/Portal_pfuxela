@@ -420,6 +420,16 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
+    },
+    removeLine: function removeLine(ctx, _ref7) {
+      var refs = _ref7.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/removeLine/".concat(refs)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });

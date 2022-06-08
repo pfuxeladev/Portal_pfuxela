@@ -149,7 +149,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="bombas.estado === 'aberta'"
+        v-if="bombas.estado === 'Aberta'"
         cols="12"
       >
         <b-row>
@@ -169,7 +169,7 @@
               <th>Bombas</th>
               <th>Qtd a abastecer</th>
               <th>pre&ccedil;o/(ltr)</th>
-              <th v-if="OpenOrder[0].ordem_viatura_rota[0] !== ''">Rotas</th>
+              <th>Rotas</th>
               <th>Subtotal</th>
               <th>editar</th>
             </tr>
@@ -177,20 +177,18 @@
           <tbody>
             <tr
               v-for="order in OpenOrder"
-              :key="order"
+              :key="order.id"
             >
               <td>{{ order.viatura.matricula }}</td>
               <td>{{ order.viatura.kilometragem }}</td>
               <td>{{ order.ordem.bombas.nome_bombas }}</td>
               <td>{{ order.qtd_abastecida }}</td>
               <td>
- <span
-                  v-for="rotas in order.ordem_viatura_rota"
-                  :key="rotas"
-                >
-                  ({{ rotas.preco_total / order.qtd_abastecida }})
- </span> MZN</td>
-              <td v-if="order.ordem_viatura_rota[0] !== ''">
+                <span>
+                    {{ (order.preco_cunsumo / order.qtd_abastecida) }}
+                </span> MZN
+            </td>
+              <td>
                 <span
                   v-for="rotas in order.ordem_viatura_rota"
                   :key="rotas"
@@ -199,20 +197,18 @@
                 </span>
               </td>
               <td>
-                  <span
-                  v-for="rotas in order.ordem_viatura_rota"
-                  :key="rotas"
-                >
-                {{ rotas.preco_total }}
+                  <span>
+                {{ order.preco_cunsumo }}
                 </span>
 
               </td>
               <td>
                 <b-button
                   sm
-                  variant="outline-primary"
+                  variant="outline-danger"
+                  @click="removerPedido(order.ordem)"
                 >
-                  <i class="fas fa-edit" />
+                  <i class="fas fa-remove" />
                 </b-button>
               </td>
             </tr>
@@ -447,6 +443,7 @@ export default {
                   variant: 'success',
                 },
               })
+              window.location.reload()
               router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
@@ -463,12 +460,43 @@ export default {
             })
         }
       })
+
     //   console.log(order)
+    }
+    function removerPedido(order) {
+      // console.log(order.refs)
+      store.dispatch('Supply/removeLine', {
+        refs: order.refs,
+      })
+        .then(response => {
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: response.data.success,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
+          })
+          window.location.reload()
+        })
+        .catch(err => {
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
+        })
     }
 
     return {
       OpenOrder,
       enviarPedido,
+      removerPedido,
     }
   },
 

@@ -877,7 +877,7 @@ var render = function () {
                                       _c("b-list-group-item", [
                                         _c("b", [_vm._v("Estado")]),
                                         _vm._v(": "),
-                                        _vm.SupplyData.estado === "pendente"
+                                        _vm.SupplyData.estado === "Pendente"
                                           ? _c(
                                               "span",
                                               [
@@ -1089,7 +1089,7 @@ var render = function () {
               ),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "pendente"
+                _vm.SupplyData.estado === "Pendente"
                   ? _c(
                       "span",
                       [

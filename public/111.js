@@ -7,7 +7,7 @@
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-abastecimentos\\abastecimentos\\novo_abastecimento.vue: Unexpected token (367:27)\n\n\u001b[0m \u001b[90m 365 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$Progress\u001b[33m.\u001b[39mstart()\u001b[0m\n\u001b[0m \u001b[90m 366 |\u001b[39m       \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mform\u001b[33m.\u001b[39mpost(\u001b[32m'/api/Abastecimento'\u001b[39m)\u001b[33m.\u001b[39mthen(res \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 367 |\u001b[39m           \u001b[36mif\u001b[39m(res\u001b[33m.\u001b[39mstatus \u001b[33m==\u001b[39m ){\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 368 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 369 |\u001b[39m           }\u001b[0m\n\u001b[0m \u001b[90m 370 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$swal\u001b[33m.\u001b[39mfire({\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.unexpected (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13014:22)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOpBaseRightExpr (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12405:34)\n    at Object.parseExprOpRightExpr (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12398:21)\n    at Object.parseExprOp (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12351:27)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12296:17)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Object.parseExpressionBase (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Object.parseHeaderExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14817:22)\n    at Object.parseIfStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14921:22)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14579:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Object.parseBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Object.parseBlock (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Object.parseFunctionBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13836:24)\n    at Object.parseArrowExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13808:10)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13009:25)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-abastecimentos\\abastecimentos\\novo_abastecimento.vue: Unexpected token (464:5)\n\n\u001b[0m \u001b[90m 462 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 463 |\u001b[39m     \u001b[90m//   console.log(order)\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 464 |\u001b[39m     }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 465 |\u001b[39m     \u001b[36mfunction\u001b[39m removerPedido (order) {\u001b[0m\n\u001b[0m \u001b[90m 466 |\u001b[39m           store\u001b[33m.\u001b[39mdispatch(\u001b[32m'Supply/removeLine'\u001b[39m\u001b[33m,\u001b[39m order\u001b[33m.\u001b[39mrefs)\u001b[0m\n\u001b[0m \u001b[90m 467 |\u001b[39m            \u001b[33m.\u001b[39mthen(response \u001b[33m=>\u001b[39m {\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.unexpected (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13014:22)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Object.parseExpressionBase (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14671:23)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Object.parseBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Object.parseBlock (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Object.parseFunctionBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13836:24)\n    at Object.parseFunctionBodyAndFinish (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13820:10)\n    at Object.parseMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13770:10)\n    at Object.parseObjectMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13646:19)\n    at Object.parseObjPropValue (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13687:23)\n    at Object.parsePropertyDefinition (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13604:10)\n    at Object.parseObjectLike (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13494:21)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12889:23)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)");
 
 /***/ }),
 
@@ -81,16 +81,16 @@ var render = function () {
                             _vm._v(
                               ": " +
                                 _vm._s(_vm.form.ordem_id) +
-                                "\n             "
+                                "\n            "
                             ),
                           ]),
                           _vm._v(" "),
                           _c("b-col", { attrs: { cols: "6", md: "6" } }, [
                             _c("b", [_vm._v("bombas")]),
                             _vm._v(
-                              ":\n               " +
+                              ":\n              " +
                                 _vm._s(_vm.bombas.nome_bombas) +
-                                "\n             "
+                                "\n            "
                             ),
                           ]),
                           _vm._v(" "),
@@ -136,7 +136,7 @@ var render = function () {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                           viatura(matr)\n                         "
+                                                      "\n                          viatura(matr)\n                        "
                                                     ),
                                                   ]
                                                 ),
@@ -147,7 +147,7 @@ var render = function () {
                                                 _vm._v(" "),
                                                 _c("th", [
                                                   _vm._v(
-                                                    "\n                           Qtd("
+                                                    "\n                          Qtd("
                                                   ),
                                                   _c(
                                                     "small",
@@ -158,7 +158,7 @@ var render = function () {
                                                     [_vm._v("ltr")]
                                                   ),
                                                   _vm._v(
-                                                    ")\n                         "
+                                                    ")\n                        "
                                                   ),
                                                 ]),
                                                 _vm._v(" "),
@@ -205,9 +205,9 @@ var render = function () {
                                                     },
                                                   }),
                                                   _vm._v(
-                                                    "\n                           (" +
+                                                    "\n                          (" +
                                                       _vm._s(_vm.rec_abast) +
-                                                      ")\n                         "
+                                                      ")\n                        "
                                                   ),
                                                 ],
                                                 1
@@ -413,7 +413,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                 limpar campos\n               "
+                                    "\n                limpar campos\n              "
                                   ),
                                 ]
                               ),
@@ -438,7 +438,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                 adicionar a ordem\n               "
+                                    "\n                adicionar a ordem\n              "
                                   ),
                                 ]
                               ),
@@ -511,9 +511,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("th", [_vm._v("preço/(ltr)")]),
                         _vm._v(" "),
-                        _vm.OpenOrder[0].ordem_viatura_rota[0] !== ""
-                          ? _c("th", [_vm._v("Rotas")])
-                          : _vm._e(),
+                        _c("th", [_vm._v("Rotas")]),
                         _vm._v(" "),
                         _c("th", [_vm._v("Subtotal")]),
                         _vm._v(" "),
@@ -524,7 +522,7 @@ var render = function () {
                     _c(
                       "tbody",
                       _vm._l(_vm.OpenOrder, function (order) {
-                        return _c("tr", { key: order }, [
+                        return _c("tr", { key: order.id }, [
                           _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
                           _vm._v(" "),
                           _c("td", [
@@ -537,61 +535,42 @@ var render = function () {
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
                           _vm._v(" "),
-                          _c(
-                            "td",
-                            [
-                              _vm._l(
-                                order.ordem_viatura_rota,
-                                function (rotas) {
-                                  return _c("span", { key: rotas }, [
-                                    _vm._v(
-                                      "\n                 (" +
-                                        _vm._s(
-                                          rotas.preco_total /
-                                            order.qtd_abastecida
-                                        ) +
-                                        ")\n"
-                                    ),
-                                  ])
-                                }
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(
+                                    order.preco_cunsumo / order.qtd_abastecida
+                                  ) +
+                                  "\n              "
                               ),
-                              _vm._v(" MZN"),
-                            ],
-                            2
-                          ),
-                          _vm._v(" "),
-                          order.ordem_viatura_rota[0] !== ""
-                            ? _c(
-                                "td",
-                                _vm._l(
-                                  order.ordem_viatura_rota,
-                                  function (rotas) {
-                                    return _c("span", { key: rotas }, [
-                                      _vm._v(
-                                        "\n                 " +
-                                          _vm._s(rotas.rota.nome_rota) +
-                                          ",\n               "
-                                      ),
-                                    ])
-                                  }
-                                ),
-                                0
-                              )
-                            : _vm._e(),
+                            ]),
+                            _vm._v(" MZN\n          "),
+                          ]),
                           _vm._v(" "),
                           _c(
                             "td",
                             _vm._l(order.ordem_viatura_rota, function (rotas) {
                               return _c("span", { key: rotas }, [
                                 _vm._v(
-                                  "\n               " +
-                                    _vm._s(rotas.preco_total) +
-                                    "\n               "
+                                  "\n                " +
+                                    _vm._s(rotas.rota.nome_rota) +
+                                    ",\n              "
                                 ),
                               ])
                             }),
                             0
                           ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(order.preco_cunsumo) +
+                                  "\n              "
+                              ),
+                            ]),
+                          ]),
                           _vm._v(" "),
                           _c(
                             "td",
@@ -599,9 +578,14 @@ var render = function () {
                               _c(
                                 "b-button",
                                 {
-                                  attrs: { sm: "", variant: "outline-primary" },
+                                  attrs: { sm: "", variant: "outline-danger" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.removerPedido(order)
+                                    },
+                                  },
                                 },
-                                [_c("i", { staticClass: "fas fa-edit" })]
+                                [_c("i", { staticClass: "fas fa-remove" })]
                               ),
                             ],
                             1

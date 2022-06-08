@@ -242,10 +242,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -454,6 +450,7 @@ __webpack_require__.r(__webpack_exports__);
                 variant: 'success'
               }
             });
+            window.location.reload();
             _router__WEBPACK_IMPORTED_MODULE_7__["default"].push({
               name: 'supply-details',
               params: {
@@ -476,9 +473,38 @@ __webpack_require__.r(__webpack_exports__);
       }); //   console.log(order)
     }
 
+    function removerPedido(order) {
+      // console.log(order.refs)
+      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/removeLine', {
+        refs: order.refs
+      }).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+          props: {
+            title: response.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        window.location.reload();
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
     return {
       OpenOrder: OpenOrder,
-      enviarPedido: enviarPedido
+      enviarPedido: enviarPedido,
+      removerPedido: removerPedido
     };
   }
 });
@@ -573,16 +599,16 @@ var render = function () {
                             _vm._v(
                               ": " +
                                 _vm._s(_vm.form.ordem_id) +
-                                "\n             "
+                                "\n            "
                             ),
                           ]),
                           _vm._v(" "),
                           _c("b-col", { attrs: { cols: "6", md: "6" } }, [
                             _c("b", [_vm._v("bombas")]),
                             _vm._v(
-                              ":\n               " +
+                              ":\n              " +
                                 _vm._s(_vm.bombas.nome_bombas) +
-                                "\n             "
+                                "\n            "
                             ),
                           ]),
                           _vm._v(" "),
@@ -628,7 +654,7 @@ var render = function () {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                           viatura(matr)\n                         "
+                                                      "\n                          viatura(matr)\n                        "
                                                     ),
                                                   ]
                                                 ),
@@ -639,7 +665,7 @@ var render = function () {
                                                 _vm._v(" "),
                                                 _c("th", [
                                                   _vm._v(
-                                                    "\n                           Qtd("
+                                                    "\n                          Qtd("
                                                   ),
                                                   _c(
                                                     "small",
@@ -650,7 +676,7 @@ var render = function () {
                                                     [_vm._v("ltr")]
                                                   ),
                                                   _vm._v(
-                                                    ")\n                         "
+                                                    ")\n                        "
                                                   ),
                                                 ]),
                                                 _vm._v(" "),
@@ -697,9 +723,9 @@ var render = function () {
                                                     },
                                                   }),
                                                   _vm._v(
-                                                    "\n                           (" +
+                                                    "\n                          (" +
                                                       _vm._s(_vm.rec_abast) +
-                                                      ")\n                         "
+                                                      ")\n                        "
                                                   ),
                                                 ],
                                                 1
@@ -905,7 +931,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                 limpar campos\n               "
+                                    "\n                limpar campos\n              "
                                   ),
                                 ]
                               ),
@@ -930,7 +956,7 @@ var render = function () {
                                 },
                                 [
                                   _vm._v(
-                                    "\n                 adicionar a ordem\n               "
+                                    "\n                adicionar a ordem\n              "
                                   ),
                                 ]
                               ),
@@ -950,7 +976,7 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _vm.bombas.estado === "aberta"
+          _vm.bombas.estado === "Aberta"
             ? _c(
                 "b-col",
                 { attrs: { cols: "12" } },
@@ -1003,9 +1029,7 @@ var render = function () {
                         _vm._v(" "),
                         _c("th", [_vm._v("preço/(ltr)")]),
                         _vm._v(" "),
-                        _vm.OpenOrder[0].ordem_viatura_rota[0] !== ""
-                          ? _c("th", [_vm._v("Rotas")])
-                          : _vm._e(),
+                        _c("th", [_vm._v("Rotas")]),
                         _vm._v(" "),
                         _c("th", [_vm._v("Subtotal")]),
                         _vm._v(" "),
@@ -1016,7 +1040,7 @@ var render = function () {
                     _c(
                       "tbody",
                       _vm._l(_vm.OpenOrder, function (order) {
-                        return _c("tr", { key: order }, [
+                        return _c("tr", { key: order.id }, [
                           _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
                           _vm._v(" "),
                           _c("td", [
@@ -1029,61 +1053,42 @@ var render = function () {
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
                           _vm._v(" "),
-                          _c(
-                            "td",
-                            [
-                              _vm._l(
-                                order.ordem_viatura_rota,
-                                function (rotas) {
-                                  return _c("span", { key: rotas }, [
-                                    _vm._v(
-                                      "\n                 (" +
-                                        _vm._s(
-                                          rotas.preco_total /
-                                            order.qtd_abastecida
-                                        ) +
-                                        ")\n"
-                                    ),
-                                  ])
-                                }
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(
+                                    order.preco_cunsumo / order.qtd_abastecida
+                                  ) +
+                                  "\n              "
                               ),
-                              _vm._v(" MZN"),
-                            ],
-                            2
-                          ),
-                          _vm._v(" "),
-                          order.ordem_viatura_rota[0] !== ""
-                            ? _c(
-                                "td",
-                                _vm._l(
-                                  order.ordem_viatura_rota,
-                                  function (rotas) {
-                                    return _c("span", { key: rotas }, [
-                                      _vm._v(
-                                        "\n                 " +
-                                          _vm._s(rotas.rota.nome_rota) +
-                                          ",\n               "
-                                      ),
-                                    ])
-                                  }
-                                ),
-                                0
-                              )
-                            : _vm._e(),
+                            ]),
+                            _vm._v(" MZN\n          "),
+                          ]),
                           _vm._v(" "),
                           _c(
                             "td",
                             _vm._l(order.ordem_viatura_rota, function (rotas) {
                               return _c("span", { key: rotas }, [
                                 _vm._v(
-                                  "\n               " +
-                                    _vm._s(rotas.preco_total) +
-                                    "\n               "
+                                  "\n                " +
+                                    _vm._s(rotas.rota.nome_rota) +
+                                    ",\n              "
                                 ),
                               ])
                             }),
                             0
                           ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(order.preco_cunsumo) +
+                                  "\n              "
+                              ),
+                            ]),
+                          ]),
                           _vm._v(" "),
                           _c(
                             "td",
@@ -1091,9 +1096,14 @@ var render = function () {
                               _c(
                                 "b-button",
                                 {
-                                  attrs: { sm: "", variant: "outline-primary" },
+                                  attrs: { sm: "", variant: "outline-danger" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.removerPedido(order.ordem)
+                                    },
+                                  },
                                 },
-                                [_c("i", { staticClass: "fas fa-edit" })]
+                                [_c("i", { staticClass: "fas fa-remove" })]
                               ),
                             ],
                             1

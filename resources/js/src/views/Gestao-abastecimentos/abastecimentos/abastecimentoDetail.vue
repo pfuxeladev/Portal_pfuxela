@@ -28,7 +28,7 @@
               >
                 <b-list-group>
                   <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.created_by.name }}</b-list-group-item>
-                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.estado === 'pendente'">
+                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.estado === 'Pendente'">
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>
                     <span v-else-if="SupplyData.estado === 'Autorizado'">
@@ -96,7 +96,7 @@
         xl="2"
         md="2"
       >
-      <span v-if="SupplyData.estado ==='pendente'">
+      <span v-if="SupplyData.estado ==='Pendente'">
        <b-button
           variant="outline-success"
           @click="Aprovar(SupplyData.refs)"

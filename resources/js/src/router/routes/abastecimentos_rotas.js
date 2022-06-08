@@ -35,7 +35,6 @@ export default
   {
     path: '/Supply/:refs/supply-details',
     name: 'supply-details',
-    params: { refs: null },
     component: () => import('@/views/Gestao-abastecimentos/abastecimentos/abastecimentoDetail.vue'),
     meta: {
       authOnly: true,

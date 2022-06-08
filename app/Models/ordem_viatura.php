@@ -13,6 +13,7 @@ class ordem_viatura extends Model
         'ordem_id',
         'viatura_id',
         'qtd_abastecida',
+        'preco_cunsumo',
         'user_id'
     ];
     public function viatura()
@@ -28,6 +29,6 @@ class ordem_viatura extends Model
         return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
     }
     function ordemViaturaRota(){
-        return $this->hasMany(OrdemViaturaRota::class);
+        return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }
 }

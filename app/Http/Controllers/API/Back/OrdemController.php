@@ -35,13 +35,13 @@ class OrdemController extends Controller
     }
 
     public function OrdensAberta($refs){
-        // $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
-        $ordem  = ordem_viatura::with(['ordemViaturaRota.rota', 'ordem.viatura', 'viatura'])->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.refs', $refs)->get();
-        if (empty($ordem)) {
-            return response()->json(['message'=>'nenhuma'], 200);
+        $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
+        $ordem_viatura  = ordem_viatura::with(['ordemViaturaRota.rota', 'ordem.viatura', 'viatura', 'ordem.bombas'])->where('ordem_id', $ordem->id)->get();
+        if (empty($ordem_viatura)) {
+            return response()->json(['message'=>'nenhuma ordem a vista'], 200);
         }
 
-        return response()->json($ordem, 200);
+        return response()->json($ordem_viatura, 200);
     }
 
     function AprovarOrdem(Request $request)
@@ -55,20 +55,21 @@ class OrdemController extends Controller
 
             // return $ordem->bombas->responsavel;
 
-            foreach ($ordem->bombas->responsavel as $key => $responsavel) {
-                $data["email"] = $responsavel->email_bomba;
+            // foreach ($ordem->bombas->responsavel as $key => $responsavel) {
+                $data["email"] = 'supportdesk@pfuxela.co.mz';
                 $data["title"] = "info@pfuxela.co.mz";
                 $data["body"] = "Teste";
-            }
+            // }
 
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-            Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-            Mail::send('orderMail.mail_order', $data, function($message)use($data, $pdf) {
+            $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+
+            Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                $message->to(env('MAIL_USERNAME'));
                 $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), "ordem.pdf");
             });
-            return $pdf->download('ordem.pdf');
         }
 
         return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
