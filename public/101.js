@@ -1,21 +1,26 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[101],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code/BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_cleave_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-cleave-component */ "./node_modules/vue-cleave-component/dist/vue-cleave.min.js");
-/* harmony import */ var vue_cleave_component__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_cleave_component__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var cleave_js_dist_addons_cleave_phone_us__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! cleave.js/dist/addons/cleave-phone.us */ "./node_modules/cleave.js/dist/addons/cleave-phone.us.js");
-/* harmony import */ var cleave_js_dist_addons_cleave_phone_us__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(cleave_js_dist_addons_cleave_phone_us__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-mask/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
 //
 //
 //
@@ -212,81 +217,322 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
 
 
+
+
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    Cleave: vue_cleave_component__WEBPACK_IMPORTED_MODULE_2___default.a,
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormTextarea"]
   },
   data: function data() {
     return {
-      form: {
-        cardNumber: null,
-        date: null,
-        phone: null
-      },
-      options: {
-        creditCard: {
-          creditCard: true
-        },
-        date: {
-          date: true,
-          delimiter: '-',
-          datePattern: ['Y', 'm', 'd']
-        },
-        phone: {
-          phone: true,
-          phoneRegionCode: 'US'
-        },
-        time: {
-          time: true,
-          timePattern: ['h', 'm', 's']
-        },
-        number: {
-          numeral: true,
-          numeralThousandsGroupStyle: 'thousand'
-        },
-        block: {
-          blocks: [4, 3, 3],
-          uppercase: true
-        },
-        delimiter: {
-          delimiter: '·',
-          blocks: [3, 3, 3],
-          uppercase: true
-        },
-        customDelimiter: {
-          delimiters: ['.', '.', '-'],
-          blocks: [3, 3, 3, 2],
-          uppercase: true
-        },
-        prefix: {
-          prefix: '+63',
-          blocks: [3, 3, 3, 4],
-          uppercase: true
+      viatura: [],
+      rota: [],
+      projecto: [],
+      rec_abast: null,
+      bombas: {},
+      abastecimento: [],
+      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
+        ordem_id: this.$route.params.refs,
+        projecto_id: null,
+        viatura_id: null,
+        rota_id: null,
+        qtd_abastecer: 0,
+        observacao: null
+      })
+    };
+  },
+  created: function created() {
+    this.fetchProjectos();
+    this.fetchViaturas();
+    this.fetchBombas(); // single data
+
+    this.getQtd();
+  },
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__["default"]
+  },
+  methods: {
+    getQtd: function getQtd() {
+      var _this = this;
+
+      //   alert(viatura_id)
+      this.$http.get("/api/getQtdDisponivel/".concat(this.form.viatura_id)).then(function (res) {
+        _this.rec_abast = res.data;
+        console.log(_this.rec_abast);
+      })["catch"](function (err) {});
+    },
+    fetchProjectos: function fetchProjectos() {
+      var _this2 = this;
+
+      this.$http.get('/api/listProject').then(function (response) {
+        _this2.projecto = response.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    fetchRotas: function fetchRotas() {
+      var _this3 = this;
+
+      console.log(this.form.abastecer); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
+
+      this.$http.get("/api/RotaByProject/".concat(this.form.projecto_id)).then(function (res) {
+        _this3.rota = res.data;
+
+        if (res.data === '') {
+          _this3.$swal.fire({
+            icon: 'error',
+            title: 'Nao existe nenhuma rota cadastrada!'
+          });
         }
-      },
-      codeMask: _code__WEBPACK_IMPORTED_MODULE_4__["codeMask"]
+      })["catch"](function (err) {
+        _this3.$swal.fire({
+          icon: 'error',
+          title: 'Erro ao tentar buscar!'
+        });
+      }); //   }
+    },
+    fetchBombas: function fetchBombas() {
+      var _this4 = this;
+
+      this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
+        _this4.bombas = res.data;
+      });
+    },
+    fetchViaturas: function fetchViaturas() {
+      var _this5 = this;
+
+      this.$http.get('/api/listarViaturas').then(function (res) {
+        _this5.viatura = res.data;
+      });
+    },
+    returnAbastecimento: function returnAbastecimento() {
+      var _this6 = this;
+
+      this.$http.get("/api/CurrentAbst/".concat(this.$route.params.refs)).then(function (res) {
+        _this6.abastecimento = res.data;
+      });
+    },
+    NovaOrdem: function NovaOrdem() {
+      var _this7 = this;
+
+      this.$Progress.start();
+      this.form.post('/api/Abastecimento').then(function (res) {
+        if (res.status === 200) {
+          _this7.$swal.fire({
+            icon: 'success',
+            title: res.data.success
+          }); // location.reload()
+
+
+          _this7.$Progress.finish();
+
+          _this7.form.reset(); // eslint-disable-next-line no-restricted-globals
+
+
+          window.location.reload();
+        }
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          _this7.$swal.fire({
+            icon: 'error',
+            title: err.response.data.erro
+          });
+
+          _this7.$Progress.fail();
+        }
+      });
+    },
+    onReset: function onReset(event) {
+      var _this8 = this;
+
+      event.preventDefault(); // Reset our form values
+
+      this.form.reset(); // Trick to reset/clear native browser form validation state
+
+      this.show = false;
+      this.$nextTick(function () {
+        _this8.show = true;
+      });
+    }
+  },
+  setup: function setup() {
+    var OpenOrder = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
+    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+
+    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__["default"]); // UnRegister on leave
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+    });
+    _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/getOpenOrder', {
+      refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
+    }).then(function (response) {
+      OpenOrder.value = response.data;
+    })["catch"](function (error) {
+      if (error.response.status === 404) {
+        OpenOrder.value = undefined;
+      }
+    });
+
+    function enviarPedido(order) {
+      this.$swal({
+        title: 'Tem certeza que deseja submeter a ordem?',
+        text: 'Nao podera reverter essa accao!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim!',
+        customClass: {
+          confirmButton: 'btn btn-primary',
+          cancelButton: 'btn btn-outline-danger ml-1'
+        },
+        buttonsStyling: false
+      }).then(function (result) {
+        if (result.value) {
+          _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/addAbastecimento', order).then(function (response) {
+            toast({
+              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+              props: {
+                title: response.data.success,
+                icon: 'CheckSquareIcon',
+                variant: 'success'
+              }
+            });
+            window.location.reload();
+            _router__WEBPACK_IMPORTED_MODULE_7__["default"].push({
+              name: 'supply-details',
+              params: {
+                refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
+              }
+            });
+          })["catch"](function (err) {
+            if (err.response.status === 421) {
+              toast({
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+                props: {
+                  title: err.response.data.erro,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger'
+                }
+              });
+            }
+          });
+        }
+      }); //   console.log(order)
+    }
+
+    function removerPedido(order) {
+      // console.log(order.refs)
+      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/removeLine', {
+        refs: order.refs
+      }).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+          props: {
+            title: response.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        window.location.reload();
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    return {
+      OpenOrder: OpenOrder,
+      enviarPedido: enviarPedido,
+      removerPedido: removerPedido
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89&":
-/*!**************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89& ***!
-  \**************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vform/dist/vform.es.js":
+/*!*********************************************!*\
+  !*** ./node_modules/vform/dist/vform.es.js ***!
+  \*********************************************/
+/*! exports provided: default, Errors, Form */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Errors", function() { return y; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return g; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+var e=Object.defineProperty,t=Object.prototype.hasOwnProperty,s=Object.getOwnPropertySymbols,r=Object.prototype.propertyIsEnumerable,o=(t,s,r)=>s in t?e(t,s,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[s]=r,i=(e,i)=>{for(var a in i||(i={}))t.call(i,a)&&o(e,a,i[a]);if(s)for(var a of s(i))r.call(i,a)&&o(e,a,i[a]);return e};const n=e=>void 0===e,c=e=>Array.isArray(e),l=e=>e&&"number"==typeof e.size&&"string"==typeof e.type&&"function"==typeof e.slice,u=(e,t,s,r)=>((t=t||{}).indices=!n(t.indices)&&t.indices,t.nullsAsUndefineds=!n(t.nullsAsUndefineds)&&t.nullsAsUndefineds,t.booleansAsIntegers=!n(t.booleansAsIntegers)&&t.booleansAsIntegers,t.allowEmptyArrays=!n(t.allowEmptyArrays)&&t.allowEmptyArrays,s=s||new FormData,n(e)||(null===e?t.nullsAsUndefineds||s.append(r,""):(e=>"boolean"==typeof e)(e)?t.booleansAsIntegers?s.append(r,e?1:0):s.append(r,e):c(e)?e.length?e.forEach(((e,o)=>{const i=r+"["+(t.indices?o:"")+"]";u(e,t,s,i)})):t.allowEmptyArrays&&s.append(r+"[]",""):(e=>e instanceof Date)(e)?s.append(r,e.toISOString()):!(e=>e===Object(e))(e)||(e=>l(e)&&"string"==typeof e.name&&("object"==typeof e.lastModifiedDate||"number"==typeof e.lastModified))(e)||l(e)?s.append(r,e):Object.keys(e).forEach((o=>{const i=e[o];if(c(i))for(;o.length>2&&o.lastIndexOf("[]")===o.length-2;)o=o.substring(0,o.length-2);u(i,t,s,r?r+"["+o+"]":o)}))),s);var h={serialize:u};function d(e){if(null===e||"object"!=typeof e)return e;const t=Array.isArray(e)?[]:{};return Object.keys(e).forEach((s=>{t[s]=d(e[s])})),t}function f(e){return Array.isArray(e)?e:[e]}function p(e){return e instanceof File||e instanceof Blob||e instanceof FileList||"object"==typeof e&&null!==e&&void 0!==Object.values(e).find((e=>p(e)))}class y{constructor(){this.errors={},this.errors={}}set(e,t){"object"==typeof e?this.errors=e:this.set(i(i({},this.errors),{[e]:f(t)}))}all(){return this.errors}has(e){return Object.prototype.hasOwnProperty.call(this.errors,e)}hasAny(...e){return e.some((e=>this.has(e)))}any(){return Object.keys(this.errors).length>0}get(e){if(this.has(e))return this.getAll(e)[0]}getAll(e){return f(this.errors[e]||[])}only(...e){const t=[];return e.forEach((e=>{const s=this.get(e);s&&t.push(s)})),t}flatten(){return Object.values(this.errors).reduce(((e,t)=>e.concat(t)),[])}clear(e){const t={};e&&Object.keys(this.errors).forEach((s=>{s!==e&&(t[s]=this.errors[s])})),this.set(t)}}class g{constructor(e={}){this.originalData={},this.busy=!1,this.successful=!1,this.recentlySuccessful=!1,this.recentlySuccessfulTimeoutId=void 0,this.errors=new y,this.progress=void 0,this.update(e)}static make(e){return new this(e)}update(e){this.originalData=Object.assign({},this.originalData,d(e)),Object.assign(this,e)}fill(e={}){this.keys().forEach((t=>{this[t]=e[t]}))}data(){return this.keys().reduce(((e,t)=>i(i({},e),{[t]:this[t]})),{})}keys(){return Object.keys(this).filter((e=>!g.ignore.includes(e)))}startProcessing(){this.errors.clear(),this.busy=!0,this.successful=!1,this.progress=void 0,this.recentlySuccessful=!1,clearTimeout(this.recentlySuccessfulTimeoutId)}finishProcessing(){this.busy=!1,this.successful=!0,this.progress=void 0,this.recentlySuccessful=!0,this.recentlySuccessfulTimeoutId=setTimeout((()=>{this.recentlySuccessful=!1}),g.recentlySuccessfulTimeout)}clear(){this.errors.clear(),this.successful=!1,this.recentlySuccessful=!1,this.progress=void 0,clearTimeout(this.recentlySuccessfulTimeoutId)}reset(){Object.keys(this).filter((e=>!g.ignore.includes(e))).forEach((e=>{this[e]=d(this.originalData[e])}))}get(e,t={}){return this.submit("get",e,t)}post(e,t={}){return this.submit("post",e,t)}patch(e,t={}){return this.submit("patch",e,t)}put(e,t={}){return this.submit("put",e,t)}delete(e,t={}){return this.submit("delete",e,t)}submit(e,t,s={}){return this.startProcessing(),s=i({data:{},params:{},url:this.route(t),method:e,onUploadProgress:this.handleUploadProgress.bind(this)},s),"get"===e.toLowerCase()?s.params=i(i({},this.data()),s.params):(s.data=i(i({},this.data()),s.data),p(s.data)&&!s.transformRequest&&(s.transformRequest=[e=>h.serialize(e)])),new Promise(((e,t)=>{(g.axios||axios__WEBPACK_IMPORTED_MODULE_0___default.a).request(s).then((t=>{this.finishProcessing(),e(t)})).catch((e=>{this.handleErrors(e),t(e)}))}))}handleErrors(e){this.busy=!1,this.progress=void 0,e.response&&this.errors.set(this.extractErrors(e.response))}extractErrors(e){return e.data&&"object"==typeof e.data?e.data.errors?i({},e.data.errors):e.data.message?{error:e.data.message}:i({},e.data):{error:g.errorMessage}}handleUploadProgress(e){this.progress={total:e.total,loaded:e.loaded,percentage:Math.round(100*e.loaded/e.total)}}route(e,t={}){let s=e;return Object.prototype.hasOwnProperty.call(g.routes,e)&&(s=decodeURI(g.routes[e])),"object"!=typeof t&&(t={id:t}),Object.keys(t).forEach((e=>{s=s.replace(`{${e}}`,t[e])})),s}onKeydown(e){const t=e.target;t.name&&this.errors.clear(t.name)}}g.routes={},g.errorMessage="Something went wrong. Please try again.",g.recentlySuccessfulTimeout=2e3,g.ignore=["busy","successful","errors","progress","originalData","recentlySuccessful","recentlySuccessfulTimeoutId"];/* harmony default export */ __webpack_exports__["default"] = (g);
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -299,87 +545,427 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
+    "section",
     {
-      attrs: { title: "Input Mask" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeMask) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
+      staticClass: "invoice-add-wrapper",
+      attrs: { title: "Novo-abastecimento" },
     },
     [
+      _c(
+        "b-card",
+        { attrs: { "no-body": "" } },
+        [
+          _c("b-card-header", { staticClass: "pb-50" }, [
+            _c("h3", [_vm._v("Novo Abastecimento")]),
+          ]),
+        ],
+        1
+      ),
+      _vm._v(" "),
       _c(
         "b-row",
         [
           _c(
             "b-col",
-            { attrs: { md: "6", xl: "4" } },
+            { staticClass: "invoice-add", attrs: { cols: "12" } },
             [
               _c(
-                "b-form-group",
-                { attrs: { label: "Credit Card", "label-for": "cardNumber" } },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "cardNumber",
-                      raw: false,
-                      options: _vm.options.creditCard,
-                      placeholder: "0000 0000 0000 0000",
+                "b-form",
+                {
+                  on: {
+                    submit: function ($event) {
+                      $event.preventDefault()
+                      return _vm.NovaOrdem()
                     },
-                    model: {
-                      value: _vm.form.cardNumber,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "cardNumber", $$v)
-                      },
-                      expression: "form.cardNumber",
+                    reset: _vm.onReset,
+                    keydown: function ($event) {
+                      return _vm.form.onKeydown($event)
                     },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Phone Number", "label-for": "phone" } },
+                  },
+                },
                 [
                   _c(
-                    "b-input-group",
+                    "b-card",
+                    {
+                      staticClass: "invoice-preview-card p-2",
+                      attrs: { "no-body": "" },
+                    },
                     [
                       _c(
-                        "b-input-group-prepend",
-                        { attrs: { "is-text": "" } },
-                        [_vm._v("\n            US (+1)\n          ")]
+                        "b-row",
+                        [
+                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
+                            _c("b", [_vm._v("Refs")]),
+                            _vm._v(
+                              ": " +
+                                _vm._s(_vm.form.ordem_id) +
+                                "\n            "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
+                            _c("b", [_vm._v("bombas")]),
+                            _vm._v(
+                              ":\n              " +
+                                _vm._s(_vm.bombas.nome_bombas) +
+                                "\n            "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("hr"),
+                        ],
+                        1
                       ),
                       _vm._v(" "),
-                      _c("cleave", {
-                        staticClass: "form-control",
-                        attrs: {
-                          id: "phone",
-                          raw: false,
-                          options: _vm.options.phone,
-                          placeholder: "1234 567 8900",
-                        },
-                        model: {
-                          value: _vm.form.phone,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.form, "phone", $$v)
-                          },
-                          expression: "form.phone",
-                        },
-                      }),
+                      _c(
+                        "b-row",
+                        [
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "12", xl: "12" } },
+                            [
+                              _c(
+                                "b-card-body",
+                                {
+                                  staticClass:
+                                    "invoice-padding form-item-section",
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "table-responsive" },
+                                    [
+                                      _c(
+                                        "table",
+                                        {
+                                          staticClass:
+                                            "table table-bordered table-stripped",
+                                        },
+                                        [
+                                          _c(
+                                            "thead",
+                                            { staticClass: "thead-light" },
+                                            [
+                                              _c("tr", [
+                                                _c(
+                                                  "th",
+                                                  {
+                                                    staticClass: "text-danger",
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                          viatura(matr)\n                        "
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("projecto")]),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("Rota")]),
+                                                _vm._v(" "),
+                                                _c("th", [
+                                                  _vm._v(
+                                                    "\n                          Qtd("
+                                                  ),
+                                                  _c(
+                                                    "small",
+                                                    {
+                                                      staticClass:
+                                                        "text-lowercase",
+                                                    },
+                                                    [_vm._v("ltr")]
+                                                  ),
+                                                  _vm._v(
+                                                    ")\n                        "
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("Turno")]),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("tbody", [
+                                            _c("tr", [
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "20%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      label: "matricula",
+                                                      options: _vm.viatura,
+                                                      reduce: function (
+                                                        viatura
+                                                      ) {
+                                                        return viatura.id
+                                                      },
+                                                    },
+                                                    on: {
+                                                      input: function ($event) {
+                                                        return _vm.getQtd()
+                                                      },
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.viatura_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "viatura_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.viatura_id",
+                                                    },
+                                                  }),
+                                                  _vm._v(
+                                                    "\n                          (" +
+                                                      _vm._s(_vm.rec_abast) +
+                                                      ")\n                        "
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "20%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      label: "name",
+                                                      options: _vm.projecto,
+                                                      reduce: function (
+                                                        projecto
+                                                      ) {
+                                                        return projecto.id
+                                                      },
+                                                    },
+                                                    on: {
+                                                      input: _vm.fetchRotas,
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.projecto_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "projecto_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.projecto_id",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "30%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      multiple: "",
+                                                      label: "nome_rota",
+                                                      options: _vm.rota,
+                                                      reduce: function (rota) {
+                                                        return rota.id
+                                                      },
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.rota_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "rota_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.rota_id",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      type: "number",
+                                                      placeholder:
+                                                        "Qtd em litros",
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.qtd_abastecer,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "qtd_abastecer",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.qtd_abastecer",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "30%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      options: [
+                                                        "manha",
+                                                        "tarde",
+                                                      ],
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.turno,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "turno",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression: "form.turno",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                            ]),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("tfoot", [
+                                            _c("tr", [
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticClass:
+                                                    "content-align-right",
+                                                  attrs: { colspan: "5" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "b-form-group",
+                                                    {
+                                                      attrs: {
+                                                        label: "Justificação",
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("b-form-textarea", {
+                                                        model: {
+                                                          value:
+                                                            _vm.form.observacao,
+                                                          callback: function (
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              _vm.form,
+                                                              "observacao",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "form.observacao",
+                                                        },
+                                                      }),
+                                                    ],
+                                                    1
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                            ]),
+                                          ]),
+                                        ]
+                                      ),
+                                    ]
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-row",
+                        [
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: {
+                                    type: "reset",
+                                    variant: "secondary",
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                limpar campos\n              "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            {
+                              staticClass: "pull-right float-right",
+                              attrs: { cols: "3" },
+                            },
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: {
+                                    type: "submit",
+                                    variant: "outline-primary",
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                adicionar a ordem\n              "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
                     ],
                     1
                   ),
@@ -390,228 +976,147 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Date", "label-for": "date" } },
+          _vm.bombas.estado === "Aberta"
+            ? _c(
+                "b-col",
+                { attrs: { cols: "12" } },
                 [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "date",
-                      raw: false,
-                      options: _vm.options.date,
-                      placeholder: "YYYY-MM-DD",
-                    },
-                    model: {
-                      value: _vm.form.date,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "date", $$v)
-                      },
-                      expression: "form.date",
-                    },
-                  }),
+                  _c(
+                    "b-row",
+                    [
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "4" } },
+                        [
+                          _c(
+                            "b-button",
+                            {
+                              directives: [
+                                {
+                                  name: "ripple",
+                                  rawName: "v-ripple.400",
+                                  value: "rgba(113, 102, 240, 0.15)",
+                                  expression: "'rgba(113, 102, 240, 0.15)'",
+                                  modifiers: { 400: true },
+                                },
+                              ],
+                              attrs: { variant: "outline-success" },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.enviarPedido(_vm.OpenOrder)
+                                },
+                              },
+                            },
+                            [_vm._v("enviar pedido de abastecimento")]
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("table", { staticClass: "table table-light" }, [
+                    _c("thead", { staticClass: "thead-light" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("Viatura")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Km(actual)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Bombas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Qtd a abastecer")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("preço/(ltr)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Rotas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Subtotal")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("editar")]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.OpenOrder, function (order) {
+                        return _c("tr", { key: order.id }, [
+                          _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.viatura.kilometragem)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.ordem.bombas.nome_bombas)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(
+                                    order.preco_cunsumo / order.qtd_abastecida
+                                  ) +
+                                  "\n              "
+                              ),
+                            ]),
+                            _vm._v(" MZN\n          "),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            _vm._l(order.ordem_viatura_rota, function (rotas) {
+                              return _c("span", { key: rotas }, [
+                                _vm._v(
+                                  "\n                " +
+                                    _vm._s(rotas.rota.nome_rota) +
+                                    ",\n              "
+                                ),
+                              ])
+                            }),
+                            0
+                          ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(order.preco_cunsumo) +
+                                  "\n              "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: { sm: "", variant: "outline-danger" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.removerPedido(order.ordem)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-remove" })]
+                              ),
+                            ],
+                            1
+                          ),
+                        ])
+                      }),
+                      0
+                    ),
+                  ]),
                 ],
                 1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Time", "label-for": "time" } },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "time",
-                      raw: false,
-                      options: _vm.options.time,
-                      placeholder: "hh:mm:ss",
-                    },
-                    model: {
-                      value: _vm.form.time,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "time", $$v)
-                      },
-                      expression: "form.time",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                {
-                  attrs: { label: "Numeral Formatting", "label-for": "number" },
-                },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "number",
-                      raw: false,
-                      options: _vm.options.number,
-                      placeholder: "10,000",
-                    },
-                    model: {
-                      value: _vm.form.number,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "number", $$v)
-                      },
-                      expression: "form.number",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Blocks", "label-for": "block" } },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "block",
-                      raw: false,
-                      options: _vm.options.block,
-                      placeholder: "Block [4,3,3]",
-                    },
-                    model: {
-                      value: _vm.form.block,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "block", $$v)
-                      },
-                      expression: "form.block",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Delimiters", "label-for": "delimiter" } },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "delimiter",
-                      raw: false,
-                      options: _vm.options.delimiter,
-                      placeholder: "Delimiter: '.'",
-                    },
-                    model: {
-                      value: _vm.form.delimiter,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "delimiter", $$v)
-                      },
-                      expression: "form.delimiter",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                {
-                  attrs: {
-                    label: "Custom Delimiters",
-                    "label-for": "customDelimiter",
-                  },
-                },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "customDelimiter",
-                      raw: false,
-                      options: _vm.options.customDelimiter,
-                      placeholder: "Delimiter: ['.', '.', '-']",
-                    },
-                    model: {
-                      value: _vm.form.customDelimiter,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "customDelimiter", $$v)
-                      },
-                      expression: "form.customDelimiter",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", xl: "4" } },
-            [
-              _c(
-                "b-form-group",
-                { attrs: { label: "Prefix", "label-for": "prefix" } },
-                [
-                  _c("cleave", {
-                    staticClass: "form-control",
-                    attrs: {
-                      id: "prefix",
-                      raw: false,
-                      options: _vm.options.prefix,
-                    },
-                    model: {
-                      value: _vm.form.prefix,
-                      callback: function ($$v) {
-                        _vm.$set(_vm.form, "prefix", $$v)
-                      },
-                      expression: "form.prefix",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+              )
+            : _vm._e(),
         ],
         1
       ),
@@ -626,18 +1131,18 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue":
-/*!*************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue ***!
-  \*************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputMask.vue?vue&type=template&id=398ddc89& */ "./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89&");
-/* harmony import */ var _FormInputMask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputMask.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./novo_abastecimento.vue?vue&type=template&id=09740ea8& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&");
+/* harmony import */ var _novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./novo_abastecimento.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -646,9 +1151,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputMask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -658,56 +1163,40 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputMask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputMask.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputMask_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./novo_abastecimento.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89& ***!
-  \********************************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8& ***!
+  \***************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputMask.vue?vue&type=template&id=398ddc89& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-mask/FormInputMask.vue?vue&type=template&id=398ddc89&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./novo_abastecimento.vue?vue&type=template&id=09740ea8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputMask_vue_vue_type_template_id_398ddc89___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-mask/code.js":
-/*!***************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-mask/code.js ***!
-  \***************************************************************************/
-/*! exports provided: codeMask, codeDefault */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMask", function() { return codeMask; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDefault", function() { return codeDefault; });
-var codeMask = "\n<template>\n  <b-row>\n\n    <!-- credit card -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Credit Card\"\n        label-for=\"cardNumber\"\n      >\n        <cleave\n          id=\"cardNumber\"\n          v-model=\"form.cardNumber\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.creditCard\"\n          placeholder=\"0000 0000 0000 0000\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- phone number -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Phone Number\"\n        label-for=\"phone\"\n      >\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            US (+1)\n          </b-input-group-prepend>\n          <cleave\n            id=\"phone\"\n            v-model=\"form.phone\"\n            class=\"form-control\"\n            :raw=\"false\"\n            :options=\"options.phone\"\n            placeholder=\"1234 567 8900\"\n          />\n        </b-input-group>\n\n      </b-form-group>\n    </b-col>\n\n    <!-- date -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Date\"\n        label-for=\"date\"\n      >\n        <cleave\n          id=\"date\"\n          v-model=\"form.date\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.date\"\n          placeholder=\"YYYY-MM-DD\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- time -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Time\"\n        label-for=\"time\"\n      >\n        <cleave\n          id=\"time\"\n          v-model=\"form.time\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.time\"\n          placeholder=\"hh:mm:ss\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- Numeral Formatting -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Numeral Formatting\"\n        label-for=\"number\"\n      >\n        <cleave\n          id=\"number\"\n          v-model=\"form.number\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.number\"\n          placeholder=\"10,000\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- block -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Blocks\"\n        label-for=\"block\"\n      >\n        <cleave\n          id=\"block\"\n          v-model=\"form.block\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.block\"\n          placeholder=\"Block [4,3,3]\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- delimiters -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Delimiters\"\n        label-for=\"delimiter\"\n      >\n        <cleave\n          id=\"delimiter\"\n          v-model=\"form.delimiter\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.delimiter\"\n          placeholder=\"Delimiter: '.'\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- Custom Delimiters -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Custom Delimiters\"\n        label-for=\"customDelimiter\"\n      >\n        <cleave\n          id=\"customDelimiter\"\n          v-model=\"form.customDelimiter\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.customDelimiter\"\n          placeholder=\"Delimiter: ['.', '.', '-']\"\n        />\n      </b-form-group>\n    </b-col>\n\n    <!-- prefix -->\n    <b-col\n      md=\"6\"\n      xl=\"4\"\n    >\n      <b-form-group\n        label=\"Prefix\"\n        label-for=\"prefix\"\n      >\n        <cleave\n          id=\"prefix\"\n          v-model=\"form.prefix\"\n          class=\"form-control\"\n          :raw=\"false\"\n          :options=\"options.prefix\"\n        />\n      </b-form-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {BRow, BCol, BFormGroup, BInputGroupPrepend, BInputGroup} from 'bootstrap-vue'\nimport Cleave from 'vue-cleave-component'\n// eslint-disable-next-line import/no-extraneous-dependencies\nimport 'cleave.js/dist/addons/cleave-phone.us'\n\nexport default {\n  components: {\n    BFormGroup,\n    BInputGroupPrepend,\n    BInputGroup,\n    Cleave,\n    BRow,\n    BCol,\n  },\n  data() {\n    return {\n      form: {\n        cardNumber: null,\n        date: null,\n        phone: null,\n      },\n      options: {\n        creditCard: {\n          creditCard: true,\n        },\n        date: {\n          date: true,\n          delimiter: '-',\n          datePattern: ['Y', 'm', 'd'],\n        },\n        phone: {\n          phone: true,\n          phoneRegionCode: 'US',\n        },\n        time: {\n          time: true,\n          timePattern: ['h', 'm', 's'],\n        },\n        number: {\n          numeral: true,\n          numeralThousandsGroupStyle: 'thousand',\n        },\n        block: {\n          blocks: [4, 3, 3],\n          uppercase: true,\n        },\n        delimiter: {\n          delimiter: '\xB7',\n          blocks: [3, 3, 3],\n          uppercase: true,\n        },\n        customDelimiter: {\n          delimiters: ['.', '.', '-'],\n          blocks: [3, 3, 3, 2],\n          uppercase: true,\n        },\n        prefix: {\n          prefix: '+63',\n          blocks: [3, 3, 3, 4],\n          uppercase: true,\n        },\n      },\n    }\n  },\n}\n</script> \n";
-var codeDefault = '';
 
 /***/ })
 
