@@ -14,7 +14,9 @@ class ordem_viatura extends Model
         'viatura_id',
         'qtd_abastecida',
         'preco_cunsumo',
-        'user_id'
+        'user_id',
+        'justificacao',
+        'updatedBy'
     ];
     public function viatura()
     {

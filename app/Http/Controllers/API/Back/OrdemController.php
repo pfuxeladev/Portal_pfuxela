@@ -14,9 +14,12 @@ use App\Models\ordem_viatura;
 use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
 use App\Models\Bombas;
+use App\Models\OrdemViaturaRota;
 use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
+
+use App\Models\combustivelBomba;
 class OrdemController extends Controller
 {
     private $ordem;
@@ -53,13 +56,9 @@ class OrdemController extends Controller
         if ($ordem) {
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-            // return $ordem->bombas->responsavel;
-
-            // foreach ($ordem->bombas->responsavel as $key => $responsavel) {
                 $data["email"] = 'supportdesk@pfuxela.co.mz';
                 $data["title"] = "info@pfuxela.co.mz";
                 $data["body"] = "Teste";
-            // }
 
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
             $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
@@ -95,7 +94,7 @@ class OrdemController extends Controller
                     foreach ($viatura as $key => $v) {
                         $v->qtd_disponivel = ($v->qtd_disponivel - $ordVi->qtd_abastecida);
                         $v->update();
-                    }
+                     }
 
                 }
 
@@ -238,19 +237,66 @@ class OrdemController extends Controller
 
     $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
     Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-    // Mail::send('orderMail.mail_order', $data, function($message)use($data, $pdf) {
-    //     $message->to($data["email"], $data["email"])
-    //             ->subject($data["title"])
-    //             ->attachData($pdf->output(), "ordem.pdf");
-    // });
     return $pdf->download('ordem.pdf');
 
 //    return view('orderMail.mail_order',compact('ordem'));
 
    }
-    public function update(Request $request, Ordem $ordem)
+
+   function editOrder(Request $request, $refs){
+    $ordem = Ordem::where('refs', $refs)->first();
+    $ordem_viatura  = ordem_viatura::where('ordem_id', $ordem->id)->get();
+    foreach ($ordem_viatura as $key => $v) {
+        return OrdemViaturaRota::with(['rota.projecto', 'ordem_viatura.viatura'])->get();
+    }
+
+   }
+    public function update(Request $request)
     {
-        //
+        // return $request->all();
+
+        $ordem = Ordem::where('refs', $request->refs)->first();
+        $ordem->bombas_id = $request->bombas_id;
+        $ordem->update();
+
+        $preco = 0;
+
+        try {
+            foreach ($request->ordem_viatura as $key => $v) {
+                // return $v;
+                $viatura = Viatura::where('id', $v['viatura_id'])->get();
+
+                // return $viatura;
+
+                foreach ($viatura as $key => $viatura1) {
+                    $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
+                    ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura1->tipo_combustivel)->get();
+
+                    foreach ($combustivel as $key => $comb) {
+                        if ($comb) {
+                            if ($viatura1->tipo_combustivel === $comb->tipo_combustivel) {
+                                # code...
+                                $preco = ($comb->preco_actual * $v['qtd_abastecida']);
+                            }else {
+                                return response()->json(['erro', 'A Bomba nao tem '.$viatura1->tipo_combustivel.' so pode abastecer '.$comb->tipo_combustivel], 421);
+                            }
+                        }else{
+                            return response()->json(['erro'=> 'A Bomba nao tem '.$viatura1->tipo_combustivel], 421);
+                        }
+                    }
+
+                   ordem_viatura::where('ordem_id', $ordem->id)->update([ 'qtd_abastecida'=> $v['qtd_abastecida'], 'preco_cunsumo'=>$preco]);
+
+                   $viatura1->qtd_disponivel = $v['qtd_abastecida'];
+                   $viatura1->update();
+                }
+
+            }
+            return response()->json(['success'=>'actualizado com sucesso'], 200);
+        } catch (\Exception $e) {
+           return response()->json(['erro'=>'Ocorreu um erro na atualizacao '.$e->getMessage()], 421);
+        }
+
     }
 
     /**

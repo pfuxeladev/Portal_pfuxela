@@ -122,6 +122,7 @@ class AbastecimentoController extends Controller
             'qtd_abastecida' => $request->qtd_abastecer,
             'preco_cunsumo' => $preco,
             'user_id' => auth()->user()->id,
+            'justificacao'=>$request->observacao,
         ]);
 
         //abastecer por rota

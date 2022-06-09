@@ -2190,9 +2190,19 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    updateOrder: function updateOrder(refs, orderData) {
+    updateOrder: function updateOrder(ctx, orderData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/Ordem/".concat(refs), orderData).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/UpdateOrdem', orderData).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    editOrder: function editOrder(ctx, _ref2) {
+      var refs = _ref2.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ordemAberta/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

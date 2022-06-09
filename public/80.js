@@ -168,12 +168,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -208,7 +202,8 @@ __webpack_require__.r(__webpack_exports__);
     return {
       bombas: [],
       viaturas: [],
-      rotas: []
+      rota: [],
+      projecto: []
     };
   },
   created: function created() {
@@ -217,6 +212,42 @@ __webpack_require__.r(__webpack_exports__);
     this.$http.get('/api/bombas').then(function (res) {
       _this.bombas = res.data;
     });
+    this.$http.get('/api/listarViaturas').then(function (res) {
+      _this.viaturas = res.data;
+    });
+    this.fetchProjectos();
+  },
+  methods: {
+    fetchProjectos: function fetchProjectos() {
+      var _this2 = this;
+
+      this.$http.get('/api/listProject').then(function (response) {
+        _this2.projecto = response.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    fetchRotas: function fetchRotas(pro) {
+      var _this3 = this;
+
+      console.log(pro); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
+
+      this.$http.get("/api/RotaByProject/".concat(pro)).then(function (res) {
+        _this3.rota = res.data;
+
+        if (res.data === '') {
+          _this3.$swal.fire({
+            icon: 'error',
+            title: 'Nao existe nenhuma rota cadastrada!'
+          });
+        }
+      })["catch"](function (err) {
+        _this3.$swal.fire({
+          icon: 'error',
+          title: 'Erro ao tentar buscar!'
+        });
+      }); //   }
+    }
   },
   setup: function setup(props) {
     var ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply';
@@ -232,30 +263,57 @@ __webpack_require__.r(__webpack_exports__);
         _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME);
       }
     });
-    var form = new vform__WEBPACK_IMPORTED_MODULE_10__["default"]({
-      refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs,
-      bomba_id: null,
-      abastecer: [{
-        projecto_id: null,
-        viatura_id: null,
-        rota_id: null,
-        qtd_abastecer: 0,
-        observacao: null
-      }]
-    });
-    var orderData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(JSON.parse(JSON.stringify(form)));
+    var orderData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_10__["default"]())));
     _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/fetchOrder', {
       refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
     }).then(function (response) {
       orderData.value = response.data;
+      form.value = orderData;
     })["catch"](function (error) {
       if (error.response.status === 404) {
         orderData.value = undefined;
       }
     });
+
+    function Actualizar() {
+      var _this4 = this;
+
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/updateOrder', orderData.value).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+          props: {
+            title: response.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        window.location.reload();
+
+        _this4.$router.push({
+          name: 'supply-details',
+          params: {
+            refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
+          }
+        });
+      })["catch"](function (err) {
+        if (err) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
     return {
       orderData: orderData,
-      form: form
+      form: form,
+      Actualizar: Actualizar
     };
   }
 });
@@ -430,6 +488,14 @@ var render = function () {
             [
               _c(
                 "b-form",
+                {
+                  on: {
+                    submit: function ($event) {
+                      $event.preventDefault()
+                      return _vm.Actualizar()
+                    },
+                  },
+                },
                 [
                   _c(
                     "b-form-row",
@@ -495,53 +561,112 @@ var render = function () {
                   _c(
                     "b-form-row",
                     [
-                      _c("b-col", { attrs: { cols: "12" } }, [
-                        _c("table", { staticClass: "table table-light" }, [
-                          _c("thead", [
-                            _c("tr", [
-                              _c("th", [_vm._v("viatura")]),
+                      _c(
+                        "b-col",
+                        {
+                          staticClass: "table-responsive",
+                          staticStyle: { height: "300px" },
+                          attrs: { cols: "12" },
+                        },
+                        [
+                          _c(
+                            "table",
+                            { staticClass: "table table-light height-auto" },
+                            [
+                              _c("thead", [
+                                _c("tr", [
+                                  _c("th", [_vm._v("viatura")]),
+                                  _vm._v(" "),
+                                  _c("th", [_vm._v("projecto")]),
+                                  _vm._v(" "),
+                                  _c("th", [_vm._v("rotas")]),
+                                  _vm._v(" "),
+                                  _c("th", [_vm._v("qtd")]),
+                                ]),
+                              ]),
                               _vm._v(" "),
-                              _c("th", [_vm._v("projecto")]),
-                              _vm._v(" "),
-                              _c("th", [_vm._v("rotas")]),
-                              _vm._v(" "),
-                              _c("th", [_vm._v("qtd")]),
-                              _vm._v(" "),
-                              _c("th", [_vm._v("turno")]),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("tbody", [
-                            _c("tr", [
-                              _c("td", [_c("v-select")], 1),
-                              _vm._v(" "),
-                              _c("td", [_c("v-select")], 1),
-                              _vm._v(" "),
-                              _c("td", [_c("v-select")], 1),
-                              _vm._v(" "),
-                              _c("td", [_c("b-form-input")], 1),
-                              _vm._v(" "),
-                              _c("td", [_c("v-select")], 1),
-                            ]),
-                            _vm._v(" "),
-                            _c("tr", [
                               _c(
-                                "td",
-                                { attrs: { colspan: "5" } },
-                                [
-                                  _c(
-                                    "b-form-group",
-                                    { attrs: { label: "Justificacao" } },
-                                    [_c("b-form-textarea")],
-                                    1
-                                  ),
-                                ],
-                                1
+                                "tbody",
+                                _vm._l(
+                                  _vm.orderData.ordem_viatura,
+                                  function (vi, z) {
+                                    return _c("tr", { key: z }, [
+                                      _c("td", [
+                                        _vm._v(
+                                          "\n                                  " +
+                                            _vm._s(vi.viatura.matricula)
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("td", [
+                                        _c("span", [
+                                          _vm._v(
+                                            _vm._s(
+                                              vi.ordem_viatura_rota[1].rota
+                                                .projecto.name
+                                            )
+                                          ),
+                                        ]),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        _vm._l(
+                                          vi.ordem_viatura_rota,
+                                          function (rt, i) {
+                                            return _c("span", { key: i }, [
+                                              _vm._v(
+                                                "\n                                      " +
+                                                  _vm._s(rt.rota.nome_rota) +
+                                                  ",\n                                  "
+                                              ),
+                                            ])
+                                          }
+                                        ),
+                                        0
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        [
+                                          _c("b-form-input", {
+                                            attrs: { type: "text" },
+                                            model: {
+                                              value: vi.qtd_abastecida,
+                                              callback: function ($$v) {
+                                                _vm.$set(
+                                                  vi,
+                                                  "qtd_abastecida",
+                                                  $$v
+                                                )
+                                              },
+                                              expression: "vi.qtd_abastecida",
+                                            },
+                                          }),
+                                        ],
+                                        1
+                                      ),
+                                    ])
+                                  }
+                                ),
+                                0
                               ),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
+                            ]
+                          ),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-button",
+                        {
+                          attrs: { type: "submit", variant: "outline-primary" },
+                        },
+                        [
+                          _vm._v(
+                            "\n                Actualizar a ordem\n              "
+                          ),
+                        ]
+                      ),
                     ],
                     1
                   ),
@@ -779,9 +904,19 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    updateOrder: function updateOrder(refs, orderData) {
+    updateOrder: function updateOrder(ctx, orderData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/Ordem/".concat(refs), orderData).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/UpdateOrdem', orderData).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    editOrder: function editOrder(ctx, _ref2) {
+      var refs = _ref2.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ordemAberta/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
