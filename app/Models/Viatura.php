@@ -37,8 +37,8 @@ class Viatura extends Model
     function ordem(){
         return $this->belongsToMany(Ordem::class, 'ordem_viaturas', 'viatura_id', 'ordem_id');
     }
-
-
-
+    function ordem_viatura(){
+        return $this->hasMany(ordem_viatura::class, 'viatura_id', 'id');
+    }
 
 }

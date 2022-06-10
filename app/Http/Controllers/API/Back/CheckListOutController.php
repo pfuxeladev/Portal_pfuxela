@@ -18,7 +18,7 @@ class CheckListOutController extends Controller
     }
     public function index()
     {
-        return $this->checkListOut->with(['viatura', 'motorista.person', 'checkListIn'])->orderBy('id', 'desc')->paginate(10);
+        return $this->checkListOut->with(['viatura', 'motorista.person'])->orderBy('id', 'desc')->paginate(10);
     }
 
    function listViaturaDentro(){

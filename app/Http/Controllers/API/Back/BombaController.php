@@ -23,19 +23,20 @@ class BombaController extends Controller
         return Bombas::with(['responsavel', 'createdBy', 'combustivel'])->get();
     }
 
-    function fetchCombustivel(){
+    function fetchCombustivel()
+    {
         return combustivel::all();
     }
 
-    function updtFuel(Request $request){
+    function updtFuel(Request $request)
+    {
         foreach ($request->all() as $val) {
-             combustivel::where(['tipo_combustivel'=>$val['tipo_combustivel']])->update([
-                'tipo_combustivel'=>$val['tipo_combustivel'],
-                'preco_actual'=>$val['preco_actual']
+            combustivel::where(['tipo_combustivel' => $val['tipo_combustivel']])->update([
+                'tipo_combustivel' => $val['tipo_combustivel'],
+                'preco_actual' => $val['preco_actual']
             ]);
         }
-        return response()->json(['success'=>'actualizado com sucesso'], 200);
-
+        return response()->json(['success' => 'actualizado com sucesso'], 200);
     }
     public function store(Request $request)
     {
@@ -62,43 +63,47 @@ class BombaController extends Controller
         );
 
 
+        $bombaVerify = Bombas::where('nome_bombas', $request->nome_bombas)->first();
+        if (!empty($bombaVerify)) {
+            return response()->json(['erro' => 'Erro! ja existe uma bomba cadastrada com esse nome']);
+        } else {
+            $bombas = $this->bombas->create([
+                'nome_bombas' => $request->nome_bombas,
+                'capacidade' => $request->capacidade,
+                'tipo_bomba' => $request->tipo_bomba,
+                'createdBy' => auth()->user()->id,
+                // 'updatedBy'=>auth()->user()->id,
+            ]);
 
-        $bombas = $this->bombas->create([
-            'nome_bombas' => $request->nome_bombas,
-            'capacidade' => $request->capacidade,
-            'tipo_bomba' => $request->tipo_bomba,
-            'createdBy' => auth()->user()->id,
-            // 'updatedBy'=>auth()->user()->id,
-        ]);
+            if ($bombas) {
+                $bomba = Bombas::where('id', $bombas->id)->first();
 
-        if ($bombas) {
-            $bomba = Bombas::where('id', $bombas->id)->first();
-
-            foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::create([
-                    'nome' => $resp['nome'],
-                    'email_bomba' => $resp['email_bomba'],
-                    'contacto' => $resp['contacto'],
-                    'contacto_alt' => $resp['contacto_alt'],
-                    'bombas_id' => $bomba->id,
-                    'createdBy' => auth()->user()->id,
-                    'updatedBy' => auth()->user()->id,
-                ]);
-            }
+                foreach ($request->responsavel as $key => $resp) {
+                    $responsavel = responsavelBombas::create([
+                        'nome' => $resp['nome'],
+                        'email_bomba' => $resp['email_bomba'],
+                        'contacto' => $resp['contacto'],
+                        'contacto_alt' => $resp['contacto_alt'],
+                        'bombas_id' => $bomba->id,
+                        'createdBy' => auth()->user()->id,
+                        'updatedBy' => auth()->user()->id,
+                    ]);
+                }
 
                 $combustivel = array();
-            foreach ($request->combustivel_tipos as $key => $comb) {
+                foreach ($request->combustivel_tipos as $key => $comb) {
 
-                $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
+                    $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
 
-                foreach ($combustivel[$key] as $key => $c) {
+                    foreach ($combustivel[$key] as $key => $c) {
 
-                 combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_atual'=>$c->preco_actual]);
+                        combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_atual' => $c->preco_actual]);
+                    }
                 }
-            }
 
-            if ($responsavel) {
-                return response()->json(['message' => 'cadastrou a bomba com sucesso']);
+                if ($responsavel) {
+                    return response()->json(['message' => 'cadastrou a bomba com sucesso']);
+                }
             }
         }
     }
@@ -173,14 +178,14 @@ class BombaController extends Controller
                 ]);
             }
 
-                $combustivel = array();
+            $combustivel = array();
             foreach ($request->combustivel_tipos as $key => $comb) {
 
                 $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
 
                 foreach ($combustivel[$key] as $key => $c) {
 
-                 combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual'=>$c->preco_actual]);
+                    combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual' => $c->preco_actual]);
                 }
             }
 

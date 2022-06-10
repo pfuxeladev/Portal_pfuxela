@@ -22,7 +22,7 @@ class CheckListInController extends Controller
     }
     public function index()
     {
-        return $this->checkListIn->with(['viatura', 'motorista', 'user'])->join('checklist_out', 'checklist_in.check_list_out_id', '=', 'checklist_out.id')->paginate(10);
+        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'checkListOut.viatura'])->orderBy(request('sortBy'), 'ASC')->paginate(request('perPage'));
     }
 
   function listViaturaFora(){
@@ -107,10 +107,10 @@ class CheckListInController extends Controller
                 $viatura1->locate = 'IN';
                 $viatura1->update();
 
-               return response()->json(['message'=>'Viatura inspencionada com sucesso']);
+               return response()->json(['message'=>'Viatura inspencionada com sucesso'], 200);
             }
         } catch (\Exception $e) {
-            return response()->json(['erro'=>'Ocorreu um erro de insercao', $e->getMessage()]);
+            return response()->json(['erro'=>'Ocorreu um erro de insercao', $e->getMessage()], 421);
         }
 
     }
