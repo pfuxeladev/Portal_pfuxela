@@ -150,7 +150,7 @@
               <feather-icon icon="RepeatIcon" />
               <span class="align-middle ml-50">continuar</span>
             </b-dropdown-item>
-            <b-dropdown-item v-if="data.item.estado !== 'Aberta'"
+            <b-dropdown-item v-if="data.item.estado === 'Pendente'"
               :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />

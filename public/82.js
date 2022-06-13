@@ -152,6 +152,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1104,6 +1110,27 @@ var render = function () {
                             },
                           },
                           [_vm._v("\n        Autorizar\n      ")]
+                        ),
+                      ],
+                      1
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.SupplyData.estado === "Autorizado"
+                  ? _c(
+                      "span",
+                      [
+                        _c(
+                          "b-button",
+                          {
+                            attrs: { variant: "outline-success" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.Aprovar(_vm.SupplyData.refs)
+                              },
+                            },
+                          },
+                          [_vm._v("\n              Reenviar\n              ")]
                         ),
                       ],
                       1

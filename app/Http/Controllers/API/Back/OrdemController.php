@@ -18,7 +18,7 @@ use App\Models\OrdemViaturaRota;
 use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
-
+use App\Models\responsavelBombas;
 use App\Models\combustivelBomba;
 class OrdemController extends Controller
 {
@@ -56,9 +56,12 @@ class OrdemController extends Controller
         if ($ordem) {
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-                $data["email"] = 'supportdesk@pfuxela.co.mz';
-                $data["title"] = "info@pfuxela.co.mz";
-                $data["body"] = "Teste";
+            $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+            foreach ($responsavel as $key => $bombas_mail) {
+              $data["email"] = $bombas_mail->email_bombas;
+              $data["title"] = "info@pfuxela.co.mz";
+              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+            }
 
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
             $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());

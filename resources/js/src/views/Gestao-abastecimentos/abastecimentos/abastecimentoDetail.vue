@@ -104,8 +104,14 @@
           Autorizar
         </b-button>
       </span>
-
-
+        <span v-if="SupplyData.estado ==='Autorizado'">
+        <b-button
+                variant="outline-success"
+                @click="Aprovar(SupplyData.refs)"
+                >
+                Reenviar
+                </b-button>
+        </span>
       </b-col>
       <b-col
         cols="12"

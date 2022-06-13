@@ -135,63 +135,63 @@ class BombaController extends Controller
         $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-        $this->validate(
-            $request,
-            [
-                'nome_bombas' => 'required|string',
-                'capacidade' => 'required| string',
-                'tipo_bomba' => 'required|string',
-                'responsavel' => 'required|array|min:1',
-                'responsavel*nome' => 'required|string',
-                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
-                'responsavel*contacto' => 'required|string',
-                'responsavel*combustivel_tipos' => 'required',
 
-            ],
-            [
-                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
-                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
-            ]
-        );
+        try {
+            $bombas = Bombas::where('id', $id)->update([
+                'nome_bombas' => $request->nome_bombas,
+                'capacidade' => $request->capacidade,
+                'tipo_bomba' => $request->tipo_bomba,
+                'createdBy' => auth()->user()->id,
+                // 'updatedBy'=>auth()->user()->id,
+            ]);
+            if ($bombas) {
+                // $bomba = Bombas::where('id', $bombas->id)->first();
 
+                foreach ($request->responsavel as $key => $resp) {
 
+                    $fetchFirst = responsavelBombas::where('bombas_id', $id)->where('nome', $resp['nome'])->first();
+                        if(!empty($fetchFirst)){
+                            responsavelBombas::where('bombas_id', $id)->update([
+                                'nome' => $resp['nome'],
+                                'email_bomba' => $resp['email_bomba'],
+                                'contacto' => $resp['contacto'],
+                                'contacto_alt' => $resp['contacto_alt'],
+                                'bombas_id' => $id,
+                                'createdBy' => auth()->user()->id,
+                                'updatedBy' => auth()->user()->id,
+                            ]);
+                        }else{
+                            $responsavel = responsavelBombas::updateOrCreate([
+                                'nome' => $resp['nome'],
+                                'email_bomba' => $resp['email_bomba'],
+                                'contacto' => $resp['contacto'],
+                                'contacto_alt' => $resp['contacto_alt'],
+                                'bombas_id' => $id,
+                                'createdBy' => auth()->user()->id,
+                                'updatedBy' => auth()->user()->id,
+                            ]);
+                        }
 
-        $bombas = Bombas::where('id', $id)->update([
-            'nome_bombas' => $request->nome_bombas,
-            'capacidade' => $request->capacidade,
-            'tipo_bomba' => $request->tipo_bomba,
-            'createdBy' => auth()->user()->id,
-            // 'updatedBy'=>auth()->user()->id,
-        ]);
-        if ($bombas) {
-            // $bomba = Bombas::where('id', $bombas->id)->first();
-
-            foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::firstOrCreate([
-                    'nome' => $resp['nome'],
-                    'email_bomba' => $resp['email_bomba'],
-                    'contacto' => $resp['contacto'],
-                    'contacto_alt' => $resp['contacto_alt'],
-                    'bombas_id' => $id,
-                    'createdBy' => auth()->user()->id,
-                    'updatedBy' => auth()->user()->id,
-                ]);
-            }
-
-            $combustivel = array();
-            foreach ($request->combustivel_tipos as $key => $comb) {
-
-                $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
-
-                foreach ($combustivel[$key] as $key => $c) {
-
-                    combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual' => $c->preco_actual]);
                 }
-            }
 
-            if ($responsavel) {
-                return response()->json(['message' => 'Actualizou a bomba com sucesso']);
+                $combustivel = array();
+                if ($request->combustivel_tipos != null) {
+                    foreach ($request->combustivel_tipos as $key => $comb) {
+
+                        $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
+
+                        foreach ($combustivel[$key] as $key => $c) {
+
+                            combustivelBomba::firstOrNew(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual' => $c->preco_actual]);
+                        }
+                    }
+                }
+
+                return response()->json(['message' => 'Actualizou a bomba com sucesso'], 200);
+
             }
+        } catch (\Exception $e) {
+           return response()->json(['erro'=>'Erro! Insercao de dados '.$e->getMessage()], 421);
         }
     }
 
