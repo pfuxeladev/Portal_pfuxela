@@ -77,6 +77,7 @@ class OrdemController extends Controller
         return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
     }
 
+
     function getBomba($refs){
        return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
     }
