@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
-use App\Models\CheckListIn;
+use App\Models\checkListIn;
 use App\Models\CheckListOut;
 use App\Models\CheckListRota;
 use App\Models\incidente;
@@ -22,7 +22,7 @@ class CheckListInController extends Controller
     }
     public function index()
     {
-        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'checkListOut.viatura'])->orderBy(request('sortBy'), 'ASC')->paginate(request('perPage'));
+        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy(request('sortBy'), 'ASC')->paginate(request('perPage'));
     }
 
   function listViaturaFora(){
@@ -43,7 +43,7 @@ class CheckListInController extends Controller
         try {
             $checkList_out = CheckListOut::where('id', $request->check_list_out_id)->first();
             // return $checkList_out;
-            $checkListIn = new CheckListIn();
+            $checkListIn = new checkListIn();
             $checkListIn->check_list_out_id = $checkList_out->id;
             $checkListIn->motorista()->associate($request->motorista_id);
             $checkListIn->km_fim = $request->km_fim;
@@ -67,7 +67,7 @@ class CheckListInController extends Controller
             $checkListIn->inspencao_entrada = $request->inspencao_entrada;
             $checkListIn->taxaradio_entrada = $request->taxaradio_entrada;
             $checkListIn->user_id = auth()->user()->id;
-            if ($request->is_incidente == true) {
+            if ($request->is_incidente) {
                 $checkListIn->is_incidente = $request->is_incidente;
                 $checkListIn->incidente()->associate($request->incidente_id);
             }
@@ -89,18 +89,25 @@ class CheckListInController extends Controller
 
             $checkListIn->save();
             if($checkListIn){
-                $viatura = Viatura::where('id', $request->viatura_id)->first();
+
+
+                if($request->viatura_id !=null){
+                    $viatura = Viatura::where('id', $request->viatura_id)->first();
+                     $viatura->locate = 'IN';
+                     $viatura->update();
+                }
                 $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
 
                 $delta_percorrido = ($request->km_fim - $viatura1->kilometragem);
 
-                $combustivel = ($viatura->capacidade_media * $delta_percorrido);
+
 
                 $total_percorrido = ($request->km_fim + $viatura1->kilometragem);
 
-                $qtd_disponivel = ($viatura1->qtd_disponivel - $combustivel);
-                $viatura->locate = 'IN';
-                $viatura->update();
+                $consumo = ($delta_percorrido * $viatura1->capacidade_media);
+
+                $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+
 
                 $viatura1->qtd_disponivel = $qtd_disponivel;
                 $viatura1->kilometragem = $total_percorrido;

@@ -30,10 +30,7 @@ class MotoristaController extends Controller
     public function store(Request $request)
     {
 
-        $request->validate([
-            'cartaConducao' => 'required|string|min:5',
-            'nr_documento' => 'required|string|min:9',
-        ]);
+       
 
         $motorista = new motorista();
 

@@ -120,12 +120,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
 //
 //
 //
 //
 //
 //
+=======
+>>>>>>> 35c827182c0fd54051b569ab6cbbb40a801f621a
 //
 //
 //
@@ -1115,6 +1118,7 @@ var render = function () {
                       1
                     )
                   : _vm._e(),
+<<<<<<< HEAD
                 _vm._v(" "),
                 _vm.SupplyData.estado === "Autorizado"
                   ? _c(
@@ -1136,6 +1140,8 @@ var render = function () {
                       1
                     )
                   : _vm._e(),
+=======
+>>>>>>> 35c827182c0fd54051b569ab6cbbb40a801f621a
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
