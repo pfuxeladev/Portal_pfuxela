@@ -5,9 +5,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Ordem de abastecimento</title>
-    <link
-        href="https://fonts.googleapis.com/css?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700"
-        rel="stylesheet" media="screen">
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
     <style type="text/css">
         * {
@@ -39,11 +36,11 @@
     </style>
 </head>
 
-<body style="font-size:12pt; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<body style="font-size:10pt; font-family:Times New Roman;">
     <div class="row d-flex justify-content-center">
         <div class='offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='card'>
-                <img src="/home2/pfuxelaco/Portal.pfuxela.co.mz/assets/img/PfuxelaLogo.png" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
+                <img src="{{asset('images/pfuxelalogo.png')}}" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
                 <div class='card-header p-4'>
                     {{-- <img src='/home2/pfuxelaco/Portal.pfuxela.co.mz/assets/img/PfuxelaLogo.png'/> --}}
 
@@ -79,8 +76,8 @@
                     </div><br>
 
                     <?php $total = 0; ?>
-                    <table class="table table-striped text-left " style="width: 100%; margin:auto; font-size:12pt; font-family: Helvetica, sans-serif;">
-                        <thead style="text-align: left; font-weight: 600">
+                    <table class="table table-striped text-left">
+                        <thead>
                             <tr>
                                 <th>
                                     <p>Matricula</p>
@@ -101,7 +98,7 @@
                         </thead>
                         <tbody>
                             @foreach ($ordem->ordem_viatura as $ordViatura)
-                                <tr style="text-align: justify; font-weight: 100;">
+                                <tr>
                                     <td>{{ $ordViatura->viatura->matricula }}</td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
                                     <td>{{ $ordViatura->qtd_abastecida }}</td>

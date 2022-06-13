@@ -58,20 +58,22 @@ class OrdemController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
-              $data["email"] = $bombas_mail->email_bombas;
+              $data["email"] = $bombas_mail->email_bomba;
               $data["title"] = "info@pfuxela.co.mz";
               $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
             }
 
-            $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-            $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
-            Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                $message->from(env('MAIL_USERNAME'));
-                $message->to($data["email"], $data["email"])
-                        ->subject($data["title"])
-                        ->attachData($pdf->output(), "ordem.pdf");
-            });
+          $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+          $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+
+          Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+              $message->from(env('MAIL_USERNAME'));
+              $message->to($data["email"], $data['email'])
+                      ->subject($data["title"])
+                      ->attachData($pdf->output(), "ordem.pdf");
+          });
+
         }
 
         return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
@@ -239,11 +241,11 @@ class OrdemController extends Controller
     $data["title"] = "From ItSolutionStuff.com";
     $data["body"] = "This is Demo";
 
-    $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+    $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'Times New Roman']);
     Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-    return $pdf->download('ordem.pdf');
+    // return $pdf->download('ordem.pdf');
 
-//    return view('orderMail.mail_order',compact('ordem'));
+   return view('orderMail.mail_order',compact('ordem'));
 
    }
 

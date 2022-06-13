@@ -331,7 +331,7 @@ class AbastecimentoController extends Controller
 
                 $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
                 foreach ($responsavel as $key => $bombas_mail) {
-                  $data["email"] = 
+                  $data["email"] = $bombas_mail->email_bombas;
                 }
 
                     $data["email"] = 'supportdesk@pfuxela.co.mz';
