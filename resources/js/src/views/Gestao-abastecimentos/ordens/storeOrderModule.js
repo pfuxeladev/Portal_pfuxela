@@ -33,12 +33,20 @@ export default {
       })
     },
 
-    updateOrder(refs, orderData) {
+    updateOrder(ctx, orderData) {
       return new Promise((resolve, reject) => {
-        axios.put(`/api/Ordem/${refs}`, orderData)
+        axios.post('/api/UpdateOrdem', orderData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
+    editOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/ordemAberta/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
   },
 }

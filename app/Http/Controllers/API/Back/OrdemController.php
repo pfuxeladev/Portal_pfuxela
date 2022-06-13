@@ -18,7 +18,6 @@ use App\Models\OrdemViaturaRota;
 use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
-
 use App\Models\combustivelBomba;
 class OrdemController extends Controller
 {
@@ -56,16 +55,19 @@ class OrdemController extends Controller
         if ($ordem) {
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-                $data["email"] = 'supportdesk@pfuxela.co.mz';
-                $data["title"] = "info@pfuxela.co.mz";
-                $data["body"] = "Teste";
+            $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+            foreach ($responsavel as $key => $bombas_mail) {
+              $data["email"] = $bombas_mail->email_bombas;
+              $data["title"] = "info@pfuxela.co.mz";
+              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+            }
 
             $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
             $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
             Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                $message->to(env('MAIL_USERNAME'));
-                $message->to($data["email"])
+                $message->from(env('MAIL_USERNAME'));
+                $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), "ordem.pdf");
             });
@@ -73,6 +75,7 @@ class OrdemController extends Controller
 
         return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
     }
+
 
     function getBomba($refs){
        return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();

@@ -470,7 +470,7 @@ export default {
             toast({
               component: ToastificationContent,
               props: {
-                title: 'Erro no cadastro do relatorio verifique os campos',
+                title: err.response.data.erro,
                 icon: 'AlertTriangleIcon',
                 variant: 'danger',
               },
@@ -488,7 +488,7 @@ export default {
       listFiles,
       dateTime,
       onChange,
-      
+
     }
   },
 }

@@ -68,6 +68,7 @@
                               label="matricula"
                               :options="viatura"
                               :reduce="(viatura) => viatura.id"
+                              @input="getQtd()"
                             />
                             ({{ rec_abast }})
                           </td>
@@ -148,7 +149,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="bombas.estado === 'aberta'"
+        v-if="bombas.estado === 'Aberta'"
         cols="12"
       >
         <b-row>
@@ -176,19 +177,17 @@
           <tbody>
             <tr
               v-for="order in OpenOrder"
-              :key="order"
+              :key="order.id"
             >
               <td>{{ order.viatura.matricula }}</td>
               <td>{{ order.viatura.kilometragem }}</td>
               <td>{{ order.ordem.bombas.nome_bombas }}</td>
               <td>{{ order.qtd_abastecida }}</td>
               <td>
- <span
-                  v-for="rotas in order.ordem_viatura_rota"
-                  :key="rotas"
-                >
-                  ({{ rotas.preco_total / order.qtd_abastecida }})
- </span> MZN</td>
+                <span>
+                    {{ (order.preco_cunsumo / order.qtd_abastecida) }}
+                </span> MZN
+            </td>
               <td>
                 <span
                   v-for="rotas in order.ordem_viatura_rota"
@@ -198,20 +197,18 @@
                 </span>
               </td>
               <td>
-                  <span
-                  v-for="rotas in order.ordem_viatura_rota"
-                  :key="rotas"
-                >
-                {{ rotas.preco_total }}
+                  <span>
+                {{ order.preco_cunsumo }}
                 </span>
 
               </td>
               <td>
                 <b-button
                   sm
-                  variant="outline-primary"
+                  variant="outline-danger"
+                  @click="removerPedido(order.ordem)"
                 >
-                  <i class="fas fa-edit" />
+                  <i class="fas fa-remove" />
                 </b-button>
               </td>
             </tr>
@@ -363,14 +360,19 @@ export default {
     NovaOrdem() {
       this.$Progress.start()
       this.form.post('/api/Abastecimento').then(res => {
-        this.$swal.fire({
-          icon: 'success',
-          title: res.data.success,
-        })
-        this.$Progress.finish()
-        this.form.reset()
+        if (res.status === 200) {
+          this.$swal.fire({
+            icon: 'success',
+            title: res.data.success,
+          })
+          // location.reload()
+          this.$Progress.finish()
+          this.form.reset()
+          // eslint-disable-next-line no-restricted-globals
+          window.location.reload()
+        }
       }).catch(err => {
-        if (err) {
+        if (err.response.status === 421) {
           this.$swal.fire({
             icon: 'error',
             title: err.response.data.erro,
@@ -441,7 +443,8 @@ export default {
                   variant: 'success',
                 },
               })
-              this.$route.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+              window.location.reload()
+              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
               if (err.response.status === 421) {
@@ -457,12 +460,43 @@ export default {
             })
         }
       })
+
     //   console.log(order)
+    }
+    function removerPedido(order) {
+      // console.log(order.refs)
+      store.dispatch('Supply/removeLine', {
+        refs: order.refs,
+      })
+        .then(response => {
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: response.data.success,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
+          })
+          window.location.reload()
+        })
+        .catch(err => {
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
+        })
     }
 
     return {
       OpenOrder,
       enviarPedido,
+      removerPedido,
     }
   },
 

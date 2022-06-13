@@ -307,9 +307,8 @@
                           >
                             <date-picker
                               v-model="form.data_radio_difusao"
-                              class="mb-1"
+                              class="form-control mb-1"
                               value-type="format"
-                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -325,9 +324,8 @@
                           >
                             <date-picker
                               v-model="form.prazo_radio_difusao"
-                              class="mb-1"
+                              class="form-control mb-1"
                               value-type="format"
-                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -347,9 +345,8 @@
                           >
                             <date-picker
                               v-model="form.data_seguros"
-                              class="mb-1"
+                              class="form-control mb-1"
                               value-type="format"
-                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -367,9 +364,8 @@
                           >
                             <date-picker
                               v-model="form.prazo_seguros"
-                              class="mb-1"
+                              class="form-control mb-1"
                               value-type="format"
-                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -578,6 +574,7 @@ export default {
       file: null,
       userData: JSON.parse(localStorage.getItem('userData')),
       form: new Form({
+        id: this.$route.params.id,
         modelo: null,
         marca_id: null,
         descricao: '',
@@ -639,7 +636,7 @@ export default {
     submitViatura() {
       this.$Progress.start()
       this.form
-        .post('/api/viaturas')
+        .put(`/api/viaturas/${this.$route.params.id}`)
         .then(response => {
           this.$swal.fire({
             icon: 'success',

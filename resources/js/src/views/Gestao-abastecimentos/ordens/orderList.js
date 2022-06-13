@@ -16,7 +16,7 @@ export default function useOrdersList() {
   const tableColumns = [
     { key: 'cogido_ordem', sortable: true },
     { key: 'data_de_emissao', sortable: true },
-    { key: 'bomba', sortable: true },
+    { key: 'bombas.nome_bombas', sortable: true },
     { key: 'status', sortable: true },
     { Key: 'emitida_por', sortable: true },
     { key: 'acções' },
@@ -86,7 +86,7 @@ export default function useOrdersList() {
   const resolveOrdersStatusVariant = status => {
     if (status === 'pendente') return 'warning'
     if (status === 'aprovada') return 'success'
-    if (status === 'cancelada') return 'secondary'
+    if (status === 'cancelada') return 'danger'
     return 'primary'
   }
 

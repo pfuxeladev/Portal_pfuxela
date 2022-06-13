@@ -120,6 +120,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+>>>>>>> 9dd214be4e5c7a665912e671259489ee4ac9c46e
 //
 //
 //
@@ -1109,6 +1118,30 @@ var render = function () {
                       1
                     )
                   : _vm._e(),
+<<<<<<< HEAD
+=======
+                _vm._v(" "),
+                _vm.SupplyData.estado === "Autorizado"
+                  ? _c(
+                      "span",
+                      [
+                        _c(
+                          "b-button",
+                          {
+                            attrs: { variant: "outline-success" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.Aprovar(_vm.SupplyData.refs)
+                              },
+                            },
+                          },
+                          [_vm._v("\n              Reenviar\n              ")]
+                        ),
+                      ],
+                      1
+                    )
+                  : _vm._e(),
+>>>>>>> 9dd214be4e5c7a665912e671259489ee4ac9c46e
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [

@@ -15,6 +15,7 @@ use App\Models\Bombas;
 use App\Models\combustivelBomba;
 use App\Models\ordem_viatura;
 use App\Models\OrdemViaturaRota;
+use App\Models\responsavelBombas;
 use App\Models\Rota;
 use App\Models\rotaViatura;
 use Illuminate\Support\Str;
@@ -122,6 +123,7 @@ class AbastecimentoController extends Controller
             'qtd_abastecida' => $request->qtd_abastecer,
             'preco_cunsumo' => $preco,
             'user_id' => auth()->user()->id,
+            'justificacao'=>$request->observacao,
         ]);
 
         //abastecer por rota
@@ -324,7 +326,31 @@ class AbastecimentoController extends Controller
             $abastecimento_extra->createdBy = auth()->user()->id;
             $abastecimento_extra->save();
 
+            if ($ordem) {
+                $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $ordem->id)->first();
+
+                $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+                foreach ($responsavel as $key => $bombas_mail) {
+                  $data["email"] = 
+                }
+
+                    $data["email"] = 'supportdesk@pfuxela.co.mz';
+                    $data["title"] = "info@pfuxela.co.mz";
+                    $data["body"] = "Teste";
+
+                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+
+                Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                    $message->from(env('MAIL_USERNAME'));
+                    $message->to($data["email"], $data["email"])
+                            ->subject($data["title"])
+                            ->attachData($pdf->output(), "ordem.pdf");
+                });
+            }
+
             return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
+
         } catch (\Exception $e) {
             return response()->json(['erro' => 'Erro! Ocorreu algum problema contacte o administrador'], 421);
         }
@@ -361,6 +387,8 @@ class AbastecimentoController extends Controller
 
         return response()->json($abastecimento_extra);
     }
+
+
     public function update(Request $request, $id)
     {
         $ordemViatura = OrdemViaturaRota::with(['rota.projecto', 'viatura'])->findOrFail($id);

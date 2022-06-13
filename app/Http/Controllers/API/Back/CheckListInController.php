@@ -23,8 +23,8 @@ class CheckListInController extends Controller
     public function index()
     {
         return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy(request('sortBy'), 'ASC')->paginate(request('perPage'));
-    }
 
+    }
   function listViaturaFora(){
       return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', 'OUT')->where('viaturas.id', '!=', 'checklist_out.viatura_id')->get();
   }

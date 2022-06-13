@@ -1375,7 +1375,11 @@ var render = function () {
                             )
                           : _vm._e(),
                         _vm._v(" "),
+<<<<<<< HEAD
                         data.item.estado !== "Aberta"
+=======
+                        data.item.estado === "Pendente"
+>>>>>>> 9dd214be4e5c7a665912e671259489ee4ac9c46e
                           ? _c(
                               "b-dropdown-item",
                               {

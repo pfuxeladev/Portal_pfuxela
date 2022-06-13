@@ -43,7 +43,7 @@
     <div class="row d-flex justify-content-center">
         <div class='offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='card'>
-                <img src="{{ asset('./images/pfuxelalogo.png') }}" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
+                <img src="/home2/pfuxelaco/Portal.pfuxela.co.mz/assets/img/PfuxelaLogo.png" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
                 <div class='card-header p-4'>
                     {{-- <img src='/home2/pfuxelaco/Portal.pfuxela.co.mz/assets/img/PfuxelaLogo.png'/> --}}
 
@@ -65,7 +65,7 @@
                             <h5 class='mb-1'>Da: <strong>Pfuxela Exhibitions Gallery<strong/></h5>
                             <div>Av. Paulo Samuel Kankomba</div>
                             <div>Maputo, Mozambique 1114</div>
-                            <div>Email: infor@pfuxela.co.mz</div>
+                            <div>Email: info@pfuxela.co.mz</div>
                             <div>Phone: +258 84 1000 170</div>
                         </div>
 

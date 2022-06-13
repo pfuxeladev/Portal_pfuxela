@@ -74,10 +74,27 @@ export default {
           .catch(error => reject(error))
       })
     },
+    // ReabrirOrdem
+    ReopenOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/ReabrirOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
 
+    // verOrdensAbertas
     getOpenOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.get(`/api/ordemAberta/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    removeLine(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/removeLine/${refs}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

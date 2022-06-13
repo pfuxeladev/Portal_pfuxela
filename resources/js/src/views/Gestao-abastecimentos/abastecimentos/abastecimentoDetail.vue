@@ -28,7 +28,7 @@
               >
                 <b-list-group>
                   <b-list-group-item><b>Requisitado por</b>: {{ SupplyData.created_by.name }}</b-list-group-item>
-                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.estado === 'pendente'">
+                  <b-list-group-item><b>Estado</b>: <span v-if="SupplyData.estado === 'Pendente'">
                     <b-badge variant="warning">Pendende</b-badge>
                   </span>
                     <span v-else-if="SupplyData.estado === 'Autorizado'">
@@ -96,7 +96,7 @@
         xl="2"
         md="2"
       >
-      <span v-if="SupplyData.estado ==='pendente'">
+      <span v-if="SupplyData.estado ==='Pendente'">
        <b-button
           variant="outline-success"
           @click="Aprovar(SupplyData.refs)"
@@ -104,16 +104,22 @@
           Autorizar
         </b-button>
       </span>
-
-
+        <span v-if="SupplyData.estado ==='Autorizado'">
+        <b-button
+                variant="outline-success"
+                @click="Aprovar(SupplyData.refs)"
+                >
+                Reenviar
+                </b-button>
+        </span>
       </b-col>
       <b-col
         cols="12"
         xl="2"
         md="2"
       >
-       <span v-if="SupplyData.estado ==='Cancelado'">
-       <b-button variant="warning">Reabrir</b-button>
+       <span v-if="SupplyData.estado ==='Cancelada'">
+       <b-button variant="warning" @click="reabrirOrdem(SupplyData.refs)">Reabrir</b-button>
       </span>
       <span v-else>
         <b-button
@@ -250,15 +256,79 @@ export default {
         }
       })
     }
-     function dateTime(value) {
+    function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
     function Reprovar(refs) {
-      store.dispatch('Supply/CancelarOrdem', { refs })
+      store.dispatch('Supply/CancelOrder', { refs })
         .then(res => {
-          console.log(res)
+          this.$emit('refetch-data')
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: res.data.success,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
+          })
+          router.push({ name: 'Orders' })
         }).catch(err => {
-          console.log(err)
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          } else if (err.response.status === 500) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: 'Erro do sistema contacte o administrador',
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
+        })
+    }
+
+    function reabrirOrdem(refs) {
+      store.dispatch('Supply/ReabrirOrdem', { refs })
+        .then(res => {
+          this.$emit('refetch-data')
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: res.data.success,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
+          })
+          router.push({ name: 'New-supply-order', params: { refs } })
+        })
+        .catch(err => {
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          } else if (err.response.status === 500) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: 'Erro do sistema contacte o administrador',
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
         })
     }
 
@@ -274,6 +344,7 @@ export default {
       Aprovar,
       Reprovar,
       dateTime,
+      reabrirOrdem,
     }
   },
 }

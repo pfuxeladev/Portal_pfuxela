@@ -22,7 +22,6 @@ class CreateOrdemViaturaRotasTable extends Migration
             $table->foreignIdFor(Rota::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->decimal('qtd', 5,2)->default(0);
             $table->decimal('preco_total', 8,2);
-            $table->text('justificacao')->nullable();
             $table->timestamps();
         });
     }
