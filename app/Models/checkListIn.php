@@ -22,8 +22,8 @@ class checkListIn extends Model
         return $this->belongsTo(motorista::class);
     }
 
-    function checkListOut(){
-        return $this->belongsTo(checkListOut::class);
+    function CheckListOut(){
+        return $this->belongsTo(CheckListOut::class);
     }
 
     function user(){
