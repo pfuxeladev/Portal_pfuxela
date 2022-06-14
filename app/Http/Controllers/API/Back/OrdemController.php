@@ -151,7 +151,7 @@ class OrdemController extends Controller
                 return $ordem->refs;
             }
         } catch (\Exception $e) {
-            return response()->json(['error' => 'erro na abertura da ordem', 'erro' => true]);
+            return response()->json(['error' => 'erro na abertura da ordem', 'erro' => true], 421);
         }
     }
 
@@ -194,7 +194,7 @@ class OrdemController extends Controller
                             'razao_abastecimento' => $item['observacao']
                         ]);
                     } else {
-                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err' => true]);
+                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err' => true], 421);
                     }
                 }
 
@@ -223,7 +223,7 @@ class OrdemController extends Controller
             }
             return response()->json(['success' => 'submetido com sucesso', 'err' => false]);
         } catch (\Throwable $th) {
-            return response()->json(['error' => 'Erro no insercao de pedido de abastecimento', 'err' => true]);
+            return response()->json(['error' => 'Erro no insercao de pedido de abastecimento', 'err' => true], 421);
         }
     }
 
