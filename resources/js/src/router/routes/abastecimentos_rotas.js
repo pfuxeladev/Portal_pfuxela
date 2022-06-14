@@ -49,6 +49,14 @@ export default
     },
   },
   {
+    path: '/Supply/:id/Reports',
+    name: 'Fuel Reports',
+    component: () => import('@/views/Gestao-abastecimentos/bombas/bombasDetails.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/Projects',
     name: 'Projects',
     component: () => import('@/views/Gestao-abastecimentos/projectos/lista.vue'),

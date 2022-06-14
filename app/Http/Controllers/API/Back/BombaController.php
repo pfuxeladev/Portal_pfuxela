@@ -118,9 +118,12 @@ class BombaController extends Controller
         $responsavel->contacto_alt = $request->contacto_alt;
         $responsavel->save();
     }
-    public function show(Bombas $bombas)
+    public function show($id)
     {
-        //
+        $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
+
+        return response()->json($bombas, 200);
+
     }
 
     /**

@@ -309,59 +309,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -527,9 +474,12 @@ __webpack_require__.r(__webpack_exports__);
       this.editMode = true;
     },
     openDetails: function openDetails(b) {
-      this.details = b; //   document.getElementById('ResponsavelBomba').show()
-
-      this.$refs.responsavel.toggle('#open-dtl');
+      this.$router.push({
+        name: 'Fuel Reports',
+        params: {
+          id: b.id
+        }
+      });
     },
     onUpdateForm: function onUpdateForm() {
       var _this5 = this;
@@ -968,7 +918,7 @@ var render = function () {
                                     },
                                   },
                                 },
-                                [_c("i", { staticClass: "fas fa-users" })]
+                                [_c("i", { staticClass: "fas fa-folder-open" })]
                               ),
                               _vm._v(" "),
                               _c(
@@ -1455,146 +1405,6 @@ var render = function () {
                   2
                 ),
               ]
-            ),
-            _vm._v(" "),
-            _c(
-              "b-modal",
-              {
-                ref: "responsavel",
-                attrs: {
-                  id: "ResponsavelBomba",
-                  size: "lg",
-                  "hide-footer": "",
-                  title: "Responsavel da bomba",
-                },
-              },
-              [
-                _c(
-                  "b-card",
-                  [
-                    _c(
-                      "b-row",
-                      _vm._l(_vm.details.responsavel, function (responsaveis) {
-                        return _c(
-                          "b-col",
-                          {
-                            key: responsaveis.id,
-                            attrs: { cols: "6", md: "6" },
-                          },
-                          [
-                            _c(
-                              "b-list-group",
-                              [
-                                _c("b-list-group-item", [
-                                  _vm._v("Nome: " + _vm._s(responsaveis.nome)),
-                                ]),
-                                _vm._v(" "),
-                                _c("b-list-group-item", [
-                                  _vm._v(
-                                    "Email: " + _vm._s(responsaveis.email_bomba)
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c("b-list-group-item", [
-                                  _vm._v(
-                                    "Contacto: " + _vm._s(responsaveis.contacto)
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c("b-list-group-item", [
-                                  _vm._v(
-                                    "Contacto alternativo:\n                  " +
-                                      _vm._s(responsaveis.contacto_alt)
-                                  ),
-                                ]),
-                              ],
-                              1
-                            ),
-                          ],
-                          1
-                        )
-                      }),
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-form",
-                      [
-                        _c(
-                          "b-row",
-                          { staticClass: "mt-1" },
-                          [
-                            _c(
-                              "b-col",
-                              { attrs: { cols: "12", md: "12" } },
-                              [
-                                _c(
-                                  "b-list-group",
-                                  _vm._l(
-                                    _vm.details.combustivel_bomba,
-                                    function (comb) {
-                                      return _c(
-                                        "b-list-group-item",
-                                        { key: comb.id },
-                                        [
-                                          _c(
-                                            "div",
-                                            { staticClass: "form-group" },
-                                            [
-                                              _c(
-                                                "label",
-                                                {
-                                                  attrs: { for: "combustivel" },
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        " +
-                                                      _vm._s(
-                                                        comb.combustivel
-                                                          .tipo_combustivel
-                                                      ) +
-                                                      "\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("b-form-input", {
-                                                model: {
-                                                  value: comb.preco_actual,
-                                                  callback: function ($$v) {
-                                                    _vm.$set(
-                                                      comb,
-                                                      "preco_actual",
-                                                      $$v
-                                                    )
-                                                  },
-                                                  expression:
-                                                    "comb.preco_actual",
-                                                },
-                                              }),
-                                            ],
-                                            1
-                                          ),
-                                        ]
-                                      )
-                                    }
-                                  ),
-                                  1
-                                ),
-                              ],
-                              1
-                            ),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                  ],
-                  1
-                ),
-              ],
-              1
             ),
           ],
           1

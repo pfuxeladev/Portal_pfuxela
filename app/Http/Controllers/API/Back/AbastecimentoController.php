@@ -20,6 +20,9 @@ use App\Models\Rota;
 use App\Models\rotaViatura;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use PDF;
+use Mail;
+use Illuminate\Support\Facades\Storage;
 
 class AbastecimentoController extends Controller
 {
@@ -70,7 +73,8 @@ class AbastecimentoController extends Controller
         return 0;
     }
 
-    function getBomba($refs){
+    function getBomba($refs)
+    {
         $bomba = Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->first();
 
         return response()->json($bomba);
@@ -91,28 +95,28 @@ class AbastecimentoController extends Controller
 
         $uuid = Str::uuid()->toString();
 
-        $ordem = Ordem::where('refs',$request->ordem_id)->first();
+        $ordem = Ordem::where('refs', $request->ordem_id)->first();
 
 
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
-           return response()->json(['erro'=>'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
+            return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
 
         $preco = 0;
 
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
-        ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
+            ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
 
         if ($combustivel) {
             if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
                 # code...
                 $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
-            }else {
-                return response()->json(['erro', 'A Bomba nao tem '.$viatura->tipo_combustivel.' so pode abastecer '.$combustivel->tipo_combustivel], 421);
+            } else {
+                return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
             }
-        }else{
-            return response()->json(['erro'=> 'A Bomba nao tem '.$viatura->tipo_combustivel], 421);
+        } else {
+            return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
 
 
@@ -123,7 +127,7 @@ class AbastecimentoController extends Controller
             'qtd_abastecida' => $request->qtd_abastecer,
             'preco_cunsumo' => $preco,
             'user_id' => auth()->user()->id,
-            'justificacao'=>$request->observacao,
+            'justificacao' => $request->observacao,
         ]);
 
         //abastecer por rota
@@ -143,14 +147,14 @@ class AbastecimentoController extends Controller
 
                 // return $qtdNecessaria;
 
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de '.$qtdNecessaria], 421);
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de ' . $qtdNecessaria], 421);
             }
 
             $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt,
                 'qtd' => $request->qtd_abastecer,
                 'preco_total' => $preco,
-                'justificacao'=>$request->observacao,
+                'justificacao' => $request->observacao,
             ]);
         }
 
@@ -176,39 +180,38 @@ class AbastecimentoController extends Controller
         return response()->json($ordem_viatura, 200);
     }
     // remover linha
-    function removeLine($refs){
+    function removeLine($refs)
+    {
         try {
             $ordem = ordem::where('refs', $refs)->first();
-        $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
-        foreach ($ordem_viatura as $key => $ordVi) {
+            $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
+            foreach ($ordem_viatura as $key => $ordVi) {
 
-            $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
-            $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $ordVi->qtd_abastecida);
-            $viatura->update();
+                $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
+                $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $ordVi->qtd_abastecida);
+                $viatura->update();
 
-            $ordem_viatura_rota = OrdemViaturaRota::where('ordem_viatura_id', $ordVi->id)->delete();
-            $ordVi->delete();
-        }
-        return response()->json(['success'=>'removido pode reabastecer a viatura'], 200);
+                $ordem_viatura_rota = OrdemViaturaRota::where('ordem_viatura_id', $ordVi->id)->delete();
+                $ordVi->delete();
+            }
+            return response()->json(['success' => 'removido pode reabastecer a viatura'], 200);
         } catch (\Exception $e) {
-            return response()->json(['erro'=>'Erro! '.$e->getMessage()], 421);
+            return response()->json(['erro' => 'Erro! ' . $e->getMessage()], 421);
         }
-
-
     }
     // submeter a ordem apos preenchida
     function submeterAbst(Request $request)
     {
-       $totalAbst = 0;
-       try {
-      foreach ($request->abastecimento as $key => $abst) {
-          $totalAbst += $abst['qtd_abastecida'];
-      }
+        $totalAbst = 0;
+        try {
+            foreach ($request->abastecimento as $key => $abst) {
+                $totalAbst += $abst['qtd_abastecida'];
+            }
 
-        $ordem = Ordem::where('id', $abst['ordem_id'])->first();
+            $ordem = Ordem::where('id', $abst['ordem_id'])->first();
 
 
-        $abastecimento = new abastecimento();
+            $abastecimento = new abastecimento();
 
             $uuid = Str::uuid()->toString();
 
@@ -236,12 +239,10 @@ class AbastecimentoController extends Controller
                 $ordem->estado = 'Pendente';
                 $ordem->update();
             }
-            return response()->json(['success'=>'ordem submetida com sucesso aguarde a confirmacao'], 200);
-
+            return response()->json(['success' => 'ordem submetida com sucesso aguarde a confirmacao'], 200);
         } catch (\Exception $e) {
-            return response()->json(['erro'=>'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema ou verifique os dados'], 421);
+            return response()->json(['erro' => 'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema ou verifique os dados'], 421);
         }
-
     }
 
     /**
@@ -262,6 +263,10 @@ class AbastecimentoController extends Controller
 
 
         $last_order = Ordem::latest()->first();
+
+
+
+
         if (!empty($last_order)) {
             $new_code = ($last_order->codigo_ordem + 1);
             $ordem->codigo_ordem = $new_code;
@@ -274,8 +279,29 @@ class AbastecimentoController extends Controller
         $ordem->createdBy = auth()->user()->id;
         $ordem->save();
 
-        // verificar disponibilidade da viatura
         $viatura = Viatura::where('id', $request->viatura_id)->first();
+        if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
+            return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
+
+        $preco = 0;
+
+        $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
+            ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
+
+        if ($combustivel) {
+            if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
+
+                $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
+            } else {
+                return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
+            }
+        } else {
+            return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
+        }
+
+
+        // verificar disponibilidade da viatura
+
         if ($viatura->capacidade_tanque < $request->qtd) {
             return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
         } else if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)) {
@@ -287,73 +313,75 @@ class AbastecimentoController extends Controller
             $viatura->update();
         }
 
-        try {
-            $ordem_viatura->viatura_id = $request->viatura_id;
-            $ordem_viatura->ordem_id = $ordem->id;
-            $ordem_viatura->qtd_abastecida = $request->qtd;
-            $ordem_viatura->user_id = auth()->user()->id;
-            $ordem_viatura->save();
+        // try {
+        $ordem_viatura->viatura_id = $request->viatura_id;
+        $ordem_viatura->ordem_id = $ordem->id;
+        $ordem_viatura->qtd_abastecida = $request->qtd;
+        $ordem_viatura->preco_cunsumo = $preco;
+        $ordem_viatura->user_id = auth()->user()->id;
+        $ordem_viatura->save();
 
-            $abastecimento_extra = new abastecimentoExtra();
+        $abastecimento_extra = new abastecimentoExtra();
 
-            $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
-            if (!empty($abastecimento_ant)) {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->bombas_id = $request->bombas_id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
-                $abastecimento->qtd_rec = $request->qtd;
-                $abastecimento->save();
+        $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
+        if (!empty($abastecimento_ant)) {
+            $abastecimento->ordem_id = $ordem->id;
+            $abastecimento->bombas_id = $request->bombas_id;
+            $abastecimento->refs = $uuid;
+            $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
+            $abastecimento->qtd_rec = $request->qtd;
+            $abastecimento->user_id = auth()->user()->id;
+            $abastecimento->save();
+            $abastecimento_extra->abastecimento_id = $abastecimento->id;
+        } else {
+            $abastecimento->ordem_id = $ordem->id;
+            $abastecimento->bombas_id = $request->bombas_id;
+            $abastecimento->refs = $uuid;
+            $abastecimento->qtd_ant = 0;
+            $abastecimento->qtd_rec = $request->qtd;
+            $abastecimento->user_id = auth()->user()->id;
+            $abastecimento->save();
 
-                $abastecimento_extra->abastecimento_id = $abastecimento->id;
-            } else {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->bombas_id = $request->bombas_id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = 0;
-                $abastecimento->qtd_rec = $request->qtd;
-                $abastecimento->save();
-
-                $abastecimento_extra->abastecimento_id = $abastecimento->id;
-            }
-
-            $abastecimento_extra->viatura_id = $request->viatura_id;
-            $abastecimento_extra->motorista_id = $request->motorista_id;
-            $abastecimento_extra->qtd = $request->qtd;
-            $abastecimento_extra->horaSaida = $request->horaSaida;
-            $abastecimento_extra->destino = $request->destino;
-            $abastecimento_extra->descricao = $request->descricao;
-            $abastecimento_extra->createdBy = auth()->user()->id;
-            $abastecimento_extra->save();
-
-            if ($ordem) {
-                $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $ordem->id)->first();
-
-                $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
-                foreach ($responsavel as $key => $bombas_mail) {
-                  $data["email"] = $bombas_mail->email_bombas;
-                }
-
-                    $data["email"] = 'supportdesk@pfuxela.co.mz';
-                    $data["title"] = "info@pfuxela.co.mz";
-                    $data["body"] = "Teste";
-
-                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-                $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-
-                Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                    $message->from(env('MAIL_USERNAME'));
-                    $message->to($data["email"], $data["email"])
-                            ->subject($data["title"])
-                            ->attachData($pdf->output(), "ordem.pdf");
-                });
-            }
-
-            return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
-
-        } catch (\Exception $e) {
-            return response()->json(['erro' => 'Erro! Ocorreu algum problema contacte o administrador'], 421);
+            $abastecimento_extra->abastecimento_id = $abastecimento->id;
         }
+
+        $abastecimento_extra->viatura_id = $request->viatura_id;
+        $abastecimento_extra->motorista_id = $request->motorista_id;
+        $abastecimento_extra->qtd = $request->qtd;
+        $abastecimento_extra->horaSaida = $request->horaSaida;
+        $abastecimento_extra->destino = $request->destino;
+        $abastecimento_extra->descricao = $request->descricao;
+        $abastecimento_extra->createdBy = auth()->user()->id;
+        $abastecimento_extra->save();
+
+        if ($ordem) {
+            $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $ordem->id)->first();
+
+            $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+            foreach ($responsavel as $key => $bombas_mail) {
+                $data["email"] = $bombas_mail->email_bombas;
+            }
+
+            $data["email"] = 'supportdesk@pfuxela.co.mz';
+            $data["title"] = "info@pfuxela.co.mz";
+            $data["body"] = "Teste";
+
+            $pdf = PDF::loadView('orderMail.ExtraOrder', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+            $path = Storage::put('public/pdf/Ordem_abastecimento_extra.pdf', $pdf->output());
+
+            Mail::send('orderMail.ExtraOrder', compact('ordem'), function ($message) use ($data, $pdf) {
+                $message->from(env('MAIL_USERNAME'));
+                $message->to($data["email"], $data["email"])
+                    ->subject($data["title"])
+                    ->attachData($pdf->output(), "ordem.pdf");
+            });
+        }
+
+        return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
+
+        // } catch (\Exception $e) {
+        //     return response()->json(['erro' => 'Erro! Ocorreu algum problema contacte o administrador'], 421);
+        // }
     }
 
     public function show($refs)
@@ -378,14 +406,20 @@ class AbastecimentoController extends Controller
         }
     }
 
-    public function requestRecDetails(Request $request, $refs)
+    public function requestRecDetails($refs)
     {
+        $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-        $order = Ordem::where('ordems.refs', $refs)->first();
+        $data["email"] = "leochima@gmail.com";
+        $data["title"] = "From ItSolutionStuff.com";
+        $data["body"] = "This is Demo";
 
-        $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $order->id)->first();
+        $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'Times New Roman']);
+        Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
-        return response()->json($abastecimento_extra);
+        return $pdf->download('ordem_abastecimento.pdf');
+
+
     }
 
 

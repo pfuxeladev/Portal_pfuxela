@@ -42,7 +42,6 @@
             <div class='card'>
                 <img src="{{asset('images/pfuxelalogo.png')}}" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
                 <div class='card-header p-4'>
-                    {{-- <img src='/home2/pfuxelaco/Portal.pfuxela.co.mz/assets/img/PfuxelaLogo.png'/> --}}
 
                     <div style="margin-left: 20px">
                         <h3 class='mb-0 card-title'>ORDEM DE ABASTECIMENTO #

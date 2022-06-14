@@ -91,7 +91,7 @@
                       class="btn btn-sm btn-outline-primary"
                       @click="openDetails(b)"
                     >
-                      <i class="fas fa-users" />
+                      <i class="fas fa-folder-open" />
                     </span>
                     <span
                       class="btn btn-sm btn-outline-warning ml-1"
@@ -283,59 +283,6 @@
             </b-row>
           </form>
         </b-modal>
-        <b-modal
-          id="ResponsavelBomba"
-          ref="responsavel"
-          size="lg"
-          hide-footer
-          title="Responsavel da bomba"
-        >
-          <b-card>
-            <b-row>
-              <b-col
-                v-for="responsaveis in details.responsavel"
-                :key="responsaveis.id"
-                cols="6"
-                md="6"
-              >
-                <b-list-group>
-                  <b-list-group-item
-                    >Nome: {{ responsaveis.nome }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Email: {{ responsaveis.email_bomba }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Contacto: {{ responsaveis.contacto }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Contacto alternativo:
-                    {{ responsaveis.contacto_alt }}</b-list-group-item
-                  >
-                </b-list-group>
-              </b-col>
-            </b-row>
-            <b-form>
-              <b-row class="mt-1">
-                <b-col cols="12" md="12">
-                  <b-list-group>
-                    <b-list-group-item
-                      v-for="comb in details.combustivel_bomba"
-                      :key="comb.id"
-                    >
-                      <div class="form-group">
-                        <label for="combustivel">
-                          {{ comb.combustivel.tipo_combustivel }}
-                        </label>
-                        <b-form-input v-model="comb.preco_actual" />
-                      </div>
-                    </b-list-group-item>
-                  </b-list-group>
-                </b-col>
-              </b-row>
-            </b-form>
-          </b-card>
-        </b-modal>
       </b-card>
     </section>
   </div>
@@ -522,9 +469,7 @@ export default {
       this.editMode = true;
     },
     openDetails(b) {
-      this.details = b;
-      //   document.getElementById('ResponsavelBomba').show()
-      this.$refs.responsavel.toggle('#open-dtl');
+      this.$router.push({ name: 'Fuel Reports', params: { id: b.id } })
     },
     onUpdateForm() {
       this.$Progress.start();

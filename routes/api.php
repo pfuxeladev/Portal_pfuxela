@@ -62,7 +62,7 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
     Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
-    Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'AbstRecDetails']);
+    Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
 
     Route::apiResources(
         ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
@@ -93,6 +93,7 @@ Route::get('ordemAberta/{refs}', [App\Http\Controllers\API\Back\OrdemController:
 Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'submeterAbst']);
 
 Route::get('imprimirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'imprimirOrdem']);
+Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return auth()->user();
