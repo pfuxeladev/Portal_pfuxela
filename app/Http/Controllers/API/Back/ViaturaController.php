@@ -102,6 +102,7 @@ class ViaturaController extends Controller
         $viatura->kilometragem = $request->kilometragem;
         $viatura->tipo_combustivel = $combustivel->tipo_combustivel;
         $viatura->marca()->associate($request->marca_id);
+        $viatura->estado = true;
         $viatura->createdBy = auth()->user()->id;
         // $viatura->updatedBy = auth()->user()->id;
         $viatura->save();

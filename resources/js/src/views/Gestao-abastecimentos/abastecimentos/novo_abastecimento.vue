@@ -411,11 +411,11 @@ export default {
       refs: router.currentRoute.params.refs,
     })
       .then(response => {
-        OpenOrder.value = response.data
+        this.OpenOrder = response.data
       })
       .catch(error => {
         if (error.response.status === 404) {
-          OpenOrder.value = undefined
+          this.OpenOrder = undefined
         }
       })
 
