@@ -86,7 +86,7 @@ export default {
     // verOrdensAbertas
     getOpenOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
-        axios.get(`/api/Ordem/${refs}`)
+        axios.get(`/api/Ordems/${refs}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
