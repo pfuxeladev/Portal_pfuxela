@@ -2917,14 +2917,14 @@ __webpack_require__.r(__webpack_exports__);
 
 var heightTransition = {
   /*
-      HowTo:
+     HowTo:
       1. Add dynamic style to element and set style as `trHeight`
       2. Set transition speed using `transition: 0.35s height;` <= you can use appropriate value;
       3. Optionally you can set `overflow: hidden;` to hide element overflow while height is animated.
       4. Set initial height using `trSetHeight` before any operation. [mounted hook is recommended - You can use `ref` for dynamic contents]
       5. Toggle height using height operations 🍻
       6. Toggle usage of $nextTick for height operations is any issue occur [experimental] 🔬
-    */
+   */
   data: function data() {
     return {
       trHeight: null

@@ -39,7 +39,9 @@ class ProjectoController extends Controller
              'address_xtense'=>$project['address_xtense'],
              'contact_emg'=>$project['contact_emg'],
              'nrPassagers'=>$project['nrPassagers'],
-             'recomendation'=>$project['recomendation']],
+             'recomendation'=>$project['recomendation'],
+             'createdBy'=>auth()->user()->id,
+             'updatedBy'=>auth()->user()->id],
            );
      }
      return $projecto;

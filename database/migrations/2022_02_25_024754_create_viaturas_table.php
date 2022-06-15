@@ -19,7 +19,7 @@ class CreateViaturasTable extends Migration
             $table->string('matricula')->unique();
             $table->year('ano_fabrico');
             $table->string('nr_chassi')->unique()->nullable();
-            $table->integer('nr_motor')->unique()->nullable();
+            $table->string('nr_motor')->unique()->nullable();
             $table->string('nr_livrete')->nullable();
             $table->integer('lotacao')->nullable();
             $table->string('capacidade_tanque');
