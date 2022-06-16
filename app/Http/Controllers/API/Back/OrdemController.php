@@ -61,7 +61,7 @@ class OrdemController extends Controller
               $data["email"] = $bombas_mail->email_bomba;
               $data["title"] = "info@pfuxela.co.mz";
               $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
-              
+
                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
                $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
@@ -113,7 +113,7 @@ class OrdemController extends Controller
     function ReabrirOrdem($refs){
         try {
             $ordem = Ordem::where('refs', $refs)->first();
-            $ordem->estado = 'aberta';
+            $ordem->estado = 'Aberta';
             $ordem->approvedBy = auth()->user()->id;
             $ordem->update();
 

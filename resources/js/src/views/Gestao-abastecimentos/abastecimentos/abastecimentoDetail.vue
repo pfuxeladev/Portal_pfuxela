@@ -120,10 +120,10 @@
         xl="2"
         md="2"
       >
-       <span v-if="SupplyData.estado ==='Cancelada'">
+       <span v-if="SupplyData.estado ==='Autorizado'">
        <b-button variant="warning" @click="reabrirOrdem(SupplyData.refs)">Reabrir</b-button>
       </span>
-      <span v-else>
+      <span v-if="SupplyData.estado === 'Pendente'">
         <b-button
           variant="outline-danger"
           @click="Reprovar(SupplyData.refs)"
@@ -299,7 +299,7 @@ export default {
     }
 
     function reabrirOrdem(refs) {
-      store.dispatch('Supply/ReabrirOrdem', { refs })
+      store.dispatch('Supply/ReopenOrder', { refs })
         .then(res => {
           this.$emit('refetch-data')
           toast({

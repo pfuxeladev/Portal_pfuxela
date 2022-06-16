@@ -311,7 +311,7 @@ __webpack_require__.r(__webpack_exports__);
     function reabrirOrdem(refs) {
       var _this3 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReabrirOrdem', {
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReopenOrder', {
         refs: refs
       }).then(function (res) {
         _this3.$emit('refetch-data');
@@ -1155,7 +1155,7 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Cancelada"
+                _vm.SupplyData.estado === "Autorizado"
                   ? _c(
                       "span",
                       [
@@ -1174,7 +1174,10 @@ var render = function () {
                       ],
                       1
                     )
-                  : _c(
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.SupplyData.estado === "Pendente"
+                  ? _c(
                       "span",
                       [
                         _c(
@@ -1191,7 +1194,8 @@ var render = function () {
                         ),
                       ],
                       1
-                    ),
+                    )
+                  : _vm._e(),
               ]),
             ],
             1

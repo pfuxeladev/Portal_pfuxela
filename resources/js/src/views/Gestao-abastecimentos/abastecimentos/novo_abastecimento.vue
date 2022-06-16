@@ -149,7 +149,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="bombas.estado === 'Aberta'"
+        v-if="bombas.estado === 'Aberta' || bombas.estado === 'Pendente'"
         cols="12"
       >
         <b-row>
@@ -205,7 +205,7 @@
                 <b-button
                   sm
                   variant="outline-danger"
-                  @click="removerPedido(order.ordem)"
+                  @click="removerPedido(order)"
                 >
                   <i class="fas fa-remove" />
                 </b-button>
@@ -382,6 +382,12 @@ export default {
             title: err.response.data.erro,
           })
           this.$Progress.fail()
+        } else if (err.response.status === 422) {
+          this.$swal.fire({
+            icon: 'error',
+            title: `${err.response.data.errors.viatura_id}<br/>${err.response.data.errors.rota_id}<br/>${err.response.data.errors.turno}<br/>${err.response.data.errors.qtd_abastecer}`,
+          })
+          this.$Progress.fail()
         }
       })
     },
@@ -453,15 +459,15 @@ export default {
                   variant: 'success',
                 },
               })
-              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
-              window.location.reload()
+            //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+            //   window.location.reload()
             })
             .catch(err => {
               if (err) {
                 toast({
                   component: ToastificationContent,
                   props: {
-                    title: err.response.data.erro,
+                    title: err.response.data.error,
                     icon: 'AlertTriangleIcon',
                     variant: 'danger',
                   },
@@ -474,9 +480,9 @@ export default {
     //   console.log(order)
     }
     function removerPedido(order) {
-      // console.log(order.refs)
+      console.log(order)
       store.dispatch('Supply/removeLine', {
-        refs: order.refs,
+        refs: order.ordem_id,
       })
         .then(response => {
           toast({

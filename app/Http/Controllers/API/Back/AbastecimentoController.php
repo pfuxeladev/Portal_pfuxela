@@ -183,7 +183,7 @@ class AbastecimentoController extends Controller
     function removeLine($refs)
     {
         try {
-            $ordem = ordem::where('refs', $refs)->first();
+            $ordem = ordem::where('id', $refs)->first();
             $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
             foreach ($ordem_viatura as $key => $ordVi) {
 
@@ -204,6 +204,9 @@ class AbastecimentoController extends Controller
     {
         $totalAbst = 0;
         // try{
+            if (empty($request->ordem_viatura)) {
+                return response()->json(['erro' => 'Erro! Selecione pelos menos uma viatura'], 421);
+            }
             foreach ($request->ordem_viatura as $key => $abst) {
                 // return $abst['qtd_abastecida'];
                 $totalAbst += $abst['qtd_abastecida'];
