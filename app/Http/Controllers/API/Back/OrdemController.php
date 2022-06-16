@@ -61,18 +61,17 @@ class OrdemController extends Controller
               $data["email"] = $bombas_mail->email_bomba;
               $data["title"] = "info@pfuxela.co.mz";
               $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+              
+               $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+               $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+
+              Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                  $message->from(env('MAIL_USERNAME'));
+                  $message->to($data["email"], $data['email'])
+                          ->subject($data["title"])
+                          ->attachData($pdf->output(), "ordem.pdf");
+              });
             }
-
-
-          $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-          $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-
-          Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-              $message->from(env('MAIL_USERNAME'));
-              $message->to($data["email"], $data['email'])
-                      ->subject($data["title"])
-                      ->attachData($pdf->output(), "ordem.pdf");
-          });
 
         }
 

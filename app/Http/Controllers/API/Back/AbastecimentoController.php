@@ -203,7 +203,7 @@ class AbastecimentoController extends Controller
     function submeterAbst(Request $request)
     {
         $totalAbst = 0;
-        try{
+        // try{
             foreach ($request->ordem_viatura as $key => $abst) {
                 // return $abst['qtd_abastecida'];
                 $totalAbst += $abst['qtd_abastecida'];
@@ -241,9 +241,9 @@ class AbastecimentoController extends Controller
                 $ordem->update();
             }
             return response()->json(['success' => 'ordem submetida com sucesso aguarde a confirmacao'], 200);
-        } catch (\Exception $e) {
-            return response()->json(['erro' => 'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema ou verifique os dados'], 421);
-        }
+        // } catch (\Exception $e) {
+        //     return response()->json(['erro' => 'Erro! Ocorreu um erro na submissao da ordem contacte o administrador do sistema ou verifique os dados'], 421);
+        // }
     }
 
     /**
