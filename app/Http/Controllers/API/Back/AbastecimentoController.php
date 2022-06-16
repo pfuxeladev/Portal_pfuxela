@@ -209,7 +209,7 @@ class AbastecimentoController extends Controller
                 $totalAbst += $abst['qtd_abastecida'];
             }
 
-            $ordem = Ordem::where('id', $abst['ordem_id'])->first();
+            $ordem = Ordem::where('refs', $request->refs)->first();
 
 
             $abastecimento = new abastecimento();
