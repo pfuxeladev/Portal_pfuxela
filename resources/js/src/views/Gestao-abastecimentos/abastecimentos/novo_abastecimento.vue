@@ -415,11 +415,11 @@ export default {
       refs: router.currentRoute.params.refs,
     })
       .then(response => {
-        OpenOrder.value = response.data
+        this.OpenOrder = response.data
       })
       .catch(error => {
         if (error.response.status === 404) {
-          OpenOrder.value = undefined
+          this.OpenOrder = undefined
         }
       })
 
@@ -448,7 +448,7 @@ export default {
                 },
               })
               window.location.reload()
-              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+              this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
               if (err) {
