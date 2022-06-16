@@ -60,12 +60,11 @@
         :sort-desc.sync="isSortDirDesc"
       >
         <template #cell(estado)="data">
-            <!-- {{data.item.estado}} -->
-          <span v-if="data.item.estado==0">
+          <span v-if="data.item.estado == 0">
             <b-badge variant="warning">inactivo</b-badge>
           </span>
-          <span v-if="data.item.estado==1">
-            <b-badge variant="sucess">activo</b-badge>
+          <span v-if="data.item.estado == 1">
+            <b-badge variant="success">activo</b-badge>
           </span>
         </template>
         <!-- Column: Actions -->
@@ -87,13 +86,17 @@
               <span class="align-middle ml-50">Details</span>
             </b-dropdown-item>
 
-            <b-dropdown-item :to="{ name: 'cars-edit', params: { id: data.item.id } }">
+            <b-dropdown-item :to="{ name: 'Edit-car', params: { id: data.item.id } }">
               <feather-icon icon="EditIcon" />
-              <span class="align-middle ml-50">Edit</span>
+              <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
             <b-dropdown-item>
-              <feather-icon icon="PlusCircleIcon" />
-              <span class="align-middle ml-50">alocar rotas</span>
+              <feather-icon v-if="data.item.estado == 1" icon="CheckCircleIcon" />
+              <span class="align-middle ml-50">desactivar</span>
+            </b-dropdown-item>
+             <b-dropdown-item>
+              <feather-icon v-if="data.item.estado == 0" icon="CheckCircleIcon" />
+              <span class="align-middle ml-50">activar</span>
             </b-dropdown-item>
           </b-dropdown>
         </template>

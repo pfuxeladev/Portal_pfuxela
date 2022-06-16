@@ -256,6 +256,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -782,7 +785,7 @@ var render = function () {
                       ? _c(
                           "span",
                           [
-                            _c("b-badge", { attrs: { variant: "sucess" } }, [
+                            _c("b-badge", { attrs: { variant: "success" } }, [
                               _vm._v("activo"),
                             ]),
                           ],
@@ -855,7 +858,7 @@ var render = function () {
                           {
                             attrs: {
                               to: {
-                                name: "cars-edit",
+                                name: "Edit-car",
                                 params: { id: data.item.id },
                               },
                             },
@@ -864,7 +867,7 @@ var render = function () {
                             _c("feather-icon", { attrs: { icon: "EditIcon" } }),
                             _vm._v(" "),
                             _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Edit"),
+                              _vm._v("Editar"),
                             ]),
                           ],
                           1
@@ -873,12 +876,30 @@ var render = function () {
                         _c(
                           "b-dropdown-item",
                           [
-                            _c("feather-icon", {
-                              attrs: { icon: "PlusCircleIcon" },
-                            }),
+                            data.item.estado == 1
+                              ? _c("feather-icon", {
+                                  attrs: { icon: "CheckCircleIcon" },
+                                })
+                              : _vm._e(),
                             _vm._v(" "),
                             _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("alocar rotas"),
+                              _vm._v("desactivar"),
+                            ]),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-dropdown-item",
+                          [
+                            data.item.estado == 0
+                              ? _c("feather-icon", {
+                                  attrs: { icon: "CheckCircleIcon" },
+                                })
+                              : _vm._e(),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "align-middle ml-50" }, [
+                              _vm._v("activar"),
                             ]),
                           ],
                           1

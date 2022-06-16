@@ -33,40 +33,20 @@
                         <b-col cols="12" lg="3">
                           <b-form-group
                             id="input-group-1"
-                            label="Modelo:"
-                            label-for="input-1"
-                            description="Indique o modelo."
-                          >
-                            <b-form-input
-                              id="input-1"
-                              v-model="form.modelo"
-                              type="text"
-                              placeholder="Modelo"
-                            />
-                            <small
-                              v-if="form.errors.has('modelo')"
-                              class="alert text-danger"
-                              v-html="form.errors.get('modelo')"
-                            />
-                          </b-form-group>
-                        </b-col>
-                        <b-col cols="12" lg="3">
-                          <b-form-group
-                            id="input-group-1"
                             label="Descricao:"
                             label-for="input-1"
                             description="Descricao/especificacoes tecnicas da viatura."
                           >
                             <b-form-input
                               id="input-1"
-                              v-model="form.descricao"
+                              v-model="form.nome_viatura"
                               type="tecnicas"
                               placeholder="Descricao"
                             />
                             <small
-                              v-if="form.errors.has('descricao')"
+                              v-if="form.errors.has('nome_viatura')"
                               class="alert text-danger"
-                              v-html="form.errors.get('descricao')"
+                              v-html="form.errors.get('nome_viatura')"
                             />
                           </b-form-group>
                         </b-col>
@@ -180,7 +160,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker2"
-                              v-model="form.data_inspencao"
+                              v-model="form.viatura_document[0].data_inspencao"
                               locale="pt"
                               class="mb-1"
                             />
@@ -201,7 +181,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker2_1"
-                              v-model="form.prazo_inspencao"
+                              v-model="form.viatura_document[0].prazo_inspencao"
                               locale="pt"
                               class="mb-1"
                             />
@@ -224,7 +204,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker1"
-                              v-model="form.data_licenca"
+                              v-model="form.viatura_document[0].data_licenca"
                               locale="pt"
                               class="mb-1"
                             />
@@ -245,7 +225,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker1_1"
-                              v-model="form.prazo_licenca"
+                              v-model="form.viatura_document[0].prazo_licenca"
                               locale="pt"
                               class="mb-1"
                             />
@@ -268,7 +248,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker3"
-                              v-model="form.data_manifesto"
+                              v-model="form.viatura_document[0].data_manifesto"
                               locale="pt"
                               class="mb-1"
                             />
@@ -289,7 +269,7 @@
                               format="YYYY-MM-DD"
                               style="width: 100%"
                               id="example-datepicker3_1"
-                              v-model="form.prazo_manifesto"
+                              v-model="form.viatura_document[0].prazo_manifesto"
                               locale="pt"
                               class="mb-1"
                             />
@@ -306,16 +286,15 @@
                            description="Data de cadastro de radio difusao."
                           >
                             <date-picker
-                              v-model="form.data_radio_difusao"
-                              class="form-control mb-1"
+                              v-model="form.viatura_document[0].data_taxa_radio"
                               value-type="format"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
                             <small
-                              v-if="form.errors.has('data_radio_difusao')"
+                              v-if="form.errors.has('data_taxa_radio')"
                               class="alert text-danger"
-                              v-html="form.errors.get('data_radio_difusao')"
+                              v-html="form.errors.get('data_taxa_radio')"
                             />
                           </b-form-group>
                           <b-form-group
@@ -323,16 +302,15 @@
                             description="Prazo do documento radio difusao."
                           >
                             <date-picker
-                              v-model="form.prazo_radio_difusao"
-                              class="form-control mb-1"
+                              v-model="form.viatura_document[0].prazo_taxa_radio"
                               value-type="format"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
                             <small
-                              v-if="form.errors.has('prazo_radio_difusao')"
+                              v-if="form.errors.has('prazo_taxa_radio')"
                               class="alert text-danger"
-                              v-html="form.errors.get('prazo_radio_difusao')"
+                              v-html="form.errors.get('prazo_taxa_radio')"
                             />
                           </b-form-group>
                         </b-col>
@@ -344,8 +322,7 @@
                             description="Data de seguros automovel."
                           >
                             <date-picker
-                              v-model="form.data_seguros"
-                              class="form-control mb-1"
+                              v-model="form.viatura_document[0].data_seguros"
                               value-type="format"
                               format="YYYY-MM-DD"
                               style="width: 100%"
@@ -363,8 +340,7 @@
                             description="Prazo de seguros automovel."
                           >
                             <date-picker
-                              v-model="form.prazo_seguros"
-                              class="form-control mb-1"
+                              v-model="form.viatura_document[0].prazo_seguros"
                               value-type="format"
                               format="YYYY-MM-DD"
                               style="width: 100%"
@@ -440,7 +416,7 @@
                             label-for="input-14"
                           >
                             <v-select
-                              v-model="form.combustivel"
+                              v-model="form.tipo_combustivel"
                               label="tipo_combustivel"
                               :options="combustivel"
                               :reduce="(combustivel) => combustivel.id"
@@ -503,7 +479,7 @@
                       variant="success"
                       class="mr-2"
                       type="submit"
-                      >cadastrar <i class="fas fa-paper-plane" />
+                      >Actualizar <i class="fas fa-paper-plane" />
                     </b-button>
                   </b-col>
                 </b-row>
@@ -577,27 +553,30 @@ export default {
         id: this.$route.params.id,
         modelo: null,
         marca_id: null,
-        descricao: '',
+        nome_viatura: '',
         ano_fabrico: '',
         kilometragem: null,
-        combustivel: null,
+        tipo_combustivel: null,
         capacidade_tanque: null,
+        modelo_id: null,
         capacidade_media: '',
         lotacao: 2,
         nr_motor: '',
         nr_chassi: '',
         nr_livrete: '',
         matricula: '',
-        data_licenca: '',
-        data_inspencao: '',
-        data_manifesto: '',
-        data_radio_difusao: '',
-        data_seguros: '',
-        prazo_licenca: '',
-        prazo_inspencao: '',
-        prazo_manifesto: '',
-        prazo_radio_difusao: '',
-        prazo_seguros: '',
+        viatura_document: [{
+          data_licenca: '',
+          data_inspencao: '',
+          data_manifesto: '',
+          data_taxa_radio: '',
+          data_seguros: '',
+          prazo_licenca: '',
+          prazo_inspencao: '',
+          prazo_manifesto: '',
+          prazo_taxa_radio: '',
+          prazo_seguros: '',
+        }],
         documentos: [],
       }),
     }
@@ -606,6 +585,7 @@ export default {
   created() {
     this.getMarcas()
     this.getCombustivel()
+    this.getViatura()
   },
   methods: {
     getMarcas() {
@@ -633,6 +613,12 @@ export default {
         reader.readAsDataURL(this.file[i])
       }
     },
+    getViatura() {
+      this.$http.get(`/api/viaturas/${this.$route.params.id}`)
+        .then(res => {
+          this.form.fill(res.data)
+        })
+    },
     submitViatura() {
       this.$Progress.start()
       this.form
@@ -651,7 +637,7 @@ export default {
           })
         })
         .catch(error => {
-          if (error.response.data.status === 401) {
+          if (error.response.data.status === 421) {
             this.$swal.fire({
               icon: 'error',
               title: 'Erro ao tentar adicionar!',

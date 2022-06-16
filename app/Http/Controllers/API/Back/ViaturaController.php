@@ -186,50 +186,41 @@ class ViaturaController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $viatura = $this->viatura->findOrFail($id);
-        $this->validate($request, [
-            'modelo_id' => 'required|integer|exists:modelos,id',
-            'marca_id' => 'required|integer|exists:fabricantes,id',
-            'nome_viatura' => 'required|string',
-            'matricula' => 'required|string| unique:viaturas',
-            'nr_chassi' => 'required|string| unique:viaturas',
-            'nr_motor' => 'required|string| unique:viaturas',
-            'ano_fabrico' => 'required|date|before:created_at',
-            'capacidade_tanque' => 'required|integer',
-            'capacidade_media' => 'required|integer',
-            'data_inspencao' => 'required|date|before:created_at',
-            'data_manifesto' => 'required|date|before:created_at',
-            'data_seguros' => 'required|date|before:created_at',
-            'data_licenca' => 'required|date|before:created_at',
-            'data_taxa_radio' => 'required|date|before:created_at',
-        ]);
+        $viatura = Viatura::findOrFail($id);
+
         $viatura->matricula = $request->matricula;
         $viatura->nome_viatura = $request->nome_viatura;
         $viatura->nr_chassi = $request->nr_chassi;
         $viatura->nr_motor = $request->nr_motor;
         $viatura->nr_livrete = $request->nr_livrete;
         $viatura->ano_fabrico = $request->ano_fabrico;
+        $viatura->lotacao = $request->lotacao;
         $viatura->capacidade_tanque = $request->capacidade_tanque;
         $viatura->capacidade_media = $request->capacidade_media;
         $viatura->modelo()->associate($request->modelo_id);
-        $viatura->fabricante()->associate($request->fabricante_id);
+        $viatura->marca()->associate($request->marca_id);
         $viatura->createdBy()->associate(auth()->user()->id);
-        $viatura->data_inspencao = $request->data_inspencao;
-        $viatura->data_manifesto = $request->data_manifesto;
-        $viatura->data_seguros = $request->data_seguros;
-        $viatura->data_licenca = $request->data_licenca;
-        $viatura->data_taxa_radio = $request->data_taxa_radio;
         $viatura->update();
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Viatura  $viatura
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Viatura $viatura)
-    {
-        //
+        if ($viatura) {
+            foreach ($request->viatura_document as $key => $document) {
+                $viatura_document = $viatura->viaturaDocument()->where('viatura_id', $viatura->id)->update([
+                    'data_licenca'=>$document['data_licenca'],
+                    'data_inspencao'=>$document['data_inspencao'],
+                    'data_manifesto'=>$document['data_manifesto'],
+                    'data_taxa_radio'=>$document['data_taxa_radio'],
+                    'data_seguros'=>$document['data_seguros'],
+                    'prazo_licenca'=>$document['prazo_licenca'],
+                    'prazo_inspencao'=>$document['prazo_inspencao'],
+                    'prazo_manifesto'=>$document['prazo_manifesto'],
+                    'prazo_taxa_radio'=>$document['prazo_taxa_radio'],
+                    'prazo_seguros'=>$document['prazo_seguros'],
+                ]);
+
+            }
+                return response()->json(['success' => 'cadastrado com sucesso'], 200);
+        } else{
+            return response()->json(['message' => false, 'error' => 'erro na insercao de dados verifique os campos'], 421);
+        }
     }
 }

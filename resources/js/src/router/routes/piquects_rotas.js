@@ -17,6 +17,14 @@ export default
     },
   },
   {
+    path: '/Picket/Cars/:id/Car-edit',
+    name: 'Edit-car',
+    component: () => import('@/views/Gestao-pickete/Viaturas/viaturaEditForm.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Picket/Cars/:id/details',
     name: 'cars-details',
     component: () => import('@/views/Gestao-pickete/Viaturas/viatura-details.vue'),
