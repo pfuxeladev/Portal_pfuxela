@@ -1267,8 +1267,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js */ "./node_modules/@babel/runtime/helpers/esm/createForOfIteratorHelper.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
@@ -1466,7 +1466,7 @@ __webpack_require__.r(__webpack_exports__);
         if (currentSelected.value !== -1) {
           /* eslint-disable no-use-before-define, no-param-reassign */
           var _currentSelected$valu = currentSelected.value.split('.'),
-              _currentSelected$valu2 = Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_currentSelected$valu, 2),
+              _currentSelected$valu2 = Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_currentSelected$valu, 2),
               grpIndex = _currentSelected$valu2[0],
               itemIndex = _currentSelected$valu2[1];
 
@@ -1503,12 +1503,12 @@ __webpack_require__.r(__webpack_exports__);
         // Auto Select first item if it's not item-404
         var grpIndex = null; // eslint-disable-next-line no-restricted-syntax
 
-        var _iterator = Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object.values(val).entries()),
+        var _iterator = Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_createForOfIteratorHelper_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object.values(val).entries()),
             _step;
 
         try {
           for (_iterator.s(); !(_step = _iterator.n()).done;) {
-            var _step$value = Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_step.value, 2),
+            var _step$value = Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_step.value, 2),
                 index = _step$value[0],
                 grpSuggestions = _step$value[1];
 
@@ -1537,7 +1537,7 @@ __webpack_require__.r(__webpack_exports__);
       })) return;
 
       var _currentSelected$valu3 = currentSelected.value.split('.'),
-          _currentSelected$valu4 = Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_currentSelected$valu3, 2),
+          _currentSelected$valu4 = Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_slicedToArray_js__WEBPACK_IMPORTED_MODULE_1__["default"])(_currentSelected$valu3, 2),
           grpIndex = _currentSelected$valu4[0],
           itemIndex = _currentSelected$valu4[1];
 
@@ -8332,12 +8332,12 @@ var navLinkProps = function navLinkProps(item) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useUtils", function() { return useUtils; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/libs/acl/utils.js");
 
 
 var useUtils = function useUtils() {
-  return Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
 };
 var _ = null;
 
@@ -8484,12 +8484,12 @@ var canViewHorizontalNavMenuHeaderGroup = function canViewHorizontalNavMenuHeade
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useUtils", function() { return useUtils; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/libs/i18n/utils.js");
 
 
 var useUtils = function useUtils() {
-  return Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
 };
 var _ = null;
 
@@ -8655,8 +8655,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
 
@@ -8665,7 +8665,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var isObject = function isObject(obj) {
-  return Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
 };
 var isToday = function isToday(date) {
   var today = new Date();
@@ -8703,7 +8703,7 @@ var useRouter = function useRouter() {
   }, function (r) {
     state.route = r;
   });
-  return Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
     router: vm.$router
   });
 };
@@ -8743,7 +8743,7 @@ var useRouter = function useRouter() {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/flags/de.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/flags/de.png";
 
 /***/ }),
 
@@ -8754,7 +8754,7 @@ module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/flags/en.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/flags/en.png";
 
 /***/ }),
 
@@ -8765,7 +8765,7 @@ module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/flags/fr.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/flags/fr.png";
 
 /***/ }),
 
@@ -8776,7 +8776,7 @@ module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/flags/pt.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/flags/pt.png";
 
 /***/ }),
 
@@ -8787,7 +8787,7 @@ module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/f
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/icons/jpg.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/icons/jpg.png";
 
 /***/ }),
 
@@ -8798,7 +8798,7 @@ module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/i
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/abastecimento/resources/js/src/assets/images/icons/pdf.png";
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/icons/pdf.png";
 
 /***/ }),
 
@@ -9024,7 +9024,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard */ "./resources/js/src/navigation/vertical/dashboard.js");
@@ -9081,7 +9081,7 @@ tagVariant
 
  // Array of sections
 
-/* harmony default export */ __webpack_exports__["default"] = ([].concat(Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_abastecimentos_views__WEBPACK_IMPORTED_MODULE_5__["default"]), Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_piquete_views__WEBPACK_IMPORTED_MODULE_6__["default"]), Object(_var_www_html_abastecimento_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_utilizadores__WEBPACK_IMPORTED_MODULE_7__["default"])));
+/* harmony default export */ __webpack_exports__["default"] = ([].concat(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_abastecimentos_views__WEBPACK_IMPORTED_MODULE_5__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_piquete_views__WEBPACK_IMPORTED_MODULE_6__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_utilizadores__WEBPACK_IMPORTED_MODULE_7__["default"])));
 
 /***/ }),
 
