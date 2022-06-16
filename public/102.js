@@ -1,517 +1,250 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[102],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./storaRelatorioModule */ "./resources/js/src/views/Gestao-pickete/relatorios/storaRelatorioModule.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+ // eslint-disable-next-line import/no-extraneous-dependencies
+
 
 
 
@@ -522,199 +255,246 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardHeader"],
-    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardTitle"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BForm"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BLink"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
-    BFormTimepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTimepicker"],
-    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"]
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormTextarea"]
   },
   data: function data() {
     return {
-      rota: [],
-      motoristas: [],
       viatura: [],
-      value: null,
-      options: [{
-        text: 'Ok',
-        value: 'Ok'
-      }, {
-        text: 'No',
-        value: 'No'
-      }, {
-        text: 'Parcial',
-        value: 'Parcial'
-      }, {
-        text: 'Em Falta',
-        value: 'Em Falta'
-      }],
-      options2: [{
-        text: 'Rota',
-        value: false
-      }, {
-        text: 'Outros Servicos',
-        value: false
-      }, {
-        text: 'Expediente',
-        value: false
-      }]
+      rota: [],
+      projecto: [],
+      rec_abast: null,
+      bombas: {},
+      abastecimento: [],
+      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
+        ordem_id: this.$route.params.refs,
+        projecto_id: null,
+        viatura_id: null,
+        rota_id: null,
+        qtd_abastecer: 0,
+        observacao: null
+      })
     };
   },
-  computed: {
-    state: function state() {
-      return Boolean(this.value);
-    }
+  created: function created() {
+    this.fetchProjectos();
+    this.fetchViaturas();
+    this.fetchBombas(); // single data
+
+    this.getQtd();
   },
-  mounted: function mounted() {
-    this.getRotas();
-    this.getMotoristas();
-    this.getViaturas();
-    this.changeOption();
-    this.getKmActual();
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__["default"]
+  },
+  mounted: function mounted() {// console.log(this.bombas)
   },
   methods: {
-    getRotas: function getRotas() {
+    getQtd: function getQtd() {
       var _this = this;
 
-      this.$http.get('/api/todasRotas').then(function (res) {
-        _this.rota = res.data;
-      });
+      //   alert(viatura_id)
+      this.$http.get("/api/getQtdDisponivel/".concat(this.form.viatura_id)).then(function (res) {
+        _this.rec_abast = res.data;
+        console.log(_this.rec_abast);
+      })["catch"](function (err) {});
     },
-    getViaturas: function getViaturas() {
+    fetchProjectos: function fetchProjectos() {
       var _this2 = this;
 
-      this.$http.get('/api/listViaturaDentro').then(function (res) {
-        _this2.viatura = res.data;
+      this.$http.get('/api/listProject').then(function (response) {
+        _this2.projecto = response.data;
+      })["catch"](function (err) {
+        console.log(err);
       });
     },
-    getMotoristas: function getMotoristas() {
+    fetchRotas: function fetchRotas() {
       var _this3 = this;
 
-      this.$http.get('/api/listMotoristas').then(function (res) {
-        _this3.motoristas = res.data;
-      });
+      console.log(this.form.abastecer); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
+
+      this.$http.get("/api/RotaByProject/".concat(this.form.projecto_id)).then(function (res) {
+        _this3.rota = res.data;
+
+        if (res.data === '') {
+          _this3.$swal.fire({
+            icon: 'error',
+            title: 'Nao existe nenhuma rota cadastrada!'
+          });
+        }
+      })["catch"](function (err) {
+        _this3.$swal.fire({
+          icon: 'error',
+          title: 'Erro ao tentar buscar!'
+        });
+      }); //   }
     },
-    getKmActual: function getKmActual() {
+    fetchBombas: function fetchBombas() {
       var _this4 = this;
 
-      //   console.log(this.form.viatura_id)
-      this.$http.get("/api/kmActual/".concat(this.form.viatura_id)).then(function (res) {
-        _this4.form.km_inicio = res.data.kilometragem;
+      this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
+        _this4.bombas = res.data; // console.log(this.bombas)
       });
     },
-    changeOption: function changeOption() {
-      if (this.form.isRota === true) {
-        this.form.isOuthers = false;
-      }
-    },
-    changeOption1: function changeOption1() {
-      if (this.form.isOuthers === true) {
-        this.form.isRota = false;
-      }
-    }
-  },
-  setup: function setup(props) {
-    var CHECKLISTOUT_STORE_MODULE_NAME = 'Picket';
-    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(CHECKLISTOUT_STORE_MODULE_NAME, _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
-
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(CHECKLISTOUT_STORE_MODULE_NAME);
-    });
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__["useToast"])();
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
-      motorista_id: null,
-      viatura_id: null,
-      isRota: false,
-      isOuthers: false,
-      carta_conducao: true,
-      km_inicio: 0,
-      hora_inicio: '0:00',
-      limpezaState: '',
-      vasoEspansorState: '',
-      LiquidoVidroState: '',
-      OleoMotorState: '',
-      OleoDirecaoState: '',
-      OleoTravoesState: '',
-      SistemaABS_State: '',
-      ACState: '',
-      tipo_saida: null,
-      uniforme: false,
-      CintoSeguracaState: false,
-      colete_saida: false,
-      lista_presenca: false,
-      pneu_sobr_saida: false,
-      macaco_saida: false,
-      inspencao_saida: false,
-      triangulo_saida: false,
-      chave_roda_saida: false,
-      kit_reboque_saida: false,
-      kit_1_socorro_saida: false,
-      licenca_saida: false,
-      extintor_saida: false,
-      livrete_saida: false,
-      seguros_saida: false,
-      taxaradio_saida: false,
-      motorista_dss: false,
-      // rotas
-      rotas_Lista: [{
-        rota_id: null
-      }],
-      // outro trajecto
-      trajecto: '',
-      horaPrevistaSaida: '0:00',
-      horaPrevistaEntrada: '0:00'
-    }))));
-
-    function OnSubmit() {
+    fetchViaturas: function fetchViaturas() {
       var _this5 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addCheckListOut', form.value).then(function (response) {
+      this.$http.get('/api/listarViaturas').then(function (res) {
+        _this5.viatura = res.data;
+      });
+    },
+    returnAbastecimento: function returnAbastecimento() {
+      var _this6 = this;
+
+      this.$http.get("/api/CurrentAbst/".concat(this.$route.params.refs)).then(function (res) {
+        _this6.abastecimento = res.data;
+      });
+    },
+    NovaOrdem: function NovaOrdem() {
+      var _this7 = this;
+
+      this.$Progress.start();
+      this.form.post('/api/Abastecimento').then(function (res) {
+        if (res.status === 200) {
+          _this7.$swal.fire({
+            icon: 'success',
+            title: res.data.success
+          }); // location.reload()
+
+
+          _this7.$Progress.finish();
+
+          _this7.form.reset(); // eslint-disable-next-line no-restricted-globals
+
+
+          window.location.reload();
+        }
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          _this7.$swal.fire({
+            icon: 'error',
+            title: err.response.data.erro
+          });
+
+          _this7.$Progress.fail();
+        }
+      });
+    },
+    onReset: function onReset(event) {
+      var _this8 = this;
+
+      event.preventDefault(); // Reset our form values
+
+      this.form.reset(); // Trick to reset/clear native browser form validation state
+
+      this.show = false;
+      this.$nextTick(function () {
+        _this8.show = true;
+      });
+    }
+  },
+  setup: function setup() {
+    var OpenOrder = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
+    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+
+    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_9__["default"]); // UnRegister on leave
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+    });
+    _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/getOpenOrder', {
+      refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
+    }).then(function (response) {
+      OpenOrder.value = response.data;
+    })["catch"](function (error) {
+      if (error.response.status === 404) {
+        OpenOrder.value = undefined;
+      }
+    });
+
+    function enviarPedido(order) {
+      this.$swal({
+        title: 'Tem certeza que deseja submeter a ordem?',
+        text: 'Nao podera reverter essa accao!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Sim!',
+        customClass: {
+          confirmButton: 'btn btn-primary',
+          cancelButton: 'btn btn-outline-danger ml-1'
+        },
+        buttonsStyling: false
+      }).then(function (result) {
+        if (result.value) {
+          _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/addAbastecimento', order).then(function (response) {
+            toast({
+              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+              props: {
+                title: response.data.success,
+                icon: 'CheckSquareIcon',
+                variant: 'success'
+              }
+            });
+            window.location.reload();
+            _router__WEBPACK_IMPORTED_MODULE_7__["default"].push({
+              name: 'supply-details',
+              params: {
+                refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
+              }
+            });
+          })["catch"](function (err) {
+            if (err) {
+              toast({
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+                props: {
+                  title: err.response.data.erro,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger'
+                }
+              });
+            }
+          });
+        }
+      }); //   console.log(order)
+    }
+
+    function removerPedido(order) {
+      // console.log(order.refs)
+      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/removeLine', {
+        refs: order.refs
+      }).then(function (response) {
         toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
           props: {
-            title: response.data.message,
+            title: response.data.success,
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
         });
-
-        _this5.$router.push({
-          name: 'Vehicle-movements'
-        });
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
             props: {
-              title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (err.response.status === 422) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-            props: {
-              title: 'Erro..! verifique se seus campos estao devidamente preenchidos',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-            props: {
-              title: err.response.data.error,
+              title: err.response.data.erro,
               icon: 'AlertTriangleIcon',
               variant: 'danger'
             }
@@ -724,8 +504,9 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     return {
-      OnSubmit: OnSubmit,
-      form: form
+      OpenOrder: OpenOrder,
+      enviarPedido: enviarPedido,
+      removerPedido: removerPedido
     };
   }
 });
@@ -750,10 +531,10 @@ var e=Object.defineProperty,t=Object.prototype.hasOwnProperty,s=Object.getOwnPro
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&":
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606& ***!
-  \**************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -767,133 +548,28 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
+    {
+      staticClass: "invoice-add-wrapper",
+      attrs: { title: "Novo-abastecimento" },
+    },
     [
       _c(
-        "b-row",
-        { staticClass: "content-header" },
+        "b-card",
+        { attrs: { "no-body": "" } },
         [
-          _c(
-            "b-col",
-            {
-              staticClass: "content-header-left mb-2",
-              attrs: { cols: "12", md: "9" },
-            },
-            [
-              _c(
-                "b-row",
-                { staticClass: "breadcrumb-top" },
-                [
-                  _c("b-col", { attrs: { cols: "12" } }, [
-                    _c(
-                      "h2",
-                      {
-                        staticClass:
-                          "content-header-title float-left pr-1 mb-0",
-                      },
-                      [
-                        _vm._v(
-                          "\n            Pedido de Autorização de Saida\n          "
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "breadcrumb-wrapper" }, [
-                      _c("ol", { staticClass: "breadcrumb" }, [
-                        _c(
-                          "li",
-                          { staticClass: "breadcrumb-item" },
-                          [
-                            _c(
-                              "b-link",
-                              {
-                                staticClass: "router-link-active",
-                                attrs: {
-                                  to: { name: "vehicle-movements" },
-                                  target: "_self",
-                                },
-                              },
-                              [
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "align-text-top feather feather-home",
-                                    attrs: {
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      width: "16px",
-                                      height: "16px",
-                                      viewBox: "0 0 24 24",
-                                      fill: "none",
-                                      stroke: "currentColor",
-                                      "stroke-width": "2",
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                    },
-                                  },
-                                  [
-                                    _c("path", {
-                                      attrs: {
-                                        d: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("polyline", {
-                                      attrs: {
-                                        points: "9 22 9 12 15 12 15 22",
-                                      },
-                                    }),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "breadcrumb-item" }, [
-                          _c("a", { attrs: { href: "#", target: "_self" } }, [
-                            _vm._v(" Saida de viatura "),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "breadcrumb-item active" }, [
-                          _c(
-                            "span",
-                            { attrs: { "aria-current": "location" } },
-                            [_vm._v(" Autorização ")]
-                          ),
-                        ]),
-                      ]),
-                    ]),
-                  ]),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+          _c("b-card-header", { staticClass: "pb-50" }, [
+            _c("h3", [_vm._v("Novo Abastecimento")]),
+          ]),
         ],
         1
       ),
       _vm._v(" "),
       _c(
-        "b-card",
-        { attrs: { "no-body": "" } },
+        "b-row",
         [
           _c(
-            "b-card-header",
-            [
-              _c("b-card-title", [
-                _vm._v("\n        Formulário de inspenção\n      "),
-              ]),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c(
-            "b-card-body",
+            "b-col",
+            { staticClass: "invoice-add", attrs: { cols: "12" } },
             [
               _c(
                 "b-form",
@@ -901,1071 +577,393 @@ var render = function () {
                   on: {
                     submit: function ($event) {
                       $event.preventDefault()
-                      return _vm.OnSubmit.apply(null, arguments)
+                      return _vm.NovaOrdem()
+                    },
+                    reset: _vm.onReset,
+                    keydown: function ($event) {
+                      return _vm.form.onKeydown($event)
                     },
                   },
                 },
                 [
                   _c(
-                    "b-row",
+                    "b-card",
+                    {
+                      staticClass: "invoice-preview-card p-2",
+                      attrs: { "no-body": "" },
+                    },
                     [
                       _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
+                        "b-row",
                         [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "Matricula" } },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  label: "matricula",
-                                  options: _vm.viatura,
-                                  reduce: function (viatura) {
-                                    return viatura.id
-                                  },
-                                },
-                                on: {
-                                  input: function ($event) {
-                                    return _vm.getKmActual()
-                                  },
-                                },
-                                model: {
-                                  value: _vm.form.viatura_id,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "viatura_id", $$v)
-                                  },
-                                  expression: "form.viatura_id",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
+                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
+                            _c("b", [_vm._v("Refs")]),
+                            _vm._v(
+                              ": " +
+                                _vm._s(_vm.form.ordem_id) +
+                                "\n            "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
+                            _c("b", [_vm._v("bombas")]),
+                            _vm._v(
+                              ":\n              " +
+                                _vm._s(_vm.bombas.nome_bombas) +
+                                "\n            "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("hr"),
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
+                        "b-row",
                         [
                           _c(
-                            "b-form-group",
-                            { attrs: { label: "Motorista" } },
+                            "b-col",
+                            { attrs: { cols: "12", xl: "12" } },
                             [
-                              _c("v-select", {
-                                attrs: {
-                                  label: "nome",
-                                  options: _vm.motoristas,
-                                  reduce: function (motoristas) {
-                                    return motoristas.id
-                                  },
-                                },
-                                model: {
-                                  value: _vm.form.motorista_id,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "motorista_id", $$v)
-                                  },
-                                  expression: "form.motorista_id",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "Kilometragem actual" } },
-                            [
-                              _c("b-form-input", {
-                                attrs: { type: "text", readonly: "" },
-                                model: {
-                                  value: _vm.form.km_inicio,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "km_inicio", $$v)
-                                  },
-                                  expression: "form.km_inicio",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "hora de partida" } },
-                            [
-                              _c("b-form-timepicker", {
-                                attrs: { locale: "pt-Br" },
-                                model: {
-                                  value: _vm.form.hora_inicio,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "hora_inicio", $$v)
-                                  },
-                                  expression: "form.hora_inicio",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "6", lg: "8", xl: "10" } },
-                        [
-                          _c("table", { staticClass: "table table-bordered" }, [
-                            _c("tbody", [
-                              _c("tr", [
-                                _c("td", [_vm._v("Limpeza")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.limpezaState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "limpezaState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.limpezaState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível do Vaso Expansor")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.vasoEspansorState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "vasoEspansorState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.vasoEspansorState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Liquido Vidro")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.LiquidoVidroState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "LiquidoVidroState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.LiquidoVidroState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Motor")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoMotorState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoMotorState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoMotorState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Direcção")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoDirecaoState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoDirecaoState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoDirecaoState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Travões")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoTravoesState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoTravoesState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoTravoesState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Ar Condicionado")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.ACState,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "ACState", $$v)
-                                        },
-                                        expression: "form.ACState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Sistema ABS")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.SistemaABS_State,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "SistemaABS_State",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.SistemaABS_State",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Cinto de Segurança")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.CintoSeguracaState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "CintoSeguracaState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.CintoSeguracaState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tinha Carta de condução")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.carta_conducao,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "carta_conducao",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.carta_conducao",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [
-                                  _vm._v("O Motorista Paticipou no DSS?"),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.motorista_dss,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "motorista_dss",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.motorista_dss",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Kit de primeiros socorros")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.kit_1_socorro_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "kit_1_socorro_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.kit_1_socorro_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Extintor na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.extintor_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "extintor_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.extintor_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Livrete da viatura")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.livrete_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "livrete_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.livrete_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [
-                                  _vm._v("Documento de seguros em dia"),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.seguros_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "seguros_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.seguros_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Taxa de radio de fusão")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.taxaradio_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "taxaradio_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.taxaradio_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tinha uniforme")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.uniforme,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "uniforme", $$v)
-                                        },
-                                        expression: "form.uniforme",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Lista de presença")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.lista_presenca,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "lista_presenca",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.lista_presenca",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Colete na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.colete_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "colete_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.colete_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Pneu sobressalente")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.pneu_sobr_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "pneu_sobr_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.pneu_sobr_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Macaco na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.macaco_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "macaco_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.macaco_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Licença na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.licenca_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "licenca_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.licenca_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Documento de inspenção")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.inspencao_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "inspencao_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.inspencao_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Triângulo")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.triangulo_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "triangulo_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.triangulo_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Chave de rodas")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.chave_roda_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "chave_roda_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.chave_roda_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Kit de reboque")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.kit_reboque_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "kit_reboque_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.kit_reboque_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tipo de saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _vm._v("\n                    Rota: "),
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      on: { input: _vm.changeOption },
-                                      model: {
-                                        value: _vm.form.isRota,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "isRota", $$v)
-                                        },
-                                        expression: "form.isRota",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v("\n                    Outros: "),
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      on: { input: _vm.changeOption1 },
-                                      model: {
-                                        value: _vm.form.isOuthers,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "isOuthers", $$v)
-                                        },
-                                        expression: "form.isOuthers",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
                               _c(
-                                "tr",
+                                "b-card-body",
                                 {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: _vm.form.isRota === true,
-                                      expression: "form.isRota === true",
-                                    },
-                                  ],
-                                  attrs: { id: "rotas" },
+                                  staticClass:
+                                    "invoice-padding form-item-section",
                                 },
                                 [
                                   _c(
-                                    "td",
-                                    { attrs: { colspan: "2" } },
+                                    "div",
+                                    { staticClass: "table-responsive" },
                                     [
                                       _c(
-                                        "b-form-group",
-                                        { attrs: { label: "Rotas a tomar" } },
-                                        [
-                                          _c("v-select", {
-                                            attrs: {
-                                              multiple: "",
-                                              label: "nome_rota",
-                                              options: _vm.rota,
-                                              reduce: function (rota) {
-                                                return rota.id
-                                              },
-                                            },
-                                            model: {
-                                              value: _vm.form.rota_id,
-                                              callback: function ($$v) {
-                                                _vm.$set(
-                                                  _vm.form,
-                                                  "rota_id",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "form.rota_id",
-                                            },
-                                          }),
-                                        ],
-                                        1
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "tr",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: _vm.form.isOuthers === true,
-                                      expression: "form.isOuthers === true",
-                                    },
-                                  ],
-                                  attrs: { id: "others" },
-                                },
-                                [
-                                  _c(
-                                    "td",
-                                    { attrs: { colspan: "2" } },
-                                    [
-                                      _c(
-                                        "b-row",
+                                        "table",
+                                        {
+                                          staticClass:
+                                            "table table-bordered table-stripped",
+                                        },
                                         [
                                           _c(
-                                            "b-col",
+                                            "thead",
+                                            { staticClass: "thead-light" },
                                             [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    label:
-                                                      "Descreva o proposito do seu trajecto",
+                                              _c("tr", [
+                                                _c(
+                                                  "th",
+                                                  {
+                                                    staticClass: "text-danger",
                                                   },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                          viatura(matr)\n                        "
+                                                    ),
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("projecto")]),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("Rota")]),
+                                                _vm._v(" "),
+                                                _c("th", [
+                                                  _vm._v(
+                                                    "\n                          Qtd("
+                                                  ),
+                                                  _c(
+                                                    "small",
+                                                    {
+                                                      staticClass:
+                                                        "text-lowercase",
+                                                    },
+                                                    [_vm._v("ltr")]
+                                                  ),
+                                                  _vm._v(
+                                                    ")\n                        "
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("th", [_vm._v("Turno")]),
+                                              ]),
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c("tbody", [
+                                            _c("tr", [
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "20%" },
                                                 },
                                                 [
-                                                  _c("b-form-textarea", {
+                                                  _c("v-select", {
                                                     attrs: {
-                                                      id: "textarea-small",
-                                                      size: "sm",
+                                                      label: "matricula",
+                                                      options: _vm.viatura,
+                                                      reduce: function (
+                                                        viatura
+                                                      ) {
+                                                        return viatura.id
+                                                      },
+                                                    },
+                                                    on: {
+                                                      input: function ($event) {
+                                                        return _vm.getQtd()
+                                                      },
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.viatura_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "viatura_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.viatura_id",
+                                                    },
+                                                  }),
+                                                  _vm._v(
+                                                    "\n                          (" +
+                                                      _vm._s(_vm.rec_abast) +
+                                                      ")\n                        "
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "20%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      label: "name",
+                                                      options: _vm.projecto,
+                                                      reduce: function (
+                                                        projecto
+                                                      ) {
+                                                        return projecto.id
+                                                      },
+                                                    },
+                                                    on: {
+                                                      input: _vm.fetchRotas,
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.projecto_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "projecto_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.projecto_id",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "30%" },
+                                                },
+                                                [
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      multiple: "",
+                                                      label: "nome_rota",
+                                                      options: _vm.rota,
+                                                      reduce: function (rota) {
+                                                        return rota.id
+                                                      },
+                                                    },
+                                                    model: {
+                                                      value: _vm.form.rota_id,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "rota_id",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.rota_id",
+                                                    },
+                                                  }),
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      type: "number",
                                                       placeholder:
-                                                        "descreva o trajeto a tomar",
+                                                        "Qtd em litros",
                                                     },
-                                                    model: {
-                                                      value: _vm.form.trajecto,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "trajecto",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.trajecto",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
-                                              ),
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "b-col",
-                                            [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    label:
-                                                      "hora prevista de partida",
-                                                  },
-                                                },
-                                                [
-                                                  _c("b-form-timepicker", {
-                                                    attrs: { locale: "pt-Br" },
                                                     model: {
                                                       value:
-                                                        _vm.form
-                                                          .horaPrevistaSaida,
+                                                        _vm.form.qtd_abastecer,
                                                       callback: function ($$v) {
                                                         _vm.$set(
                                                           _vm.form,
-                                                          "horaPrevistaSaida",
+                                                          "qtd_abastecer",
                                                           $$v
                                                         )
                                                       },
                                                       expression:
-                                                        "form.horaPrevistaSaida",
+                                                        "form.qtd_abastecer",
                                                     },
                                                   }),
                                                 ],
                                                 1
                                               ),
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "b-col",
-                                            [
+                                              _vm._v(" "),
                                               _c(
-                                                "b-form-group",
+                                                "td",
                                                 {
-                                                  attrs: {
-                                                    label:
-                                                      "hora prevista de chagada",
-                                                  },
+                                                  staticStyle: { width: "30%" },
                                                 },
                                                 [
-                                                  _c("b-form-timepicker", {
-                                                    attrs: { locale: "pt-Br" },
+                                                  _c("v-select", {
+                                                    attrs: {
+                                                      options: [
+                                                        "manha",
+                                                        "tarde",
+                                                      ],
+                                                    },
                                                     model: {
-                                                      value:
-                                                        _vm.form
-                                                          .horaPrevistaEntrada,
+                                                      value: _vm.form.turno,
                                                       callback: function ($$v) {
                                                         _vm.$set(
                                                           _vm.form,
-                                                          "horaPrevistaEntrada",
+                                                          "turno",
                                                           $$v
                                                         )
                                                       },
-                                                      expression:
-                                                        "form.horaPrevistaEntrada",
+                                                      expression: "form.turno",
                                                     },
                                                   }),
                                                 ],
                                                 1
                                               ),
-                                            ],
-                                            1
-                                          ),
-                                        ],
-                                        1
+                                            ]),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c("tfoot", [
+                                            _c("tr", [
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticClass:
+                                                    "content-align-right",
+                                                  attrs: { colspan: "5" },
+                                                },
+                                                [
+                                                  _c(
+                                                    "b-form-group",
+                                                    {
+                                                      attrs: {
+                                                        label: "Justificação",
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("b-form-textarea", {
+                                                        model: {
+                                                          value:
+                                                            _vm.form.observacao,
+                                                          callback: function (
+                                                            $$v
+                                                          ) {
+                                                            _vm.$set(
+                                                              _vm.form,
+                                                              "observacao",
+                                                              $$v
+                                                            )
+                                                          },
+                                                          expression:
+                                                            "form.observacao",
+                                                        },
+                                                      }),
+                                                    ],
+                                                    1
+                                                  ),
+                                                ],
+                                                1
+                                              ),
+                                            ]),
+                                          ]),
+                                        ]
                                       ),
-                                    ],
-                                    1
+                                    ]
                                   ),
                                 ]
                               ),
-                            ]),
-                          ]),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-row",
-                    { staticClass: "mt-2" },
-                    [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "6", md: "6" } },
-                        [
-                          _c("b-button", { attrs: { type: "reset" } }, [
-                            _vm._v("\n              limpar\n            "),
-                          ]),
+                            ],
+                            1
+                          ),
                         ],
                         1
                       ),
                       _vm._v(" "),
                       _c(
-                        "b-col",
-                        { attrs: { cols: "6", md: "6" } },
+                        "b-row",
                         [
                           _c(
-                            "b-button",
+                            "b-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: {
+                                    type: "reset",
+                                    variant: "secondary",
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                limpar campos\n              "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
                             {
-                              attrs: {
-                                type: "submit",
-                                variant: "outline-primary",
-                              },
+                              staticClass: "pull-right float-right",
+                              attrs: { cols: "3" },
                             },
-                            [_vm._v("\n              submeter\n            ")]
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: {
+                                    type: "submit",
+                                    variant: "outline-primary",
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                adicionar a ordem\n              "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
                           ),
                         ],
                         1
@@ -1979,6 +977,148 @@ var render = function () {
             ],
             1
           ),
+          _vm._v(" "),
+          _vm.bombas.estado === "Aberta"
+            ? _c(
+                "b-col",
+                { attrs: { cols: "12" } },
+                [
+                  _c(
+                    "b-row",
+                    [
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "4" } },
+                        [
+                          _c(
+                            "b-button",
+                            {
+                              directives: [
+                                {
+                                  name: "ripple",
+                                  rawName: "v-ripple.400",
+                                  value: "rgba(113, 102, 240, 0.15)",
+                                  expression: "'rgba(113, 102, 240, 0.15)'",
+                                  modifiers: { 400: true },
+                                },
+                              ],
+                              attrs: { variant: "outline-success" },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.enviarPedido(_vm.OpenOrder)
+                                },
+                              },
+                            },
+                            [_vm._v("enviar pedido de abastecimento")]
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("table", { staticClass: "table table-light" }, [
+                    _c("thead", { staticClass: "thead-light" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("Viatura")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Km(actual)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Bombas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Qtd a abastecer")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("preço/(ltr)")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Rotas")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Subtotal")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("editar")]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.OpenOrder, function (order) {
+                        return _c("tr", { key: order.id }, [
+                          _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.viatura.kilometragem)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(_vm._s(order.ordem.bombas.nome_bombas)),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(
+                                    order.preco_cunsumo / order.qtd_abastecida
+                                  ) +
+                                  "\n              "
+                              ),
+                            ]),
+                            _vm._v(" MZN\n          "),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            _vm._l(order.ordem_viatura_rota, function (rotas) {
+                              return _c("span", { key: rotas }, [
+                                _vm._v(
+                                  "\n                " +
+                                    _vm._s(rotas.rota.nome_rota) +
+                                    ",\n              "
+                                ),
+                              ])
+                            }),
+                            0
+                          ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _c("span", [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(order.preco_cunsumo) +
+                                  "\n              "
+                              ),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: { sm: "", variant: "outline-danger" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.removerPedido(order.ordem)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-remove" })]
+                              ),
+                            ],
+                            1
+                          ),
+                        ])
+                      }),
+                      0
+                    ),
+                  ]),
+                ],
+                1
+              )
+            : _vm._e(),
         ],
         1
       ),
@@ -1993,17 +1133,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue":
-/*!*************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue ***!
-  \*************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nova_saida.vue?vue&type=template&id=25f0d606& */ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&");
-/* harmony import */ var _nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nova_saida.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&");
+/* harmony import */ var _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./novo_abastecimento.vue?vue&type=template&id=09740ea8& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&");
+/* harmony import */ var _novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./novo_abastecimento.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2013,9 +1153,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2025,38 +1165,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./nova_saida.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./novo_abastecimento.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606& ***!
-  \********************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8& ***!
+  \***************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./nova_saida.vue?vue&type=template&id=25f0d606& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./novo_abastecimento.vue?vue&type=template&id=09740ea8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue?vue&type=template&id=09740ea8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_novo_abastecimento_vue_vue_type_template_id_09740ea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
