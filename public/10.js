@@ -414,7 +414,7 @@ __webpack_require__.r(__webpack_exports__);
     getOpenOrder: function getOpenOrder(ctx, _ref6) {
       var refs = _ref6.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordem/".concat(refs)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordems/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

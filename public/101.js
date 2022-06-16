@@ -303,6 +303,8 @@ __webpack_require__.r(__webpack_exports__);
   directives: {
     Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
+  mounted: function mounted() {// console.log(this.bombas)
+  },
   methods: {
     getQtd: function getQtd() {
       var _this = this;
@@ -347,7 +349,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
-        _this4.bombas = res.data;
+        _this4.bombas = res.data; // console.log(this.bombas)
       });
     },
     fetchViaturas: function fetchViaturas() {
@@ -607,7 +609,7 @@ var render = function () {
                             _c("b", [_vm._v("bombas")]),
                             _vm._v(
                               ":\n              " +
-                                _vm._s(_vm.bombas.nome_bombas) +
+                                _vm._s(_vm.bombas) +
                                 "\n            "
                             ),
                           ]),
