@@ -161,12 +161,12 @@
             >enviar pedido de abastecimento</b-button>
           </b-col>
         </b-row>
+
         <table class="table table-light">
           <thead class="thead-light">
             <tr>
               <th>Viatura</th>
               <th>Km(actual)</th>
-              <th>Bombas</th>
               <th>Qtd a abastecer</th>
               <th>pre&ccedil;o/(ltr)</th>
               <th>Rotas</th>
@@ -176,12 +176,11 @@
           </thead>
           <tbody>
             <tr
-              v-for="order in OpenOrder"
+              v-for="order in OpenOrder.ordem_viatura"
               :key="order.id"
             >
               <td>{{ order.viatura.matricula }}</td>
               <td>{{ order.viatura.kilometragem }}</td>
-              <td>{{ order.ordem.bombas.nome_bombas }}</td>
               <td>{{ order.qtd_abastecida }}</td>
               <td>
                 <span>
@@ -284,6 +283,7 @@ export default {
       rec_abast: null,
       bombas: {},
       abastecimento: [],
+      OpenOrder: {},
       form: new Form({
         ordem_id: this.$route.params.refs,
         projecto_id: null,
@@ -299,7 +299,7 @@ export default {
     this.fetchProjectos()
     this.fetchViaturas()
     this.fetchBombas()
-    // single data
+    this.getSubmited()
     this.getQtd()
   },
   directives: {
@@ -398,11 +398,9 @@ export default {
   },
 
   setup() {
-    const OpenOrder = ref(null)
     const toast = useToast()
 
     const SUPPLY_STORE_MODULE_NAME = 'Supply'
-
     // Register module
     if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos)
 
@@ -410,18 +408,26 @@ export default {
     onUnmounted(() => {
       if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME)
     })
-
-    store.dispatch('Supply/getOpenOrder', {
-      refs: router.currentRoute.params.refs,
-    })
-      .then(response => {
-        this.OpenOrder = response.data
-      })
-      .catch(error => {
-        if (error.response.status === 404) {
-          this.OpenOrder = undefined
-        }
-      })
+    function getSubmited() {
+      this.$http.get(`/api/Ordems/${router.currentRoute.params.refs}`)
+        .then(response => {
+          this.OpenOrder = response.data
+          console.log(this.OpenOrder)
+        })
+        .catch(error => {
+          if (error) {
+            console.log(error)
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: 'Nenhuma viatura submitida a ordem',
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
+        })
+    }
 
     function enviarPedido(order) {
       this.$swal({
@@ -496,9 +502,8 @@ export default {
           }
         })
     }
-
     return {
-      OpenOrder,
+      getSubmited,
       enviarPedido,
       removerPedido,
     }
