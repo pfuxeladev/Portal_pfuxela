@@ -231,6 +231,7 @@ export default {
                   variant: 'success',
                 },
               })
+             window.location.reload()
             }).catch(err => {
               if (err.response.status === 421) {
                 toast({

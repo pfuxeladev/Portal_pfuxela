@@ -234,6 +234,7 @@ __webpack_require__.r(__webpack_exports__);
                 variant: 'success'
               }
             });
+            window.location.reload();
           })["catch"](function (err) {
             if (err.response.status === 421) {
               toast({
