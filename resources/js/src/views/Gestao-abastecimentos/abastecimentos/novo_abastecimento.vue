@@ -34,7 +34,7 @@
                 md="6"
               >
                 <b>bombas</b>:
-                {{ bombas.nome_bombas }}
+                {{ bombas }}
               </b-col>
               <hr>
             </b-row>
@@ -305,6 +305,9 @@ export default {
   directives: {
     Ripple,
   },
+  mounted() {
+    // console.log(this.bombas)
+  },
   methods: {
     getQtd() {
       //   alert(viatura_id)
@@ -345,6 +348,7 @@ export default {
     fetchBombas() {
       this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
         this.bombas = res.data
+        // console.log(this.bombas)
       })
     },
     fetchViaturas() {
@@ -447,7 +451,7 @@ export default {
               router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
-              if (err.response.status === 421) {
+              if (err) {
                 toast({
                   component: ToastificationContent,
                   props: {
