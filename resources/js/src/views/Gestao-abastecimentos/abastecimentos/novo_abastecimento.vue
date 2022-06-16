@@ -34,7 +34,7 @@
                 md="6"
               >
                 <b>bombas</b>:
-                {{ bombas }}
+                {{ bombas.nome_bombas }}
               </b-col>
               <hr>
             </b-row>
