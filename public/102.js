@@ -441,8 +441,6 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function enviarPedido(order) {
-      var _this10 = this;
-
       this.$swal({
         title: 'Tem certeza que deseja submeter a ordem?',
         text: 'Nao podera reverter essa accao!',
@@ -465,14 +463,13 @@ __webpack_require__.r(__webpack_exports__);
                 variant: 'success'
               }
             });
-            window.location.reload();
-
-            _this10.$router.push({
+            _router__WEBPACK_IMPORTED_MODULE_7__["default"].push({
               name: 'supply-details',
               params: {
                 refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
               }
             });
+            window.location.reload();
           })["catch"](function (err) {
             if (err) {
               toast({

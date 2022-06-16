@@ -203,8 +203,9 @@ class AbastecimentoController extends Controller
     function submeterAbst(Request $request)
     {
         $totalAbst = 0;
-        try {
-            foreach ($request->abastecimento as $key => $abst) {
+        try{
+            foreach ($request->ordem_viatura as $key => $abst) {
+                // return $abst['qtd_abastecida'];
                 $totalAbst += $abst['qtd_abastecida'];
             }
 

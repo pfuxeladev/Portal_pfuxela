@@ -27,7 +27,7 @@ export default {
     addAbastecimento(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/submeterAbst', { abastecimento: SupplyDatas })
+          .post('/api/submeterAbst', SupplyDatas)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

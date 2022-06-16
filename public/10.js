@@ -342,9 +342,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     addAbastecimento: function addAbastecimento(ctx, SupplyDatas) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/submeterAbst', {
-          abastecimento: SupplyDatas
-        }).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/submeterAbst', SupplyDatas).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

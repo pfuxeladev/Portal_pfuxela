@@ -51,6 +51,7 @@
                         <th rowspan="2">Matricula</th>
                         <th rowspan="2">tipo(combustivel)</th>
                         <th rowspan="2">km(actual)</th>
+                        <th rowspan="2">Qtd disponivel</th>
                         <th rowspan="2">qtd</th>
                         <th rowspan="2">Val. a pagar</th>
                         <th colspan="2">Rota & projecto</th>
@@ -65,6 +66,7 @@
                         <td>{{ordem_viatura.viatura.matricula}}</td>
                         <td>{{ordem_viatura.viatura.tipo_combustivel}}</td>
                         <td>{{ordem_viatura.viatura.kilometragem}}</td>
+                        <td>{{ordem_viatura.viatura.qtd_disponivel}}</td>
                         <td>{{ordem_viatura.qtd_abastecida}}</td>
                         <td>{{ordem_viatura.preco_cunsumo}}</td>
                         <td colspan="2">

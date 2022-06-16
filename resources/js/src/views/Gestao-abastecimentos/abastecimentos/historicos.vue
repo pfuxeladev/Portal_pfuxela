@@ -28,7 +28,7 @@
                         {{data.item.nome_bombas}}
                     </template>
 
-                    <template #cell(acções)="data">
+                    <!-- <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
 
                             <template #button-content>
@@ -43,7 +43,7 @@
                                 <span class="align-middle ml-50">Delete</span>
                             </b-dropdown-item>
                         </b-dropdown>
-                    </template>
+                    </template> -->
                 </b-table>
             </b-col cols="12">
             <div class="mx-2 mb-2">
