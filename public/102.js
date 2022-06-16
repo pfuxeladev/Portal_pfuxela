@@ -410,6 +410,8 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   setup: function setup() {
+    var _this9 = this;
+
     var OpenOrder = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
     var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
@@ -422,14 +424,16 @@ __webpack_require__.r(__webpack_exports__);
     _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/getOpenOrder', {
       refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
     }).then(function (response) {
-      OpenOrder.value = response.data;
+      _this9.OpenOrder = response.data;
     })["catch"](function (error) {
       if (error.response.status === 404) {
-        OpenOrder.value = undefined;
+        _this9.OpenOrder = undefined;
       }
     });
 
     function enviarPedido(order) {
+      var _this10 = this;
+
       this.$swal({
         title: 'Tem certeza que deseja submeter a ordem?',
         text: 'Nao podera reverter essa accao!',
@@ -453,7 +457,8 @@ __webpack_require__.r(__webpack_exports__);
               }
             });
             window.location.reload();
-            _router__WEBPACK_IMPORTED_MODULE_7__["default"].push({
+
+            _this10.$router.push({
               name: 'supply-details',
               params: {
                 refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs

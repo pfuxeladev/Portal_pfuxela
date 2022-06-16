@@ -448,7 +448,7 @@ export default {
                 },
               })
               window.location.reload()
-              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+              this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             })
             .catch(err => {
               if (err) {
