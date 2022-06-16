@@ -322,6 +322,7 @@ class AbastecimentoController extends Controller
         $ordem_viatura->ordem_id = $ordem->id;
         $ordem_viatura->qtd_abastecida = $request->qtd;
         $ordem_viatura->preco_cunsumo = $preco;
+        $ordem_viatura->justificacao = $request->descricao;
         $ordem_viatura->user_id = auth()->user()->id;
         $ordem_viatura->save();
 
@@ -364,21 +365,19 @@ class AbastecimentoController extends Controller
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
                 $data["email"] = $bombas_mail->email_bombas;
+                $data["title"] = "info@pfuxela.co.mz";
+                $data["body"] = "Teste";
+
+                $pdf = PDF::loadView('orderMail.ExtraOrder', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                $path = Storage::put('public/pdf/Ordem_abastecimento_extra.pdf', $pdf->output());
+
+                Mail::send('orderMail.ExtraOrder', compact('ordem'), function ($message) use ($data, $pdf) {
+                    $message->from(env('MAIL_USERNAME'));
+                    $message->to($data["email"], $data["email"])
+                        ->subject($data["title"])
+                        ->attachData($pdf->output(), "ordem.pdf");
+                });
             }
-
-            $data["email"] = 'supportdesk@pfuxela.co.mz';
-            $data["title"] = "info@pfuxela.co.mz";
-            $data["body"] = "Teste";
-
-            $pdf = PDF::loadView('orderMail.ExtraOrder', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-            $path = Storage::put('public/pdf/Ordem_abastecimento_extra.pdf', $pdf->output());
-
-            Mail::send('orderMail.ExtraOrder', compact('ordem'), function ($message) use ($data, $pdf) {
-                $message->from(env('MAIL_USERNAME'));
-                $message->to($data["email"], $data["email"])
-                    ->subject($data["title"])
-                    ->attachData($pdf->output(), "ordem.pdf");
-            });
         }
 
         return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);

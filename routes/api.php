@@ -87,6 +87,9 @@ Route::group(['middleware'=>'auth:api'], function () {
 
     Route::get('editOrder/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'editOrder']);
     Route::post('UpdateOrdem', [App\Http\Controllers\API\Back\OrdemController::class, 'update']);
+
+    Route::get('activateViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'activarViatura']);
+    Route::get('DesativarViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'DesativarViatura']);
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

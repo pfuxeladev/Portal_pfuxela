@@ -259,6 +259,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -310,9 +311,7 @@ __webpack_require__.r(__webpack_exports__);
 
     function Activate(id) {
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Picket/activateViatura', {
-        params: {
-          id: id
-        }
+        id: id
       }).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -322,6 +321,7 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -332,15 +332,14 @@ __webpack_require__.r(__webpack_exports__);
               variant: 'danger'
             }
           });
+          window.location.reload();
         }
       });
     }
 
     function Deactivate(id) {
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Picket/inactivateViatura', {
-        params: {
-          id: id
-        }
+        id: id
       }).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -350,6 +349,7 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -873,37 +873,55 @@ var render = function () {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          [
-                            data.item.estado == 1
-                              ? _c("feather-icon", {
-                                  attrs: { icon: "CheckCircleIcon" },
-                                })
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("desactivar"),
-                            ]),
-                          ],
-                          1
-                        ),
+                        data.item.estado == 1
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.Deactivate(data.item.id)
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "XSquareIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("desactivar")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          [
-                            data.item.estado == 0
-                              ? _c("feather-icon", {
+                        data.item.estado == 0
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.Activate(data.item.id)
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
                                   attrs: { icon: "CheckCircleIcon" },
-                                })
-                              : _vm._e(),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("activar"),
-                            ]),
-                          ],
-                          1
-                        ),
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("activar")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                       ],
                       1
                     ),
@@ -1375,7 +1393,7 @@ __webpack_require__.r(__webpack_exports__);
     activateViatura: function activateViatura(ctx, _ref2) {
       var id = _ref2.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activeVehicle/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activateViatura/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1385,7 +1403,7 @@ __webpack_require__.r(__webpack_exports__);
     inactivateViatura: function inactivateViatura(ctx, _ref3) {
       var id = _ref3.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/deativateVehicle/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/DesativarViatura/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

@@ -1458,7 +1458,7 @@ __webpack_require__.r(__webpack_exports__);
     activateViatura: function activateViatura(ctx, _ref2) {
       var id = _ref2.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activeVehicle/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activateViatura/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1468,7 +1468,7 @@ __webpack_require__.r(__webpack_exports__);
     inactivateViatura: function inactivateViatura(ctx, _ref3) {
       var id = _ref3.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/deativateVehicle/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/DesativarViatura/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

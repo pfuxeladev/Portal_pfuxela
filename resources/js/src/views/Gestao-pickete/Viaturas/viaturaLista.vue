@@ -90,12 +90,13 @@
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
-            <b-dropdown-item>
-              <feather-icon v-if="data.item.estado == 1" icon="CheckCircleIcon" />
+            <b-dropdown-item v-if="data.item.estado == 1" @click="Deactivate(data.item.id)">
+              <feather-icon icon="XSquareIcon" />
               <span class="align-middle ml-50">desactivar</span>
             </b-dropdown-item>
-             <b-dropdown-item>
-              <feather-icon v-if="data.item.estado == 0" icon="CheckCircleIcon" />
+             <b-dropdown-item v-if="data.item.estado == 0"
+                @click="Activate(data.item.id)" >
+              <feather-icon icon="CheckCircleIcon" />
               <span class="align-middle ml-50">activar</span>
             </b-dropdown-item>
           </b-dropdown>
@@ -225,7 +226,7 @@ export default {
     ]
     const toast = useToast()
     function Activate(id) {
-      store.dispatch('Picket/activateViatura', { params: { id } })
+      store.dispatch('Picket/activateViatura', { id })
         .then(response => {
           toast({
             component: ToastificationContent,
@@ -235,6 +236,7 @@ export default {
               variant: 'success',
             },
           })
+          window.location.reload()
         })
         .catch(err => {
           if (err.response.status === 421) {
@@ -246,11 +248,12 @@ export default {
                 variant: 'danger',
               },
             })
+            window.location.reload()
           }
         })
     }
     function Deactivate(id) {
-      store.dispatch('Picket/inactivateViatura', { params: { id } })
+      store.dispatch('Picket/inactivateViatura', { id })
         .then(response => {
           toast({
             component: ToastificationContent,
@@ -260,6 +263,7 @@ export default {
               variant: 'success',
             },
           })
+          window.location.reload()
         })
         .catch(err => {
           if (err.response.status === 421) {

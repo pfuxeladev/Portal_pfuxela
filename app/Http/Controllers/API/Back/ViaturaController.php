@@ -60,16 +60,16 @@ class ViaturaController extends Controller
                 'nr_chassi'=> "required",
                 'nr_livrete'=> "required",
                 'matricula'=> "required",
-                // 'data_licenca'=> "required|date|before_or_equal:" . $todayDate,
-                // 'data_inspencao'=> "required|date|before_or_equal:" . $todayDate,
-                // 'data_manifesto'=> "required|date|before_or_equal:" . $todayDate,
-                // 'data_radio_difusao'=> "required|date|before_or_equal:" . $todayDate,
-                // 'data_seguros'=> "required|date|before_or_equal:" . $todayDate,
-                // 'prazo_licenca'=> "required|date",
-                // 'prazo_inspencao'=> "required|date",
-                // 'prazo_manifesto'=> "required|date",
-                // 'prazo_radio_difusao'=> "required|date",
-                // 'prazo_seguros'=> "required|date",
+                'data_licenca'=> "required|date|before_or_equal:" . $todayDate,
+                'data_inspencao'=> "required|date|before_or_equal:" . $todayDate,
+                'data_manifesto'=> "required|date|before_or_equal:" . $todayDate,
+                'data_radio_difusao'=> "required|date|before_or_equal:" . $todayDate,
+                'data_seguros'=> "required|date|before_or_equal:" . $todayDate,
+                'prazo_licenca'=> "required|date",
+                'prazo_inspencao'=> "required|date",
+                'prazo_manifesto'=> "required|date",
+                'prazo_radio_difusao'=> "required|date",
+                'prazo_seguros'=> "required|date",
             ],
             ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]
         );
@@ -102,7 +102,7 @@ class ViaturaController extends Controller
         $viatura->kilometragem = $request->kilometragem;
         $viatura->tipo_combustivel = $combustivel->tipo_combustivel;
         $viatura->marca()->associate($request->marca_id);
-        $viatura->estado = true;
+        $viatura->estado = false;
         $viatura->createdBy = auth()->user()->id;
         // $viatura->updatedBy = auth()->user()->id;
         $viatura->save();
@@ -153,24 +153,24 @@ class ViaturaController extends Controller
     function activarViatura(Request $request, $id){
         $viatura = Viatura::findOrFail($id);
         try {
-            $viatura->status = true;
+            $viatura->estado = true;
         $viatura->update();
 
-        return response(['sucess'=>'viatura activada pronta para o uso'], 200);
+        return response(['message'=>'viatura activada pronta para o uso'], 200);
         } catch (\Exception $e) {
-           return response(['erro'=>'Ocorreu um erro contacte o administrador'], 421);
+           return response(['error'=>'Ocorreu um erro contacte o administrador'], 421);
         }
 
     }
     function DesativarViatura(Request $request, $id){
         $viatura = Viatura::findOrFail($id);
         try {
-            $viatura->status = false;
+            $viatura->estado = false;
         $viatura->update();
 
-        return response(['sucess'=>'viatura Inativa'], 200);
+        return response(['message'=>'viatura Inativa'], 200);
         } catch (\Exception $e) {
-           return response(['erro'=>'Ocorreu um erro contacte o administrador'], 421);
+           return response(['error'=>'Ocorreu um erro contacte o administrador'], 421);
         }
 
     }

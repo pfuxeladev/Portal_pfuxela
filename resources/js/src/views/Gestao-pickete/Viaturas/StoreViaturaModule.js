@@ -32,14 +32,14 @@ export default {
     },
     activateViatura(ctx, { id }) {
       return new Promise((resolve, reject) => {
-        axios.get(`/api/activeVehicle/${id}`)
+        axios.get(`/api/activateViatura/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
     inactivateViatura(ctx, { id }) {
       return new Promise((resolve, reject) => {
-        axios.get(`/api/deativateVehicle/${id}`)
+        axios.get(`/api/DesativarViatura/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
