@@ -241,7 +241,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -283,6 +282,7 @@ __webpack_require__.r(__webpack_exports__);
       rec_abast: null,
       bombas: {},
       abastecimento: [],
+      OpenOrder: {},
       form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
         ordem_id: this.$route.params.refs,
         projecto_id: null,
@@ -296,8 +296,8 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.fetchProjectos();
     this.fetchViaturas();
-    this.fetchBombas(); // single data
-
+    this.fetchBombas();
+    this.getSubmited();
     this.getQtd();
   },
   directives: {
@@ -410,9 +410,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   setup: function setup() {
-    var _this9 = this;
-
-    var OpenOrder = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
     var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
 
@@ -421,15 +418,27 @@ __webpack_require__.r(__webpack_exports__);
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
       if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
-    _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Supply/getOpenOrder', {
-      refs: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs
-    }).then(function (response) {
-      _this9.OpenOrder = response.data;
-    })["catch"](function (error) {
-      if (error.response.status === 404) {
-        _this9.OpenOrder = undefined;
-      }
-    });
+
+    function getSubmited() {
+      var _this9 = this;
+
+      this.$http.get("/api/Ordems/".concat(_router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.refs)).then(function (response) {
+        _this9.OpenOrder = response.data;
+        console.log(_this9.OpenOrder);
+      })["catch"](function (error) {
+        if (error) {
+          console.log(error);
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+            props: {
+              title: 'Nenhuma viatura submitida a ordem',
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
 
     function enviarPedido(order) {
       var _this10 = this;
@@ -509,7 +518,7 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     return {
-      OpenOrder: OpenOrder,
+      getSubmited: getSubmited,
       enviarPedido: enviarPedido,
       removerPedido: removerPedido
     };
@@ -1030,8 +1039,6 @@ var render = function () {
                         _vm._v(" "),
                         _c("th", [_vm._v("Km(actual)")]),
                         _vm._v(" "),
-                        _c("th", [_vm._v("Bombas")]),
-                        _vm._v(" "),
                         _c("th", [_vm._v("Qtd a abastecer")]),
                         _vm._v(" "),
                         _c("th", [_vm._v("preço/(ltr)")]),
@@ -1046,16 +1053,12 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "tbody",
-                      _vm._l(_vm.OpenOrder, function (order) {
+                      _vm._l(_vm.OpenOrder.ordem_viatura, function (order) {
                         return _c("tr", { key: order.id }, [
                           _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
                           _vm._v(" "),
                           _c("td", [
                             _vm._v(_vm._s(order.viatura.kilometragem)),
-                          ]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _vm._v(_vm._s(order.ordem.bombas.nome_bombas)),
                           ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
