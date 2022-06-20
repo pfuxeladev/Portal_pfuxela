@@ -158,8 +158,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -234,7 +232,6 @@ __webpack_require__.r(__webpack_exports__);
                 variant: 'success'
               }
             });
-            window.location.reload();
           })["catch"](function (err) {
             if (err.response.status === 421) {
               toast({
@@ -311,7 +308,7 @@ __webpack_require__.r(__webpack_exports__);
     function reabrirOrdem(refs) {
       var _this3 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReopenOrder', {
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReabrirOrdem', {
         refs: refs
       }).then(function (res) {
         _this3.$emit('refetch-data');
@@ -974,10 +971,6 @@ var render = function () {
                                     ]),
                                     _vm._v(" "),
                                     _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("Qtd disponivel"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
                                       _vm._v("qtd"),
                                     ]),
                                     _vm._v(" "),
@@ -1024,15 +1017,6 @@ var render = function () {
                                           _vm._v(
                                             _vm._s(
                                               ordem_viatura.viatura.kilometragem
-                                            )
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(
-                                              ordem_viatura.viatura
-                                                .qtd_disponivel
                                             )
                                           ),
                                         ]),
@@ -1155,7 +1139,7 @@ var render = function () {
               ]),
               _vm._v(" "),
               _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Autorizado"
+                _vm.SupplyData.estado === "Cancelada"
                   ? _c(
                       "span",
                       [
@@ -1174,10 +1158,7 @@ var render = function () {
                       ],
                       1
                     )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.SupplyData.estado === "Pendente"
-                  ? _c(
+                  : _c(
                       "span",
                       [
                         _c(
@@ -1194,8 +1175,7 @@ var render = function () {
                         ),
                       ],
                       1
-                    )
-                  : _vm._e(),
+                    ),
               ]),
             ],
             1
