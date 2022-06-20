@@ -487,7 +487,7 @@ var render = function () {
                     },
                     [
                       _vm._v(
-                        "\r\n                    Novo motorista\r\n                "
+                        "\n                    Novo motorista\n                "
                       ),
                     ]
                   ),
@@ -558,11 +558,11 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.person.nome_completo) +
                     " " +
                     _vm._s(data.item.person.apelido) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -572,9 +572,9 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.person.endereco) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -584,9 +584,9 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.person.cargo) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -596,9 +596,9 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.person.NUIT) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -608,9 +608,7 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.doc_type) +
-                    "\r\n        "
+                  "\n            " + _vm._s(data.item.doc_type) + "\n        "
                 ),
               ]
             },
@@ -620,9 +618,9 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.nr_documento) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -632,9 +630,9 @@ var render = function () {
             fn: function (data) {
               return [
                 _vm._v(
-                  "\r\n            " +
+                  "\n            " +
                     _vm._s(data.item.carta_conducao) +
-                    "\r\n        "
+                    "\n        "
                 ),
               ]
             },
@@ -731,7 +729,7 @@ var render = function () {
                 "b-col",
                 {
                   staticClass:
-                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-start\r\n            ",
+                    "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
                   attrs: { cols: "12", sm: "6" },
                 },
                 [
@@ -741,7 +739,7 @@ var render = function () {
                         _vm._s(_vm.dataMeta.from) +
                         " para " +
                         _vm._s(_vm.dataMeta.to) +
-                        " de\r\n              " +
+                        " de\n              " +
                         _vm._s(_vm.dataMeta.of) +
                         " entradas"
                     ),
@@ -753,7 +751,7 @@ var render = function () {
                 "b-col",
                 {
                   staticClass:
-                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-end\r\n            ",
+                    "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
                   attrs: { cols: "12", sm: "6" },
                 },
                 [

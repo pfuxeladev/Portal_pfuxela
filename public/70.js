@@ -256,10 +256,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -311,7 +307,9 @@ __webpack_require__.r(__webpack_exports__);
 
     function Activate(id) {
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Picket/activateViatura', {
-        id: id
+        params: {
+          id: id
+        }
       }).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -321,7 +319,6 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
-        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -332,14 +329,15 @@ __webpack_require__.r(__webpack_exports__);
               variant: 'danger'
             }
           });
-          window.location.reload();
         }
       });
     }
 
     function Deactivate(id) {
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Picket/inactivateViatura', {
-        id: id
+        params: {
+          id: id
+        }
       }).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
@@ -349,7 +347,6 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
-        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -785,7 +782,7 @@ var render = function () {
                       ? _c(
                           "span",
                           [
-                            _c("b-badge", { attrs: { variant: "success" } }, [
+                            _c("b-badge", { attrs: { variant: "sucess" } }, [
                               _vm._v("activo"),
                             ]),
                           ],
@@ -858,7 +855,7 @@ var render = function () {
                           {
                             attrs: {
                               to: {
-                                name: "Edit-car",
+                                name: "cars-edit",
                                 params: { id: data.item.id },
                               },
                             },
@@ -867,61 +864,25 @@ var render = function () {
                             _c("feather-icon", { attrs: { icon: "EditIcon" } }),
                             _vm._v(" "),
                             _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Editar"),
+                              _vm._v("Edit"),
                             ]),
                           ],
                           1
                         ),
                         _vm._v(" "),
-                        data.item.estado == 1
-                          ? _c(
-                              "b-dropdown-item",
-                              {
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.Deactivate(data.item.id)
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "XSquareIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("desactivar")]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        data.item.estado == 0
-                          ? _c(
-                              "b-dropdown-item",
-                              {
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.Activate(data.item.id)
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "CheckCircleIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("activar")]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
+                        _c(
+                          "b-dropdown-item",
+                          [
+                            _c("feather-icon", {
+                              attrs: { icon: "PlusCircleIcon" },
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "align-middle ml-50" }, [
+                              _vm._v("alocar rotas"),
+                            ]),
+                          ],
+                          1
+                        ),
                       ],
                       1
                     ),
@@ -1393,7 +1354,7 @@ __webpack_require__.r(__webpack_exports__);
     activateViatura: function activateViatura(ctx, _ref2) {
       var id = _ref2.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activateViatura/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activeVehicle/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1403,7 +1364,7 @@ __webpack_require__.r(__webpack_exports__);
     inactivateViatura: function inactivateViatura(ctx, _ref3) {
       var id = _ref3.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/DesativarViatura/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/deativateVehicle/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

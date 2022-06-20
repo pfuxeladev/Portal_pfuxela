@@ -810,9 +810,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(_vm.dateTime(data.item.created_at)) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -822,9 +822,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.check_list_out.viatura.matricula) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
