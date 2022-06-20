@@ -1028,7 +1028,7 @@ var render = function () {
                           {
                             attrs: {
                               to: {
-                                name: "driver-details",
+                                name: "CheckList-out-details",
                                 params: { id: data.item.id },
                               },
                             },
@@ -1045,25 +1045,31 @@ var render = function () {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "CheckList-In",
-                                params: { id: data.item.id },
+                        data.item.viatura.locate !== "IN"
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "CheckList-In",
+                                    params: { id: data.item.id },
+                                  },
+                                },
                               },
-                            },
-                          },
-                          [
-                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Dar entrada"),
-                            ]),
-                          ],
-                          1
-                        ),
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "EditIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Dar entrada")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                       ],
                       1
                     ),

@@ -65,6 +65,14 @@ export default
     },
   },
   {
+    path: '/Picket/vehicle-movements/:id/CheckList-out-details',
+    name: 'CheckList-out-details',
+    component: () => import('@/views/Gestao-pickete/relatorios/saidaDetails.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Picket/drivers',
     name: 'Drivers',
     component: () => import('@/views/Gestao-pickete/relatorios/motoristas/lista.vue'),

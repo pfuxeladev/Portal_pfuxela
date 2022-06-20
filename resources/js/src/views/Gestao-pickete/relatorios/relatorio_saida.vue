@@ -54,12 +54,12 @@
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>
-                <b-dropdown-item :to="{ name: 'driver-details', params: { id: data.item.id } }">
+                <b-dropdown-item :to="{ name: 'CheckList-out-details', params: { id: data.item.id } }">
                     <feather-icon icon="FileTextIcon" />
                     <span class="align-middle ml-50">Detalhes</span>
                 </b-dropdown-item>
 
-                <b-dropdown-item :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
+                <b-dropdown-item v-if="data.item.viatura.locate !== 'IN'" :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
                     <feather-icon icon="EditIcon" />
                     <span class="align-middle ml-50">Dar entrada</span>
                 </b-dropdown-item>
