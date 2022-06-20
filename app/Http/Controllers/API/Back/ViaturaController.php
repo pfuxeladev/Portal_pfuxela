@@ -203,21 +203,24 @@ class ViaturaController extends Controller
         $viatura->update();
 
         if ($viatura) {
-            foreach ($request->viatura_document as $key => $document) {
-                $viatura_document = $viatura->viaturaDocument()->where('viatura_id', $viatura->id)->update([
-                    'data_licenca'=>$document['data_licenca'],
-                    'data_inspencao'=>$document['data_inspencao'],
-                    'data_manifesto'=>$document['data_manifesto'],
-                    'data_taxa_radio'=>$document['data_taxa_radio'],
-                    'data_seguros'=>$document['data_seguros'],
-                    'prazo_licenca'=>$document['prazo_licenca'],
-                    'prazo_inspencao'=>$document['prazo_inspencao'],
-                    'prazo_manifesto'=>$document['prazo_manifesto'],
-                    'prazo_taxa_radio'=>$document['prazo_taxa_radio'],
-                    'prazo_seguros'=>$document['prazo_seguros'],
-                ]);
+            if (!empty($request->viatura_document)) {
+                foreach ($request->viatura_document as $key => $document) {
+                    $viatura_document = $viatura->viaturaDocument()->where('viatura_id', $viatura->id)->update([
+                        'data_licenca'=>$document['data_licenca'],
+                        'data_inspencao'=>$document['data_inspencao'],
+                        'data_manifesto'=>$document['data_manifesto'],
+                        'data_taxa_radio'=>$document['data_taxa_radio'],
+                        'data_seguros'=>$document['data_seguros'],
+                        'prazo_licenca'=>$document['prazo_licenca'],
+                        'prazo_inspencao'=>$document['prazo_inspencao'],
+                        'prazo_manifesto'=>$document['prazo_manifesto'],
+                        'prazo_taxa_radio'=>$document['prazo_taxa_radio'],
+                        'prazo_seguros'=>$document['prazo_seguros'],
+                    ]);
 
+                }
             }
+
                 return response()->json(['success' => 'cadastrado com sucesso'], 200);
         } else{
             return response()->json(['message' => false, 'error' => 'erro na insercao de dados verifique os campos'], 421);

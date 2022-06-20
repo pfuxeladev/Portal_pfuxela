@@ -96,18 +96,20 @@ class CheckListInController extends Controller
                      $viatura->locate = 'IN';
                      $viatura->update();
                 }
+
                 $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
 
                 $delta_percorrido = ($request->km_fim - $viatura1->kilometragem);
-
-
 
                 $total_percorrido = ($request->km_fim + $viatura1->kilometragem);
 
                 $consumo = ($delta_percorrido * $viatura1->capacidade_media);
 
-                $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
-
+                if($consumo > $viatura1->qtd_disponivel){
+                    $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
+                }else{
+                    $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+                }
 
                 $viatura1->qtd_disponivel = $qtd_disponivel;
                 $viatura1->kilometragem = $total_percorrido;
