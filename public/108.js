@@ -1,6 +1,7 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[108],{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ "./node_modules/animate.css/animate.css":
 /*!**********************************************!*\
   !*** ./node_modules/animate.css/animate.css ***!
@@ -47,6 +48,8 @@ exports.push([module.i, "@charset \"UTF-8\";/*!\n * animate.css - https://animat
 module.exports = exports;
 
 =======
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/saidaDetails.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/saidaDetails.vue?vue&type=script&lang=js& ***!
@@ -160,7 +163,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_saidaDetails_vue_vue_type_template_id_00c0570b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+<<<<<<< HEAD
 >>>>>>> 27895fa12f48b609a61b2722bf6cc4dba99630b3
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 
 /***/ })
 

@@ -1,10 +1,7 @@
 <template>
   <div>
     <!-- Table Container Card -->
-    <b-card
-      no-body
-      class="mb-0"
-    >
+    <b-card no-body class="mb-0">
       <div class="m-2">
         <!-- Table Top -->
         <b-row>
@@ -26,22 +23,21 @@
           </b-col>
 
           <!-- Search -->
-          <b-col
-            cols="12"
-            md="6"
-          >
-            <div class="d-flex align-items-center justify-content-end">
-              <b-form-input
-                v-model="searchQuery"
-                class="d-inline-block mr-1"
-                placeholder="Search..."
-              />
-              <b-link
-                class="btn btn-outline-primary"
-                :to="{ name: 'New-car' }"
-              >
-                <span class="text-nowrap">Ad.viatura</span>
-              </b-link>
+          <b-col cols="12" md="6"
+            ><div v-if="can('Create')">
+              <div class="d-flex align-items-center justify-content-end">
+                <b-form-input
+                  v-model="searchQuery"
+                  class="d-inline-block mr-1"
+                  placeholder="Search..."
+                />
+                <b-link
+                  class="btn btn-outline-primary"
+                  :to="{ name: 'New-car' }"
+                >
+                  <span class="text-nowrap">Ad.viatura</span>
+                </b-link>
+              </div>
             </div>
           </b-col>
         </b-row>
@@ -81,21 +77,30 @@
                 class="align-middle text-body"
               />
             </template>
-            <b-dropdown-item :to="{ name: 'cars-details', params: { id: data.item.id } }">
+            <b-dropdown-item
+              :to="{ name: 'cars-details', params: { id: data.item.id } }"
+            >
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Details</span>
             </b-dropdown-item>
 
-            <b-dropdown-item :to="{ name: 'Edit-car', params: { id: data.item.id } }">
+            <b-dropdown-item
+              :to="{ name: 'Edit-car', params: { id: data.item.id } }"
+            >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
-            <b-dropdown-item v-if="data.item.estado == 1" @click="Deactivate(data.item.id)">
+            <b-dropdown-item
+              v-if="data.item.estado == 1"
+              @click="Deactivate(data.item.id)"
+            >
               <feather-icon icon="XSquareIcon" />
               <span class="align-middle ml-50">desactivar</span>
             </b-dropdown-item>
-             <b-dropdown-item v-if="data.item.estado == 0"
-                @click="Activate(data.item.id)" >
+            <b-dropdown-item
+              v-if="data.item.estado == 0"
+              @click="Activate(data.item.id)"
+            >
               <feather-icon icon="CheckCircleIcon" />
               <span class="align-middle ml-50">activar</span>
             </b-dropdown-item>
@@ -113,8 +118,10 @@
               justify-content-center justify-content-sm-start
             "
           >
-            <span class="text-muted">Showing {{ dataMeta.from }} to {{ dataMeta.to }} of
-              {{ dataMeta.of }} entries</span>
+            <span class="text-muted"
+              >Showing {{ dataMeta.from }} to {{ dataMeta.to }} of
+              {{ dataMeta.of }} entries</span
+            >
           </b-col>
           <!-- Pagination -->
           <b-col
@@ -137,16 +144,10 @@
               next-class="next-item"
             >
               <template #prev-text>
-                <feather-icon
-                  icon="ChevronLeftIcon"
-                  size="18"
-                />
+                <feather-icon icon="ChevronLeftIcon" size="18" />
               </template>
               <template #next-text>
-                <feather-icon
-                  icon="ChevronRightIcon"
-                  size="18"
-                />
+                <feather-icon icon="ChevronRightIcon" size="18" />
               </template>
             </b-pagination>
           </b-col>
@@ -157,6 +158,7 @@
 </template>
 
 <script>
+import Vue from "vue";
 import {
   BCard,
   BRow,
@@ -170,18 +172,15 @@ import {
   BDropdown,
   BDropdownItem,
   BPagination,
-} from 'bootstrap-vue'
-import { useToast } from 'vue-toastification/composition'
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
-import vSelect from 'vue-select'
-import {
-  ref,
-  onUnmounted,
-} from '@vue/composition-api'
-import store from '@/store'
+} from "bootstrap-vue";
+import { useToast } from "vue-toastification/composition";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
+import vSelect from "vue-select";
+import { ref, onUnmounted } from "@vue/composition-api";
+import store from "@/store";
 // import UsersListFilters from './UsersListFilters.vue'
-import viaturaList from './viaturaList'
-import StoreViaturaModule from './StoreViaturaModule'
+import viaturaList from "./viaturaList";
+import StoreViaturaModule from "./StoreViaturaModule";
 // import viaturaAddNew from './viaturaForm.vue'
 
 export default {
@@ -204,79 +203,85 @@ export default {
     vSelect,
   },
   setup() {
-    const USER_APP_STORE_MODULE_NAME = 'Picket'
+    const USER_APP_STORE_MODULE_NAME = "Picket";
 
     // Register module
-    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) { store.registerModule(USER_APP_STORE_MODULE_NAME, StoreViaturaModule) }
+    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) {
+      store.registerModule(USER_APP_STORE_MODULE_NAME, StoreViaturaModule);
+    }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) { store.unregisterModule(USER_APP_STORE_MODULE_NAME) }
-    })
+      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) {
+        store.unregisterModule(USER_APP_STORE_MODULE_NAME);
+      }
+    });
 
     const statusOptions = [
       {
-        label: 'Active',
-        value: 'active',
+        label: "Active",
+        value: "active",
       },
       {
-        label: 'Inactive',
-        value: 'inactive',
+        label: "Inactive",
+        value: "inactive",
       },
-    ]
-    const toast = useToast()
+    ];
+    const toast = useToast();
     function Activate(id) {
-      store.dispatch('Picket/activateViatura', { id })
-        .then(response => {
+      store
+        .dispatch("Picket/activateViatura", { id })
+        .then((response) => {
           toast({
             component: ToastificationContent,
             props: {
               title: response.data.message,
-              icon: 'CheckSquareIcon',
-              variant: 'success',
+              icon: "CheckSquareIcon",
+              variant: "success",
             },
-          })
-          window.location.reload()
+          });
+          window.location.reload();
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.response.status === 421) {
             toast({
               component: ToastificationContent,
               props: {
                 title: err.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                icon: "AlertTriangleIcon",
+                variant: "danger",
               },
-            })
-            window.location.reload()
+            });
+            window.location.reload();
           }
-        })
+        });
     }
     function Deactivate(id) {
-      store.dispatch('Picket/inactivateViatura', { id })
-        .then(response => {
+      store
+        .dispatch("Picket/inactivateViatura", { id })
+        .then((response) => {
           toast({
             component: ToastificationContent,
             props: {
               title: response.data.message,
-              icon: 'CheckSquareIcon',
-              variant: 'success',
+              icon: "CheckSquareIcon",
+              variant: "success",
             },
-          })
-          window.location.reload()
+          });
+          window.location.reload();
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.response.status === 421) {
             toast({
               component: ToastificationContent,
               props: {
                 title: err.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                icon: "AlertTriangleIcon",
+                variant: "danger",
               },
-            })
+            });
           }
-        })
+        });
     }
 
     const {
@@ -297,7 +302,7 @@ export default {
       roleFilter,
       planFilter,
       statusFilter,
-    } = viaturaList()
+    } = viaturaList();
 
     return {
       // Sidebar
@@ -325,14 +330,14 @@ export default {
       //   activar viatura
       Activate,
       Deactivate,
-    }
+    };
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .per-page-selector {
-    width: 90px;
+  width: 90px;
 }
 </style>
 

@@ -8,7 +8,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import axios from 'axios'
 // import Swal from 'sweetalert2'
-import Permissions from '@core/mixins/Permissions.vue'
+// import Permissions from './@core/mixins/Permissions.vue'
+import LaravelPermissionToVueJS from 'laravel-permission-to-vuejs'
 import i18n from '@/libs/i18n'
 import router from './router'
 import store from './store'
@@ -26,7 +27,6 @@ import '@/libs/sweet-alerts'
 import '@/libs/vue-select'
 import '@/libs/tour'
 
-
 // Axios Mock Adapter
 import '@/@fake-db/db'
 
@@ -43,21 +43,7 @@ const options = {
   location: 'left',
   inverse: false,
 }
-// const Toast = Swal.mixin({
-//   confirmButtonColor: '#41b882',
-//   cancelButtonColor: '#ff7674',
-//   toast: true,
-//   position: 'top-end',
-//   showConfirmButton: false,
-//   timer: 3000,
-//   timerProgressBar: true,
-//   onOpen: toast => {
-//     toast.addEventListener('mouseenter')
-//     toast.addEventListener('mouseleave')
-//   },
-// })
-// window.Swal = Swal
-// window.toast = Toast
+
 const Fire = new Vue()
 window.Fire = Fire
 // Vue.use(VueSweetalert2, Toast)
@@ -69,8 +55,18 @@ Vue.use(VueProgressBar, options)
 
 // Composition API
 Vue.use(VueCompositionAPI)
-Vue.mixin(Permissions)
+
+Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
+// created(){
+// Vue.directive('can', (el, binding, vnode) => {
+//   if (Permissions.indexOf(binding.value) !== -1) {
+//     return vnode.elm.hidden = true
+//   }
+//   return vnode.elm.hidden = false
+// })
+
+//   }
 // * Shall remove it if not using font-icons of feather-icons - For form-wizard
 require('@core/assets/fonts/feather/iconfont.css') // For form-wizard
 

@@ -30,7 +30,7 @@
                     </b-col>
             </b-row>
             <hr>
-            <b-row>
+            <b-row v-if="bomba.ordem.length === 0">
                 <b-col cols="12">
                     <b-card-header>
                         <h3 class="card-title">Resumo dos abastecimentos</h3>
@@ -109,7 +109,7 @@ export default {
     Table,
   },
   setup() {
-   const bomba = ref(null)
+    const bomba = ref(null)
 
     const toast = useToast()
 
@@ -129,11 +129,9 @@ export default {
         }
       })
     }
-      function dateTime(value) {
+    function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
-
-
     return {
       getBombasDetails,
       dateTime,

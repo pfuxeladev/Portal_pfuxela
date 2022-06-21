@@ -1,22 +1,29 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[113],{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/error/Error404.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/error/Error404.vue?vue&type=script&lang=js& ***!
   \************************************************************************************************************************************************************************/
 /*! exports provided: default */
 =======
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 /***/ "./node_modules/vue-good-table/dist/vue-good-table.esm.js":
 /*!****************************************************************!*\
   !*** ./node_modules/vue-good-table/dist/vue-good-table.esm.js ***!
   \****************************************************************/
 /*! exports provided: default, VueGoodTable */
+<<<<<<< HEAD
 >>>>>>> 27895fa12f48b609a61b2722bf6cc4dba99630b3
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
 /* harmony import */ var _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/layouts/components/Logo.vue */ "./resources/js/src/@core/layouts/components/Logo.vue");
@@ -321,6 +328,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 =======
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 /* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueGoodTable", function() { return __vue_component__$6; });
 /**
  * vue-good-table v2.21.11
@@ -10568,7 +10577,10 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+<<<<<<< HEAD
 >>>>>>> 27895fa12f48b609a61b2722bf6cc4dba99630b3
+=======
+>>>>>>> 9222e3d486ee25e09ad0721ffa28a131430f8ece
 
 /***/ })
 

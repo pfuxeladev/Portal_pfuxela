@@ -43,25 +43,46 @@ class BombaController extends Controller
         // $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-        $this->validate(
-            $request,
-            [
-                'nome_bombas' => 'required|string',
-                'capacidade' => 'required| string',
-                'tipo_bomba' => 'required|string',
-                'responsavel' => 'required|array|min:1',
-                'responsavel*nome' => 'required|string',
-                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
-                'responsavel*contacto' => 'required|string',
-                'responsavel*combustivel_tipos' => 'required',
 
-            ],
-            [
-                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
-                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
-            ]
-        );
 
+        if ($request->tipo_bomba === 'interna') {
+            $this->validate(
+                $request,
+                [
+                    'nome_bombas' => 'required|string',
+                    'capacidade' => 'required| string',
+                    'tipo_bomba' => 'required|string',
+                    'responsavel' => 'required|array|min:1',
+                    'responsavel*nome' => 'required|string',
+                    'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
+                    'responsavel*contacto' => 'required|string',
+                    'responsavel*combustivel_tipos' => 'required',
+
+                ],
+                [
+                    'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
+                    'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
+                ]
+            );
+        }else {
+            $this->validate(
+                $request,
+                [
+                    'nome_bombas' => 'required|string',
+                    'capacidade' => 'required| string',
+                    'responsavel' => 'required|array|min:1',
+                    'responsavel*nome' => 'required|string',
+                    'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
+                    'responsavel*contacto' => 'required|string',
+                    'responsavel*combustivel_tipos' => 'required',
+
+                ],
+                [
+                    'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
+                    'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
+                ]
+            );
+        }
 
         $bombaVerify = Bombas::where('nome_bombas', $request->nome_bombas)->first();
         if (!empty($bombaVerify)) {

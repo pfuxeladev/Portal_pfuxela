@@ -9,9 +9,13 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Spatie\Permission\Models\Permission;
+use Illuminate\Support\Facades\Auth;
+use App\Permissions\HasPermissionsTrait;
+use LaravelAndVueJS\Traits\LaravelPermissionToVueJS;
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, LaravelPermissionToVueJS, HasPermissionsTrait;
+
 
     public function departamento(){
         return $this->belongsTo(Departamento::class, 'departamento_id', 'id');
@@ -31,6 +35,14 @@ class User extends Authenticatable
         return $this->hasMany(Bombas::class, 'createdBy', 'id');
     }
 
+    public function jsPermissions()
+    {
+        return json_encode([
+                'roles' => $this->getRoleNames(),
+                'permissions' => $this->getAllPermissions()->pluck('name'),
+            ]);
+    }
+
     protected $fillable = [
         'name',
         'email',
@@ -42,7 +54,7 @@ class User extends Authenticatable
     public function getAllPermissionsAttribute() {
         $permissions = [];
           foreach (Permission::all() as $permission) {
-            if (auth()->user()->can($permission->name)) {
+            if (Auth::user()->can($permission->name)) {
               $permissions[] = $permission->name;
             }
           }
@@ -52,6 +64,8 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
+    protected $appends = ['all_permissions','can'];
 
     /**
      * The attributes that should be cast.

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import { BCard, BCardBody, BModal, BRow, BCol, BButton, } from 'bootstrap-vue'
+import { BCard, BCardBody, BModal, BRow, BCol, BButton } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import Form from 'vform';
 import { ref, onUnmounted } from '@vue/composition-api'
