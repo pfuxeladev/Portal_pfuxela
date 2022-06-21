@@ -808,123 +808,142 @@ var render = function () {
                       _vm._v(" "),
                       _c("hr"),
                       _vm._v(" "),
-                      _c(
-                        "b-row",
-                        [
-                          _c(
-                            "b-col",
-                            { attrs: { cols: "12" } },
+                      _vm.bomba.ordem.length === 0
+                        ? _c(
+                            "b-row",
                             [
-                              _c("b-card-header", [
-                                _c("h3", { staticClass: "card-title" }, [
-                                  _vm._v("Resumo dos abastecimentos"),
-                                ]),
-                              ]),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _vm._l(_vm.bomba.ordem, function (ordem, index) {
-                            return _c(
-                              "b-col",
-                              { key: index, attrs: { cols: "12" } },
-                              [
-                                _c("b-card-header", [
-                                  _c(
-                                    "h4",
-                                    {
-                                      staticClass: "card-title text-uppercase",
-                                    },
-                                    [
-                                      _vm._v("Codigo: "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c("b-card-header", [
+                                    _c("h3", { staticClass: "card-title" }, [
+                                      _vm._v("Resumo dos abastecimentos"),
+                                    ]),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _vm._l(_vm.bomba.ordem, function (ordem, index) {
+                                return _c(
+                                  "b-col",
+                                  { key: index, attrs: { cols: "12" } },
+                                  [
+                                    _c("b-card-header", [
                                       _c(
-                                        "span",
-                                        { staticStyle: { color: "#593101" } },
+                                        "h4",
+                                        {
+                                          staticClass:
+                                            "card-title text-uppercase",
+                                        },
                                         [
-                                          _vm._v(
-                                            "#" + _vm._s(ordem.codigo_ordem)
+                                          _vm._v("Codigo: "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticStyle: { color: "#593101" },
+                                            },
+                                            [
+                                              _vm._v(
+                                                "#" + _vm._s(ordem.codigo_ordem)
+                                              ),
+                                            ]
                                           ),
                                         ]
                                       ),
-                                    ]
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "table",
-                                  {
-                                    staticClass:
-                                      "table table-bordered table-stripped",
-                                  },
-                                  [
-                                    _c("thead", [
-                                      _c("tr", [
-                                        _c("th", [_vm._v("Data")]),
-                                        _vm._v(" "),
-                                        _c("th", [_vm._v("viatur(matricula)")]),
-                                        _vm._v(" "),
-                                        _c("th", [_vm._v("Qtd")]),
-                                        _vm._v(" "),
-                                        _c("th", [_vm._v("preço")]),
-                                        _vm._v(" "),
-                                        _c("th", [_vm._v("Total")]),
-                                      ]),
                                     ]),
                                     _vm._v(" "),
                                     _c(
-                                      "tbody",
-                                      _vm._l(
-                                        ordem.ordem_viatura,
-                                        function (ordVi) {
-                                          return _c("tr", { key: ordVi.id }, [
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(ordVi.updated_at)
-                                                )
-                                              ),
+                                      "table",
+                                      {
+                                        staticClass:
+                                          "table table-bordered table-stripped",
+                                      },
+                                      [
+                                        _c("thead", [
+                                          _c("tr", [
+                                            _c("th", [_vm._v("Data")]),
+                                            _vm._v(" "),
+                                            _c("th", [
+                                              _vm._v("viatur(matricula)"),
                                             ]),
                                             _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(ordVi.viatura.matricula)
-                                              ),
-                                            ]),
+                                            _c("th", [_vm._v("Qtd")]),
                                             _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(ordVi.qtd_abastecida)
-                                              ),
-                                            ]),
+                                            _c("th", [_vm._v("preço")]),
                                             _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  ordVi.preco_cunsumo /
-                                                    ordVi.qtd_abastecida
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(ordVi.preco_cunsumo)
-                                              ),
-                                            ]),
-                                          ])
-                                        }
-                                      ),
-                                      0
+                                            _c("th", [_vm._v("Total")]),
+                                          ]),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          _vm._l(
+                                            ordem.ordem_viatura,
+                                            function (ordVi) {
+                                              return _c(
+                                                "tr",
+                                                { key: ordVi.id },
+                                                [
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm.dateTime(
+                                                          ordVi.updated_at
+                                                        )
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        ordVi.viatura.matricula
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        ordVi.qtd_abastecida
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        ordVi.preco_cunsumo /
+                                                          ordVi.qtd_abastecida
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        ordVi.preco_cunsumo
+                                                      )
+                                                    ),
+                                                  ]),
+                                                ]
+                                              )
+                                            }
+                                          ),
+                                          0
+                                        ),
+                                      ]
                                     ),
-                                  ]
-                                ),
-                              ],
-                              1
-                            )
-                          }),
-                        ],
-                        2
-                      ),
+                                  ],
+                                  1
+                                )
+                              }),
+                            ],
+                            2
+                          )
+                        : _vm._e(),
                     ],
                     1
                   ),

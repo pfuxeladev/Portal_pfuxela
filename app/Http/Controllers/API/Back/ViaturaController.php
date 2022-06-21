@@ -184,6 +184,21 @@ class ViaturaController extends Controller
 
         return response()->json($abastecimentos, 200);
     }
+
+    function alocarRotas(Request $request, $id){
+        $viatura = Viatura::findOrFail($id);
+
+        foreach($request->rotas as $rt){
+            $viatura->rota()->firstOrNew([
+                'rota_id'=>$rt,
+                'createdBy'=>auth()->user()->id
+            ]);
+        }
+    }
+
+    function retirarRota(Request $request, $id){
+
+    }
     public function update(Request $request, $id)
     {
         $viatura = Viatura::findOrFail($id);
