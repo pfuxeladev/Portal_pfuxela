@@ -1,1 +1,61 @@
 [30-May-2022 07:17:31 America/Chicago] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.3.33. in /home2/pfuxelaco/public_html/portal_pfuxela/portal/vendor/composer/platform_check.php on line 24
+[21-Jun-2022 14:13:54 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:13:54 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:13:54 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:13:54 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:21:29 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:21:29 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:21:29 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:21:29 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:22:43 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:22:43 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:22:43 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:22:43 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:24:37 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:24:37 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:24:37 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:24:37 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:33:20 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:33:20 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:33:20 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:33:20 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:34:42 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:34:42 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:34:42 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:34:42 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:34:56 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:34:56 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:34:56 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:34:56 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:36:50 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:36:50 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:36:50 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:36:50 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:37:19 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:37:19 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:37:19 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:37:19 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:41:44 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:41:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:41:44 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:41:44 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:42:19 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:42:19 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:42:19 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:42:19 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:44:38 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:44:38 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:44:38 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:44:38 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:53:56 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:53:56 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:53:56 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:53:56 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:56:55 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:56:55 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[21-Jun-2022 14:56:55 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[21-Jun-2022 14:56:55 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[22-Jun-2022 05:59:39 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[22-Jun-2022 05:59:39 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[22-Jun-2022 05:59:39 UTC] PHP Parse error:  syntax error, unexpected '|', expecting variable (T_VARIABLE) in /home2/pfuxelaco/public_html/abastecimento/vendor/psr/log/src/LoggerInterface.php on line 30
+[22-Jun-2022 05:59:39 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
