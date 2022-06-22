@@ -9,7 +9,9 @@ use App\Models\combustivelBomba;
 use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-
+use PDF;
+use Mail;
+use Illuminate\Support\Facades\Storage;
 class BombaController extends Controller
 {
     private $bombas;
@@ -147,13 +149,7 @@ class BombaController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bombas  $bombas
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $uuid = Str::uuid()->toString();
@@ -219,12 +215,12 @@ class BombaController extends Controller
         }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Bombas  $bombas
-     * @return \Illuminate\Http\Response
-     */
+    function AbastecerBomba(Request $request, $id){
+        $bomba = Bombas::where('tipo_bomba', 'interna')->where('id', $id)->first();
+        
+
+
+    }
     public function destroy(Bombas $bombas)
     {
         //

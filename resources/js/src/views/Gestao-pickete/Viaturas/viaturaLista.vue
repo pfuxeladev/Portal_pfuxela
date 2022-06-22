@@ -85,7 +85,7 @@
             </b-dropdown-item>
 
             <b-dropdown-item
-              :to="{ name: 'Edit-car', params: { id: data.item.id } }"
+            v-if="can('Edit')" :to="{ name: 'Edit-car', params: { id: data.item.id } }"
             >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>

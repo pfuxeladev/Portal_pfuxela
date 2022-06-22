@@ -861,25 +861,31 @@ var render = function () {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "Edit-car",
-                                params: { id: data.item.id },
+                        _vm.can("Edit")
+                          ? _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "Edit-car",
+                                    params: { id: data.item.id },
+                                  },
+                                },
                               },
-                            },
-                          },
-                          [
-                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Editar"),
-                            ]),
-                          ],
-                          1
-                        ),
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "EditIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Editar")]
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                         _vm._v(" "),
                         data.item.estado == 1
                           ? _c(

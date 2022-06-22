@@ -280,6 +280,7 @@ class AbastecimentoController extends Controller
         $ordem->refs = $uuid;
         $ordem->bombas_id = $request->bombas_id;
         $ordem->estado = 'Pendente';
+        $ordem->tipo_ordem = 'extra';
         $ordem->createdBy = auth()->user()->id;
         $ordem->save();
 
