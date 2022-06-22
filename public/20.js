@@ -7826,15 +7826,11 @@ function useVerticalNavMenuGroup(item) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_libs_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/libs/i18n */ "./resources/js/src/@core/libs/i18n/index.js");
-/* harmony import */ var _core_libs_acl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/libs/acl */ "./resources/js/src/@core/libs/acl/index.js");
-
-
+ // import { useUtils as useAclUtils } from '@core/libs/acl'
 
 var _useI18nUtils = Object(_core_libs_i18n__WEBPACK_IMPORTED_MODULE_0__["useUtils"])(),
-    t = _useI18nUtils.t;
+    t = _useI18nUtils.t; // const { canViewVerticalNavMenuHeader } = useAclUtils()
 
-var _useAclUtils = Object(_core_libs_acl__WEBPACK_IMPORTED_MODULE_1__["useUtils"])(),
-    canViewVerticalNavMenuHeader = _useAclUtils.canViewVerticalNavMenuHeader;
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -7852,7 +7848,7 @@ var _useAclUtils = Object(_core_libs_acl__WEBPACK_IMPORTED_MODULE_1__["useUtils"
       }
     });
 
-    if (canViewVerticalNavMenuHeader(this.item)) {
+    if (this.item) {
       return h('li', {
         "class": 'navigation-header text-truncate'
       }, [span, icon]);
@@ -8317,158 +8313,6 @@ var navLinkProps = function navLinkProps(item) {
     if (!props.target) props.target = item.target || null;
     return props;
   });
-};
-
-/***/ }),
-
-/***/ "./resources/js/src/@core/libs/acl/index.js":
-/*!**************************************************!*\
-  !*** ./resources/js/src/@core/libs/acl/index.js ***!
-  \**************************************************/
-/*! exports provided: useUtils, _ */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useUtils", function() { return useUtils; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/libs/acl/utils.js");
-
-
-var useUtils = function useUtils() {
-  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
-};
-var _ = null;
-
-/***/ }),
-
-/***/ "./resources/js/src/@core/libs/acl/utils.js":
-/*!**************************************************!*\
-  !*** ./resources/js/src/@core/libs/acl/utils.js ***!
-  \**************************************************/
-/*! exports provided: can, canViewVerticalNavMenuLink, canViewVerticalNavMenuGroup, canViewVerticalNavMenuHeader, canViewHorizontalNavMenuLink, canViewHorizontalNavMenuHeaderLink, canViewHorizontalNavMenuGroup, canViewHorizontalNavMenuHeaderGroup */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "can", function() { return can; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewVerticalNavMenuLink", function() { return canViewVerticalNavMenuLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewVerticalNavMenuGroup", function() { return canViewVerticalNavMenuGroup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewVerticalNavMenuHeader", function() { return canViewVerticalNavMenuHeader; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewHorizontalNavMenuLink", function() { return canViewHorizontalNavMenuLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewHorizontalNavMenuHeaderLink", function() { return canViewHorizontalNavMenuHeaderLink; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewHorizontalNavMenuGroup", function() { return canViewHorizontalNavMenuGroup; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "canViewHorizontalNavMenuHeaderGroup", function() { return canViewHorizontalNavMenuHeaderGroup; });
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-
-
-/**
- * Returns ability result if ACL is configured or else just return true
- * Useful if you don't know if ACL is configured or not
- * Used in @core files to handle absence of ACL without errors
- * @param {String} action CASL Actions // https://casl.js.org/v4/en/guide/intro#basics
- * @param {String} subject CASL Subject // https://casl.js.org/v4/en/guide/intro#basics
- */
-
-var can = function can(action, subject) {
-  var vm = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["getCurrentInstance"])().proxy;
-  return vm.$can ? vm.$can(action, subject) : true;
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource
- * @param {Object} item navigation object item
- */
-
-var canViewVerticalNavMenuLink = function canViewVerticalNavMenuLink(item) {
-  return can(item.action, item.resource);
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource & Hide group if all of it's children are hidden
- * @param {Object} item navigation object item
- */
-// eslint-disable-next-line arrow-body-style
-
-var canViewVerticalNavMenuGroup = function canViewVerticalNavMenuGroup(item) {
-  // ! This same logic is used in canViewHorizontalNavMenuGroup and canViewHorizontalNavMenuHeaderGroup. So make sure to update logic in them as well
-  var hasAnyVisibleChild = item.children.some(function (i) {
-    return can(i.action, i.resource);
-  }); // If resource and action is defined in item => Return based on children visibility (Hide group if no child is visible)
-  // Else check for ability using provided resource and action along with checking if has any visible child
-
-  if (!(item.action && item.resource)) {
-    return hasAnyVisibleChild;
-  }
-
-  return can(item.action, item.resource) && hasAnyVisibleChild;
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource
- * @param {Object} item navigation object item
- */
-
-var canViewVerticalNavMenuHeader = function canViewVerticalNavMenuHeader(item) {
-  return can(item.action, item.resource);
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource
- * @param {Object} item navigation object item
- */
-
-var canViewHorizontalNavMenuLink = function canViewHorizontalNavMenuLink(item) {
-  return can(item.action, item.resource);
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource
- * @param {Object} item navigation object item
- */
-
-var canViewHorizontalNavMenuHeaderLink = function canViewHorizontalNavMenuHeaderLink(item) {
-  return can(item.action, item.resource);
-};
-/**
- * Check if user can view item based on it's ability
- * Based on item's action and resource & Hide group if all of it's children are hidden
- * @param {Object} item navigation object item
- */
-// eslint-disable-next-line arrow-body-style
-
-var canViewHorizontalNavMenuGroup = function canViewHorizontalNavMenuGroup(item) {
-  // ? Same logic as canViewVerticalNavMenuGroup
-  var hasAnyVisibleChild = item.children.some(function (i) {
-    return can(i.action, i.resource);
-  }); // If resource and action is defined in item => Return based on children visibility (Hide group if no child is visible)
-  // Else check for ability using provided resource and action along with checking if has any visible child
-
-  if (!(item.action && item.resource)) {
-    return hasAnyVisibleChild;
-  }
-
-  return can(item.action, item.resource) && hasAnyVisibleChild;
-}; // eslint-disable-next-line arrow-body-style
-
-var canViewHorizontalNavMenuHeaderGroup = function canViewHorizontalNavMenuHeaderGroup(item) {
-  // ? Same logic as canViewVerticalNavMenuGroup but with extra content
-  // eslint-disable-next-line arrow-body-style
-  var hasAnyVisibleChild = item.children.some(function (grpOrItem) {
-    // If it have children => It's grp
-    // Call ACL function based on grp/link
-    return grpOrItem.children ? canViewHorizontalNavMenuGroup(grpOrItem) : canViewHorizontalNavMenuLink(grpOrItem);
-  }); // If resource and action is defined in item => Return based on children visibility (Hide group if no child is visible)
-  // Else check for ability using provided resource and action along with checking if has any visible child
-
-  if (!(item.action && item.resource)) {
-    return hasAnyVisibleChild;
-  }
-
-  return can(item.action, item.resource) && hasAnyVisibleChild;
 };
 
 /***/ }),
