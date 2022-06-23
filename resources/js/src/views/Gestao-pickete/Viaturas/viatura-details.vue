@@ -139,10 +139,11 @@
                   </table>
                 </b-col>
               </b-row>
-              <b-row>
+              <b-row v-if="viaturaData.ordem_viatura !=null">
                 <b-col
                   cols="12"
                   class="mt-2"
+
                 >
                   <h3 class="card-title">
                     Historico das ordems da viatura

@@ -245,6 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -1161,200 +1162,217 @@ var render = function () {
                           1
                         ),
                         _vm._v(" "),
-                        _c(
-                          "b-row",
-                          [
-                            _c(
-                              "b-col",
-                              { staticClass: "mt-2", attrs: { cols: "12" } },
+                        _vm.viaturaData.ordem_viatura != null
+                          ? _c(
+                              "b-row",
                               [
-                                _c("h3", { staticClass: "card-title" }, [
-                                  _vm._v(
-                                    "\n                  Historico das ordems da viatura\n                "
-                                  ),
-                                ]),
-                                _vm._v(" "),
                                 _c(
-                                  "table",
-                                  { staticClass: "table table-light" },
+                                  "b-col",
+                                  {
+                                    staticClass: "mt-2",
+                                    attrs: { cols: "12" },
+                                  },
                                   [
-                                    _c(
-                                      "thead",
-                                      { staticClass: "thead-light" },
-                                      [
-                                        _c("tr", [
-                                          _c("th", [_vm._v("Codigo")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Qtd abastecida")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Preço /ltr")]),
-                                          _vm._v(" "),
-                                          _c("th", [
-                                            _vm._v("Preço de consumo"),
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Estado")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Bombas")]),
-                                        ]),
-                                      ]
-                                    ),
+                                    _c("h3", { staticClass: "card-title" }, [
+                                      _vm._v(
+                                        "\n                  Historico das ordems da viatura\n                "
+                                      ),
+                                    ]),
                                     _vm._v(" "),
                                     _c(
-                                      "tbody",
-                                      _vm._l(
-                                        _vm.viaturaData.ordem_viatura,
-                                        function (order, index) {
-                                          return _c("tr", { key: index }, [
-                                            _c("td", [
-                                              _vm._v(
-                                                "\n                        " +
-                                                  _vm._s(
-                                                    order.ordem.codigo_ordem
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                "\n                        " +
-                                                  _vm._s(
-                                                    _vm.dateTime(
-                                                      order.updated_at
-                                                    )
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(order.qtd_abastecida)
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "td",
-                                              _vm._l(
-                                                order.ordem.bombas.combustivel,
-                                                function (combustivel) {
-                                                  return _c(
-                                                    "span",
-                                                    { key: combustivel.id },
-                                                    [
-                                                      combustivel.tipo_combustivel ===
-                                                      _vm.viaturaData
-                                                        .tipo_combustivel
-                                                        ? _c("span", [
-                                                            _vm._v(
-                                                              "\n                            " +
-                                                                _vm._s(
-                                                                  combustivel.preco_actual
-                                                                ) +
-                                                                "\n                          "
-                                                            ),
-                                                          ])
-                                                        : _vm._e(),
-                                                    ]
-                                                  )
-                                                }
-                                              ),
-                                              0
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "td",
-                                              _vm._l(
-                                                order.ordem.bombas.combustivel,
-                                                function (combustivel) {
-                                                  return _c(
-                                                    "span",
-                                                    { key: combustivel.id },
-                                                    [
-                                                      combustivel.tipo_combustivel ===
-                                                      _vm.viaturaData
-                                                        .tipo_combustivel
-                                                        ? _c("span", [
-                                                            _vm._v(
-                                                              "\n                            " +
-                                                                _vm._s(
-                                                                  combustivel.preco_actual *
-                                                                    order.qtd_abastecida
-                                                                ) +
-                                                                "\n                          "
-                                                            ),
-                                                          ])
-                                                        : _vm._e(),
-                                                    ]
-                                                  )
-                                                }
-                                              ),
-                                              0
-                                            ),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              order.ordem.approvedBy === null
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c(
-                                                        "b-badge",
-                                                        {
-                                                          attrs: {
-                                                            variant: "warning",
-                                                          },
-                                                        },
-                                                        [_vm._v("pendente")]
-                                                      ),
-                                                    ],
-                                                    1
-                                                  )
-                                                : _vm._e(),
+                                      "table",
+                                      { staticClass: "table table-light" },
+                                      [
+                                        _c(
+                                          "thead",
+                                          { staticClass: "thead-light" },
+                                          [
+                                            _c("tr", [
+                                              _c("th", [_vm._v("Codigo")]),
                                               _vm._v(" "),
-                                              order.ordem.approvedBy !== null
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c(
-                                                        "b-badge",
-                                                        {
-                                                          attrs: {
-                                                            variant: "success",
-                                                          },
-                                                        },
-                                                        [_vm._v("Autorizada")]
-                                                      ),
-                                                    ],
-                                                    1
-                                                  )
-                                                : _vm._e(),
+                                              _c("th", [_vm._v("Data")]),
+                                              _vm._v(" "),
+                                              _c("th", [
+                                                _vm._v("Qtd abastecida"),
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("th", [_vm._v("Preço /ltr")]),
+                                              _vm._v(" "),
+                                              _c("th", [
+                                                _vm._v("Preço de consumo"),
+                                              ]),
+                                              _vm._v(" "),
+                                              _c("th", [_vm._v("Estado")]),
+                                              _vm._v(" "),
+                                              _c("th", [_vm._v("Bombas")]),
                                             ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                "\n                        " +
-                                                  _vm._s(
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          _vm._l(
+                                            _vm.viaturaData.ordem_viatura,
+                                            function (order, index) {
+                                              return _c("tr", { key: index }, [
+                                                _c("td", [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        order.ordem.codigo_ordem
+                                                      ) +
+                                                      "\n                      "
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("td", [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        _vm.dateTime(
+                                                          order.updated_at
+                                                        )
+                                                      ) +
+                                                      "\n                      "
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("td", [
+                                                  _vm._v(
+                                                    _vm._s(order.qtd_abastecida)
+                                                  ),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  _vm._l(
                                                     order.ordem.bombas
-                                                      .nome_bombas
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                          ])
-                                        }
-                                      ),
-                                      0
+                                                      .combustivel,
+                                                    function (combustivel) {
+                                                      return _c(
+                                                        "span",
+                                                        { key: combustivel.id },
+                                                        [
+                                                          combustivel.tipo_combustivel ===
+                                                          _vm.viaturaData
+                                                            .tipo_combustivel
+                                                            ? _c("span", [
+                                                                _vm._v(
+                                                                  "\n                            " +
+                                                                    _vm._s(
+                                                                      combustivel.preco_actual
+                                                                    ) +
+                                                                    "\n                          "
+                                                                ),
+                                                              ])
+                                                            : _vm._e(),
+                                                        ]
+                                                      )
+                                                    }
+                                                  ),
+                                                  0
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "td",
+                                                  _vm._l(
+                                                    order.ordem.bombas
+                                                      .combustivel,
+                                                    function (combustivel) {
+                                                      return _c(
+                                                        "span",
+                                                        { key: combustivel.id },
+                                                        [
+                                                          combustivel.tipo_combustivel ===
+                                                          _vm.viaturaData
+                                                            .tipo_combustivel
+                                                            ? _c("span", [
+                                                                _vm._v(
+                                                                  "\n                            " +
+                                                                    _vm._s(
+                                                                      combustivel.preco_actual *
+                                                                        order.qtd_abastecida
+                                                                    ) +
+                                                                    "\n                          "
+                                                                ),
+                                                              ])
+                                                            : _vm._e(),
+                                                        ]
+                                                      )
+                                                    }
+                                                  ),
+                                                  0
+                                                ),
+                                                _vm._v(" "),
+                                                _c("td", [
+                                                  order.ordem.approvedBy ===
+                                                  null
+                                                    ? _c(
+                                                        "span",
+                                                        [
+                                                          _c(
+                                                            "b-badge",
+                                                            {
+                                                              attrs: {
+                                                                variant:
+                                                                  "warning",
+                                                              },
+                                                            },
+                                                            [_vm._v("pendente")]
+                                                          ),
+                                                        ],
+                                                        1
+                                                      )
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  order.ordem.approvedBy !==
+                                                  null
+                                                    ? _c(
+                                                        "span",
+                                                        [
+                                                          _c(
+                                                            "b-badge",
+                                                            {
+                                                              attrs: {
+                                                                variant:
+                                                                  "success",
+                                                              },
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Autorizada"
+                                                              ),
+                                                            ]
+                                                          ),
+                                                        ],
+                                                        1
+                                                      )
+                                                    : _vm._e(),
+                                                ]),
+                                                _vm._v(" "),
+                                                _c("td", [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        order.ordem.bombas
+                                                          .nome_bombas
+                                                      ) +
+                                                      "\n                      "
+                                                  ),
+                                                ]),
+                                              ])
+                                            }
+                                          ),
+                                          0
+                                        ),
+                                      ]
                                     ),
                                   ]
                                 ),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
                       ],
                       1
                     ),
