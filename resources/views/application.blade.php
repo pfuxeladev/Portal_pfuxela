@@ -27,7 +27,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
         window.Laravel = {
-            jsPermissions: {!! auth()->check()?auth()->user()->jsPermissions():null !!}
+            jsPermissions: {!! json_encode([auth()->check()?auth()->user()->jsPermissions():null]) !!}
         }
     </script>
 </head>

@@ -12,6 +12,8 @@ use Illuminate\Support\Str;
 use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
+use App\Models\Ordem;
+
 class BombaController extends Controller
 {
     private $bombas;
@@ -66,7 +68,7 @@ class BombaController extends Controller
                     'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
                 ]
             );
-        }else {
+        } else {
             $this->validate(
                 $request,
                 [
@@ -146,7 +148,6 @@ class BombaController extends Controller
         $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
 
         return response()->json($bombas, 200);
-
     }
 
 
@@ -170,28 +171,27 @@ class BombaController extends Controller
                 foreach ($request->responsavel as $key => $resp) {
 
                     $fetchFirst = responsavelBombas::where('bombas_id', $id)->where('nome', $resp['nome'])->first();
-                        if(!empty($fetchFirst)){
-                            responsavelBombas::where('bombas_id', $id)->update([
-                                'nome' => $resp['nome'],
-                                'email_bomba' => $resp['email_bomba'],
-                                'contacto' => $resp['contacto'],
-                                'contacto_alt' => $resp['contacto_alt'],
-                                'bombas_id' => $id,
-                                'createdBy' => auth()->user()->id,
-                                'updatedBy' => auth()->user()->id,
-                            ]);
-                        }else{
-                            $responsavel = responsavelBombas::updateOrCreate([
-                                'nome' => $resp['nome'],
-                                'email_bomba' => $resp['email_bomba'],
-                                'contacto' => $resp['contacto'],
-                                'contacto_alt' => $resp['contacto_alt'],
-                                'bombas_id' => $id,
-                                'createdBy' => auth()->user()->id,
-                                'updatedBy' => auth()->user()->id,
-                            ]);
-                        }
-
+                    if (!empty($fetchFirst)) {
+                        responsavelBombas::where('bombas_id', $id)->update([
+                            'nome' => $resp['nome'],
+                            'email_bomba' => $resp['email_bomba'],
+                            'contacto' => $resp['contacto'],
+                            'contacto_alt' => $resp['contacto_alt'],
+                            'bombas_id' => $id,
+                            'createdBy' => auth()->user()->id,
+                            'updatedBy' => auth()->user()->id,
+                        ]);
+                    } else {
+                        $responsavel = responsavelBombas::updateOrCreate([
+                            'nome' => $resp['nome'],
+                            'email_bomba' => $resp['email_bomba'],
+                            'contacto' => $resp['contacto'],
+                            'contacto_alt' => $resp['contacto_alt'],
+                            'bombas_id' => $id,
+                            'createdBy' => auth()->user()->id,
+                            'updatedBy' => auth()->user()->id,
+                        ]);
+                    }
                 }
 
                 $combustivel = array();
@@ -208,18 +208,33 @@ class BombaController extends Controller
                 }
 
                 return response()->json(['message' => 'Actualizou a bomba com sucesso'], 200);
-
             }
         } catch (\Exception $e) {
-           return response()->json(['erro'=>'Erro! Insercao de dados '.$e->getMessage()], 421);
+            return response()->json(['erro' => 'Erro! Insercao de dados ' . $e->getMessage()], 421);
         }
     }
 
-    function AbastecerBomba(Request $request, $id){
+    function AbastecerBomba(Request $request, $id)
+    {
         $bomba = Bombas::where('tipo_bomba', 'interna')->where('id', $id)->first();
-        
 
+        $ordem = new Ordem();
+        $counter = 10000;
+        $uuid = Str::uuid()->toString();
 
+        $last_order = Ordem::latest()->first();
+        if (!empty($last_order)) {
+            $new_code = ($last_order->codigo_ordem + 1);
+            $ordem->codigo_ordem = $new_code;
+        } else {
+            $ordem->codigo_ordem = $counter;
+        }
+        $ordem->refs = $uuid;
+        $ordem->bombas_id = $request->bomba_id;
+        $ordem->estado = 'pendente';
+        $ordem->tipo_ordem = 'abastecimento_interno';
+        $ordem->createdBy = auth()->user()->id;
+        $ordem->save();
     }
     public function destroy(Bombas $bombas)
     {

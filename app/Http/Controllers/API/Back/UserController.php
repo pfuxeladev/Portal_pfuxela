@@ -139,16 +139,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return Response::json($this->user->with(['departamento', 'person', 'roles'])->findOrFail($id));
+        return Response::json($this->user->with(['departamento', 'person', 'roles.permissions'])->findOrFail($id));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
-     */
+   public function PermissionUser($id){
+    $user = $this->user->findOrFail($id);
+        $permission =  $user->getAllPermissions();
+        return $permission;
+   }
     public function update(Request $request, User $user)
     {
         //

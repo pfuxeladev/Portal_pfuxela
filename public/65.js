@@ -1313,6 +1313,9 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
+    },
+    UserPermission: function UserPermission(ctx, _ref2) {
+      var id = _ref2.id;
     }
   }
 });

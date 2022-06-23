@@ -30,5 +30,8 @@ export default {
           .catch(error => reject(error))
       })
     },
+    UserPermission(ctx, {id}){
+
+    }
   },
 }
