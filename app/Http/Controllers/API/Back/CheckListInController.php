@@ -42,6 +42,10 @@ class CheckListInController extends Controller
         ]);
         try {
             $checkList_out = CheckListOut::where('id', $request->check_list_out_id)->first();
+            $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
+
+            if($viatura1->kilometragem > $request->km_fim)
+            return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
             // return $checkList_out;
             $checkListIn = new checkListIn();
             $checkListIn->check_list_out_id = $checkList_out->id;
@@ -97,7 +101,7 @@ class CheckListInController extends Controller
                      $viatura->update();
                 }
 
-                $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
+
 
                 $delta_percorrido = ($request->km_fim - $viatura1->kilometragem);
 

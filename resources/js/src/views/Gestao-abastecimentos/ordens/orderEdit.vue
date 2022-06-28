@@ -33,7 +33,7 @@
                           <tr v-for="(vi, z) in orderData.ordem_viatura" :key="z">
                                 <td>
                                     {{vi.viatura.matricula}}</td>
-                                <td><span>{{vi.ordem_viatura_rota[1].rota.projecto.name}}</span></td>
+                                <td><span v-for="rota in vi.ordem_viatura_rota" :key="rota">{{rota.projecto.name}}</span></td>
                                 <td>
                                     <span v-for="(rt, i) in vi.ordem_viatura_rota" :key="i">
                                         {{rt.rota.nome_rota}},

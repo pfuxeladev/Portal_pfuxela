@@ -23,7 +23,7 @@ class Ordem extends Model
     }
 
     public function abastecimento(){
-        return $this->hasMany(abastecimento::class);
+        return $this->hasMany(abastecimento::class, 'ordem_id', 'id');
     }
     function abastecimento_rota(){
         return $this->hasMany(Abastecimento_rota::class);
@@ -34,5 +34,9 @@ class Ordem extends Model
     }
     function approvedBy(){
         return $this->belongsTo(User::class, 'approvedBy', 'id');
+    }
+
+    public function abastecimentoBomba(){
+        return $this->hasMany(abastecimento_bomba::class, 'ordem_id', 'id');
     }
 }

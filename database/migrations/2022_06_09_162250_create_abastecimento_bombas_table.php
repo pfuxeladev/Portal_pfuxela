@@ -33,6 +33,7 @@ class CreateAbastecimentoBombasTable extends Migration
             $table->string('fornecedor_contacto')->nullable();
             $table->text('observacao')->nullable();
             $table->double('sub_total', 10,2)->nullable();
+            $table->dateTime('data_recepcao')->nullable();
             $table->foreignIdFor(Ordem::class)->constrained()->cascadeOnUpdate();
             $table->foreignIdFor(Bombas::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();

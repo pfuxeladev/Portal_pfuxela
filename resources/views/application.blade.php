@@ -24,12 +24,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
-        window.Laravel = {
-            csrfToken: "{{ csrf_token() }}",
-            jsPermissions: {!! auth()->check()?auth()->user()->jsPermissions():null !!}
-        }
+        window.Laravel =<?php echo json_encode([
+            'csrfToken' => csrf_token(),
+            'jsPermissions'=> auth()->check()?auth()->user()->jsPermissions():null
+            ]); ?>
     </script>
 </head>
 

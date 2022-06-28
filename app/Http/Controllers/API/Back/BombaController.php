@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API\BACK;
 
 use App\Http\Controllers\Controller;
+use App\Models\abastecimento_bomba;
+use App\Models\bombaInspecao;
 use App\Models\Bombas;
 use App\Models\combustivel;
 use App\Models\combustivelBomba;
@@ -145,9 +147,16 @@ class BombaController extends Controller
     }
     public function show($id)
     {
-        $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
+        $b_interna = Bombas::where('id', $id)->first();
+        if($b_interna->tipo_bomba === 'interna'){
+            $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel', 'abastecimentoBomba.ordem'])->findOrFail($id);
 
-        return response()->json($bombas, 200);
+            return response()->json($bombas, 200);
+            $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
+
+            return response()->json($bombas, 200);
+        }
+
     }
 
 
@@ -216,7 +225,9 @@ class BombaController extends Controller
 
     function AbastecerBomba(Request $request, $id)
     {
+        return $request->all();
         $bomba = Bombas::where('tipo_bomba', 'interna')->where('id', $id)->first();
+        $abast_bomba = new abastecimento_bomba();
 
         $ordem = new Ordem();
         $counter = 10000;
@@ -235,9 +246,16 @@ class BombaController extends Controller
         $ordem->tipo_ordem = 'abastecimento_interno';
         $ordem->createdBy = auth()->user()->id;
         $ordem->save();
+
+        // if($ordem){
+        //     $abast_bomba->
+        // }
     }
-    public function destroy(Bombas $bombas)
+    public function leitura(Request $request, $id)
     {
-        //
+        $bomba = Bombas::findOrFail($id);
+
+        $Inspecao = new bombaInspecao();
+
     }
 }

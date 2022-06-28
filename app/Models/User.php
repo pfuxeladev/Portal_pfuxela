@@ -14,7 +14,8 @@ use App\Permissions\HasPermissionsTrait;
 use LaravelAndVueJS\Traits\LaravelPermissionToVueJS;
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasRoles, LaravelPermissionToVueJS, HasPermissionsTrait;
+    use HasApiTokens, HasFactory, Notifiable, HasRoles, HasPermissionsTrait;
+    use LaravelPermissionToVueJS;
 
 
     public function departamento(){
@@ -35,13 +36,13 @@ class User extends Authenticatable
         return $this->hasMany(Bombas::class, 'createdBy', 'id');
     }
 
-    public function jsPermissions()
-    {
-        return json_encode([
-                'roles' => $this->getRoleNames(),
-                'permissions' => $this->getAllPermissions()->pluck('name'),
-            ]);
-    }
+    // public function jsPermissions()
+    // {
+    //     return json_encode([
+    //             'roles' => $this->getRoleNames(),
+    //             'permissions' => $this->getAllPermissions()->pluck('name'),
+    //         ]);
+    // }
 
     protected $fillable = [
         'name',

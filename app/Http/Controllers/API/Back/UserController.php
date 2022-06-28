@@ -139,7 +139,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        return Response::json($this->user->with(['departamento', 'person', 'roles.permissions'])->findOrFail($id));
+        return Response::json($this->user->with(['departamento', 'person', 'roles.permissions', 'permissions'])->findOrFail($id));
     }
 
    public function PermissionUser($id){
@@ -147,9 +147,9 @@ class UserController extends Controller
         $permission =  $user->getAllPermissions();
         return $permission;
    }
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
-        //
+     return $request->all();
     }
 
     /**

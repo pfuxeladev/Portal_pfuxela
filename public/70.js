@@ -263,6 +263,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -699,44 +701,56 @@ var render = function () {
                   ),
                   _vm._v(" "),
                   _c("b-col", { attrs: { cols: "12", md: "6" } }, [
-                    _vm.can("Create")
-                      ? _c("div", [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "d-flex align-items-center justify-content-end",
-                            },
-                            [
-                              _c("b-form-input", {
-                                staticClass: "d-inline-block mr-1",
-                                attrs: { placeholder: "Search..." },
-                                model: {
-                                  value: _vm.searchQuery,
-                                  callback: function ($$v) {
-                                    _vm.searchQuery = $$v
-                                  },
-                                  expression: "searchQuery",
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "can",
+                            rawName: "v-can",
+                            value: "Create Viatura",
+                            expression: "'Create Viatura'",
+                          },
+                        ],
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "d-flex align-items-center justify-content-end",
+                          },
+                          [
+                            _c("b-form-input", {
+                              staticClass: "d-inline-block mr-1",
+                              attrs: { placeholder: "Search..." },
+                              model: {
+                                value: _vm.searchQuery,
+                                callback: function ($$v) {
+                                  _vm.searchQuery = $$v
                                 },
-                              }),
-                              _vm._v(" "),
-                              _c(
-                                "b-link",
-                                {
-                                  staticClass: "btn btn-outline-primary",
-                                  attrs: { to: { name: "New-car" } },
-                                },
-                                [
-                                  _c("span", { staticClass: "text-nowrap" }, [
-                                    _vm._v("Ad.viatura"),
-                                  ]),
-                                ]
-                              ),
-                            ],
-                            1
-                          ),
-                        ])
-                      : _vm._e(),
+                                expression: "searchQuery",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "b-link",
+                              {
+                                staticClass: "btn btn-outline-primary",
+                                attrs: { to: { name: "New-car" } },
+                              },
+                              [
+                                _c("span", { staticClass: "text-nowrap" }, [
+                                  _c("i", { staticClass: "fas fa-plus" }),
+                                  _vm._v(" viatura"),
+                                ]),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                      ]
+                    ),
                   ]),
                 ],
                 1
@@ -861,36 +875,46 @@ var render = function () {
                           1
                         ),
                         _vm._v(" "),
-                        _vm.can("Edit")
-                          ? _c(
-                              "b-dropdown-item",
+                        _c(
+                          "b-dropdown-item",
+                          {
+                            directives: [
                               {
-                                attrs: {
-                                  to: {
-                                    name: "Edit-car",
-                                    params: { id: data.item.id },
-                                  },
-                                },
+                                name: "can",
+                                rawName: "v-can",
+                                value: "Update Viatura",
+                                expression: "'Update Viatura'",
                               },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "EditIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("Editar")]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
+                            ],
+                            attrs: {
+                              to: {
+                                name: "Edit-car",
+                                params: { id: data.item.id },
+                              },
+                            },
+                          },
+                          [
+                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "align-middle ml-50" }, [
+                              _vm._v("Editar"),
+                            ]),
+                          ],
+                          1
+                        ),
                         _vm._v(" "),
                         data.item.estado == 1
                           ? _c(
                               "b-dropdown-item",
                               {
+                                directives: [
+                                  {
+                                    name: "can",
+                                    rawName: "v-can",
+                                    value: "Update Viatura",
+                                    expression: "'Update Viatura'",
+                                  },
+                                ],
                                 on: {
                                   click: function ($event) {
                                     return _vm.Deactivate(data.item.id)
@@ -916,6 +940,14 @@ var render = function () {
                           ? _c(
                               "b-dropdown-item",
                               {
+                                directives: [
+                                  {
+                                    name: "can",
+                                    rawName: "v-can",
+                                    value: "Update Viatura",
+                                    expression: "'Update Viatura'",
+                                  },
+                                ],
                                 on: {
                                   click: function ($event) {
                                     return _vm.Activate(data.item.id)

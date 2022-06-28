@@ -1314,8 +1314,18 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    UserPermission: function UserPermission(ctx, _ref2) {
-      var id = _ref2.id;
+    updateUser: function updateUser(ctx, _ref2) {
+      var id = _ref2.id,
+          userData = _ref2.userData;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/users/".concat(id), {
+          userData: userData
+        }).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });

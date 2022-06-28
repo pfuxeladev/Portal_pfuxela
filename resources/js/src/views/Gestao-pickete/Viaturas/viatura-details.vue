@@ -271,7 +271,7 @@ export default {
     store.dispatch('Picket/fetchViatura', { id: router.currentRoute.params.id })
       .then(response => { viaturaData.value = response.data })
       .catch(error => {
-        if (error.response.status === 404) {
+        if (error.response.status === 421) {
           viaturaData.value = undefined
         }
       })

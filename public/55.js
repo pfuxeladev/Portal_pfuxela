@@ -247,65 +247,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -335,67 +276,26 @@ __webpack_require__.r(__webpack_exports__);
       required: true
     }
   },
+  created: function created() {
+    this.getRoles();
+    this.getPermissions();
+  },
   setup: function setup(props) {
     var _useUsersList = Object(_users_list_useUsersList__WEBPACK_IMPORTED_MODULE_5__["default"])(),
         resolveUserRoleVariant = _useUsersList.resolveUserRoleVariant;
 
     var roleOptions = [{
-      label: 'Admin',
-      value: 'admin'
-    }, {
-      label: 'Author',
-      value: 'author'
-    }, {
-      label: 'Editor',
-      value: 'editor'
-    }, {
-      label: 'Maintainer',
-      value: 'maintainer'
-    }, {
-      label: 'Subscriber',
-      value: 'subscriber'
+      name: "",
+      id: null
     }];
     var statusOptions = [{
-      label: 'Pending',
-      value: 'pending'
+      label: "Active",
+      value: true
     }, {
-      label: 'Active',
-      value: 'active'
-    }, {
-      label: 'Inactive',
-      value: 'inactive'
+      label: "Inactive",
+      value: false
     }];
-    var permissionsData = [{
-      module: 'Admin',
-      read: true,
-      write: false,
-      create: false,
-      "delete": false
-    }, {
-      module: 'Staff',
-      read: false,
-      write: true,
-      create: false,
-      "delete": false
-    }, {
-      module: 'Author',
-      read: true,
-      write: false,
-      create: true,
-      "delete": false
-    }, {
-      module: 'Contributor',
-      read: false,
-      write: false,
-      create: false,
-      "delete": false
-    }, {
-      module: 'User',
-      read: false,
-      write: false,
-      create: false,
-      "delete": true
-    }]; // ? Demo Purpose => Update image on click of update
+    var permissionsData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null); // ? Demo Purpose => Update image on click of update
 
     var refInputEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
     var previewEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
@@ -406,7 +306,25 @@ __webpack_require__.r(__webpack_exports__);
     }),
         inputImageRenderer = _useInputImageRendere.inputImageRenderer;
 
+    function getRoles() {
+      var _this = this;
+
+      this.$http.get("/api/roles").then(function (res) {
+        _this.roleOptions = res.data;
+      });
+    }
+
+    function getPermissions() {
+      var _this2 = this;
+
+      this.$http.get("/api/permissions").then(function (response) {
+        _this2.permissionsData = response.data;
+      });
+    }
+
     return {
+      getRoles: getRoles,
+      getPermissions: getPermissions,
       resolveUserRoleVariant: resolveUserRoleVariant,
       avatarText: _core_utils_filter__WEBPACK_IMPORTED_MODULE_1__["avatarText"],
       roleOptions: roleOptions,
@@ -955,19 +873,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1005,7 +910,19 @@ __webpack_require__.r(__webpack_exports__);
         userData.value = undefined;
       }
     });
+
+    function updateUser() {
+      _store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch("app/updateUser/".concat(_router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.params.id), userData).then(function (response) {
+        userData.value = response.data;
+      })["catch"](function (error) {
+        if (error.response.status === 404) {
+          userData.value = undefined;
+        }
+      });
+    }
+
     return {
+      updateUser: updateUser,
       userData: userData
     };
   }
@@ -1314,7 +1231,7 @@ var render = function () {
                   }),
                   _vm._v(" "),
                   _c("span", { staticClass: "d-none d-sm-inline" }, [
-                    _vm._v("Update"),
+                    _vm._v("actualizar"),
                   ]),
                   _vm._v(" "),
                   _c("feather-icon", {
@@ -1351,6 +1268,14 @@ var render = function () {
       _vm._v(" "),
       _c(
         "b-form",
+        {
+          on: {
+            submit: function ($event) {
+              $event.preventDefault()
+              return _vm.updateUser.apply(null, arguments)
+            },
+          },
+        },
         [
           _c(
             "b-row",
@@ -1366,11 +1291,11 @@ var render = function () {
                       _c("b-form-input", {
                         attrs: { id: "username" },
                         model: {
-                          value: _vm.userData.username,
+                          value: _vm.userData.name,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData, "username", $$v)
+                            _vm.$set(_vm.userData, "name", $$v)
                           },
-                          expression: "userData.username",
+                          expression: "userData.name",
                         },
                       }),
                     ],
@@ -1391,11 +1316,11 @@ var render = function () {
                       _c("b-form-input", {
                         attrs: { id: "full-name" },
                         model: {
-                          value: _vm.userData.fullName,
+                          value: _vm.userData.person.nome_completo,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData, "fullName", $$v)
+                            _vm.$set(_vm.userData.person, "nome_completo", $$v)
                           },
-                          expression: "userData.fullName",
+                          expression: "userData.person.nome_completo",
                         },
                       }),
                     ],
@@ -1442,18 +1367,18 @@ var render = function () {
                         attrs: {
                           dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
                           options: _vm.statusOptions,
-                          reduce: function (val) {
-                            return val.value
+                          reduce: function (statusOptions) {
+                            return statusOptions.id
                           },
                           clearable: false,
                           "input-id": "user-status",
                         },
                         model: {
-                          value: _vm.userData.status,
+                          value: _vm.userData.is_active,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData, "status", $$v)
+                            _vm.$set(_vm.userData, "is_active", $$v)
                           },
-                          expression: "userData.status",
+                          expression: "userData.is_active",
                         },
                       }),
                     ],
@@ -1474,19 +1399,20 @@ var render = function () {
                       _c("v-select", {
                         attrs: {
                           dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
+                          label: "name",
                           options: _vm.roleOptions,
-                          reduce: function (val) {
-                            return val.value
+                          reduce: function (roleOptions) {
+                            return roleOptions.id
                           },
                           clearable: false,
                           "input-id": "user-role",
                         },
                         model: {
-                          value: _vm.userData.role,
+                          value: _vm.userData.roles.id,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData, "role", $$v)
+                            _vm.$set(_vm.userData.roles, "id", $$v)
                           },
-                          expression: "userData.role",
+                          expression: "userData.roles.id",
                         },
                       }),
                     ],
@@ -1507,11 +1433,11 @@ var render = function () {
                       _c("b-form-input", {
                         attrs: { id: "company" },
                         model: {
-                          value: _vm.userData.company,
+                          value: _vm.userData.departamento.nome,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData, "company", $$v)
+                            _vm.$set(_vm.userData.departamento, "nome", $$v)
                           },
-                          expression: "userData.company",
+                          expression: "userData.departamento.nome",
                         },
                       }),
                     ],
@@ -1523,84 +1449,119 @@ var render = function () {
             ],
             1
           ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-card",
-        { staticClass: "border mt-1", attrs: { "no-body": "" } },
-        [
+          _vm._v(" "),
           _c(
-            "b-card-header",
-            { staticClass: "p-1" },
+            "b-row",
             [
               _c(
-                "b-card-title",
-                { staticClass: "font-medium-2" },
+                "b-col",
+                { attrs: { cols: "12" } },
                 [
-                  _c("feather-icon", {
-                    attrs: { icon: "LockIcon", size: "18" },
-                  }),
+                  _c(
+                    "b-card",
+                    { staticClass: "border mt-1", attrs: { "no-body": "" } },
+                    [
+                      _c(
+                        "b-card-header",
+                        { staticClass: "p-1" },
+                        [
+                          _c(
+                            "b-card-title",
+                            { staticClass: "font-medium-2" },
+                            [
+                              _c("feather-icon", {
+                                attrs: { icon: "LockIcon", size: "18" },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                { staticClass: "align-middle ml-50" },
+                                [_vm._v("Permission")]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-row",
+                        _vm._l(_vm.permissionsData, function (p, i) {
+                          return _c(
+                            "b-col",
+                            {
+                              key: i,
+                              staticClass: "mb-1",
+                              attrs: { cols: "3" },
+                            },
+                            [
+                              _c(
+                                "b-form-checkbox",
+                                {
+                                  attrs: {
+                                    value: p.id,
+                                    checked: _vm.userData.can[p.name],
+                                  },
+                                  model: {
+                                    value: _vm.userData.permissions[i],
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.userData.permissions, i, $$v)
+                                    },
+                                    expression: "userData.permissions[i]",
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                " +
+                                      _vm._s(p.name) +
+                                      "\n              "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      ),
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
-                  _c("span", { staticClass: "align-middle ml-50" }, [
-                    _vm._v("Permission"),
-                  ]),
+                  _c(
+                    "b-button",
+                    {
+                      staticClass: "mb-1 mb-sm-0 mr-0 mr-sm-1",
+                      attrs: {
+                        variant: "primary",
+                        block:
+                          _vm.$store.getters["app/currentBreakPoint"] === "xs",
+                      },
+                    },
+                    [_vm._v("\n          Salvar mudanças\n        ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-button",
+                    {
+                      attrs: {
+                        variant: "outline-secondary",
+                        type: "reset",
+                        block:
+                          _vm.$store.getters["app/currentBreakPoint"] === "xs",
+                      },
+                    },
+                    [_vm._v("\n          Reset\n        ")]
+                  ),
                 ],
                 1
               ),
             ],
             1
           ),
-          _vm._v(" "),
-          _c("b-table", {
-            staticClass: "mb-0",
-            attrs: { striped: "", responsive: "", items: _vm.permissionsData },
-            scopedSlots: _vm._u([
-              {
-                key: "cell(module)",
-                fn: function (data) {
-                  return [
-                    _vm._v("\n        " + _vm._s(data.value) + "\n      "),
-                  ]
-                },
-              },
-              {
-                key: "cell()",
-                fn: function (data) {
-                  return [
-                    _c("b-form-checkbox", { attrs: { checked: data.value } }),
-                  ]
-                },
-              },
-            ]),
-          }),
         ],
         1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-button",
-        {
-          staticClass: "mb-1 mb-sm-0 mr-0 mr-sm-1",
-          attrs: {
-            variant: "primary",
-            block: _vm.$store.getters["app/currentBreakPoint"] === "xs",
-          },
-        },
-        [_vm._v("\n    Save Changes\n  ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "b-button",
-        {
-          attrs: {
-            variant: "outline-secondary",
-            type: "reset",
-            block: _vm.$store.getters["app/currentBreakPoint"] === "xs",
-          },
-        },
-        [_vm._v("\n    Reset\n  ")]
       ),
     ],
     1
@@ -2261,7 +2222,7 @@ var render = function () {
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "d-none d-sm-inline" }, [
-                              _vm._v("Account"),
+                              _vm._v("Conta"),
                             ]),
                           ]
                         },
@@ -2270,7 +2231,7 @@ var render = function () {
                     ],
                     null,
                     false,
-                    1765507684
+                    1323979986
                   ),
                 },
                 [
@@ -2298,7 +2259,7 @@ var render = function () {
                             }),
                             _vm._v(" "),
                             _c("span", { staticClass: "d-none d-sm-inline" }, [
-                              _vm._v("Information"),
+                              _vm._v("Informação adicional"),
                             ]),
                           ]
                         },
@@ -2307,7 +2268,7 @@ var render = function () {
                     ],
                     null,
                     false,
-                    2401006838
+                    3037551851
                   ),
                 },
                 [
@@ -2315,40 +2276,6 @@ var render = function () {
                   _c("user-edit-tab-information", {
                     staticClass: "mt-2 pt-75",
                   }),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-tab",
-                {
-                  scopedSlots: _vm._u(
-                    [
-                      {
-                        key: "title",
-                        fn: function () {
-                          return [
-                            _c("feather-icon", {
-                              staticClass: "mr-0 mr-sm-50",
-                              attrs: { icon: "Share2Icon", size: "16" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "d-none d-sm-inline" }, [
-                              _vm._v("Social"),
-                            ]),
-                          ]
-                        },
-                        proxy: true,
-                      },
-                    ],
-                    null,
-                    false,
-                    1447901904
-                  ),
-                },
-                [
-                  _vm._v(" "),
-                  _c("user-edit-tab-social", { staticClass: "mt-2 pt-75" }),
                 ],
                 1
               ),
@@ -2748,8 +2675,18 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    UserPermission: function UserPermission(ctx, _ref2) {
-      var id = _ref2.id;
+    updateUser: function updateUser(ctx, _ref2) {
+      var id = _ref2.id,
+          userData = _ref2.userData;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/users/".concat(id), {
+          userData: userData
+        }).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });
