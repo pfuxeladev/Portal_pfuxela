@@ -354,7 +354,7 @@ class AbastecimentoController extends Controller
         $abastecimento_extra->viatura_id = $request->viatura_id;
         $abastecimento_extra->motorista_id = $request->motorista_id;
         $abastecimento_extra->qtd = $request->qtd;
-        $abastecimento_extra->horaSaida = $request->horaSaida;
+        $abastecimento_extra->horaSaida = date('h:i:s', strtotime($request->horaSaida));
         $abastecimento_extra->destino = $request->destino;
         $abastecimento_extra->descricao = $request->descricao;
         $abastecimento_extra->createdBy = auth()->user()->id;
@@ -365,19 +365,19 @@ class AbastecimentoController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
-                $data["email"] = $bombas_mail->email_bombas;
-                $data["title"] = "info@pfuxela.co.mz";
-                $data["body"] = "Teste";
+                 $data["email"] = $bombas_mail->email_bomba;
+              $data["title"] = "info@pfuxela.co.mz";
+              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
-                $pdf = PDF::loadView('orderMail.ExtraOrder', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-                $path = Storage::put('public/pdf/Ordem_abastecimento_extra.pdf', $pdf->output());
+               $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+               $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
-                Mail::send('orderMail.ExtraOrder', compact('ordem'), function ($message) use ($data, $pdf) {
-                    $message->from(env('MAIL_USERNAME'));
-                    $message->to($data["email"], $data["email"])
-                        ->subject($data["title"])
-                        ->attachData($pdf->output(), "ordem.pdf");
-                });
+              Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                  $message->from(env('MAIL_USERNAME'));
+                  $message->to($data["email"], $data['email'])
+                          ->subject($data["title"])
+                          ->attachData($pdf->output(), "ordem.pdf");
+              });
             }
         }
 
