@@ -59,6 +59,7 @@
                 placeholder="Search..."
               />
               <b-button
+                v-can="'Create User'"
                 variant="primary"
                 @click="isAddNewUserSidebarActive = true"
               >

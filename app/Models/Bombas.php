@@ -35,4 +35,8 @@ class Bombas extends Model
         return $this->hasMany(Ordem::class);
     }
 
+    public function abastecimentoBomba(){
+        return $this->hasMany(abastecimento_bomba::class);
+    }
+
 }

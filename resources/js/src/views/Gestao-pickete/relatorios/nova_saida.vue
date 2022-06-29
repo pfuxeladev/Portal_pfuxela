@@ -15,7 +15,7 @@
               <ol class="breadcrumb">
                 <li class="breadcrumb-item">
                   <b-link
-                    :to="{ name: 'vehicle-movements' }"
+                    :to="{ name: 'Vehicle-movements' }"
                     class="router-link-active"
                     target="_self"
                   ><svg

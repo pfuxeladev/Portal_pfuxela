@@ -11,11 +11,9 @@ trait HasPermissionsTrait {
         return $this->getAllPermissions($permissions);
     }
 
-     /**
-     * Get all user permissions in a flat array.
-     *
-     * @return array
-     */
+    public function getAllRolesAttributes(array $roles){
+        return $this->getAllRoles($roles);
+    }
     public function getCanAttribute()
     {
         $permissions = [];

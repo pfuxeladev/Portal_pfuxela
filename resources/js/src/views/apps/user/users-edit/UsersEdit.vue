@@ -34,7 +34,7 @@
             size="16"
             class="mr-0 mr-sm-50"
           />
-          <span class="d-none d-sm-inline">Account</span>
+          <span class="d-none d-sm-inline">Conta</span>
         </template>
         <user-edit-tab-account
           :user-data="userData"
@@ -50,22 +50,9 @@
             size="16"
             class="mr-0 mr-sm-50"
           />
-          <span class="d-none d-sm-inline">Information</span>
+          <span class="d-none d-sm-inline">Informa&ccedil;&atilde;o adicional</span>
         </template>
         <user-edit-tab-information class="mt-2 pt-75" />
-      </b-tab>
-
-      <!-- Tab: Social -->
-      <b-tab>
-        <template #title>
-          <feather-icon
-            icon="Share2Icon"
-            size="16"
-            class="mr-0 mr-sm-50"
-          />
-          <span class="d-none d-sm-inline">Social</span>
-        </template>
-        <user-edit-tab-social class="mt-2 pt-75" />
       </b-tab>
     </b-tabs>
   </component>
@@ -116,7 +103,18 @@ export default {
         }
       })
 
+    function updateUser() {
+      store.dispatch(`app/updateUser/${router.currentRoute.params.id}`, userData)
+        .then(response => { userData.value = response.data })
+        .catch(error => {
+          if (error.response.status === 404) {
+            userData.value = undefined
+          }
+        })
+    }
+
     return {
+      updateUser,
       userData,
     }
   },

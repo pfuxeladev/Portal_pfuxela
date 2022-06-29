@@ -7,135 +7,358 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Ordem de abastecimento</title>
     <style>
-        ul.list-unstyled{
-            list-style: none;
+        body {
+            background: rgb(204, 204, 204);
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        page {
+            background: white;
             display: block;
-            margin-left: 1em;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
         }
-        div.card{
-            font-family: sans-serif;
-            font-size: 12pt;
-            margin: auto;
-            box-sizing: border-box;
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
         }
-        #row-header {
+
+        .page {
             display: inline-block;
+            position: relative;
+            height: 297mm;
+            width: 210mm;
+            font-size: 12pt;
+            margin: 2em auto;
+            padding: calc(var(--bleeding) + var(--margin));
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+            background: white;
+        }
+
+        @media screen {
+            .page::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: calc(100% - var(--bleeding) * 2);
+                height: calc(100% - var(--bleeding) * 2);
+                margin: var(--bleeding);
+                outline: thin dashed black;
+                pointer-events: none;
+                z-index: 9999;
+            }
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            .page {
+                margin: 0;
+                overflow: hidden;
+            }
+        }
+
+        @media print {
+
+            html,
+            body,
+            page {
+                margin: 0;
+                box-shadow: 0;
+                width: 210mm;
+                height: 297mm;
+            }
+        }
+        table {
             width: 100%;
-            justify-content: space-between;
+            border-collapse: collapse;
           }
 
-          /* Responsive layout - makes a one column layout instead of a two-column layout */
-          #flex-container{
-            width: 100%;
-            position: relative;
-            height: auto;
-            display: flex;
+          table tr td {
+            padding: 0;
           }
-          #columns, #columns1{
-            float: left;
+
+          table tr td:last-child {
+            text-align: right;
           }
-          #columns1{
-            margin-left: 67%;
+
+          .bold {
+            font-weight: bold;
+          }
+
+          .right {
+            text-align: right;
+          }
+
+          .large {
+            font-size: 1.75em;
+          }
+
+          .total {
+            font-weight: bold;
+            color: #fb7578;
+          }
+
+          .logo-container {
+            margin: 20px 0 70px 0;
+          }
+
+          .invoice-info-container {
+            font-size: 0.875em;
+          }
+          .invoice-info-container td {
+            padding: 4px 0;
+          }
+
+          .client-name {
+            font-size: 1.5em;
+            vertical-align: top;
+          }
+
+          .line-items-container {
+            margin: 70px 0;
+            font-size: 0.875em;
+          }
+
+          .line-items-container th {
+            text-align: left;
+            color: #999;
+            border-bottom: 2px solid #ddd;
+            padding: 10px 0 15px 0;
+            font-size: 0.75em;
+            text-transform: uppercase;
+          }
+
+          .line-items-container th:last-child {
+            text-align: right;
+          }
+
+          .line-items-container td {
+            padding: 15px 0;
+          }
+
+          .line-items-container tbody tr:first-child td {
+            padding-top: 25px;
+          }
+
+          .line-items-container.has-bottom-border tbody tr:last-child td {
+            padding-bottom: 25px;
+            border-bottom: 2px solid #ddd;
+          }
+
+          .line-items-container.has-bottom-border {
+            margin-bottom: 0;
+          }
+
+          .line-items-container th.heading-quantity {
+            width: 50px;
+          }
+          .line-items-container th.heading-price {
+            text-align: right;
+            width: 100px;
+          }
+          .line-items-container th.heading-subtotal {
+            width: 100px;
+          }
+
+          .payment-info {
+            width: 38%;
+            font-size: 0.75em;
+            line-height: 1.5;
+          }
+
+          .footer {
+            margin-top: 100px;
+          }
+
+          .footer-thanks {
+            font-size: 1.125em;
+          }
+
+          .footer-thanks img {
+            display: inline-block;
             position: relative;
+            top: 1px;
+            width: 16px;
+            margin-right: 4px;
+          }
+
+          .footer-info {
+            float: right;
+            margin-top: 5px;
+            font-size: 0.75em;
+            color: #ccc;
+          }
+
+          .footer-info span {
+            padding: 0 5px;
+            color: black;
+          }
+
+          .footer-info span:last-child {
+            padding-right: 0;
+          }
+
+          .page-container {
+            display: none;
+          }
+          /*pdf render*/
+          .footer {
+            margin-top: 100px;
+          }
+
+          .footer-info {
+            float: none;
+            position: running(footer);
+            margin-top: -25px;
+          }
+
+          .page-container {
+            display: block;
+            position: running(pageContainer);
+            margin-top: -25px;
+            font-size: 12px;
+            text-align: right;
+            color: #999;
+          }
+
+          .page-container .page::after {
+            content: counter(page);
+          }
+
+          .page-container .pages::after {
+            content: counter(pages);
+          }
+
+
+          @page {
+            @bottom-right {
+              content: element(pageContainer);
+            }
+            @bottom-left {
+              content: element(footer);
+            }
           }
     </style>
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-body">
-            <div class="container mb-5 mt-3">
-                <div class="row d-flex align-items-baseline">
-                    <div class="col-xl-9">
-                        <h3 style="color: #7e8d9f;font-size: 20px; text-transform: uppercase;">ORDEM DE ABASTECIMENTO <strong>ID: #123-123</strong></h3>
-                    </div>
+    <page class="page" size="A4">
+        <div style="width: 98%; margin-left:5px; margin-right:5px;">
+            <div class="logo-container">
+                <img style="height: 100px" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}">
+            </div>
 
-                    <hr>
-                </div>
+            <table class="invoice-info-container">
+                <tr>
+                    <td rowspan="2" class="client-name">
+                        Client Name
+                    </td>
+                    <td>
+                        Anvil Co
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        123 Main Street
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Invoice Date: <strong>May 24th, 2024</strong>
+                    </td>
+                    <td>
+                        San Francisco CA, 94103
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Invoice No: <strong>12345</strong>
+                    </td>
+                    <td>
+                        hello@useanvil.com
+                    </td>
+                </tr>
+            </table>
 
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="text-center">
-                            <img src="{{$image}}"  style="width:200px; margin-left:0.5em">
-                        </div>
 
-                    </div>
+            <table class="line-items-container">
+                <thead>
+                    <tr>
+                        <th class="heading-quantity">Qty</th>
+                        <th class="heading-description">Description</th>
+                        <th class="heading-price">Price</th>
+                        <th class="heading-subtotal">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2</td>
+                        <td>Blue large widgets</td>
+                        <td class="right">$15.00</td>
+                        <td class="bold">$30.00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Green medium widgets</td>
+                        <td class="right">$10.00</td>
+                        <td class="bold">$40.00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Red small widgets with logo</td>
+                        <td class="right">$7.00</td>
+                        <td class="bold">$35.00</td>
+                    </tr>
+                </tbody>
+            </table>
 
 
-                    <div class="row" id="row-header">
-                        <div class="col-xl-8" id="columns">
-                            <ul class="list-unstyled">
-                                <li class="text-muted">Para: <span style="color:#5d9fc5 ;">QUICK LANE</span></li>
-                                <li class="text-muted"><i class="fas fa-phone"></i> 258 84 10 10 201</li>
-                            </ul>
-                        </div>
-                        <div class="col-xl-4" id="columns1">
-                            <ul class="list-unstyled">
-                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                        class="fw-bold">ID:</span>#123-456</li>
-                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                        class="fw-bold">Data de emiss&atilde;o: </span>Jun 23,2021</li>
-                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                        class="me-1 fw-bold">Enviado por:</span><span
-                                        class="badge text-black fw-bold">
-                                        info@pfuxela.co.mz</span></li>
-                            </ul>
-                        </div>
-                    </div>
+            <table class="line-items-container has-bottom-border">
+                <thead>
+                    <tr>
+                        <th>Payment Info</th>
+                        <th>Due By</th>
+                        <th>Total Due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="payment-info">
+                            <div>
+                                Account No: <strong>123567744</strong>
+                            </div>
+                            <div>
+                                Routing No: <strong>120000547</strong>
+                            </div>
+                        </td>
+                        <td class="large">May 30th, 2024</td>
+                        <td class="large total">$105.00</td>
+                    </tr>
+                </tbody>
+            </table>
 
-                    <div class="row my-2 mx-1 justify-content-center">
-                        <table class="table table-striped table-borderless" style="width: 100%">
-                            <thead style="background-color:#909090 ;" class="text-white">
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Viatura(matricula)</th>
-                                    <th scope="col">Qtd</th>
-                                    <th scope="col">Unit Price</th>
-                                    <th scope="col">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Pro Package</td>
-                                    <td>4</td>
-                                    <td>$200</td>
-                                    <td>$800</td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-                    </div>
-                    <div class="row" id="flex-container">
-                        <div class="col-xl-9 d-block float-right"></div>
-
-                        <div class="col-xl-3 d-block float-right" style="align:right">
-                            <ul class="list-unstyled">
-                                <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span>$1110</li>
-                                <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Total</span>$111</li>
-                            </ul>
-                            <br>
-
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-xl-10">
-                            <p><b>Nota </b>A Pfuxela Exhibitions Gallery se responsabiliza só e somente por abastecimentos enviados automaticamente pelo sistema e mediante a
-                                apresentação da cópia física devidamente assinada pelo gestor.</p>
-                        </div>
-                    </div>
-
+            <div class="footer">
+                <div class="footer-info">
+                    <span>hello@useanvil.com</span> |
+                    <span>555 444 6666</span> |
+                    <span>useanvil.com</span>
                 </div>
             </div>
         </div>
-    </div>
+    </page>
 </body>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>

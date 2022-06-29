@@ -288,6 +288,7 @@ class AbastecimentoController extends Controller
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
             return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
 
+
         $preco = 0;
 
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
@@ -296,7 +297,7 @@ class AbastecimentoController extends Controller
         if ($combustivel) {
             if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
 
-                $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
+                $preco = ($combustivel->preco_actual * $request->qtd);
             } else {
                 return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
             }
@@ -365,6 +366,7 @@ class AbastecimentoController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
+<<<<<<< HEAD
                  $data["email"] = $bombas_mail->email_bomba;
               $data["title"] = "info@pfuxela.co.mz";
               $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
@@ -379,6 +381,22 @@ class AbastecimentoController extends Controller
                           ->attachData($pdf->output(), "ordem.pdf");
               });
             }
+=======
+                $data["email"] = $bombas_mail->email_bomba;
+                $data["title"] = "info@pfuxela.co.mz";
+                $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+
+                 $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                 $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+
+                Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                    $message->from(env('MAIL_USERNAME'));
+                    $message->to($data["email"], $data['email'])
+                            ->subject($data["title"])
+                            ->attachData($pdf->output(), "ordem.pdf");
+                });
+              }
+>>>>>>> 1f8717ab8192e6c1f7010975a0d1d3fff45b2999
         }
 
         return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
@@ -401,10 +419,10 @@ class AbastecimentoController extends Controller
             return abastecimentoExtra::join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('abastecimentos', 'abastecimentos.ordem_id', '=', 'ordems.id')->join('viaturas', 'viaturas.id', '=', 'abastecimento_extras.viatura_id')
                 ->join('motoristas', 'abastecimento_extras.motorista_id', '=', 'motoristas.id')
                 ->when(request('q'), function ($query) use ($search) {
-                    $query->where('ordems.codigo', 'like', '%' . request('q') . '%')
+                    $query->where('ordems.codigo_ordem', 'like', '%' . request('q') . '%')
                         ->orWhere('viaturas.matricula', 'like', '%' . request('q') . '%')
                         ->orWhere('bombas.nome_bombas', 'like', '%' . request('q') . '%');
-                })->with(['abastecimento.ordem', 'viatura', 'motorista.person'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
+                })->with(['abastecimento.ordem', 'viatura', 'motorista.person', 'ordem'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
         } else {
             return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
         }

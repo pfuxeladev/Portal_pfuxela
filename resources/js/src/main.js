@@ -58,15 +58,13 @@ Vue.use(VueCompositionAPI)
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
-// created(){
-// Vue.directive('can', (el, binding, vnode) => {
-//   if (Permissions.indexOf(binding.value) !== -1) {
-//     return vnode.elm.hidden = true
-//   }
-//   return vnode.elm.hidden = false
-// })
-
-//   }
+Vue.directive('can', (el, binding) => window.Laravel.jsPermissions.indexOf(binding) !== -1)
+// Vue.prototype.can = function (value) {
+//   return window.Laravel.jsPermissions.permissions.includes(value)
+// }
+// Vue.prototype.is = function (value) {
+//   return window.Laravel.jsPermissions.roles.includes(value)
+// }
 // * Shall remove it if not using font-icons of feather-icons - For form-wizard
 require('@core/assets/fonts/feather/iconfont.css') // For form-wizard
 

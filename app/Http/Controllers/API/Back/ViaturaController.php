@@ -48,7 +48,7 @@ class ViaturaController extends Controller
             $request,
             [
                 'modelo'=>'required|string',
-               'marca_id' =>'required|integer|exists:marcas,id',
+                'marca_id' =>'required|integer|exists:marcas,id',
                 'descricao'=> "required|string|max:300",
                 'ano_fabrico'=> "required|numeric|min:1960",
                 'kilometragem'=>'required|numeric|min:0',
@@ -59,7 +59,7 @@ class ViaturaController extends Controller
                 'nr_motor'=> "required",
                 'nr_chassi'=> "required",
                 'nr_livrete'=> "required",
-                'matricula'=> "required",
+                'matricula'=> "required|tring|unique:viaturas",
                 'data_licenca'=> "required|date|before_or_equal:" . $todayDate,
                 'data_inspencao'=> "required|date|before_or_equal:" . $todayDate,
                 'data_manifesto'=> "required|date|before_or_equal:" . $todayDate,
@@ -71,7 +71,7 @@ class ViaturaController extends Controller
                 'prazo_radio_difusao'=> "required|date",
                 'prazo_seguros'=> "required|date",
             ],
-            ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]
+            ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico','unique' => 'O :attribute, Ja existe uma viatura cadastrada com esse atributo.']
         );
         $modelo_exists = Modelo::where('nome_modelo',$request->modelo)->first();
 

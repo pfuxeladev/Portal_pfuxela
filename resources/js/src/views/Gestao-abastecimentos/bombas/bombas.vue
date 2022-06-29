@@ -101,6 +101,7 @@
                     </span>
                     <span
                       v-if="b.tipo_bomba === 'interna'"
+                      @click="abastecerBomba(b)"
                       class="btn btn-sm btn-outline-success ml-1"
                     >
                       <i class="fas fa-gas-pump" />
@@ -505,6 +506,9 @@ export default {
       this.$nextTick(() => {
         this.show = true;
       });
+    },
+    abastecerBomba(b) {
+      this.$router.push({ name: 'Fill the pump', params: { id: b.id } })
     },
   },
 };

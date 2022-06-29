@@ -40,7 +40,8 @@
     <div class="row d-flex justify-content-center">
         <div class='offset-xl-2 col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12'>
             <div class='card'>
-                <img src="https://clientes.pfuxela.co.mz/dist/img/logo.png" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
+                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
+
                 <div class='card-header p-4'>
 
                     <div style="margin-left: 20px">

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\motorista;
+use App\Models\projecto;
 use App\Models\User;
 use App\Models\Viatura;
 use Illuminate\Database\Migrations\Migration;
@@ -20,6 +21,7 @@ class CreateChecklistOut extends Migration
             $table->id();
             $table->foreignIdFor(Viatura::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(motorista::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreignIdFor(projecto::class)->constrained();
             $table->boolean('carta_conducao')->default(false);
             $table->bigInteger('km_inicio');
             $table->time('hr_inicio')->nullable();

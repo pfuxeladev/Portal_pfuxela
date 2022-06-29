@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\API\Back\AbastecimentoBombasController;
+use App\Http\Controllers\API\BACK\BombaController;
+use App\Http\Controllers\API\Back\OrdemController;
 use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -63,6 +66,10 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
     Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
+    // Abastecer bomba
+    Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
+    Route::get('/abastecimentoPendente/{id}', [AbastecimentoBombasController::class, 'abastecimentoPendente']);
+    // end
     Route::resource('Ordem', App\Http\Controllers\API\Back\OrdemController::class);
 
     Route::apiResources(
@@ -98,6 +105,8 @@ Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoControl
 
 Route::get('imprimirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'imprimirOrdem']);
 Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
+
+Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return auth()->user();

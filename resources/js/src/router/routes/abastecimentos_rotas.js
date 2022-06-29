@@ -49,6 +49,14 @@ export default
     },
   },
   {
+    path: '/Supply/bombas/:id/abastecer',
+    name: 'Fill the pump',
+    component: () => import('@/views/Gestao-abastecimentos/bombas/bomba_form.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/:id/Reports',
     name: 'Fuel Reports',
     component: () => import('@/views/Gestao-abastecimentos/bombas/bombasDetails.vue'),
