@@ -366,22 +366,6 @@ class AbastecimentoController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
-<<<<<<< HEAD
-                 $data["email"] = $bombas_mail->email_bomba;
-              $data["title"] = "info@pfuxela.co.mz";
-              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
-
-               $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-               $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-
-              Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                  $message->from(env('MAIL_USERNAME'));
-                  $message->to($data["email"], $data['email'])
-                          ->subject($data["title"])
-                          ->attachData($pdf->output(), "ordem.pdf");
-              });
-            }
-=======
                 $data["email"] = $bombas_mail->email_bomba;
                 $data["title"] = "info@pfuxela.co.mz";
                 $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
@@ -396,7 +380,6 @@ class AbastecimentoController extends Controller
                             ->attachData($pdf->output(), "ordem.pdf");
                 });
               }
->>>>>>> 1f8717ab8192e6c1f7010975a0d1d3fff45b2999
         }
 
         return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);

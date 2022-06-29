@@ -81,280 +81,291 @@
                 height: 297mm;
             }
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-          }
+        }
 
-          table tr td {
+        table tr td {
             padding: 0;
-          }
+        }
 
-          table tr td:last-child {
-            text-align: right;
-          }
+        table tr td:last-child {
+            text-align: left;
+            width: 40%;
+        }
 
-          .bold {
+        .bold {
             font-weight: bold;
-          }
+        }
 
-          .right {
+        .right {
             text-align: right;
-          }
+        }
 
-          .large {
+        .large {
             font-size: 1.75em;
-          }
+        }
 
-          .total {
+        .total {
             font-weight: bold;
             color: #fb7578;
-          }
+        }
 
-          .logo-container {
+        .logo-container {
             margin: 20px 0 70px 0;
-          }
+        }
 
-          .invoice-info-container {
+        .invoice-info-container {
             font-size: 0.875em;
-          }
-          .invoice-info-container td {
+        }
+
+        .invoice-info-container td {
             padding: 4px 0;
-          }
+        }
 
-          .client-name {
-            font-size: 1.5em;
+        .client-name {
+            font-size: 1.1em;
             vertical-align: top;
-          }
+        }
 
-          .line-items-container {
+        .line-items-container {
             margin: 70px 0;
             font-size: 0.875em;
-          }
+        }
 
-          .line-items-container th {
+        .line-items-container th {
             text-align: left;
             color: #999;
             border-bottom: 2px solid #ddd;
             padding: 10px 0 15px 0;
             font-size: 0.75em;
             text-transform: uppercase;
-          }
+        }
 
-          .line-items-container th:last-child {
+        .line-items-container th:last-child {
             text-align: right;
-          }
+        }
 
-          .line-items-container td {
+        .line-items-container td {
             padding: 15px 0;
-          }
+        }
 
-          .line-items-container tbody tr:first-child td {
+        .line-items-container tbody tr:first-child td {
             padding-top: 25px;
-          }
+        }
 
-          .line-items-container.has-bottom-border tbody tr:last-child td {
+        .line-items-container.has-bottom-border tbody tr:last-child td {
             padding-bottom: 25px;
             border-bottom: 2px solid #ddd;
-          }
+        }
 
-          .line-items-container.has-bottom-border {
+        .line-items-container.has-bottom-border {
             margin-bottom: 0;
-          }
+        }
 
-          .line-items-container th.heading-quantity {
+        .line-items-container th.heading-quantity {
             width: 50px;
-          }
-          .line-items-container th.heading-price {
+        }
+
+        .line-items-container th.heading-price {
             text-align: right;
             width: 100px;
-          }
-          .line-items-container th.heading-subtotal {
-            width: 100px;
-          }
+        }
 
-          .payment-info {
+        .line-items-container th.heading-subtotal {
+            width: 100px;
+        }
+
+        .payment-info {
             width: 38%;
             font-size: 0.75em;
             line-height: 1.5;
-          }
+        }
 
-          .footer {
+        .footer {
             margin-top: 100px;
-          }
+        }
 
-          .footer-thanks {
+        .footer-thanks {
             font-size: 1.125em;
-          }
+        }
 
-          .footer-thanks img {
+        .footer-thanks img {
             display: inline-block;
             position: relative;
             top: 1px;
             width: 16px;
             margin-right: 4px;
-          }
+        }
 
-          .footer-info {
+        .footer-info {
             float: right;
             margin-top: 5px;
             font-size: 0.75em;
             color: #ccc;
-          }
+        }
 
-          .footer-info span {
+        .footer-info span {
             padding: 0 5px;
             color: black;
-          }
+        }
 
-          .footer-info span:last-child {
+        .footer-info span:last-child {
             padding-right: 0;
-          }
+        }
 
-          .page-container {
+        .page-container {
             display: none;
-          }
-          /*pdf render*/
-          .footer {
-            margin-top: 100px;
-          }
+        }
 
-          .footer-info {
+        /*pdf render*/
+        .footer {
+            margin-top: 100px;
+        }
+
+        .footer-info {
             float: none;
             position: running(footer);
             margin-top: -25px;
-          }
+        }
 
-          .page-container {
+        .page-container {
             display: block;
             position: running(pageContainer);
             margin-top: -25px;
             font-size: 12px;
             text-align: right;
             color: #999;
-          }
+        }
 
-          .page-container .page::after {
+        .page-container .page::after {
             content: counter(page);
-          }
+        }
 
-          .page-container .pages::after {
+        .page-container .pages::after {
             content: counter(pages);
-          }
+        }
 
 
-          @page {
+        @page {
             @bottom-right {
-              content: element(pageContainer);
+                content: element(pageContainer);
             }
+
             @bottom-left {
-              content: element(footer);
+                content: element(footer);
             }
-          }
+        }
     </style>
 </head>
 
 <body>
-    <page class="page" size="A4">
-        <div style="width: 98%; margin-left:5px; margin-right:5px;">
-            <div class="logo-container">
-                <img style="height: 100px" src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}">
-            </div>
+    <?php setlocale(LC_MONETARY, 'MT'); ?>
 
+    <page class="page" size="A4">
+        <div style="width: 98%; margin-left:20px; margin-right:15px;">
+            <div class="logo-container">
+                <img style="height: 100px"
+                    src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}">
+            </div>
+            <h3 class='mb-0 card-title'>ORDEM DE ABASTECIMENTO #
+                <b style='color:#eb691e;'>{{ $abastecimento_bomba->ordem->codigo_ordem }}</b>
+            </h3>
+            <hr>
             <table class="invoice-info-container">
                 <tr>
                     <td rowspan="2" class="client-name">
-                        Client Name
+                        Bombas: {{ $abastecimento_bomba->bombas->nome_bombas }}
                     </td>
-                    <td>
-                        Anvil Co
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        123 Main Street
+                    <td style="padding-bottom:4px">
+                        Fornecedor: {{ $abastecimento_bomba->fornecedor }}
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Invoice Date: <strong>May 24th, 2024</strong>
-                    </td>
-                    <td>
-                        San Francisco CA, 94103
+                        Contacto: {{ $abastecimento_bomba->fornecedor_contacto }}
+
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Invoice No: <strong>12345</strong>
+                        Contacto: +258 84 1000 170
                     </td>
                     <td>
-                        hello@useanvil.com
+                        Data de Submiss&atilde;o: {{ $abastecimento_bomba->created_at->format('d/m/Y') }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ordem No: #<strong
+                            style='color:#eb691e;'>{{ $abastecimento_bomba->ordem->codigo_ordem }}</strong>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="mailto:info@pfuxela.co.mz">info@pfuxela.co.mz</a>
+                    </td>
+                    <td>
+                        {{-- <a href="mailto:info@pfuxela.co.mz">info@pfuxela.co.mz</a> --}}
                     </td>
                 </tr>
             </table>
 
 
-            <table class="line-items-container">
+            <table class="line-items-container" style="margin-right:15px; width:95%">
                 <thead>
-                    <tr>
-                        <th class="heading-quantity">Qty</th>
-                        <th class="heading-description">Description</th>
-                        <th class="heading-price">Price</th>
-                        <th class="heading-subtotal">Subtotal</th>
+                    <tr style="text-align: left;">
+                        <th class="heading-description">Combustivel</th>
+                        <th class="heading-quantity">Qtd</th>
+                        <th class="heading-price">Pre&ccedil;o/ltr</th>
+                        <th class="heading-subtotal">Subtotal (MZN)</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="text-align: left">
                     <tr>
-                        <td>2</td>
-                        <td>Blue large widgets</td>
-                        <td class="right">$15.00</td>
-                        <td class="bold">$30.00</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Green medium widgets</td>
-                        <td class="right">$10.00</td>
-                        <td class="bold">$40.00</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>Red small widgets with logo</td>
-                        <td class="right">$7.00</td>
-                        <td class="bold">$35.00</td>
+                        <td style="width:45%;">{{ $abastecimento_bomba->tipo_de_combustivel }}</td>
+                        <td style="width:15%;">{{ $abastecimento_bomba->qtd_abastecida }}</td>
+                        <td style="width:20%; text-align:right;"><?php echo number_format($abastecimento_bomba->preco_combustivel, 2, ',', '.'); ?></td>
+                        <td style="width:20%; text-align:right;" class="bold"><?php echo number_format($abastecimento_bomba->qtd_abastecida * $abastecimento_bomba->preco_combustivel, 2, ',', '.'); ?></td>
                     </tr>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" style="text-align: right;">Total</td>
+                        <td class="bold" style="text-align: right"><?php echo number_format($abastecimento_bomba->qtd_abastecida * $abastecimento_bomba->preco_combustivel, 2, ',', '.'); ?> </td>
+                    </tr>
+                </tfoot>
             </table>
 
 
-            <table class="line-items-container has-bottom-border">
-                <thead>
-                    <tr>
-                        <th>Payment Info</th>
-                        <th>Due By</th>
-                        <th>Total Due</th>
-                    </tr>
-                </thead>
+            <table class="line-items-container has-bottom-border" style="width:95%">
                 <tbody>
                     <tr>
-                        <td class="payment-info">
-                            <div>
-                                Account No: <strong>123567744</strong>
-                            </div>
-                            <div>
-                                Routing No: <strong>120000547</strong>
-                            </div>
-                        </td>
-                        <td class="large">May 30th, 2024</td>
-                        <td class="large total">$105.00</td>
+                        <td style="width: 40%;">Gestor da Pfuxela</td>
+                        <td style="width: 20%;">&nbsp;</td>
+                        <td style="width: 40%;">Assinatura(Gestor da bomba)</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 40%;"><hr></td>
+                        <td style="width: 20%;">&nbsp;</td>
+                        <td style="width: 40%;"><hr></td>
                     </tr>
                 </tbody>
             </table>
 
             <div class="footer">
                 <div class="footer-info">
-                    <span>hello@useanvil.com</span> |
-                    <span>555 444 6666</span> |
-                    <span>useanvil.com</span>
+                    <p style="font-size: 14px; margin-top: 6px; margin-bottom: 20px; float: left;">
+                        <strong>Nota</strong>: A Pfuxela Exhibitions Gallery se
+                        responsabiliza só e somente por abastecimentos enviados
+                        automaticamente pelo sistema e mediante a
+                        apresentação da cópia física devidamente assinada pelo gestor.
+                    </p>
                 </div>
             </div>
         </div>
