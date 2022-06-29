@@ -305,14 +305,8 @@ class OrdemController extends Controller
 
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Ordem  $ordem
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Ordem $ordem)
-    {
-        //
-    }
+  public function printPdf(){
+    $pdf = PDF::loadView('orderMail.ExtraOrder')->setOptions(['defaultFont' => 'Verdana']);
+    return $pdf->download('ordem.pdf');
+  }
 }
