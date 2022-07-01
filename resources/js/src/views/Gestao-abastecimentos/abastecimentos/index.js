@@ -14,7 +14,7 @@ export default function useAbastecimentoList() {
   const refAbstRecorrente = ref(null)
   // Table Handlers
   const tableColumns = [
-    { key: 'ordem', sortable: true },
+    { key: 'ordem.codigo_ordem', sortable: true },
     { key: 'qtd_ant', sortable: true },
     { key: 'qtd_rec', sortable: true },
     { key: 'estado', sortable: true },

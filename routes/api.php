@@ -106,6 +106,8 @@ Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoControl
 Route::get('imprimirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'imprimirOrdem']);
 Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
 
+Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBombasController::class, 'printAbast']);
+
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {

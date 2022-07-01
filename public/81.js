@@ -92,47 +92,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _table_bs_table_Table_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../table/bs-table/Table.vue */ "./resources/js/src/views/table/bs-table/Table.vue");
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _table_bs_table_Table_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../table/bs-table/Table.vue */ "./resources/js/src/views/table/bs-table/Table.vue");
 //
 //
 //
@@ -295,38 +265,38 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardHeader"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
-    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardFooter"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BBadge"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BLink"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
-    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BListGroup"],
-    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BListGroupItem"],
-    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BImg"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
-    Table: _table_bs_table_Table_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
-    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BModal"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardFooter"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroup"],
+    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroupItem"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    Table: _table_bs_table_Table_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"]
   },
   setup: function setup() {
-    var bomba = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
+    var bomba = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__["useToast"])();
 
     function getBombasDetails() {
       var _this = this;
 
-      this.$http.get("/api/bombas/".concat(_router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.id)).then(function (response) {
+      this.$http.get("/api/bombas/".concat(_router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.id)).then(function (response) {
         _this.bomba = response.data;
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
             props: {
               title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         }
@@ -334,57 +304,13 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_6___default()(value).format('DD/MM/YYYY hh:mm');
-    }
-
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_7__["default"]({
-      qtd_abastecida: 0,
-      preco_combustivel: 0,
-      iva: false,
-      fornecedor_id: null,
-      viatura_fornecedora: '',
-      nome_motorista: '',
-      selo_abastecimento: null,
-      identificacao: null,
-      observacao: null,
-      data_recepcao: null,
-      estado: 'Requisicao para abastecimento'
-    })))); // submit recieving fuel
-
-    function checkFormValidity() {
-      var valid = this.$refs.form.checkValidity();
-      this.nameState = valid;
-      return valid;
-    }
-
-    function resetModal() {
-      this.name = '';
-      this.nameState = null;
-    }
-
-    function handleOk(bvModalEvent) {
-      // Prevent modal from closing
-      bvModalEvent.preventDefault(); // Trigger submit handler
-
-      this.handleSubmit();
-    }
-
-    function handleSubmit() {
-      // Exit when the form isn't valid
-      if (!this.checkFormValidity()) {
-        return;
-      }
+      return moment__WEBPACK_IMPORTED_MODULE_4___default()(value).format("DD/MM/YYYY hh:mm");
     } // end submittion
 
 
     return {
       getBombasDetails: getBombasDetails,
-      checkFormValidity: checkFormValidity,
-      resetModal: resetModal,
-      handleSubmit: handleSubmit,
-      handleOk: handleOk,
       dateTime: dateTime,
-      form: form,
       bomba: bomba
     };
   },
@@ -996,29 +922,23 @@ var render = function () {
                       _vm._v(" "),
                       _c("hr"),
                       _vm._v(" "),
-                      _vm.bomba.ordem.length === 0
-                        ? _c(
-                            "b-row",
-                            [
-                              _c(
-                                "b-col",
-                                { attrs: { cols: "12" } },
-                                [
-                                  _c("b-card-header", [
-                                    _c("h3", { staticClass: "card-title" }, [
-                                      _vm._v("Resumo dos abastecimentos"),
-                                    ]),
-                                  ]),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _vm._l(_vm.bomba.ordem, function (ordem, index) {
-                                return _c(
+                      _vm._l(_vm.bomba.ordem, function (ordem, index) {
+                        return _c(
+                          "b-row",
+                          { key: index, attrs: { cols: "12" } },
+                          [
+                            ordem.tipo_ordem === "abastecimento_interno"
+                              ? _c(
                                   "b-col",
-                                  { key: index, attrs: { cols: "12" } },
+                                  { attrs: { cols: "12" } },
                                   [
                                     _c("b-card-header", [
+                                      _c("h3", { staticClass: "card-title" }, [
+                                        _vm._v(
+                                          "Abastecimento da bombas locais"
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
                                         "h4",
                                         {
@@ -1042,6 +962,202 @@ var render = function () {
                                           ),
                                         ]
                                       ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "table",
+                                      {
+                                        staticClass:
+                                          "table table-striped table-responsive",
+                                      },
+                                      [
+                                        _c("thead", [
+                                          _c("tr", [
+                                            _c("th", [_vm._v("Fornecedor")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Contacto")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Motorista")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Viatura(forn)")]),
+                                            _vm._v(" "),
+                                            _c("th", [
+                                              _vm._v("Selo de abast."),
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Combustivel")]),
+                                            _vm._v(" "),
+                                            _c("th", [
+                                              _vm._v("Qtd abastecida"),
+                                            ]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Preço")]),
+                                            _vm._v(" "),
+                                            _c("th", [_vm._v("Total")]),
+                                            _vm._v(" "),
+                                            _c("th", [
+                                              _vm._v("Data de abastecimento"),
+                                            ]),
+                                          ]),
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "tbody",
+                                          _vm._l(
+                                            _vm.bomba.abastecimento_bomba,
+                                            function (abst) {
+                                              return _c(
+                                                "tr",
+                                                { key: abst.id },
+                                                [
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(abst.fornecedor)
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.fornecedor_contacto
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.nome_motorista
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.viatura_fornecedora
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.selo_abastecimento
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.tipo_de_combustivel
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.qtd_abastecida
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        abst.preco_combustivel
+                                                      )
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(abst.sub_total)
+                                                    ),
+                                                  ]),
+                                                  _vm._v(" "),
+                                                  _c("td", [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        _vm.dateTime(
+                                                          abst.updated_at
+                                                        )
+                                                      )
+                                                    ),
+                                                  ]),
+                                                ]
+                                              )
+                                            }
+                                          ),
+                                          0
+                                        ),
+                                      ]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
+                          ],
+                          1
+                        )
+                      }),
+                      _vm._v(" "),
+                      _c("hr"),
+                      _vm._v(" "),
+                      _vm.bomba.ordem.length > 0
+                        ? _c(
+                            "b-row",
+                            [
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "12" } },
+                                [
+                                  _c("b-card-header", [
+                                    _c("h3", { staticClass: "card-title" }, [
+                                      _vm._v("Resumo dos abastecimentos"),
+                                    ]),
+                                  ]),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _vm._l(_vm.bomba.ordem, function (ordem, index) {
+                                return _c(
+                                  "b-col",
+                                  { key: index, attrs: { cols: "12" } },
+                                  [
+                                    _c("b-card-header", [
+                                      ordem.tipo_ordem !==
+                                      "abastecimento_interno"
+                                        ? _c(
+                                            "h4",
+                                            {
+                                              staticClass:
+                                                "card-title text-uppercase",
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                  Codigo:\n                  "
+                                              ),
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticStyle: {
+                                                    color: "#593101",
+                                                  },
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "#" +
+                                                      _vm._s(ordem.codigo_ordem)
+                                                  ),
+                                                ]
+                                              ),
+                                            ]
+                                          )
+                                        : _vm._e(),
                                     ]),
                                     _vm._v(" "),
                                     _c(
@@ -1135,7 +1251,7 @@ var render = function () {
                           )
                         : _vm._e(),
                     ],
-                    1
+                    2
                   ),
                 ],
                 1
@@ -1145,251 +1261,6 @@ var render = function () {
           ),
         ],
         1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-modal",
-        {
-          ref: "modal",
-          attrs: { id: "modal-prevent-closing", title: "Submit Your Name" },
-          on: {
-            show: _vm.resetModal,
-            hidden: _vm.resetModal,
-            ok: _vm.handleOk,
-          },
-        },
-        [
-          _c(
-            "form",
-            {
-              ref: "form",
-              on: {
-                submit: function ($event) {
-                  $event.preventDefault()
-                  return _vm.handleSubmit.apply(null, arguments)
-                },
-              },
-            },
-            [
-              _vm.form.estado === "Recepcao do combustivel"
-                ? _c(
-                    "b-row",
-                    [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", lg: "6", md: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: {
-                                "invalid-feedback": "Name is required",
-                                state: _vm.nameState,
-                                label: "Motorista",
-                              },
-                            },
-                            [
-                              _c("b-form-input", {
-                                attrs: {
-                                  type: "text",
-                                  state: _vm.nameState,
-                                  required: "",
-                                },
-                                model: {
-                                  value: _vm.form.nome_motorista,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "nome_motorista", $$v)
-                                  },
-                                  expression: "form.nome_motorista",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", lg: "6", md: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: {
-                                "invalid-feedback": "Name is required",
-                                state: _vm.nameState,
-                                label: "Identificacao e tipo de documento",
-                              },
-                            },
-                            [
-                              _c("b-form-input", {
-                                attrs: {
-                                  type: "text",
-                                  state: _vm.nameState,
-                                  required: "",
-                                },
-                                model: {
-                                  value: _vm.form.identificacao,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "identificacao", $$v)
-                                  },
-                                  expression: "form.identificacao",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", lg: "6", md: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: {
-                                "invalid-feedback": "Name is required",
-                                state: _vm.nameState,
-                                label: "Selo de abastecimento",
-                              },
-                            },
-                            [
-                              _c("b-form-input", {
-                                attrs: {
-                                  type: "text",
-                                  state: _vm.nameState,
-                                  required: "",
-                                },
-                                model: {
-                                  value: _vm.form.selo_abastecimento,
-                                  callback: function ($$v) {
-                                    _vm.$set(
-                                      _vm.form,
-                                      "selo_abastecimento",
-                                      $$v
-                                    )
-                                  },
-                                  expression: "form.selo_abastecimento",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", lg: "6", md: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: {
-                                "invalid-feedback": "Name is required",
-                                state: _vm.nameState,
-                                label: "Viatura do fornecedor",
-                              },
-                            },
-                            [
-                              _c("b-form-input", {
-                                attrs: {
-                                  type: "text",
-                                  state: _vm.nameState,
-                                  required: "",
-                                },
-                                model: {
-                                  value: _vm.form.viatura_fornecedor,
-                                  callback: function ($$v) {
-                                    _vm.$set(
-                                      _vm.form,
-                                      "viatura_fornecedor",
-                                      $$v
-                                    )
-                                  },
-                                  expression: "form.viatura_fornecedor",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", lg: "12", md: "12" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: {
-                                "invalid-feedback": "Name is required",
-                                state: _vm.nameState,
-                                label: "Observacao",
-                              },
-                            },
-                            [
-                              _c("b-form-textarea", {
-                                attrs: { state: _vm.nameState, required: "" },
-                                model: {
-                                  value: _vm.form.observacao,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "observacao", $$v)
-                                  },
-                                  expression: "form.observacao",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _c(
-                "b-form-group",
-                {
-                  attrs: {
-                    label: "Name",
-                    "label-for": "name-input",
-                    "invalid-feedback": "Name is required",
-                    state: _vm.nameState,
-                  },
-                },
-                [
-                  _c("b-form-input", {
-                    attrs: {
-                      id: "name-input",
-                      state: _vm.nameState,
-                      required: "",
-                    },
-                    model: {
-                      value: _vm.name,
-                      callback: function ($$v) {
-                        _vm.name = $$v
-                      },
-                      expression: "name",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-        ]
       ),
     ],
     1

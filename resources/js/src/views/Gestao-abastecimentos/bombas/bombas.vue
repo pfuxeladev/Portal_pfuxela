@@ -56,6 +56,7 @@
                   <th>disponibilidade</th>
                   <th>tipo</th>
                   <th>Combustivel</th>
+                  <th>Qtd disponivel</th>
                   <th>Cadastrado por</th>
                   <th>
                     <i class="fas fa-cogs" />
@@ -84,6 +85,7 @@
                       {{ comb.tipo_combustivel }},
                     </span>
                   </td>
+                  <td> {{ b.qtd_disponivel }} </td>
                   <td>{{ b.created_by.name }}</td>
                   <td class="d-flex justify-content-around">
                     <span

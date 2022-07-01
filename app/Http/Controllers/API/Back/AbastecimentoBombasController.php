@@ -11,6 +11,9 @@ use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
+use PDF;
+use Mail;
+use Illuminate\Support\Facades\Storage;
 class AbastecimentoBombasController extends Controller
 {
    private $abastecimento_bomba;
@@ -44,7 +47,7 @@ class AbastecimentoBombasController extends Controller
             'preco_combustivel'=>'required|numeric|min:1',
             'qtd_abastecida'=>'required|numeric'
         ]);
-        $image = File::get(url('public/images/pfuxelalogo.png'));
+        // $image = File::get(url('public/images/pfuxelalogo.png'));
         $ordem = new Ordem();
         try {
             $counter = 10000;
@@ -64,9 +67,9 @@ class AbastecimentoBombasController extends Controller
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 
-        $bombas = Bombas::where('id', $request->bombas_id)->first();
+        $bombas = Bombas::where('id', $request->fornecedor_id)->first();
 
-        $emails = responsavelBombas::where('bombas_id', $bombas->id)->get();
+        $emails = responsavelBombas::where('bombas_id', $bombas->id)->first();
 
         $abastecimento_bomba = new abastecimento_bomba();
 
@@ -77,12 +80,30 @@ class AbastecimentoBombasController extends Controller
         $abastecimento_bomba->estado = 'pendente';
         $abastecimento_bomba->qtd_abastecida = $request->qtd_abastecida;
         $abastecimento_bomba->preco_combustivel = $request->preco_combustivel;
-        $abastecimento_bomba->bombas_id = $bombas->id;
+        $abastecimento_bomba->bombas_id = $request->bombas_id;
+        $abastecimento_bomba->fornecedor = $bombas->nome_bombas;
+        $abastecimento_bomba->fornecedor_contacto = $emails->email_bomba;
         $abastecimento_bomba->ordem_id = $ordem->id;
         $abastecimento_bomba->user_id = auth()->user()->id;
         $abastecimento_bomba->iva_amount = $iva;
+        $abastecimento_bomba->sub_total = $preco;
         $abastecimento_bomba->save();
 
+        $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $bombas->id)->latest()->first();
+
+        $data["email"] = $emails->email_bomba;
+        $data["title"] = "info@pfuxela.co.mz";
+        $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+
+         $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'sans-serif']);
+         $path = Storage::put('public/pdf/Abastecimento_bomba.pdf', $pdf->output());
+
+        Mail::send('orderMail.ExtraOrder', compact('abastecimento_bomba'), function($message)use($data, $pdf) {
+            $message->from(env('MAIL_USERNAME'));
+            $message->to($data["email"], $data['email'])
+                    ->subject($data["title"])
+                    ->attachData($pdf->output(), "ordem.pdf");
+        });
         return response()->json(['success' => 'Requisicao de abastecimento da bomba feita com Sucesso', 'erro' => false], 200);
     } catch (\Exception $e) {
         return response()->json(['error' => 'erro no pedido de abastecimento '.$e->getMessage(), 'erro' => true], 421);
@@ -93,22 +114,47 @@ class AbastecimentoBombasController extends Controller
     public function show($id)
     {
         $abastecimento_bomba = $this->abastecimento_bomba->with(['bombas', 'user', 'ordem'])->findOrFail($id);
-
-        return response()->json($abastecimento_bomba, 200);
+        $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'Verdana']);
+        return $pdf->download('ordem.pdf');
+        // return response()->json($abastecimento_bomba, 200);
+        return view('orderMail.ExtraOrder', compact('abastecimento_bomba'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\abastecimento_bomba  $abastecimento_bomba
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, abastecimento_bomba $abastecimento_bomba)
+    public function printAbast(Request $request, $id)
     {
-        $abastecimento = abastecimento_bomba::findOrFail($abastecimento_bomba);
+        $abastecimento_bomba = abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $id)->first();
+        $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'Verdana']);
+        return $pdf->download('ordem.pdf');
+        // return response()->json($abastecimento_bomba, 200);
 
-        // $abastecimento->
+        // return view('orderMail.ExtraOrder', compact('abastecimento_bomba'));
+    }
+
+
+    public function update(Request $request, $id)
+    {
+
+        $abastecimento = abastecimento_bomba::findOrFail($id);
+
+        $abastecimento->nome_motorista = $request->nome_motorista;
+        $abastecimento->data_recepcao = $request->data_recepcao;
+        $abastecimento->identificacao = $request->identificacao;
+        $abastecimento->selo_abastecimento = $request->selo_abastecimento;
+        $abastecimento->viatura_fornecedora = $request->viatura_fornecedora;
+        $abastecimento->observacao = $request->observacao;
+        $abastecimento->estado = 'recebido';
+        $abastecimento->user_id = auth()->user()->id;
+        $abastecimento->update();
+
+        $bombas = Bombas::where('id', $request->bombas_id)->first();
+        $bombas->qtd_disponivel = ($bombas->qtd_disponivel + $abastecimento->qtd_abastecida);
+        $bombas->createdBy = auth()->user()->id;
+        $bombas->update();
+
+
+
+
+
     }
 
     /**

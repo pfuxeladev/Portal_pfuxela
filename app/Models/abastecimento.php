@@ -21,4 +21,8 @@ class abastecimento extends Model
         return $this->hasMany(abastecimentoRotaViatura::class);
     }
 
+    function user(){
+        return $this->belongsTo(User::class);
+    }
+
 }

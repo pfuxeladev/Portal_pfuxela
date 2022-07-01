@@ -36,9 +36,7 @@ class AbastecimentoController extends Controller
     }
     public function index()
     {
-        $abastecimento = $this->abastecimento->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')
-            ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
-            ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec', 'bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
+        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy'])->orderBy('id', 'desc')->paginate(15);
 
         return $abastecimento;
     }
@@ -366,20 +364,20 @@ class AbastecimentoController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
-              $data["email"] = $bombas_mail->email_bomba;
-              $data["title"] = "info@pfuxela.co.mz";
-              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+                $data["email"] = $bombas_mail->email_bomba;
+                $data["title"] = "info@pfuxela.co.mz";
+                $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
-               $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-               $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+                 $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                 $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
 
-              Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                  $message->from(env('MAIL_USERNAME'));
-                  $message->to($data["email"], $data['email'])
-                          ->subject($data["title"])
-                          ->attachData($pdf->output(), "ordem.pdf");
-              });
-            }
+                Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
+                    $message->from(env('MAIL_USERNAME'));
+                    $message->to($data["email"], $data['email'])
+                            ->subject($data["title"])
+                            ->attachData($pdf->output(), "ordem.pdf");
+                });
+              }
         }
 
         return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);

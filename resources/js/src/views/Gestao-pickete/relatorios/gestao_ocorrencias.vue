@@ -433,7 +433,7 @@ export default {
       this.editMode = false;
       store
         .dispatch('Picket/addOcorrencia', form.value)
-        .then((response) => {
+        .then(response => {
           this.$emit('refetch-data')
           toast({
             component: ToastificationContent,

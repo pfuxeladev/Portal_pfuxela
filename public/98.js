@@ -310,6 +310,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -834,6 +836,8 @@ var render = function () {
                         _vm._v(" "),
                         _c("th", [_vm._v("Combustivel")]),
                         _vm._v(" "),
+                        _c("th", [_vm._v("Qtd disponivel")]),
+                        _vm._v(" "),
                         _c("th", [_vm._v("Cadastrado por")]),
                         _vm._v(" "),
                         _c("th", [_c("i", { staticClass: "fas fa-cogs" })]),
@@ -909,6 +913,10 @@ var render = function () {
                             }),
                             0
                           ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(" " + _vm._s(b.qtd_disponivel) + " "),
+                          ]),
                           _vm._v(" "),
                           _c("td", [_vm._v(_vm._s(b.created_by.name))]),
                           _vm._v(" "),

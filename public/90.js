@@ -1053,7 +1053,7 @@ function useAbastecimentoList() {
   var refAbstRecorrente = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
 
   var tableColumns = [{
-    key: 'ordem',
+    key: 'ordem.codigo_ordem',
     sortable: true
   }, {
     key: 'qtd_ant',

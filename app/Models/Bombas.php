@@ -36,7 +36,7 @@ class Bombas extends Model
     }
 
     public function abastecimentoBomba(){
-        return $this->hasMany(abastecimento_bomba::class);
+        return $this->hasMany(abastecimento_bomba::class, 'bombas_id', 'id');
     }
 
 }
