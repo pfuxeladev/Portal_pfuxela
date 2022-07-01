@@ -48,13 +48,14 @@
           </b-card-text>
 
           <b-alert
+          v-if="valid === true"
             variant="primary"
             show
           >
             <div class="alert-body font-small-2">
 
               <p>
-                <small class="mr-50"><span class="font-weight-bold">Ensira Email e password</span></small>
+                <small class="mr-50"><span class="font-weight-bold">{{erro}}</span></small>
               </p>
             </div>
             <feather-icon
@@ -280,6 +281,8 @@ export default {
       // validation rules
       required,
       email,
+      valid: true,
+      erro: '',
     }
   },
   computed: {
@@ -313,14 +316,14 @@ export default {
 
               localStorage.setItem('userData', JSON.stringify(userData))
               this.$ability.update(userData.ability)
-            //   location.reload()
-
+              //   location.reload()
+              this.valid = false
               this.$router.replace(getHomeRouteForLoggedInUser(userData.role)).then(() => {
                 this.$toast({
                   component: ToastificationContent,
                   position: 'top-right',
                   props: {
-                    title: `Welcome ${userData.name || userData.email}`,
+                    title: `Welcome ${userData[0].email}`,
                     icon: 'CoffeeIcon',
                     variant: 'success',
                     text: `You have successfully logged in as ${userData.role}. Now you can start to explore!`,
@@ -329,9 +332,21 @@ export default {
               })
             })
             .catch(error => {
-              //   if (error) {
-              //     this.$refs.loginForm.setErrors(error.response.data.error)
-              //   }
+              if (error.response.status === 422) {
+                this.$refs.loginForm.setErrors(error.response.data.errors)
+              } else if (error.response.status === 421) {
+                this.$toast({
+                  component: ToastificationContent,
+                  props: {
+                    title: error.response.data.error,
+                    icon: 'AlertTriangleIcon',
+                    variant: 'danger',
+                  },
+                })
+                this.valid = true
+                this.erro = error.response.data.error
+                // this.$refs.loginForm.setErrors(error.response.data.error)
+              }
             })
         }
       })

@@ -98,7 +98,7 @@ class AuthenticationController extends Controller
                 'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
         } else {
-            return response()->json(['error' => 'Erro de validacao'], 401);
+            return response()->json(['error' => 'Erro! Verifique as suas credenciais ou contacte o administrador sistema'], 421);
         }
     }
 

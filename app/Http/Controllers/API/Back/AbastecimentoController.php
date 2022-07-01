@@ -36,9 +36,7 @@ class AbastecimentoController extends Controller
     }
     public function index()
     {
-        $abastecimento = $this->abastecimento->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')
-            ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
-            ->select('ordems.id', 'ordems.codigo_ordem', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec', 'bombas.nome_bombas', 'abastecimentos.refs', 'abastecimentos.id as abastecimento_id', 'ordems.estado')->orderBy('abastecimentos.id', 'asc')->paginate(15);
+        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy'])->orderBy('id', 'desc')->paginate(15);
 
         return $abastecimento;
     }

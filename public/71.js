@@ -98,21 +98,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
 /* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-/* harmony import */ var _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/layouts/components/Logo.vue */ "./resources/js/src/@core/layouts/components/Logo.vue");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _validations__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @validations */ "./resources/js/src/@core/utils/validations/validations.js");
-/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
-/* harmony import */ var _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/auth/jwt/useJwt */ "./resources/js/src/auth/jwt/useJwt.js");
-/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/store/index */ "./resources/js/src/store/index.js");
-/* harmony import */ var _auth_utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/auth/utils */ "./resources/js/src/auth/utils.js");
+/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
+/* harmony import */ var _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/layouts/components/Logo.vue */ "./resources/js/src/@core/layouts/components/Logo.vue");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _validations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @validations */ "./resources/js/src/@core/utils/validations/validations.js");
+/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
+/* harmony import */ var _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/auth/jwt/useJwt */ "./resources/js/src/auth/jwt/useJwt.js");
+/* harmony import */ var _store_index__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/store/index */ "./resources/js/src/store/index.js");
+/* harmony import */ var _auth_utils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/auth/utils */ "./resources/js/src/auth/utils.js");
 
 
 
-
+//
 //
 //
 //
@@ -336,28 +334,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'auth-login',
   directives: {
-    'b-tooltip': bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["VBTooltip"]
+    'b-tooltip': bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["VBTooltip"]
   },
   components: {
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BCol"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BLink"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormInput"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BInputGroupAppend"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BInputGroup"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormCheckbox"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BCardText"],
-    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BCardTitle"],
-    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BImg"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BForm"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BButton"],
-    BAlert: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BAlert"],
-    VuexyLogo: _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_4__["ValidationProvider"],
-    ValidationObserver: vee_validate__WEBPACK_IMPORTED_MODULE_4__["ValidationObserver"]
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BCol"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BLink"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BFormInput"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BInputGroupAppend"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BInputGroup"],
+    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BFormCheckbox"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BCardText"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BCardTitle"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BImg"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BForm"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BButton"],
+    BAlert: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BAlert"],
+    VuexyLogo: _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    ValidationProvider: vee_validate__WEBPACK_IMPORTED_MODULE_3__["ValidationProvider"],
+    ValidationObserver: vee_validate__WEBPACK_IMPORTED_MODULE_3__["ValidationObserver"]
   },
-  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_9__["togglePasswordVisibility"]],
+  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_8__["togglePasswordVisibility"]],
   data: function data() {
     return {
       status: '',
@@ -365,8 +363,10 @@ __webpack_require__.r(__webpack_exports__);
       userEmail: '',
       sideImg: __webpack_require__(/*! @/assets/images/pages/login-v2.svg */ "./resources/js/src/assets/images/pages/login-v2.svg"),
       // validation rules
-      required: _validations__WEBPACK_IMPORTED_MODULE_8__["required"],
-      email: _validations__WEBPACK_IMPORTED_MODULE_8__["email"]
+      required: _validations__WEBPACK_IMPORTED_MODULE_7__["required"],
+      email: _validations__WEBPACK_IMPORTED_MODULE_7__["email"],
+      valid: true,
+      erro: ''
     };
   },
   computed: {
@@ -374,7 +374,7 @@ __webpack_require__.r(__webpack_exports__);
       return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon';
     },
     imgUrl: function imgUrl() {
-      if (_store_index__WEBPACK_IMPORTED_MODULE_11__["default"].state.appConfig.layout.skin === 'dark') {
+      if (_store_index__WEBPACK_IMPORTED_MODULE_10__["default"].state.appConfig.layout.skin === 'dark') {
         // eslint-disable-next-line vue/no-side-effects-in-computed-properties
         this.sideImg = __webpack_require__(/*! @/assets/images/pages/login-v2-dark.svg */ "./resources/js/src/assets/images/pages/login-v2-dark.svg");
         return this.sideImg;
@@ -389,33 +389,48 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$refs.loginForm.validate().then(function (success) {
         if (success) {
-          _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_10__["default"].login({
+          _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_9__["default"].login({
             email: _this.userEmail,
             password: _this.password
           }).then(function (response) {
             var userData = response.data.userData;
-            _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_10__["default"].setToken(response.data.accessToken);
-            _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_10__["default"].setRefreshToken(response.data.refreshToken);
+            _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_9__["default"].setToken(response.data.accessToken);
+            _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_9__["default"].setRefreshToken(response.data.refreshToken);
             localStorage.setItem('userData', JSON.stringify(userData));
 
             _this.$ability.update(userData.ability); //   location.reload()
 
 
-            _this.$router.replace(Object(_auth_utils__WEBPACK_IMPORTED_MODULE_12__["getHomeRouteForLoggedInUser"])(userData.role)).then(function () {
+            _this.valid = false;
+
+            _this.$router.replace(Object(_auth_utils__WEBPACK_IMPORTED_MODULE_11__["getHomeRouteForLoggedInUser"])(userData.role)).then(function () {
               _this.$toast({
-                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
                 position: 'top-right',
                 props: {
-                  title: "Welcome ".concat(userData.name || userData.email),
+                  title: "Welcome ".concat(userData[0].email),
                   icon: 'CoffeeIcon',
                   variant: 'success',
                   text: "You have successfully logged in as ".concat(userData.role, ". Now you can start to explore!")
                 }
               });
             });
-          })["catch"](function (error) {//   if (error) {
-            //     this.$refs.loginForm.setErrors(error.response.data.error)
-            //   }
+          })["catch"](function (error) {
+            if (error.response.status === 422) {
+              _this.$refs.loginForm.setErrors(error.response.data.errors);
+            } else if (error.response.status === 421) {
+              _this.$toast({
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+                props: {
+                  title: error.response.data.error,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger'
+                }
+              });
+
+              _this.valid = true;
+              _this.erro = error.response.data.error; // this.$refs.loginForm.setErrors(error.response.data.error)
+            }
           });
         }
       });
@@ -893,37 +908,46 @@ var render = function () {
                     ),
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "b-alert",
-                    { attrs: { variant: "primary", show: "" } },
-                    [
-                      _c("div", { staticClass: "alert-body font-small-2" }, [
-                        _c("p", [
-                          _c("small", { staticClass: "mr-50" }, [
-                            _c("span", { staticClass: "font-weight-bold" }, [
-                              _vm._v("Ensira Email e password"),
-                            ]),
-                          ]),
-                        ]),
-                      ]),
-                      _vm._v(" "),
-                      _c("feather-icon", {
-                        directives: [
-                          {
-                            name: "b-tooltip",
-                            rawName: "v-b-tooltip.hover.left",
-                            value: "This is just for ACL demo purpose",
-                            expression: "'This is just for ACL demo purpose'",
-                            modifiers: { hover: true, left: true },
-                          },
+                  _vm.valid === true
+                    ? _c(
+                        "b-alert",
+                        { attrs: { variant: "primary", show: "" } },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "alert-body font-small-2" },
+                            [
+                              _c("p", [
+                                _c("small", { staticClass: "mr-50" }, [
+                                  _c(
+                                    "span",
+                                    { staticClass: "font-weight-bold" },
+                                    [_vm._v(_vm._s(_vm.erro))]
+                                  ),
+                                ]),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("feather-icon", {
+                            directives: [
+                              {
+                                name: "b-tooltip",
+                                rawName: "v-b-tooltip.hover.left",
+                                value: "This is just for ACL demo purpose",
+                                expression:
+                                  "'This is just for ACL demo purpose'",
+                                modifiers: { hover: true, left: true },
+                              },
+                            ],
+                            staticClass: "position-absolute",
+                            staticStyle: { top: "10", right: "10" },
+                            attrs: { icon: "HelpCircleIcon", size: "18" },
+                          }),
                         ],
-                        staticClass: "position-absolute",
-                        staticStyle: { top: "10", right: "10" },
-                        attrs: { icon: "HelpCircleIcon", size: "18" },
-                      }),
-                    ],
-                    1
-                  ),
+                        1
+                      )
+                    : _vm._e(),
                   _vm._v(" "),
                   _c("validation-observer", {
                     ref: "loginForm",

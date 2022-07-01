@@ -48,7 +48,57 @@
               </b-col>
             </b-row>
             <hr />
-            <b-row v-if="bomba.ordem.length === 0">
+            <b-row cols="12" v-for="(ordem, index) in bomba.ordem" :key="index">
+              <b-col
+                cols="12"
+                v-if="ordem.tipo_ordem === 'abastecimento_interno'"
+              >
+                <b-card-header>
+                    <h3 class="card-title">Abastecimento da bombas locais</h3>
+                  <h4 class="card-title text-uppercase">
+                    Codigo:
+                    <span style="color: #593101"
+                      >#{{ ordem.codigo_ordem }}</span
+                    >
+                  </h4>
+                </b-card-header>
+                <table class="table table-striped table-responsive">
+                  <thead>
+                    <tr>
+                      <th>Fornecedor</th>
+                      <th>Contacto</th>
+                      <th>Motorista</th>
+                      <th>Viatura(forn)</th>
+                      <th>Selo de abast.</th>
+                      <th>Combustivel</th>
+                      <th>Qtd abastecida</th>
+                      <th>Pre&ccedil;o</th>
+                      <th>Total</th>
+                      <th>Data de abastecimento</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr
+                      v-for="abst in bomba.abastecimento_bomba"
+                      :key="abst.id"
+                    >
+                      <td>{{ abst.fornecedor }}</td>
+                      <td>{{ abst.fornecedor_contacto }}</td>
+                      <td>{{ abst.nome_motorista }}</td>
+                      <td>{{ abst.viatura_fornecedora }}</td>
+                      <td>{{ abst.selo_abastecimento }}</td>
+                      <td>{{ abst.tipo_de_combustivel }}</td>
+                      <td>{{ abst.qtd_abastecida }}</td>
+                      <td>{{ abst.preco_combustivel }}</td>
+                      <td>{{ abst.sub_total }}</td>
+                      <td>{{ dateTime(abst.updated_at) }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </b-col>
+            </b-row>
+            <hr />
+            <b-row v-if="bomba.ordem.length > 0">
               <b-col cols="12">
                 <b-card-header>
                   <h3 class="card-title">Resumo dos abastecimentos</h3>
@@ -60,7 +110,10 @@
                 :key="index"
               >
                 <b-card-header>
-                  <h4 class="card-title text-uppercase">
+                  <h4
+                    class="card-title text-uppercase"
+                    v-if="ordem.tipo_ordem !== 'abastecimento_interno'"
+                  >
                     Codigo:
                     <span style="color: #593101"
                       >#{{ ordem.codigo_ordem }}</span
@@ -93,83 +146,6 @@
         </b-card>
       </b-col>
     </b-row>
-    <!-- open modal recepcao de combustivel -->
-    <b-modal
-      id="modal-prevent-closing"
-      ref="modal"
-      title="Submit Your Name"
-      @show="resetModal"
-      @hidden="resetModal"
-      @ok="handleOk"
-    >
-      <form ref="form" @submit.prevent="handleSubmit">
-        <b-row v-if="form.estado === 'Recepcao do combustivel'">
-          <b-col cols="12" lg="6" md="6">
-            <b-form-group
-              invalid-feedback="Name is required"
-          :state="nameState"
-           label="Motorista">
-              <b-form-input type="text" v-model="form.nome_motorista" :state="nameState"
-            required />
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" lg="6" md="6">
-            <b-form-group
-              invalid-feedback="Name is required"
-          :state="nameState"
-           label="Identificacao e tipo de documento">
-              <b-form-input type="text" v-model="form.identificacao"
-               :state="nameState"
-            required />
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" lg="6" md="6">
-            <b-form-group
-              invalid-feedback="Name is required"
-          :state="nameState"
-           label="Selo de abastecimento">
-              <b-form-input type="text" v-model="form.selo_abastecimento"
-               :state="nameState"
-            required />
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" lg="6" md="6">
-            <b-form-group
-              invalid-feedback="Name is required"
-          :state="nameState"
-           label="Viatura do fornecedor">
-              <b-form-input type="text" v-model="form.viatura_fornecedor"
-               :state="nameState"
-            required />
-            </b-form-group>
-          </b-col>
-          <b-col cols="12" lg="12" md="12">
-            <b-form-group
-              invalid-feedback="Name is required"
-          :state="nameState"
-           label="Observacao">
-              <b-form-textarea v-model="form.observacao"
-               :state="nameState"
-            required />
-            </b-form-group>
-          </b-col>
-        </b-row>
-        <b-form-group
-          label="Name"
-          label-for="name-input"
-          invalid-feedback="Name is required"
-          :state="nameState"
-        >
-          <b-form-input
-            id="name-input"
-            v-model="name"
-            :state="nameState"
-            required
-          />
-        </b-form-group>
-      </form>
-    </b-modal>
-    <!-- end modal -->
   </section>
 </template>
 
@@ -189,15 +165,15 @@ import {
   BFormGroup,
   BModal,
   // eslint-disable-next-line import/newline-after-import
-} from 'bootstrap-vue'
-import { useToast } from 'vue-toastification/composition'
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
-import { ref, onUnmounted } from '@vue/composition-api'
-import moment from 'moment'
-import Form from 'vform'
-import store from '@/store'
-import router from '@/router'
-import Table from '../../table/bs-table/Table.vue'
+} from "bootstrap-vue";
+import { useToast } from "vue-toastification/composition";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
+import { ref, onUnmounted } from "@vue/composition-api";
+import moment from "moment";
+import Form from "vform";
+import store from "@/store";
+import router from "@/router";
+import Table from "../../table/bs-table/Table.vue";
 export default {
   components: {
     BCard,
@@ -216,15 +192,15 @@ export default {
     BModal,
   },
   setup() {
-    const bomba = ref(null)
+    const bomba = ref(null);
 
-    const toast = useToast()
+    const toast = useToast();
 
     function getBombasDetails() {
       this.$http
         .get(`/api/bombas/${router.currentRoute.params.id}`)
         .then((response) => {
-          this.bomba = response.data
+          this.bomba = response.data;
         })
         .catch((err) => {
           if (err.response.status === 421) {
@@ -232,65 +208,20 @@ export default {
               component: ToastificationContent,
               props: {
                 title: err.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                icon: "AlertTriangleIcon",
+                variant: "danger",
               },
-            })
+            });
           }
-        })
+        });
     }
     function dateTime(value) {
-      return moment(value).format('DD/MM/YYYY hh:mm')
-    }
-    const form = ref(
-      JSON.parse(
-        JSON.stringify(new Form({
-          qtd_abastecida: 0,
-          preco_combustivel: 0,
-          iva: false,
-          fornecedor_id: null,
-          viatura_fornecedora: '',
-          nome_motorista: '',
-          selo_abastecimento: null,
-          identificacao: null,
-          observacao: null,
-          data_recepcao: null,
-          estado: 'Requisicao para abastecimento',
-        })),
-      ),
-    )
-    // submit recieving fuel
-    function checkFormValidity() {
-      const valid = this.$refs.form.checkValidity()
-      this.nameState = valid
-      return valid
-    }
-    function resetModal() {
-      this.name = ''
-      this.nameState = null
-    }
-    function handleOk(bvModalEvent) {
-      // Prevent modal from closing
-      bvModalEvent.preventDefault()
-      // Trigger submit handler
-      this.handleSubmit()
-    }
-    function handleSubmit() {
-      // Exit when the form isn't valid
-      if (!this.checkFormValidity()) {
-        return;
-      }
+      return moment(value).format("DD/MM/YYYY hh:mm");
     }
     // end submittion
     return {
       getBombasDetails,
-      checkFormValidity,
-      resetModal,
-      handleSubmit,
-
-      handleOk,
       dateTime,
-      form,
       bomba,
     };
   },

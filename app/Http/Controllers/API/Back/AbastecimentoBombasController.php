@@ -131,11 +131,30 @@ class AbastecimentoBombasController extends Controller
     }
 
 
-    public function update(Request $request, abastecimento_bomba $abastecimento_bomba)
+    public function update(Request $request, $id)
     {
-        $abastecimento = abastecimento_bomba::findOrFail($abastecimento_bomba);
 
-        // $abastecimento->
+        $abastecimento = abastecimento_bomba::findOrFail($id);
+
+        $abastecimento->nome_motorista = $request->nome_motorista;
+        $abastecimento->data_recepcao = $request->data_recepcao;
+        $abastecimento->identificacao = $request->identificacao;
+        $abastecimento->selo_abastecimento = $request->selo_abastecimento;
+        $abastecimento->viatura_fornecedora = $request->viatura_fornecedora;
+        $abastecimento->observacao = $request->observacao;
+        $abastecimento->estado = 'recebido';
+        $abastecimento->user_id = auth()->user()->id;
+        $abastecimento->update();
+
+        $bombas = Bombas::where('id', $request->bombas_id)->first();
+        $bombas->qtd_disponivel = ($bombas->qtd_disponivel + $abastecimento->qtd_abastecida);
+        $bombas->createdBy = auth()->user()->id;
+        $bombas->update();
+
+
+
+
+
     }
 
     /**

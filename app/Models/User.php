@@ -36,6 +36,10 @@ class User extends Authenticatable
         return $this->hasMany(Bombas::class, 'createdBy', 'id');
     }
 
+    public function abastecimento(){
+        return $this->hasMany(abastecimento::class);
+    }
+
     // public function jsPermissions()
     // {
     //     return json_encode([

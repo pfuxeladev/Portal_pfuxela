@@ -75,7 +75,6 @@ class BombaController extends Controller
                 $request,
                 [
                     'nome_bombas' => 'required|string',
-                    'capacidade' => 'required| string',
                     'responsavel' => 'required|array|min:1',
                     'responsavel*nome' => 'required|string',
                     'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
