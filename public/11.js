@@ -387,6 +387,7 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
+    getAbastecimentoExtraOrdinario: function getAbastecimentoExtraOrdinario() {},
     fetchAbstRecDetails: function fetchAbstRecDetails(ctx, _ref4) {
       var refs = _ref4.refs;
       return new Promise(function (resolve, reject) {

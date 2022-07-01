@@ -1096,11 +1096,10 @@ var render = function () {
                                 _c(
                                   "b-dropdown-item",
                                   {
-                                    on: {
-                                      click: function ($event) {
-                                        return _vm.details(
-                                          data.item.abastecimento.ordem.refs
-                                        )
+                                    attrs: {
+                                      to: {
+                                        name: "New-supply-order",
+                                        params: { refs: data.item.refs },
                                       },
                                     },
                                   },

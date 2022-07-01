@@ -65,7 +65,9 @@ export default {
           .catch(error => reject(error))
       })
     },
+    getAbastecimentoExtraOrdinario(){
 
+    },
     fetchAbstRecDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios

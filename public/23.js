@@ -235,7 +235,7 @@ __webpack_require__.r(__webpack_exports__);
     var today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 15th two months prior
 
     var minDate = new Date(today);
-    minDate.setFullYear(minDate.getFullYear() - 40);
+    minDate.setFullYear(minDate.getFullYear() - 80);
     minDate.setDate(15); // 15th in two months
 
     var maxDate = new Date(today);
