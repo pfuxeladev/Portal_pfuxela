@@ -59,7 +59,7 @@ class ViaturaController extends Controller
                 'nr_motor'=> "required",
                 'nr_chassi'=> "required",
                 'nr_livrete'=> "required",
-                'matricula'=> "required|tring|unique:viaturas",
+                'matricula'=> "required|string|unique:viaturas",
                 'data_licenca'=> "required|date|before_or_equal:" . $todayDate,
                 'data_inspencao'=> "required|date|before_or_equal:" . $todayDate,
                 'data_manifesto'=> "required|date|before_or_equal:" . $todayDate,
