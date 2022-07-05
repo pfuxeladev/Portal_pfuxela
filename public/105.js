@@ -238,12 +238,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -283,7 +277,7 @@ __webpack_require__.r(__webpack_exports__);
       rota: [],
       projecto: [],
       rec_abast: null,
-      bombas: {},
+      bombas: [],
       abastecimento: [],
       OpenOrder: {},
       form: new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
@@ -297,11 +291,16 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
+    var _this = this;
+
     this.fetchProjectos();
-    this.fetchViaturas();
-    this.fetchBombas();
+    this.fetchViaturas(); // this.fetchBombas()
+
     this.getSubmited();
     this.getQtd();
+    this.$http.get('/api/bombas').then(function (res) {
+      _this.bombas = res.data;
+    });
   },
   directives: {
     Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -310,51 +309,50 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     getQtd: function getQtd() {
-      var _this = this;
+      var _this2 = this;
 
       //   alert(viatura_id)
       this.$http.get("/api/getQtdDisponivel/".concat(this.form.viatura_id)).then(function (res) {
-        _this.rec_abast = res.data;
-        console.log(_this.rec_abast);
+        _this2.rec_abast = res.data;
+        console.log(_this2.rec_abast);
       })["catch"](function (err) {});
     },
     fetchProjectos: function fetchProjectos() {
-      var _this2 = this;
+      var _this3 = this;
 
       this.$http.get('/api/listProject').then(function (response) {
-        _this2.projecto = response.data;
+        _this3.projecto = response.data;
       })["catch"](function (err) {
         console.log(err);
       });
     },
     fetchRotas: function fetchRotas() {
-      var _this3 = this;
+      var _this4 = this;
 
       console.log(this.form.abastecer); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
 
       this.$http.get("/api/RotaByProject/".concat(this.form.projecto_id)).then(function (res) {
-        _this3.rota = res.data;
+        _this4.rota = res.data;
 
         if (res.data === '') {
-          _this3.$swal.fire({
+          _this4.$swal.fire({
             icon: 'error',
             title: 'Nao existe nenhuma rota cadastrada!'
           });
         }
       })["catch"](function (err) {
-        _this3.$swal.fire({
+        _this4.$swal.fire({
           icon: 'error',
           title: 'Erro ao tentar buscar!'
         });
       }); //   }
     },
-    fetchBombas: function fetchBombas() {
-      var _this4 = this;
-
-      this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
-        _this4.bombas = res.data; // console.log(this.bombas)
-      });
-    },
+    // fetchBombas() {
+    //   this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
+    //     this.bombas = res.data
+    //     // console.log(this.bombas)
+    //   })
+    // },
     fetchViaturas: function fetchViaturas() {
       var _this5 = this;
 
@@ -611,23 +609,24 @@ var render = function () {
                       _c(
                         "b-row",
                         [
-                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
-                            _c("b", [_vm._v("Refs")]),
-                            _vm._v(
-                              ": " +
-                                _vm._s(_vm.form.ordem_id) +
-                                "\n            "
-                            ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-col", { attrs: { cols: "6", md: "6" } }, [
-                            _c("b", [_vm._v("bombas")]),
-                            _vm._v(
-                              ":\n              " +
-                                _vm._s(_vm.bombas.nome_bombas) +
-                                "\n            "
-                            ),
-                          ]),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "6", md: "6" } },
+                            [
+                              _c("b", [_vm._v("bombas")]),
+                              _vm._v(":\n              "),
+                              _c("v-select", {
+                                attrs: {
+                                  label: "nome_bombas",
+                                  options: _vm.bombas,
+                                  reduce: function (bombas) {
+                                    return bombas.id
+                                  },
+                                },
+                              }),
+                            ],
+                            1
+                          ),
                           _vm._v(" "),
                           _c("hr"),
                         ],

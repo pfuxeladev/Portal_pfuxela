@@ -17,7 +17,7 @@ export default
     },
   },
   {
-    path: '/Supply/Orders/:refs/supply-order',
+    path: '/Supply/Orders/supply-order',
     name: 'New-supply-order',
     component: () => import('@/views/Gestao-abastecimentos/abastecimentos/novo_abastecimento.vue'),
     meta: {

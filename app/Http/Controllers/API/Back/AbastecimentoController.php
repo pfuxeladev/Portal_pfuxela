@@ -36,15 +36,14 @@ class AbastecimentoController extends Controller
     }
     public function index()
     {
-        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy', 'bombas'])->orderBy('id', 'desc')->paginate(15);
+        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy'])->orderBy('id', 'desc')->paginate(15);
 
         return $abastecimento;
     }
 
     function ListarViaturas()
     {
-        return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')
-            ->where('viaturas.estado', true)
+        return Viatura::where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -95,6 +94,8 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
 
+        $ordem->bombas_id = $request->bombas_id;
+        $ordem->update();
 
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
@@ -369,7 +370,7 @@ class AbastecimentoController extends Controller
                 $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
                  $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-                 $path = Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+                 $path = Storage::put('public/pdf/ordem_abastecimento'.$ordem->codigo_ordem.'.pdf', $pdf->output());
 
                 Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
                     $message->from(env('MAIL_USERNAME'));

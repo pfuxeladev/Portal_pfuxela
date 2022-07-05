@@ -343,175 +343,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -537,7 +368,8 @@ __webpack_require__.r(__webpack_exports__);
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
     BFormTimepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTimepicker"],
-    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"]
+    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BModal"]
   },
   data: function data() {
     return {
@@ -621,6 +453,9 @@ __webpack_require__.r(__webpack_exports__);
       if (this.form.isOuthers === true) {
         this.form.isRota = false;
       }
+    },
+    openModal: function openModal() {
+      this.$refs['Atributos'].show();
     }
   },
   setup: function setup(props) {
@@ -792,7 +627,7 @@ var render = function () {
                       },
                       [
                         _vm._v(
-                          "\n            Pedido de Autorização de Saida\n          "
+                          "\n                        Pedido de Autorização de Saida\n                    "
                         ),
                       ]
                     ),
@@ -884,8 +719,37 @@ var render = function () {
             "b-card-header",
             [
               _c("b-card-title", [
-                _vm._v("\n        Formulário de inspenção\n      "),
+                _vm._v(
+                  "\n                Formulário de inspenção\n            "
+                ),
               ]),
+              _vm._v(" "),
+              _c("hr"),
+              _vm._v(" "),
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    [
+                      _c(
+                        "b-button",
+                        {
+                          attrs: { variant: "outline-primary" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.openModal()
+                            },
+                          },
+                        },
+                        [_vm._v("criar atributos da checklist")]
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
             ],
             1
           ),
@@ -985,7 +849,7 @@ var render = function () {
                             { attrs: { label: "Kilometragem actual" } },
                             [
                               _c("b-form-input", {
-                                attrs: { type: "text", readonly: "" },
+                                attrs: { type: "text" },
                                 model: {
                                   value: _vm.form.km_inicio,
                                   callback: function ($$v) {
@@ -1708,7 +1572,9 @@ var render = function () {
                                 _c(
                                   "td",
                                   [
-                                    _vm._v("\n                    Rota: "),
+                                    _vm._v(
+                                      "\n                                        Rota:\n                                        "
+                                    ),
                                     _c("b-form-checkbox", {
                                       attrs: { switch: "", size: "lg" },
                                       on: { input: _vm.changeOption },
@@ -1722,7 +1588,9 @@ var render = function () {
                                     }),
                                     _vm._v(" "),
                                     _c("br"),
-                                    _vm._v("\n                    Outros: "),
+                                    _vm._v(
+                                      "\n                                        Outros:\n                                        "
+                                    ),
                                     _c("b-form-checkbox", {
                                       attrs: { switch: "", size: "lg" },
                                       on: { input: _vm.changeOption1 },
@@ -1947,7 +1815,9 @@ var render = function () {
                         { attrs: { cols: "6", md: "6" } },
                         [
                           _c("b-button", { attrs: { type: "reset" } }, [
-                            _vm._v("\n              limpar\n            "),
+                            _vm._v(
+                              "\n                            limpar\n                        "
+                            ),
                           ]),
                         ],
                         1
@@ -1965,10 +1835,133 @@ var render = function () {
                                 variant: "outline-primary",
                               },
                             },
-                            [_vm._v("\n              submeter\n            ")]
+                            [
+                              _vm._v(
+                                "\n                            submeter\n                        "
+                              ),
+                            ]
                           ),
                         ],
                         1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-modal",
+        {
+          ref: "Atributos",
+          attrs: { size: "lg", "hide-footer": "", title: "Novo atributo" },
+        },
+        [
+          _c(
+            "b-form",
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "3" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Nome do atributo" } },
+                        [_c("b-form-input", { attrs: { type: "text" } })],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "4" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Categoria ocorrencia" } },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              options: [
+                                "Informativa",
+                                "Correctiva",
+                                "Preventiva",
+                                "Manutencao",
+                              ],
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "5" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Ëmail a encaminhar ocorrencia" } },
+                        [_c("b-form-input", { attrs: { type: "email" } })],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    [
+                      _c(
+                        "b-button",
+                        { attrs: { variant: "outline-primary" } },
+                        [_c("i", { staticClass: "fas fa-plus-circle" })]
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    [
+                      _c(
+                        "b-button",
+                        {
+                          staticClass: "mt-2",
+                          attrs: { type: "submit", variant: "outline-success" },
+                        },
+                        [
+                          _c("i", { staticClass: "fas fa-paper-plane" }),
+                          _vm._v(
+                            "\n                        adicionar\n                    "
+                          ),
+                        ]
                       ),
                     ],
                     1

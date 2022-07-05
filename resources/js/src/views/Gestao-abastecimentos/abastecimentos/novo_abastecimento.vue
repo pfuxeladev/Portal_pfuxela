@@ -27,14 +27,8 @@
                 cols="6"
                 md="6"
               >
-                <b>Refs</b>: {{ form.ordem_id }}
-              </b-col>
-              <b-col
-                cols="6"
-                md="6"
-              >
                 <b>bombas</b>:
-                {{ bombas.nome_bombas }}
+                <v-select label="nome_bombas" :options="bombas" :reduce="bombas => bombas.id"></v-select>
               </b-col>
               <hr>
             </b-row>
@@ -281,7 +275,7 @@ export default {
       rota: [],
       projecto: [],
       rec_abast: null,
-      bombas: {},
+      bombas: [],
       abastecimento: [],
       OpenOrder: {},
       form: new Form({
@@ -298,9 +292,12 @@ export default {
   created() {
     this.fetchProjectos()
     this.fetchViaturas()
-    this.fetchBombas()
+    // this.fetchBombas()
     this.getSubmited()
     this.getQtd()
+    this.$http.get('/api/bombas').then(res => {
+      this.bombas = res.data
+    })
   },
   directives: {
     Ripple,
@@ -345,12 +342,12 @@ export default {
       })
       //   }
     },
-    fetchBombas() {
-      this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
-        this.bombas = res.data
-        // console.log(this.bombas)
-      })
-    },
+    // fetchBombas() {
+    //   this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
+    //     this.bombas = res.data
+    //     // console.log(this.bombas)
+    //   })
+    // },
     fetchViaturas() {
       this.$http.get('/api/listarViaturas').then(res => {
         this.viatura = res.data
