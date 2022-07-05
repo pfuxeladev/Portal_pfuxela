@@ -206,11 +206,11 @@ class BombaController extends Controller
                 if ($request->combustivel_tipos != null) {
                     foreach ($request->combustivel_tipos as $key => $comb) {
 
-                        $combustivel[$key] = combustivel::where('tipo_combustivel', $comb)->get();
+                        $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
 
                         foreach ($combustivel[$key] as $key => $c) {
 
-                            combustivelBomba::firstOrNew(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual' => $c->preco_actual]);
+                            combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id, 'preco_actual' => $c->preco_actual]);
                         }
                     }
                 }
