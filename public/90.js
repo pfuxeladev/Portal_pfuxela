@@ -94,6 +94,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -615,12 +618,24 @@ var render = function () {
                         },
                       },
                       {
+                        key: "cell(estado)",
+                        fn: function (data) {
+                          return [
+                            _vm._v(
+                              "\n                        " +
+                                _vm._s(data.item.ordem.estado) +
+                                "\n                    "
+                            ),
+                          ]
+                        },
+                      },
+                      {
                         key: "cell(bombas)",
                         fn: function (data) {
                           return [
                             _vm._v(
                               "\n                        " +
-                                _vm._s(data.item.nome_bombas) +
+                                _vm._s(data.item.ordem.bombas.nome_bombas) +
                                 "\n                    "
                             ),
                           ]
@@ -1066,6 +1081,9 @@ function useAbastecimentoList() {
     sortable: true
   }, {
     key: 'bombas',
+    sortable: true
+  }, {
+    key: 'user.name',
     sortable: true
   }, // { key: 'rota', sortable: true },
   {

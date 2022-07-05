@@ -36,7 +36,7 @@ class AbastecimentoController extends Controller
     }
     public function index()
     {
-        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy'])->orderBy('id', 'desc')->paginate(15);
+        $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy', 'bombas'])->orderBy('id', 'desc')->paginate(15);
 
         return $abastecimento;
     }

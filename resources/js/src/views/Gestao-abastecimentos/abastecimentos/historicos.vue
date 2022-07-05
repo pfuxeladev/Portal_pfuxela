@@ -24,8 +24,11 @@
                      <template #cell(ordem)="data">
                         {{data.item.codigo_ordem}}
                     </template>
+                    <template #cell(estado)="data">
+                        {{data.item.ordem.estado}}
+                    </template>
                     <template #cell(bombas)="data">
-                        {{data.item.nome_bombas}}
+                        {{data.item.ordem.bombas.nome_bombas}}
                     </template>
 
                     <!-- <template #cell(acções)="data">
@@ -45,7 +48,7 @@
                         </b-dropdown>
                     </template> -->
                 </b-table>
-            </b-col cols="12">
+            </b-col>
             <div class="mx-2 mb-2">
                 <b-row>
 

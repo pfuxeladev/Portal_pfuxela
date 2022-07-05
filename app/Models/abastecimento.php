@@ -25,4 +25,8 @@ class abastecimento extends Model
         return $this->belongsTo(User::class);
     }
 
+    function bombas(){
+        return $this->belongsTo(Bombas::class);
+    }
+
 }
