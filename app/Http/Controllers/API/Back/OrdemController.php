@@ -141,7 +141,7 @@ class OrdemController extends Controller
                 $ordem->codigo_ordem = $counter;
             }
             $ordem->refs = $uuid;
-            // $ordem->bombas_id = $request->bomba_id;
+            $ordem->bombas_id = $request->bomba_id;
             $ordem->estado = 'Aberta';
             $ordem->tipo_ordem = 'rota';
             $ordem->createdBy = auth()->user()->id;
