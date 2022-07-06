@@ -277,7 +277,8 @@ __webpack_require__.r(__webpack_exports__);
       rota: [],
       projecto: [],
       rec_abast: null,
-      bombas: [],
+      bombas: {},
+      bomba: [],
       abastecimento: [],
       OpenOrder: {},
       form: new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
@@ -294,12 +295,12 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     this.fetchProjectos();
-    this.fetchViaturas(); // this.fetchBombas()
-
+    this.fetchViaturas();
+    this.fetchBombas();
     this.getSubmited();
     this.getQtd();
     this.$http.get('/api/bombas').then(function (res) {
-      _this.bombas = res.data;
+      _this.bomba = res.data;
     });
   },
   directives: {
@@ -347,65 +348,66 @@ __webpack_require__.r(__webpack_exports__);
         });
       }); //   }
     },
-    // fetchBombas() {
-    //   this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
-    //     this.bombas = res.data
-    //     // console.log(this.bombas)
-    //   })
-    // },
-    fetchViaturas: function fetchViaturas() {
+    fetchBombas: function fetchBombas() {
       var _this5 = this;
 
+      this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
+        _this5.bombas = res.data; // console.log(this.bombas)
+      });
+    },
+    fetchViaturas: function fetchViaturas() {
+      var _this6 = this;
+
       this.$http.get('/api/listarViaturas').then(function (res) {
-        _this5.viatura = res.data;
+        _this6.viatura = res.data;
       });
     },
     returnAbastecimento: function returnAbastecimento() {
-      var _this6 = this;
+      var _this7 = this;
 
       this.$http.get("/api/CurrentAbst/".concat(this.$route.params.refs)).then(function (res) {
-        _this6.abastecimento = res.data;
+        _this7.abastecimento = res.data;
       });
     },
     NovaOrdem: function NovaOrdem() {
-      var _this7 = this;
+      var _this8 = this;
 
       this.$Progress.start();
       this.form.post('/api/Abastecimento').then(function (res) {
         if (res.status === 200) {
-          _this7.$swal.fire({
+          _this8.$swal.fire({
             icon: 'success',
             title: res.data.success
           }); // location.reload()
 
 
-          _this7.$Progress.finish();
+          _this8.$Progress.finish();
 
-          _this7.form.reset(); // eslint-disable-next-line no-restricted-globals
+          _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
 
 
           window.location.reload();
         }
       })["catch"](function (err) {
         if (err.response.status === 421) {
-          _this7.$swal.fire({
+          _this8.$swal.fire({
             icon: 'error',
             title: err.response.data.erro
           });
 
-          _this7.$Progress.fail();
+          _this8.$Progress.fail();
         } else if (err.response.status === 422) {
-          _this7.$swal.fire({
+          _this8.$swal.fire({
             icon: 'error',
             title: "".concat(err.response.data.errors.viatura_id, "<br/>").concat(err.response.data.errors.rota_id, "<br/>").concat(err.response.data.errors.turno, "<br/>").concat(err.response.data.errors.qtd_abastecer)
           });
 
-          _this7.$Progress.fail();
+          _this8.$Progress.fail();
         }
       });
     },
     onReset: function onReset(event) {
-      var _this8 = this;
+      var _this9 = this;
 
       event.preventDefault(); // Reset our form values
 
@@ -413,7 +415,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.show = false;
       this.$nextTick(function () {
-        _this8.show = true;
+        _this9.show = true;
       });
     }
   },
@@ -428,11 +430,11 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     function getSubmited() {
-      var _this9 = this;
+      var _this10 = this;
 
       this.$http.get("/api/Ordems/".concat(_router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs)).then(function (response) {
-        _this9.OpenOrder = response.data;
-        console.log(_this9.OpenOrder);
+        _this10.OpenOrder = response.data;
+        console.log(_this10.OpenOrder);
       })["catch"](function (error) {
         if (error) {
           console.log(error);
@@ -618,9 +620,9 @@ var render = function () {
                               _c("v-select", {
                                 attrs: {
                                   label: "nome_bombas",
-                                  options: _vm.bombas,
-                                  reduce: function (bombas) {
-                                    return bombas.id
+                                  options: _vm.bomba,
+                                  reduce: function (bomba) {
+                                    return bomba.id
                                   },
                                 },
                               }),
@@ -992,7 +994,8 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _vm.bombas.estado === "Aberta" || _vm.bombas.estado === "Pendente"
+          _vm.OpenOrder.estado === "Aberta" ||
+          _vm.OpenOrder.estado === "Pendente"
             ? _c(
                 "b-col",
                 { attrs: { cols: "12" } },

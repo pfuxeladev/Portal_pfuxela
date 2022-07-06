@@ -28,7 +28,7 @@
                 md="6"
               >
                 <b>bombas</b>:
-                <v-select label="nome_bombas" :options="bombas" :reduce="bombas => bombas.id"></v-select>
+                <v-select label="nome_bombas" :options="bomba" :reduce="bomba => bomba.id"></v-select>
               </b-col>
               <hr>
             </b-row>
@@ -143,7 +143,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="bombas.estado === 'Aberta' || bombas.estado === 'Pendente'"
+        v-if="OpenOrder.estado === 'Aberta' || OpenOrder.estado === 'Pendente'"
         cols="12"
       >
         <b-row>
@@ -275,7 +275,8 @@ export default {
       rota: [],
       projecto: [],
       rec_abast: null,
-      bombas: [],
+      bombas: {},
+      bomba: [],
       abastecimento: [],
       OpenOrder: {},
       form: new Form({
@@ -292,11 +293,11 @@ export default {
   created() {
     this.fetchProjectos()
     this.fetchViaturas()
-    // this.fetchBombas()
+    this.fetchBombas()
     this.getSubmited()
     this.getQtd()
     this.$http.get('/api/bombas').then(res => {
-      this.bombas = res.data
+      this.bomba = res.data
     })
   },
   directives: {
@@ -342,12 +343,12 @@ export default {
       })
       //   }
     },
-    // fetchBombas() {
-    //   this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
-    //     this.bombas = res.data
-    //     // console.log(this.bombas)
-    //   })
-    // },
+    fetchBombas() {
+      this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
+        this.bombas = res.data
+        // console.log(this.bombas)
+      })
+    },
     fetchViaturas() {
       this.$http.get('/api/listarViaturas').then(res => {
         this.viatura = res.data

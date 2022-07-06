@@ -94,8 +94,8 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
 
-        $ordem->bombas_id = $request->bombas_id;
-        $ordem->update();
+        // $ordem->bombas_id = $request->bombas_id;
+        // $ordem->update();
 
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
@@ -293,16 +293,17 @@ class AbastecimentoController extends Controller
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
             ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
 
-        if ($combustivel) {
+        // if ($combustivel) {
             if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
 
                 $preco = ($combustivel->preco_actual * $request->qtd);
+                $ordem_viatura->preco_cunsumo = $preco;
             } else {
                 return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
             }
-        } else {
-            return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
-        }
+        // } else {
+        //     return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
+        // }
 
 
         // verificar disponibilidade da viatura
@@ -322,7 +323,7 @@ class AbastecimentoController extends Controller
         $ordem_viatura->viatura_id = $request->viatura_id;
         $ordem_viatura->ordem_id = $ordem->id;
         $ordem_viatura->qtd_abastecida = $request->qtd;
-        $ordem_viatura->preco_cunsumo = $preco;
+
         $ordem_viatura->justificacao = $request->descricao;
         $ordem_viatura->user_id = auth()->user()->id;
         $ordem_viatura->save();
@@ -370,11 +371,7 @@ class AbastecimentoController extends Controller
                 $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
                  $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-<<<<<<< HEAD
-                 $path = Storage::put('public/pdf/ordem_abastecimento'.$ordem->codigo_ordem.'.pdf', $pdf->output());
-=======
                  $path = Storage::put('public/pdf/ordem_abastecimentoo'.$ordem->codigo_ordem.'.pdf', $pdf->output());
->>>>>>> 5d6845d2a7a34dca936c9ddf2cab4325197e7a58
 
                 Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
                     $message->from(env('MAIL_USERNAME'));
