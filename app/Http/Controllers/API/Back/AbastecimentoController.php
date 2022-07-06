@@ -107,16 +107,17 @@ class AbastecimentoController extends Controller
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
             ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
 
-        if ($combustivel) {
+        // if ($combustivel) {
             if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
                 # code...
                 $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
-            } else {
-                return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
             }
-        } else {
-            return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
-        }
+            // else {
+        //         return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
+        //     }
+        // } else {
+        //     return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
+        // }
 
 
 
