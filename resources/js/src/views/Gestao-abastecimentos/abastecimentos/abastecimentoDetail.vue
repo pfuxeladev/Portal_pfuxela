@@ -122,6 +122,12 @@
       >
        <span v-if="SupplyData.estado ==='Autorizado'">
        <b-button variant="warning" @click="reabrirOrdem(SupplyData.refs)">Reabrir</b-button>
+        <b-button
+          variant="outline-danger"
+          @click="Reprovar(SupplyData.refs)"
+        >
+          Cancelar
+        </b-button>
       </span>
       <span v-if="SupplyData.estado === 'Pendente'">
         <b-button

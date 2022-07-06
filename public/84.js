@@ -160,6 +160,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1170,6 +1176,19 @@ var render = function () {
                             },
                           },
                           [_vm._v("Reabrir")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-button",
+                          {
+                            attrs: { variant: "outline-danger" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.Reprovar(_vm.SupplyData.refs)
+                              },
+                            },
+                          },
+                          [_vm._v("\n        Cancelar\n      ")]
                         ),
                       ],
                       1
