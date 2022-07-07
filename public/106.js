@@ -336,13 +336,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -509,6 +502,36 @@ __webpack_require__.r(__webpack_exports__);
       horaPrevistaSaida: '0:00',
       horaPrevistaEntrada: '0:00'
     }))));
+    var attributeChecklist = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
+      checklist_name: null,
+      categoria: '',
+      email_forward: ''
+    }))));
+
+    function addMore() {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addAtributo', attributeChecklist.value).then(function (res) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+          props: {
+            title: res.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        window.location.reload();
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
 
     function OnSubmit() {
       var _this5 = this;
@@ -560,7 +583,9 @@ __webpack_require__.r(__webpack_exports__);
 
     return {
       OnSubmit: OnSubmit,
-      form: form
+      form: form,
+      attributeChecklist: attributeChecklist,
+      addMore: addMore
     };
   }
 });
@@ -1866,18 +1891,41 @@ var render = function () {
         [
           _c(
             "b-form",
+            {
+              on: {
+                submit: function ($event) {
+                  $event.preventDefault()
+                  return _vm.addMore()
+                },
+              },
+            },
             [
               _c(
                 "b-row",
                 [
                   _c(
                     "b-col",
-                    { attrs: { cols: "3" } },
+                    { attrs: { cols: "6" } },
                     [
                       _c(
                         "b-form-group",
                         { attrs: { label: "Nome do atributo" } },
-                        [_c("b-form-input", { attrs: { type: "text" } })],
+                        [
+                          _c("b-form-input", {
+                            attrs: { type: "text" },
+                            model: {
+                              value: _vm.attributeChecklist.checklist_name,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "checklist_name",
+                                  $$v
+                                )
+                              },
+                              expression: "attributeChecklist.checklist_name",
+                            },
+                          }),
+                        ],
                         1
                       ),
                     ],
@@ -1886,7 +1934,7 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "b-col",
-                    { attrs: { cols: "4" } },
+                    { attrs: { cols: "6" } },
                     [
                       _c(
                         "b-form-group",
@@ -1901,6 +1949,17 @@ var render = function () {
                                 "Manutencao",
                               ],
                             },
+                            model: {
+                              value: _vm.attributeChecklist.categoria,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "categoria",
+                                  $$v
+                                )
+                              },
+                              expression: "attributeChecklist.categoria",
+                            },
                           }),
                         ],
                         1
@@ -1911,31 +1970,28 @@ var render = function () {
                   _vm._v(" "),
                   _c(
                     "b-col",
-                    { attrs: { cols: "5" } },
+                    { attrs: { cols: "6" } },
                     [
                       _c(
                         "b-form-group",
                         { attrs: { label: "Ëmail a encaminhar ocorrencia" } },
-                        [_c("b-form-input", { attrs: { type: "email" } })],
+                        [
+                          _c("b-form-input", {
+                            attrs: { type: "email" },
+                            model: {
+                              value: _vm.attributeChecklist.email_forward,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "email_forward",
+                                  $$v
+                                )
+                              },
+                              expression: "attributeChecklist.email_forward",
+                            },
+                          }),
+                        ],
                         1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-row",
-                [
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-button",
-                        { attrs: { variant: "outline-primary" } },
-                        [_c("i", { staticClass: "fas fa-plus-circle" })]
                       ),
                     ],
                     1

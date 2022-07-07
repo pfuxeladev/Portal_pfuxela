@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\checklist_vars;
 use App\Models\CheckListOut;
 use App\Models\checklistOutDestination;
+use App\Models\checkListRole;
 use App\Models\motorista;
 use App\Models\Viatura;
 use Illuminate\Http\Request;
@@ -35,6 +37,34 @@ class CheckListOutController extends Controller
 
    function ListMotoristas(){
        return motorista::join('people', 'motoristas.person_id', '=', 'people.id')->select('people.nome_completo as nome', 'motoristas.id')->orderBy('id','desc')->get();
+   }
+
+   function storeChecklistVars(Request $request){
+        $checklistVars = new checklist_vars();
+        $email_roles = new checkListRole();
+
+        $this->validate($request, [
+            'checklist_name'=>'required|unique:checklist_vars,checklist_name,except,id',
+            'categoria'=>'required',
+            'email_forward'=>'required'
+        ]);
+
+        try {
+
+        $checklistVars->checklist_name = $request->checklist_name;
+        $checklistVars->categoria = $request->categoria;
+        $checklistVars->createdBy = auth()->user()->id;
+        $checklistVars->save();
+
+        $email_roles->checklist_vars_id = $checklistVars->id;
+        $email_roles->email_forward = $request->email_forward;
+        $email_roles->save();
+
+        return response()->json(['success'=>'adicionado'], 200);
+        } catch (\Exception $e) {
+            return response()->json(['erro'=>'Erro! contacte o administrador '.$e->getMessage()], 421);
+        }
+
    }
     public function store(Request $request)
     {

@@ -379,6 +379,15 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
+    },
+    addAtributo: function addAtributo(ctx, chklstVar) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/storeChecklistVars', chklstVar).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });

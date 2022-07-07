@@ -17,6 +17,8 @@ import App from './App.vue'
 // Global Components
 import './global-components'
 
+import VueCookies from 'vue-cookies'
+
 // 3rd party plugins
 import '@axios'
 import '@/libs/acl'
@@ -59,6 +61,8 @@ Vue.use(VueCompositionAPI)
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
 Vue.directive('can', (el, binding) => window.Laravel.jsPermissions.indexOf(binding) !== -1)
+
+Vue.use(VueCookies, { expire: '1h' })
 // Vue.prototype.can = function (value) {
 //   return window.Laravel.jsPermissions.permissions.includes(value)
 // }

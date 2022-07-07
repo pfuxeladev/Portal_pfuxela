@@ -18,6 +18,7 @@ class CreateCheckListRolesTable extends Migration
         Schema::create('check_list_roles', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(checklist_vars::class)->nullable()->constrained();
+            $table->string('email_forward');
             $table->timestamps();
         });
     }

@@ -58,6 +58,14 @@ export default {
           .catch(error => reject(error))
       })
     },
+    addAtributo(ctx, chklstVar) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post('/api/storeChecklistVars', chklstVar)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
 
   },
 }

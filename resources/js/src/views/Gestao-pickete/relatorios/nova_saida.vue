@@ -280,29 +280,22 @@
         </b-card-body>
     </b-card>
     <b-modal ref="Atributos" size="lg" hide-footer title="Novo atributo">
-        <b-form>
+        <b-form @submit.prevent="addMore()">
             <b-row>
-                <b-col cols="3">
+                <b-col cols="6">
                     <b-form-group label="Nome do atributo">
-                        <b-form-input type="text"></b-form-input>
+                        <b-form-input type="text" v-model="attributeChecklist.checklist_name"></b-form-input>
                     </b-form-group>
                 </b-col>
-                <b-col cols="4">
+                <b-col cols="6">
                     <b-form-group label="Categoria ocorrencia">
-                        <v-select :options="['Informativa', 'Correctiva', 'Preventiva', 'Manutencao']"></v-select>
+                        <v-select v-model="attributeChecklist.categoria" :options="['Informativa', 'Correctiva', 'Preventiva', 'Manutencao']"></v-select>
                     </b-form-group>
                 </b-col>
-                <b-col cols="5">
+                <b-col cols="6">
                     <b-form-group label="Ëmail a encaminhar ocorrencia">
-                        <b-form-input type="email"></b-form-input>
+                        <b-form-input type="email" v-model="attributeChecklist.email_forward"></b-form-input>
                     </b-form-group>
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col>
-                    <b-button variant="outline-primary">
-                        <i class="fas fa-plus-circle"></i>
-                    </b-button>
                 </b-col>
             </b-row>
              <b-row>
@@ -524,6 +517,43 @@ export default {
       ),
     )
 
+    const attributeChecklist = ref(
+      JSON.parse(
+        JSON.stringify(
+          new Form({
+            checklist_name: null,
+            categoria: '',
+            email_forward: '',
+          }),
+        ),
+      ),
+    )
+
+    function addMore() {
+      store.dispatch('Picket/addAtributo', attributeChecklist.value).then(res => {
+        toast({
+          component: ToastificationContent,
+          props: {
+            title: res.data.success,
+            icon: 'CheckSquareIcon',
+            variant: 'success',
+          },
+        })
+        window.location.reload()
+      })
+        .catch(err => {
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            })
+          }
+        })
+    }
     function OnSubmit() {
       store.dispatch('Picket/addCheckListOut', form.value).then(response => {
         toast({
@@ -570,7 +600,9 @@ export default {
     }
     return {
       OnSubmit,
-      form
+      form,
+      attributeChecklist,
+      addMore,
     }
   },
 }

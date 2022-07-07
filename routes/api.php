@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\Back\AbastecimentoBombasController;
 use App\Http\Controllers\API\BACK\BombaController;
+use App\Http\Controllers\API\Back\CheckListOutController;
 use App\Http\Controllers\API\Back\OrdemController;
 use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
@@ -97,6 +98,8 @@ Route::group(['middleware'=>'auth:api'], function () {
 
     Route::get('activateViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'activarViatura']);
     Route::get('DesativarViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'DesativarViatura']);
+
+    Route::post('/storeChecklistVars', [CheckListOutController::class, 'storeChecklistVars']);
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

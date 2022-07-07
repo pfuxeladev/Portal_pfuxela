@@ -96,7 +96,7 @@ class AbastecimentoController extends Controller
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
         if($request->bombas_id != ''){
-$ordem->bombas_id = $request->bombas_id;
+        $ordem->bombas_id = $request->bombas_id;
         $ordem->update();
         }
 
