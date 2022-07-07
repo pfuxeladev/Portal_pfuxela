@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
 use App\Models\CheckListOut;
+use App\Models\checklistOutDestination;
 use App\Models\motorista;
 use App\Models\Viatura;
 use Illuminate\Http\Request;
@@ -116,7 +117,8 @@ class CheckListOutController extends Controller
         if($checkListOut){
 
             if ($checkListOut->tipo_saida === 'OUTROS') {
-                $checkListOut->checklistOutDestination()->create([
+                checklistOutDestination::create([
+                    'checklist_out_id'=>$checkListOut->id,
                     'descricao_trajecto'=>$request->trajecto,
                     'horaPrevistaSaida'=>$request->horaPrevistaSaida,
                     'horaPrevistaEntrada'=>$request->horaPrevistaEntrada,
