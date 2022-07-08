@@ -23,7 +23,7 @@ class checkListIn extends Model
     }
 
     function CheckListOut(){
-        return $this->belongsTo(CheckListOut::class);
+        return $this->belongsTo(CheckListOut::class, 'check_list_out_id', 'id');
     }
 
     function user(){
