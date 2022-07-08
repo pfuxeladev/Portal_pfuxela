@@ -116,7 +116,7 @@ class CheckListInController extends Controller
                 }
 
 
-                $viatura1->kilometragem = $total_percorrido;
+                $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
                 $viatura1->update();
 

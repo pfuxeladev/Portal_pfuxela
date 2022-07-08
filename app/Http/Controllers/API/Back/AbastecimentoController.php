@@ -45,7 +45,8 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())->where('viaturas.estado', true)
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())
+        ->where('viaturas.locate', '=', 'OUT')->where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -95,13 +96,9 @@ class AbastecimentoController extends Controller
         $uuid = Str::uuid()->toString();
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
-        if($request->bombas_id != ''){
+        if($request->bombas_id == null)
         $ordem->bombas_id = $request->bombas_id;
         $ordem->update();
-        }
-
-
-
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
         if(!empty(ordem_viatura::whereDate('checklist_out.created_at', Carbon::today())->where('id', $request->viatura_id)->first())){
