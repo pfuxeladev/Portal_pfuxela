@@ -72,7 +72,7 @@ class CheckListOutController extends Controller
     $checkList = checklist_vars::all();
     return response()->json($checkList, 200);
    }
-   
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -173,7 +173,7 @@ class CheckListOutController extends Controller
             $viatura->locate = 'OUT';
             $viatura->update();
 
-            return response()->json(['message'=>'viatura  inspencionada com sucesso']);
+            return response()->json(['message'=>'viatura inspencionada com sucesso']);
         }
     }
 

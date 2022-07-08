@@ -101,8 +101,6 @@ class CheckListInController extends Controller
                      $viatura->update();
                 }
 
-
-
                 $delta_percorrido = ($request->km_fim - $viatura1->kilometragem);
 
                 $total_percorrido = ($request->km_fim + $viatura1->kilometragem);
@@ -111,16 +109,18 @@ class CheckListInController extends Controller
 
                 if($consumo > $viatura1->qtd_disponivel){
                     $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
+                    $viatura1->qtd_disponivel = $qtd_disponivel;
                 }else{
                     $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+                    $viatura1->qtd_disponivel = $qtd_disponivel;
                 }
 
-                $viatura1->qtd_disponivel = $qtd_disponivel;
+
                 $viatura1->kilometragem = $total_percorrido;
                 $viatura1->locate = 'IN';
                 $viatura1->update();
 
-               return response()->json(['message'=>'Viatura inspencionada com sucesso'], 200);
+               return response()->json(['message'=>'Viatura deu entrada com sucesso'], 200);
             }
         } catch (\Exception $e) {
             return response()->json(['erro'=>'Ocorreu um erro de insercao', $e->getMessage()], 421);

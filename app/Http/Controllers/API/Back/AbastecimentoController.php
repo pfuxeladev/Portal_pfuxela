@@ -104,6 +104,9 @@ class AbastecimentoController extends Controller
 
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
+        if(!empty(ordem_viatura::whereDate('checklist_out.created_at', Carbon::today())->where('id', $request->viatura_id)->first())){
+            return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
+        }
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
             return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
 
@@ -114,7 +117,6 @@ class AbastecimentoController extends Controller
 
         if ($combustivel) {
         if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
-            # code...
             $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
         }
         else {
