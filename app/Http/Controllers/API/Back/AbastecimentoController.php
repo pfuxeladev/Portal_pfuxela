@@ -45,7 +45,7 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())->where('viaturas.estado', true)
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -104,7 +104,7 @@ class AbastecimentoController extends Controller
 
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        if(!empty(ordem_viatura::whereDate('checklist_out.created_at', Carbon::today())->where('id', $request->viatura_id)->first())){
+        if(!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first())){
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
         }
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
