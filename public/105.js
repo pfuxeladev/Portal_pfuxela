@@ -332,7 +332,7 @@ __webpack_require__.r(__webpack_exports__);
 
       console.log(this.form.abastecer); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
 
-      this.$http.get("/api/RotaByProject/".concat(this.form.projecto_id)).then(function (res) {
+      this.$http.get('/api/todasRotas').then(function (res) {
         _this4.rota = res.data;
 
         if (res.data === '') {

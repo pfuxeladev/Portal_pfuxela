@@ -327,7 +327,7 @@ export default {
     fetchRotas() {
       console.log(this.form.abastecer)
       //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
-      this.$http.get(`/api/RotaByProject/${this.form.projecto_id}`).then(res => {
+      this.$http.get('/api/todasRotas').then(res => {
         this.rota = res.data
         if (res.data === '') {
           this.$swal.fire({
