@@ -323,6 +323,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -1051,6 +1054,18 @@ var render = function () {
                             _vm._v(
                               "\n                      " +
                                 _vm._s(data.item.horaSaida) +
+                                "\n                  "
+                            ),
+                          ]
+                        },
+                      },
+                      {
+                        key: "cell(user)",
+                        fn: function (data) {
+                          return [
+                            _vm._v(
+                              "\n                      " +
+                                _vm._s(data.item.abastecimento.user.name) +
                                 "\n                  "
                             ),
                           ]

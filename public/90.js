@@ -1104,8 +1104,10 @@ function useAbastecimentoList() {
   }, {
     key: 'hora_de_saida',
     sortable: true
-  }, // { key: 'rota', sortable: true },
-  {
+  }, {
+    key: 'user',
+    sortable: true
+  }, {
     key: 'acções'
   }];
   var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);

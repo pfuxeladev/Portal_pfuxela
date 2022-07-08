@@ -56,6 +56,9 @@
                     <template #cell(hora_de_saida)="data">
                         {{data.item.horaSaida}}
                     </template>
+                     <template #cell(user)="data">
+                        {{data.item.abastecimento.user.name}}
+                    </template>
                     <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
 

@@ -185,7 +185,7 @@ class CheckListOutController extends Controller
      */
     public function show($id)
     {
-        return $this->checkListOut->with(['viatura', 'motorista'])->findOrFail($id);
+        return $this->checkListOut->with(['viatura', 'motorista'])->where('viatura_id', $id)->first();
     }
 
     /**

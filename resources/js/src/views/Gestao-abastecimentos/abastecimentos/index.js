@@ -30,7 +30,7 @@ export default function useAbastecimentoList() {
     { key: 'viatura', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'hora_de_saida', sortable: true },
-    // { key: 'rota', sortable: true },
+    { key: 'user', sortable: true },
     { key: 'acções' },
   ]
   const perPage = ref(10)
