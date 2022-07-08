@@ -10,6 +10,7 @@ use App\Models\checkListRole;
 use App\Models\motorista;
 use App\Models\Viatura;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class CheckListOutController extends Controller
 {
@@ -25,7 +26,7 @@ class CheckListOutController extends Controller
     }
 
    function listViaturaDentro(){
-       return Viatura::where('locate', 'IN')->where('estado', true)->get();
+       return Viatura::where('viaturas.locate', 'IN')->where('viaturas.estado', true)->get();
    }
    function kmActual(Request $request){
         if ($request->viatura_id) {
