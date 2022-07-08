@@ -66,6 +66,14 @@ export default {
           .catch(error => reject(error))
       })
     },
+    getAtributos(ctx, chklstVar) {
+      return new Promise((resolve, reject) => {
+        axios
+          .get('/api/CheckListAttr', chklstVar)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
 
   },
 }

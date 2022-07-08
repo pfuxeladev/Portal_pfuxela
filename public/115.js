@@ -7,7 +7,7 @@
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-pickete\\relatorios\\nova_saida.vue: Unexpected token (533:63)\n\n\u001b[0m \u001b[90m 531 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 532 |\u001b[39m     \u001b[36mfunction\u001b[39m addMore(){\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 533 |\u001b[39m        store\u001b[33m.\u001b[39mdispatch(\u001b[32m'Picket/addAtributo'\u001b[39m\u001b[33m,\u001b[39m attributeChecklist\u001b[33m.\u001b[39m)\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 534 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 535 |\u001b[39m     \u001b[36mfunction\u001b[39m \u001b[33mOnSubmit\u001b[39m() {\u001b[0m\n\u001b[0m \u001b[90m 536 |\u001b[39m       store\u001b[33m.\u001b[39mdispatch(\u001b[32m'Picket/addCheckListOut'\u001b[39m\u001b[33m,\u001b[39m form\u001b[33m.\u001b[39mvalue)\u001b[33m.\u001b[39mthen(response \u001b[33m=>\u001b[39m {\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.unexpected (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Object.parseIdentifierName (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13970:18)\n    at Object.parseIdentifier (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13950:23)\n    at Object.parseMember (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12618:28)\n    at Object.parseSubscript (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12592:21)\n    at Object.parseSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12556:19)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12545:17)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12171:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14237:12)\n    at Object.parseMaybeAssignAllowIn (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12171:17)\n    at Object.parseExprListItem (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13942:18)\n    at Object.parseCallExpressionArguments (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12765:22)\n    at Object.parseCoverCallAndAsyncArrowHead (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12662:29)\n    at Object.parseSubscript (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12587:19)\n    at Object.parseSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12556:19)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12545:17)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Object.parseExpressionBase (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14671:23)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-pickete\\relatorios\\nova_saida.vue: Unexpected token, expected \",\" (618:6)\n\n\u001b[0m \u001b[90m 616 |\u001b[39m       chklst\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 617 |\u001b[39m       checkList\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 618 |\u001b[39m       addMore\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 619 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 620 |\u001b[39m   }\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 621 |\u001b[39m }\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.unexpected (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Object.expect (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:4001:28)\n    at Object.parseObjectLike (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13481:14)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12889:23)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Object.parseExpressionBase (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Object.parseReturnStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14939:28)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14582:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Object.parseBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Object.parseBlock (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Object.parseFunctionBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13836:24)\n    at Object.parseFunctionBodyAndFinish (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13820:10)\n    at Object.parseMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13770:10)\n    at Object.parseObjectMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13646:19)\n    at Object.parseObjPropValue (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13687:23)\n    at Object.parsePropertyDefinition (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13604:10)\n    at Object.parseObjectLike (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13494:21)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12889:23)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)");
 
 /***/ }),
 
@@ -323,7 +323,7 @@ var render = function () {
                           _c("table", { staticClass: "table table-bordered" }, [
                             _c("tbody", [
                               _c("tr", [
-                                _c("td", [_vm._v("Limpeza")]),
+                                _c("td", [_vm._v(_vm._s(_vm.chklst))]),
                                 _vm._v(" "),
                                 _c(
                                   "td",
@@ -1296,100 +1296,110 @@ var render = function () {
               on: {
                 submit: function ($event) {
                   $event.preventDefault()
+                  return _vm.addMore()
                 },
               },
             },
             [
-              _vm._l(_vm.attributeChecklist, function (checkl, i) {
-                return _c(
-                  "b-row",
-                  { key: i },
-                  [
-                    _c(
-                      "b-col",
-                      { attrs: { cols: "3" } },
-                      [
-                        _c(
-                          "b-form-group",
-                          { attrs: { label: "Nome do atributo" } },
-                          [
-                            _c("b-form-input", {
-                              attrs: { type: "text" },
-                              model: {
-                                value: checkl.checklist_name,
-                                callback: function ($$v) {
-                                  _vm.$set(checkl, "checklist_name", $$v)
-                                },
-                                expression: "checkl.checklist_name",
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "6" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Nome do atributo" } },
+                        [
+                          _c("b-form-input", {
+                            attrs: { type: "text" },
+                            model: {
+                              value: _vm.attributeChecklist.checklist_name,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "checklist_name",
+                                  $$v
+                                )
                               },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      { attrs: { cols: "4" } },
-                      [
-                        _c(
-                          "b-form-group",
-                          { attrs: { label: "Categoria ocorrencia" } },
-                          [
-                            _c("v-select", {
-                              attrs: {
-                                options: [
-                                  "Informativa",
-                                  "Correctiva",
-                                  "Preventiva",
-                                  "Manutencao",
-                                ],
+                              expression: "attributeChecklist.checklist_name",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "6" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Categoria ocorrencia" } },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              options: [
+                                "Informativa",
+                                "Correctiva",
+                                "Preventiva",
+                                "Manutencao",
+                              ],
+                            },
+                            model: {
+                              value: _vm.attributeChecklist.categoria,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "categoria",
+                                  $$v
+                                )
                               },
-                              model: {
-                                value: checkl.categoria,
-                                callback: function ($$v) {
-                                  _vm.$set(checkl, "categoria", $$v)
-                                },
-                                expression: "checkl.categoria",
+                              expression: "attributeChecklist.categoria",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { attrs: { cols: "6" } },
+                    [
+                      _c(
+                        "b-form-group",
+                        { attrs: { label: "Ëmail a encaminhar ocorrencia" } },
+                        [
+                          _c("b-form-input", {
+                            attrs: { type: "email" },
+                            model: {
+                              value: _vm.attributeChecklist.email_forward,
+                              callback: function ($$v) {
+                                _vm.$set(
+                                  _vm.attributeChecklist,
+                                  "email_forward",
+                                  $$v
+                                )
                               },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      { attrs: { cols: "5" } },
-                      [
-                        _c(
-                          "b-form-group",
-                          { attrs: { label: "Ëmail a encaminhar ocorrencia" } },
-                          [
-                            _c("b-form-input", {
-                              attrs: { type: "email" },
-                              model: {
-                                value: checkl.email_forward,
-                                callback: function ($$v) {
-                                  _vm.$set(checkl, "email_forward", $$v)
-                                },
-                                expression: "checkl.email_forward",
-                              },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                  ],
-                  1
-                )
-              }),
+                              expression: "attributeChecklist.email_forward",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
                 "b-row",
@@ -1417,7 +1427,7 @@ var render = function () {
                 1
               ),
             ],
-            2
+            1
           ),
         ],
         1

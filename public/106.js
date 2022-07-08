@@ -507,6 +507,13 @@ __webpack_require__.r(__webpack_exports__);
       categoria: '',
       email_forward: ''
     }))));
+    var chklst = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(null);
+
+    function checkList() {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/getAtributos').then(function (res) {
+        chklst.value = res.data;
+      });
+    }
 
     function addMore() {
       _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addAtributo', attributeChecklist.value).then(function (res) {
@@ -518,7 +525,9 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
-        window.location.reload();
+        attributeChecklist.checklist_name = '';
+        attributeChecklist.categoria = '';
+        attributeChecklist.checklist_name = ''; // window.location.reload()
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -585,6 +594,8 @@ __webpack_require__.r(__webpack_exports__);
       OnSubmit: OnSubmit,
       form: form,
       attributeChecklist: attributeChecklist,
+      chklst: chklst,
+      checkList: checkList,
       addMore: addMore
     };
   }
@@ -922,7 +933,7 @@ var render = function () {
                           _c("table", { staticClass: "table table-bordered" }, [
                             _c("tbody", [
                               _c("tr", [
-                                _c("td", [_vm._v("Limpeza")]),
+                                _c("td", [_vm._v(_vm._s(_vm.chklst))]),
                                 _vm._v(" "),
                                 _c(
                                   "td",

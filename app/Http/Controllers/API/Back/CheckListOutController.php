@@ -66,6 +66,12 @@ class CheckListOutController extends Controller
         }
 
    }
+
+   function getAttributesCheckList(){
+    $checkList = checklist_vars::all();
+    return response()->json($checkList, 200);
+   }
+   
     public function store(Request $request)
     {
         $this->validate($request, [

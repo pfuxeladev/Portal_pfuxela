@@ -289,6 +289,52 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1078,6 +1124,101 @@ var render = function () {
               },
             ]),
           }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mx-2 mb-2" },
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-start\n          ",
+                      attrs: { cols: "12", sm: "6" },
+                    },
+                    [
+                      _c("span", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Showing " +
+                            _vm._s(_vm.dataMeta.from) +
+                            " to " +
+                            _vm._s(_vm.dataMeta.to) +
+                            " of\n            " +
+                            _vm._s(_vm.dataMeta.of) +
+                            " entries"
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-end\n          ",
+                      attrs: { cols: "12", sm: "6" },
+                    },
+                    [
+                      _c("b-pagination", {
+                        staticClass: "mb-0 mt-1 mt-sm-0",
+                        attrs: {
+                          "total-rows": _vm.totalSaidas,
+                          "per-page": _vm.perPage,
+                          "first-number": "",
+                          "last-number": "",
+                          "prev-class": "prev-item",
+                          "next-class": "next-item",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "prev-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronLeftIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                          {
+                            key: "next-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronRightIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                        ]),
+                        model: {
+                          value: _vm.currentPage,
+                          callback: function ($$v) {
+                            _vm.currentPage = $$v
+                          },
+                          expression: "currentPage",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
         ],
         1
       ),

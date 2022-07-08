@@ -66,7 +66,7 @@
                         <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td>Limpeza</td>
+                                    <td>{{chklst}}</td>
                                     <td>
                                         <b-form-radio-group v-model="form.limpezaState" :options="options" :state="state" />
                                     </td>
@@ -529,6 +529,14 @@ export default {
       ),
     )
 
+    const chklst = ref(null)
+    function checkList() {
+      store.dispatch('Picket/getAtributos').then(res => {
+        chklst.value = res.data
+      })
+    }
+
+
     function addMore() {
       store.dispatch('Picket/addAtributo', attributeChecklist.value).then(res => {
         toast({
@@ -539,7 +547,10 @@ export default {
             variant: 'success',
           },
         })
-        window.location.reload()
+        attributeChecklist.checklist_name = ''
+        attributeChecklist.categoria = ''
+        attributeChecklist.checklist_name = ''
+        // window.location.reload()
       })
         .catch(err => {
           if (err.response.status === 421) {
@@ -602,6 +613,8 @@ export default {
       OnSubmit,
       form,
       attributeChecklist,
+      chklst,
+      checkList,
       addMore,
     }
   },

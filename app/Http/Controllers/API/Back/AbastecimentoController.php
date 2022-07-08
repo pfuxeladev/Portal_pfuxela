@@ -24,7 +24,7 @@ use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
-
+use Illuminate\Support\Carbon;
 class AbastecimentoController extends Controller
 {
     private $ordem;
