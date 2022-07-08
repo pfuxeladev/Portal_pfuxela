@@ -439,7 +439,7 @@ class AbastecimentoController extends Controller
                         ->orWhere('bombas.nome_bombas', 'like', '%' . request('q') . '%');
                 })->with(['abastecimento.ordem', 'viatura', 'motorista.person', 'ordem'])->orderBy('abastecimento_extras.id', 'ASC')->paginate(request('perPage'));
         } else {
-            return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
+            return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person', 'abastecimento.user'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'ASC')->paginate(10);
         }
     }
 
