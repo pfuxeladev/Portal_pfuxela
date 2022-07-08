@@ -26,7 +26,7 @@ class CheckListInController extends Controller
     }
 
   function listViaturaFora(){
-      return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', 'OUT')->where('viaturas.id', '!=', 'checklist_out.viatura_id')->get();
+      return Viatura::join('checklist_out', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', 'OUT')->get();
   }
   function listaIncedentes(){
       return incidente::all();
