@@ -65,199 +65,10 @@
                     <b-col cols="12" md="6" lg="8" xl="10">
                         <table class="table table-bordered">
                             <tbody>
-                                <tr>
-                                    <td>{{chklst}}</td>
+                                <tr v-for="(chk, i ) in chklst" :key="i">
+                                    <td>{{chk.checklist_name}}</td>
                                     <td>
-                                        <b-form-radio-group v-model="form.limpezaState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nível do Vaso Expansor</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.vasoEspansorState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nível Liquido Vidro</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.LiquidoVidroState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nível Oleo de Motor</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.OleoMotorState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nível Oleo de Direcção</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.OleoDirecaoState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Nível Oleo de Travões</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.OleoTravoesState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Ar Condicionado</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.ACState" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Sistema ABS</td>
-                                    <td>
-                                        <b-form-radio-group v-model="form.SistemaABS_State" :options="options" :state="state" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Cinto de Segurança</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.CintoSeguracaState" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Tinha Carta de condu&ccedil;&atilde;o</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.carta_conducao" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>O Motorista Paticipou no DSS?</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.motorista_dss" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Kit de primeiros socorros</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.kit_1_socorro_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Extintor na saida</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.extintor_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Livrete da viatura</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.livrete_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Documento de seguros em dia</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.seguros_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Taxa de radio de fus&atilde;o</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.taxaradio_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Tinha uniforme</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.uniforme" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Lista de presen&ccedil;a</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.lista_presenca" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Colete na saida</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.colete_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Pneu sobressalente</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.pneu_sobr_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Macaco na saida</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.macaco_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Licen&ccedil;a na saida</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.licenca_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Documento de inspen&ccedil;&atilde;o</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.inspencao_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Tri&acirc;ngulo</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.triangulo_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Chave de rodas</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.chave_roda_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Kit de reboque</td>
-                                    <td>
-                                        <b-form-checkbox v-model="form.kit_reboque_saida" switch size="lg" />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Tipo de saida</td>
-                                    <td>
-                                        Rota:
-                                        <b-form-checkbox v-model="form.isRota" switch size="lg" @input="changeOption" />
-                                        <br>
-                                        Outros:
-                                        <b-form-checkbox v-model="form.isOuthers" switch size="lg" @input="changeOption1" />
-                                    </td>
-                                </tr>
-                                <tr v-show="form.isRota === true" id="rotas">
-                                    <td colspan="2">
-                                        <b-form-group label="Rotas a tomar">
-                                            <v-select v-model="form.rota_id" multiple label="nome_rota" :options="rota" :reduce="rota => rota.id" />
-                                        </b-form-group>
-                                    </td>
-                                </tr>
-                                <tr v-show="form.isOuthers === true" id="others">
-                                    <td colspan="2">
-                                        <b-row>
-                                            <b-col>
-                                                <b-form-group label="Descreva o proposito do seu trajecto">
-                                                    <b-form-textarea v-model="form.trajecto" id="textarea-small" size="sm" placeholder="descreva o trajeto a tomar" />
-                                                </b-form-group>
-
-                                            </b-col>
-                                            <b-col>
-                                                <b-form-group label="hora prevista de partida">
-                                                    <b-form-timepicker v-model="form.horaPrevistaSaida" locale="pt-Br" />
-                                                </b-form-group>
-                                            </b-col>
-                                            <b-col>
-                                                <b-form-group label="hora prevista de chagada">
-                                                    <b-form-timepicker v-model="form.horaPrevistaEntrada" locale="pt-Br" />
-                                                </b-form-group>
-                                            </b-col>
-                                        </b-row>
+                                        <b-form-radio-group v-model="chk.id" :options="options" :state="state" />
                                     </td>
                                 </tr>
                             </tbody>
@@ -530,12 +341,6 @@ export default {
     )
 
     const chklst = ref(null)
-    function checkList() {
-      store.dispatch('Picket/getAtributos').then(res => {
-        chklst.value = res.data
-      })
-    }
-
 
     function addMore() {
       store.dispatch('Picket/addAtributo', attributeChecklist.value).then(res => {
@@ -614,9 +419,14 @@ export default {
       form,
       attributeChecklist,
       chklst,
-      checkList,
       addMore,
     }
   },
+  created() {
+    store.dispatch('Picket/getAtributos').then(res => {
+      this.chklst = res.data
+    })
+  },
+
 }
 </script>

@@ -25,6 +25,7 @@ use Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Carbon;
+
 class AbastecimentoController extends Controller
 {
     private $ordem;
@@ -38,7 +39,6 @@ class AbastecimentoController extends Controller
     public function index()
     {
         $abastecimento = $this->abastecimento->with(['user', 'ordem.bombas', 'ordem.approvedBy', 'ordem.createdBy'])->orderBy('id', 'desc')->paginate(15);
-
         return $abastecimento;
     }
 
@@ -46,7 +46,7 @@ class AbastecimentoController extends Controller
     {
 
         return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())
-        ->where('viaturas.locate', '=', 'OUT')->where('viaturas.estado', true)
+            ->where('viaturas.locate', '=', 'OUT')->where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -96,14 +96,15 @@ class AbastecimentoController extends Controller
         $uuid = Str::uuid()->toString();
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
-        if($request->bombas_id == null)
-        $ordem->bombas_id = $request->bombas_id;
-        $ordem->update();
+        if ($request->bombas_id != null)
+            $ordem->bombas_id = $request->bombas_id;
+            $ordem->update();
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        if(!empty(ordem_viatura::whereDate('checklist_out.created_at', Carbon::today())->where('id', $request->viatura_id)->first())){
+        if (!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first())) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
         }
+
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
             return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
 
@@ -112,17 +113,22 @@ class AbastecimentoController extends Controller
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
             ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
 
-        if ($combustivel) {
-        if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
-            $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
-        }
-        else {
-                return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
-            }
+        if (!empty($combustivel)) {
+
+                if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
+                    $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
+                } else {
+                    return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
+                }
         } else {
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
-
+        foreach ($request->rota_id as $key => $rt) {
+            $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->first();
+            if (!empty($ordem_rota)) {
+                return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
+            }
+        }
 
 
         $ordemViatura = ordem_viatura::create([
@@ -138,6 +144,7 @@ class AbastecimentoController extends Controller
         $distanciaTotal = 0;
 
         foreach ($request->rota_id as $key => $rt) {
+            $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->get();
             $rotas = Rota::where('id', $rt)->get();
 
             foreach ($rotas as $key => $dist) {

@@ -128,6 +128,76 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -165,10 +235,10 @@ __webpack_require__.r(__webpack_exports__);
     var _useOcorrenciaList = Object(_relatorioOcorrencia__WEBPACK_IMPORTED_MODULE_4__["default"])(),
         fetchEntradas = _useOcorrenciaList.fetchEntradas,
         tableColumns1 = _useOcorrenciaList.tableColumns1,
-        perPage = _useOcorrenciaList.perPage,
-        currentPage = _useOcorrenciaList.currentPage,
+        perPage1 = _useOcorrenciaList.perPage1,
+        currentPage1 = _useOcorrenciaList.currentPage1,
         totalEntradas = _useOcorrenciaList.totalEntradas,
-        dataMeta1 = _useOcorrenciaList.dataMeta1,
+        dataMeta2 = _useOcorrenciaList.dataMeta2,
         perPageOptions = _useOcorrenciaList.perPageOptions,
         searchQuery = _useOcorrenciaList.searchQuery,
         sortBy = _useOcorrenciaList.sortBy,
@@ -180,10 +250,10 @@ __webpack_require__.r(__webpack_exports__);
     return {
       fetchEntradas: fetchEntradas,
       tableColumns1: tableColumns1,
-      perPage: perPage,
-      currentPage: currentPage,
+      perPage1: perPage1,
+      currentPage1: currentPage1,
       totalEntradas: totalEntradas,
-      dataMeta1: dataMeta1,
+      dataMeta2: dataMeta2,
       perPageOptions: perPageOptions,
       searchQuery: searchQuery,
       sortBy: sortBy,
@@ -856,9 +926,33 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(_vm.dateTime(data.item.created_at)) +
-                        "\r\n            "
+                        "\n            "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "cell(Hora_de_saida)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(data.item.check_list_out.hr_inicio) +
+                        "\n            "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "cell(Hora_da_chegada)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(data.item.hr_fim) +
+                        "\n            "
                     ),
                   ]
                 },
@@ -868,15 +962,201 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.check_list_out.viatura.matricula) +
-                        "\r\n            "
+                        "\n            "
                     ),
+                  ]
+                },
+              },
+              {
+                key: "cell(Kilometrage_actual)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(data.item.km_fim) +
+                        "\n            "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "cell(Criado_por)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(data.item.user.name) +
+                        "\n            "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "cell(acções)",
+                fn: function (data) {
+                  return [
+                    data.item.viatura.locate !== "IN"
+                      ? _c(
+                          "b-dropdown",
+                          {
+                            attrs: {
+                              variant: "link",
+                              "no-caret": "",
+                              right: _vm.$store.state.appConfig.isRTL,
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "button-content",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        staticClass: "align-middle text-body",
+                                        attrs: {
+                                          icon: "MoreVerticalIcon",
+                                          size: "16",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                              ],
+                              null,
+                              true
+                            ),
+                          },
+                          [
+                            _vm._v(" "),
+                            _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "CheckList-in-details",
+                                    params: { id: data.item.id },
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "FileTextIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Detalhes")]
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        )
+                      : _vm._e(),
                   ]
                 },
               },
             ]),
           }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mx-2 mb-2" },
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
+                      attrs: { cols: "12", sm: "6" },
+                    },
+                    [
+                      _c("span", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "motrando " +
+                            _vm._s(_vm.dataMeta2.from1) +
+                            " a " +
+                            _vm._s(_vm.dataMeta2.to1) +
+                            " de\n              " +
+                            _vm._s(_vm.dataMeta2.of1) +
+                            " entradas"
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
+                      attrs: { cols: "12", sm: "6" },
+                    },
+                    [
+                      _c("b-pagination", {
+                        staticClass: "mb-0 mt-1 mt-sm-0",
+                        attrs: {
+                          "total-rows": _vm.totalEntradas,
+                          "per-page": _vm.perPage1,
+                          "first-number": "",
+                          "last-number": "",
+                          "prev-class": "prev-item",
+                          "next-class": "next-item",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "prev-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronLeftIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                          {
+                            key: "next-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronRightIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                        ]),
+                        model: {
+                          value: _vm.currentPage1,
+                          callback: function ($$v) {
+                            _vm.currentPage1 = $$v
+                          },
+                          expression: "currentPage1",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
         ],
         1
       ),
@@ -1037,62 +1317,64 @@ var render = function () {
                 key: "cell(acções)",
                 fn: function (data) {
                   return [
-                    _c(
-                      "b-dropdown",
-                      {
-                        attrs: {
-                          variant: "link",
-                          "no-caret": "",
-                          right: _vm.$store.state.appConfig.isRTL,
-                        },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "button-content",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    staticClass: "align-middle text-body",
-                                    attrs: {
-                                      icon: "MoreVerticalIcon",
-                                      size: "16",
-                                    },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ],
-                          null,
-                          true
-                        ),
-                      },
-                      [
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
+                    data.item.viatura.locate !== "IN"
+                      ? _c(
+                          "b-dropdown",
                           {
                             attrs: {
-                              to: {
-                                name: "CheckList-out-details",
-                                params: { id: data.item.id },
-                              },
+                              variant: "link",
+                              "no-caret": "",
+                              right: _vm.$store.state.appConfig.isRTL,
                             },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "button-content",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        staticClass: "align-middle text-body",
+                                        attrs: {
+                                          icon: "MoreVerticalIcon",
+                                          size: "16",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                              ],
+                              null,
+                              true
+                            ),
                           },
                           [
-                            _c("feather-icon", {
-                              attrs: { icon: "FileTextIcon" },
-                            }),
                             _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Detalhes"),
-                            ]),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        data.item.viatura.locate !== "IN"
-                          ? _c(
+                            _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "CheckList-out-details",
+                                    params: { id: data.item.id },
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "FileTextIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Detalhes")]
+                                ),
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
                               "b-dropdown-item",
                               {
                                 attrs: {
@@ -1114,11 +1396,11 @@ var render = function () {
                                 ),
                               ],
                               1
-                            )
-                          : _vm._e(),
-                      ],
-                      1
-                    ),
+                            ),
+                          ],
+                          1
+                        )
+                      : _vm._e(),
                   ]
                 },
               },
@@ -1333,7 +1615,13 @@ function useOcorrenciaList() {
     key: 'Data_de_registo',
     sortable: true
   }, {
+    key: 'Hora_de_saida',
+    sortable: true
+  }, {
     key: 'Matricula',
+    sortable: true
+  }, {
+    key: 'Kilometrage_na_saida',
     sortable: true
   }, {
     key: 'Motorista',
@@ -1351,7 +1639,16 @@ function useOcorrenciaList() {
     key: 'Data_de_registo',
     sortable: true
   }, {
+    key: 'Hora_de_saida',
+    sortable: true
+  }, {
+    key: 'Hora_da_chegada',
+    sortable: true
+  }, {
     key: 'Matricula',
+    sortable: true
+  }, {
+    key: 'Kilometrage_actual',
     sortable: true
   }, {
     Key: 'Criado_por',
@@ -1360,9 +1657,12 @@ function useOcorrenciaList() {
     key: 'acções'
   }];
   var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var perPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
   var totalSaidas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var totalEntradas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var totalEntradas1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var currentPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
   var perPageOptions = [10, 25, 50, 100];
   var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
   var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
@@ -1379,9 +1679,9 @@ function useOcorrenciaList() {
   var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
     var localItemsCount = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
     return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalEntradas.value
+      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount ? 1 : 0),
+      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount,
+      of1: totalEntradas1.value
     };
   });
 
@@ -1456,6 +1756,8 @@ function useOcorrenciaList() {
     tableColumns1: tableColumns1,
     perPage: perPage,
     currentPage: currentPage,
+    perPage1: perPage1,
+    currentPage1: currentPage1,
     totalSaidas: totalSaidas,
     totalEntradas: totalEntradas,
     dataMeta: dataMeta,

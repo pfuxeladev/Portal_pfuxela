@@ -40,8 +40,11 @@ class CheckListInController extends Controller
             'km_fim'=>'required|numeric|min:0',
             'hr_fim'=>'required',
         ]);
-        try {
-            $checkList_out = CheckListOut::where('id', $request->check_list_out_id)->first();
+        // try {
+            $checkList_out = CheckListOut::where('viatura_id', $request->viatura_id)->first();
+
+            // return $checkList_out;
+
             $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
 
             if($viatura1->kilometragem > $request->km_fim)
@@ -49,7 +52,10 @@ class CheckListInController extends Controller
             // return $checkList_out;
             $checkListIn = new checkListIn();
             $checkListIn->check_list_out_id = $checkList_out->id;
-            $checkListIn->motorista()->associate($request->motorista_id);
+            if ($request->motorista_id != null) {
+                $checkListIn->motorista()->associate($request->motorista_id);
+            }
+
             $checkListIn->km_fim = $request->km_fim;
             $checkListIn->hr_fim = $request->hr_fim;
             $checkListIn->carta_conducao = $request->carta_conducao;
@@ -122,9 +128,9 @@ class CheckListInController extends Controller
 
                return response()->json(['message'=>'Viatura deu entrada com sucesso'], 200);
             }
-        } catch (\Exception $e) {
-            return response()->json(['erro'=>'Ocorreu um erro de insercao', $e->getMessage()], 421);
-        }
+        // } catch (\Exception $e) {
+        //     return response()->json(['erro'=>'Ocorreu um erro de insercao', $e->getMessage()], 421);
+        // }
 
     }
 

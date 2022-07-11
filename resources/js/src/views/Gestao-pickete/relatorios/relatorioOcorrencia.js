@@ -16,7 +16,9 @@ export default function useOcorrenciaList() {
   // Table Handlers
   const tableColumns = [
     { key: 'Data_de_registo', sortable: true },
+    { key: 'Hora_de_saida', sortable: true },
     { key: 'Matricula', sortable: true },
+    { key: 'Kilometrage_na_saida', sortable: true },
     { key: 'Motorista', sortable: true },
     { key: 'Tipo', sortable: true },
     { Key: 'Criado_por', sortable: true },
@@ -24,14 +26,20 @@ export default function useOcorrenciaList() {
   ]
   const tableColumns1 = [
     { key: 'Data_de_registo', sortable: true },
+    { key: 'Hora_de_saida', sortable: true },
+    { key: 'Hora_da_chegada', sortable: true },
     { key: 'Matricula', sortable: true },
+    { key: 'Kilometrage_actual', sortable: true },
     { Key: 'Criado_por', sortable: true },
     { key: 'acções' },
   ]
   const perPage = ref(10)
+  const perPage1 = ref(10)
   const totalSaidas = ref(0)
   const totalEntradas = ref(0)
+  const totalEntradas1 = ref(0)
   const currentPage = ref(1)
+  const currentPage1 = ref(1)
   const perPageOptions = [10, 25, 50, 100]
   const searchQuery = ref('')
   const sortBy = ref('id')
@@ -49,9 +57,9 @@ export default function useOcorrenciaList() {
   const dataMeta2 = computed(() => {
     const localItemsCount = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0
     return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalEntradas.value,
+      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount ? 1 : 0),
+      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount,
+      of1: totalEntradas1.value,
     }
   })
 
@@ -134,6 +142,8 @@ export default function useOcorrenciaList() {
     tableColumns1,
     perPage,
     currentPage,
+    perPage1,
+    currentPage1,
     totalSaidas,
     totalEntradas,
     dataMeta,

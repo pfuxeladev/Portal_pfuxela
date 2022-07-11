@@ -1086,7 +1086,13 @@ function useOcorrenciaList() {
     key: 'Data_de_registo',
     sortable: true
   }, {
+    key: 'Hora_de_saida',
+    sortable: true
+  }, {
     key: 'Matricula',
+    sortable: true
+  }, {
+    key: 'Kilometrage_na_saida',
     sortable: true
   }, {
     key: 'Motorista',
@@ -1104,7 +1110,16 @@ function useOcorrenciaList() {
     key: 'Data_de_registo',
     sortable: true
   }, {
+    key: 'Hora_de_saida',
+    sortable: true
+  }, {
+    key: 'Hora_da_chegada',
+    sortable: true
+  }, {
     key: 'Matricula',
+    sortable: true
+  }, {
+    key: 'Kilometrage_actual',
     sortable: true
   }, {
     Key: 'Criado_por',
@@ -1113,9 +1128,12 @@ function useOcorrenciaList() {
     key: 'acções'
   }];
   var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var perPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
   var totalSaidas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var totalEntradas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var totalEntradas1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var currentPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
   var perPageOptions = [10, 25, 50, 100];
   var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
   var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
@@ -1132,9 +1150,9 @@ function useOcorrenciaList() {
   var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
     var localItemsCount = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
     return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalEntradas.value
+      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount ? 1 : 0),
+      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount,
+      of1: totalEntradas1.value
     };
   });
 
@@ -1209,6 +1227,8 @@ function useOcorrenciaList() {
     tableColumns1: tableColumns1,
     perPage: perPage,
     currentPage: currentPage,
+    perPage1: perPage1,
+    currentPage1: currentPage1,
     totalSaidas: totalSaidas,
     totalEntradas: totalEntradas,
     dataMeta: dataMeta,

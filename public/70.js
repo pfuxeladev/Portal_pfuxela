@@ -1504,6 +1504,9 @@ function viaturaList() {
     key: 'capacidade_media',
     sortable: true
   }, {
+    Key: 'qtd_disponivel',
+    sortable: true
+  }, {
     key: 'tipo_combustivel',
     sortable: true
   }, {

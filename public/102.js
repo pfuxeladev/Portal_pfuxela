@@ -389,9 +389,9 @@ __webpack_require__.r(__webpack_exports__);
     var listFiles = []; // const ficheiros = ref(null)
 
     var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
-      check_list_out_id: _router__WEBPACK_IMPORTED_MODULE_10__["default"].currentRoute.params.id,
+      check_list_out_id: null,
       motorista_id: null,
-      viatura_id: null,
+      viatura_id: _router__WEBPACK_IMPORTED_MODULE_10__["default"].currentRoute.params.id,
       carta_conducao: true,
       km_fim: 0,
       hr_fim: '0:00',

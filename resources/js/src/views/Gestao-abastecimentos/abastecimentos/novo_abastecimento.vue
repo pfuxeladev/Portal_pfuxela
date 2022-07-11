@@ -28,7 +28,7 @@
                 md="6"
               >
                 <b>bombas</b>:
-                <v-select label="nome_bombas" :options="bomba" :reduce="bomba => bomba.id"></v-select>
+                <v-select v-model="form.bombas_id" label="nome_bombas" :options="bomba" :reduce="bomba => bomba.id"></v-select>
               </b-col>
               <hr>
             </b-row>
@@ -87,7 +87,7 @@
                           <td>
                             <b-form-input
                               v-model="form.qtd_abastecer"
-                              type="number"
+                              type="text"
                               placeholder="Qtd em litros"
                             />
                           </td>
@@ -276,10 +276,11 @@ export default {
       projecto: [],
       rec_abast: null,
       bombas: {},
-      bomba: [],
+      bomba: [{ id: null, nome_bombas: '' }],
       abastecimento: [],
       OpenOrder: {},
       form: new Form({
+        bombas_id: null,
         ordem_id: this.$route.params.refs,
         projecto_id: null,
         viatura_id: null,
@@ -371,6 +372,7 @@ export default {
           this.$Progress.finish()
           this.form.reset()
           // eslint-disable-next-line no-restricted-globals
+        //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
           window.location.reload()
         }
       }).catch(err => {
@@ -457,7 +459,7 @@ export default {
                   variant: 'success',
                 },
               })
-            //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+              this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
             //   window.location.reload()
             })
             .catch(err => {

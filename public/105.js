@@ -278,10 +278,14 @@ __webpack_require__.r(__webpack_exports__);
       projecto: [],
       rec_abast: null,
       bombas: {},
-      bomba: [],
+      bomba: [{
+        id: null,
+        nome_bombas: ''
+      }],
       abastecimento: [],
       OpenOrder: {},
       form: new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
+        bombas_id: null,
         ordem_id: this.$route.params.refs,
         projecto_id: null,
         viatura_id: null,
@@ -384,6 +388,7 @@ __webpack_require__.r(__webpack_exports__);
           _this8.$Progress.finish();
 
           _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
+          //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
 
 
           window.location.reload();
@@ -451,6 +456,8 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function enviarPedido(order) {
+      var _this11 = this;
+
       this.$swal({
         title: 'Tem certeza que deseja submeter a ordem?',
         text: 'Nao podera reverter essa accao!',
@@ -472,8 +479,15 @@ __webpack_require__.r(__webpack_exports__);
                 icon: 'CheckSquareIcon',
                 variant: 'success'
               }
-            }); //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
-            //   window.location.reload()
+            });
+
+            _this11.$router.push({
+              name: 'supply-details',
+              params: {
+                refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
+              }
+            }); //   window.location.reload()
+
           })["catch"](function (err) {
             if (err) {
               toast({
@@ -624,6 +638,13 @@ var render = function () {
                                   reduce: function (bomba) {
                                     return bomba.id
                                   },
+                                },
+                                model: {
+                                  value: _vm.form.bombas_id,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.form, "bombas_id", $$v)
+                                  },
+                                  expression: "form.bombas_id",
                                 },
                               }),
                             ],
@@ -823,7 +844,7 @@ var render = function () {
                                                 [
                                                   _c("b-form-input", {
                                                     attrs: {
-                                                      type: "number",
+                                                      type: "text",
                                                       placeholder:
                                                         "Qtd em litros",
                                                     },

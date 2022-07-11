@@ -396,9 +396,9 @@ export default {
       JSON.parse(
         JSON.stringify(
           new Form({
-            check_list_out_id: router.currentRoute.params.id,
+            check_list_out_id: null,
             motorista_id: null,
-            viatura_id: null,
+            viatura_id: router.currentRoute.params.id,
             carta_conducao: true,
             km_fim: 0,
             hr_fim: '0:00',

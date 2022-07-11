@@ -19,6 +19,7 @@ export default function viaturaList() {
     { key: 'lotacao', sortable: true },
     { key: 'capacidade_tanque', sortable: true },
     { key: 'capacidade_media', sortable: true },
+    { Key: 'qtd_disponivel', sortable: true },
     { key: 'tipo_combustivel', sortable: true },
     { key: 'modelo.nome_modelo', sortable: true },
     { key: 'marca.nome', sortable: true },
