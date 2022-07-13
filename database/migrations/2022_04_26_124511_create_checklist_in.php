@@ -4,7 +4,7 @@ use App\Models\CheckListOut;
 use App\Models\motorista;
 use App\Models\User;
 use App\Models\Viatura;
-
+use App\Models\checklist_vars;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -25,7 +25,6 @@ class CreateChecklistIn extends Migration
             $table->unsignedBigInteger('check_list_out_id');
             $table->bigInteger('km_fim');
             $table->time('hr_fim')->nullable();
-            $table->foreignIdFor(checklist_vars::class)->constrained();
             $table->string('estado');
             $table->boolean('is_incidente')->default(false);
             $table->string('chefe_operacao')->nullable();

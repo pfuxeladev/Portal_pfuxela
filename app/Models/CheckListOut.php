@@ -23,10 +23,6 @@ class CheckListOut extends Model
         return $this->hasMany(checklistOutDestination::class, 'check_list_out_id', 'id');
     }
 
-    function checkListRota(){
-        return $this->hasMany(CheckListRota::class, 'check_list_out_id', 'id');
-    }
-
     function checkListIn(){
         return $this->hasOne(checkListIn::class);
     }

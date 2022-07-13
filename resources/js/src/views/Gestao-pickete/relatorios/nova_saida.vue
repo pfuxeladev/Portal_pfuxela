@@ -65,12 +65,22 @@
                     <b-col cols="12" md="6" lg="8" xl="10">
                         <table class="table table-bordered">
                             <tbody>
-                                <tr v-for="(chk, i ) in chklst" :key="i">
-                                    <td>{{chk.checklist_name}}</td>
+                                <tr v-for="(chk, i ) in form.checklist_var" :key="i">
+                                    <td>{{chk.checklist_name}}
+                                    <input type="hidden" v-model="chk.checklist_name">
+                                    </td>
                                     <td>
-                                        <b-form-radio-group v-model="chk.id" :options="options" :state="state" />
+                                      <input type="hidden" v-model="chk.id" />
+                                        <b-form-radio-group v-model="chk.opcao" :options="options" :state="state" required/>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>Tipo de Saida</td>
+                                    <td>
+                                        <v-select v-model="form.tipo_saida" label="text" :options="options2" :reduce="options2 => options2.value"></v-select>
+                                    </td>
+                                </tr>
+
                             </tbody>
                         </table>
                     </b-col>
@@ -100,7 +110,7 @@
                 </b-col>
                 <b-col cols="6">
                     <b-form-group label="Categoria ocorrencia">
-                        <v-select v-model="attributeChecklist.categoria" :options="['Informativa', 'Correctiva', 'Preventiva', 'Manutencao']"></v-select>
+                        <v-select v-model="attributeChecklist.categoria" :options="['Controle Externo', 'Motor', 'Parte electrica', 'Conforto e Segurança', 'Documentação']"></v-select>
                     </b-form-group>
                 </b-col>
                 <b-col cols="6">
@@ -197,22 +207,18 @@ export default {
         text: 'Parcial',
         value: 'Parcial'
       },
-      {
-        text: 'Em Falta',
-        value: 'Em Falta'
-      },
       ],
       options2: [{
         text: 'Rota',
-        value: false
+        value: 'Rota',
       },
       {
         text: 'Outros Servicos',
-        value: false
+        value: 'Outros Servicos',
       },
       {
         text: 'Expediente',
-        value: false
+        value: 'Expediente',
       },
       ],
     }
@@ -267,7 +273,7 @@ export default {
     },
   },
 
-  setup(props) {
+  setup() {
     const CHECKLISTOUT_STORE_MODULE_NAME = 'Picket'
 
     if (!store.hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) store.registerModule(CHECKLISTOUT_STORE_MODULE_NAME, storaRelatorioModule)
@@ -278,6 +284,11 @@ export default {
     })
 
     const toast = useToast()
+
+    const chklst = [
+      { id: null, checklist_name: '', opcao: '' },
+    ]
+
     const form = ref(
       JSON.parse(
         JSON.stringify(
@@ -289,40 +300,10 @@ export default {
             carta_conducao: true,
             km_inicio: 0,
             hora_inicio: '0:00',
-            limpezaState: '',
-            vasoEspansorState: '',
-            LiquidoVidroState: '',
-            OleoMotorState: '',
-            OleoDirecaoState: '',
-            OleoTravoesState: '',
-            SistemaABS_State: '',
-            ACState: '',
-            tipo_saida: null,
-            uniforme: false,
-            CintoSeguracaState: false,
-            colete_saida: false,
-            lista_presenca: false,
-            pneu_sobr_saida: false,
-            macaco_saida: false,
-            inspencao_saida: false,
-            triangulo_saida: false,
-            chave_roda_saida: false,
-            kit_reboque_saida: false,
-            kit_1_socorro_saida: false,
-            licenca_saida: false,
-            extintor_saida: false,
-            livrete_saida: false,
-            seguros_saida: false,
-            taxaradio_saida: false,
-            motorista_dss: false,
-            // rotas
-            rotas_Lista: [{
-              rota_id: null
-            }, ],
-            // outro trajecto
-            trajecto: '',
-            horaPrevistaSaida: '0:00',
-            horaPrevistaEntrada: '0:00',
+            tipo_saida: '',
+            checklist_var: [{
+              id: null, checklist_name: '', opcao: '',
+            }],
           }),
         ),
       ),
@@ -340,7 +321,6 @@ export default {
       ),
     )
 
-    const chklst = ref(null)
 
     function addMore() {
       store.dispatch('Picket/addAtributo', attributeChecklist.value).then(res => {
@@ -352,9 +332,6 @@ export default {
             variant: 'success',
           },
         })
-        attributeChecklist.checklist_name = ''
-        attributeChecklist.categoria = ''
-        attributeChecklist.checklist_name = ''
         // window.location.reload()
       })
         .catch(err => {
@@ -424,8 +401,9 @@ export default {
   },
   created() {
     store.dispatch('Picket/getAtributos').then(res => {
-      this.chklst = res.data
+      this.form.checklist_var = res.data
     })
+    // this.form.checklist_var = this.chklst
   },
 
 }
