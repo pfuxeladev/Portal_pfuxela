@@ -9,8 +9,14 @@ class checklists extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'checklist_vars_id',
+        'opcao',
+        'check_list_out_id'
+    ];
+
     public function checklist_out(){
-        return $this->belongsTo(CheckListOut::class);
+        return $this->belongsTo(CheckListOut::class, 'check_list_out_id','id');
     }
 
     public function checklist_in(){
@@ -18,6 +24,6 @@ class checklists extends Model
     }
 
     public function checklist_vars(){
-        return $this->belongsTo(checklist_vars::class);
+        return $this->belongsTo(checklist_vars::class, 'checklist_vars_id', 'id');
     }
 }

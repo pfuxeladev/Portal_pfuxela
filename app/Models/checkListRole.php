@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class checkListRole extends Model
 {
     use HasFactory;
+
+    function checklist_vars(){
+        return $this->belongsTo(checklist_vars::class);
+    }
 }

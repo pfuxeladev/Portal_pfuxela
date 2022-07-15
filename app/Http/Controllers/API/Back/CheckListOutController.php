@@ -9,10 +9,13 @@ use App\Models\checklistOutDestination;
 use App\Models\checkListRole;
 use App\Models\checklists;
 use App\Models\motorista;
+use App\Models\ocorrencia_checklist;
 use App\Models\Viatura;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
-
+use Barryvdh\DomPDF\PDF;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
 class CheckListOutController extends Controller
 {
     private $checkListOut;
@@ -76,7 +79,6 @@ class CheckListOutController extends Controller
 
     public function store(Request $request)
     {
-
         $this->validate($request, [
             // 'tipo_saida'=>'required',
             'viatura_id'=>'required|integer|exists:viaturas,id',
@@ -86,6 +88,7 @@ class CheckListOutController extends Controller
         ], [
             'required'=>'O :attribute é obrigatório'
         ]);
+
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
         if ($viatura->kilometragem > $request->km_inicio) {
@@ -102,39 +105,58 @@ class CheckListOutController extends Controller
             return response()->json(['error' => 'O motorista não foi encontrado!'], 404);
         }
 
-
-
-
-
         $checkListOut = new CheckListOut();
+
         $checkListOut->viatura()->associate($request->viatura_id);
         $checkListOut->motorista()->associate($request->motorista_id);
         $checkListOut->km_inicio = $request->km_inicio;
-        $checkListOut->hr_inicio = $request->hr_inicio;
-        $checkListOut->km_inicio = $request->km_inicio;
+        $checkListOut->hr_inicio = $request->hora_inicio;
         $checkListOut->estado = $request->tipo_saida;
         $checkListOut->user_id = auth()->user()->id;
         $checkListOut->save();
 
         if($checkListOut){
 
-            foreach ($request->checklist_var as $key => $var) {
-               checklists::create([
-                'checklist_vars_id'=>$var['id'],
-                'opcao'=>$var['opcao'],
-                'check_list_out_id'=>$checkListOut->id
-               ]);
-            }
+            // return $request->checklist_var;
+            $checklists = array();
 
-            $checkList = checklists::where('check_list_out_id', $checkListOut->id)->get();
-            foreach ($checkList as $key => $chk) {
-               
+            foreach ($request->checklist_var as $key => $var) {
+
+                $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
+                foreach ($checklistVars[$key] as $key => $value) {
+                    // return $value['id'];
+                  $checklists[] = [
+                        'checklist_vars_id'=>$value['id'],
+                        'opcao'=>$var['opcao'],
+                        'check_list_out_id'=>$checkListOut->id
+                       ];
+                }
+               }
+
+               checklists::insert($checklists);
+
+               $checkList = checklists::where('check_list_out_id', $checkListOut->id)->where('opcao','!=', 'Ok')->get();
+
+               $ocorrencia = [];
+               foreach($checkList as $chkOc){
+               $ocorrencia[] = [
+                    'descricao'=>checklist_vars::where('id', $chkOc->checklist_vars_id)->pluck('checklist_name'),
+                    'situacao'=>$chkOc->opcao,
+                    'checklists_id'=>$chkOc->id
+                ];
             }
-            $viatura->locate = 'OUT';
-            $viatura->update();
+               ocorrencia_checklist::insert($ocorrencia);
+               $viatura->locate = 'OUT';
+               $viatura->update();
+
+            //    $pdf = PDF::loadView('reportMail.ocorrencia_check', compact('checkList'))->setOptions(['defaultFont' => 'sans-serif']);
+            //     $path = Storage::put('public/checklist_pdf/checkList' . $checkListOut->id . '.pdf', $pdf->output());
 
             return response()->json(['message'=>'viatura inspencionada com sucesso']);
+        }else{
+            return response()->json(['erro'=>'Ocorreu erro de insercao de dados']);
         }
+
     }
 
     /**
@@ -145,7 +167,16 @@ class CheckListOutController extends Controller
      */
     public function show($id)
     {
-        return $this->checkListOut->with(['viatura', 'motorista'])->where('viatura_id', $id)->first();
+        $checkListOut = $this->checkListOut->with(['viatura', 'motorista'])->where('viatura_id', $id)->first();
+
+        $chklst = checklists::join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_out_id', $checkListOut->id)->select('checklist_vars.checklist_name', 'checklist_vars.categoria','checklists.opcao')->get();
+
+        $dados[] = [
+            'checklistOut'=>$checkListOut,
+            'checklists'=>$chklst,
+        ];
+
+        return response()->json($dados, 200);
     }
 
     /**

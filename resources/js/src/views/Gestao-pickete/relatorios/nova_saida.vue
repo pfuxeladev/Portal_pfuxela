@@ -301,9 +301,9 @@ export default {
             km_inicio: 0,
             hora_inicio: '0:00',
             tipo_saida: '',
-            checklist_var: [{
+            checklist_var: {
               id: null, checklist_name: '', opcao: '',
-            }],
+            },
           }),
         ),
       ),
@@ -357,9 +357,9 @@ export default {
             variant: 'success',
           },
         })
-        this.$router.push({
-          name: 'Vehicle-movements'
-        })
+        // this.$router.push({
+        //   name: 'Vehicle-movements'
+        // })
       }).catch(err => {
         if (err.response.status === 421) {
           toast({

@@ -12,4 +12,12 @@ class checklist_vars extends Model
     public function checklistout(){
         return $this->hasMany(CheckListOut::class);
     }
+
+    public function checklists(){
+        return $this->hasMany(checklists::class);
+    }
+
+    public function checklist_role(){
+        return $this->hasMany(checkListRole::class);
+    }
 }

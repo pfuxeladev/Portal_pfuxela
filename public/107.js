@@ -291,11 +291,11 @@ __webpack_require__.r(__webpack_exports__);
       km_inicio: 0,
       hora_inicio: '0:00',
       tipo_saida: '',
-      checklist_var: [{
+      checklist_var: {
         id: null,
         checklist_name: '',
         opcao: ''
-      }]
+      }
     }))));
     var attributeChecklist = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
       checklist_name: null,
@@ -328,8 +328,6 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function OnSubmit() {
-      var _this5 = this;
-
       _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addCheckListOut', form.value).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -338,11 +336,9 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        });
-
-        _this5.$router.push({
-          name: 'Vehicle-movements'
-        });
+        }); // this.$router.push({
+        //   name: 'Vehicle-movements'
+        // })
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -384,10 +380,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    var _this6 = this;
+    var _this5 = this;
 
     _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/getAtributos').then(function (res) {
-      _this6.form.checklist_var = res.data;
+      _this5.form.checklist_var = res.data;
     }); // this.form.checklist_var = this.chklst
   }
 });

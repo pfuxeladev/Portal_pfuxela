@@ -26,4 +26,8 @@ class CheckListOut extends Model
     function checkListIn(){
         return $this->hasOne(checkListIn::class);
     }
+
+    function checklists(){
+        return $this->hasMany(checklists::class);
+    }
 }

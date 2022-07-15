@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ocorrencia_checklist extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'descricao',
+        'situacao',
+        'checklists_id'
+    ];
 }
