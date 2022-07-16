@@ -405,6 +405,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -1280,6 +1288,16 @@ var render = function () {
                 },
               },
               {
+                key: "cell(hora_de_saida)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n          " + _vm._s(data.item.hr_inicio) + "\n      "
+                    ),
+                  ]
+                },
+              },
+              {
                 key: "cell(Matricula)",
                 fn: function (data) {
                   return [
@@ -1288,6 +1306,20 @@ var render = function () {
                         _vm._s(data.item.viatura.matricula) +
                         "\n      "
                     ),
+                  ]
+                },
+              },
+              {
+                key: "cell(Kilometragem_na_saida)",
+                fn: function (data) {
+                  return [
+                    _c("div", [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(data.item.km_inicio) +
+                          "\n          "
+                      ),
+                    ]),
                   ]
                 },
               },
@@ -1621,13 +1653,10 @@ function useOcorrenciaList() {
     key: 'Matricula',
     sortable: true
   }, {
-    key: 'Kilometrage_na_saida',
+    key: 'Kilometragem_na_saida',
     sortable: true
   }, {
     key: 'Motorista',
-    sortable: true
-  }, {
-    key: 'Tipo',
     sortable: true
   }, {
     Key: 'Criado_por',
@@ -1648,7 +1677,7 @@ function useOcorrenciaList() {
     key: 'Matricula',
     sortable: true
   }, {
-    key: 'Kilometrage_actual',
+    key: 'Kilometragem_actual',
     sortable: true
   }, {
     Key: 'Criado_por',

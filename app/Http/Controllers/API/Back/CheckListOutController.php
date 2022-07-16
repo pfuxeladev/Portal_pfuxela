@@ -14,6 +14,7 @@ use App\Models\Viatura;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Barryvdh\DomPDF\PDF;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 class CheckListOutController extends Controller
@@ -169,7 +170,9 @@ class CheckListOutController extends Controller
     {
         $checkListOut = $this->checkListOut->with(['viatura', 'motorista'])->where('viatura_id', $id)->first();
 
-        $chklst = checklists::join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_out_id', $checkListOut->id)->select('checklist_vars.checklist_name', 'checklist_vars.categoria','checklists.opcao')->get();
+         $chklst = checklists::join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_out_id', $checkListOut->id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
+        ->orderBy('checklist_vars.categoria', 'asc')
+        ->get();
 
         $dados[] = [
             'checklistOut'=>$checkListOut,

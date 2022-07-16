@@ -1161,13 +1161,10 @@ function useOcorrenciaList() {
     key: 'Matricula',
     sortable: true
   }, {
-    key: 'Kilometrage_na_saida',
+    key: 'Kilometragem_na_saida',
     sortable: true
   }, {
     key: 'Motorista',
-    sortable: true
-  }, {
-    key: 'Tipo',
     sortable: true
   }, {
     Key: 'Criado_por',
@@ -1188,7 +1185,7 @@ function useOcorrenciaList() {
     key: 'Matricula',
     sortable: true
   }, {
-    key: 'Kilometrage_actual',
+    key: 'Kilometragem_actual',
     sortable: true
   }, {
     Key: 'Criado_por',

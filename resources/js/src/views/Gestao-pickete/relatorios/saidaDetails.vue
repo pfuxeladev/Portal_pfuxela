@@ -1,171 +1,64 @@
 <template>
   <section>
-    <b-card no-body>
-        <b-row>
-            <b-col cols="3">
-                <b-link :to="{ name: 'Vehicle-movements' }" class="btn btn-md btn-outline-primary">voltar</b-link>
-            </b-col>
-        </b-row>
+    <b-card no-body v-for="(ver, i) in saidas" :key="i">
+      <b-row>
+        <b-col cols="3">
+          <b-link
+            :to="{ name: 'Vehicle-movements' }"
+            class="btn btn-md btn-outline-primary"
+            >voltar</b-link
+          >
+        </b-col>
+      </b-row>
 
-        <b-card-header>
-            <h3>
-                Matricula: {{saidas.viatura.matricula}}
-            </h3>
-        </b-card-header>
+      <b-card-header>
+        <h3>Matricula: {{ ver.checklistOut.viatura.matricula }}</h3>
+      </b-card-header>
       <div class="mb-2">
-         <b-row>
-            <b-col cols="6">
-                <b-list-group>
-                    <b-list-group-item>
-                        Carta de condu&ccedil;&atilde;o do motorista: {{saidas.motorista.carta_conducao}}
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Livrete: <span v-if="saidas.livrete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>Falta</span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Colete do motorista: <span v-if="saidas.colete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else> <b-badge variant="danger">Falta</b-badge></span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Lista de presen&ccedil;a: <span v-if="saidas.lista_presenca==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                </b-list-group>
-                </b-col>
-                <b-col cols="6">
-                <b-list-group>
-                    <b-list-group-item>
-                        Seguros: <span v-if="saidas.seguros_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Document de Inspe&ccedil;&atilde;o: <span v-if="saidas.inspencao_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Taxa de radio difus&atilde;o: <span v-if="saidas.taxaradio_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Licen&ccedil;a da viatura: <span v-if="saidas.licenca_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                </b-list-group>
-                </b-col>
-          </b-row>
+        <b-row>
+          <b-col cols="6">
+            <b-list-group>
+              <b-list-group-item>
+                Carta de condu&ccedil;&atilde;o do motorista:
+                {{ ver.checklistOut.motorista.carta_conducao }}
+              </b-list-group-item>
+              <b-list-group-item>
+                Objectivo: {{ ver.checklistOut.estado }}
+              </b-list-group-item>
+              <b-list-group-item>
+                Hora de partida: {{ ver.checklistOut.hr_inicio }}hr
+              </b-list-group-item>
+              <b-list-group-item>
+                Kilometragem actual: {{ ver.checklistOut.km_inicio }} Km
+              </b-list-group-item>
+            </b-list-group>
+          </b-col>
+        </b-row>
         <b-card-body>
-            <h3>Estado da viatura</h3>
-             <table class="table table-striped">
-            <thead>
+          <h3>Estado da viatura</h3>
+          <b-row>
+            <b-col cols="3" v-for="(chk, i) in ver.checklists" :key="chk.id">
+              <table class="mb-2">
                 <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Conforto e Segurança
-                    </th>
+                  <td>{{ 1 + i }}</td>
+                  <td>
+                    <b>{{ chk.checklist_name }}</b>
+                  </td>
+                  <td class="text-right">
+                    <span v-if="chk.opcao === 'No'">
+                      <b-badge variant="danger">{{ chk.opcao }}</b-badge></span
+                    >
+                    <span v-else-if="chk.opcao === 'Parci'">
+                      <b-badge variant="warning">Parcial</b-badge>
+                    </span>
+                    <span v-else>
+                      <b-badge variant="success">{{ chk.opcao }}</b-badge></span
+                    >
+                  </td>
                 </tr>
-                <tr>
-                    <th>Cinto de segurança</th>
-                    <th>AC</th>
-                    <th>Kit de reboque</th>
-                    <th>Sistema ABS</th>
-                    <th>Retrovisores</th>
-                    <th>Kit de primeiros Socorros</th>
-                    <th>Extintor</th>
-                    <th>Tri&acirc;ngulo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span v-if="saidas.CintoSeguracaState == 1">Ok</span>
-                        <span v-if="saidas.CintoSeguracaState == 0">No</span>
-                    </td>
-                    <td>
-                        {{saidas.ACState}}
-                    </td>
-                    <td>
-                        <span v-if="saidas.kit_reboque_saida == 1">Ok</span>
-                        <span v-if="saidas.kit_reboque_saida == 0">No</span>
-                    </td>
-                    <td>
-                        {{saidas.SistemaABS_State}}
-                    </td>
-                    <td>
-                        Ok
-                    </td>
-                    <td>
-                       <span v-if="saidas.kit_1_socorros_saida == 1">Ok</span>
-                       <span v-if="saidas.kit_1_socorros_saida == 0">Falta</span>
-                    </td>
-                    <td>
-                        <span v-if="saidas.extintor_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                       <span v-if="saidas.triangulo_saida == 1">Ok</span>
-                       <span v-else>Falta</span>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Estado mec&acirc;nico
-                    </th>
-                </tr>
-                <tr class="text-uppercase" style="font-size: 0.857rem;">
-                    <th>Nível Vaso Expansor</th>
-                    <th>Nível Liquido Vidros</th>
-                    <th>Nível Óleo de Motor</th>
-                    <th>Nível &Oacute;leo de Direção</th>
-                    <th>Nível Óleo Travões</th>
-                    <th>Macaco</th>
-                    <th>Pneu sobressalente</th>
-                    <th>Chave de roda</th>
-                </tr>
-                <tr>
-                    <td>{{saidas.vasoEspansorState}}</td>
-                    <td>{{saidas.LiquidoVidroState}}</td>
-                    <td> {{saidas.OleoMotorState}} </td>
-                    <td>{{saidas.OleoDirecaoState}}</td>
-                    <td>{{saidas.OleoTravoesState}}</td>
-                    <td>
-                        <span v-if="saidas.macaco_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="saidas.pneu_sobr_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="saidas.chave_roda_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
+              </table>
+            </b-col>
+          </b-row>
         </b-card-body>
       </div>
     </b-card>
@@ -183,21 +76,21 @@ import {
   BCardHeader,
   BListGroup,
   BListGroupItem,
-} from 'bootstrap-vue'
-import { ref, onUnmounted } from '@vue/composition-api'
-import moment from 'moment'
-import { useToast } from 'vue-toastification/composition'
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
-import useOcorrenciaList from './relatorioOcorrencia'
-import storeRelatorioModule from './storaRelatorioModule'
-import router from '@/router'
-import store from '@/store'
+} from "bootstrap-vue";
+import { ref, onUnmounted } from "@vue/composition-api";
+import moment from "moment";
+import { useToast } from "vue-toastification/composition";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
+import useOcorrenciaList from "./relatorioOcorrencia";
+import storeRelatorioModule from "./storaRelatorioModule";
+import router from "@/router";
+import store from "@/store";
 
 export default {
   data() {
     return {
       saidas: {},
-    }
+    };
   },
   components: {
     BCardBody,
@@ -212,8 +105,8 @@ export default {
   },
   setup(props) {
     const saidas = ref(null);
-    const SAIDAS_STORE_MODULE_NAME = 'Picket';
-    const toast = useToast()
+    const SAIDAS_STORE_MODULE_NAME = "Picket";
+    const toast = useToast();
     // Register module
     if (!store.hasModule(SAIDAS_STORE_MODULE_NAME)) {
       store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule);
@@ -225,8 +118,9 @@ export default {
         store.unregisterModule(SAIDAS_STORE_MODULE_NAME);
       }
     });
+
     function dateTime(value) {
-      return moment(value).format('DD/MM/YYYY hh:mm');
+      return moment(value).format("DD/MM/YYYY hh:mm");
     }
 
     return {
@@ -236,10 +130,12 @@ export default {
   },
   created() {
     store
-      .dispatch('Picket/fetchSaida', { id: router.currentRoute.params.id })
-      .then(response => {
-        this.saidas = response.data
-        console.log(response.data)
+      .dispatch("Picket/fetchSaida", {
+        id: router.currentRoute.params.id,
+      })
+      .then((response) => {
+        this.saidas = response.data;
+        console.log(response.data);
       })
       .catch(() => {
         // toast({
@@ -250,7 +146,7 @@ export default {
         //     variant: 'danger',
         //   },
         // })
-      })
+      });
   },
-}
+};
 </script>

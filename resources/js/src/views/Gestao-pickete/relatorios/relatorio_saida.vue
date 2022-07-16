@@ -40,8 +40,16 @@
         <template #cell(Data_de_registo)="data">
           {{ dateTime(data.item.created_at) }} </template
         >
+        <template #cell(hora_de_saida)="data">
+            {{data.item.hr_inicio}}
+        </template>
         <template #cell(Matricula)="data">
           {{ data.item.viatura.matricula }}
+        </template>
+        <template #cell(Kilometragem_na_saida)="data">
+            <div>
+                {{data.item.km_inicio}}
+            </div>
         </template>
         <template #cell(Motorista)="data">
           {{ data.item.motorista.person.nome_completo }}

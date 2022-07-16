@@ -3,10 +3,13 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\checklist_vars;
 use App\Models\checkListIn;
 use App\Models\CheckListOut;
 use App\Models\CheckListRota;
+use App\Models\checklists;
 use App\Models\incidente;
+use App\Models\ocorrencia_checklist;
 use App\Models\Viatura;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -55,34 +58,14 @@ class CheckListInController extends Controller
             if ($request->motorista_id != null) {
                 $checkListIn->motorista()->associate($request->motorista_id);
             }
-
+            $checkListIn->viatura_id = $viatura1->id;
             $checkListIn->km_fim = $request->km_fim;
             $checkListIn->hr_fim = $request->hr_fim;
-            $checkListIn->carta_conducao = $request->carta_conducao;
-            $checkListIn->teste_alcool = $request->teste_alcool;
-            $checkListIn->uniforme = $request->uniforme;
-            $checkListIn->motorista_dss = $request->motorista_dss;
-            $checkListIn->lista_presenca = $request->lista_presenca;
-            $checkListIn->colete_entrada = $request->colete_entrada;
-            $checkListIn->triangulo_entrada = $request->triangulo_entrada;
-            $checkListIn->chave_roda_entrada = $request->chave_roda_entrada;
-            $checkListIn->kit_reboque_entrada = $request->kit_reboque_entrada;
-            $checkListIn->kit_1_socorros_entrada = $request->kit_1_socorro_entrada;
-            $checkListIn->pneu_sobr_entrada = $request->pneu_sobr_entrada;
-            $checkListIn->macaco_entrada = $request->macaco_entrada;
-            $checkListIn->extintor_entrada = $request->extintor_entrada;
-            $checkListIn->livrete_entrada = $request->livrete_entrada;
-            $checkListIn->licenca_entrada = $request->licenca_entrada;
-            $checkListIn->seguros_entrada = $request->seguros_entrada;
-            $checkListIn->inspencao_entrada = $request->inspencao_entrada;
-            $checkListIn->taxaradio_entrada = $request->taxaradio_entrada;
+            $checkListIn->estado = 'ENTRADA';
+            $checkListIn->chefe_operacao = $request->chefe_operacao;
             $checkListIn->user_id = auth()->user()->id;
-            if ($request->is_incidente) {
-                $checkListIn->is_incidente = $request->is_incidente;
-                $checkListIn->incidente()->associate($request->incidente_id);
-            }
-            $checkListIn->relatorio_geral = $request->relatorio_geral;
 
+            $checkListIn->save();
             if ($request->anexos != null) {
 
                 $images = $request->anexos;
@@ -97,8 +80,37 @@ class CheckListInController extends Controller
                 $checkListIn->anexos = $filename;
             }
 
-            $checkListIn->save();
             if($checkListIn){
+
+                // return $request->checklist_var;
+                $checklists = array();
+
+                foreach ($request->checklist_var as $key => $var) {
+
+                    $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
+                    foreach ($checklistVars[$key] as $key => $value) {
+                        // return $value['id'];
+                      $checklists[] = [
+                            'checklist_vars_id'=>$value['id'],
+                            'opcao'=>$var['opcao'],
+                            'check_list_out_id'=>$checkListIn->id
+                           ];
+                    }
+                   }
+
+                   checklists::insert($checklists);
+
+                   $checkList = checklists::where('check_list_out_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
+
+                   $ocorrencia = [];
+                   foreach($checkList as $chkOc){
+                   $ocorrencia[] = [
+                        'descricao'=>checklist_vars::where('id', $chkOc->checklist_vars_id)->pluck('checklist_name'),
+                        'situacao'=>$chkOc->opcao,
+                        'checklists_id'=>$chkOc->id
+                    ];
+                }
+                   ocorrencia_checklist::insert($ocorrencia);
 
 
                 if($request->viatura_id !=null){
@@ -109,19 +121,14 @@ class CheckListInController extends Controller
 
                 $delta_percorrido = ($request->km_fim - $viatura1->kilometragem);
 
-                $total_percorrido = ($request->km_fim + $viatura1->kilometragem);
+                $total_percorrido = ($request->km_fim - $viatura1->kilometragem);
 
                 $consumo = ($delta_percorrido * $viatura1->capacidade_media);
 
-                if($consumo > $viatura1->qtd_disponivel){
-                    $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
-                    $viatura1->qtd_disponivel = $qtd_disponivel;
-                }else{
-                    $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
-                    $viatura1->qtd_disponivel = $qtd_disponivel;
-                }
 
+                $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
 
+                $viatura1->qtd_disponivel = $qtd_disponivel;
                 $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
                 $viatura1->update();

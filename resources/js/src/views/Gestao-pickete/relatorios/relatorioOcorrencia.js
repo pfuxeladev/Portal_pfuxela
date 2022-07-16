@@ -18,9 +18,8 @@ export default function useOcorrenciaList() {
     { key: 'Data_de_registo', sortable: true },
     { key: 'Hora_de_saida', sortable: true },
     { key: 'Matricula', sortable: true },
-    { key: 'Kilometrage_na_saida', sortable: true },
+    { key: 'Kilometragem_na_saida', sortable: true },
     { key: 'Motorista', sortable: true },
-    { key: 'Tipo', sortable: true },
     { Key: 'Criado_por', sortable: true },
     { key: 'acções' },
   ]
@@ -29,7 +28,7 @@ export default function useOcorrenciaList() {
     { key: 'Hora_de_saida', sortable: true },
     { key: 'Hora_da_chegada', sortable: true },
     { key: 'Matricula', sortable: true },
-    { key: 'Kilometrage_actual', sortable: true },
+    { key: 'Kilometragem_actual', sortable: true },
     { Key: 'Criado_por', sortable: true },
     { key: 'acções' },
   ]
