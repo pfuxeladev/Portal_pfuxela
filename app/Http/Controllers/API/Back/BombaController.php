@@ -151,6 +151,7 @@ class BombaController extends Controller
             $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel', 'abastecimentoBomba.ordem'])->findOrFail($id);
 
             return response()->json($bombas, 200);
+        }else{
             $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
 
             return response()->json($bombas, 200);
