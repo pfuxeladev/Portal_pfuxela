@@ -370,10 +370,10 @@ export default {
           })
           // location.reload()
           this.$Progress.finish()
-          this.form.reset()
+        //   this.form.reset()
           // eslint-disable-next-line no-restricted-globals
-        //   this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
-          window.location.reload()
+          router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+        //   window.location.reload()
         }
       }).catch(err => {
         if (err.response.status === 421) {

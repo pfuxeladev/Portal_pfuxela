@@ -96,12 +96,15 @@ class AbastecimentoController extends Controller
         $uuid = Str::uuid()->toString();
 
         $ordem = Ordem::where('refs', $request->ordem_id)->first();
-        if ($request->bombas_id != null)
+        if ($request->bombas_id != null){
             $ordem->bombas_id = $request->bombas_id;
             $ordem->update();
+            }
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        if (!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first())) {
+        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first();
+        // return $lastOrderViatura;
+        if (!empty($lastOrderViatura)) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
         }
 
