@@ -72,10 +72,8 @@ class OrdemController extends Controller
                           ->attachData($pdf->output(), "ordem.pdf");
               });
             }
-
+            return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
         }
-
-        return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
     }
 
 

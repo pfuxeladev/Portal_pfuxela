@@ -50,9 +50,11 @@ class CheckListInController extends Controller
 
             $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
 
-            if($viatura1->kilometragem > $request->km_fim)
-            return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
-            // return $checkList_out;
+            if($viatura1->kilometragem > $request->km_fim){
+                return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
+            }
+
+            // return $request->checklist_var;
             $checkListIn = new checkListIn();
             $checkListIn->check_list_out_id = $checkList_out->id;
             if ($request->motorista_id != null) {
@@ -64,8 +66,8 @@ class CheckListInController extends Controller
             $checkListIn->estado = 'ENTRADA';
             $checkListIn->chefe_operacao = $request->chefe_operacao;
             $checkListIn->user_id = auth()->user()->id;
-
             $checkListIn->save();
+            
             if ($request->anexos != null) {
 
                 $images = $request->anexos;
@@ -100,7 +102,7 @@ class CheckListInController extends Controller
 
                    checklists::insert($checklists);
 
-                   $checkList = checklists::where('check_list_out_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
+                   $checkList = checklists::where('check_list_out_id', $checkListIn->id)->where('opcao','!=', 'true')->get();
 
                    $ocorrencia = [];
                    foreach($checkList as $chkOc){
