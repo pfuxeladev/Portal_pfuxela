@@ -66,8 +66,8 @@ class OrdemController extends Controller
                $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
 
               Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                  $message->from(env('MAIL_USERNAME'));
-                  $message->to($data["email"], $data['email'])
+                //   $message->from(env('MAIL_USERNAME'));
+                  $message->to($data["email"])
                           ->subject($data["title"])
                           ->attachData($pdf->output(), "ordem.pdf");
               });
