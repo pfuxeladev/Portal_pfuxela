@@ -31,32 +31,27 @@
                         {{data.item.ordem.bombas.nome_bombas}}
                     </template>
 
-                    <!-- <template #cell(acções)="data">
+                    <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
 
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                             </template>
-                            <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
+                            <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.ordem.refs } }">
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Details</span>
                             </b-dropdown-item>
-                            <b-dropdown-item>
-                                <feather-icon icon="TrashIcon" />
-                                <span class="align-middle ml-50">Delete</span>
-                            </b-dropdown-item>
                         </b-dropdown>
-                    </template> -->
+                    </template>
                 </b-table>
-            </b-col>
-            <div class="mx-2 mb-2">
+                 <div class="mx-2 mb-2">
                 <b-row>
 
-                    <b-col cols="12" sm="6" class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                    <b-col cols="12" sm="8" class="d-flex align-items-center justify-content-center justify-content-sm-start">
                         <span class="text-muted">mostrar {{ dataMeta.from }} de {{ dataMeta.to }} para {{ dataMeta.of }} entradas</span>
                     </b-col>
                     <!-- Pagination -->
-                    <b-col cols="12" sm="6" class="d-flex align-items-center justify-content-center justify-content-sm-end">
+                    <b-col cols="12" sm="4" class="d-flex align-items-center justify-content-center justify-content-sm-end">
 
                         <b-pagination v-model="currentPage" :total-rows="totalAbastecimentos" :per-page="perPage" first-number last-number class="mb-0 mt-1 mt-sm-0" prev-class="prev-item" next-class="next-item">
                             <template #prev-text>
@@ -71,6 +66,7 @@
 
                 </b-row>
             </div>
+            </b-col>
         </b-row>
     </b-card>
 </section>
