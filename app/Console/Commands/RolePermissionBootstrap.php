@@ -81,6 +81,8 @@ class RolePermissionBootstrap extends Command
             "Create Ordem",
             "Update Ordem",
             "Approve Ordem",
+            "Approve Extra Order",
+            "Submit Extra Order",
             "Cancel Ordem",
             "Create Ocorrencia",
             "Create Abastecimento_recorrente",

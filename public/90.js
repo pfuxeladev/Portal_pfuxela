@@ -93,10 +93,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -641,97 +637,163 @@ var render = function () {
                           ]
                         },
                       },
+                      {
+                        key: "cell(acções)",
+                        fn: function (data) {
+                          return [
+                            _c(
+                              "b-dropdown",
+                              {
+                                attrs: {
+                                  variant: "link",
+                                  "no-caret": "",
+                                  right: _vm.$store.state.appConfig.isRTL,
+                                },
+                                scopedSlots: _vm._u(
+                                  [
+                                    {
+                                      key: "button-content",
+                                      fn: function () {
+                                        return [
+                                          _c("feather-icon", {
+                                            staticClass:
+                                              "align-middle text-body",
+                                            attrs: {
+                                              icon: "MoreVerticalIcon",
+                                              size: "16",
+                                            },
+                                          }),
+                                        ]
+                                      },
+                                      proxy: true,
+                                    },
+                                  ],
+                                  null,
+                                  true
+                                ),
+                              },
+                              [
+                                _vm._v(" "),
+                                _c(
+                                  "b-dropdown-item",
+                                  {
+                                    attrs: {
+                                      to: {
+                                        name: "supply-details",
+                                        params: { refs: data.item.ordem.refs },
+                                      },
+                                    },
+                                  },
+                                  [
+                                    _c("feather-icon", {
+                                      attrs: { icon: "FileTextIcon" },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "align-middle ml-50" },
+                                      [_vm._v("Details")]
+                                    ),
+                                  ],
+                                  1
+                                ),
+                              ],
+                              1
+                            ),
+                          ]
+                        },
+                      },
                     ]),
                   }),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "mx-2 mb-2" },
-                [
+                  _vm._v(" "),
                   _c(
-                    "b-row",
+                    "div",
+                    { staticClass: "mx-2 mb-2" },
                     [
                       _c(
-                        "b-col",
-                        {
-                          staticClass:
-                            "d-flex align-items-center justify-content-center justify-content-sm-start",
-                          attrs: { cols: "12", sm: "6" },
-                        },
+                        "b-row",
                         [
-                          _c("span", { staticClass: "text-muted" }, [
-                            _vm._v(
-                              "mostrar " +
-                                _vm._s(_vm.dataMeta.from) +
-                                " de " +
-                                _vm._s(_vm.dataMeta.to) +
-                                " para " +
-                                _vm._s(_vm.dataMeta.of) +
-                                " entradas"
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        {
-                          staticClass:
-                            "d-flex align-items-center justify-content-center justify-content-sm-end",
-                          attrs: { cols: "12", sm: "6" },
-                        },
-                        [
-                          _c("b-pagination", {
-                            staticClass: "mb-0 mt-1 mt-sm-0",
-                            attrs: {
-                              "total-rows": _vm.totalAbastecimentos,
-                              "per-page": _vm.perPage,
-                              "first-number": "",
-                              "last-number": "",
-                              "prev-class": "prev-item",
-                              "next-class": "next-item",
+                          _c(
+                            "b-col",
+                            {
+                              staticClass:
+                                "d-flex align-items-center justify-content-center justify-content-sm-start",
+                              attrs: { cols: "12", sm: "8" },
                             },
-                            scopedSlots: _vm._u([
-                              {
-                                key: "prev-text",
-                                fn: function () {
-                                  return [
-                                    _c("feather-icon", {
-                                      attrs: {
-                                        icon: "ChevronLeftIcon",
-                                        size: "18",
-                                      },
-                                    }),
-                                  ]
-                                },
-                                proxy: true,
-                              },
-                              {
-                                key: "next-text",
-                                fn: function () {
-                                  return [
-                                    _c("feather-icon", {
-                                      attrs: {
-                                        icon: "ChevronRightIcon",
-                                        size: "18",
-                                      },
-                                    }),
-                                  ]
-                                },
-                                proxy: true,
-                              },
-                            ]),
-                            model: {
-                              value: _vm.currentPage,
-                              callback: function ($$v) {
-                                _vm.currentPage = $$v
-                              },
-                              expression: "currentPage",
+                            [
+                              _c("span", { staticClass: "text-muted" }, [
+                                _vm._v(
+                                  "mostrar " +
+                                    _vm._s(_vm.dataMeta.from) +
+                                    " de " +
+                                    _vm._s(_vm.dataMeta.to) +
+                                    " para " +
+                                    _vm._s(_vm.dataMeta.of) +
+                                    " entradas"
+                                ),
+                              ]),
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            {
+                              staticClass:
+                                "d-flex align-items-center justify-content-center justify-content-sm-end",
+                              attrs: { cols: "12", sm: "4" },
                             },
-                          }),
+                            [
+                              _c("b-pagination", {
+                                staticClass: "mb-0 mt-1 mt-sm-0",
+                                attrs: {
+                                  "total-rows": _vm.totalAbastecimentos,
+                                  "per-page": _vm.perPage,
+                                  "first-number": "",
+                                  "last-number": "",
+                                  "prev-class": "prev-item",
+                                  "next-class": "next-item",
+                                },
+                                scopedSlots: _vm._u([
+                                  {
+                                    key: "prev-text",
+                                    fn: function () {
+                                      return [
+                                        _c("feather-icon", {
+                                          attrs: {
+                                            icon: "ChevronLeftIcon",
+                                            size: "18",
+                                          },
+                                        }),
+                                      ]
+                                    },
+                                    proxy: true,
+                                  },
+                                  {
+                                    key: "next-text",
+                                    fn: function () {
+                                      return [
+                                        _c("feather-icon", {
+                                          attrs: {
+                                            icon: "ChevronRightIcon",
+                                            size: "18",
+                                          },
+                                        }),
+                                      ]
+                                    },
+                                    proxy: true,
+                                  },
+                                ]),
+                                model: {
+                                  value: _vm.currentPage,
+                                  callback: function ($$v) {
+                                    _vm.currentPage = $$v
+                                  },
+                                  expression: "currentPage",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
                         ],
                         1
                       ),

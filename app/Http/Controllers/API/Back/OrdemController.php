@@ -297,8 +297,8 @@ class OrdemController extends Controller
 
     }
 
-    function Relatorios(){
-        
+    function RelatorioSemanal(Request $request){
+
     }
 
   public function printPdf(){
