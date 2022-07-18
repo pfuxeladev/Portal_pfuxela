@@ -238,6 +238,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -459,8 +461,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this11 = this;
 
       this.$swal({
-        title: 'Tem certeza que deseja submeter a ordem?',
-        text: 'Nao podera reverter essa accao!',
+        title: 'Submeter a ordem? <br/> Não poderá reverter essa acção!',
+        // text: 'Nao podera reverter essa accao!',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Sim!',
@@ -1022,41 +1024,6 @@ var render = function () {
                 "b-col",
                 { attrs: { cols: "12" } },
                 [
-                  _c(
-                    "b-row",
-                    [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "4" } },
-                        [
-                          _c(
-                            "b-button",
-                            {
-                              directives: [
-                                {
-                                  name: "ripple",
-                                  rawName: "v-ripple.400",
-                                  value: "rgba(113, 102, 240, 0.15)",
-                                  expression: "'rgba(113, 102, 240, 0.15)'",
-                                  modifiers: { 400: true },
-                                },
-                              ],
-                              attrs: { variant: "outline-success" },
-                              on: {
-                                click: function ($event) {
-                                  return _vm.enviarPedido(_vm.OpenOrder)
-                                },
-                              },
-                            },
-                            [_vm._v("enviar pedido de abastecimento")]
-                          ),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
                   _c("table", { staticClass: "table table-light" }, [
                     _c("thead", { staticClass: "thead-light" }, [
                       _c("tr", [
@@ -1148,6 +1115,44 @@ var render = function () {
                       0
                     ),
                   ]),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c(
+                    "b-row",
+                    { staticClass: "mt-3" },
+                    [
+                      _c(
+                        "b-col",
+                        { staticClass: "text-center", attrs: { cols: "12" } },
+                        [
+                          _c(
+                            "b-button",
+                            {
+                              directives: [
+                                {
+                                  name: "ripple",
+                                  rawName: "v-ripple.400",
+                                  value: "rgba(113, 102, 240, 0.15)",
+                                  expression: "'rgba(113, 102, 240, 0.15)'",
+                                  modifiers: { 400: true },
+                                },
+                              ],
+                              attrs: { variant: "outline-success" },
+                              on: {
+                                click: function ($event) {
+                                  return _vm.enviarPedido(_vm.OpenOrder)
+                                },
+                              },
+                            },
+                            [_vm._v("enviar pedido de abastecimento")]
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
                 ],
                 1
               )

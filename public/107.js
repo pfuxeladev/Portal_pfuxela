@@ -312,7 +312,8 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        }); // window.location.reload()
+        });
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -328,6 +329,8 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function OnSubmit() {
+      var _this5 = this;
+
       _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addCheckListOut', form.value).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -336,9 +339,11 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        }); // this.$router.push({
-        //   name: 'Vehicle-movements'
-        // })
+        });
+
+        _this5.$router.push({
+          name: 'Vehicle-movements'
+        });
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -353,7 +358,7 @@ __webpack_require__.r(__webpack_exports__);
           toast({
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
-              title: 'Erro..! verifique se seus campos estao devidamente preenchidos',
+              title: 'Erro..! verifique se todos campos estão devidamente preenchidos',
               icon: 'AlertTriangleIcon',
               variant: 'danger'
             }
@@ -380,10 +385,10 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   created: function created() {
-    var _this5 = this;
+    var _this6 = this;
 
     _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/getAtributos').then(function (res) {
-      _this5.form.checklist_var = res.data;
+      _this6.form.checklist_var = res.data;
     }); // this.form.checklist_var = this.chklst
   }
 });

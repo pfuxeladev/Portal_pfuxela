@@ -59,8 +59,7 @@ class OrdemController extends Controller
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
               $data["email"] = $bombas_mail->email_bomba;
-            //   $data["title"] = "Ordem de abastecimento";
-              $data["title"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+              $data["title"] = "Ordem de abastecimento Nr. ".$ordem->codigo_ordem;
 
                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
                $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
@@ -234,10 +233,6 @@ class OrdemController extends Controller
    function imprimirOrdem($refs){
     $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-    $data["email"] = "leochima@gmail.com";
-    $data["title"] = "From ItSolutionStuff.com";
-    $data["body"] = "This is Demo";
-
     $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'Times New Roman']);
     Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
     // return $pdf->download('ordem.pdf');
@@ -300,6 +295,10 @@ class OrdemController extends Controller
            return response()->json(['erro'=>'Ocorreu um erro na atualizacao '.$e->getMessage()], 421);
         }
 
+    }
+
+    function Relatorios(){
+        
     }
 
   public function printPdf(){
