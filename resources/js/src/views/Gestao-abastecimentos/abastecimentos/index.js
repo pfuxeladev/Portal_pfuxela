@@ -19,8 +19,8 @@ export default function useAbastecimentoList() {
     { key: 'qtd_rec', sortable: true },
     { key: 'estado', sortable: true },
     { key: 'bombas', sortable: true },
+    { key: 'Data_de_emissao', sortable: true },
     { key: 'user.name', sortable: true },
-    // { key: 'rota', sortable: true },
     { key: 'acções' },
   ]
 
