@@ -15,7 +15,7 @@ use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
 use App\Models\Bombas;
 use App\Models\OrdemViaturaRota;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\responsavelBombas;
