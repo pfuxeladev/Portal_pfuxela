@@ -64,7 +64,7 @@
                               :reduce="(viatura) => viatura.id"
                               @input="getQtd()"
                             />
-                            ({{ rec_abast }})Ltr
+                            ({{ rec_abast }})Litros no tanque
                           </td>
                           <td style="width: 20%">
                             <v-select
