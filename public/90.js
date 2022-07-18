@@ -93,6 +93,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -147,6 +149,10 @@ __webpack_require__.r(__webpack_exports__);
       if (_store__WEBPACK_IMPORTED_MODULE_6__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_6__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
 
+    function dateTime(value) {
+      return moment__WEBPACK_IMPORTED_MODULE_7___default()(value).format('DD/MM/YYYY hh:mm');
+    }
+
     var _useAbastecimentoList = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
         fetchAbastecimentos = _useAbastecimentoList.fetchAbastecimentos,
         tableColumns = _useAbastecimentoList.tableColumns,
@@ -173,7 +179,8 @@ __webpack_require__.r(__webpack_exports__);
       sortBy: sortBy,
       isSortDirDesc: isSortDirDesc,
       refAbastecimentoListTable: refAbastecimentoListTable,
-      refetchData: refetchData
+      refetchData: refetchData,
+      dateTime: dateTime
     };
   }
 });
@@ -632,6 +639,20 @@ var render = function () {
                             _vm._v(
                               "\n                        " +
                                 _vm._s(data.item.ordem.bombas.nome_bombas) +
+                                "\n                    "
+                            ),
+                          ]
+                        },
+                      },
+                      {
+                        key: "cell(Data_de_emissao)",
+                        fn: function (data) {
+                          return [
+                            _vm._v(
+                              "\n                        " +
+                                _vm._s(
+                                  _vm.dateTime(data.item.ordem.created_at)
+                                ) +
                                 "\n                    "
                             ),
                           ]
@@ -1145,10 +1166,12 @@ function useAbastecimentoList() {
     key: 'bombas',
     sortable: true
   }, {
+    key: 'Data_de_emissao',
+    sortable: true
+  }, {
     key: 'user.name',
     sortable: true
-  }, // { key: 'rota', sortable: true },
-  {
+  }, {
     key: 'acções'
   }];
   var fieldCollumns = [{
