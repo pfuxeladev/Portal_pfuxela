@@ -523,7 +523,7 @@ var render = function () {
         { attrs: { "no-body": "" } },
         [
           _c("b-card-header", { staticClass: "pb-50" }, [
-            _c("h3", [_vm._v("Relatório de abastacementos")]),
+            _c("h3", [_vm._v("Relatório de abastacimentos")]),
           ]),
           _vm._v(" "),
           _c(

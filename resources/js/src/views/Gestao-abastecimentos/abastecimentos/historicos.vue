@@ -3,7 +3,7 @@
 <section>
     <b-card no-body>
         <b-card-header class="pb-50">
-            <h3>Relat&oacute;rio de abastacementos</h3>
+            <h3>Relat&oacute;rio de abastacimentos</h3>
         </b-card-header>
         <div class="m-2">
             <!-- Table Top -->
