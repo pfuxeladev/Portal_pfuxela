@@ -65,7 +65,7 @@
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                             </template>
-                            <b-dropdown-item :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }">
+                            <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Mostrar</span>
                             </b-dropdown-item>

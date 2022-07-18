@@ -1113,7 +1113,7 @@ var render = function () {
                                   {
                                     attrs: {
                                       to: {
-                                        name: "New-supply-order",
+                                        name: "supply-details",
                                         params: { refs: data.item.refs },
                                       },
                                     },

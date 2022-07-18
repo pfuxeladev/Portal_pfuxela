@@ -332,7 +332,7 @@ export default {
             variant: 'success',
           },
         })
-        // window.location.reload()
+        window.location.reload()
       })
         .catch(err => {
           if (err.response.status === 421) {
@@ -357,9 +357,9 @@ export default {
             variant: 'success',
           },
         })
-        // this.$router.push({
-        //   name: 'Vehicle-movements'
-        // })
+        this.$router.push({
+          name: 'Vehicle-movements'
+        })
       }).catch(err => {
         if (err.response.status === 421) {
           toast({
@@ -374,7 +374,7 @@ export default {
           toast({
             component: ToastificationContent,
             props: {
-              title: 'Erro..! verifique se seus campos estao devidamente preenchidos',
+              title: 'Erro..! verifique se todos campos estão devidamente preenchidos',
               icon: 'AlertTriangleIcon',
               variant: 'danger',
             },

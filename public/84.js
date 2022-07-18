@@ -155,17 +155,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -219,7 +208,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       this.$swal({
-        title: 'Deseja permitir envio da ordem ?',
+        title: 'Permitir envio da ordem?',
         showCancelButton: true,
         showClass: {
           popup: 'animate__animated animate__flipInX'
@@ -239,7 +228,8 @@ __webpack_require__.r(__webpack_exports__);
                 icon: 'CheckSquareIcon',
                 variant: 'success'
               }
-            }); //  window.location.reload()
+            });
+            window.location.reload();
           })["catch"](function (err) {
             if (err.response.status === 421) {
               toast({
@@ -833,7 +823,7 @@ var render = function () {
                                       _c("b-list-group-item", [
                                         _c("b", [_vm._v("Ordem")]),
                                         _vm._v(
-                                          ": " +
+                                          ":\n                  " +
                                             _vm._s(_vm.SupplyData.codigo_ordem)
                                         ),
                                       ]),
@@ -845,7 +835,7 @@ var render = function () {
                                             _vm._s(
                                               _vm.SupplyData.bombas.nome_bombas
                                             ) +
-                                            " "
+                                            "\n                "
                                         ),
                                       ]),
                                       _vm._v(" "),
@@ -854,7 +844,7 @@ var render = function () {
                                           _vm._v("Qtd total requisitad0"),
                                         ]),
                                         _vm._v(
-                                          ": " +
+                                          ":\n                  " +
                                             _vm._s(
                                               _vm.SupplyData.abastecimento[0]
                                                 .qtd_rec
@@ -881,7 +871,7 @@ var render = function () {
                                       _c("b-list-group-item", [
                                         _c("b", [_vm._v("Requisitado por")]),
                                         _vm._v(
-                                          ": " +
+                                          ":\n                  " +
                                             _vm._s(
                                               _vm.SupplyData.created_by.name
                                             )
@@ -890,7 +880,7 @@ var render = function () {
                                       _vm._v(" "),
                                       _c("b-list-group-item", [
                                         _c("b", [_vm._v("Estado")]),
-                                        _vm._v(": "),
+                                        _vm._v(":\n                  "),
                                         _vm.SupplyData.estado === "Pendente"
                                           ? _c(
                                               "span",
@@ -1130,7 +1120,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("\n        Autorizar\n      ")]
+                          [_vm._v("\n          Autorizar\n        ")]
                         ),
                       ],
                       1
@@ -1151,7 +1141,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("\n              Reenviar\n              ")]
+                          [_vm._v("\n          Reenviar\n        ")]
                         ),
                       ],
                       1
@@ -1167,19 +1157,6 @@ var render = function () {
                         _c(
                           "b-button",
                           {
-                            attrs: { variant: "warning" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.reabrirOrdem(_vm.SupplyData.refs)
-                              },
-                            },
-                          },
-                          [_vm._v("Reabrir")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-button",
-                          {
                             attrs: { variant: "outline-danger" },
                             on: {
                               click: function ($event) {
@@ -1187,13 +1164,37 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("\n        Cancelar\n      ")]
+                          [_vm._v("\n          Cancelar\n        ")]
                         ),
                       ],
                       1
                     )
                   : _vm._e(),
-                _vm._v(" "),
+              ]),
+              _vm._v(" "),
+              _vm.SupplyData.estado === "Autorizado"
+                ? _c(
+                    "b-col",
+                    { attrs: { cols: "12", xl: "2", md: "2" } },
+                    [
+                      _c(
+                        "b-button",
+                        {
+                          attrs: { variant: "warning" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.reabrirOrdem(_vm.SupplyData.refs)
+                            },
+                          },
+                        },
+                        [_vm._v("Reabrir")]
+                      ),
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
                 _vm.SupplyData.estado === "Pendente"
                   ? _c(
                       "span",
@@ -1208,7 +1209,7 @@ var render = function () {
                               },
                             },
                           },
-                          [_vm._v("\n        Cancelar\n      ")]
+                          [_vm._v("\n          Cancelar\n        ")]
                         ),
                       ],
                       1

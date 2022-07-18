@@ -146,15 +146,7 @@
         v-if="OpenOrder.estado === 'Aberta' || OpenOrder.estado === 'Pendente'"
         cols="12"
       >
-        <b-row>
-          <b-col cols="4">
-            <b-button
-            v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-             @click="enviarPedido(OpenOrder)"
-              variant="outline-success"
-            >enviar pedido de abastecimento</b-button>
-          </b-col>
-        </b-row>
+
 
         <table class="table table-light">
           <thead class="thead-light">
@@ -207,6 +199,16 @@
             </tr>
           </tbody>
         </table>
+        <hr>
+        <b-row class="mt-3">
+          <b-col cols="12" class="text-center">
+            <b-button
+            v-ripple.400="'rgba(113, 102, 240, 0.15)'"
+             @click="enviarPedido(OpenOrder)"
+              variant="outline-success"
+            >enviar pedido de abastecimento</b-button>
+          </b-col>
+        </b-row>
       </b-col>
     </b-row>
   </section>
@@ -437,8 +439,8 @@ export default {
 
     function enviarPedido(order) {
       this.$swal({
-        title: 'Tem certeza que deseja submeter a ordem?',
-        text: 'Nao podera reverter essa accao!',
+        title: 'Submeter a ordem? <br/> Não poderá reverter essa acção!',
+        // text: 'Nao podera reverter essa accao!',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'Sim!',
@@ -517,3 +519,7 @@ export default {
 
 }
 </script>
+<style>
+
+
+</style>
