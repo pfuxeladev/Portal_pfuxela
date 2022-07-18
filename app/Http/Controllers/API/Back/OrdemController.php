@@ -59,7 +59,8 @@ class OrdemController extends Controller
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
               $data["email"] = $bombas_mail->email_bomba;
-              $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+            //   $data["title"] = "Ordem de abastecimento";
+              $data["title"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
                $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
