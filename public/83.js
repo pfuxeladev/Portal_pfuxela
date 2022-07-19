@@ -452,6 +452,8 @@ __webpack_require__.r(__webpack_exports__);
         });
 
         _this4.$refs.AbastecimentoForm.hide();
+
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
@@ -1417,7 +1419,7 @@ var render = function () {
                                                             reduce: function (
                                                               viaturas
                                                             ) {
-                                                              return viaturas.id
+                                                              return viaturas.viatura_id
                                                             },
                                                             clearable: false,
                                                             "input-id":

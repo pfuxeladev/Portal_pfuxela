@@ -147,7 +147,6 @@
                             />
                           </b-form-group>
                         </b-col>
-
                         <b-col cols="12" lg="4">
                           <b-form-group
                             id="input-group-7"

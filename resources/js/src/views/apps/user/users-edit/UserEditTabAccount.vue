@@ -280,7 +280,9 @@ export default {
       updateUser,
       form: new Form({
         username: this.userData.name,
-        permissions: { name: '', state: false },
+        nome_completo: this.userData.person.nome_completo,
+        role_id: this.userData.roles.id,
+        permissions:'' ,
       }),
     }
   },
