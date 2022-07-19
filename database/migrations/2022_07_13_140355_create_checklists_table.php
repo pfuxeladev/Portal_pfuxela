@@ -20,7 +20,8 @@ class CreateChecklistsTable extends Migration
             $table->foreignIdFor(CheckListOut::class)->nullable()->constrained();
             $table->foreignIdFor(App\Models\checklist_vars::class)->constrained();
             $table->foreignIdFor(checkListIn::class)->nullable()->constrained();
-            $table->char('opcao', 5);
+            $table->char('opcao', 5)->nullable();
+            $table->char('opcao_entrada', 5)->nullable();
             $table->timestamps();
         });
     }

@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
 use Intervention\Image\Exception\NotReadableException;
+use Illuminate\Support\Facades\DB;
 class CheckListInController extends Controller
 {
     private $checkListIn;
@@ -67,7 +68,7 @@ class CheckListInController extends Controller
             $checkListIn->chefe_operacao = $request->chefe_operacao;
             $checkListIn->user_id = auth()->user()->id;
             $checkListIn->save();
-            
+
             if ($request->anexos != null) {
 
                 $images = $request->anexos;
@@ -92,23 +93,28 @@ class CheckListInController extends Controller
                     $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
                     foreach ($checklistVars[$key] as $key => $value) {
                         // return $value['id'];
-                      $checklists[] = [
-                            'checklist_vars_id'=>$value['id'],
-                            'opcao'=>$var['opcao'],
-                            'check_list_out_id'=>$checkListIn->id
-                           ];
+                    //   $checklists[$key] = [
+                    //         'checklist_vars_id'=>$value->id,
+                    //         'opcao'=>$var['opcao'],
+                    //         'check_list_in_id'=>$checkListIn->id
+                    //        ];
+                           DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
+                            'checklist_vars_id'=>$value->id,
+                            'opcao_entrada'=>$var['opcao'],
+                            'check_list_in_id'=>$checkListIn->id
+                           ]);
                     }
                    }
 
-                   checklists::insert($checklists);
 
-                   $checkList = checklists::where('check_list_out_id', $checkListIn->id)->where('opcao','!=', 'true')->get();
+
+                   $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 1)->get();
 
                    $ocorrencia = [];
                    foreach($checkList as $chkOc){
                    $ocorrencia[] = [
                         'descricao'=>checklist_vars::where('id', $chkOc->checklist_vars_id)->pluck('checklist_name'),
-                        'situacao'=>$chkOc->opcao,
+                        'situacao_entrada'=>$chkOc->opcao,
                         'checklists_id'=>$chkOc->id
                     ];
                 }

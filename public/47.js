@@ -3321,7 +3321,7 @@ __webpack_require__.r(__webpack_exports__);
       var id = _ref2.id,
           userData = _ref2.userData;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/users/".concat(id), {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/users/".concat(id), {
           userData: userData
         }).then(function (response) {
           return resolve(response);
