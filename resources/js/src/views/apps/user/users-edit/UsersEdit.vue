@@ -103,18 +103,18 @@ export default {
         }
       })
 
-    function updateUser() {
-      store.dispatch(`app/updateUser/${router.currentRoute.params.id}`, userData)
-        .then(response => { userData.value = response.data })
-        .catch(error => {
-          if (error.response.status === 404) {
-            userData.value = undefined
-          }
-        })
-    }
+    // function updateUser() {
+    //   store.dispatch(`app/updateUser/${router.currentRoute.params.id}`, userData)
+    //     .then(response => { userData.value = response.data })
+    //     .catch(error => {
+    //       if (error.response.status === 404) {
+    //         userData.value = undefined
+    //       }
+    //     })
+    // }
 
     return {
-      updateUser,
+    //   updateUser,
       userData,
     }
   },

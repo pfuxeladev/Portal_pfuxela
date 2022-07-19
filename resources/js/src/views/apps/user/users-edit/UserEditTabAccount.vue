@@ -129,6 +129,7 @@
           <b-button
             variant="primary"
             class="mb-1 mb-sm-0 mr-0 mr-sm-1"
+            type="submit"
             :block="$store.getters['app/currentBreakPoint'] === 'xs'"
           >
             Salvar mudan&ccedil;as
@@ -161,12 +162,16 @@ import {
   BCardHeader,
   BCardTitle,
   BFormCheckbox,
-} from "bootstrap-vue";
-import { avatarText } from "@core/utils/filter";
-import vSelect from "vue-select";
-import { useInputImageRenderer } from "@core/comp-functions/forms/form-utils";
-import { ref } from "@vue/composition-api";
-import useUsersList from "../users-list/useUsersList";
+} from 'bootstrap-vue'
+import Form from 'vform'
+import { avatarText } from '@core/utils/filter'
+import vSelect from 'vue-select'
+import { useInputImageRenderer } from '@core/comp-functions/forms/form-utils'
+import { ref, onUnmounted } from '@vue/composition-api'
+import userStoreModule from '../userStoreModule'
+import router from '@/router'
+import store from '@/store'
+import useUsersList from '../users-list/useUsersList'
 
 export default {
   components: {
@@ -192,54 +197,73 @@ export default {
     },
   },
   created() {
-    this.getRoles();
-    this.getPermissions();
+    this.getRoles()
+    this.getPermissions()
   },
   setup(props) {
-    const { resolveUserRoleVariant } = useUsersList();
+    const { resolveUserRoleVariant } = useUsersList()
 
     const roleOptions = [
       {
-        name: "",
+        name: '',
         id: null,
       },
-    ];
+    ]
 
     const statusOptions = [
       {
-        label: "Active",
+        label: 'Active',
         value: true,
       },
       {
-        label: "Inactive",
+        label: 'Inactive',
         value: false,
       },
-    ];
+    ]
 
-    const permissionsData = ref(null);
+    const permissionsData = ref(null)
 
     // ? Demo Purpose => Update image on click of update
-    const refInputEl = ref(null);
-    const previewEl = ref(null);
+    const refInputEl = ref(null)
+    const previewEl = ref(null)
 
     const { inputImageRenderer } = useInputImageRenderer(
       refInputEl,
       (base64) => {
         // eslint-disable-next-line no-param-reassign
-        props.userData.avatar = base64;
+        props.userData.avatar = base64
       }
-    );
+    )
 
     function getRoles() {
-      this.$http.get("/api/roles").then((res) => {
-        this.roleOptions = res.data;
-      });
+      this.$http.get('/api/roles').then((res) => {
+        this.roleOptions = res.data
+      })
     }
 
     function getPermissions() {
-      this.$http.get("/api/permissions").then((response) => {
-        this.permissionsData = response.data;
-      });
+      this.$http.get('/api/permissions').then((response) => {
+        this.permissionsData = response.data
+      })
+    }
+    const USER_APP_STORE_MODULE_NAME = 'app-user'
+
+    // Register module
+    if (!store.hasModule(USER_APP_STORE_MODULE_NAME)) store.registerModule(USER_APP_STORE_MODULE_NAME, userStoreModule)
+
+    // UnRegister on leave
+    onUnmounted(() => {
+      if (store.hasModule(USER_APP_STORE_MODULE_NAME)) store.unregisterModule(USER_APP_STORE_MODULE_NAME)
+    })
+
+    function updateUser() {
+      this.$http.put(`/api/users/${router.currentRoute.params.id}`, this.userData)
+        .then(response => { this.userData.value = response.data })
+        .catch(error => {
+          if (error.response.status === 404) {
+            this.userData.value = undefined
+          }
+        })
     }
     return {
       getRoles,
@@ -253,9 +277,14 @@ export default {
       refInputEl,
       previewEl,
       inputImageRenderer,
-    };
+      updateUser,
+      form: new Form({
+        username: this.userData.name,
+        permissions: { name: '', state: false },
+      }),
+    }
   },
-};
+}
 </script>
 
 <style lang="scss">

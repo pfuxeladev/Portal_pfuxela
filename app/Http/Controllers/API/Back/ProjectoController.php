@@ -31,7 +31,7 @@ class ProjectoController extends Controller
      foreach ($api_resource['data'] as $key => $project) {
          $key++;
 
-         $projecto = projecto::updateOrCreate(
+         $projecto = projecto::firstOrNew(
              ['id'=>$project['id'],
              'name'=>$project['name'],
              'email'=>$project['email'],
