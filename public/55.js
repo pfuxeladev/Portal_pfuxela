@@ -369,6 +369,8 @@ __webpack_require__.r(__webpack_exports__);
       updateUser: updateUser,
       form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
         username: this.userData.name,
+        nome_completo: this.userData.person.nome_completo,
+        role_id: this.userData.roles.id,
         permissions: {
           name: '',
           state: false

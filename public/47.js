@@ -2320,7 +2320,7 @@ var render = function () {
                         },
                       },
                       [
-                        data.item.is_active === true
+                        data.item.is_active === 1
                           ? _c("span", [_vm._v("Activo")])
                           : _c("span", [_vm._v("Inactivo")]),
                       ]
