@@ -320,8 +320,9 @@ class AbastecimentoController extends Controller
         $ordem->save();
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
-            return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);
+
+        if (!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first()))
+            return response()->json(['erro' => 'Erro! Esta viatura ja abasteceu'], 421);
 
 
         $preco = 0;

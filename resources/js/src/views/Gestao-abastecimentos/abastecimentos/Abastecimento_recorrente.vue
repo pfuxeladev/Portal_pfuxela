@@ -151,7 +151,7 @@
                         :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                         label="matricula"
                         :options="viaturas"
-                        :reduce="viaturas => viaturas.id"
+                        :reduce="viaturas => viaturas.viatura_id"
                         :clearable="false"
                         input-id="viatura"
                         :state="getValidationState(validationContext)"
@@ -427,6 +427,7 @@ export default {
             },
           })
           this.$refs.AbastecimentoForm.hide()
+          window.location.reload()
         })
         .catch(err => {
           if (err.response.status === 421) {

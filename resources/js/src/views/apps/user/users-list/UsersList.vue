@@ -126,7 +126,7 @@
             :variant="`light-${resolveUserStatusVariant(data.item.is_active)}`"
             class="text-capitalize"
           >
-            <span v-if="data.item.is_active === true">Activo</span>
+            <span v-if="data.item.is_active === 1">Activo</span>
             <span v-else>Inactivo</span>
           </b-badge>
         </template>
