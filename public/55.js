@@ -1833,27 +1833,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-<<<<<<< HEAD
-      getRoles: getRoles,
-      getPermissions: getPermissions,
-      resolveUserRoleVariant: resolveUserRoleVariant,
-      avatarText: _core_utils_filter__WEBPACK_IMPORTED_MODULE_3__["avatarText"],
-      roleOptions: roleOptions,
-      statusOptions: statusOptions,
-      permissionsData: permissionsData,
-      //  ? Demo - Update Image on click of update button
-      refInputEl: refInputEl,
-      previewEl: previewEl,
-      inputImageRenderer: inputImageRenderer,
-      updateUser: updateUser,
-      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
-        username: this.userData.name,
-        nome_completo: this.userData.person.nome_completo,
-        role_id: this.userData.roles.id,
-        permissions: {
-          name: '',
-          state: false
-=======
       selectedContry: 'select_value',
       selectedLanguage: 'nothing_selected',
       codeIconInfo: _code__WEBPACK_IMPORTED_MODULE_5__["codeIconInfo"],
@@ -1917,7 +1896,6 @@ __webpack_require__.r(__webpack_exports__);
           title: 'Form Submitted',
           icon: 'EditIcon',
           variant: 'success'
->>>>>>> 6a4acc0eb4d8426c17f23cc5dccaa5a9066f272a
         }
       });
     }
