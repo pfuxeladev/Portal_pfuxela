@@ -316,6 +316,8 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function OnSubmit() {
+      var _this6 = this;
+
       //   form.value.anexos = formData.append('anexos', listFiles)
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/addCheckListIn', form.value).then(function (response) {
         toast({
@@ -325,9 +327,11 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        }); //   this.$router.push({
-        //     name: 'Vehicle-movements',
-        //   })
+        });
+
+        _this6.$router.push({
+          name: 'Vehicle-movements'
+        });
       })["catch"](function (err) {
         if (err) {
           toast({
