@@ -332,9 +332,9 @@ export default {
               variant: 'success',
             },
           })
-        //   this.$router.push({
-        //     name: 'Vehicle-movements',
-        //   })
+          this.$router.push({
+            name: 'Vehicle-movements',
+          })
         })
         .catch(err => {
           if (err) {
