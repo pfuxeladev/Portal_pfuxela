@@ -1214,10 +1214,10 @@ function useOcorrenciaList() {
     };
   });
   var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
+    var localItemsCount1 = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
     return {
-      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount ? 1 : 0),
-      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount,
+      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount1 ? 1 : 0),
+      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount1,
       of1: totalEntradas1.value
     };
   });
