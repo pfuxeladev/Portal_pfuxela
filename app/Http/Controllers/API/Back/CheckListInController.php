@@ -143,8 +143,11 @@ class CheckListInController extends Controller
 
 
                 $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
-
-                $viatura1->qtd_disponivel = $qtd_disponivel;
+                if($qtd_disponivel < 0){
+                    $viatura1->qtd_disponivel = 0;
+                }else{
+                    $viatura1->qtd_disponivel = $qtd_disponivel;
+                }
                 $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
                 $viatura1->update();
