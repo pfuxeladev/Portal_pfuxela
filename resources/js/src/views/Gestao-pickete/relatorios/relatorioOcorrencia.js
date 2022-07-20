@@ -71,6 +71,11 @@ export default function useOcorrenciaList() {
 
   watch([currentPage, perPage, searchQuery, rotaFilter], () => {
     refetchData()
+    // refetchData1()
+  })
+
+  watch([currentPage, perPage, searchQuery, rotaFilter], () => {
+    // refetchData()
     refetchData1()
   })
 
