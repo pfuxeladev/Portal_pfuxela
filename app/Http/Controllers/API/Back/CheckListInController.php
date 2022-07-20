@@ -147,7 +147,7 @@ class CheckListInController extends Controller
                 }else{
                     $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
                 }
-                return $viatura1->qtd_disponivel;
+                // return $viatura1->qtd_disponivel;
                 if($qtd_disponivel < 0){
                     $viatura1->qtd_disponivel = 0;
                 }else{
