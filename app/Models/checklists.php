@@ -12,7 +12,8 @@ class checklists extends Model
     protected $fillable = [
         'checklist_vars_id',
         'opcao',
-        'check_list_out_id'
+        'check_list_out_id',
+        'opcao_entrada'
     ];
 
     public function checklist_out(){
