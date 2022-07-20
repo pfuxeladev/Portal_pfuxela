@@ -1456,13 +1456,13 @@ var render = function () {
                     [
                       _c("span", { staticClass: "text-muted" }, [
                         _vm._v(
-                          "Showing " +
+                          "mostrar " +
                             _vm._s(_vm.dataMeta.from) +
-                            " to " +
+                            " a " +
                             _vm._s(_vm.dataMeta.to) +
-                            " of\n            " +
+                            " de\n            " +
                             _vm._s(_vm.dataMeta.of) +
-                            " entries"
+                            " entradas"
                         ),
                       ]),
                     ]
@@ -1706,10 +1706,10 @@ function useOcorrenciaList() {
     };
   });
   var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
+    var localItemsCount1 = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
     return {
-      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount ? 1 : 0),
-      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount,
+      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount1 ? 1 : 0),
+      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount1,
       of1: totalEntradas1.value
     };
   });

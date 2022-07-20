@@ -87,8 +87,8 @@
             "
           >
             <span class="text-muted"
-              >Showing {{ dataMeta.from }} to {{ dataMeta.to }} of
-              {{ dataMeta.of }} entries</span
+              >mostrar {{ dataMeta.from }} a {{ dataMeta.to }} de
+              {{ dataMeta.of }} entradas</span
             >
           </b-col>
           <!-- Pagination -->
