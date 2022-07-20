@@ -294,7 +294,7 @@ export default {
             is_incidente: false,
             anexos: null,
             checklist_var: {
-              id: null, checklist_name: '', opcao: '',
+              id: null, checklist_name: '', opcao: false,
             },
             incidente_id: null,
           }),

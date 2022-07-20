@@ -89,24 +89,32 @@ class CheckListInController extends Controller
                 $checklists = array();
 
                 foreach ($request->checklist_var as $key => $var) {
+                    // $checklists[$key] = $var["opcao"];
 
                     $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
-                    foreach ($checklistVars[$key] as $key => $value) {
-                        // return $value['id'];
-                    //   $checklists[$key] = [
-                    //         'checklist_vars_id'=>$value->id,
-                    //         'opcao'=>$var['opcao'],
-                    //         'check_list_in_id'=>$checkListIn->id
-                    //        ];
-                           DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
-                            'checklist_vars_id'=>$value->id,
-                            'opcao_entrada'=>$var['opcao'],
-                            'check_list_in_id'=>$checkListIn->id
-                           ]);
+                    if(isset($var['opcao']) == true){
+                        foreach ($checklistVars[$key] as $key => $value) {
+
+                            $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
+                                'checklist_vars_id'=>$value->id,
+                                'opcao_entrada'=>1,
+                                'check_list_in_id'=>$checkListIn->id
+                               ]);
+                        }
+
+                    }else {
+                        foreach ($checklistVars[$key] as $key => $value) {
+
+                            $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
+                                'checklist_vars_id'=>$value->id,
+                                'opcao_entrada'=>false,
+                                'check_list_in_id'=>$checkListIn->id
+                               ]);
+                        }
                     }
                    }
 
-
+                //    return $checklists;
 
                    $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 1)->get();
 

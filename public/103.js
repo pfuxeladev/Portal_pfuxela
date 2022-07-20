@@ -288,7 +288,7 @@ __webpack_require__.r(__webpack_exports__);
       checklist_var: {
         id: null,
         checklist_name: '',
-        opcao: ''
+        opcao: false
       },
       incidente_id: null
     }))));
