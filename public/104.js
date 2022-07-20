@@ -762,7 +762,10 @@ function useOcorrenciaList() {
   };
 
   Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, rotaFilter], function () {
-    refetchData();
+    refetchData(); // refetchData1()
+  });
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, rotaFilter], function () {
+    // refetchData()
     refetchData1();
   });
 
