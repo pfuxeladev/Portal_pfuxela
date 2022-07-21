@@ -143,7 +143,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="OpenOrder.estado === 'Aberta' || OpenOrder.estado === 'Pendente'"
+        v-if="OpenOrder.estado === 'Pendente'"
         cols="12"
       >
 
@@ -162,8 +162,8 @@
           </thead>
           <tbody>
             <tr
-              v-for="order in OpenOrder.ordem_viatura"
-              :key="order.id"
+              v-for="(order, index) in OpenOrder.ordem_viatura"
+              :key="index"
             >
               <td>{{ order.viatura.matricula }}</td>
               <td>{{ order.viatura.kilometragem }}</td>
@@ -374,7 +374,7 @@ export default {
           this.$Progress.finish()
           this.form.reset()
           // eslint-disable-next-line no-restricted-globals
-        //   router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+          router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
           window.location.reload()
         }
       }).catch(err => {
@@ -482,7 +482,7 @@ export default {
     //   console.log(order)
     }
     function removerPedido(order) {
-      console.log(order)
+    //   console.log(order)
       store.dispatch('Supply/removeLine', {
         refs: order.ordem_id,
       })
