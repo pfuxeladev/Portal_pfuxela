@@ -95,6 +95,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -612,11 +619,15 @@ var render = function () {
                         key: "cell(ordem)",
                         fn: function (data) {
                           return [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(data.item.codigo_ordem) +
-                                "\n                    "
-                            ),
+                            data.item.ordem !== null
+                              ? _c("span", [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(data.item.ordem.codigo_ordem) +
+                                      "\n                        "
+                                  ),
+                                ])
+                              : _vm._e(),
                           ]
                         },
                       },
@@ -624,11 +635,19 @@ var render = function () {
                         key: "cell(estado)",
                         fn: function (data) {
                           return [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(data.item.ordem.estado) +
-                                "\n                    "
-                            ),
+                            data.item.ordem !== null
+                              ? _c("span", [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(data.item.ordem.estado) +
+                                      "\n                        "
+                                  ),
+                                ])
+                              : _c("span", [
+                                  _vm._v(
+                                    "\n                            -\n                        "
+                                  ),
+                                ]),
                           ]
                         },
                       },

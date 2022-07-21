@@ -258,4 +258,8 @@ class BombaController extends Controller
         $Inspecao = new bombaInspecao();
 
     }
+
+    public function RelatorioBomba(){
+        
+    }
 }

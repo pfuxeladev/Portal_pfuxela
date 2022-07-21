@@ -164,12 +164,69 @@ class CheckListInController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\CheckListIn  $checkListIn
-     * @return \Illuminate\Http\Response
-     */
+
+   // Verificacao instantaneo da entrada de viatura no parque
+
+   public function InstantCheckIn(Request $request){
+    $this->validate($request, [
+        'km_fim'=>'required|numeric|min:0',
+        'hr_fim'=>'required',
+    ]);
+    // try {
+        $checkList_out = CheckListOut::where('viatura_id', $request->viatura_id)->first();
+
+        // return $checkList_out;
+
+        $viatura1 = Viatura::where('id', $checkList_out->viatura_id)->first();
+
+
+        if($viatura1->kilometragem > $request->km_fim){
+            return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
+        }
+
+        // return $request->checklist_var;
+        $checkListIn = new checkListIn();
+        $checkListIn->check_list_out_id = $checkList_out->id;
+        if ($request->motorista_id != null) {
+            $checkListIn->motorista()->associate($request->motorista_id);
+        }
+        $checkListIn->viatura_id = $viatura1->id;
+        $checkListIn->km_fim = $request->km_fim;
+        $checkListIn->hr_fim = $request->hr_fim;
+        $checkListIn->estado = 'ENTRADA';
+        $checkListIn->chefe_operacao = $request->chefe_operacao;
+        $checkListIn->user_id = auth()->user()->id;
+        $checkListIn->save();
+
+        if($request->viatura_id !=null){
+            $viatura = Viatura::where('id', $request->viatura_id)->first();
+             $viatura->locate = 'IN';
+             $viatura->update();
+        }
+
+
+        $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
+
+     $consumo = $delta_percorrido * $viatura1->capacidade_media;
+
+        if($viatura1->qtd_disponinvel > $consumo){
+            $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+        }else{
+            $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
+        }
+        // return $viatura1->qtd_disponivel;
+        if($qtd_disponivel < 0){
+            $viatura1->qtd_disponivel = 0;
+        }else{
+            $viatura1->qtd_disponivel = $qtd_disponivel;
+        }
+        $viatura1->kilometragem = $request->km_fim;
+        $viatura1->locate = 'IN';
+        $viatura1->update();
+
+       return response()->json(['message'=>'Viatura deu entrada com sucesso'], 200);
+
+   }
     public function show(CheckListIn $checkListIn)
     {
         //
