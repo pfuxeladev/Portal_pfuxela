@@ -57,6 +57,11 @@
                             <b-form-input v-model="form.km_inicio" type="text" />
                         </b-form-group>
                     </b-col>
+                      <b-col cols="12" md="3" lg="6" xl="6">
+                        <b-form-group label="qtd actual de combustivel">
+                            <b-form-input v-model="form.litros_tanque" type="text" />
+                        </b-form-group>
+                    </b-col>
                     <b-col cols="12" md="3" lg="6" xl="6">
                         <b-form-group label="hora de partida">
                             <b-form-timepicker v-model="form.hora_inicio" locale="pt-Br" />
@@ -65,15 +70,6 @@
                     <b-col cols="12" md="6" lg="8" xl="10">
                         <table class="table table-bordered">
                             <tbody>
-                                <tr v-for="(chk, i ) in form.checklist_var" :key="i">
-                                    <td>{{chk.checklist_name}}
-                                    <input type="hidden" v-model="chk.checklist_name">
-                                    </td>
-                                    <td>
-                                      <input type="hidden" v-model="chk.id" />
-                                        <b-form-radio-group v-model="chk.opcao" :options="options" :state="state" required/>
-                                    </td>
-                                </tr>
                                 <tr>
                                     <td>Tipo de Saida</td>
                                     <td>
@@ -301,9 +297,10 @@ export default {
             km_inicio: 0,
             hora_inicio: '0:00',
             tipo_saida: '',
-            checklist_var: {
-              id: null, checklist_name: '', opcao: '',
-            },
+            litros_tanque: 0,
+            // checklist_var: {
+            //   id: null, checklist_name: '', opcao: '',
+            // },
           }),
         ),
       ),

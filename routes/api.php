@@ -102,6 +102,9 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::post('/storeChecklistVars', [CheckListOutController::class, 'storeChecklistVars']);
 
     Route::get('/CheckListAttr', [CheckListOutController::class, 'getAttributesCheckList']);
+
+    Route::post('AutorizarSaida', [App\Http\Controllers\API\Back\CheckListOutController::class, 'InstantCheckout']);
+    Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

@@ -25,6 +25,7 @@ class CreateChecklistIn extends Migration
             $table->unsignedBigInteger('check_list_out_id');
             $table->bigInteger('km_fim');
             $table->time('hr_fim')->nullable();
+            $table->decimal('litros_tanque', 5,2);
             $table->string('estado');
             $table->boolean('is_incidente')->default(false);
             $table->string('chefe_operacao')->nullable();

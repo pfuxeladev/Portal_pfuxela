@@ -137,6 +137,7 @@ class CheckListInController extends Controller
                 }
 
 
+
                 $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
 
              $consumo = $delta_percorrido * $viatura1->capacidade_media;
@@ -207,7 +208,7 @@ class CheckListInController extends Controller
 
         $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
 
-     $consumo = $delta_percorrido * $viatura1->capacidade_media;
+        $consumo = $delta_percorrido * $viatura1->capacidade_media;
 
         if($viatura1->qtd_disponinvel > $consumo){
             $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);

@@ -25,7 +25,7 @@ export default {
     addCheckListOut(ctx, CheckListOutData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/CheckListOut', CheckListOutData)
+          .post('/api/AutorizarSaida', CheckListOutData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

@@ -25,6 +25,7 @@ class CreateChecklistOut extends Migration
             $table->boolean('carta_conducao')->default(false);
             $table->bigInteger('km_inicio');
             $table->time('hr_inicio')->nullable();
+            $table->decimal('litros_tanque', 5,2);
             $table->string('estado');
             $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate();
             $table->timestamps();
