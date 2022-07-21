@@ -153,10 +153,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -291,11 +287,10 @@ __webpack_require__.r(__webpack_exports__);
       km_inicio: 0,
       hora_inicio: '0:00',
       tipo_saida: '',
-      checklist_var: {
-        id: null,
-        checklist_name: '',
-        opcao: ''
-      }
+      litros_tanque: 0 // checklist_var: {
+      //   id: null, checklist_name: '', opcao: '',
+      // },
+
     }))));
     var attributeChecklist = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
       checklist_name: null,
@@ -699,6 +694,31 @@ var render = function () {
                         [
                           _c(
                             "b-form-group",
+                            { attrs: { label: "qtd actual de combustivel" } },
+                            [
+                              _c("b-form-input", {
+                                attrs: { type: "text" },
+                                model: {
+                                  value: _vm.form.litros_tanque,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.form, "litros_tanque", $$v)
+                                  },
+                                  expression: "form.litros_tanque",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
+                        [
+                          _c(
+                            "b-form-group",
                             { attrs: { label: "hora de partida" } },
                             [
                               _c("b-form-timepicker", {
@@ -723,128 +743,34 @@ var render = function () {
                         { attrs: { cols: "12", md: "6", lg: "8", xl: "10" } },
                         [
                           _c("table", { staticClass: "table table-bordered" }, [
-                            _c(
-                              "tbody",
-                              [
-                                _vm._l(
-                                  _vm.form.checklist_var,
-                                  function (chk, i) {
-                                    return _c("tr", { key: i }, [
-                                      _c("td", [
-                                        _vm._v(
-                                          _vm._s(chk.checklist_name) +
-                                            "\n                                    "
-                                        ),
-                                        _c("input", {
-                                          directives: [
-                                            {
-                                              name: "model",
-                                              rawName: "v-model",
-                                              value: chk.checklist_name,
-                                              expression: "chk.checklist_name",
-                                            },
-                                          ],
-                                          attrs: { type: "hidden" },
-                                          domProps: {
-                                            value: chk.checklist_name,
-                                          },
-                                          on: {
-                                            input: function ($event) {
-                                              if ($event.target.composing) {
-                                                return
-                                              }
-                                              _vm.$set(
-                                                chk,
-                                                "checklist_name",
-                                                $event.target.value
-                                              )
-                                            },
-                                          },
-                                        }),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        [
-                                          _c("input", {
-                                            directives: [
-                                              {
-                                                name: "model",
-                                                rawName: "v-model",
-                                                value: chk.id,
-                                                expression: "chk.id",
-                                              },
-                                            ],
-                                            attrs: { type: "hidden" },
-                                            domProps: { value: chk.id },
-                                            on: {
-                                              input: function ($event) {
-                                                if ($event.target.composing) {
-                                                  return
-                                                }
-                                                _vm.$set(
-                                                  chk,
-                                                  "id",
-                                                  $event.target.value
-                                                )
-                                              },
-                                            },
-                                          }),
-                                          _vm._v(" "),
-                                          _c("b-form-radio-group", {
-                                            attrs: {
-                                              options: _vm.options,
-                                              state: _vm.state,
-                                              required: "",
-                                            },
-                                            model: {
-                                              value: chk.opcao,
-                                              callback: function ($$v) {
-                                                _vm.$set(chk, "opcao", $$v)
-                                              },
-                                              expression: "chk.opcao",
-                                            },
-                                          }),
-                                        ],
-                                        1
-                                      ),
-                                    ])
-                                  }
-                                ),
+                            _c("tbody", [
+                              _c("tr", [
+                                _c("td", [_vm._v("Tipo de Saida")]),
                                 _vm._v(" "),
-                                _c("tr", [
-                                  _c("td", [_vm._v("Tipo de Saida")]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "td",
-                                    [
-                                      _c("v-select", {
-                                        attrs: {
-                                          label: "text",
-                                          options: _vm.options2,
-                                          reduce: function (options2) {
-                                            return options2.value
-                                          },
+                                _c(
+                                  "td",
+                                  [
+                                    _c("v-select", {
+                                      attrs: {
+                                        label: "text",
+                                        options: _vm.options2,
+                                        reduce: function (options2) {
+                                          return options2.value
                                         },
-                                        model: {
-                                          value: _vm.form.tipo_saida,
-                                          callback: function ($$v) {
-                                            _vm.$set(
-                                              _vm.form,
-                                              "tipo_saida",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "form.tipo_saida",
+                                      },
+                                      model: {
+                                        value: _vm.form.tipo_saida,
+                                        callback: function ($$v) {
+                                          _vm.$set(_vm.form, "tipo_saida", $$v)
                                         },
-                                      }),
-                                    ],
-                                    1
-                                  ),
-                                ]),
-                              ],
-                              2
-                            ),
+                                        expression: "form.tipo_saida",
+                                      },
+                                    }),
+                                  ],
+                                  1
+                                ),
+                              ]),
+                            ]),
                           ]),
                         ]
                       ),

@@ -160,12 +160,7 @@ class CheckListOutController extends Controller
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\CheckListOut  $checkListOut
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         $checkListOut = $this->checkListOut->with(['viatura', 'motorista'])->where('viatura_id', $id)->first();
@@ -182,13 +177,52 @@ class CheckListOutController extends Controller
         return response()->json($dados, 200);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\CheckListOut  $checkListOut
-     * @return \Illuminate\Http\Response
-     */
+// Verificacao instantanea para saida das viaturas;
+
+    public function InstantCheckout(Request $request){
+        $this->validate($request, [
+            // 'tipo_saida'=>'required',
+            'viatura_id'=>'required|integer|exists:viaturas,id',
+            'motorista_id'=>'required|integer|exists:motoristas,id',
+            'km_inicio'=>'required|numeric|min:0',
+            'hora_inicio'=>'required',
+        ], [
+            'required'=>'O :attribute é obrigatório'
+        ]);
+
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+
+        if ($viatura->kilometragem > $request->km_inicio) {
+            return response()->json(['error'=>'kilometragem registada é menor que a kilometragem actual da viatura, Kilometragem actual: '.$viatura->kilometragem], 421);
+        }
+
+        if($viatura->estado == false || $viatura->locate == 'OUT'){
+            return response()->json(['error' => 'A viatura desejada se encontra fora do parque!'], 404);
+        }
+
+        $motorista = motorista::where('id', $request->motorista_id)->first();
+
+        if(empty($motorista)){
+            return response()->json(['error' => 'O motorista não foi encontrado!'], 404);
+        }
+
+        $checkListOut = new CheckListOut();
+
+        $checkListOut->viatura()->associate($request->viatura_id);
+        $checkListOut->motorista()->associate($request->motorista_id);
+        $checkListOut->km_inicio = $request->km_inicio;
+        $checkListOut->hr_inicio = $request->hora_inicio;
+        $checkListOut->estado = $request->tipo_saida;
+        $checkListOut->user_id = auth()->user()->id;
+        $checkListOut->save();
+
+        $viatura->qtd_disponivel = $request->litros_tanque;
+        $viatura->kilometragem = $request->km_inicio;
+        $viatura->locate = 'OUT';
+        $viatura->update();
+
+        return response()->json(['message'=>'viatura inspencionada com sucesso']);
+    }
     public function update(Request $request, CheckListOut $checkListOut)
     {
         //
