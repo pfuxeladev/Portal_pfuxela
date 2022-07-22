@@ -103,7 +103,7 @@ class AbastecimentoController extends Controller
             $datetime = \Carbon\Carbon::now()->subHours(6)->format("Y-m-d H:i:s");
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->orWhere('ordem_viaturas.created_at', '<=', $datetime)->orWhere('viaturas.locate', 'OUT')->where('viaturas.id', $request->viatura_id)->first();
+        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->orWhere('ordem_viaturas.created_at', '<=', $datetime)->where('viaturas.id', $request->viatura_id)->first();
         // return $lastOrderViatura;
         if (!empty($lastOrderViatura)) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
