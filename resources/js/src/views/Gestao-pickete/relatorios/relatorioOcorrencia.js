@@ -46,7 +46,7 @@ export default function useOcorrenciaList() {
     refSaidasTableList.value.refresh()
   }
 
-  watch([currentPage, perPage, searchQuery, rotaFilter], () => {
+  watch([currentPage, perPage, searchQuery], () => {
     refetchData()
   })
 

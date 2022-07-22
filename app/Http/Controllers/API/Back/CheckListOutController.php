@@ -216,7 +216,9 @@ class CheckListOutController extends Controller
         $checkListOut->user_id = auth()->user()->id;
         $checkListOut->save();
 
-        $viatura->qtd_disponivel = $request->litros_tanque;
+        if($request->litros_tanque > 0){
+            $viatura->qtd_disponivel = $request->litros_tanque;
+        }
         $viatura->kilometragem = $request->km_inicio;
         $viatura->locate = 'OUT';
         $viatura->update();
