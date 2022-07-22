@@ -80,15 +80,6 @@
             <b-col cols="12" md="6" lg="8" xl="10">
               <table class="table table-bordered">
                 <tbody>
-                  <tr v-for="(chk, i ) in form.checklist_var" :key="i">
-                    <td style="width: 30%">
-                     <input type="hidden" v-model="chk.checklist_name"/>
-                       {{chk.checklist_name}}
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="chk.opcao" switch size="lg" />
-                    </td>
-                  </tr>
                   <tr>
                     <td>Houve algum incidente</td>
                     <td>

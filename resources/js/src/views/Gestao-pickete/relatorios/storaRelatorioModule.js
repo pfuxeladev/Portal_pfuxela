@@ -53,7 +53,7 @@ export default {
     addCheckListIn(ctx, CheckListInData) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/CheckListIn', CheckListInData)
+          .post('/api/AutorizarEntrada', CheckListInData)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

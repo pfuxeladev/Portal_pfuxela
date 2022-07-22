@@ -390,9 +390,14 @@ __webpack_require__.r(__webpack_exports__);
           _this8.$Progress.finish();
 
           _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
-          //   router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
 
 
+          _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
+            name: 'supply-details',
+            params: {
+              refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
+            }
+          });
           window.location.reload();
         }
       })["catch"](function (err) {
@@ -508,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function removerPedido(order) {
-      console.log(order);
+      //   console.log(order)
       _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Supply/removeLine', {
         refs: order.ordem_id
       }).then(function (response) {
@@ -1018,7 +1023,6 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _vm.OpenOrder.estado === "Aberta" ||
           _vm.OpenOrder.estado === "Pendente"
             ? _c(
                 "b-col",
@@ -1045,73 +1049,82 @@ var render = function () {
                     _vm._v(" "),
                     _c(
                       "tbody",
-                      _vm._l(_vm.OpenOrder.ordem_viatura, function (order) {
-                        return _c("tr", { key: order.id }, [
-                          _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _vm._v(_vm._s(order.viatura.kilometragem)),
-                          ]),
-                          _vm._v(" "),
-                          _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c("span", [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(
-                                    order.preco_cunsumo / order.qtd_abastecida
-                                  ) +
-                                  "\n              "
-                              ),
+                      _vm._l(
+                        _vm.OpenOrder.ordem_viatura,
+                        function (order, index) {
+                          return _c("tr", { key: index }, [
+                            _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _vm._v(_vm._s(order.viatura.kilometragem)),
                             ]),
-                            _vm._v(" MZN\n          "),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "td",
-                            _vm._l(order.ordem_viatura_rota, function (rotas) {
-                              return _c("span", { key: rotas }, [
+                            _vm._v(" "),
+                            _c("td", [_vm._v(_vm._s(order.qtd_abastecida))]),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c("span", [
                                 _vm._v(
-                                  "\n                " +
-                                    _vm._s(rotas.rota.nome_rota) +
-                                    ",\n              "
+                                  "\n                  " +
+                                    _vm._s(
+                                      order.preco_cunsumo / order.qtd_abastecida
+                                    ) +
+                                    "\n              "
                                 ),
-                              ])
-                            }),
-                            0
-                          ),
-                          _vm._v(" "),
-                          _c("td", [
-                            _c("span", [
-                              _vm._v(
-                                "\n              " +
-                                  _vm._s(order.preco_cunsumo) +
-                                  "\n              "
-                              ),
+                              ]),
+                              _vm._v(" MZN\n          "),
                             ]),
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "td",
-                            [
-                              _c(
-                                "b-button",
-                                {
-                                  attrs: { sm: "", variant: "outline-danger" },
-                                  on: {
-                                    click: function ($event) {
-                                      return _vm.removerPedido(order)
+                            _vm._v(" "),
+                            _c(
+                              "td",
+                              _vm._l(
+                                order.ordem_viatura_rota,
+                                function (rotas) {
+                                  return _c("span", { key: rotas }, [
+                                    _vm._v(
+                                      "\n                " +
+                                        _vm._s(rotas.rota.nome_rota) +
+                                        ",\n              "
+                                    ),
+                                  ])
+                                }
+                              ),
+                              0
+                            ),
+                            _vm._v(" "),
+                            _c("td", [
+                              _c("span", [
+                                _vm._v(
+                                  "\n              " +
+                                    _vm._s(order.preco_cunsumo) +
+                                    "\n              "
+                                ),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "td",
+                              [
+                                _c(
+                                  "b-button",
+                                  {
+                                    attrs: {
+                                      sm: "",
+                                      variant: "outline-danger",
+                                    },
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.removerPedido(order)
+                                      },
                                     },
                                   },
-                                },
-                                [_c("i", { staticClass: "fas fa-remove" })]
-                              ),
-                            ],
-                            1
-                          ),
-                        ])
-                      }),
+                                  [_c("i", { staticClass: "fas fa-remove" })]
+                                ),
+                              ],
+                              1
+                            ),
+                          ])
+                        }
+                      ),
                       0
                     ),
                   ]),

@@ -11,7 +11,7 @@
             </b-col>
         </b-row>
          </div>
-        <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns1" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative">
+        <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative">
             <template #cell(Data_de_registo)="data">
                 {{ dateTime(data.item.created_at) }}
             </template>
@@ -55,8 +55,8 @@
             "
           >
             <span class="text-muted"
-              >motrando {{ dataMeta2.from1 }} a {{ dataMeta2.to1 }} de
-              {{ dataMeta2.of1 }} entradas</span
+              >motrando {{ dataMeta.from }} a {{ dataMeta.to }} de
+              {{ dataMeta.of }} entradas</span
             >
           </b-col>
           <!-- Pagination -->
@@ -70,9 +70,9 @@
             "
           >
             <b-pagination
-              v-model="currentPage1"
+              v-model="currentPage"
               :total-rows="totalEntradas"
-              :per-page="perPage1"
+              :per-page="perPage"
               first-number
               last-number
               class="mb-0 mt-1 mt-sm-0"
@@ -114,7 +114,7 @@ import {
   onUnmounted
 } from '@vue/composition-api'
 import moment from 'moment'
-import useOcorrenciaList from './relatorioOcorrencia'
+import useRelatorioEntradaList from './relatorioEntrada'
 import storeRelatorioModule from './storaRelatorioModule'
 import store from '@/store'
 
@@ -147,11 +147,11 @@ export default {
     }
     const {
       fetchEntradas,
-      tableColumns1,
-      perPage1,
-      currentPage1,
+      tableColumns,
+      perPage,
+      currentPage,
       totalEntradas,
-      dataMeta2,
+      dataMeta,
       perPageOptions,
       searchQuery,
       sortBy,
@@ -159,14 +159,14 @@ export default {
       refEntradasTableList,
       refetchData1,
       rotaFilter,
-    } = useOcorrenciaList()
+    } = useRelatorioEntradaList()
     return {
       fetchEntradas,
-      tableColumns1,
-      perPage1,
-      currentPage1,
+      tableColumns,
+      perPage,
+      currentPage,
       totalEntradas,
-      dataMeta2,
+      dataMeta,
       perPageOptions,
       searchQuery,
       sortBy,
