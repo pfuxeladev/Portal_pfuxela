@@ -13,6 +13,7 @@ use App\Models\Modelo;
 use App\Models\Ordem;
 use App\Models\viaturaDocument;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Carbon;
 class ViaturaController extends Controller
 {
     private $viatura;
@@ -32,8 +33,8 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
-        return Viatura::where('estado', 1)->where('locate', 'OUT')
-        ->orderBy('matricula', 'desc')->get();
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)->whereDate('checklist_out.created_at', Carbon::today())->where('viaturas.locate', 'OUT')
+        ->orderBy('viaturas.id', 'desc')->get();
     }
     public function store(Request $request)
     {
