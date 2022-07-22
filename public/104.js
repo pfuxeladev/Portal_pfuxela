@@ -679,8 +679,7 @@ __webpack_require__.r(__webpack_exports__);
 function useOcorrenciaList() {
   // Use toast
   var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__["useToast"])();
-  var refSaidasTableList = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var refEntradaTableList = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
+  var refSaidasTableList = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
 
   var tableColumns = [{
     key: 'Data_de_registo',
@@ -703,34 +702,9 @@ function useOcorrenciaList() {
   }, {
     key: 'acções'
   }];
-  var tableColumns1 = [{
-    key: 'Data_de_registo',
-    sortable: true
-  }, {
-    key: 'Hora_de_saida',
-    sortable: true
-  }, {
-    key: 'Hora_da_chegada',
-    sortable: true
-  }, {
-    key: 'Matricula',
-    sortable: true
-  }, {
-    key: 'Kilometragem_actual',
-    sortable: true
-  }, {
-    Key: 'Criado_por',
-    sortable: true
-  }, {
-    key: 'acções'
-  }];
   var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
-  var perPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
   var totalSaidas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
-  var totalEntradas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
-  var totalEntradas1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
-  var currentPage1 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
   var perPageOptions = [10, 25, 50, 100];
   var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
   var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
@@ -744,29 +718,13 @@ function useOcorrenciaList() {
       of: totalSaidas.value
     };
   });
-  var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount1 = refEntradaTableList.value ? refEntradaTableList.value.localItems.length : 0;
-    return {
-      from1: perPage1.value * (currentPage1.value - 1) + (localItemsCount1 ? 1 : 0),
-      to1: perPage1.value * (currentPage1.value - 1) + localItemsCount1,
-      of1: totalEntradas1.value
-    };
-  });
 
   var refetchData = function refetchData() {
     refSaidasTableList.value.refresh();
   };
 
-  var refetchData1 = function refetchData1() {
-    refEntradaTableList.value.refresh();
-  };
-
   Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, rotaFilter], function () {
-    refetchData(); // refetchData1()
-  });
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, rotaFilter], function () {
-    // refetchData()
-    refetchData1();
+    refetchData();
   });
 
   var fetchSaidas = function fetchSaidas(ctx, callback) {
@@ -791,30 +749,6 @@ function useOcorrenciaList() {
         }
       });
     });
-  };
-
-  var fetchEntradas = function fetchEntradas(ctx, callback) {
-    _store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch('Picket/fetchEntradas', {
-      q: searchQuery.value,
-      perPage: perPage.value,
-      page: currentPage.value,
-      sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value,
-      rota: rotaFilter.value
-    }).then(function (response) {
-      var checklistIn = response.data;
-      callback(checklistIn.data);
-      totalSaidas.value = checklistIn.total;
-    })["catch"](function () {
-      toast({
-        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-        props: {
-          title: 'Erro na listagem de entrada de viaturas',
-          icon: 'AlertTriangleIcon',
-          variant: 'danger'
-        }
-      });
-    });
   }; // *===============================================---*
   // *--------- UI ---------------------------------------*
   // *===============================================---*
@@ -822,25 +756,17 @@ function useOcorrenciaList() {
 
   return {
     fetchSaidas: fetchSaidas,
-    fetchEntradas: fetchEntradas,
     tableColumns: tableColumns,
-    tableColumns1: tableColumns1,
     perPage: perPage,
     currentPage: currentPage,
-    perPage1: perPage1,
-    currentPage1: currentPage1,
     totalSaidas: totalSaidas,
-    totalEntradas: totalEntradas,
     dataMeta: dataMeta,
     perPageOptions: perPageOptions,
     searchQuery: searchQuery,
     sortBy: sortBy,
     isSortDirDesc: isSortDirDesc,
     refSaidasTableList: refSaidasTableList,
-    refEntradaTableList: refEntradaTableList,
-    dataMeta2: dataMeta2,
     refetchData: refetchData,
-    refetchData1: refetchData1,
     // Extra Filters
     rotaFilter: rotaFilter
   };

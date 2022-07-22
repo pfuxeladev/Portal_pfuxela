@@ -13,6 +13,19 @@
               >
             </b-link>
           </b-col>
+          <b-col
+            class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
+          >
+            <label>mostrar</label>
+            <v-select
+              v-model="perPage"
+              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+              :options="perPageOptions"
+              :clearable="false"
+              class="per-page-selector d-inline-block mx-50"
+            />
+            <label>entradas</label>
+          </b-col>
           <b-col>
             <b-form-input
               v-model="searchQuery"
@@ -163,17 +176,16 @@ export default {
     const SAIDAS_STORE_MODULE_NAME = 'Picket'
 
     // Register module
-    if (!store.hasModule(SAIDAS_STORE_MODULE_NAME))
-      store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
+    if (!store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(SAIDAS_STORE_MODULE_NAME))
-        store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
+      if (store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
     })
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
+
     const {
       fetchSaidas,
       tableColumns,
