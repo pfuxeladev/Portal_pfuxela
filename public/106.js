@@ -1023,6 +1023,7 @@ var render = function () {
             1
           ),
           _vm._v(" "),
+          _vm.OpenOrder.estado === "Aberta" ||
           _vm.OpenOrder.estado === "Pendente"
             ? _c(
                 "b-col",

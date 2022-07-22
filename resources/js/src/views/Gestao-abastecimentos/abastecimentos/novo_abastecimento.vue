@@ -143,7 +143,7 @@
         </b-form>
       </b-col>
       <b-col
-        v-if="OpenOrder.estado === 'Pendente'"
+        v-if="OpenOrder.estado === 'Aberta' || OpenOrder.estado === 'Pendente'"
         cols="12"
       >
 
