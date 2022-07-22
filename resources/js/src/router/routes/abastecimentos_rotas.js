@@ -9,6 +9,14 @@ export default
     },
   },
   {
+    path: '/Supply/General-history',
+    name: 'Supply history',
+    component: () => import('@/views/Gestao-abastecimentos/abastecimentos/relatorio_geral.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/recurring-supply',
     name: 'recurring supply',
     component: () => import('@/views/Gestao-abastecimentos/abastecimentos/Abastecimento_recorrente.vue'),

@@ -28,6 +28,8 @@ export default function useAbastecimentoList() {
     { key: 'ordem', sortable: true },
     { key: 'bombas', sortable: true },
     { key: 'viatura', sortable: true },
+    { key: 'destino', sortable: true },
+    { key: 'descricao', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'hora_de_saida', sortable: true },
     { key: 'user', sortable: true },
@@ -120,12 +122,50 @@ export default function useAbastecimentoList() {
         toast({
           component: ToastificationContent,
           props: {
-            title: 'Erro na listagem de abastecimentos',
+            title: 'Erro na listagem',
             icon: 'AlertTriangleIcon',
             variant: 'danger',
           },
         })
       })
+  }
+  //   Get Relatorio Geral de abastecimentos
+
+  const dia = ref(null)
+  const mes = ref(null)
+  const semana = ref(null)
+  const intervalo = ref(null)
+  const RelatorioGeral = ref(null)
+  const totalHistoricos = ref(null)
+
+  const dataHistory = computed(() => {
+    const localItemsCount = RelatorioGeral.value ? RelatorioGeral.value.localItems.length : 0
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalHistoricos.value,
+    }
+  })
+
+  const refetchHistory = () => {
+    RelatorioGeral.value.refresh()
+  }
+
+  const generalReport = (ctx, callback) => {
+    store.dispatch('Supply/getHistory', {
+      dia: dia.value,
+      mes: mes.value,
+      semana: semana.value,
+      intervalo: intervalo.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value,
+    }).then(response => {
+      const Historico = response.data
+      callback(Historico.data)
+      totalHistoricos.value = Historico.total
+    })
   }
   // *===============================================---*
   // *--------- UI ---------------------------------------*
@@ -154,5 +194,12 @@ export default function useAbastecimentoList() {
     roleFilter,
     planFilter,
     statusFilter,
+
+    // Historico Geral de abastecimento
+    refetchHistory,
+    generalReport,
+    RelatorioGeral,
+    totalHistoricos,
+    dataHistory,
   }
 }

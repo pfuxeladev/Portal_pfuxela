@@ -1203,6 +1203,12 @@ function useAbastecimentoList() {
     key: 'viatura',
     sortable: true
   }, {
+    key: 'destino',
+    sortable: true
+  }, {
+    key: 'descricao',
+    sortable: true
+  }, {
     key: 'motorista',
     sortable: true
   }, {
@@ -1293,11 +1299,48 @@ function useAbastecimentoList() {
       toast({
         component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
         props: {
-          title: 'Erro na listagem de abastecimentos',
+          title: 'Erro na listagem',
           icon: 'AlertTriangleIcon',
           variant: 'danger'
         }
       });
+    });
+  }; //   Get Relatorio Geral de abastecimentos
+
+
+  var dia = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var mes = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var semana = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var intervalo = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var RelatorioGeral = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var totalHistoricos = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var dataHistory = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = RelatorioGeral.value ? RelatorioGeral.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalHistoricos.value
+    };
+  });
+
+  var refetchHistory = function refetchHistory() {
+    RelatorioGeral.value.refresh();
+  };
+
+  var generalReport = function generalReport(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('Supply/getHistory', {
+      dia: dia.value,
+      mes: mes.value,
+      semana: semana.value,
+      intervalo: intervalo.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var Historico = response.data;
+      callback(Historico.data);
+      totalHistoricos.value = Historico.total;
     });
   }; // *===============================================---*
   // *--------- UI ---------------------------------------*
@@ -1325,7 +1368,13 @@ function useAbastecimentoList() {
     // Extra Filters
     roleFilter: roleFilter,
     planFilter: planFilter,
-    statusFilter: statusFilter
+    statusFilter: statusFilter,
+    // Historico Geral de abastecimento
+    refetchHistory: refetchHistory,
+    generalReport: generalReport,
+    RelatorioGeral: RelatorioGeral,
+    totalHistoricos: totalHistoricos,
+    dataHistory: dataHistory
   };
 }
 
