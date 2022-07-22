@@ -102,7 +102,7 @@ class AbastecimentoController extends Controller
             }
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first();
+        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->orWhere('viaturas.locate', 'IN')->where('viaturas.id', $request->viatura_id)->first();
         // return $lastOrderViatura;
         if (!empty($lastOrderViatura)) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
@@ -127,7 +127,8 @@ class AbastecimentoController extends Controller
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
         foreach ($request->rota_id as $key => $rt) {
-            $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->first();
+            $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->whereDate('ordem_viatura_rotas.created_at', Carbon::today())->orWhere('viaturas.locate', 'IN')->first();
             if (!empty($ordem_rota)) {
                 return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
             }
