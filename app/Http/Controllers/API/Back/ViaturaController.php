@@ -32,9 +32,8 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
-        return Viatura::where('viaturas.estado', 1)->where('viaturas.locate', 'OUT')
-        ->select('viaturas.matricula', 'viaturas.id')
-        ->orderBy('viaturas.matricula', 'desc')->get();
+        return Viatura::where('estado', 1)->where('locate', 'OUT')
+        ->orderBy('matricula', 'desc')->get();
     }
     public function store(Request $request)
     {
