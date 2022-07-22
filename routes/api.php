@@ -105,6 +105,9 @@ Route::group(['middleware'=>'auth:api'], function () {
 
     Route::post('AutorizarSaida', [App\Http\Controllers\API\Back\CheckListOutController::class, 'InstantCheckout']);
     Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
+        // Relatorio Geral de Abastecimentos
+    Route::get('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
+
 });
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);

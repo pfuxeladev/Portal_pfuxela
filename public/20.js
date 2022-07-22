@@ -8667,6 +8667,10 @@ __webpack_require__.r(__webpack_exports__);
     route: 'Supply',
     icon: 'circleIcon'
   }, {
+    title: 'Supply history',
+    route: 'Supply history',
+    icon: 'folderOpenIcon'
+  }, {
     title: 'Fuel pumps',
     route: 'Fuel pumps',
     icon: 'circleIcon'

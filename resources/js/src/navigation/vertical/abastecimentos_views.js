@@ -14,6 +14,11 @@ export default [
         icon: 'circleIcon',
       },
       {
+        title: 'Supply history',
+        route: 'Supply history',
+        icon: 'folderOpenIcon',
+      },
+      {
         title: 'Fuel pumps',
         route: 'Fuel pumps',
         icon: 'circleIcon',

@@ -297,7 +297,7 @@ class OrdemController extends Controller
 
     }
 
-    function RelatorioSemanal(Request $request){
+    function RelatorioGeral(Request $request){
 
     }
 

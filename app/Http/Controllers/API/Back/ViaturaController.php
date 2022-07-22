@@ -32,7 +32,8 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)->where('viaturas.locate', 'OUT')
+        ->select('viaturas.matricula')->groupBY('viaturas.matricula')
         ->orderBy('viaturas.id', 'desc')->get();
     }
     public function store(Request $request)
