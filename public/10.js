@@ -584,7 +584,7 @@ function useOcorrenciaList() {
     refSaidasTableList.value.refresh();
   };
 
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, rotaFilter], function () {
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery], function () {
     refetchData();
   });
 
