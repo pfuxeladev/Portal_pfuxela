@@ -77,13 +77,13 @@ export default {
       })
     },
     getHistory(ctx, queryParams) {
-        return new Promise((resolve, reject) => {
-          axios
-            .get('/api/RelatorioGeral', { params: queryParams })
-            .then(response => resolve(response))
-            .catch(error => reject(error))
-        })
-      },
+      return new Promise((resolve, reject) => {
+        axios
+          .get('/api/RelatorioGeral', { params: queryParams })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
     // ReabrirOrdem
     ReopenOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {

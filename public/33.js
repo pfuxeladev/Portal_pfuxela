@@ -1,28 +1,498 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[33],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/bar */ "./node_modules/echarts/lib/chart/bar.js");
+/* harmony import */ var echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        legend: {
+          left: 0
+        },
+        grid: this.optionData.grid,
+        xAxis: this.optionData.xAxis,
+        yAxis: this.optionData.yAxis,
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/pie */ "./node_modules/echarts/lib/chart/pie.js");
+/* harmony import */ var echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    series: {
+      type: Array,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          left: 10,
+          bottom: '0'
+        },
+        series: this.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/line */ "./node_modules/echarts/lib/chart/line.js");
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      line: {
+        // Make gradient line here
+        visualMap: [{
+          show: true,
+          type: 'continuous',
+          min: 0,
+          max: 400
+        }],
+        grid: {
+          width: '96%',
+          left: '30px',
+          top: '10px',
+          show: false
+        },
+        tooltip: {
+          trigger: 'axis'
+        },
+        xAxis: [{
+          boundaryGap: false,
+          data: this.optionData.xAxisData
+        }],
+        yAxis: {
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        },
+        series: {
+          type: 'line',
+          showSymbol: false,
+          data: this.optionData.series
+        }
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/radar */ "./node_modules/echarts/lib/chart/radar.js");
+/* harmony import */ var echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        title: {
+          text: 'Basic radar chart'
+        },
+        tooltip: {},
+        legend: {
+          data: ['Point One', 'Point Two'],
+          bottom: '0',
+          left: '0'
+        },
+        radar: {
+          name: {
+            textStyle: {
+              color: '#626262',
+              fontWeight: 'bold',
+              borderRadius: 3,
+              padding: [3, 5]
+            }
+          },
+          indicator: this.optionData.indicator,
+          splitArea: {
+            show: false
+          },
+          splitLine: {
+            lineStyle: {
+              color: ['#eeeeee']
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#eeeeee'
+            }
+          }
+        },
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/scatter */ "./node_modules/echarts/lib/chart/scatter.js");
+/* harmony import */ var echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        grid: {
+          width: '95%',
+          left: '30px',
+          right: '40px',
+          containLabel: false
+        },
+        legend: {
+          enable: true,
+          left: '0'
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        xAxis: {
+          boundaryGap: false,
+          scale: true,
+          splitNumber: 10,
+          min: 0
+        },
+        yAxis: {
+          splitLine: {
+            show: false
+          },
+          scale: true
+        },
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/line */ "./node_modules/echarts/lib/chart/line.js");
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        title: {
+          text: 'Stacked area chart'
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        legend: {
+          left: '0'
+        },
+        grid: {
+          width: '95%',
+          left: '40px',
+          right: '4%',
+          containLabel: false
+        },
+        xAxis: [{
+          type: 'category',
+          boundaryGap: false,
+          data: this.optionData.xAxisData
+        }],
+        yAxis: [{
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        }],
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _FormDatepickerBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerBasic.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue");
-/* harmony import */ var _FormDatepickerState_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormDatepickerState.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue");
-/* harmony import */ var _FormDatepickerMinMax_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue");
-/* harmony import */ var _FormDatepickerDisableDate_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue");
-/* harmony import */ var _FormDatepickerValidation_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormDatepickerValidation.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue");
-/* harmony import */ var _FormDatepickerVariant_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormDatepickerVariant.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue");
-/* harmony import */ var _FormDatepickerSize_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormDatepickerSize.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue");
-/* harmony import */ var _FormDatepickerPlaceholder_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue");
-/* harmony import */ var _FormDatepickerOptional_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormDatepickerOptional.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue");
-/* harmony import */ var _FormDatepickerButtonOnly_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue");
-/* harmony import */ var _FormDatepickerString_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FormDatepickerString.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue");
-/* harmony import */ var _FormDatepickerFullWidth_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue");
-/* harmony import */ var _FormDatepickerInternationalization_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue");
+/* harmony import */ var _EchartLine_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartLine.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue");
+/* harmony import */ var _EchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartStackedArea.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue");
+/* harmony import */ var _EchartArea_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EchartArea.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue");
+/* harmony import */ var _EchartBar_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EchartBar.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue");
+/* harmony import */ var _EchartBarHorizontal_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EchartBarHorizontal.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue");
+/* harmony import */ var _EchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EchartDoughnut.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue");
+/* harmony import */ var _EchartRadar_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./EchartRadar.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue");
+/* harmony import */ var _EchartScatter_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./EchartScatter.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue");
 //
 //
 //
@@ -52,26 +522,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-
 
 
 
@@ -85,36 +535,30 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    FormDatepickerBasic: _FormDatepickerBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FormDatepickerState: _FormDatepickerState_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    FormDatepickerMinMax: _FormDatepickerMinMax_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FormDatepickerDisableDate: _FormDatepickerDisableDate_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    FormDatepickerValidation: _FormDatepickerValidation_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    FormDatepickerVariant: _FormDatepickerVariant_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    FormDatepickerSize: _FormDatepickerSize_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    FormDatepickerPlaceholder: _FormDatepickerPlaceholder_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    FormDatepickerOptional: _FormDatepickerOptional_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    FormDatepickerButtonOnly: _FormDatepickerButtonOnly_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
-    FormDatepickerString: _FormDatepickerString_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
-    FormDatepickerFullWidth: _FormDatepickerFullWidth_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
-    FormDatepickerInternationalization: _FormDatepickerInternationalization_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+    EchartLine: _EchartLine_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    EchartStackedArea: _EchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    EchartArea: _EchartArea_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    EchartBar: _EchartBar_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    EchartBarHorizontal: _EchartBarHorizontal_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    EchartDoughnut: _EchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    EchartRadar: _EchartRadar_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    EchartScatter: _EchartScatter_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartStackedArea.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue");
 //
 //
 //
@@ -122,427 +566,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartStackedArea: _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      value: '',
-      codeBasic: _code__WEBPACK_IMPORTED_MODULE_2__["codeBasic"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"]
-  },
-  data: function data() {
-    return {
-      value: '',
-      formatted: '',
-      selected: '',
-      codeButtonOnly: _code__WEBPACK_IMPORTED_MODULE_2__["codeButtonOnly"]
-    };
-  },
-  methods: {
-    onContext: function onContext(ctx) {
-      // The date formatted in the locale, or the `label-no-date-selected` string
-      this.formatted = ctx.selectedFormatted; // The following will be an empty string until a valid date is entered
-
-      this.selected = ctx.selectedYMD;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
-  },
-  data: function data() {
-    return {
-      value: '',
-      codeDisableDate: _code__WEBPACK_IMPORTED_MODULE_2__["codeDisableDate"]
-    };
-  },
-  methods: {
-    dateDisabled: function dateDisabled(ymd, date) {
-      // Disable weekends (Sunday = `0`, Saturday = `6`) and
-      // disable days that fall on the 13th of the month
-      var weekday = date.getDay();
-      var day = date.getDate(); // Return `true` if the date should be disabled
-
-      return weekday === 0 || weekday === 6 || day === 13;
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
-  },
-  data: function data() {
-    return {
-      value: '',
-      codeFullWith: _code__WEBPACK_IMPORTED_MODULE_2__["codeFullWith"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
-    BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSelect"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"]
-  },
-  data: function data() {
-    return {
-      value: '',
-      locale: 'en-US',
-      showDecadeNav: false,
-      hideHeader: false,
-      codeInternationalization: _code__WEBPACK_IMPORTED_MODULE_2__["codeInternationalization"],
-      locales: [{
-        value: 'en-US',
-        text: 'English US (en-US)'
-      }, {
-        value: 'de',
-        text: 'German (de)'
-      }, {
-        value: 'ar-EG',
-        text: 'Arabic Egyptian (ar-EG)'
-      }, {
-        value: 'zh',
-        text: 'Chinese (zh)'
-      }],
-      weekday: 0,
-      weekdays: [{
-        value: 0,
-        text: 'Sunday'
-      }, {
-        value: 1,
-        text: 'Monday'
-      }, {
-        value: 6,
-        text: 'Saturday'
-      }],
-      labels: {
-        de: {
-          labelPrevDecade: 'Vorheriges Jahrzehnt',
-          labelPrevYear: 'Vorheriges Jahr',
-          labelPrevMonth: 'Vorheriger Monat',
-          labelCurrentMonth: 'Aktueller Monat',
-          labelNextMonth: 'Nächster Monat',
-          labelNextYear: 'Nächstes Jahr',
-          labelNextDecade: 'Nächstes Jahrzehnt',
-          labelToday: 'Heute',
-          labelSelected: 'Ausgewähltes Datum',
-          labelNoDateSelected: 'Kein Datum gewählt',
-          labelCalendar: 'Kalender',
-          labelNav: 'Kalendernavigation',
-          labelHelp: 'Mit den Pfeiltasten durch den Kalender navigieren'
-        },
-        'ar-EG': {
-          labelPrevDecade: 'العقد السابق',
-          labelPrevYear: 'العام السابق',
-          labelPrevMonth: 'الشهر السابق',
-          labelCurrentMonth: 'الشهر الحالي',
-          labelNextMonth: 'الشهر المقبل',
-          labelNextYear: 'العام المقبل',
-          labelNextDecade: 'العقد القادم',
-          labelToday: 'اليوم',
-          labelSelected: 'التاريخ المحدد',
-          labelNoDateSelected: 'لم يتم اختيار تاريخ',
-          labelCalendar: 'التقويم',
-          labelNav: 'الملاحة التقويم',
-          labelHelp: 'استخدم مفاتيح المؤشر للتنقل في التواريخ'
-        },
-        zh: {
-          labelPrevDecade: '过去十年',
-          labelPrevYear: '上一年',
-          labelPrevMonth: '上个月',
-          labelCurrentMonth: '当前月份',
-          labelNextMonth: '下个月',
-          labelNextYear: '明年',
-          labelNextDecade: '下一个十年',
-          labelToday: '今天',
-          labelSelected: '选定日期',
-          labelNoDateSelected: '未选择日期',
-          labelCalendar: '日历',
-          labelNav: '日历导航',
-          labelHelp: '使用光标键浏览日期'
-        }
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: [{
+          name: 'Point One',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#84d0ff'
+          },
+          color: '#84d0ff',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [120, 432, 281, 434, 590, 330, 210, 150, 110, 150, 420, 650, 560, 250]
+        }, {
+          name: 'Point Two',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#299aff'
+          },
+          color: '#299aff',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [20, 32, 281, 634, 490, 430, 310, 450, 900, 1250, 1180, 750, 560, 550]
+        }, {
+          name: 'Point Three',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#eef1f4'
+          },
+          color: '#eef1f4',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [120, 132, 981, 134, 100, 80, 410, 550, 50, 0, 0, 0, 80, 550]
+        }]
       }
     };
   }
@@ -550,18 +627,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartBar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue");
 //
 //
 //
@@ -570,68 +646,81 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartBar: _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
-    var now = new Date();
-    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 15th two months prior
-
-    var minDate = new Date(today);
-    minDate.setMonth(minDate.getMonth() - 2);
-    minDate.setDate(15); // 15th in two months
-
-    var maxDate = new Date(today);
-    maxDate.setMonth(maxDate.getMonth() + 2);
-    maxDate.setDate(15);
     return {
-      value: '',
-      min: minDate,
-      max: maxDate,
-      codeMinMax: _code__WEBPACK_IMPORTED_MODULE_2__["codeMinMax"]
+      option: {
+        xAxis: [{
+          type: 'category',
+          data: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12']
+        }],
+        yAxis: [{
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        }],
+        grid: {
+          left: '40px',
+          right: '30px',
+          bottom: '30px'
+        },
+        series: [{
+          name: 'Point One',
+          type: 'bar',
+          stack: 'advertising',
+          data: [220, 232, 201, 334, 290, 230, 220, 360, 80, 130, 310, 460, 110, 80],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Two',
+          type: 'bar',
+          stack: 'advertising',
+          data: [220, 232, 201, 234, 190, 130, 210, 163, 105, 120, 220, 102, 150, 130],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Three',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 102, 101, 134, 190, 130, 210, 102, 80, 50, 90, 50, 40, 30],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Four',
+          type: 'bar',
+          stack: 'advertising',
+          data: [350, 432, 301, 392, 90, 230, 310, 130, 50, 250, 50, 120, 50, 110],
+          barMaxWidth: '20%',
+          barMinWidth: '10px',
+          itemStyle: {
+            barBorderRadius: [10, 10, 0, 0]
+          }
+        }]
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartBar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue");
 //
 //
 //
@@ -640,57 +729,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartBar: _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      codeOptional: _code__WEBPACK_IMPORTED_MODULE_2__["codeOptional"]
+      option: {
+        xAxis: [{
+          type: 'value'
+        }],
+        yAxis: [{
+          type: 'category',
+          data: ['Sunday, 17', 'Saturday, 16', 'Friday, 15', 'Thursday, 14', 'wednesday, 13', 'Tuesday, 12', 'Monday,11'],
+          splitLine: {
+            show: false
+          }
+        }],
+        grid: {
+          left: '100px',
+          right: '30px',
+          bottom: '30px'
+        },
+        series: [{
+          name: 'Point One',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 132, 101, 134, 150, 130, 120],
+          barWidth: '30%'
+        }, {
+          name: 'Point Two',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 132, 101, 134, 90, 30, 110],
+          barWidth: '30%'
+        }, {
+          name: 'Point Three',
+          type: 'bar',
+          stack: 'advertising',
+          data: [50, 82, 81, 84, 100, 100, 110],
+          barWidth: '30%'
+        }, {
+          name: 'Point Four',
+          type: 'bar',
+          stack: 'advertising',
+          data: [150, 132, 101, 92, 90, 130, 310],
+          barWidth: '30%',
+          itemStyle: {
+            barBorderRadius: [0, 10, 10, 0]
+          }
+        }]
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartDoughnut.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue");
 //
 //
 //
@@ -706,46 +815,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartDoughnut: _core_components_charts_echart_AppEchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      codePlaceholder: _code__WEBPACK_IMPORTED_MODULE_2__["codePlaceholder"]
+      series: [{
+        name: 'Visit source',
+        type: 'pie',
+        radius: ['50%', '70%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false
+        },
+        labelLine: {
+          show: false
+        },
+        data: [{
+          value: 335,
+          name: 'Point One'
+        }, {
+          value: 310,
+          name: 'Point Two'
+        }, {
+          value: 234,
+          name: 'Point Three'
+        }, {
+          value: 435,
+          name: 'Point Four'
+        }]
+      }]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartLine_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartLine.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue");
 //
 //
 //
@@ -775,51 +895,37 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartLine: _core_components_charts_echart_AppEchartLine_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"]
   },
   data: function data() {
     return {
-      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: ['290', '200', '210', '190', '250', '220', '80', '90', '200', '150', '160', '100', '140', '100', '30']
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartRadar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartRadar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue");
 //
 //
 //
@@ -827,322 +933,566 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormRadio: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadio"],
-    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartRadar: _core_components_charts_echart_AppEchartRadar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      state: 'disabled',
-      codeState: _code__WEBPACK_IMPORTED_MODULE_2__["codeState"]
+      option: {
+        series: [{
+          name: 'Point One vs Point Two',
+          type: 'radar',
+          lineStyle: {
+            width: 0
+          },
+          symbolSize: 0,
+          data: [{
+            value: [3500, 5000, 7000, 9500, 12000, 40000, 55000, 65000],
+            name: 'Point Two',
+            itemStyle: {
+              color: '#ffe800'
+            },
+            areaStyle: {
+              color: '#ffe800',
+              opacity: 0.8
+            }
+          }, {
+            value: [4300, 6500, 20000, 25000, 30000, 19000, 30000, 40000],
+            name: 'Point One',
+            itemStyle: {
+              color: '#7367F0'
+            },
+            areaStyle: {
+              color: '#7367F0',
+              opacity: 0.8
+            }
+          }]
+        }],
+        indicator: [{
+          name: 'One',
+          max: 6500
+        }, {
+          name: 'Two',
+          max: 16000
+        }, {
+          name: 'Three',
+          max: 30000
+        }, {
+          name: 'Four',
+          max: 38000
+        }, {
+          name: 'Five',
+          max: 52000
+        }, {
+          name: 'Six',
+          max: 75000
+        }, {
+          name: 'Sever',
+          max: 65000
+        }, {
+          name: 'Eight',
+          max: 85000
+        }]
+      }
     };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartScatter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartScatter.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartScatter: _core_components_charts_echart_AppEchartScatter_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRadioGroup"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"]
   },
-  computed: {
-    disabled: function disabled() {
-      return this.state === 'disabled';
+  data: function data() {
+    return {
+      selected: 'radio1',
+      radioOption: [{
+        text: 'Daily',
+        value: 'radio1'
+      }, {
+        text: 'Monthly',
+        value: 'radio2'
+      }, {
+        text: 'Yearly',
+        value: 'radio4'
+      }],
+      option: {
+        series: [{
+          name: 'iPhone',
+          symbolSize: 10,
+          data: [[72, 225], [81, 270], [90, 230], [103, 305], [103, 245], [108, 275], [110, 290], [111, 315], [109, 350], [116, 340], [113, 260], [117, 275], [117, 295], [126, 280], [127, 340], [133, 330]],
+          type: 'scatter'
+        }, {
+          name: 'Samsung Note',
+          symbolSize: 10,
+          data: [[13, 95], [22, 105], [17, 115], [19, 130], [21, 125], [35, 125], [13, 155], [21, 165], [25, 155], [18, 190], [26, 180], [43, 180], [53, 202], [61, 165], [67, 225]],
+          type: 'scatter',
+          itemStyle: {
+            color: '#FF9F43'
+          }
+        }, {
+          name: 'OnePlus',
+          symbolSize: 10,
+          data: [[70, 195], [72, 270], [98, 255], [100, 215], [87, 240], [94, 280], [99, 300], [102, 290], [110, 275], [111, 250], [94, 280], [92, 340], [100, 335], [108, 330]],
+          type: 'scatter',
+          itemStyle: {
+            color: '#00CFE8'
+          }
+        }]
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartStackedArea.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartStackedArea: _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: [{
+          name: 'Point One',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {},
+          showSymbol: false,
+          lineStyle: {
+            width: 0
+          },
+          data: [220, 332, 281, 334, 290, 430, 310, 350, 510, 550, 720, 650, 760, 850]
+        }, {
+          name: 'Point Two',
+          type: 'line',
+          stack: 'Total',
+          showSymbol: false,
+          areaStyle: {},
+          lineStyle: {
+            width: 0
+          },
+          data: [220, 282, 191, 534, 290, 430, 350, 300, 580, 463, 380, 600, 560, 840]
+        }, {
+          name: 'Point Three',
+          type: 'line',
+          stack: 'Total',
+          showSymbol: false,
+          areaStyle: {},
+          lineStyle: {
+            width: 0
+          },
+          data: [750, 232, 601, 154, 390, 330, 410, 510, 420, 320, 580, 690, 650, 800]
+        }]
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".card-body {\n  position: relative;\n}\n.card-body .pie-text {\n  width: 105px;\n  position: absolute;\n  top: 44%;\n  bottom: 0;\n}\n[dir] .card-body .pie-text {\n  margin: auto;\n}\n[dir=ltr] .card-body .pie-text {\n  left: 0;\n  right: 0;\n}\n[dir=rtl] .card-body .pie-text {\n  right: 0;\n  left: 0;\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".switch-button {\n  position: relative;\n  z-index: 1;\n}\n@media (min-width: 576px) {\nhtml[dir=rtl] .switch-button {\n    float: right !important;\n}\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "\n.echarts {\r\n  width: 100% !important;\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
     },
-    readonly: function readonly() {
-      return this.state === 'readonly';
-    }
-  }
-});
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
-  },
-  data: function data() {
-    return {
-      codeString: _code__WEBPACK_IMPORTED_MODULE_2__["codeString"]
-    };
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.line,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
-  },
-  data: function data() {
-    return {
-      codeValidation: _code__WEBPACK_IMPORTED_MODULE_2__["codeValidation"]
-    };
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
 
 
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
-  },
-  data: function data() {
-    return {
-      codeVariant: _code__WEBPACK_IMPORTED_MODULE_2__["codeVariant"]
-    };
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&":
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268& ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: { options: _vm.option, theme: "theme-color", "auto-resize": "" },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&":
+/*!***********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& ***!
+  \***********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1156,63 +1506,22 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "b-row",
-    { staticClass: "match-height" },
     [
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-basic")], 1),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-line")], 1),
       _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-placeholder")],
-        1
-      ),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-stacked-area")], 1),
       _vm._v(" "),
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-min-max")], 1),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-area")], 1),
       _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-disable-date")],
-        1
-      ),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-bar")], 1),
       _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-validation")],
-        1
-      ),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-bar-Horizontal")], 1),
       _vm._v(" "),
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-state")], 1),
+      _c("b-col", { attrs: { md: "6" } }, [_c("echart-doughnut")], 1),
       _vm._v(" "),
-      _c("b-col", { attrs: { lg: "12" } }, [_c("form-datepicker-variant")], 1),
+      _c("b-col", { attrs: { md: "6" } }, [_c("echart-radar")], 1),
       _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-button-only")],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-string")], 1),
-      _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-full-width")],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-optional")], 1),
-      _vm._v(" "),
-      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-size")], 1),
-      _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { lg: "6" } },
-        [_c("form-datepicker-internationalization")],
-        1
-      ),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-scatter")], 1),
     ],
     1
   )
@@ -1224,10 +1533,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1240,48 +1549,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Basic Datepicker" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeBasic) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("code", [_vm._v("<b-form-datepicker>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      is a BootstrapVue custom date picker input form control, which provides full WAI-ARIA compliance and\n      internationalization support.\n    "
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "example-datepicker" } }, [
-        _vm._v("Choose a date"),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        staticClass: "mb-1",
-        attrs: { id: "example-datepicker" },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
-      _vm._v(" "),
-      _c("span", [_vm._v("Value: '" + _vm._s(_vm.value) + "'")]),
-    ],
+    "b-card",
+    { attrs: { title: "Area Chart" } },
+    [_c("app-echart-stacked-area", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1292,10 +1562,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&":
-/*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1308,98 +1578,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Button only mode" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeButtonOnly) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("code", [_vm._v("button-only")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      prop to render the datepicker as a dropdown button. The formatted date label will be rendered with the class\n    "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("sr-only")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" (available only to screen readers).")]),
-      ]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "example-input" } }, [
-        _vm._v("Choose a date"),
-      ]),
-      _vm._v(" "),
-      _c(
-        "b-input-group",
-        { staticClass: "mb-1" },
-        [
-          _c("b-form-input", {
-            attrs: {
-              id: "example-input",
-              type: "text",
-              placeholder: "YYYY-MM-DD",
-              autocomplete: "off",
-              "show-decade-nav": "",
-            },
-            model: {
-              value: _vm.value,
-              callback: function ($$v) {
-                _vm.value = $$v
-              },
-              expression: "value",
-            },
-          }),
-          _vm._v(" "),
-          _c(
-            "b-input-group-append",
-            [
-              _c("b-form-datepicker", {
-                attrs: {
-                  "show-decade-nav": "",
-                  "button-only": "",
-                  "button-variant": "outline-primary",
-                  right: "",
-                  size: "sm",
-                  locale: "en-US",
-                  "aria-controls": "example-input",
-                },
-                on: { context: _vm.onContext },
-                model: {
-                  value: _vm.value,
-                  callback: function ($$v) {
-                    _vm.value = $$v
-                  },
-                  expression: "value",
-                },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-card-text", { staticClass: "mb-1" }, [
-        _vm._v("\n    Value: '" + _vm._s(_vm.value) + "'\n  "),
-      ]),
-      _vm._v(" "),
-      _c("b-card-text", { staticClass: "mb-1" }, [
-        _vm._v("\n    Selected: '" + _vm._s(_vm.selected) + "'\n  "),
-      ]),
-      _vm._v(" "),
-      _c("span", [_vm._v("Formatted: '" + _vm._s(_vm.formatted) + "'")]),
-    ],
+    "b-card",
+    { attrs: { title: "Data Science" } },
+    [_c("app-echart-bar", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1410,10 +1591,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&":
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1426,43 +1607,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Disable dates" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDisableDate) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "If you need to disable specific dates within the date picker, specify a function reference to the "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("date-disabled-fn")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        attrs: { "date-disabled-fn": _vm.dateDisabled, locale: "en" },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
-    ],
+    "b-card",
+    { attrs: { title: "Horizontal Bar Chart" } },
+    [_c("app-echart-bar", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1473,10 +1620,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1489,52 +1636,18 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Full width calendar dropdown" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeFullWith) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "b-card",
+    { attrs: { title: "Doughnut Chart" } },
     [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v("To create a full width calendar dropdown simply set the "),
+      _c("div", { staticClass: "pie-text text-center" }, [
+        _c("h2", { staticClass: "font-weight-bolder" }, [
+          _vm._v("\n      $23,994\n    "),
         ]),
         _vm._v(" "),
-        _c("code", [_vm._v("menu-class")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("'w-100'")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" and set the calendar-width prop to '100%':")]),
+        _c("span", { staticClass: "font-weight-bold" }, [_vm._v("Total")]),
       ]),
       _vm._v(" "),
-      _c("label", { attrs: { for: "datepicker-full-width" } }, [
-        _vm._v("Choose a date"),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        attrs: {
-          id: "datepicker-full-width",
-          "menu-class": "w-100",
-          "calendar-width": "100%",
-        },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
+      _c("app-echart-doughnut", { attrs: { series: _vm.series } }),
     ],
     1
   )
@@ -1546,10 +1659,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&":
-/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1562,575 +1675,49 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Internationalization" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [
-              _vm._v("\n    " + _vm._s(_vm.codeInternationalization) + "\n  "),
-            ]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "b-card",
+    { attrs: { title: "Balance" } },
     [
-      _c("b-card-text", [
-        _c("span", [_vm._v("By default ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-datepicker>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " will use the browser's default locale, but you can specify the locale (or locales) to use via the "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("locale")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("prop.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "example-locales" } }, [
-            _vm._v("Locale:"),
+      _c("div", { staticClass: "d-flex justify-content-between flex-wrap" }, [
+        _c("div", { staticClass: "mb-1 mb-sm-0" }, [
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("Commercial networks and enterprises"),
           ]),
-          _vm._v(" "),
-          _c("b-form-select", {
-            staticClass: "mb-1",
-            attrs: { id: "example-locales", options: _vm.locales },
-            model: {
-              value: _vm.locale,
-              callback: function ($$v) {
-                _vm.locale = $$v
-              },
-              expression: "locale",
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "example-weekdays" } }, [
-            _vm._v("Start weekday:"),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex align-content-center mb-1 mb-sm-0" }, [
+          _c("h1", { staticClass: "font-weight-bolder " }, [
+            _vm._v("\n        $ 183,382\n      "),
           ]),
-          _vm._v(" "),
-          _c("b-form-select", {
-            staticClass: "mb-1",
-            attrs: { id: "example-weekdays", options: _vm.weekdays },
-            model: {
-              value: _vm.weekday,
-              callback: function ($$v) {
-                _vm.weekday = $$v
-              },
-              expression: "weekday",
-            },
-          }),
           _vm._v(" "),
           _c(
             "div",
+            { staticClass: "pt-25 ml-75" },
             [
               _c(
-                "b-form-checkbox",
-                {
-                  staticClass: "my-1",
-                  attrs: { switch: "", inline: "" },
-                  model: {
-                    value: _vm.showDecadeNav,
-                    callback: function ($$v) {
-                      _vm.showDecadeNav = $$v
-                    },
-                    expression: "showDecadeNav",
-                  },
-                },
-                [_vm._v("\n        Show decade navigation buttons\n      ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-checkbox",
-                {
-                  staticClass: "my-1",
-                  attrs: { switch: "", inline: "" },
-                  model: {
-                    value: _vm.hideHeader,
-                    callback: function ($$v) {
-                      _vm.hideHeader = $$v
-                    },
-                    expression: "hideHeader",
-                  },
-                },
-                [_vm._v("\n        Hide calendar header\n      ")]
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "example-i18n-picker" } }, [
-            _vm._v("Date picker:"),
-          ]),
-          _vm._v(" "),
-          _c(
-            "b-form-datepicker",
-            _vm._b(
-              {
-                staticClass: "mb-1",
-                attrs: {
-                  id: "example-i18n-picker",
-                  locale: _vm.locale,
-                  "start-weekday": _vm.weekday,
-                  "show-decade-nav": _vm.showDecadeNav,
-                  "hide-header": _vm.hideHeader,
-                },
-                model: {
-                  value: _vm.value,
-                  callback: function ($$v) {
-                    _vm.value = $$v
-                  },
-                  expression: "value",
-                },
-              },
-              "b-form-datepicker",
-              _vm.labels[_vm.locale] || {},
-              false
-            )
-          ),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&":
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Minimum and maximum dates" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeMinMax) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("Restrict the calendar range via the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("min")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" and ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("max")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(" props. The props accept a date string in the format of "),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("YYYY-MM-DD")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" or a ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("Date")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" object.")]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        attrs: { min: _vm.min, max: _vm.max, locale: "en" },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&":
-/*!***********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Optional controls" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeOptional) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "Add optional control buttons to the bottom of the calendar popup via the props "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("today-button")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(",")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("reset-button")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" and ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("close-button")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(".")]),
-      ]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "datepicker-buttons" } }, [
-        _vm._v("Date picker with optional footer buttons"),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        attrs: {
-          id: "datepicker-buttons",
-          "today-button": "",
-          "reset-button": "",
-          "close-button": "",
-          locale: "en",
-          "menu-class": "w-100",
-          "calendar-width": "100%",
-        },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&":
-/*!**************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Placeholder & Initial Open Date" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codePlaceholder) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "Add custom placeholder text to the control, when no date is selected, via the "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("placeholder")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop. ")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v("You can change this behaviour by specifying a date via the "),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("initial-date")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
-      ]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "datepicker-placeholder" } }, [
-        _vm._v("Date picker with placeholder"),
-      ]),
-      _vm._v(" "),
-      _c("b-form-datepicker", {
-        attrs: {
-          id: "datepicker-placeholder",
-          placeholder: "Choose a date",
-          local: "en",
-          "initial-date": "2020-06-16",
-        },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&":
-/*!*******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Control sizing" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("Fancy a smaller or larger ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-datepicker>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("control? Set the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("size")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("'sm'")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" for a smaller form control, or ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("'lg'")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " for a larger form form control. Note this does not affect the size of the popup calendar dialog."
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "datepicker-sm" } }, [
-            _vm._v("Small date picker"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            staticClass: "mb-2",
-            attrs: {
-              id: "datepicker-sm",
-              size: "sm",
-              local: "en",
-              "today-variant": "danger",
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "datepicker-default" } }, [
-            _vm._v("Default date picker"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            staticClass: "mb-2",
-            attrs: {
-              id: "datepicker-default",
-              local: "en",
-              "today-variant": "danger",
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "datepicker-lg" } }, [
-            _vm._v("Large date picker"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            attrs: { id: "datepicker-lg", size: "lg", local: "en" },
-          }),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5& ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Disabled and readonly states" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeState) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("code", [_vm._v("Setting the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("disabled")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop will remove all interactivity of the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-datepicker>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" component. Setting the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("readonly")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop will disable selecting a date.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c(
-            "b-form-group",
-            { attrs: { label: "Select date picker interactive state" } },
-            [
-              _c(
-                "b-form-radio-group",
-                {
-                  attrs: { "aria-controls": "ex-disabled-readonly" },
-                  model: {
-                    value: _vm.state,
-                    callback: function ($$v) {
-                      _vm.state = $$v
-                    },
-                    expression: "state",
-                  },
-                },
+                "b-badge",
+                { attrs: { variant: "light-secondary" } },
                 [
-                  _c("b-form-radio", { attrs: { value: "disabled" } }, [
-                    _vm._v("\n          Disabled\n        "),
-                  ]),
+                  _c("feather-icon", {
+                    staticClass: "text-danger align-middle",
+                    attrs: { icon: "ArrowDownIcon", size: "12" },
+                  }),
                   _vm._v(" "),
-                  _c("b-form-radio", { attrs: { value: "readonly" } }, [
-                    _vm._v("\n          Readonly\n        "),
-                  ]),
-                  _vm._v(" "),
-                  _c("b-form-radio", { attrs: { value: "normal" } }, [
-                    _vm._v("\n          Normal\n        "),
-                  ]),
+                  _c(
+                    "span",
+                    { staticClass: "font-weight-bolder align-middle" },
+                    [_vm._v(" 24%")]
+                  ),
                 ],
                 1
               ),
             ],
             1
           ),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            attrs: {
-              id: "ex-disabled-readonly",
-              disabled: _vm.disabled,
-              readonly: _vm.readonly,
-            },
-          }),
-        ],
-        1
-      ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("app-echart-line", { attrs: { "option-data": _vm.option } }),
     ],
     1
   )
@@ -2142,10 +1729,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&":
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2158,80 +1745,70 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Date string format" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeString) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "b-card",
+    { attrs: { title: "Radar Chart" } },
+    [_c("app-echart-radar", { attrs: { "option-data": _vm.option } })],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card",
+    { attrs: { title: "New Technologies Data" } },
     [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "To change format options of the displayed date text inside the component, e.g. in the header or placeholder,\n      set the\n    "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("date-format-options")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " prop to an object containing the requested format properties for the"
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("Intl.DateTimeFormat")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" object.")]),
-      ]),
-      _vm._v(" "),
       _c(
         "div",
+        { staticClass: "switch-button float-sm-right" },
         [
-          _c("label", { attrs: { for: "datepicker-dateformat1" } }, [
-            _vm._v("Custom date format"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            attrs: {
-              id: "datepicker-dateformat1",
-              "date-format-options": {
-                year: "numeric",
-                month: "short",
-                day: "2-digit",
-                weekday: "short",
-              },
-              locale: "en",
-            },
-          }),
-          _vm._v(" "),
           _c(
-            "label",
-            { staticClass: "mt-2", attrs: { for: "datepicker-dateformat2" } },
-            [_vm._v("Short date format")]
+            "b-form-group",
+            [
+              _c("b-form-radio-group", {
+                attrs: {
+                  id: "btn-radios-1",
+                  "button-variant": "outline-primary",
+                  options: _vm.radioOption,
+                  buttons: "",
+                  size: "sm",
+                  name: "radios-btn-default",
+                },
+                model: {
+                  value: _vm.selected,
+                  callback: function ($$v) {
+                    _vm.selected = $$v
+                  },
+                  expression: "selected",
+                },
+              }),
+            ],
+            1
           ),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            attrs: {
-              id: "datepicker-dateformat2",
-              "date-format-options": {
-                year: "numeric",
-                month: "numeric",
-                day: "numeric",
-              },
-              locale: "en",
-            },
-          }),
         ],
         1
       ),
+      _vm._v(" "),
+      _c("app-echart-scatter", { attrs: { "option-data": _vm.option } }),
     ],
     1
   )
@@ -2243,10 +1820,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&":
-/*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2259,55 +1836,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Validation states" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeValidation) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("code", [_vm._v("<b-form-datepicker>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(" supports invalid and valid styling via the boolean "),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("state")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "datepicker-invalid" } }, [
-            _vm._v("Choose a date (invalid style)"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            staticClass: "mb-2",
-            attrs: { id: "datepicker-invalid", state: false },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "datepicker-valid" } }, [
-            _vm._v("Choose a date (valid style)"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-datepicker", {
-            attrs: { id: "datepicker-valid", state: true },
-          }),
-        ],
-        1
-      ),
-    ],
+    "b-card",
+    { attrs: { title: "Data Science" } },
+    [_c("app-echart-stacked-area", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -2318,200 +1849,667 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Variants" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeVariant) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "The selected date button (background color) defaults to the "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("'primary'")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " theme variant. You can change this to any of the Bootstrap v4 theme variant colors: "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [
-          _vm._v("'secondary', 'success', 'danger', 'warning', 'info',"),
-        ]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" etc, via the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("selected-variant")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Primary Variant",
-                  "selected-variant": "primary",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Secondary Variant",
-                  "selected-variant": "secondary",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Success Variant",
-                  "selected-variant": "success",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Warning Variant",
-                  "selected-variant": "warning",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Danger Variant",
-                  "selected-variant": "danger",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6", lg: "4" } },
-            [
-              _c("b-form-datepicker", {
-                staticClass: "mb-1",
-                attrs: {
-                  local: "en",
-                  placeholder: "Info Variant",
-                  "selected-variant": "info",
-                },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/@core/components/b-card-code/index.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/@core/components/b-card-code/index.js ***!
-  \****************************************************************/
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
+/* harmony import */ var _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartBar.vue?vue&type=template&id=37aa4fe5& */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&");
+/* harmony import */ var _AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartBar.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue":
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5& ***!
+  \*********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartBar.vue?vue&type=template&id=37aa4fe5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&");
+/* harmony import */ var _AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartDoughnut.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartDoughnut.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& ***!
+  \**************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=template&id=6fb03d12& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&");
+/* harmony import */ var _AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartLine.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=template&id=6fb03d12& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartRadar.vue?vue&type=template&id=a6972250& */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&");
+/* harmony import */ var _AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartRadar.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartRadar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartRadar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartRadar.vue?vue&type=template&id=a6972250& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartScatter.vue?vue&type=template&id=e1f93fe0& */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&");
+/* harmony import */ var _AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartScatter.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartScatter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartScatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartScatter.vue?vue&type=template&id=e1f93fe0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&");
+/* harmony import */ var _AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartStackedArea.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartStackedArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&":
+/*!*****************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& ***!
+  \*****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/theme.json":
+/*!********************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/theme.json ***!
+  \********************************************************************/
+/*! exports provided: color, backgroundColor, textStyle, title, line, radar, bar, pie, scatter, boxplot, parallel, sankey, funnel, gauge, candlestick, graph, map, geo, categoryAxis, valueAxis, logAxis, timeAxis, toolbox, legend, tooltip, timeline, visualMap, dataZoom, markPoint, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"color\":[\"#826AF9\",\"#9F87FF\",\"#D2B0FF\",\"#F8D3FF\"],\"backgroundColor\":\"rgba(0,0,0,0)\",\"textStyle\":{},\"title\":{\"textStyle\":{\"color\":\"#666666\"},\"subtextStyle\":{\"color\":\"#999999\"}},\"line\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"1\"}},\"lineStyle\":{\"normal\":{\"width\":\"1\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":false},\"radar\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"2\"}},\"lineStyle\":{\"normal\":{\"width\":\"3\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":true},\"bar\":{\"itemStyle\":{\"normal\":{\"barBorderWidth\":\"0\",\"barBorderColor\":\"#444444\"},\"emphasis\":{\"barBorderWidth\":\"0\",\"barBorderColor\":\"#444444\"}}},\"pie\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"scatter\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"boxplot\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"parallel\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"sankey\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"funnel\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"gauge\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"candlestick\":{\"itemStyle\":{\"normal\":{\"color\":\"#d0648a\",\"color0\":\"#ffffff\",\"borderColor\":\"#d0648a\",\"borderColor0\":\"#22c3aa\",\"borderWidth\":1}}},\"graph\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}},\"lineStyle\":{\"normal\":{\"width\":1,\"color\":\"#aaa\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":true,\"color\":[\"#4ea397\",\"#22c3aa\",\"#7bd9a5\"],\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#ffffff\"}}}},\"map\":{\"itemStyle\":{\"normal\":{\"areaColor\":\"#eeeeee\",\"borderColor\":\"#999999\",\"borderWidth\":\"0.5\"},\"emphasis\":{\"areaColor\":\"rgba(34,195,170,0.25)\",\"borderColor\":\"#22c3aa\",\"borderWidth\":\"0.5\"}},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#28544e\"}},\"emphasis\":{\"textStyle\":{\"color\":\"rgb(52,158,142)\"}}}},\"geo\":{\"itemStyle\":{\"normal\":{\"areaColor\":\"#eeeeee\",\"borderColor\":\"#999999\",\"borderWidth\":\"0.5\"},\"emphasis\":{\"areaColor\":\"rgba(34,195,170,0.25)\",\"borderColor\":\"#22c3aa\",\"borderWidth\":\"0.5\"}},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#28544e\"}},\"emphasis\":{\"textStyle\":{\"color\":\"rgb(52,158,142)\"}}}},\"categoryAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"valueAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"logAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"timeAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"toolbox\":{\"iconStyle\":{\"normal\":{\"borderColor\":\"#aaaaaa\"},\"emphasis\":{\"borderColor\":\"#666\"}}},\"legend\":{\"textStyle\":{\"color\":\"#999999\"}},\"tooltip\":{\"axisPointer\":{\"lineStyle\":{\"color\":\"#ccc\",\"width\":1},\"crossStyle\":{\"color\":\"#ccc\",\"width\":1}}},\"timeline\":{\"lineStyle\":{\"color\":\"#349e8e\",\"width\":1},\"itemStyle\":{\"normal\":{\"color\":\"#349e8e\",\"borderWidth\":\"1\"},\"emphasis\":{\"color\":\"#57e8d2\"}},\"controlStyle\":{\"normal\":{\"color\":\"#349e8e\",\"borderColor\":\"#349e8e\",\"borderWidth\":\"0\"}},\"checkpointStyle\":{\"color\":\"#22c3aa\",\"borderColor\":\"rgba(34,195,170,0.25)\"},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#349e8e\"}}}},\"visualMap\":{\"color\":[\"#d0648a\",\"#22c3aa\",\"rgba(123,217,165,0.2)\"]},\"dataZoom\":{\"backgroundColor\":\"#fff\",\"dataBackgroundColor\":\"#dedede\",\"fillerColor\":\"rgba(34,195,170,0.25)\",\"handleColor\":\"#dddddd\",\"handleSize\":\"100%\",\"textStyle\":{\"color\":\"#999\"}},\"markPoint\":{\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#ffffff\"}},\"emphasis\":{\"textStyle\":{\"color\":\"#ffffff\"}}}}}");
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Echart.vue?vue&type=template&id=1131086e& */ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&");
+/* harmony import */ var _Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Echart.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/Echart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Echart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Echart.vue?vue&type=template&id=1131086e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartArea.vue?vue&type=template&id=fa1ebd14& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&");
+/* harmony import */ var _EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartArea.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartArea.vue?vue&type=template&id=fa1ebd14& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartBar.vue?vue&type=template&id=9d393b8c& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&");
+/* harmony import */ var _EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartBar.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBar.vue?vue&type=template&id=9d393b8c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue":
 /*!**************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue ***!
   \**************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepicker.vue?vue&type=template&id=ed292268& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&");
-/* harmony import */ var _FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepicker.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&");
+/* harmony import */ var _EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartBarHorizontal.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2521,9 +2519,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2533,55 +2531,57 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue"
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepicker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBarHorizontal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&":
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&":
 /*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268& ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& ***!
   \*********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepicker.vue?vue&type=template&id=ed292268& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue ***!
-  \*******************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&");
-/* harmony import */ var _FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=template&id=678bddeb& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&");
+/* harmony import */ var _EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -2589,10 +2589,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2602,606 +2602,70 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue"
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& ***!
-  \**************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&");
-/* harmony import */ var _FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerButtonOnly.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&":
-/*!*******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& ***!
-  \*******************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&");
-/* harmony import */ var _FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerDisableDate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&":
-/*!********************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& ***!
-  \********************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&");
-/* harmony import */ var _FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerFullWidth.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& ***!
-  \******************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue":
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js& ***!
   \**********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&");
-/* harmony import */ var _FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerInternationalization.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&":
-/*!*****************************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& ***!
-  \*****************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&");
-/* harmony import */ var _FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerMinMax.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& ***!
-  \***************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue":
-/*!**********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue ***!
-  \**********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerOptional.vue?vue&type=template&id=69d22b68& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&");
-/* harmony import */ var _FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerOptional.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerOptional.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&":
-/*!*****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68& ***!
-  \*****************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerOptional.vue?vue&type=template&id=69d22b68& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&");
-/* harmony import */ var _FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerPlaceholder.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&":
-/*!********************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& ***!
-  \********************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerSize.vue?vue&type=template&id=51b8906d& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&");
-/* harmony import */ var _FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
 /*!*******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
   \*******************************************************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d& ***!
-  \*************************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb& ***!
+  \****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerSize.vue?vue&type=template&id=51b8906d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=template&id=678bddeb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue ***!
-  \*******************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerState.vue?vue&type=template&id=4e09aad5& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&");
-/* harmony import */ var _FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerState.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartLine.vue?vue&type=template&id=2d19755d& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&");
+/* harmony import */ var _EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartLine.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -3211,9 +2675,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -3223,54 +2687,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue"
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerState.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartLine.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5& ***!
-  \**************************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d& ***!
+  \************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerState.vue?vue&type=template&id=4e09aad5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartLine.vue?vue&type=template&id=2d19755d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue ***!
-  \********************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue ***!
+  \******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerString.vue?vue&type=template&id=2599437d& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&");
-/* harmony import */ var _FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerString.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartRadar.vue?vue&type=template&id=c71b8026& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&");
+/* harmony import */ var _EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartRadar.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -3280,9 +2744,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -3292,54 +2756,141 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue"
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerString.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartRadar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d& ***!
-  \***************************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026& ***!
+  \*************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerString.vue?vue&type=template&id=2599437d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartRadar.vue?vue&type=template&id=c71b8026& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue ***!
-  \************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue ***!
+  \********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerValidation.vue?vue&type=template&id=54d02436& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&");
-/* harmony import */ var _FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerValidation.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&");
+/* harmony import */ var _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=template&id=f2dd8036& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&");
+/* harmony import */ var _EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036& ***!
+  \***************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=template&id=f2dd8036& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartStackedArea.vue?vue&type=template&id=464904fb& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&");
+/* harmony import */ var _EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartStackedArea.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -3349,9 +2900,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -3361,147 +2912,40 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue"
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerValidation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartStackedArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&":
-/*!*******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436& ***!
-  \*******************************************************************************************************************************/
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerValidation.vue?vue&type=template&id=54d02436& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartStackedArea.vue?vue&type=template&id=464904fb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue ***!
-  \*********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&");
-/* harmony import */ var _FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerVariant.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerVariant.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&":
-/*!****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& ***!
-  \****************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-datepicker/code.js":
-/*!***************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-datepicker/code.js ***!
-  \***************************************************************************/
-/*! exports provided: codeBasic, codeButtonOnly, codeDisableDate, codeInternationalization, codeOptional, codePlaceholder, codeMinMax, codeSize, codeState, codeString, codeValidation, codeVariant, codeFullWith */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeButtonOnly", function() { return codeButtonOnly; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDisableDate", function() { return codeDisableDate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeInternationalization", function() { return codeInternationalization; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeOptional", function() { return codeOptional; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codePlaceholder", function() { return codePlaceholder; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMinMax", function() { return codeMinMax; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeState", function() { return codeState; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeString", function() { return codeString; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeValidation", function() { return codeValidation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeVariant", function() { return codeVariant; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFullWith", function() { return codeFullWith; });
-var codeBasic = "\n<template>\n  <div>\n    <label for=\"example-datepicker\">Choose a date</label>\n    <b-form-datepicker\n      id=\"example-datepicker\"\n      v-model=\"value\"\n      class=\"mb-1\"\n    />\n    <p>Value: '{{ value }}'</p>\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',    codeBasic,    codeBasic,\n  }),\n}\n</script>\n";
-var codeButtonOnly = "\n<template>\n  <div>\n    <label for=\"example-input\">Choose a date</label>\n    <b-input-group class=\"mb-1\">\n      <b-form-input\n        id=\"example-input\"\n        v-model=\"value\"\n        type=\"text\"\n        placeholder=\"YYYY-MM-DD\"\n        autocomplete=\"off\"\n        show-decade-nav\n      />\n      <b-input-group-append>\n        <b-form-datepicker\n          v-model=\"value\"\n          show-decade-nav\n          button-only\n          right\n          locale=\"en-US\"\n          aria-controls=\"example-input\"\n          @context=\"onContext\"\n        />\n      </b-input-group-append>\n    </b-input-group>\n    <p class=\"mb-1\">\n      Value: '{{ value }}'\n    </p>\n    <p class=\"mb-1\">\n      Selected: '{{ selected }}'\n    </p>\n    <p>Formatted: '{{ formatted }}'</p>\n  </div>\n</template>\n\n<script>\nimport {BFormDatepicker, BInputGroup, BInputGroupAppend, BFormInput} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormDatepicker,\n    BInputGroup,\n    BInputGroupAppend,\n    BFormInput,\n  },\n  data: () => ({\n    value: '',\n    formatted: '',\n    selected: '',\n  }),\n  methods: {\n    onContext(ctx) {\n      // The date formatted in the locale, or the `label-no - date - selected` string\n      this.formatted = ctx.selectedFormatted\n      // The following will be an empty string until a valid date is entered\n      this.selected = ctx.selectedYMD\n    },\n  },\n}\n</script>\n";
-var codeDisableDate = "\n<template>\n  <div>\n    <b-form-datepicker\n      v-model=\"value\"\n      :date-disabled-fn=\"dateDisabled\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',\n  }),\n  methods: {\n    dateDisabled(ymd, date) {\n      // Disable weekends (Sunday = `0`, Saturday = `6`) and\n      // disable days that fall on the 13th of the month\n      const weekday = date.getDay()\n      const day = date.getDate()\n      // Return `true` if the date should be disabled\n      return weekday === 0 || weekday === 6 || day === 13\n    },\n  },\n}\n</script>\n";
-var codeInternationalization = "\n<template>\n  <div>\n    <label for=\"example-locales\">Locale:</label>\n    <b-form-select\n      id=\"example-locales\"\n      v-model=\"locale\"\n      :options=\"locales\"\n      class=\"mb-1\"\n    />\n\n    <label for=\"example-weekdays\">Start weekday:</label>\n    <b-form-select\n      id=\"example-weekdays\"\n      v-model=\"weekday\"\n      :options=\"weekdays\"\n      class=\"mb-1\"\n    />\n\n    <div class=\"d-flex align-items-center\">\n      <b-form-checkbox\n        v-model=\"showDecadeNav\"\n        switch\n        inline\n        class=\"my-1\"\n      />\n      <label class=\"mr-1\">Show decade navigation buttons</label>\n      <b-form-checkbox\n        v-model=\"hideHeader\"\n        switch\n        inline\n        class=\"my-1\"\n      />\n      <label>Hide calendar header</label>\n    </div>\n\n    <label for=\"example-i18n-picker\">Date picker:</label>\n    <b-form-datepicker\n      id=\"example-i18n-picker\"\n      v-model=\"value\"\n      v-bind=\"labels[locale] || {}\"\n      :locale=\"locale\"\n      :start-weekday=\"weekday\"\n      :show-decade-nav=\"showDecadeNav\"\n      :hide-header=\"hideHeader\"\n      class=\"mb-1\"\n    />\n    <p>\n      Value: <b>'{{ value }}'</b>\n    </p>\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker, BFormSelect, BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BFormSelect,\n    BFormCheckbox,\n  },\n  data: () => ({\n    value: '',\n    locale: 'en-US',\n    showDecadeNav: false,\n    hideHeader: false,\n    locales: [\n      { value: 'en-US', text: 'English US (en-US)' },\n      { value: 'de', text: 'German (de)' },\n      { value: 'ar-EG', text: 'Arabic Egyptian (ar-EG)' },\n      { value: 'zh', text: 'Chinese (zh)' },\n    ],\n    weekday: 0,\n    weekdays: [\n      { value: 0, text: 'Sunday' },\n      { value: 1, text: 'Monday' },\n      { value: 6, text: 'Saturday' },\n    ],\n    labels: {\n      de: {\n        labelPrevDecade: 'Vorheriges Jahrzehnt',\n        labelPrevYear: 'Vorheriges Jahr',\n        labelPrevMonth: 'Vorheriger Monat',\n        labelCurrentMonth: 'Aktueller Monat',\n        labelNextMonth: 'N\xE4chster Monat',\n        labelNextYear: 'N\xE4chstes Jahr',\n        labelNextDecade: 'N\xE4chstes Jahrzehnt',\n        labelToday: 'Heute',\n        labelSelected: 'Ausgew\xE4hltes Datum',\n        labelNoDateSelected: 'Kein Datum gew\xE4hlt',\n        labelCalendar: 'Kalender',\n        labelNav: 'Kalendernavigation',\n        labelHelp: 'Mit den Pfeiltasten durch den Kalender navigieren',\n      },\n      'ar-EG': {\n        labelPrevDecade: '\u0627\u0644\u0639\u0642\u062F \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelPrevYear: '\u0627\u0644\u0639\u0627\u0645 \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelPrevMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelCurrentMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u062D\u0627\u0644\u064A',\n        labelNextMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0645\u0642\u0628\u0644',\n        labelNextYear: '\u0627\u0644\u0639\u0627\u0645 \u0627\u0644\u0645\u0642\u0628\u0644',\n        labelNextDecade: '\u0627\u0644\u0639\u0642\u062F \u0627\u0644\u0642\u0627\u062F\u0645',\n        labelToday: '\u0627\u0644\u064A\u0648\u0645',\n        labelSelected: '\u0627\u0644\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0645\u062D\u062F\u062F',\n        labelNoDateSelected: '\u0644\u0645 \u064A\u062A\u0645 \u0627\u062E\u062A\u064A\u0627\u0631 \u062A\u0627\u0631\u064A\u062E',\n        labelCalendar: '\u0627\u0644\u062A\u0642\u0648\u064A\u0645',\n        labelNav: '\u0627\u0644\u0645\u0644\u0627\u062D\u0629 \u0627\u0644\u062A\u0642\u0648\u064A\u0645',\n        labelHelp: '\u0627\u0633\u062A\u062E\u062F\u0645 \u0645\u0641\u0627\u062A\u064A\u062D \u0627\u0644\u0645\u0624\u0634\u0631 \u0644\u0644\u062A\u0646\u0642\u0644 \u0641\u064A \u0627\u0644\u062A\u0648\u0627\u0631\u064A\u062E',\n      },\n      zh: {\n        labelPrevDecade: '\u8FC7\u53BB\u5341\u5E74',\n        labelPrevYear: '\u4E0A\u4E00\u5E74',\n        labelPrevMonth: '\u4E0A\u4E2A\u6708',\n        labelCurrentMonth: '\u5F53\u524D\u6708\u4EFD',\n        labelNextMonth: '\u4E0B\u4E2A\u6708',\n        labelNextYear: '\u660E\u5E74',\n        labelNextDecade: '\u4E0B\u4E00\u4E2A\u5341\u5E74',\n        labelToday: '\u4ECA\u5929',\n        labelSelected: '\u9009\u5B9A\u65E5\u671F',\n        labelNoDateSelected: '\u672A\u9009\u62E9\u65E5\u671F',\n        labelCalendar: '\u65E5\u5386',\n        labelNav: '\u65E5\u5386\u5BFC\u822A',\n        labelHelp: '\u4F7F\u7528\u5149\u6807\u952E\u6D4F\u89C8\u65E5\u671F',\n      },\n    },\n  }),\n}\n</script>\n";
-var codeOptional = "\n<template>\n  <div>\n    <label for=\"datepicker-buttons\">Date picker with optional footer buttons</label>\n    <b-form-datepicker\n      id=\"datepicker-buttons\"\n      today-button\n      reset-button\n      close-button\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
-var codePlaceholder = "\n<template>\n  <div>\n    <label for=\"datepicker-placeholder\">Date picker with placeholder</label>\n    <b-form-datepicker\n      id=\"datepicker-placeholder\"\n      placeholder=\"Choose a date\"\n      local=\"en\"\n      initial-date=\"2020-06-16\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
-var codeMinMax = "\n<template>\n  <div>\n    <b-form-datepicker\n      v-model=\"value\"\n      :min=\"min\"\n      :max=\"max\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data() {\n    const now = new Date()\n    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())\n    // 15th two months prior\n    const minDate = new Date(today)\n    minDate.setMonth(minDate.getMonth() - 2)\n    minDate.setDate(15)\n    // 15th in two months\n    const maxDate = new Date(today)\n    maxDate.setMonth(maxDate.getMonth() + 2)\n    maxDate.setDate(15)\n\n    return {\n      value: '',\n      min: minDate,\n      max: maxDate,\n    }\n  },\n}\n</script>\n";
-var codeSize = "\n<template>\n  <div>\n    <label for=\"datepicker-sm\">Small date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-sm\"\n      size=\"sm\"\n      local=\"en\"\n      class=\"mb-2\"\n      today-variant=\"danger\"\n    />\n    <label for=\"datepicker-default\">Default date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-default\"\n      local=\"en\"\n      class=\"mb-2\"\n      today-variant=\"danger\"\n    />\n    <label for=\"datepicker-lg\">Large date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-lg\"\n      size=\"lg\"\n      local=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
-var codeState = "\n<template>\n   <div>\n    <b-form-group label=\"Select date picker interactive state\">\n      <b-form-radio-group\n        v-model=\"state\"\n        plain\n        class=\"vs-radio-con\"\n        aria-controls=\"ex-disabled-readonly\"\n      >\n        <b-form-radio value=\"disabled\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Disabled</span>\n        </b-form-radio>\n        <b-form-radio value=\"readonly\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Readonly</span>\n        </b-form-radio>\n        <b-form-radio value=\"normal\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Normal</span>\n        </b-form-radio>\n      </b-form-radio-group>\n    </b-form-group>\n    <b-form-datepicker\n      id=\"ex-disabled-readonly\"\n      :disabled=\"disabled\"\n      :readonly=\"readonly\"\n    />\n  </div>\n</template>\n\n<script>\nimport {\n  BFormDatepicker, BFormGroup, BFormRadio, BFormRadioGroup,\n} from 'bootstrap-vue'\n\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BFormGroup,\n    BFormRadio,\n    BFormRadioGroup,\n  },\n  data: () => ({\n    state: 'disabled',\n  }),\n  computed: {\n    disabled() {\n      return this.state === 'disabled'\n    },\n    readonly() {\n      return this.state === 'readonly'\n    },\n  },\n}\n</script>\n";
-var codeString = "\n<template>\n  <div>\n    <label for=\"datepicker-dateformat1\">Custom date format</label>\n    <b-form-datepicker\n      id=\"datepicker-dateformat1\"\n      :date-format-options=\"{ year: 'numeric', month: 'short', day: '2-digit', weekday: 'short' }\"\n      locale=\"en\"\n    />\n\n    <label\n      class=\"mt-2\"\n      for=\"datepicker-dateformat2\"\n    >Short date format</label>\n    <b-form-datepicker\n      id=\"datepicker-dateformat2\"\n      :date-format-options=\"{ year: 'numeric', month: 'numeric', day: 'numeric' }\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
-var codeValidation = "\n<template>\n  <div>\n    <label for=\"datepicker-invalid\">Choose a date (invalid style)</label>\n    <b-form-datepicker\n      id=\"datepicker-invalid\"\n      :state=\"false\"\n      class=\"mb-2\"\n    />\n    <label for=\"datepicker-valid\">Choose a date (valid style)</label>\n    <b-form-datepicker\n      id=\"datepicker-valid\"\n      :state=\"true\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
-var codeVariant = "\n<template>\n  <b-row>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Primary Variant\"\n        class=\"mb-1\"\n        selected-variant=\"primary\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Secondary Variant\"\n        class=\"mb-1\"\n        selected-variant=\"secondary\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Success Variant\"\n        class=\"mb-1\"\n        selected-variant=\"success\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Warning Variant\"\n        class=\"mb-1\"\n        selected-variant=\"warning\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Danger Variant\"\n        class=\"mb-1\"\n        selected-variant=\"danger\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Info Variant\"\n        class=\"mb-1\"\n        selected-variant=\"info\"\n      />\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport { BFormDatepicker, BRow, BCol } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
-var codeFullWith = "\n<template>\n  <div>\n    <label for=\"datepicker-full-width\">Choose a date</label>\n      <b-form-datepicker\n        id=\"datepicker-full-width\"\n        v-model=\"value\"\n        menu-class=\"w-100\"\n        calendar-width=\"100%\"\n        class=\"mb-2\"\n      />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',\n  }),\n}\n</script>\n";
 
 /***/ })
 

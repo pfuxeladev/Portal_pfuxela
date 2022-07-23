@@ -19,6 +19,10 @@ class Rota extends Model
         return $this->hasMany(Abastecimento_rota::class);
     }
 
+    public function ordem_viatura(){
+        return $this->belongsToMany(ordem_viatura::class);
+    }
+
     public function viatura(){
         return $this->belongsToMany(viatura::class);
     }
@@ -30,5 +34,5 @@ class Rota extends Model
     public function horario(){
         return $this->hasMany(Horario::class);
     }
-    
+
 }

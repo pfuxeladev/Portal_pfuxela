@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\responsavelBombas;
 use App\Models\combustivelBomba;
+use Illuminate\Support\Carbon;
+
 class OrdemController extends Controller
 {
     private $ordem;
@@ -34,14 +36,14 @@ class OrdemController extends Controller
         $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->paginate(15);
 
         return response()->json($ordem, 200);
-
     }
 
-    public function OrdensAberta($refs){
+    public function OrdensAberta($refs)
+    {
         $ordem = $this->ordem->where('refs', $refs)->where('createdBy', auth()->user()->id)->where('estado', 'aberta')->first();
         $ordem_viatura  = ordem_viatura::with(['ordemViaturaRota.rota', 'ordem.viatura', 'viatura', 'ordem.bombas'])->where('ordem_id', $ordem->id)->get();
         if (empty($ordem_viatura)) {
-            return response()->json(['message'=>'nenhuma ordem a vista'], 200);
+            return response()->json(['message' => 'nenhuma ordem a vista'], 200);
         }
 
         return response()->json($ordem_viatura, 200);
@@ -58,25 +60,26 @@ class OrdemController extends Controller
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
             foreach ($responsavel as $key => $bombas_mail) {
-              $data["email"] = $bombas_mail->email_bomba;
-              $data["title"] = "Ordem de abastecimento Nr. ".$ordem->codigo_ordem;
+                $data["email"] = $bombas_mail->email_bomba;
+                $data["title"] = "Ordem de abastecimento Nr. " . $ordem->codigo_ordem;
 
-               $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-               $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
+                $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
 
-              Mail::send('orderMail.mail_order', compact('ordem'), function($message)use($data, $pdf) {
-                  $message->to($data["email"])
-                          ->subject($data["title"])
-                          ->attachData($pdf->output(), "ordem.pdf");
-              });
+                Mail::send('orderMail.mail_order', compact('ordem'), function ($message) use ($data, $pdf) {
+                    $message->to($data["email"])
+                        ->subject($data["title"])
+                        ->attachData($pdf->output(), "ordem.pdf");
+                });
             }
             return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
         }
     }
 
 
-    function getBomba($refs){
-       return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
+    function getBomba($refs)
+    {
+        return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
     }
 
     function CancelarOrdem(Request $request)
@@ -95,8 +98,7 @@ class OrdemController extends Controller
                     foreach ($viatura as $key => $v) {
                         $v->qtd_disponivel = ($v->qtd_disponivel - $ordVi->qtd_abastecida);
                         $v->update();
-                     }
-
+                    }
                 }
 
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
@@ -106,20 +108,18 @@ class OrdemController extends Controller
         }
     }
 
-    function ReabrirOrdem($refs){
+    function ReabrirOrdem($refs)
+    {
         try {
             $ordem = Ordem::where('refs', $refs)->first();
             $ordem->estado = 'Aberta';
             $ordem->approvedBy = auth()->user()->id;
             $ordem->update();
 
-            return response()->json(['success'=>'Ordem Reaberta'], 200);
+            return response()->json(['success' => 'Ordem Reaberta'], 200);
         } catch (\Exception $e) {
-           return response()->json(['erro'=> 'Erro! nao conseguiu reabrir a ordem', $e->getMessage()], 421);
+            return response()->json(['erro' => 'Erro! nao conseguiu reabrir a ordem', $e->getMessage()], 421);
         }
-
-
-
     }
 
     public function store(Request $request)
@@ -230,25 +230,25 @@ class OrdemController extends Controller
         return response()->json($ordem, 200);
     }
 
-   function imprimirOrdem($refs){
-    $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
+    function imprimirOrdem($refs)
+    {
+        $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
-    $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'Times New Roman']);
-    Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
-    // return $pdf->download('ordem.pdf');
+        $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'Times New Roman']);
+        Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
+        // return $pdf->download('ordem.pdf');
 
-   return view('orderMail.mail_order',compact('ordem'));
-
-   }
-
-   function editOrder(Request $request, $refs){
-    $ordem = Ordem::where('refs', $refs)->first();
-    $ordem_viatura  = ordem_viatura::where('ordem_id', $ordem->id)->get();
-    foreach ($ordem_viatura as $key => $v) {
-        return OrdemViaturaRota::with(['rota.projecto', 'ordem_viatura.viatura'])->get();
+        return view('orderMail.mail_order', compact('ordem'));
     }
 
-   }
+    function editOrder(Request $request, $refs)
+    {
+        $ordem = Ordem::where('refs', $refs)->first();
+        $ordem_viatura  = ordem_viatura::where('ordem_id', $ordem->id)->get();
+        foreach ($ordem_viatura as $key => $v) {
+            return OrdemViaturaRota::with(['rota.projecto', 'ordem_viatura.viatura'])->get();
+        }
+    }
     public function update(Request $request)
     {
         // return $request->all();
@@ -268,41 +268,80 @@ class OrdemController extends Controller
 
                 foreach ($viatura as $key => $viatura1) {
                     $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
-                    ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura1->tipo_combustivel)->get();
+                        ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura1->tipo_combustivel)->get();
 
                     foreach ($combustivel as $key => $comb) {
                         if ($comb) {
                             if ($viatura1->tipo_combustivel === $comb->tipo_combustivel) {
                                 # code...
                                 $preco = ($comb->preco_actual * $v['qtd_abastecida']);
-                            }else {
-                                return response()->json(['erro', 'A Bomba nao tem '.$viatura1->tipo_combustivel.' so pode abastecer '.$comb->tipo_combustivel], 421);
+                            } else {
+                                return response()->json(['erro', 'A Bomba nao tem ' . $viatura1->tipo_combustivel . ' so pode abastecer ' . $comb->tipo_combustivel], 421);
                             }
-                        }else{
-                            return response()->json(['erro'=> 'A Bomba nao tem '.$viatura1->tipo_combustivel], 421);
+                        } else {
+                            return response()->json(['erro' => 'A Bomba nao tem ' . $viatura1->tipo_combustivel], 421);
                         }
                     }
 
-                   ordem_viatura::where('ordem_id', $ordem->id)->update([ 'qtd_abastecida'=> $v['qtd_abastecida'], 'preco_cunsumo'=>$preco]);
+                    ordem_viatura::where('ordem_id', $ordem->id)->update(['qtd_abastecida' => $v['qtd_abastecida'], 'preco_cunsumo' => $preco]);
 
-                   $viatura1->qtd_disponivel = $v['qtd_abastecida'];
-                   $viatura1->update();
+                    $viatura1->qtd_disponivel = $v['qtd_abastecida'];
+                    $viatura1->update();
                 }
-
             }
-            return response()->json(['success'=>'actualizado com sucesso'], 200);
+            return response()->json(['success' => 'actualizado com sucesso'], 200);
         } catch (\Exception $e) {
-           return response()->json(['erro'=>'Ocorreu um erro na atualizacao '.$e->getMessage()], 421);
+            return response()->json(['erro' => 'Ocorreu um erro na atualizacao ' . $e->getMessage()], 421);
+        }
+    }
+
+    function RelatorioGeral(Request $request)
+    {
+        $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->paginate(30);
+
+        return response()->json($ordem_viatura, 200);
+    }
+
+    function printRelatorio(Request $request)
+    {
+
+        if ($request->intervalo) {
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereBetween('created_at', $request->intervalo)->orderBy('updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            // return $pdf->download('Relatorio.pdf');
+        } else if ($request->semana) {
+            // [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereBetween('created_at', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->orderBy('updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            // return $pdf->download('Relatorio.pdf');
+        } else if ($request->mes) {
+
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereMonth('created_at', date('m'))
+                ->whereYear('created_at', date('Y'))->orderBy('updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            // return $pdf->download('Relatorio.pdf');
+        } else if ($request->Hoje) {
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereDate('created_at', Carbon::today())->orderBy('updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            // return $pdf->download('Relatorio.pdf');
+        }else{
+
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->get();
+            // return view('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            return $pdf->download('Relatorio.pdf');
         }
 
     }
 
-    function RelatorioGeral(Request $request){
-
+    public function printPdf()
+    {
+        $pdf = PDF::loadView('orderMail.ExtraOrder')->setOptions(['defaultFont' => 'Verdana']);
+        return $pdf->download('ordem.pdf');
     }
-
-  public function printPdf(){
-    $pdf = PDF::loadView('orderMail.ExtraOrder')->setOptions(['defaultFont' => 'Verdana']);
-    return $pdf->download('ordem.pdf');
-  }
 }

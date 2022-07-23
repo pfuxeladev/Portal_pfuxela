@@ -30,6 +30,9 @@ class ordem_viatura extends Model
     public function ordemAbastecer(){
         return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
     }
+    public function rota(){
+        return $this->belongsToMany(Rota::class);
+    }
     function ordemViaturaRota(){
         return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }

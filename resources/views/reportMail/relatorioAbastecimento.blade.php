@@ -4,19 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ocorrencia</title>
+    <title>Relatorio</title>
 
     <style type="text/css">
         div.container {
-            width: 80%;
+            width: 100%;
             background-color: white;
-            margin: 4em;
-            padding: 1em;
             position: relative;
             /*float: left;*/
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             z-index: 1;
-            height: 100vh;
         }
 
         div.container>.content-header {
@@ -67,15 +64,24 @@
 
         table.table-content {
             width: 100%;
-            border: 0.1px;
             text-align: justify;
+            height: 100vh;
+            border-collapse: collapse;
         }
+        table.table-content td, table.table-content th {
+            border: 0.1px solid rgb(120, 119, 119);
+            padding: 2px;
+        }
+        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
 
         .row-data {
             width: 100%;
-            margin-left: 15px;
-            margin-right: 15px;
+            margin-top: 180px;
+            margin-right: 10px;
             position: relative;
+            font-size: 10pt;
+            height: auto;
+
         }
     </style>
 </head>
@@ -85,58 +91,76 @@
         <div class="content-header">
             <h3 class="centered-title"
                 style="text-align: center !important; color: whitesmoke; position: relative; width: 100%;">
-                Ordem de Serviço por meio da ocorrencia
+                Relatorio Geral de Abastecimento
             </h3>
         </div>
         <div class="content">
             <div class="side-company">
                 <ul class="list-unstyled">
-                    <li class="dado">Imprimido por: </li>
+                    <li class="dado">Imprimido por: {{ auth()->user()->name }}</li>
                     <li class="dado">Data de Emissao</li>
                     <li class="dado">Hora da Orcorrencia</li>
 
                 </ul>
             </div>
             <div class="logotipo">
-                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}" width="150px">
+                <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}"
+                    width="150px">
             </div>
         </div>
         <div class="row-data">
-            <h4 class="head-title" style="margin-left:5px; text-align:center; width: 100%;">Relatorio dos Abastecimentos</h4>
+            {{-- <h4 class="head-title" style="margin-left:5px; text-align:center; width: 100%;">Relatorio dos Abastecimentos</h4> --}}
+            <?php $total = 0; ?>
             <table class="table-content">
                 <thead>
                     <tr>
                         <th>Ordem</th>
                         <th>Data</th>
                         <th>Viaturas</th>
-                        <th>Turno</th>
                         <th>Tipo de Combustivel</th>
+
                         <th>Qtd abastecida</th>
                         <th>Preco Unitario</th>
+                        <th>Rotas</th>
                         <th>Total</th>
-                        <th>Autor</th>
+                        {{--  <th>Autor</th>  --}}
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    @foreach ($ordem_viatura as $ordens)
+                        <tr>
+                            <td>{{ $ordens->ordem->codigo_ordem }}</td>
+                            <td>{{ $ordens->ordem->created_at }}</td>
+                            <td>{{ $ordens->viatura->matricula }}</td>
+                            <td>{{ $ordens->viatura->tipo_combustivel }}</td>
+                            <td>
+                                {{ $ordens->qtd_abastecida }}
+                            </td>
+                            <td>
+                                {{ number_format($ordens->preco_cunsumo / $ordens->qtd_abastecida, 2, ',', '.') }}
+                            </td>
+                            <td>
+                                @foreach ($ordens->ordemViaturaRota as $rt)
+                                    {{ $rt->rota->nome_rota }},
+                                @endforeach
+                            </td>
+                            <td>{{ number_format($ordens->preco_cunsumo, 2, ',', '.') }} MT</td>
+                            {{--  <td>
+                                @if ($ordens->ordem->approved_by !== null)
+                                    {{ $ordens->ordem->approved_by->name}}
+                                @endif
+                            </td>  --}}
+                            <?php $total += $ordens->preco_cunsumo; ?>
+                        </tr>
+                    @endforeach
+
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr style="border: 1px;">
                         <td colspan="7">
                             TOTAL
                         </td>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $total }} MT</td>
                     </tr>
                 </tfoot>
             </table>

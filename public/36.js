@@ -1,528 +1,75 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[36],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.keys.js */ "./node_modules/core-js/modules/es.object.keys.js");
-/* harmony import */ var core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_keys_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.fill.js */ "./node_modules/core-js/modules/es.array.fill.js");
-/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _core_mixins_ui_transition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/mixins/ui/transition */ "./resources/js/src/@core/mixins/ui/transition.js");
-/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var vue_cleave_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-cleave-component */ "./node_modules/vue-cleave-component/dist/vue-cleave.min.js");
-/* harmony import */ var vue_cleave_component__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_cleave_component__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
-/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
-/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _FormDatepickerBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerBasic.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue");
+/* harmony import */ var _FormDatepickerState_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormDatepickerState.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue");
+/* harmony import */ var _FormDatepickerMinMax_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue");
+/* harmony import */ var _FormDatepickerDisableDate_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue");
+/* harmony import */ var _FormDatepickerValidation_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormDatepickerValidation.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue");
+/* harmony import */ var _FormDatepickerVariant_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormDatepickerVariant.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue");
+/* harmony import */ var _FormDatepickerSize_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormDatepickerSize.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue");
+/* harmony import */ var _FormDatepickerPlaceholder_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue");
+/* harmony import */ var _FormDatepickerOptional_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormDatepickerOptional.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue");
+/* harmony import */ var _FormDatepickerButtonOnly_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue");
+/* harmony import */ var _FormDatepickerString_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FormDatepickerString.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue");
+/* harmony import */ var _FormDatepickerFullWidth_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue");
+/* harmony import */ var _FormDatepickerInternationalization_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -536,298 +83,1066 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BFormFile"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BCol"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BCardBody"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BButton"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BForm"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BFormInput"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BFormTextarea"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BLink"],
-    flatPickr: vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_9___default.a,
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_8___default.a,
-    Cleave: vue_cleave_component__WEBPACK_IMPORTED_MODULE_6___default.a,
-    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["BFormDatepicker"],
-    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_10__["default"]
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    FormDatepickerBasic: _FormDatepickerBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    FormDatepickerState: _FormDatepickerState_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    FormDatepickerMinMax: _FormDatepickerMinMax_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    FormDatepickerDisableDate: _FormDatepickerDisableDate_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    FormDatepickerValidation: _FormDatepickerValidation_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    FormDatepickerVariant: _FormDatepickerVariant_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    FormDatepickerSize: _FormDatepickerSize_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    FormDatepickerPlaceholder: _FormDatepickerPlaceholder_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    FormDatepickerOptional: _FormDatepickerOptional_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    FormDatepickerButtonOnly: _FormDatepickerButtonOnly_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+    FormDatepickerString: _FormDatepickerString_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
+    FormDatepickerFullWidth: _FormDatepickerFullWidth_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+    FormDatepickerInternationalization: _FormDatepickerInternationalization_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
   },
-  directives: {
-    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_4__["default"],
-    'b-toggle': bootstrap_vue__WEBPACK_IMPORTED_MODULE_7__["VBToggle"]
-  },
-  mixins: [_core_mixins_ui_transition__WEBPACK_IMPORTED_MODULE_3__["heightTransition"]],
   data: function data() {
     return {
-      marcas: [],
-      combustivel: [],
-      filename: '',
-      file: null,
-      userData: JSON.parse(localStorage.getItem('userData')),
-      form: new vform__WEBPACK_IMPORTED_MODULE_5__["default"]({
-        id: this.$route.params.id,
-        modelo: null,
-        marca_id: null,
-        nome_viatura: '',
-        ano_fabrico: '',
-        kilometragem: null,
-        tipo_combustivel: null,
-        capacidade_tanque: null,
-        modelo_id: null,
-        capacidade_media: '',
-        lotacao: 2,
-        nr_motor: '',
-        nr_chassi: '',
-        nr_livrete: '',
-        matricula: '',
-        viatura_document: [{
-          data_licenca: '',
-          data_inspencao: '',
-          data_manifesto: '',
-          data_taxa_radio: '',
-          data_seguros: '',
-          prazo_licenca: '',
-          prazo_inspencao: '',
-          prazo_manifesto: '',
-          prazo_taxa_radio: '',
-          prazo_seguros: ''
-        }],
-        documentos: []
-      })
+      value: '',
+      codeBasic: _code__WEBPACK_IMPORTED_MODULE_2__["codeBasic"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"]
+  },
+  data: function data() {
+    return {
+      value: '',
+      formatted: '',
+      selected: '',
+      codeButtonOnly: _code__WEBPACK_IMPORTED_MODULE_2__["codeButtonOnly"]
     };
   },
-  mounted: function mounted() {},
-  created: function created() {
-    this.getMarcas();
-    this.getCombustivel();
-    this.getViatura();
-  },
   methods: {
-    getMarcas: function getMarcas() {
-      var _this = this;
+    onContext: function onContext(ctx) {
+      // The date formatted in the locale, or the `label-no-date-selected` string
+      this.formatted = ctx.selectedFormatted; // The following will be an empty string until a valid date is entered
 
-      this.$http.get('/api/marca').then(function (response) {
-        _this.marcas = response.data;
-      });
-    },
-    getCombustivel: function getCombustivel() {
-      var _this2 = this;
-
-      this.$http.get('/api/getCombustivel').then(function (response) {
-        _this2.combustivel = response.data;
-      });
-    },
-    onFileChange: function onFileChange(e) {
-      var _this3 = this;
-
-      this.file = e.target.files; // eslint-disable-next-line no-restricted-syntax
-
-      var _loop = function _loop() {
-        var i = _Object$keys[_i];
-        _this3.form.documentos[i] = _this3.file[i];
-        var self = _this3;
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-          self.form.documentos.push(e.target.result);
-        };
-
-        reader.readAsDataURL(_this3.file[i]);
-      };
-
-      for (var _i = 0, _Object$keys = Object.keys(this.file); _i < _Object$keys.length; _i++) {
-        _loop();
-      }
-    },
-    getViatura: function getViatura() {
-      var _this4 = this;
-
-      this.$http.get("/api/viaturas/".concat(this.$route.params.id)).then(function (res) {
-        _this4.form.fill(res.data);
-      });
-    },
-    submitViatura: function submitViatura() {
-      var _this5 = this;
-
-      this.$Progress.start();
-      this.form.put("/api/viaturas/".concat(this.$route.params.id)).then(function (response) {
-        _this5.$swal.fire({
-          icon: 'success',
-          title: response.data.success
-        }); //   Fire.$emit('afterAction')
-
-
-        _this5.form.clear();
-
-        _this5.form.reset();
-
-        _this5.$Progress.finish();
-
-        _this5.$router.push({
-          name: 'Cars'
-        });
-      })["catch"](function (error) {
-        if (error.response.data.status === 421) {
-          _this5.$swal.fire({
-            icon: 'error',
-            title: 'Erro ao tentar adicionar!'
-          });
-
-          _this5.$router.push({
-            name: 'auth-login'
-          });
-        } else if (error.response.data.status === 422) {
-          _this5.$swal.fire({
-            icon: 'error',
-            title: 'Erro ao tentar adicionar!'
-          });
-        } else {
-          _this5.$swal.fire({
-            icon: 'error',
-            title: 'Erro ao tentar adicionar!'
-          });
-        }
-
-        _this5.$Progress.fail();
-      });
+      this.selected = ctx.selectedYMD;
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/array-fill.js":
-/*!******************************************************!*\
-  !*** ./node_modules/core-js/internals/array-fill.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
-var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
-var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
-
-// `Array.prototype.fill` method implementation
-// https://tc39.es/ecma262/#sec-array.prototype.fill
-module.exports = function fill(value /* , start = 0, end = @length */) {
-  var O = toObject(this);
-  var length = lengthOfArrayLike(O);
-  var argumentsLength = arguments.length;
-  var index = toAbsoluteIndex(argumentsLength > 1 ? arguments[1] : undefined, length);
-  var end = argumentsLength > 2 ? arguments[2] : undefined;
-  var endPos = end === undefined ? length : toAbsoluteIndex(end, length);
-  while (endPos > index) O[index++] = value;
-  return O;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.array.fill.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/core-js/modules/es.array.fill.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var fill = __webpack_require__(/*! ../internals/array-fill */ "./node_modules/core-js/internals/array-fill.js");
-var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js");
-
-// `Array.prototype.fill` method
-// https://tc39.es/ecma262/#sec-array.prototype.fill
-$({ target: 'Array', proto: true }, {
-  fill: fill
-});
-
-// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
-addToUnscopables('fill');
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-/***/ }),
 
-/***/ "./node_modules/core-js/modules/es.object.keys.js":
-/*!********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.object.keys.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      value: '',
+      codeDisableDate: _code__WEBPACK_IMPORTED_MODULE_2__["codeDisableDate"]
+    };
+  },
+  methods: {
+    dateDisabled: function dateDisabled(ymd, date) {
+      // Disable weekends (Sunday = `0`, Saturday = `6`) and
+      // disable days that fall on the 13th of the month
+      var weekday = date.getDay();
+      var day = date.getDate(); // Return `true` if the date should be disabled
 
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
-var nativeKeys = __webpack_require__(/*! ../internals/object-keys */ "./node_modules/core-js/internals/object-keys.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-
-var FAILS_ON_PRIMITIVES = fails(function () { nativeKeys(1); });
-
-// `Object.keys` method
-// https://tc39.es/ecma262/#sec-object.keys
-$({ target: 'Object', stat: true, forced: FAILS_ON_PRIMITIVES }, {
-  keys: function keys(it) {
-    return nativeKeys(toObject(it));
+      return weekday === 0 || weekday === 6 || day === 13;
+    }
   }
 });
 
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      value: '',
+      codeFullWith: _code__WEBPACK_IMPORTED_MODULE_2__["codeFullWith"]
+    };
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-var ___CSS_LOADER_AT_RULE_IMPORT_0___ = __webpack_require__(/*! -!../../../../../../node_modules/css-loader/dist/cjs.js!flatpickr/dist/flatpickr.css */ "./node_modules/css-loader/dist/cjs.js!./node_modules/flatpickr/dist/flatpickr.css");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-exports.i(___CSS_LOADER_AT_RULE_IMPORT_0___);
-// Module
-exports.push([module.i, ".flatpickr-calendar .flatpickr-day {\n  color: #6e6b7b;\n}\n[dir] .flatpickr-calendar .flatpickr-day.today {\n  border-color: #7367f0;\n}\n.flatpickr-calendar .flatpickr-day.today:hover {\n  color: #6e6b7b;\n}\n[dir] .flatpickr-calendar .flatpickr-day.today:hover {\n  background: transparent;\n}\n.flatpickr-calendar .flatpickr-day.selected, .flatpickr-calendar .flatpickr-day.selected:hover {\n  color: #fff;\n}\n[dir] .flatpickr-calendar .flatpickr-day.selected, [dir] .flatpickr-calendar .flatpickr-day.selected:hover {\n  background: #7367f0;\n  border-color: #7367f0;\n}\n[dir] .flatpickr-calendar .flatpickr-day.inRange, [dir] .flatpickr-calendar .flatpickr-day.inRange:hover {\n  background: #f3f2fe;\n  border-color: #f3f2fe;\n}\n[dir=ltr] .flatpickr-calendar .flatpickr-day.inRange, [dir=ltr] .flatpickr-calendar .flatpickr-day.inRange:hover {\n  box-shadow: -5px 0 0 #f3f2fe, 5px 0 0 #f3f2fe;\n}\n[dir=rtl] .flatpickr-calendar .flatpickr-day.inRange, [dir=rtl] .flatpickr-calendar .flatpickr-day.inRange:hover {\n  box-shadow: 5px 0 0 #f3f2fe, -5px 0 0 #f3f2fe;\n}\n.flatpickr-calendar .flatpickr-day.startRange, .flatpickr-calendar .flatpickr-day.endRange, .flatpickr-calendar .flatpickr-day.startRange:hover, .flatpickr-calendar .flatpickr-day.endRange:hover {\n  color: #fff;\n}\n[dir] .flatpickr-calendar .flatpickr-day.startRange, [dir] .flatpickr-calendar .flatpickr-day.endRange, [dir] .flatpickr-calendar .flatpickr-day.startRange:hover, [dir] .flatpickr-calendar .flatpickr-day.endRange:hover {\n  background: #7367f0;\n  border-color: #7367f0;\n}\n[dir=ltr] .flatpickr-calendar .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), [dir=ltr] .flatpickr-calendar .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), [dir=ltr] .flatpickr-calendar .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {\n  box-shadow: -10px 0 0 #7367f0;\n}\n[dir=rtl] .flatpickr-calendar .flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), [dir=rtl] .flatpickr-calendar .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), [dir=rtl] .flatpickr-calendar .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1)) {\n  box-shadow: 10px 0 0 #7367f0;\n}\n.flatpickr-calendar .flatpickr-day.flatpickr-disabled, .flatpickr-calendar .flatpickr-day.prevMonthDay, .flatpickr-calendar .flatpickr-day.nextMonthDay {\n  color: #dae1e7;\n}\n[dir] .flatpickr-calendar .flatpickr-day:hover {\n  background: #f6f6f6;\n}\n.flatpickr-calendar:after, .flatpickr-calendar:before {\n  display: none;\n}\n.flatpickr-calendar .flatpickr-months .flatpickr-prev-month,\n.flatpickr-calendar .flatpickr-months .flatpickr-next-month {\n  top: -5px;\n}\n.flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover i, .flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover svg,\n.flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover i,\n.flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover svg {\n  fill: #7367f0;\n}\n.flatpickr-calendar .flatpickr-current-month span.cur-month {\n  font-weight: 300;\n}\n.flatpickr-calendar.open {\n  z-index: 1051;\n}\n.flatpickr-calendar.hasTime.open .flatpickr-time {\n  height: auto;\n}\n[dir] .flatpickr-time input:hover, [dir] .flatpickr-time .flatpickr-am-pm:hover, [dir] .flatpickr-time input:focus, [dir] .flatpickr-time .flatpickr-am-pm:focus {\n  background: #fff;\n}\n[dir] .dark-layout .flatpickr-calendar {\n  background: #161d31;\n  border-color: #161d31;\n  box-shadow: none;\n}\n.dark-layout .flatpickr-calendar .flatpickr-months i,\n.dark-layout .flatpickr-calendar .flatpickr-months svg {\n  fill: #b4b7bd;\n}\n.dark-layout .flatpickr-calendar .flatpickr-month {\n  color: #b4b7bd;\n}\n[dir=ltr] .dark-layout .flatpickr-calendar .flatpickr-weekwrapper .flatpickr-weeks {\n  box-shadow: 1px 0 0 #3b4253;\n}\n[dir=rtl] .dark-layout .flatpickr-calendar .flatpickr-weekwrapper .flatpickr-weeks {\n  box-shadow: -1px 0 0 #3b4253;\n}\n.dark-layout .flatpickr-calendar .flatpickr-weekday {\n  color: #b4b7bd;\n}\n.dark-layout .flatpickr-calendar .flatpickr-day, .dark-layout .flatpickr-calendar .flatpickr-day.today:hover {\n  color: #b4b7bd;\n}\n.dark-layout .flatpickr-calendar .flatpickr-day.selected {\n  color: #fff;\n}\n.dark-layout .flatpickr-calendar .flatpickr-day.prevMonthDay, .dark-layout .flatpickr-calendar .flatpickr-day.nextMonthDay, .dark-layout .flatpickr-calendar .flatpickr-day.flatpickr-disabled {\n  color: #4e5154 !important;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-day.inRange, [dir] .dark-layout .flatpickr-calendar .flatpickr-day.inRange:hover {\n  background: #283046;\n  border-color: #283046;\n}\n[dir=ltr] .dark-layout .flatpickr-calendar .flatpickr-day.inRange, [dir=ltr] .dark-layout .flatpickr-calendar .flatpickr-day.inRange:hover {\n  box-shadow: -5px 0 0 #283046, 5px 0 0 #283046;\n}\n[dir=rtl] .dark-layout .flatpickr-calendar .flatpickr-day.inRange, [dir=rtl] .dark-layout .flatpickr-calendar .flatpickr-day.inRange:hover {\n  box-shadow: 5px 0 0 #283046, -5px 0 0 #283046;\n}\n.dark-layout .flatpickr-calendar .flatpickr-day:hover:not(.selected):not(.today):not(.startRange):not(.endRange) {\n  color: #b4b7bd;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-day:hover:not(.selected):not(.today):not(.startRange):not(.endRange) {\n  border-color: #283046;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-days .flatpickr-day:hover:not(.selected):not(.today):not(.startRange):not(.endRange), [dir] .dark-layout .flatpickr-calendar .flatpickr-days .flatpickr-day:focus:not(.selected):not(.today):not(.startRange):not(.endRange) {\n  background: #283046;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-time {\n  border-color: #161d31 !important;\n}\n.dark-layout .flatpickr-calendar .flatpickr-time .numInput,\n.dark-layout .flatpickr-calendar .flatpickr-time .flatpickr-am-pm {\n  color: #b4b7bd;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-time .numInput:hover, [dir] .dark-layout .flatpickr-calendar .flatpickr-time .flatpickr-am-pm:hover {\n  background: #161d31;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-time .arrowUp:after {\n  border-bottom-color: #b4b7bd;\n}\n[dir] .dark-layout .flatpickr-calendar .flatpickr-time .arrowDown:after {\n  border-top-color: #b4b7bd;\n}\n[dir] .dark-layout .flatpickr-time input:hover, [dir] .dark-layout .flatpickr-time .flatpickr-am-pm:hover, [dir] .dark-layout .flatpickr-time input:focus, [dir] .dark-layout .flatpickr-time .flatpickr-am-pm:focus {\n  background: #161d31;\n}\n.flatpickr-input[readonly],\n.flatpickr-input ~ .form-control[readonly],\n.flatpickr-human-friendly[readonly] {\n  opacity: 1 !important;\n}\n[dir] .flatpickr-input[readonly], [dir] .flatpickr-input ~ .form-control[readonly], [dir] .flatpickr-human-friendly[readonly] {\n  background-color: inherit;\n}\n[dir] .flatpickr-weekdays {\n  margin-top: 8px;\n}\n.flatpickr-current-month .flatpickr-monthDropdown-months {\n  -webkit-appearance: none;\n}\n.flatpickr-current-month .flatpickr-monthDropdown-months,\n.flatpickr-current-month .numInputWrapper {\n  font-size: 1.1rem;\n  transition: all 0.15s ease-out;\n}\n[dir] .flatpickr-current-month .flatpickr-monthDropdown-months, [dir] .flatpickr-current-month .numInputWrapper {\n  border-radius: 4px;\n  padding: 2px;\n}\n.flatpickr-current-month .flatpickr-monthDropdown-months span,\n.flatpickr-current-month .numInputWrapper span {\n  display: none;\n}\nhtml[dir=rtl] .flatpickr-calendar .flatpickr-prev-month svg,\nhtml[dir=rtl] .flatpickr-calendar .flatpickr-next-month svg {\n  transform: rotate(180deg);\n}", ""]);
-// Exports
-module.exports = exports;
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
+    BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSelect"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"]
+  },
+  data: function data() {
+    return {
+      value: '',
+      locale: 'en-US',
+      showDecadeNav: false,
+      hideHeader: false,
+      codeInternationalization: _code__WEBPACK_IMPORTED_MODULE_2__["codeInternationalization"],
+      locales: [{
+        value: 'en-US',
+        text: 'English US (en-US)'
+      }, {
+        value: 'de',
+        text: 'German (de)'
+      }, {
+        value: 'ar-EG',
+        text: 'Arabic Egyptian (ar-EG)'
+      }, {
+        value: 'zh',
+        text: 'Chinese (zh)'
+      }],
+      weekday: 0,
+      weekdays: [{
+        value: 0,
+        text: 'Sunday'
+      }, {
+        value: 1,
+        text: 'Monday'
+      }, {
+        value: 6,
+        text: 'Saturday'
+      }],
+      labels: {
+        de: {
+          labelPrevDecade: 'Vorheriges Jahrzehnt',
+          labelPrevYear: 'Vorheriges Jahr',
+          labelPrevMonth: 'Vorheriger Monat',
+          labelCurrentMonth: 'Aktueller Monat',
+          labelNextMonth: 'Nächster Monat',
+          labelNextYear: 'Nächstes Jahr',
+          labelNextDecade: 'Nächstes Jahrzehnt',
+          labelToday: 'Heute',
+          labelSelected: 'Ausgewähltes Datum',
+          labelNoDateSelected: 'Kein Datum gewählt',
+          labelCalendar: 'Kalender',
+          labelNav: 'Kalendernavigation',
+          labelHelp: 'Mit den Pfeiltasten durch den Kalender navigieren'
+        },
+        'ar-EG': {
+          labelPrevDecade: 'العقد السابق',
+          labelPrevYear: 'العام السابق',
+          labelPrevMonth: 'الشهر السابق',
+          labelCurrentMonth: 'الشهر الحالي',
+          labelNextMonth: 'الشهر المقبل',
+          labelNextYear: 'العام المقبل',
+          labelNextDecade: 'العقد القادم',
+          labelToday: 'اليوم',
+          labelSelected: 'التاريخ المحدد',
+          labelNoDateSelected: 'لم يتم اختيار تاريخ',
+          labelCalendar: 'التقويم',
+          labelNav: 'الملاحة التقويم',
+          labelHelp: 'استخدم مفاتيح المؤشر للتنقل في التواريخ'
+        },
+        zh: {
+          labelPrevDecade: '过去十年',
+          labelPrevYear: '上一年',
+          labelPrevMonth: '上个月',
+          labelCurrentMonth: '当前月份',
+          labelNextMonth: '下个月',
+          labelNextYear: '明年',
+          labelNextDecade: '下一个十年',
+          labelToday: '今天',
+          labelSelected: '选定日期',
+          labelNoDateSelected: '未选择日期',
+          labelCalendar: '日历',
+          labelNav: '日历导航',
+          labelHelp: '使用光标键浏览日期'
+        }
+      }
+    };
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viaturaEditForm.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&");
 
-if(typeof content === 'string') content = [[module.i, content, '']];
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    var now = new Date();
+    var today = new Date(now.getFullYear(), now.getMonth(), now.getDate()); // 15th two months prior
 
-var transform;
-var insertInto;
+    var minDate = new Date(today);
+    minDate.setMonth(minDate.getMonth() - 2);
+    minDate.setDate(15); // 15th in two months
 
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
+    var maxDate = new Date(today);
+    maxDate.setMonth(maxDate.getMonth() + 2);
+    maxDate.setDate(15);
+    return {
+      value: '',
+      min: minDate,
+      max: maxDate,
+      codeMinMax: _code__WEBPACK_IMPORTED_MODULE_2__["codeMinMax"]
+    };
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      codeOptional: _code__WEBPACK_IMPORTED_MODULE_2__["codeOptional"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      codePlaceholder: _code__WEBPACK_IMPORTED_MODULE_2__["codePlaceholder"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BFormRadio: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadio"],
+    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"]
+  },
+  data: function data() {
+    return {
+      state: 'disabled',
+      codeState: _code__WEBPACK_IMPORTED_MODULE_2__["codeState"]
+    };
+  },
+  computed: {
+    disabled: function disabled() {
+      return this.state === 'disabled';
+    },
+    readonly: function readonly() {
+      return this.state === 'readonly';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      codeString: _code__WEBPACK_IMPORTED_MODULE_2__["codeString"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"]
+  },
+  data: function data() {
+    return {
+      codeValidation: _code__WEBPACK_IMPORTED_MODULE_2__["codeValidation"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-datepicker/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormDatepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormDatepicker"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+  },
+  data: function data() {
+    return {
+      codeVariant: _code__WEBPACK_IMPORTED_MODULE_2__["codeVariant"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -840,1583 +1155,1320 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "section",
-    { staticClass: "invoice-add-wrapper mt-3" },
+    "b-row",
+    { staticClass: "match-height" },
     [
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-basic")], 1),
+      _vm._v(" "),
       _c(
-        "b-row",
-        { staticClass: "invoice-add" },
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-placeholder")],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-min-max")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-disable-date")],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-validation")],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-state")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "12" } }, [_c("form-datepicker-variant")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-button-only")],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-string")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-full-width")],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-optional")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-datepicker-size")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-datepicker-internationalization")],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Basic Datepicker" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeBasic) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("code", [_vm._v("<b-form-datepicker>")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "\n      is a BootstrapVue custom date picker input form control, which provides full WAI-ARIA compliance and\n      internationalization support.\n    "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "example-datepicker" } }, [
+        _vm._v("Choose a date"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        staticClass: "mb-1",
+        attrs: { id: "example-datepicker" },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+      _vm._v(" "),
+      _c("span", [_vm._v("Value: '" + _vm._s(_vm.value) + "'")]),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Button only mode" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeButtonOnly) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("code", [_vm._v("button-only")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "\n      prop to render the datepicker as a dropdown button. The formatted date label will be rendered with the class\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("sr-only")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" (available only to screen readers).")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "example-input" } }, [
+        _vm._v("Choose a date"),
+      ]),
+      _vm._v(" "),
+      _c(
+        "b-input-group",
+        { staticClass: "mb-1" },
         [
+          _c("b-form-input", {
+            attrs: {
+              id: "example-input",
+              type: "text",
+              placeholder: "YYYY-MM-DD",
+              autocomplete: "off",
+              "show-decade-nav": "",
+            },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
+              },
+              expression: "value",
+            },
+          }),
+          _vm._v(" "),
           _c(
-            "b-col",
-            { attrs: { cols: "12", xl: "12", md: "12" } },
+            "b-input-group-append",
+            [
+              _c("b-form-datepicker", {
+                attrs: {
+                  "show-decade-nav": "",
+                  "button-only": "",
+                  "button-variant": "outline-primary",
+                  right: "",
+                  size: "sm",
+                  locale: "en-US",
+                  "aria-controls": "example-input",
+                },
+                on: { context: _vm.onContext },
+                model: {
+                  value: _vm.value,
+                  callback: function ($$v) {
+                    _vm.value = $$v
+                  },
+                  expression: "value",
+                },
+              }),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-card-text", { staticClass: "mb-1" }, [
+        _vm._v("\n    Value: '" + _vm._s(_vm.value) + "'\n  "),
+      ]),
+      _vm._v(" "),
+      _c("b-card-text", { staticClass: "mb-1" }, [
+        _vm._v("\n    Selected: '" + _vm._s(_vm.selected) + "'\n  "),
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("Formatted: '" + _vm._s(_vm.formatted) + "'")]),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Disable dates" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeDisableDate) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "If you need to disable specific dates within the date picker, specify a function reference to the "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("date-disabled-fn")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop.")]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        attrs: { "date-disabled-fn": _vm.dateDisabled, locale: "en" },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Full width calendar dropdown" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeFullWith) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v("To create a full width calendar dropdown simply set the "),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("menu-class")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop to ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("'w-100'")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" and set the calendar-width prop to '100%':")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "datepicker-full-width" } }, [
+        _vm._v("Choose a date"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        attrs: {
+          id: "datepicker-full-width",
+          "menu-class": "w-100",
+          "calendar-width": "100%",
+        },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Internationalization" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [
+              _vm._v("\n    " + _vm._s(_vm.codeInternationalization) + "\n  "),
+            ]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("By default ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("<b-form-datepicker>")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " will use the browser's default locale, but you can specify the locale (or locales) to use via the "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("locale")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("prop.")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { attrs: { for: "example-locales" } }, [
+            _vm._v("Locale:"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-select", {
+            staticClass: "mb-1",
+            attrs: { id: "example-locales", options: _vm.locales },
+            model: {
+              value: _vm.locale,
+              callback: function ($$v) {
+                _vm.locale = $$v
+              },
+              expression: "locale",
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "example-weekdays" } }, [
+            _vm._v("Start weekday:"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-select", {
+            staticClass: "mb-1",
+            attrs: { id: "example-weekdays", options: _vm.weekdays },
+            model: {
+              value: _vm.weekday,
+              callback: function ($$v) {
+                _vm.weekday = $$v
+              },
+              expression: "weekday",
+            },
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
             [
               _c(
-                "b-form",
+                "b-form-checkbox",
                 {
-                  on: {
-                    submit: function ($event) {
-                      $event.preventDefault()
-                      return _vm.submitViatura()
+                  staticClass: "my-1",
+                  attrs: { switch: "", inline: "" },
+                  model: {
+                    value: _vm.showDecadeNav,
+                    callback: function ($$v) {
+                      _vm.showDecadeNav = $$v
                     },
+                    expression: "showDecadeNav",
+                  },
+                },
+                [_vm._v("\n        Show decade navigation buttons\n      ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "b-form-checkbox",
+                {
+                  staticClass: "my-1",
+                  attrs: { switch: "", inline: "" },
+                  model: {
+                    value: _vm.hideHeader,
+                    callback: function ($$v) {
+                      _vm.hideHeader = $$v
+                    },
+                    expression: "hideHeader",
+                  },
+                },
+                [_vm._v("\n        Hide calendar header\n      ")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "example-i18n-picker" } }, [
+            _vm._v("Date picker:"),
+          ]),
+          _vm._v(" "),
+          _c(
+            "b-form-datepicker",
+            _vm._b(
+              {
+                staticClass: "mb-1",
+                attrs: {
+                  id: "example-i18n-picker",
+                  locale: _vm.locale,
+                  "start-weekday": _vm.weekday,
+                  "show-decade-nav": _vm.showDecadeNav,
+                  "hide-header": _vm.hideHeader,
+                },
+                model: {
+                  value: _vm.value,
+                  callback: function ($$v) {
+                    _vm.value = $$v
+                  },
+                  expression: "value",
+                },
+              },
+              "b-form-datepicker",
+              _vm.labels[_vm.locale] || {},
+              false
+            )
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Minimum and maximum dates" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeMinMax) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Restrict the calendar range via the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("min")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" and ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("max")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(" props. The props accept a date string in the format of "),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("YYYY-MM-DD")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" or a ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("Date")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" object.")]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        attrs: { min: _vm.min, max: _vm.max, locale: "en" },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Optional controls" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeOptional) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "Add optional control buttons to the bottom of the calendar popup via the props "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("today-button")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(",")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("reset-button")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" and ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("close-button")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(".")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "datepicker-buttons" } }, [
+        _vm._v("Date picker with optional footer buttons"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        attrs: {
+          id: "datepicker-buttons",
+          "today-button": "",
+          "reset-button": "",
+          "close-button": "",
+          locale: "en",
+          "menu-class": "w-100",
+          "calendar-width": "100%",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&":
+/*!**************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Placeholder & Initial Open Date" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codePlaceholder) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "Add custom placeholder text to the control, when no date is selected, via the "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("placeholder")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop. ")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v("You can change this behaviour by specifying a date via the "),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("initial-date")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop.")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "datepicker-placeholder" } }, [
+        _vm._v("Date picker with placeholder"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-datepicker", {
+        attrs: {
+          id: "datepicker-placeholder",
+          placeholder: "Choose a date",
+          local: "en",
+          "initial-date": "2020-06-16",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Control sizing" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Fancy a smaller or larger ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("<b-form-datepicker>")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("control? Set the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("size")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop to ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("'sm'")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" for a smaller form control, or ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("'lg'")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " for a larger form form control. Note this does not affect the size of the popup calendar dialog."
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { attrs: { for: "datepicker-sm" } }, [
+            _vm._v("Small date picker"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            staticClass: "mb-2",
+            attrs: {
+              id: "datepicker-sm",
+              size: "sm",
+              local: "en",
+              "today-variant": "danger",
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "datepicker-default" } }, [
+            _vm._v("Default date picker"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            staticClass: "mb-2",
+            attrs: {
+              id: "datepicker-default",
+              local: "en",
+              "today-variant": "danger",
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "datepicker-lg" } }, [
+            _vm._v("Large date picker"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            attrs: { id: "datepicker-lg", size: "lg", local: "en" },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Disabled and readonly states" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeState) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("code", [_vm._v("Setting the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("disabled")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop will remove all interactivity of the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("<b-form-datepicker>")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" component. Setting the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("readonly")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop will disable selecting a date.")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c(
+            "b-form-group",
+            { attrs: { label: "Select date picker interactive state" } },
+            [
+              _c(
+                "b-form-radio-group",
+                {
+                  attrs: { "aria-controls": "ex-disabled-readonly" },
+                  model: {
+                    value: _vm.state,
+                    callback: function ($$v) {
+                      _vm.state = $$v
+                    },
+                    expression: "state",
                   },
                 },
                 [
-                  _c(
-                    "b-card",
-                    {
-                      staticClass: "invoice-preview-card",
-                      attrs: { "no-body": "" },
-                    },
-                    [
-                      _c(
-                        "b-card-body",
-                        { staticClass: "invoice-padding form-item-section" },
-                        [
-                          _c(
-                            "div",
-                            { ref: "form", staticClass: "repeater-form" },
-                            [
-                              _c(
-                                "b-row",
-                                { ref: "row", staticClass: "pb-2" },
-                                [
-                                  _c("b-col", { attrs: { cols: "12" } }, [
-                                    _c(
-                                      "div",
-                                      { staticClass: "d-none d-lg-flex" },
-                                      [
-                                        _c(
-                                          "b-row",
-                                          { staticClass: "flex-grow-1 px-1" },
-                                          [
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-0",
-                                                      label: "Marca:",
-                                                      "label-for": "input-0",
-                                                      description:
-                                                        "Selecionar a marca do veiculo que pretende cadastrar.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("v-select", {
-                                                      attrs: {
-                                                        label: "nome",
-                                                        options: _vm.marcas,
-                                                        reduce: function (
-                                                          marcas
-                                                        ) {
-                                                          return marcas.id
-                                                        },
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.marca_id,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "marca_id",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.marca_id",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "marca_id"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "marca_id"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-1",
-                                                      label: "Descricao:",
-                                                      "label-for": "input-1",
-                                                      description:
-                                                        "Descricao/especificacoes tecnicas da viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-1",
-                                                        type: "tecnicas",
-                                                        placeholder:
-                                                          "Descricao",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.nome_viatura,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "nome_viatura",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.nome_viatura",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "nome_viatura"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "nome_viatura"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-2",
-                                                      label: "Ano de fabrico:",
-                                                      "label-for": "input-2",
-                                                      description:
-                                                        "Indique o ano.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-2",
-                                                        type: "number",
-                                                        placeholder: "ano",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.ano_fabrico,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "ano_fabrico",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.ano_fabrico",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "ano_fabrico"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "ano_fabrico"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-3",
-                                                      label: "Nr do motor:",
-                                                      "label-for": "input-3",
-                                                      description:
-                                                        "Indique o nr do motor",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-3",
-                                                        type: "text",
-                                                        placeholder:
-                                                          "Numero do motor",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.nr_motor,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "nr_motor",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.nr_motor",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "nr_motor"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "nr_motor"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-4",
-                                                      label: "Nr de Chassi:",
-                                                      "label-for": "input-4",
-                                                      description:
-                                                        "Indque o nr de chassi.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-4",
-                                                        type: "text",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.nr_chassi,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "nr_chassi",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.nr_chassi",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "nr_chassi"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "nr_chassi"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-5",
-                                                      label: "Livrete:",
-                                                      "label-for": "input-5",
-                                                      description:
-                                                        "Identificacao da viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-5",
-                                                        type: "text",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.nr_livrete,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "nr_livrete",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.nr_livrete",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "nr_livrete"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "nr_livrete"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "3" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-6",
-                                                      label: "Matricula:",
-                                                      "label-for": "input-6",
-                                                      description:
-                                                        "Identificacao da viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-6",
-                                                        type: "text",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.matricula,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "matricula",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.matricula",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "matricula"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "matricula"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-7",
-                                                      label:
-                                                        "Data da inspencao:",
-                                                      "label-for": "input-7",
-                                                      description:
-                                                        "Quando foi feita a primeira inspencao.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker2",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .data_inspencao,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "data_inspencao",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].data_inspencao",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "data_inspencao"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "data_inspencao"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-7_1",
-                                                      label:
-                                                        "Prazo da inspencao:",
-                                                      "label-for": "input-7_1",
-                                                      description:
-                                                        "Prazo do documento de inspencao.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker2_1",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .prazo_inspencao,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "prazo_inspencao",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].prazo_inspencao",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "prazo_inspencao"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "prazo_inspencao"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-8",
-                                                      label:
-                                                        "Data cadastro de viatura:",
-                                                      "label-for": "input-8",
-                                                      description:
-                                                        "Data cadastro de viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker1",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .data_licenca,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "data_licenca",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].data_licenca",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "data_licenca"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "data_licenca"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-8_1",
-                                                      label:
-                                                        "Prazo da licenca da viatura:",
-                                                      "label-for": "input-8_1",
-                                                      description:
-                                                        "Prazo da licenca.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker1_1",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .prazo_licenca,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "prazo_licenca",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].prazo_licenca",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "prazo_licenca"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "prazo_licenca"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-9",
-                                                      label:
-                                                        "Data cadastro de manifeto:",
-                                                      "label-for": "input-9",
-                                                      description:
-                                                        "Manifesto da viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker3",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .data_manifesto,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "data_manifesto",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].data_manifesto",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "data_manifesto"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "data_manifesto"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-9_1",
-                                                      label:
-                                                        "Prazo do manifeto:",
-                                                      "label-for": "input-9_1",
-                                                      description:
-                                                        "prazo do manifesto da viatura.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticClass: "mb-1",
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                        id: "example-datepicker3_1",
-                                                        locale: "pt",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .prazo_manifesto,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "prazo_manifesto",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].prazo_manifesto",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "prazo_manifesto"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "prazo_manifesto"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      label:
-                                                        "Data radio difusao:",
-                                                      description:
-                                                        "Data de cadastro de radio difusao.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .data_taxa_radio,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "data_taxa_radio",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].data_taxa_radio",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "data_taxa_radio"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "data_taxa_radio"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      label:
-                                                        "Prazo radio difusao:",
-                                                      description:
-                                                        "Prazo do documento radio difusao.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .prazo_taxa_radio,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "prazo_taxa_radio",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].prazo_taxa_radio",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "prazo_taxa_radio"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "prazo_taxa_radio"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-11",
-                                                      label: "Data Seguros:",
-                                                      "label-for": "input-11",
-                                                      description:
-                                                        "Data de seguros automovel.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .data_seguros,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "data_seguros",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].data_seguros",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "data_seguros"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "data_seguros"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "input-group-11_1",
-                                                      label: "Prazo Seguros:",
-                                                      "label-for": "input-11_1",
-                                                      description:
-                                                        "Prazo de seguros automovel.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("date-picker", {
-                                                      staticStyle: {
-                                                        width: "100%",
-                                                      },
-                                                      attrs: {
-                                                        "value-type": "format",
-                                                        format: "YYYY-MM-DD",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .viatura_document[0]
-                                                            .prazo_seguros,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form
-                                                              .viatura_document[0],
-                                                            "prazo_seguros",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.viatura_document[0].prazo_seguros",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "prazo_seguros"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "prazo_seguros"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-11",
-                                                      description:
-                                                        "Kilometragem.",
-                                                      label: "Km percorridos",
-                                                      "label-for": "input-11",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-11",
-                                                        type: "number",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form.kilometragem,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "kilometragem",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.kilometragem",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "kilometragem"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "kilometragem"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-12",
-                                                      label:
-                                                        "Capacidade do tanque:",
-                                                      "label-for": "input-12",
-                                                      description:
-                                                        "Capacidade do tanque.",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-12",
-                                                        type: "number",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .capacidade_tanque,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "capacidade_tanque",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.capacidade_tanque",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "capacidade_tanque"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "capacidade_tanque"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-13",
-                                                      description:
-                                                        "consumo medio por km.",
-                                                      label: "ltr/km:",
-                                                      "label-for": "input-13",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-13",
-                                                        type: "text",
-                                                        trim: "",
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .capacidade_media,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "capacidade_media",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.capacidade_media",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "capacidade_media"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "capacidade_media"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-14",
-                                                      description:
-                                                        "Tipo de combustivel.",
-                                                      label: "Combustivel:",
-                                                      "label-for": "input-14",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("v-select", {
-                                                      attrs: {
-                                                        label:
-                                                          "tipo_combustivel",
-                                                        options:
-                                                          _vm.combustivel,
-                                                        reduce: function (
-                                                          combustivel
-                                                        ) {
-                                                          return combustivel.id
-                                                        },
-                                                      },
-                                                      model: {
-                                                        value:
-                                                          _vm.form
-                                                            .tipo_combustivel,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "tipo_combustivel",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.tipo_combustivel",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "combustivel"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "combustivel"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "4" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-15",
-                                                      description:
-                                                        "Lotacao da viatura.",
-                                                      label: "Lotacao:",
-                                                      "label-for": "input-15",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("b-form-input", {
-                                                      attrs: {
-                                                        id: "input-15",
-                                                        trim: "",
-                                                      },
-                                                      model: {
-                                                        value: _vm.form.lotacao,
-                                                        callback: function (
-                                                          $$v
-                                                        ) {
-                                                          _vm.$set(
-                                                            _vm.form,
-                                                            "lotacao",
-                                                            $$v
-                                                          )
-                                                        },
-                                                        expression:
-                                                          "form.lotacao",
-                                                      },
-                                                    }),
-                                                    _vm._v(" "),
-                                                    _vm.form.errors.has(
-                                                      "lotacao"
-                                                    )
-                                                      ? _c("small", {
-                                                          staticClass:
-                                                            "alert text-danger",
-                                                          domProps: {
-                                                            innerHTML: _vm._s(
-                                                              _vm.form.errors.get(
-                                                                "lotacao"
-                                                              )
-                                                            ),
-                                                          },
-                                                        })
-                                                      : _vm._e(),
-                                                  ],
-                                                  1
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "b-col",
-                                              {
-                                                attrs: { cols: "12", lg: "8" },
-                                              },
-                                              [
-                                                _c(
-                                                  "b-form-group",
-                                                  {
-                                                    attrs: {
-                                                      id: "fieldset-images",
-                                                      description:
-                                                        "Documentos da viatura",
-                                                      label:
-                                                        "Carregar documentos da viatura:",
-                                                    },
-                                                  },
-                                                  [
-                                                    _c("input", {
-                                                      staticClass:
-                                                        "form-control",
-                                                      attrs: {
-                                                        type: "file",
-                                                        multiple: "",
-                                                      },
-                                                      on: {
-                                                        change:
-                                                          _vm.onFileChange,
-                                                      },
-                                                    }),
-                                                  ]
-                                                ),
-                                              ],
-                                              1
-                                            ),
-                                          ],
-                                          1
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                  ]),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-row",
-                                [
-                                  _c(
-                                    "b-col",
-                                    { attrs: { cols: "6" } },
-                                    [
-                                      _c(
-                                        "b-link",
-                                        {
-                                          staticClass:
-                                            "btn btn-outline-primary waves-effect",
-                                          attrs: { to: { name: "Cars" } },
-                                        },
-                                        [_vm._v("cancelar")]
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-col",
-                                    { attrs: { cols: "6" } },
-                                    [
-                                      _c(
-                                        "b-button",
-                                        {
-                                          directives: [
-                                            {
-                                              name: "ripple",
-                                              rawName: "v-ripple.400",
-                                              value:
-                                                "rgba(255, 255, 255, 0.15)",
-                                              expression:
-                                                "'rgba(255, 255, 255, 0.15)'",
-                                              modifiers: { 400: true },
-                                            },
-                                          ],
-                                          staticClass: "mr-2",
-                                          attrs: {
-                                            variant: "success",
-                                            type: "submit",
-                                          },
-                                        },
-                                        [
-                                          _vm._v("Actualizar "),
-                                          _c("i", {
-                                            staticClass: "fas fa-paper-plane",
-                                          }),
-                                        ]
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ],
-                                1
-                              ),
-                            ],
-                            1
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
+                  _c("b-form-radio", { attrs: { value: "disabled" } }, [
+                    _vm._v("\n          Disabled\n        "),
+                  ]),
+                  _vm._v(" "),
+                  _c("b-form-radio", { attrs: { value: "readonly" } }, [
+                    _vm._v("\n          Readonly\n        "),
+                  ]),
+                  _vm._v(" "),
+                  _c("b-form-radio", { attrs: { value: "normal" } }, [
+                    _vm._v("\n          Normal\n        "),
+                  ]),
                 ],
                 1
               ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            attrs: {
+              id: "ex-disabled-readonly",
+              disabled: _vm.disabled,
+              readonly: _vm.readonly,
+            },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Date string format" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeString) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "To change format options of the displayed date text inside the component, e.g. in the header or placeholder,\n      set the\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("date-format-options")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " prop to an object containing the requested format properties for the"
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("Intl.DateTimeFormat")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" object.")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { attrs: { for: "datepicker-dateformat1" } }, [
+            _vm._v("Custom date format"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            attrs: {
+              id: "datepicker-dateformat1",
+              "date-format-options": {
+                year: "numeric",
+                month: "short",
+                day: "2-digit",
+                weekday: "short",
+              },
+              locale: "en",
+            },
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "mt-2", attrs: { for: "datepicker-dateformat2" } },
+            [_vm._v("Short date format")]
+          ),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            attrs: {
+              id: "datepicker-dateformat2",
+              "date-format-options": {
+                year: "numeric",
+                month: "numeric",
+                day: "numeric",
+              },
+              locale: "en",
+            },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Validation states" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeValidation) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("code", [_vm._v("<b-form-datepicker>")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(" supports invalid and valid styling via the boolean "),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("state")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop.")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { attrs: { for: "datepicker-invalid" } }, [
+            _vm._v("Choose a date (invalid style)"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            staticClass: "mb-2",
+            attrs: { id: "datepicker-invalid", state: false },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "datepicker-valid" } }, [
+            _vm._v("Choose a date (valid style)"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-datepicker", {
+            attrs: { id: "datepicker-valid", state: true },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&":
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Variants" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeVariant) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "The selected date button (background color) defaults to the "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("'primary'")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " theme variant. You can change this to any of the Bootstrap v4 theme variant colors: "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [
+          _vm._v("'secondary', 'success', 'danger', 'warning', 'info',"),
+        ]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" etc, via the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("selected-variant")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop.")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "b-row",
+        [
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Primary Variant",
+                  "selected-variant": "primary",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Secondary Variant",
+                  "selected-variant": "secondary",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Success Variant",
+                  "selected-variant": "success",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Warning Variant",
+                  "selected-variant": "warning",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Danger Variant",
+                  "selected-variant": "danger",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6", lg: "4" } },
+            [
+              _c("b-form-datepicker", {
+                staticClass: "mb-1",
+                attrs: {
+                  local: "en",
+                  placeholder: "Info Variant",
+                  "selected-variant": "info",
+                },
+              }),
             ],
             1
           ),
@@ -2434,90 +2486,33 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/@core/mixins/ui/transition.js":
-/*!********************************************************!*\
-  !*** ./resources/js/src/@core/mixins/ui/transition.js ***!
-  \********************************************************/
-/*! exports provided: heightTransition, _ */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "heightTransition", function() { return heightTransition; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.constructor.js */ "./node_modules/core-js/modules/es.number.constructor.js");
-/* harmony import */ var core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_constructor_js__WEBPACK_IMPORTED_MODULE_0__);
-
-var heightTransition = {
-  /*
-      HowTo:
-      1. Add dynamic style to element and set style as `trHeight`
-      2. Set transition speed using `transition: 0.35s height;` <= you can use appropriate value;
-      3. Optionally you can set `overflow: hidden;` to hide element overflow while height is animated.
-      4. Set initial height using `trSetHeight` before any operation. [mounted hook is recommended - You can use `ref` for dynamic contents]
-      5. Toggle height using height operations 🍻
-      6. Toggle usage of $nextTick for height operations is any issue occur [experimental] 🔬
-    */
-  data: function data() {
-    return {
-      trHeight: null
-    };
-  },
-  methods: {
-    trAddHeight: function trAddHeight(val) {
-      // Add height to existing height
-      // Usage: Where new element is append or more height is added (e.g. list append)
-
-      /* Assumes:
-       - Height is assigned and is `String`
-       - Incoming value is valid number in `Number` or `String`
-      */
-      var heightValue = Number(this.trHeight.substring(0, this.trHeight.length - 2));
-      this.trHeight = "".concat(heightValue + Number(val), "px");
-    },
-    trTrimHeight: function trTrimHeight(val) {
-      // Remove height from existing height
-      // Usage: Where new element is removed or height is remove (e.g. list pop/ele remove)
-
-      /* Assumes:
-       - Height is assigned and is `String`
-       - Incoming value is valid number in `Number` or `String`
-      */
-      var heightValue = Number(this.trHeight.substring(0, this.trHeight.length - 2));
-      this.trHeight = "".concat(heightValue - Number(val), "px");
-    },
-    trSetHeight: function trSetHeight(val) {
-      // Set height
-      // Usage: Mostly for assigning initial value from mounted hook
-
-      /* Assumes:
-       - Height is not assigned and what to assign for add/remove operation
-       - What to set height at something for odd usage
-       - Incoming value is valid number in `Number` or `String`
-      */
-      if (val === null) this.trHeight = 'auto';else this.trHeight = "".concat(Number(val), "px");
-    }
-  }
-}; // Ignore below for now. We will remove it when we add more transition in future.
-
-var _ = null;
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue":
-/*!****************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue ***!
-  \****************************************************************************/
+/***/ "./resources/js/src/@core/components/b-card-code/index.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/@core/components/b-card-code/index.js ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./viaturaEditForm.vue?vue&type=template&id=5071169c& */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c&");
-/* harmony import */ var _viaturaEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./viaturaEditForm.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./viaturaEditForm.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
 
+/* harmony default export */ __webpack_exports__["default"] = (_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepicker.vue?vue&type=template&id=ed292268& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&");
+/* harmony import */ var _FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepicker.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -2525,10 +2520,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
-  _viaturaEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2538,56 +2533,975 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viaturaEditForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepicker.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss& ***!
-  \**************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viaturaEditForm.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=style&index=0&lang=scss&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viaturaEditForm.vue?vue&type=template&id=5071169c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viaturaEditForm.vue?vue&type=template&id=5071169c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepicker.vue?vue&type=template&id=ed292268& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepicker.vue?vue&type=template&id=ed292268&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viaturaEditForm_vue_vue_type_template_id_5071169c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepicker_vue_vue_type_template_id_ed292268___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&");
+/* harmony import */ var _FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerBasic.vue?vue&type=template&id=6516a3f2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerBasic.vue?vue&type=template&id=6516a3f2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerBasic_vue_vue_type_template_id_6516a3f2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&");
+/* harmony import */ var _FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerButtonOnly.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerButtonOnly.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerButtonOnly.vue?vue&type=template&id=7cf32cea&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerButtonOnly_vue_vue_type_template_id_7cf32cea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&");
+/* harmony import */ var _FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerDisableDate.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerDisableDate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&":
+/*!********************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& ***!
+  \********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerDisableDate.vue?vue&type=template&id=a569650c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerDisableDate.vue?vue&type=template&id=a569650c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerDisableDate_vue_vue_type_template_id_a569650c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&");
+/* harmony import */ var _FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerFullWidth.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerFullWidth.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& ***!
+  \******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerFullWidth.vue?vue&type=template&id=52f3e9bb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerFullWidth_vue_vue_type_template_id_52f3e9bb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&");
+/* harmony import */ var _FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerInternationalization.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerInternationalization.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& ***!
+  \*****************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerInternationalization.vue?vue&type=template&id=0c85f002&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerInternationalization_vue_vue_type_template_id_0c85f002___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&");
+/* harmony import */ var _FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerMinMax.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerMinMax.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerMinMax.vue?vue&type=template&id=e2058ec4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerMinMax_vue_vue_type_template_id_e2058ec4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerOptional.vue?vue&type=template&id=69d22b68& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&");
+/* harmony import */ var _FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerOptional.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerOptional.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68& ***!
+  \*****************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerOptional.vue?vue&type=template&id=69d22b68& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerOptional.vue?vue&type=template&id=69d22b68&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerOptional_vue_vue_type_template_id_69d22b68___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&");
+/* harmony import */ var _FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerPlaceholder.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerPlaceholder.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&":
+/*!********************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& ***!
+  \********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerPlaceholder.vue?vue&type=template&id=4c8f59b7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerPlaceholder_vue_vue_type_template_id_4c8f59b7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerSize.vue?vue&type=template&id=51b8906d& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&");
+/* harmony import */ var _FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerSize.vue?vue&type=template&id=51b8906d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerSize.vue?vue&type=template&id=51b8906d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerSize_vue_vue_type_template_id_51b8906d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerState.vue?vue&type=template&id=4e09aad5& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&");
+/* harmony import */ var _FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerState.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerState.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerState.vue?vue&type=template&id=4e09aad5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerState.vue?vue&type=template&id=4e09aad5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerState_vue_vue_type_template_id_4e09aad5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerString.vue?vue&type=template&id=2599437d& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&");
+/* harmony import */ var _FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerString.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerString.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerString.vue?vue&type=template&id=2599437d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerString.vue?vue&type=template&id=2599437d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerString_vue_vue_type_template_id_2599437d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerValidation.vue?vue&type=template&id=54d02436& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&");
+/* harmony import */ var _FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerValidation.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerValidation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436& ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerValidation.vue?vue&type=template&id=54d02436& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerValidation.vue?vue&type=template&id=54d02436&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerValidation_vue_vue_type_template_id_54d02436___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&");
+/* harmony import */ var _FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormDatepickerVariant.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerVariant.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& ***!
+  \****************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-datepicker/FormDatepickerVariant.vue?vue&type=template&id=ea76fc6e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormDatepickerVariant_vue_vue_type_template_id_ea76fc6e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-datepicker/code.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-datepicker/code.js ***!
+  \***************************************************************************/
+/*! exports provided: codeBasic, codeButtonOnly, codeDisableDate, codeInternationalization, codeOptional, codePlaceholder, codeMinMax, codeSize, codeState, codeString, codeValidation, codeVariant, codeFullWith */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeButtonOnly", function() { return codeButtonOnly; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDisableDate", function() { return codeDisableDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeInternationalization", function() { return codeInternationalization; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeOptional", function() { return codeOptional; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codePlaceholder", function() { return codePlaceholder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMinMax", function() { return codeMinMax; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeState", function() { return codeState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeString", function() { return codeString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeValidation", function() { return codeValidation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeVariant", function() { return codeVariant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFullWith", function() { return codeFullWith; });
+var codeBasic = "\n<template>\n  <div>\n    <label for=\"example-datepicker\">Choose a date</label>\n    <b-form-datepicker\n      id=\"example-datepicker\"\n      v-model=\"value\"\n      class=\"mb-1\"\n    />\n    <p>Value: '{{ value }}'</p>\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',    codeBasic,    codeBasic,\n  }),\n}\n</script>\n";
+var codeButtonOnly = "\n<template>\n  <div>\n    <label for=\"example-input\">Choose a date</label>\n    <b-input-group class=\"mb-1\">\n      <b-form-input\n        id=\"example-input\"\n        v-model=\"value\"\n        type=\"text\"\n        placeholder=\"YYYY-MM-DD\"\n        autocomplete=\"off\"\n        show-decade-nav\n      />\n      <b-input-group-append>\n        <b-form-datepicker\n          v-model=\"value\"\n          show-decade-nav\n          button-only\n          right\n          locale=\"en-US\"\n          aria-controls=\"example-input\"\n          @context=\"onContext\"\n        />\n      </b-input-group-append>\n    </b-input-group>\n    <p class=\"mb-1\">\n      Value: '{{ value }}'\n    </p>\n    <p class=\"mb-1\">\n      Selected: '{{ selected }}'\n    </p>\n    <p>Formatted: '{{ formatted }}'</p>\n  </div>\n</template>\n\n<script>\nimport {BFormDatepicker, BInputGroup, BInputGroupAppend, BFormInput} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormDatepicker,\n    BInputGroup,\n    BInputGroupAppend,\n    BFormInput,\n  },\n  data: () => ({\n    value: '',\n    formatted: '',\n    selected: '',\n  }),\n  methods: {\n    onContext(ctx) {\n      // The date formatted in the locale, or the `label-no - date - selected` string\n      this.formatted = ctx.selectedFormatted\n      // The following will be an empty string until a valid date is entered\n      this.selected = ctx.selectedYMD\n    },\n  },\n}\n</script>\n";
+var codeDisableDate = "\n<template>\n  <div>\n    <b-form-datepicker\n      v-model=\"value\"\n      :date-disabled-fn=\"dateDisabled\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',\n  }),\n  methods: {\n    dateDisabled(ymd, date) {\n      // Disable weekends (Sunday = `0`, Saturday = `6`) and\n      // disable days that fall on the 13th of the month\n      const weekday = date.getDay()\n      const day = date.getDate()\n      // Return `true` if the date should be disabled\n      return weekday === 0 || weekday === 6 || day === 13\n    },\n  },\n}\n</script>\n";
+var codeInternationalization = "\n<template>\n  <div>\n    <label for=\"example-locales\">Locale:</label>\n    <b-form-select\n      id=\"example-locales\"\n      v-model=\"locale\"\n      :options=\"locales\"\n      class=\"mb-1\"\n    />\n\n    <label for=\"example-weekdays\">Start weekday:</label>\n    <b-form-select\n      id=\"example-weekdays\"\n      v-model=\"weekday\"\n      :options=\"weekdays\"\n      class=\"mb-1\"\n    />\n\n    <div class=\"d-flex align-items-center\">\n      <b-form-checkbox\n        v-model=\"showDecadeNav\"\n        switch\n        inline\n        class=\"my-1\"\n      />\n      <label class=\"mr-1\">Show decade navigation buttons</label>\n      <b-form-checkbox\n        v-model=\"hideHeader\"\n        switch\n        inline\n        class=\"my-1\"\n      />\n      <label>Hide calendar header</label>\n    </div>\n\n    <label for=\"example-i18n-picker\">Date picker:</label>\n    <b-form-datepicker\n      id=\"example-i18n-picker\"\n      v-model=\"value\"\n      v-bind=\"labels[locale] || {}\"\n      :locale=\"locale\"\n      :start-weekday=\"weekday\"\n      :show-decade-nav=\"showDecadeNav\"\n      :hide-header=\"hideHeader\"\n      class=\"mb-1\"\n    />\n    <p>\n      Value: <b>'{{ value }}'</b>\n    </p>\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker, BFormSelect, BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BFormSelect,\n    BFormCheckbox,\n  },\n  data: () => ({\n    value: '',\n    locale: 'en-US',\n    showDecadeNav: false,\n    hideHeader: false,\n    locales: [\n      { value: 'en-US', text: 'English US (en-US)' },\n      { value: 'de', text: 'German (de)' },\n      { value: 'ar-EG', text: 'Arabic Egyptian (ar-EG)' },\n      { value: 'zh', text: 'Chinese (zh)' },\n    ],\n    weekday: 0,\n    weekdays: [\n      { value: 0, text: 'Sunday' },\n      { value: 1, text: 'Monday' },\n      { value: 6, text: 'Saturday' },\n    ],\n    labels: {\n      de: {\n        labelPrevDecade: 'Vorheriges Jahrzehnt',\n        labelPrevYear: 'Vorheriges Jahr',\n        labelPrevMonth: 'Vorheriger Monat',\n        labelCurrentMonth: 'Aktueller Monat',\n        labelNextMonth: 'N\xE4chster Monat',\n        labelNextYear: 'N\xE4chstes Jahr',\n        labelNextDecade: 'N\xE4chstes Jahrzehnt',\n        labelToday: 'Heute',\n        labelSelected: 'Ausgew\xE4hltes Datum',\n        labelNoDateSelected: 'Kein Datum gew\xE4hlt',\n        labelCalendar: 'Kalender',\n        labelNav: 'Kalendernavigation',\n        labelHelp: 'Mit den Pfeiltasten durch den Kalender navigieren',\n      },\n      'ar-EG': {\n        labelPrevDecade: '\u0627\u0644\u0639\u0642\u062F \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelPrevYear: '\u0627\u0644\u0639\u0627\u0645 \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelPrevMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0633\u0627\u0628\u0642',\n        labelCurrentMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u062D\u0627\u0644\u064A',\n        labelNextMonth: '\u0627\u0644\u0634\u0647\u0631 \u0627\u0644\u0645\u0642\u0628\u0644',\n        labelNextYear: '\u0627\u0644\u0639\u0627\u0645 \u0627\u0644\u0645\u0642\u0628\u0644',\n        labelNextDecade: '\u0627\u0644\u0639\u0642\u062F \u0627\u0644\u0642\u0627\u062F\u0645',\n        labelToday: '\u0627\u0644\u064A\u0648\u0645',\n        labelSelected: '\u0627\u0644\u062A\u0627\u0631\u064A\u062E \u0627\u0644\u0645\u062D\u062F\u062F',\n        labelNoDateSelected: '\u0644\u0645 \u064A\u062A\u0645 \u0627\u062E\u062A\u064A\u0627\u0631 \u062A\u0627\u0631\u064A\u062E',\n        labelCalendar: '\u0627\u0644\u062A\u0642\u0648\u064A\u0645',\n        labelNav: '\u0627\u0644\u0645\u0644\u0627\u062D\u0629 \u0627\u0644\u062A\u0642\u0648\u064A\u0645',\n        labelHelp: '\u0627\u0633\u062A\u062E\u062F\u0645 \u0645\u0641\u0627\u062A\u064A\u062D \u0627\u0644\u0645\u0624\u0634\u0631 \u0644\u0644\u062A\u0646\u0642\u0644 \u0641\u064A \u0627\u0644\u062A\u0648\u0627\u0631\u064A\u062E',\n      },\n      zh: {\n        labelPrevDecade: '\u8FC7\u53BB\u5341\u5E74',\n        labelPrevYear: '\u4E0A\u4E00\u5E74',\n        labelPrevMonth: '\u4E0A\u4E2A\u6708',\n        labelCurrentMonth: '\u5F53\u524D\u6708\u4EFD',\n        labelNextMonth: '\u4E0B\u4E2A\u6708',\n        labelNextYear: '\u660E\u5E74',\n        labelNextDecade: '\u4E0B\u4E00\u4E2A\u5341\u5E74',\n        labelToday: '\u4ECA\u5929',\n        labelSelected: '\u9009\u5B9A\u65E5\u671F',\n        labelNoDateSelected: '\u672A\u9009\u62E9\u65E5\u671F',\n        labelCalendar: '\u65E5\u5386',\n        labelNav: '\u65E5\u5386\u5BFC\u822A',\n        labelHelp: '\u4F7F\u7528\u5149\u6807\u952E\u6D4F\u89C8\u65E5\u671F',\n      },\n    },\n  }),\n}\n</script>\n";
+var codeOptional = "\n<template>\n  <div>\n    <label for=\"datepicker-buttons\">Date picker with optional footer buttons</label>\n    <b-form-datepicker\n      id=\"datepicker-buttons\"\n      today-button\n      reset-button\n      close-button\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
+var codePlaceholder = "\n<template>\n  <div>\n    <label for=\"datepicker-placeholder\">Date picker with placeholder</label>\n    <b-form-datepicker\n      id=\"datepicker-placeholder\"\n      placeholder=\"Choose a date\"\n      local=\"en\"\n      initial-date=\"2020-06-16\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
+var codeMinMax = "\n<template>\n  <div>\n    <b-form-datepicker\n      v-model=\"value\"\n      :min=\"min\"\n      :max=\"max\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data() {\n    const now = new Date()\n    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())\n    // 15th two months prior\n    const minDate = new Date(today)\n    minDate.setMonth(minDate.getMonth() - 2)\n    minDate.setDate(15)\n    // 15th in two months\n    const maxDate = new Date(today)\n    maxDate.setMonth(maxDate.getMonth() + 2)\n    maxDate.setDate(15)\n\n    return {\n      value: '',\n      min: minDate,\n      max: maxDate,\n    }\n  },\n}\n</script>\n";
+var codeSize = "\n<template>\n  <div>\n    <label for=\"datepicker-sm\">Small date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-sm\"\n      size=\"sm\"\n      local=\"en\"\n      class=\"mb-2\"\n      today-variant=\"danger\"\n    />\n    <label for=\"datepicker-default\">Default date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-default\"\n      local=\"en\"\n      class=\"mb-2\"\n      today-variant=\"danger\"\n    />\n    <label for=\"datepicker-lg\">Large date picker</label>\n    <b-form-datepicker\n      id=\"datepicker-lg\"\n      size=\"lg\"\n      local=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
+var codeState = "\n<template>\n   <div>\n    <b-form-group label=\"Select date picker interactive state\">\n      <b-form-radio-group\n        v-model=\"state\"\n        plain\n        class=\"vs-radio-con\"\n        aria-controls=\"ex-disabled-readonly\"\n      >\n        <b-form-radio value=\"disabled\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Disabled</span>\n        </b-form-radio>\n        <b-form-radio value=\"readonly\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Readonly</span>\n        </b-form-radio>\n        <b-form-radio value=\"normal\">\n          <span class=\"vs-radio\">\n            <span class=\"vs-radio--border\" />\n            <span class=\"vs-radio--circle\" />\n          </span>\n          <span class=\"ml-2\">Normal</span>\n        </b-form-radio>\n      </b-form-radio-group>\n    </b-form-group>\n    <b-form-datepicker\n      id=\"ex-disabled-readonly\"\n      :disabled=\"disabled\"\n      :readonly=\"readonly\"\n    />\n  </div>\n</template>\n\n<script>\nimport {\n  BFormDatepicker, BFormGroup, BFormRadio, BFormRadioGroup,\n} from 'bootstrap-vue'\n\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BFormGroup,\n    BFormRadio,\n    BFormRadioGroup,\n  },\n  data: () => ({\n    state: 'disabled',\n  }),\n  computed: {\n    disabled() {\n      return this.state === 'disabled'\n    },\n    readonly() {\n      return this.state === 'readonly'\n    },\n  },\n}\n</script>\n";
+var codeString = "\n<template>\n  <div>\n    <label for=\"datepicker-dateformat1\">Custom date format</label>\n    <b-form-datepicker\n      id=\"datepicker-dateformat1\"\n      :date-format-options=\"{ year: 'numeric', month: 'short', day: '2-digit', weekday: 'short' }\"\n      locale=\"en\"\n    />\n\n    <label\n      class=\"mt-2\"\n      for=\"datepicker-dateformat2\"\n    >Short date format</label>\n    <b-form-datepicker\n      id=\"datepicker-dateformat2\"\n      :date-format-options=\"{ year: 'numeric', month: 'numeric', day: 'numeric' }\"\n      locale=\"en\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
+var codeValidation = "\n<template>\n  <div>\n    <label for=\"datepicker-invalid\">Choose a date (invalid style)</label>\n    <b-form-datepicker\n      id=\"datepicker-invalid\"\n      :state=\"false\"\n      class=\"mb-2\"\n    />\n    <label for=\"datepicker-valid\">Choose a date (valid style)</label>\n    <b-form-datepicker\n      id=\"datepicker-valid\"\n      :state=\"true\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n}\n</script>\n";
+var codeVariant = "\n<template>\n  <b-row>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Primary Variant\"\n        class=\"mb-1\"\n        selected-variant=\"primary\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Secondary Variant\"\n        class=\"mb-1\"\n        selected-variant=\"secondary\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Success Variant\"\n        class=\"mb-1\"\n        selected-variant=\"success\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Warning Variant\"\n        class=\"mb-1\"\n        selected-variant=\"warning\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Danger Variant\"\n        class=\"mb-1\"\n        selected-variant=\"danger\"\n      />\n    </b-col>\n    <b-col md=\"4\">\n      <b-form-datepicker\n        local=\"en\"\n        placeholder=\"Info Variant\"\n        class=\"mb-1\"\n        selected-variant=\"info\"\n      />\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport { BFormDatepicker, BRow, BCol } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
+var codeFullWith = "\n<template>\n  <div>\n    <label for=\"datepicker-full-width\">Choose a date</label>\n      <b-form-datepicker\n        id=\"datepicker-full-width\"\n        v-model=\"value\"\n        menu-class=\"w-100\"\n        calendar-width=\"100%\"\n        class=\"mb-2\"\n      />\n  </div>\n</template>\n\n<script>\nimport { BFormDatepicker } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormDatepicker,\n  },\n  data: () => ({\n    value: '',\n  }),\n}\n</script>\n";
 
 /***/ })
 

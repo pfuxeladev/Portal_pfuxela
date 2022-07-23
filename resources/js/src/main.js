@@ -69,7 +69,17 @@ Vue.use(VueCookies, { expire: '1h' })
 // Vue.prototype.is = function (value) {
 //   return window.Laravel.jsPermissions.roles.includes(value)
 // }
-// * Shall remove it if not using font-icons of feather-icons - For form-wizard
+// * Shall remove it if not using font-icons of feather-icons - For form-wizardx
+Vue.filter('toCurrency', value => {
+  if (typeof value !== 'number') {
+    return value
+  }
+  const formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'MZN',
+  })
+  return formatter.format(value)
+})
 require('@core/assets/fonts/feather/iconfont.css') // For form-wizard
 
 // import core styles

@@ -1,64 +1,2103 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[60],{
 
-/***/ "./node_modules/cleave.js/dist/addons/cleave-phone.us.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/cleave.js/dist/addons/cleave-phone.us.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {!function(){function l(l,n){var u=l.split("."),t=Y;u[0]in t||!t.execScript||t.execScript("var "+u[0]);for(var e;u.length&&(e=u.shift());)u.length||void 0===n?t=t[e]?t[e]:t[e]={}:t[e]=n}function n(l,n){function u(){}u.prototype=n.prototype,l.M=n.prototype,l.prototype=new u,l.prototype.constructor=l,l.N=function(l,u,t){for(var e=Array(arguments.length-2),r=2;r<arguments.length;r++)e[r-2]=arguments[r];return n.prototype[u].apply(l,e)}}function u(l,n){null!=l&&this.a.apply(this,arguments)}function t(l){l.b=""}function e(l,n){l.sort(n||r)}function r(l,n){return l>n?1:l<n?-1:0}function i(l){var n,u=[],t=0;for(n in l)u[t++]=l[n];return u}function a(l,n){this.b=l,this.a={};for(var u=0;u<n.length;u++){var t=n[u];this.a[t.b]=t}}function d(l){return l=i(l.a),e(l,function(l,n){return l.b-n.b}),l}function o(l,n){switch(this.b=l,this.g=!!n.v,this.a=n.c,this.i=n.type,this.h=!1,this.a){case O:case H:case q:case X:case k:case L:case J:this.h=!0}this.f=n.defaultValue}function s(){this.a={},this.f=this.j().a,this.b=this.g=null}function f(l,n){for(var u=d(l.j()),t=0;t<u.length;t++){var e=u[t],r=e.b;if(null!=n.a[r]){l.b&&delete l.b[e.b];var i=11==e.a||10==e.a;if(e.g)for(var e=p(n,r)||[],a=0;a<e.length;a++){var o=l,s=r,c=i?e[a].clone():e[a];o.a[s]||(o.a[s]=[]),o.a[s].push(c),o.b&&delete o.b[s]}else e=p(n,r),i?(i=p(l,r))?f(i,e):m(l,r,e.clone()):m(l,r,e)}}}function p(l,n){var u=l.a[n];if(null==u)return null;if(l.g){if(!(n in l.b)){var t=l.g,e=l.f[n];if(null!=u)if(e.g){for(var r=[],i=0;i<u.length;i++)r[i]=t.b(e,u[i]);u=r}else u=t.b(e,u);return l.b[n]=u}return l.b[n]}return u}function c(l,n,u){var t=p(l,n);return l.f[n].g?t[u||0]:t}function h(l,n){var u;if(null!=l.a[n])u=c(l,n,void 0);else l:{if(u=l.f[n],void 0===u.f){var t=u.i;if(t===Boolean)u.f=!1;else if(t===Number)u.f=0;else{if(t!==String){u=new t;break l}u.f=u.h?"0":""}}u=u.f}return u}function g(l,n){return l.f[n].g?null!=l.a[n]?l.a[n].length:0:null!=l.a[n]?1:0}function m(l,n,u){l.a[n]=u,l.b&&(l.b[n]=u)}function b(l,n){var u,t=[];for(u in n)0!=u&&t.push(new o(u,n[u]));return new a(l,t)}/*
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _FormInputGroupBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupBasic.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue");
+/* harmony import */ var _FormInputGroupMerged_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormInputGroupMerged.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue");
+/* harmony import */ var _FormInputGroupCheckboxRadio_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue");
+/* harmony import */ var _FormInputGroupSize_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormInputGroupSize.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue");
+/* harmony import */ var _FormInputGroupButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormInputGroupButton.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue");
+/* harmony import */ var _FormInputGroupDropdown_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
- Protocol Buffer 2 Copyright 2008 Google Inc.
- All other code copyright its respective owners.
- Copyright (C) 2010 The Libphonenumber Authors
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
 
- http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
-function y(){s.call(this)}function v(){s.call(this)}function S(){s.call(this)}function _(){}function w(){}function A(){}/*
 
- Copyright (C) 2010 The Libphonenumber Authors.
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
 
- http://www.apache.org/licenses/LICENSE-2.0
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    FormInputGroupBasic: _FormInputGroupBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    FormInputGroupMerged: _FormInputGroupMerged_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    FormInputGroupCheckboxRadio: _FormInputGroupCheckboxRadio_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    FormInputGroupSize: _FormInputGroupSize_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    FormInputGroupButton: _FormInputGroupButton_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    FormInputGroupDropdown: _FormInputGroupDropdown_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }
+});
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
-function x(){this.a={}}function B(l){return 0==l.length||rl.test(l)}function C(l,n){if(null==n)return null;n=n.toUpperCase();var u=l.a[n];if(null==u){if(u=nl[n],null==u)return null;u=(new A).a(S.j(),u),l.a[n]=u}return u}function M(l){return l=ll[l],null==l?"ZZ":l[0]}function N(l){this.H=RegExp(" "),this.C="",this.m=new u,this.w="",this.i=new u,this.u=new u,this.l=!0,this.A=this.o=this.F=!1,this.G=x.b(),this.s=0,this.b=new u,this.B=!1,this.h="",this.a=new u,this.f=[],this.D=l,this.J=this.g=D(this,this.D)}function D(l,n){var u;if(null!=n&&isNaN(n)&&n.toUpperCase()in nl){if(u=C(l.G,n),null==u)throw Error("Invalid region code: "+n);u=h(u,10)}else u=0;return u=C(l.G,M(u)),null!=u?u:il}function G(l){for(var n=l.f.length,u=0;u<n;++u){var e=l.f[u],r=h(e,1);if(l.w==r)return!1;var i;i=l;var a=e,d=h(a,1);if(-1!=d.indexOf("|"))i=!1;else{d=d.replace(al,"\\d"),d=d.replace(dl,"\\d"),t(i.m);var o;o=i;var a=h(a,2),s="999999999999999".match(d)[0];s.length<o.a.b.length?o="":(o=s.replace(new RegExp(d,"g"),a),o=o.replace(RegExp("9","g")," ")),0<o.length?(i.m.a(o),i=!0):i=!1}if(i)return l.w=r,l.B=sl.test(c(e,4)),l.s=0,!0}return l.l=!1}function j(l,n){for(var u=[],t=n.length-3,e=l.f.length,r=0;r<e;++r){var i=l.f[r];0==g(i,3)?u.push(l.f[r]):(i=c(i,3,Math.min(t,g(i,3)-1)),0==n.search(i)&&u.push(l.f[r]))}l.f=u}function I(l,n){l.i.a(n);var u=n;if(el.test(u)||1==l.i.b.length&&tl.test(u)){var e,u=n;"+"==u?(e=u,l.u.a(u)):(e=ul[u],l.u.a(e),l.a.a(e)),n=e}else l.l=!1,l.F=!0;if(!l.l){if(!l.F)if(F(l)){if(U(l))return V(l)}else if(0<l.h.length&&(u=l.a.toString(),t(l.a),l.a.a(l.h),l.a.a(u),u=l.b.toString(),e=u.lastIndexOf(l.h),t(l.b),l.b.a(u.substring(0,e))),l.h!=P(l))return l.b.a(" "),V(l);return l.i.toString()}switch(l.u.b.length){case 0:case 1:case 2:return l.i.toString();case 3:if(!F(l))return l.h=P(l),E(l);l.A=!0;default:return l.A?(U(l)&&(l.A=!1),l.b.toString()+l.a.toString()):0<l.f.length?(u=K(l,n),e=$(l),0<e.length?e:(j(l,l.a.toString()),G(l)?T(l):l.l?R(l,u):l.i.toString())):E(l)}}function V(l){return l.l=!0,l.A=!1,l.f=[],l.s=0,t(l.m),l.w="",E(l)}function $(l){for(var n=l.a.toString(),u=l.f.length,t=0;t<u;++t){var e=l.f[t],r=h(e,1);if(new RegExp("^(?:"+r+")$").test(n))return l.B=sl.test(c(e,4)),n=n.replace(new RegExp(r,"g"),c(e,2)),R(l,n)}return""}function R(l,n){var u=l.b.b.length;return l.B&&0<u&&" "!=l.b.toString().charAt(u-1)?l.b+" "+n:l.b+n}function E(l){var n=l.a.toString();if(3<=n.length){for(var u=l.o&&0==l.h.length&&0<g(l.g,20)?p(l.g,20)||[]:p(l.g,19)||[],t=u.length,e=0;e<t;++e){var r=u[e];0<l.h.length&&B(h(r,4))&&!c(r,6)&&null==r.a[5]||(0!=l.h.length||l.o||B(h(r,4))||c(r,6))&&ol.test(h(r,2))&&l.f.push(r)}return j(l,n),n=$(l),0<n.length?n:G(l)?T(l):l.i.toString()}return R(l,n)}function T(l){var n=l.a.toString(),u=n.length;if(0<u){for(var t="",e=0;e<u;e++)t=K(l,n.charAt(e));return l.l?R(l,t):l.i.toString()}return l.b.toString()}function P(l){var n,u=l.a.toString(),e=0;return 1!=c(l.g,10)?n=!1:(n=l.a.toString(),n="1"==n.charAt(0)&&"0"!=n.charAt(1)&&"1"!=n.charAt(1)),n?(e=1,l.b.a("1").a(" "),l.o=!0):null!=l.g.a[15]&&(n=new RegExp("^(?:"+c(l.g,15)+")"),n=u.match(n),null!=n&&null!=n[0]&&0<n[0].length&&(l.o=!0,e=n[0].length,l.b.a(u.substring(0,e)))),t(l.a),l.a.a(u.substring(e)),u.substring(0,e)}function F(l){var n=l.u.toString(),u=new RegExp("^(?:\\+|"+c(l.g,11)+")"),u=n.match(u);return null!=u&&null!=u[0]&&0<u[0].length&&(l.o=!0,u=u[0].length,t(l.a),l.a.a(n.substring(u)),t(l.b),l.b.a(n.substring(0,u)),"+"!=n.charAt(0)&&l.b.a(" "),!0)}function U(l){if(0==l.a.b.length)return!1;var n,e=new u;l:{if(n=l.a.toString(),0!=n.length&&"0"!=n.charAt(0))for(var r,i=n.length,a=1;3>=a&&a<=i;++a)if(r=parseInt(n.substring(0,a),10),r in ll){e.a(n.substring(a)),n=r;break l}n=0}return 0!=n&&(t(l.a),l.a.a(e.toString()),e=M(n),"001"==e?l.g=C(l.G,""+n):e!=l.D&&(l.g=D(l,e)),l.b.a(""+n).a(" "),l.h="",!0)}function K(l,n){var u=l.m.toString();if(0<=u.substring(l.s).search(l.H)){var e=u.search(l.H),u=u.replace(l.H,n);return t(l.m),l.m.a(u),l.s=e,u.substring(0,l.s+1)}return 1==l.f.length&&(l.l=!1),l.w="",l.i.toString()}var Y=this;u.prototype.b="",u.prototype.set=function(l){this.b=""+l},u.prototype.a=function(l,n,u){if(this.b+=String(l),null!=n)for(var t=1;t<arguments.length;t++)this.b+=arguments[t];return this},u.prototype.toString=function(){return this.b};var J=1,L=2,O=3,H=4,q=6,X=16,k=18;s.prototype.set=function(l,n){m(this,l.b,n)},s.prototype.clone=function(){var l=new this.constructor;return l!=this&&(l.a={},l.b&&(l.b={}),f(l,this)),l},n(y,s);var Z=null;n(v,s);var z=null;n(S,s);var Q=null;y.prototype.j=function(){var l=Z;return l||(Z=l=b(y,{0:{name:"NumberFormat",I:"i18n.phonenumbers.NumberFormat"},1:{name:"pattern",required:!0,c:9,type:String},2:{name:"format",required:!0,c:9,type:String},3:{name:"leading_digits_pattern",v:!0,c:9,type:String},4:{name:"national_prefix_formatting_rule",c:9,type:String},6:{name:"national_prefix_optional_when_formatting",c:8,defaultValue:!1,type:Boolean},5:{name:"domestic_carrier_code_formatting_rule",c:9,type:String}})),l},y.j=y.prototype.j,v.prototype.j=function(){var l=z;return l||(z=l=b(v,{0:{name:"PhoneNumberDesc",I:"i18n.phonenumbers.PhoneNumberDesc"},2:{name:"national_number_pattern",c:9,type:String},9:{name:"possible_length",v:!0,c:5,type:Number},10:{name:"possible_length_local_only",v:!0,c:5,type:Number},6:{name:"example_number",c:9,type:String}})),l},v.j=v.prototype.j,S.prototype.j=function(){var l=Q;return l||(Q=l=b(S,{0:{name:"PhoneMetadata",I:"i18n.phonenumbers.PhoneMetadata"},1:{name:"general_desc",c:11,type:v},2:{name:"fixed_line",c:11,type:v},3:{name:"mobile",c:11,type:v},4:{name:"toll_free",c:11,type:v},5:{name:"premium_rate",c:11,type:v},6:{name:"shared_cost",c:11,type:v},7:{name:"personal_number",c:11,type:v},8:{name:"voip",c:11,type:v},21:{name:"pager",c:11,type:v},25:{name:"uan",c:11,type:v},27:{name:"emergency",c:11,type:v},28:{name:"voicemail",c:11,type:v},29:{name:"short_code",c:11,type:v},30:{name:"standard_rate",c:11,type:v},31:{name:"carrier_specific",c:11,type:v},33:{name:"sms_services",c:11,type:v},24:{name:"no_international_dialling",c:11,type:v},9:{name:"id",required:!0,c:9,type:String},10:{name:"country_code",c:5,type:Number},11:{name:"international_prefix",c:9,type:String},17:{name:"preferred_international_prefix",c:9,type:String},12:{name:"national_prefix",c:9,type:String},13:{name:"preferred_extn_prefix",c:9,type:String},15:{name:"national_prefix_for_parsing",c:9,type:String},16:{name:"national_prefix_transform_rule",c:9,type:String},18:{name:"same_mobile_and_fixed_line_pattern",c:8,defaultValue:!1,type:Boolean},19:{name:"number_format",v:!0,c:11,type:y},20:{name:"intl_number_format",v:!0,c:11,type:y},22:{name:"main_country_for_code",c:8,defaultValue:!1,type:Boolean},23:{name:"leading_digits",c:9,type:String},26:{name:"leading_zero_possible",c:8,defaultValue:!1,type:Boolean}})),l},S.j=S.prototype.j,_.prototype.a=function(l){throw new l.b,Error("Unimplemented")},_.prototype.b=function(l,n){if(11==l.a||10==l.a)return n instanceof s?n:this.a(l.i.prototype.j(),n);if(14==l.a){if("string"==typeof n&&W.test(n)){var u=Number(n);if(0<u)return u}return n}if(!l.h)return n;if(u=l.i,u===String){if("number"==typeof n)return String(n)}else if(u===Number&&"string"==typeof n&&("Infinity"===n||"-Infinity"===n||"NaN"===n||W.test(n)))return Number(n);return n};var W=/^-?[0-9]+$/;n(w,_),w.prototype.a=function(l,n){var u=new l.b;return u.g=this,u.a=n,u.b={},u},n(A,w),A.prototype.b=function(l,n){return 8==l.a?!!n:_.prototype.b.apply(this,arguments)},A.prototype.a=function(l,n){return A.M.a.call(this,l,n)};/*
+/***/ }),
 
- Copyright (C) 2010 The Libphonenumber Authors
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
- http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
-*/
-var ll={1:"US AG AI AS BB BM BS CA DM DO GD GU JM KN KY LC MP MS PR SX TC TT VC VG VI".split(" ")},nl={AG:[null,[null,null,"(?:268|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"268(?:4(?:6[0-38]|84)|56[0-2])\\d{4}",null,null,null,"2684601234",null,null,null,[7]],[null,null,"268(?:464|7(?:1[3-9]|2\\d|3[246]|64|[78][0-689]))\\d{4}",null,null,null,"2684641234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,"26848[01]\\d{4}",null,null,null,"2684801234",null,null,null,[7]],"AG",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,"26840[69]\\d{4}",null,null,null,"2684061234",null,null,null,[7]],null,"268",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],AI:[null,[null,null,"(?:264|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"2644(?:6[12]|9[78])\\d{4}",null,null,null,"2644612345",null,null,null,[7]],[null,null,"264(?:235|476|5(?:3[6-9]|8[1-4])|7(?:29|72))\\d{4}",null,null,null,"2642351234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"AI",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"264",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],AS:[null,[null,null,"(?:[58]\\d\\d|684|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"6846(?:22|33|44|55|77|88|9[19])\\d{4}",null,null,null,"6846221234",null,null,null,[7]],[null,null,"684(?:2(?:5[2468]|72)|7(?:3[13]|70))\\d{4}",null,null,null,"6847331234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"AS",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"684",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],BB:[null,[null,null,"(?:246|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"246(?:2(?:2[78]|7[0-4])|4(?:1[024-6]|2\\d|3[2-9])|5(?:20|[34]\\d|54|7[1-3])|6(?:2\\d|38)|7[35]7|9(?:1[89]|63))\\d{4}",null,null,null,"2464123456",null,null,null,[7]],[null,null,"246(?:2(?:[356]\\d|4[0-57-9]|8[0-79])|45\\d|69[5-7]|8(?:[2-5]\\d|83))\\d{4}",null,null,null,"2462501234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"(?:246976|900[2-9]\\d\\d)\\d{4}",null,null,null,"9002123456",null,null,null,[7]],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,"24631\\d{5}",null,null,null,"2463101234",null,null,null,[7]],"BB",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"246",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"246(?:292|367|4(?:1[7-9]|3[01]|44|67)|7(?:36|53))\\d{4}",null,null,null,"2464301234",null,null,null,[7]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],BM:[null,[null,null,"(?:441|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"441(?:2(?:02|23|[3479]\\d|61)|[46]\\d\\d|5(?:4\\d|60|89)|824)\\d{4}",null,null,null,"4412345678",null,null,null,[7]],[null,null,"441(?:[37]\\d|5[0-39])\\d{5}",null,null,null,"4413701234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"BM",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"441",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],BS:[null,[null,null,"(?:242|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"242(?:3(?:02|[236][1-9]|4[0-24-9]|5[0-68]|7[347]|8[0-4]|9[2-467])|461|502|6(?:0[1-4]|12|2[013]|[45]0|7[67]|8[78]|9[89])|7(?:02|88))\\d{4}",null,null,null,"2423456789",null,null,null,[7]],[null,null,"242(?:3(?:5[79]|7[56]|95)|4(?:[23][1-9]|4[1-35-9]|5[1-8]|6[2-8]|7\\d|81)|5(?:2[45]|3[35]|44|5[1-46-9]|65|77)|6[34]6|7(?:27|38)|8(?:0[1-9]|1[02-9]|2\\d|[89]9))\\d{4}",null,null,null,"2423591234",null,null,null,[7]],[null,null,"(?:242300|8(?:00|33|44|55|66|77|88)[2-9]\\d\\d)\\d{4}",null,null,null,"8002123456",null,null,null,[7]],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"BS",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"242",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"242225[0-46-9]\\d{3}",null,null,null,"2422250123"],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],CA:[null,[null,null,"(?:[2-8]\\d|90)\\d{8}",null,null,null,null,null,null,[10],[7]],[null,null,"(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|65)|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}",null,null,null,"5062345678",null,null,null,[7]],[null,null,"(?:2(?:04|[23]6|[48]9|50)|3(?:06|43|65)|4(?:03|1[68]|3[178]|50)|5(?:06|1[49]|48|79|8[17])|6(?:04|13|39|47)|7(?:0[59]|78|8[02])|8(?:[06]7|19|25|73)|90[25])[2-9]\\d{6}",null,null,null,"5062345678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"(?:5(?:00|2[12]|33|44|66|77|88)|622)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,"600[2-9]\\d{6}",null,null,null,"6002012345"],"CA",1,"011","1",null,null,"1",null,null,1,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],DM:[null,[null,null,"(?:[58]\\d\\d|767|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"767(?:2(?:55|66)|4(?:2[01]|4[0-25-9])|50[0-4]|70[1-3])\\d{4}",null,null,null,"7674201234",null,null,null,[7]],[null,null,"767(?:2(?:[2-4689]5|7[5-7])|31[5-7]|61[1-7])\\d{4}",null,null,null,"7672251234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"DM",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"767",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],DO:[null,[null,null,"(?:[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"8(?:[04]9[2-9]\\d\\d|29(?:2(?:[0-59]\\d|6[04-9]|7[0-27]|8[0237-9])|3(?:[0-35-9]\\d|4[7-9])|[45]\\d\\d|6(?:[0-27-9]\\d|[3-5][1-9]|6[0135-8])|7(?:0[013-9]|[1-37]\\d|4[1-35689]|5[1-4689]|6[1-57-9]|8[1-79]|9[1-8])|8(?:0[146-9]|1[0-48]|[248]\\d|3[1-79]|5[01589]|6[013-68]|7[124-8]|9[0-8])|9(?:[0-24]\\d|3[02-46-9]|5[0-79]|60|7[0169]|8[57-9]|9[02-9])))\\d{4}",null,null,null,"8092345678",null,null,null,[7]],[null,null,"8[024]9[2-9]\\d{6}",null,null,null,"8092345678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"DO",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"8[024]9",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],GD:[null,[null,null,"(?:473|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"473(?:2(?:3[0-2]|69)|3(?:2[89]|86)|4(?:[06]8|3[5-9]|4[0-49]|5[5-79]|73|90)|63[68]|7(?:58|84)|800|938)\\d{4}",null,null,null,"4732691234",null,null,null,[7]],[null,null,"473(?:4(?:0[2-79]|1[04-9]|2[0-5]|58)|5(?:2[01]|3[3-8])|901)\\d{4}",null,null,null,"4734031234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"GD",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"473",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],GU:[null,[null,null,"(?:[58]\\d\\d|671|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"671(?:3(?:00|3[39]|4[349]|55|6[26])|4(?:00|56|7[1-9]|8[0236-9])|5(?:55|6[2-5]|88)|6(?:3[2-578]|4[24-9]|5[34]|78|8[235-9])|7(?:[0479]7|2[0167]|3[45]|8[7-9])|8(?:[2-57-9]8|6[48])|9(?:2[29]|6[79]|7[1279]|8[7-9]|9[78]))\\d{4}",null,null,null,"6713001234",null,null,null,[7]],[null,null,"671(?:3(?:00|3[39]|4[349]|55|6[26])|4(?:00|56|7[1-9]|8[0236-9])|5(?:55|6[2-5]|88)|6(?:3[2-578]|4[24-9]|5[34]|78|8[235-9])|7(?:[0479]7|2[0167]|3[45]|8[7-9])|8(?:[2-57-9]8|6[48])|9(?:2[29]|6[79]|7[1279]|8[7-9]|9[78]))\\d{4}",null,null,null,"6713001234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"GU",1,"011","1",null,null,"1",null,null,1,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"671",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],JM:[null,[null,null,"(?:[58]\\d\\d|658|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"(?:658[2-9]\\d\\d|876(?:5(?:0[12]|1[0-468]|2[35]|63)|6(?:0[1-3579]|1[0237-9]|[23]\\d|40|5[06]|6[2-589]|7[05]|8[04]|9[4-9])|7(?:0[2-689]|[1-6]\\d|8[056]|9[45])|9(?:0[1-8]|1[02378]|[2-8]\\d|9[2-468])))\\d{4}",null,null,null,"8765230123",null,null,null,[7]],[null,null,"876(?:(?:2[14-9]|[348]\\d)\\d|5(?:0[3-9]|[2-57-9]\\d|6[0-24-9])|7(?:0[07]|7\\d|8[1-47-9]|9[0-36-9])|9(?:[01]9|9[0579]))\\d{4}",null,null,null,"8762101234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"JM",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"658|876",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],KN:[null,[null,null,"(?:[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"869(?:2(?:29|36)|302|4(?:6[015-9]|70))\\d{4}",null,null,null,"8692361234",null,null,null,[7]],[null,null,"869(?:5(?:5[6-8]|6[5-7])|66\\d|76[02-7])\\d{4}",null,null,null,"8697652917",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"KN",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"869",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],KY:[null,[null,null,"(?:345|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"345(?:2(?:22|44)|444|6(?:23|38|40)|7(?:4[35-79]|6[6-9]|77)|8(?:00|1[45]|25|[48]8)|9(?:14|4[035-9]))\\d{4}",null,null,null,"3452221234",null,null,null,[7]],[null,null,"345(?:32[1-9]|5(?:1[67]|2[5-79]|4[6-9]|50|76)|649|9(?:1[67]|2[2-9]|3[689]))\\d{4}",null,null,null,"3453231234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"(?:345976|900[2-9]\\d\\d)\\d{4}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"KY",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,"345849\\d{4}",null,null,null,"3458491234"],null,"345",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],LC:[null,[null,null,"(?:[58]\\d\\d|758|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"758(?:4(?:30|5\\d|6[2-9]|8[0-2])|57[0-2]|638)\\d{4}",null,null,null,"7584305678",null,null,null,[7]],[null,null,"758(?:28[4-7]|384|4(?:6[01]|8[4-9])|5(?:1[89]|20|84)|7(?:1[2-9]|2\\d|3[01]))\\d{4}",null,null,null,"7582845678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"LC",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"758",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],MP:[null,[null,null,"(?:[58]\\d\\d|(?:67|90)0)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"670(?:2(?:3[3-7]|56|8[5-8])|32[1-38]|4(?:33|8[348])|5(?:32|55|88)|6(?:64|70|82)|78[3589]|8[3-9]8|989)\\d{4}",null,null,null,"6702345678",null,null,null,[7]],[null,null,"670(?:2(?:3[3-7]|56|8[5-8])|32[1-38]|4(?:33|8[348])|5(?:32|55|88)|6(?:64|70|82)|78[3589]|8[3-9]8|989)\\d{4}",null,null,null,"6702345678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"MP",1,"011","1",null,null,"1",null,null,1,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"670",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],MS:[null,[null,null,"(?:(?:[58]\\d\\d|900)\\d\\d|66449)\\d{5}",null,null,null,null,null,null,[10],[7]],[null,null,"664491\\d{4}",null,null,null,"6644912345",null,null,null,[7]],[null,null,"66449[2-6]\\d{4}",null,null,null,"6644923456",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"MS",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"664",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],PR:[null,[null,null,"(?:[589]\\d\\d|787)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"(?:787|939)[2-9]\\d{6}",null,null,null,"7872345678",null,null,null,[7]],[null,null,"(?:787|939)[2-9]\\d{6}",null,null,null,"7872345678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"PR",1,"011","1",null,null,"1",null,null,1,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"787|939",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],SX:[null,[null,null,"(?:(?:[58]\\d\\d|900)\\d|7215)\\d{6}",null,null,null,null,null,null,[10],[7]],[null,null,"7215(?:4[2-8]|8[239]|9[056])\\d{4}",null,null,null,"7215425678",null,null,null,[7]],[null,null,"7215(?:1[02]|2\\d|5[034679]|8[014-8])\\d{4}",null,null,null,"7215205678",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002123456"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002123456"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"SX",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"721",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],TC:[null,[null,null,"(?:[58]\\d\\d|649|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"649(?:712|9(?:4\\d|50))\\d{4}",null,null,null,"6497121234",null,null,null,[7]],[null,null,"649(?:2(?:3[129]|4[1-7])|3(?:3[1-389]|4[1-8])|4[34][1-3])\\d{4}",null,null,null,"6492311234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,"64971[01]\\d{4}",null,null,null,"6497101234",null,null,null,[7]],"TC",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"649",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],TT:[null,[null,null,"(?:[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"868(?:2(?:01|[23]\\d)|6(?:0[7-9]|1[02-8]|2[1-9]|[3-69]\\d|7[0-79])|82[124])\\d{4}",null,null,null,"8682211234",null,null,null,[7]],[null,null,"868(?:2(?:6[6-9]|[7-9]\\d)|[37](?:0[1-9]|1[02-9]|[2-9]\\d)|4[6-9]\\d|6(?:20|78|8\\d))\\d{4}",null,null,null,"8682911234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"TT",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"868",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,"868619\\d{4}",null,null,null,"8686191234",null,null,null,[7]]],US:[null,[null,null,"[2-9]\\d{9}",null,null,null,null,null,null,[10],[7]],[null,null,"(?:2(?:0[1-35-9]|1[02-9]|2[03-589]|3[149]|4[08]|5[1-46]|6[0279]|7[0269]|8[13])|3(?:0[1-57-9]|1[02-9]|2[0135]|3[0-24679]|4[67]|5[12]|6[014]|8[056])|4(?:0[124-9]|1[02-579]|2[3-5]|3[0245]|4[0235]|58|6[39]|7[0589]|8[04])|5(?:0[1-57-9]|1[0235-8]|20|3[0149]|4[01]|5[19]|6[1-47]|7[013-5]|8[056])|6(?:0[1-35-9]|1[024-9]|2[03689]|[34][016]|5[017]|6[0-279]|78|8[0-2])|7(?:0[1-46-8]|1[2-9]|2[04-7]|3[1247]|4[037]|5[47]|6[02359]|7[02-59]|8[156])|8(?:0[1-68]|1[02-8]|2[08]|3[0-28]|4[3578]|5[046-9]|6[02-5]|7[028])|9(?:0[1346-9]|1[02-9]|2[0589]|3[0146-8]|4[0179]|5[12469]|7[0-389]|8[04-69]))[2-9]\\d{6}",null,null,null,"2015550123",null,null,null,[7]],[null,null,"(?:2(?:0[1-35-9]|1[02-9]|2[03-589]|3[149]|4[08]|5[1-46]|6[0279]|7[0269]|8[13])|3(?:0[1-57-9]|1[02-9]|2[0135]|3[0-24679]|4[67]|5[12]|6[014]|8[056])|4(?:0[124-9]|1[02-579]|2[3-5]|3[0245]|4[0235]|58|6[39]|7[0589]|8[04])|5(?:0[1-57-9]|1[0235-8]|20|3[0149]|4[01]|5[19]|6[1-47]|7[013-5]|8[056])|6(?:0[1-35-9]|1[024-9]|2[03689]|[34][016]|5[017]|6[0-279]|78|8[0-2])|7(?:0[1-46-8]|1[2-9]|2[04-7]|3[1247]|4[037]|5[47]|6[02359]|7[02-59]|8[156])|8(?:0[1-68]|1[02-8]|2[08]|3[0-28]|4[3578]|5[046-9]|6[02-5]|7[028])|9(?:0[1346-9]|1[02-9]|2[0589]|3[0146-8]|4[0179]|5[12469]|7[0-389]|8[04-69]))[2-9]\\d{6}",null,null,null,"2015550123",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"US",1,"011","1",null,null,"1",null,null,1,[[null,"(\\d{3})(\\d{4})","$1-$2",["[2-9]"]],[null,"(\\d{3})(\\d{3})(\\d{4})","($1) $2-$3",["[2-9]"],null,null,1]],[[null,"(\\d{3})(\\d{3})(\\d{4})","$1-$2-$3",["[2-9]"]]],[null,null,null,null,null,null,null,null,null,[-1]],1,null,[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"710[2-9]\\d{6}",null,null,null,"7102123456"],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],VC:[null,[null,null,"(?:[58]\\d\\d|784|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"784(?:266|3(?:6[6-9]|7\\d|8[0-24-6])|4(?:38|5[0-36-8]|8[0-8])|5(?:55|7[0-2]|93)|638|784)\\d{4}",null,null,null,"7842661234",null,null,null,[7]],[null,null,"784(?:4(?:3[0-5]|5[45]|89|9[0-8])|5(?:2[6-9]|3[0-4]))\\d{4}",null,null,null,"7844301234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"VC",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"784",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],VG:[null,[null,null,"(?:284|[58]\\d\\d|900)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"284(?:(?:229|774|8(?:52|6[459]))\\d|4(?:22\\d|9(?:[45]\\d|6[0-5])))\\d{3}",null,null,null,"2842291234",null,null,null,[7]],[null,null,"284(?:(?:3(?:0[0-3]|4[0-7]|68|9[34])|54[0-57])\\d|4(?:(?:4[0-6]|68)\\d|9(?:6[6-9]|9\\d)))\\d{3}",null,null,null,"2843001234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"VG",1,"011","1",null,null,"1",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"284",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]],VI:[null,[null,null,"(?:(?:34|90)0|[58]\\d\\d)\\d{7}",null,null,null,null,null,null,[10],[7]],[null,null,"340(?:2(?:01|2[06-8]|44|77)|3(?:32|44)|4(?:22|7[34])|5(?:1[34]|55)|6(?:26|4[23]|77|9[023])|7(?:1[2-57-9]|27|7\\d)|884|998)\\d{4}",null,null,null,"3406421234",null,null,null,[7]],[null,null,"340(?:2(?:01|2[06-8]|44|77)|3(?:32|44)|4(?:22|7[34])|5(?:1[34]|55)|6(?:26|4[23]|77|9[023])|7(?:1[2-57-9]|27|7\\d)|884|998)\\d{4}",null,null,null,"3406421234",null,null,null,[7]],[null,null,"8(?:00|33|44|55|66|77|88)[2-9]\\d{6}",null,null,null,"8002345678"],[null,null,"900[2-9]\\d{6}",null,null,null,"9002345678"],[null,null,null,null,null,null,null,null,null,[-1]],[null,null,"5(?:00|2[12]|33|44|66|77|88)[2-9]\\d{6}",null,null,null,"5002345678"],[null,null,null,null,null,null,null,null,null,[-1]],"VI",1,"011","1",null,null,"1",null,null,1,null,null,[null,null,null,null,null,null,null,null,null,[-1]],null,"340",[null,null,null,null,null,null,null,null,null,[-1]],[null,null,null,null,null,null,null,null,null,[-1]],null,null,[null,null,null,null,null,null,null,null,null,[-1]]]};x.b=function(){return x.a?x.a:x.a=new x};var ul={0:"0",1:"1",2:"2",3:"3",4:"4",5:"5",6:"6",7:"7",8:"8",9:"9","０":"0","１":"1","２":"2","３":"3","４":"4","５":"5","６":"6","７":"7","８":"8","９":"9","٠":"0","١":"1","٢":"2","٣":"3","٤":"4","٥":"5","٦":"6","٧":"7","٨":"8","٩":"9","۰":"0","۱":"1","۲":"2","۳":"3","۴":"4","۵":"5","۶":"6","۷":"7","۸":"8","۹":"9"},tl=RegExp("[+＋]+"),el=RegExp("([0-9０-９٠-٩۰-۹])"),rl=/^\(?\$1\)?$/,il=new S;m(il,11,"NA");var al=/\[([^\[\]])*\]/g,dl=/\d(?=[^,}][^,}])/g,ol=RegExp("^[-x‐-―−ー－-／  ­​⁠　()（）［］.\\[\\]/~⁓∼～]*(\\$\\d[-x‐-―−ー－-／  ­​⁠　()（）［］.\\[\\]/~⁓∼～]*)+$"),sl=/[- ]/;N.prototype.K=function(){this.C="",t(this.i),t(this.u),t(this.m),this.s=0,this.w="",t(this.b),this.h="",t(this.a),this.l=!0,this.A=this.o=this.F=!1,this.f=[],this.B=!1,this.g!=this.J&&(this.g=D(this,this.D))},N.prototype.L=function(l){return this.C=I(this,l)},l("Cleave.AsYouTypeFormatter",N),l("Cleave.AsYouTypeFormatter.prototype.inputDigit",N.prototype.L),l("Cleave.AsYouTypeFormatter.prototype.clear",N.prototype.K)}.call("object"==typeof global&&global?global:window);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"]
+  },
+  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__["togglePasswordVisibility"]],
+  data: function data() {
+    return {
+      codeBasic: _code__WEBPACK_IMPORTED_MODULE_3__["codeBasic"]
+    };
+  },
+  computed: {
+    passwordToggleIcon: function passwordToggleIcon() {
+      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
+    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"]
+  },
+  data: function data() {
+    return {
+      codeButton: _code__WEBPACK_IMPORTED_MODULE_2__["codeButton"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
+    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
+    BFormRadio: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadio"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"]
+  },
+  data: function data() {
+    return {
+      codeCheckboxRadio: _code__WEBPACK_IMPORTED_MODULE_2__["codeCheckboxRadio"],
+      radio1: 'radio2'
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
+    BDropdownDivider: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownDivider"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownItem"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+  },
+  data: function data() {
+    return {
+      codeDropdown: _code__WEBPACK_IMPORTED_MODULE_2__["codeDropdown"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
+    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"]
+  },
+  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__["togglePasswordVisibility"]],
+  data: function data() {
+    return {
+      codeMerged: _code__WEBPACK_IMPORTED_MODULE_3__["codeMerged"]
+    };
+  },
+  computed: {
+    passwordToggleIcon: function passwordToggleIcon() {
+      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon';
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"]
+  },
+  data: function data() {
+    return {
+      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&":
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603& ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-row",
+    { staticClass: "match-height" },
+    [
+      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-basic")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-merged")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-size")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { md: "6" } },
+        [_c("form-input-group-checkbox-radio")],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { cols: "12" } },
+        [_c("form-input-group-button")],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { cols: "12" } },
+        [_c("form-input-group-dropdown")],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Basic" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeBasic) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "demo-vertical-spacing" },
+        [
+          _c(
+            "b-input-group",
+            [
+              _c(
+                "b-input-group-prepend",
+                { attrs: { "is-text": "" } },
+                [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
+                1
+              ),
+              _vm._v(" "),
+              _c("b-form-input", { attrs: { placeholder: "Search" } }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-form-group",
+            [
+              _c("label", { attrs: { for: "basic-password" } }, [
+                _vm._v("Password"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "b-input-group",
+                [
+                  _c("b-form-input", {
+                    attrs: {
+                      id: "basic-password",
+                      type: _vm.passwordFieldType,
+                      placeholder: "Your Password",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-input-group-append",
+                    { attrs: { "is-text": "" } },
+                    [
+                      _c("feather-icon", {
+                        staticClass: "cursor-pointer",
+                        attrs: { icon: _vm.passwordToggleIcon },
+                        on: { click: _vm.togglePasswordVisibility },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "@" } },
+            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { append: "@example.com" } },
+            [
+              _c("b-form-input", {
+                attrs: { placeholder: "Recipient's username" },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "https://example.com/users/" } },
+            [_c("b-form-input")],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "$", append: ".00" } },
+            [_c("b-form-input", { attrs: { placeholder: "100" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "With textarea" } },
+            [_c("b-form-textarea")],
+            1
+          ),
+        ],
+        1
+      ),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&":
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Input Groups with Buttons" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeButton) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "b-row",
+        [
+          _c(
+            "b-col",
+            { staticClass: "mb-1", attrs: { lg: "6" } },
+            [
+              _c(
+                "b-input-group",
+                [
+                  _c("b-form-input", {
+                    attrs: { placeholder: "Button on right" },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-input-group-append",
+                    [
+                      _c(
+                        "b-button",
+                        { attrs: { variant: "outline-primary" } },
+                        [_vm._v("\n            GO\n          ")]
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { lg: "6" } },
+            [
+              _c(
+                "b-input-group",
+                [
+                  _c(
+                    "b-input-group-prepend",
+                    [
+                      _c(
+                        "b-button",
+                        { attrs: { variant: "outline-primary" } },
+                        [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("b-form-input", {
+                    attrs: { placeholder: "Button on both side" },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-input-group-append",
+                    [
+                      _c(
+                        "b-button",
+                        { attrs: { variant: "outline-primary" } },
+                        [_vm._v("\n            Search !\n          ")]
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Checkbox and radio addons" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeCheckboxRadio) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "b-row",
+        [
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "b-form-group",
+                [
+                  _c(
+                    "b-input-group",
+                    [
+                      _c(
+                        "b-input-group-prepend",
+                        { attrs: { "is-text": "" } },
+                        [
+                          _c("b-form-checkbox", {
+                            attrs: { plain: "", name: "checkbox-input" },
+                          }),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "b-form-group",
+                [
+                  _c(
+                    "b-input-group",
+                    [
+                      _c(
+                        "b-input-group-prepend",
+                        { attrs: { "is-text": "" } },
+                        [
+                          _c("b-form-radio", {
+                            attrs: {
+                              value: "radio2",
+                              plain: "",
+                              name: "radio-input1",
+                            },
+                            model: {
+                              value: _vm.radio1,
+                              callback: function ($$v) {
+                                _vm.radio1 = $$v
+                              },
+                              expression: "radio1",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-col", { staticClass: " my-1", attrs: { cols: "12" } }, [
+            _c("small", { staticClass: "font-weight-semibold" }, [
+              _vm._v("Custom checkbox and radio"),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "b-form-group",
+                [
+                  _c(
+                    "b-input-group",
+                    [
+                      _c(
+                        "b-input-group-prepend",
+                        { attrs: { "is-text": "" } },
+                        [
+                          _c("b-form-checkbox", {
+                            attrs: { name: "checkbox-input" },
+                          }),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c(
+                "b-form-group",
+                [
+                  _c(
+                    "b-input-group",
+                    [
+                      _c(
+                        "b-input-group-prepend",
+                        { attrs: { "is-text": "" } },
+                        [
+                          _c("b-form-radio", {
+                            attrs: { value: "radio2", name: "radio-input1" },
+                            model: {
+                              value: _vm.radio1,
+                              callback: function ($$v) {
+                                _vm.radio1 = $$v
+                              },
+                              expression: "radio1",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Input Groups With Dropdown" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeDropdown) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "b-row",
+        [
+          _c(
+            "b-col",
+            { staticClass: "mb-1", attrs: { lg: "6" } },
+            [
+              _c(
+                "b-input-group",
+                [
+                  _c(
+                    "b-input-group-prepend",
+                    [
+                      _c(
+                        "b-dropdown",
+                        {
+                          attrs: { text: "Action", variant: "outline-primary" },
+                        },
+                        [
+                          _c("b-dropdown-item", [_vm._v("Action ")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Another Action")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [
+                            _vm._v("Something else here"),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-dropdown-divider"),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Separated link")]),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("b-form-input", {
+                    attrs: { placeholder: "Dropdown on left" },
+                  }),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { lg: "6" } },
+            [
+              _c(
+                "b-input-group",
+                [
+                  _c(
+                    "b-input-group-prepend",
+                    [
+                      _c(
+                        "b-dropdown",
+                        {
+                          attrs: { variant: "outline-primary" },
+                          scopedSlots: _vm._u([
+                            {
+                              key: "button-content",
+                              fn: function () {
+                                return [
+                                  _c("feather-icon", {
+                                    attrs: { icon: "Edit2Icon" },
+                                  }),
+                                ]
+                              },
+                              proxy: true,
+                            },
+                          ]),
+                        },
+                        [
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Action ")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Another Action")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [
+                            _vm._v("Something else here"),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-dropdown-divider"),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Separated link")]),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("b-form-input", {
+                    attrs: { placeholder: "Dropdown on both side" },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-input-group-append",
+                    [
+                      _c(
+                        "b-dropdown",
+                        {
+                          attrs: {
+                            text: "Action",
+                            variant: "outline-primary",
+                            right: "",
+                          },
+                        },
+                        [
+                          _c("b-dropdown-item", [_vm._v("Action ")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Another Action")]),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [
+                            _vm._v("Something else here"),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-dropdown-divider"),
+                          _vm._v(" "),
+                          _c("b-dropdown-item", [_vm._v("Separated link")]),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&":
+/*!**********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Merged" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeMerged) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "demo-vertical-spacing" },
+        [
+          _c(
+            "b-input-group",
+            { staticClass: "input-group-merge" },
+            [
+              _c(
+                "b-input-group-prepend",
+                { attrs: { "is-text": "" } },
+                [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
+                1
+              ),
+              _vm._v(" "),
+              _c("b-form-input", { attrs: { placeholder: "Search" } }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-form-group",
+            [
+              _c("label", { attrs: { for: "basic-password1" } }, [
+                _vm._v("Password"),
+              ]),
+              _vm._v(" "),
+              _c(
+                "b-input-group",
+                { staticClass: "input-group-merge" },
+                [
+                  _c("b-form-input", {
+                    attrs: {
+                      id: "basic-password1",
+                      type: _vm.passwordFieldType,
+                      placeholder: "Your Password",
+                    },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "b-input-group-append",
+                    { attrs: { "is-text": "" } },
+                    [
+                      _c("feather-icon", {
+                        staticClass: "cursor-pointer",
+                        attrs: { icon: _vm.passwordToggleIcon },
+                        on: { click: _vm.togglePasswordVisibility },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { staticClass: "input-group-merge", attrs: { prepend: "@" } },
+            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            {
+              staticClass: "input-group-merge",
+              attrs: { append: "@example.com" },
+            },
+            [
+              _c("b-form-input", {
+                attrs: { placeholder: "Recipient's username" },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            {
+              staticClass: "input-group-merge",
+              attrs: { prepend: "https://example.com/users/" },
+            },
+            [_c("b-form-input")],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            {
+              staticClass: "input-group-merge",
+              attrs: { prepend: "$", append: ".00" },
+            },
+            [_c("b-form-input", { attrs: { placeholder: "100" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            {
+              staticClass: "input-group-merge",
+              attrs: { prepend: "With textarea" },
+            },
+            [_c("b-form-textarea")],
+            1
+          ),
+        ],
+        1
+      ),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Sizing" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c(
+        "div",
+        { staticClass: "demo-vertical-spacing" },
+        [
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "@", size: "lg" } },
+            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { prepend: "@" } },
+            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-input-group",
+            { attrs: { size: "sm", prepend: "@" } },
+            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            1
+          ),
+        ],
+        1
+      ),
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/b-card-code/index.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/@core/components/b-card-code/index.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
+
+/* harmony default export */ __webpack_exports__["default"] = (_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/mixins/ui/forms.js":
+/*!***************************************************!*\
+  !*** ./resources/js/src/@core/mixins/ui/forms.js ***!
+  \***************************************************/
+/*! exports provided: togglePasswordVisibility, _ */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "togglePasswordVisibility", function() { return togglePasswordVisibility; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
+// We haven't added icon's computed property because it makes this mixin coupled with UI
+var togglePasswordVisibility = {
+  data: function data() {
+    return {
+      passwordFieldType: 'password'
+    };
+  },
+  methods: {
+    togglePasswordVisibility: function togglePasswordVisibility() {
+      this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+    }
+  }
+};
+var _ = null;
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue ***!
+  \***************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroup.vue?vue&type=template&id=62d00603& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&");
+/* harmony import */ var _FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroup.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroup.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroup.vue?vue&type=template&id=62d00603& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupBasic.vue?vue&type=template&id=585a11ca& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&");
+/* harmony import */ var _FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupBasic.vue?vue&type=template&id=585a11ca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupButton.vue?vue&type=template&id=0189a415& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&");
+/* harmony import */ var _FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupButton.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415& ***!
+  \****************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupButton.vue?vue&type=template&id=0189a415& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&");
+/* harmony import */ var _FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&":
+/*!***********************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& ***!
+  \***********************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&");
+/* harmony import */ var _FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupDropdown.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& ***!
+  \******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue ***!
+  \*********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&");
+/* harmony import */ var _FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupMerged.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupMerged.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& ***!
+  \****************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupSize.vue?vue&type=template&id=2c00b424& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&");
+/* harmony import */ var _FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupSize.vue?vue&type=template&id=2c00b424& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-input-group/code.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-input-group/code.js ***!
+  \****************************************************************************/
+/*! exports provided: codeAddons, codeBasic, codeButton, codeCheckboxRadio, codeDropdown, codeSize, codeMerged */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeAddons", function() { return codeAddons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeButton", function() { return codeButton; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeCheckboxRadio", function() { return codeCheckboxRadio; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDropdown", function() { return codeDropdown; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMerged", function() { return codeMerged; });
+var codeAddons = "\n<template>\n  <b-row>\n    <b-col\n      md=\"6\"\n      class=\"mb-1\"\n    >\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-input-group-text>$</b-input-group-text>\n          <b-input-group-text>\n            <b-form-checkbox\n              name=\"checkbox-input\"\n              plain\n              class=\"vs-checkbox-con pl-0\"\n            >\n              <span class=\"vs-checkbox\">\n                <span class=\"vs-checkbox--check\">\n                  <i class=\"vs-icon feather icon-check\" />\n                </span>\n              </span>\n            </b-form-checkbox>\n          </b-input-group-text>\n        </b-input-group-prepend>\n        <b-form-input />\n      </b-input-group>\n    </b-col>\n    <b-col\n      md=\"6\"\n    >\n      <b-input-group>\n        <b-form-input />\n        <b-input-group-append>\n          <b-input-group-text>$</b-input-group-text>\n          <b-input-group-text>\n            <b-form-radio\n              class=\"vs-radio-con\"\n              name=\"radio-input\"\n              plain\n            >\n              <span class=\"vs-radio\">\n                <span class=\"vs-radio--border\" />\n                <span class=\"vs-radio--circle\" />\n              </span>\n            </b-form-radio>\n          </b-input-group-text>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {\n  BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BRow, BCol, BFormCheckbox, BInputGroupText, BFormRadio,\n} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n    BFormCheckbox,\n    BFormRadio,\n    BInputGroupText,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
+var codeBasic = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n    <!-- basic search -->\n    <b-input-group>\n      <b-input-group-prepend is-text>\n        <feather-icon icon=\"SearchIcon\" />\n      </b-input-group-prepend>\n      <b-form-input placeholder=\"Search\" />\n    </b-input-group>\n\n    <!-- password -->\n    <b-form-group>\n      <label for=\"basic-password\">Password</label>\n      <b-input-group>\n        <b-form-input\n          id=\"basic-password\"\n          :type=\"passwordFieldType\"\n          placeholder=\"Your Password\"\n        />\n        <b-input-group-append is-text>\n          <feather-icon\n            :icon=\"passwordToggleIcon\"\n            class=\"cursor-pointer\"\n            @click=\"togglePasswordVisibility\"\n          />\n        </b-input-group-append>\n      </b-input-group>\n    </b-form-group>\n\n    <!-- with prop prepend  -->\n    <b-input-group prepend=\"@\">\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- with prop append -->\n    <b-input-group append=\"@example.com\">\n      <b-form-input placeholder=\"Recipient's username\" />\n    </b-input-group>\n\n    <b-input-group prepend=\"https://example.com/users/\">\n      <b-form-input />\n    </b-input-group>\n\n    <!-- append and pepend -->\n    <b-input-group\n      prepend=\"$\"\n      append=\".00\"\n    >\n      <b-form-input placeholder=\"100\" />\n    </b-input-group>\n\n    <!-- textarea -->\n    <b-input-group prepend=\"With textarea\">\n      <b-form-textarea />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {\n  BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea,\n} from 'bootstrap-vue'\nimport { togglePasswordVisibility } from '@core/mixins/ui/forms'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BInputGroup,\n    BFormGroup,\n    BFormInput,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n  },\n  mixins: [togglePasswordVisibility],\n  computed: {\n    passwordToggleIcon() {\n      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'\n    },\n  },\n}\n</script>\n";
+var codeButton = "\n<template>\n  <b-row>\n    <b-col\n      lg=\"6\"\n      class=\"mb-1\"\n    >\n      <!-- button on right -->\n      <b-input-group>\n        <b-form-input placeholder=\"Button on right\" />\n        <b-input-group-append>\n          <b-button variant=\"outline-primary\">\n            GO\n          </b-button>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n    <b-col lg=\"6\">\n      <!-- button on both side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-button variant=\"outline-primary\">\n            <feather-icon icon=\"SearchIcon\" />\n          </b-button>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Button on both side\" />\n        <b-input-group-append>\n          <b-button variant=\"outline-primary\">\n            Search !\n          </b-button>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupAppend, BInputGroupPrepend, BRow, BCol, BButton} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupAppend,\n    BInputGroupPrepend,\n    BRow,\n    BCol,\n    BButton,\n  },\n}\n</script>\n";
+var codeCheckboxRadio = "\n<template>\n  <b-row>\n    <!-- checkbox -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-checkbox\n              plain\n              name=\"checkbox-input\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- radio -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-radio\n              v-model=\"radio1\"\n              value=\"radio2\"\n              plain\n              name=\"radio-input1\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- custome checkbox and radio -->\n    <b-col\n      cols=\"12\"\n      class=\" my-1\"\n    >\n      <small class=\"font-weight-semibold\">Custom checkbox and radio</small>\n    </b-col>\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-checkbox\n              name=\"checkbox-input\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- radio -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-radio\n              v-model=\"radio1\"\n              value=\"radio2\"\n              name=\"radio-input1\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupPrepend, BRow, BCol, BFormCheckbox, BFormRadio, BFormGroup} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BRow,\n    BCol,\n    BFormCheckbox,\n    BFormRadio,\n    BFormGroup,\n  },\n  data() {\n    return {\n      radio1: 'radio2',\n    }\n  },\n}\n</script>\n";
+var codeDropdown = "\n<template>\n  <b-row>\n    <b-col\n      lg=\"6\"\n      class=\"mb-1\"\n    >\n      <!-- dropdown in right side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-dropdown\n            text=\"Action\"\n            variant=\"outline-primary\"\n          >\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Dropdown on left\" />\n      </b-input-group>\n    </b-col>\n    <b-col lg=\"6\">\n\n      <!-- dropdown in both side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-dropdown variant=\"outline-primary\">\n            <template #button-content>\n              <feather-icon icon=\"Edit2Icon\" />\n            </template>\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Dropdown on both side\" />\n        <b-input-group-append>\n          <b-dropdown\n            text=\"Action\"\n            variant=\"outline-primary\"\n            right\n          >\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-append>\n\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {\n  BInputGroup,\n  BFormInput,\n  BInputGroupPrepend,\n  BInputGroupAppend,\n  BDropdown,\n  BDropdownItem,\n  BDropdownDivider,\n  BRow,\n  BCol,\n} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n    BDropdownDivider,\n    BDropdown,\n    BDropdownItem,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
+var codeSize = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n\n    <!-- large -->\n    <b-input-group\n      prepend=\"@\"\n      size=\"lg\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- default -->\n    <b-input-group\n      prepend=\"@\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- small -->\n    <b-input-group\n      size=\"sm\"\n      prepend=\"@\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n  },\n}\n</script>\n";
+var codeMerged = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n    <!-- basic search -->\n    <b-input-group class=\"input-group-merge\">\n      <b-input-group-prepend is-text>\n        <feather-icon icon=\"SearchIcon\" />\n      </b-input-group-prepend>\n      <b-form-input placeholder=\"Search\" />\n    </b-input-group>\n\n    <!-- password -->\n    <b-form-group>\n      <label for=\"basic-password1\">Password</label>\n      <b-input-group class=\"input-group-merge\">\n        <b-form-input\n          id=\"basic-password1\"\n          :type=\"passwordFieldType\"\n          placeholder=\"Your Password\"\n        />\n        <b-input-group-append is-text>\n          <feather-icon\n            :icon=\"passwordToggleIcon\"\n            class=\"cursor-pointer\"\n            @click=\"togglePasswordVisibility\"\n          />\n        </b-input-group-append>\n      </b-input-group>\n    </b-form-group>\n\n    <!-- with prop prepend  -->\n    <b-input-group\n      prepend=\"@\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- with prop append -->\n    <b-input-group\n      append=\"@example.com\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"Recipient's username\" />\n    </b-input-group>\n\n    <b-input-group\n      prepend=\"https://example.com/users/\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input />\n    </b-input-group>\n\n    <!-- append and pepend -->\n    <b-input-group\n      prepend=\"$\"\n      append=\".00\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"100\" />\n    </b-input-group>\n\n    <!-- textarea -->\n    <b-input-group\n      prepend=\"With textarea\"\n      class=\"input-group-merge\"\n    >\n      <b-form-textarea />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea} from 'bootstrap-vue'\nimport { togglePasswordVisibility } from '@core/mixins/ui/forms'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BInputGroup,\n    BFormGroup,\n    BFormInput,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n  },\n  mixins: [togglePasswordVisibility],\n  computed: {\n    passwordToggleIcon() {\n      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'\n    },\n  },\n}\n</script>\n";
 
 /***/ })
 
