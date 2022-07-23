@@ -27,7 +27,7 @@ class CheckListOutController extends Controller
     }
     public function index()
     {
-        return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', '=', 'OUT')->orderBy('checklist_out.created_at', 'desc')->paginate(25);
+        return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', '=', 'OUT')->orderBy('checklist_out.created_at', 'desc')->paginate(100);
     }
 
    function listViaturaDentro(){
