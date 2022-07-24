@@ -38,11 +38,6 @@
         <b-form @submit.prevent="OnSubmit" enctype="multipart/form-data">
           <b-row>
             <b-col cols="12" md="3" lg="6" xl="6">
-              <b-form-group label="Matricula da viatura reserva">
-                <v-select v-model="form.viatura_id" label="matricula" :options="viatura" :reduce="(viatura) => viatura.id" />
-              </b-form-group>
-            </b-col>
-            <b-col cols="12" md="3" lg="6" xl="6">
               <b-form-group label="Motorista">
                 <v-select v-model="form.motorista_id" label="nome" :options="motoristas" :reduce="(motoristas) => motoristas.id" />
               </b-form-group>
@@ -332,7 +327,7 @@ export default {
             toast({
               component: ToastificationContent,
               props: {
-                title: err.response.data.erro,
+                title: err.response.data.Erro,
                 icon: 'AlertTriangleIcon',
                 variant: 'danger',
               },

@@ -25,9 +25,22 @@ class CheckListOutController extends Controller
     {
         $this->checkListOut = $checkListOut;
     }
-    public function index()
+    public function index(Request $request)
     {
-        return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', '=', 'OUT')->orderBy('checklist_out.created_at', 'desc')->paginate(100);
+        if($request->q){
+            return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')
+            ->join('motoristas', 'checklist_out.motorista_id', '=', 'motoristas.id')->join('people', 'motoristas.person_id', '=', 'people.id')
+            ->where('viaturas.locate', '=', 'OUT')
+            ->where('viaturas.matricula', 'like', '%' . $request->q . '%' )
+            ->orWhere('checklist_out.created_at', 'like', '%' . $request->q . '%' )
+            ->orWhere('people.nome_completo', 'like', '%' . $request->q . '%' )
+            ->orderBy('checklist_out.created_at', 'desc')->paginate(15);
+        }else if($request->perPage){
+            return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', '=', 'OUT')->orderBy('checklist_out.created_at', 'desc')->paginate($request->perPage);
+        }else{
+            return $this->checkListOut->with(['viatura', 'motorista.person'])->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')->where('viaturas.locate', '=', 'OUT')->orderBy('checklist_out.created_at', 'desc')->paginate(15);
+        }
+
     }
 
    function listViaturaDentro(){

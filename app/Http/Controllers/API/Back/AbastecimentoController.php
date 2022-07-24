@@ -103,11 +103,11 @@ class AbastecimentoController extends Controller
 
             $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        // $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->where('ordem_viaturas.created_at', '<', $datetime)->where('viaturas.id', $request->viatura_id)->first();
+        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->where('ordem_viaturas.created_at', '>=', $datetime)->where('viaturas.id', $request->viatura_id)->first();
         // // return $lastOrderViatura;
-        // if (!empty($lastOrderViatura)) {
-        //     return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
-        // }
+        if (!empty($lastOrderViatura)) {
+            return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
+        }
 
         if (!empty(ordem_viatura::where('viatura_id', $viatura->id)->where('ordem_id', $ordem->id)->first()))
             return response()->json(['erro' => 'Erro! Nao pode abastecer mais de uma vez a viatura na mesma ordem'], 421);

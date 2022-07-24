@@ -182,7 +182,7 @@ class CheckListInController extends Controller
 
 
         if($viatura1->kilometragem > $request->km_fim){
-            return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
+            return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que '.$viatura1->kilometragem.' anterior da viatura'], 421);
         }
 
         // return $request->checklist_var;

@@ -157,14 +157,13 @@
                 </tbody>
                 <tfoot>
                     <tr style="border: 1px;">
-                        <td colspan="7">
+                        <td colspan="7" style="text-align: right">
                             TOTAL
                         </td>
                         <td>{{ $total }} MT</td>
                     </tr>
                 </tfoot>
             </table>
-            <hr>
 
         </div>
 

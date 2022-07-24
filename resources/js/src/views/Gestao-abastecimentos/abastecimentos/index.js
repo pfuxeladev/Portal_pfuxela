@@ -129,44 +129,7 @@ export default function useAbastecimentoList() {
         })
       })
   }
-  //   Get Relatorio Geral de abastecimentos
 
-  const dia = ref(null)
-  const mes = ref(null)
-  const semana = ref(null)
-  const intervalo = ref(null)
-  const RelatorioGeral = ref(null)
-  const totalHistoricos = ref(null)
-
-  const dataHistory = computed(() => {
-    const localItemsCount = RelatorioGeral.value ? RelatorioGeral.value.localItems.length : 0
-    return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalHistoricos.value,
-    }
-  })
-
-  const refetchHistory = () => {
-    RelatorioGeral.value.refresh()
-  }
-
-  const generalReport = (ctx, callback) => {
-    store.dispatch('Supply/getHistory', {
-      dia: dia.value,
-      mes: mes.value,
-      semana: semana.value,
-      intervalo: intervalo.value,
-      perPage: perPage.value,
-      page: currentPage.value,
-      sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value,
-    }).then(response => {
-      const Historico = response.data
-      callback(Historico.data)
-      totalHistoricos.value = Historico.total
-    })
-  }
   // *===============================================---*
   // *--------- UI ---------------------------------------*
   // *===============================================---*
@@ -195,11 +158,5 @@ export default function useAbastecimentoList() {
     planFilter,
     statusFilter,
 
-    // Historico Geral de abastecimento
-    refetchHistory,
-    generalReport,
-    RelatorioGeral,
-    totalHistoricos,
-    dataHistory,
   }
 }

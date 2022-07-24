@@ -320,7 +320,6 @@ export default {
     return {
       // Sidebar
       isAddNewUserSidebarActive,
-
       fetchUsers,
       tableColumns,
       perPage,

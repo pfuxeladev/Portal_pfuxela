@@ -150,11 +150,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -328,7 +323,7 @@ __webpack_require__.r(__webpack_exports__);
           toast({
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
-              title: err.response.data.erro,
+              title: err.response.data.Erro,
               icon: 'AlertTriangleIcon',
               variant: 'danger'
             }
@@ -851,39 +846,6 @@ var render = function () {
                   _c(
                     "b-row",
                     [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            {
-                              attrs: { label: "Matricula da viatura reserva" },
-                            },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  label: "matricula",
-                                  options: _vm.viatura,
-                                  reduce: function (viatura) {
-                                    return viatura.id
-                                  },
-                                },
-                                model: {
-                                  value: _vm.form.viatura_id,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "viatura_id", $$v)
-                                  },
-                                  expression: "form.viatura_id",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
                       _c(
                         "b-col",
                         { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },

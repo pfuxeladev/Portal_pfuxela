@@ -33,13 +33,10 @@
               placeholder="Search..."
             />
           </b-col>
-          <b-col>
-            <v-select />
-          </b-col>
         </b-row>
       </div>
       <b-table
-        ref="refSaidaTableList"
+        ref="refSaidasTableList"
         :items="fetchSaidas"
         responsive
         :fields="tableColumns"

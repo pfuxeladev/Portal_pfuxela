@@ -24,10 +24,10 @@ export default function useOcorrenciaList() {
     { key: 'acções' },
   ]
 
-  const perPage = ref(25)
+  const perPage = ref(15)
   const totalSaidas = ref(0)
   const currentPage = ref(1)
-  const perPageOptions = [25, 50, 75, 100]
+  const perPageOptions = [15, 30, 75, 100]
   const searchQuery = ref('')
   const sortBy = ref('id')
   const isSortDirDesc = ref(true)

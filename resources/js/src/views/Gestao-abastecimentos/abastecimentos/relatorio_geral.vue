@@ -18,7 +18,7 @@
                 label-for="input-8"
               >
                 <b-form-input
-                  v-model="searchQuery"
+                  v-model="searchDatas"
                   class="d-inline-block mr-1"
                   placeholder="pesquisar..."
                 />
@@ -36,6 +36,7 @@
                   format="YYYY-MM-DD"
                   style="width: 100%"
                   id="example-datepicker1"
+                  v-model="intervalo"
                   range
                   locale="pt"
                   class="mb-1"
@@ -57,6 +58,21 @@
             </b-col>
           </b-row>
           <b-row>
+              <b-col
+            cols="12"
+            md="4"
+            class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
+          >
+            <label>mostrar</label>
+            <v-select
+              v-model="perPage"
+              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+              :options="perPageOptions"
+              :clearable="false"
+              class="per-page-selector d-inline-block mx-50"
+            />
+            <label>entradas</label>
+          </b-col>
             <b-col>
 
             </b-col>
@@ -67,10 +83,10 @@
         <b-card-body>
  <b-row>
     <b-col cols="3">
-        <b-button variant="outline-primary"><i class="fas fa-print"></i> Imprimir</b-button>
+        <b-button variant="outline-primary" @click="imprimir()"><i class="fas fa-print"></i> Imprimir</b-button>
     </b-col>
           <b-col cols="12" xl="12" md="12" class="table-responsive">
-            <b-table ref="RelatorioGeral" :items="generalReport" :fields="fieldColumns" head-variant="light">
+            <b-table ref="RelatorioGeral" :items="generalReport" :fields="fieldColumns"  primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="Nenhum dado encontrado" :sort-desc.sync="isSortDirDesc" head-variant="light">
                  <template #cell(ordem)="data">
                         <span v-if="data.item.ordem !== null">
                         {{data.item.ordem.codigo_ordem}}
@@ -118,6 +134,28 @@
                         </b-dropdown>
                     </template>
             </b-table>
+              <div class="mx-2 mb-2">
+                <b-row>
+
+                    <b-col cols="12" sm="8" class="d-flex align-items-center justify-content-center justify-content-sm-start">
+                        <span class="text-muted">mostrar {{ dataHistory.from }} de {{ dataHistory.to }} para {{ dataHistory.of }} entradas</span>
+                    </b-col>
+                    <!-- Pagination -->
+                    <b-col cols="12" sm="4" class="d-flex align-items-center justify-content-center justify-content-sm-end">
+
+                        <b-pagination v-model="currentPage" :total-rows="totalHistoricos" :per-page="perPage" first-number last-number class="mb-0 mt-1 mt-sm-0" prev-class="prev-item" next-class="next-item">
+                            <template #prev-text>
+                                <feather-icon icon="ChevronLeftIcon" size="18" />
+                            </template>
+                            <template #next-text>
+                                <feather-icon icon="ChevronRightIcon" size="18" />
+                            </template>
+                        </b-pagination>
+
+                    </b-col>
+
+                </b-row>
+            </div>
           </b-col>
         </b-row>
         </b-card-body>
@@ -158,8 +196,9 @@ import moment from 'moment'
 import flatPickr from 'vue-flatpickr-component'
 import DatePicker from 'vue2-datepicker'
 import storeAbastecimentos from './storeAbastecimentos'
-import useAbastecimentoList from "./index"
 import 'vue2-datepicker/index.css'
+import _ from 'lodash'
+import useRelatorioList from './Relatorio'
 
 export default {
   components: {
@@ -203,13 +242,16 @@ export default {
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY')
     }
+     const dateOptions = [
+    { label: 'Hoje', value: 'Hoje' },
+    { label: 'Semanal', value: 'Semanal' },
+    { label: 'Mes', value: 'Mensal' },
+    { label: 'Ano', value: 'Anual' },
+  ]
 
-    const dateOptions = [
-      { label: 'Hoje', value: 'Hoje' },
-      { label: 'Semanal', value: 'Semanal' },
-      { label: 'Mes', value: 'Mensal' },
-      { label: 'Ano', value: 'Anual' },
-    ]
+    function imprimir() {
+
+    }
     const fieldColumns = [
       { key: 'ordem', sortable: true },
       { key: 'Data_de_emissao', sortable: true },
@@ -231,20 +273,23 @@ export default {
       currentPage,
       refetchHistory,
       generalReport,
+      //   dateOptions,
       RelatorioGeral,
       totalHistoricos,
       dataHistory,
       perPageOptions,
-      searchQuery,
+      searchDatas,
+      intervalo,
       sortBy,
       isSortDirDesc,
-    } = useAbastecimentoList()
+    } = useRelatorioList()
 
     return {
       perPage,
       currentPage,
       dateOptions,
       fieldColumns,
+      intervalo,
       bomba,
       viatura,
       refetchHistory,
@@ -253,10 +298,11 @@ export default {
       totalHistoricos,
       dataHistory,
       perPageOptions,
-      searchQuery,
+      searchDatas,
       sortBy,
       isSortDirDesc,
       dateTime,
+      imprimir,
     }
   },
 }

@@ -423,9 +423,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 
 
@@ -985,8 +982,6 @@ var render = function () {
                     ],
                     1
                   ),
-                  _vm._v(" "),
-                  _c("b-col", [_c("v-select")], 1),
                 ],
                 1
               ),
@@ -995,7 +990,7 @@ var render = function () {
           ),
           _vm._v(" "),
           _c("b-table", {
-            ref: "refSaidaTableList",
+            ref: "refSaidasTableList",
             staticClass: "position-relative",
             attrs: {
               items: _vm.fetchSaidas,
