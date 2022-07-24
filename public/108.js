@@ -672,7 +672,7 @@ var render = function () {
                             { attrs: { label: "Kilometragem actual" } },
                             [
                               _c("b-form-input", {
-                                attrs: { type: "text" },
+                                attrs: { type: "text", readonly: "" },
                                 model: {
                                   value: _vm.form.km_inicio,
                                   callback: function ($$v) {
