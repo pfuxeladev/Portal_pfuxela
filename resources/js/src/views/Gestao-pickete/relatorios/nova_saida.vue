@@ -54,7 +54,7 @@
                     </b-col>
                     <b-col cols="12" md="3" lg="6" xl="6">
                         <b-form-group label="Kilometragem actual">
-                            <b-form-input v-model="form.km_inicio" type="text" />
+                            <b-form-input v-model="form.km_inicio" type="text" readonly />
                         </b-form-group>
                     </b-col>
                       <b-col cols="12" md="3" lg="6" xl="6">
