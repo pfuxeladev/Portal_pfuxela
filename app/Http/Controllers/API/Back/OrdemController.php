@@ -309,9 +309,24 @@ class OrdemController extends Controller
             ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->q . '%')
             ->orWhere('rotas.nome_rota', 'like', '%' . $request->q . '%')
             ->orderBy('ordems.updated_at', 'desc')->paginate(10);
-            
+
             return response()->json($ordem_viatura, 200);
-        }else{
+        }else if($request->intervalo && $request->q){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])
+            ->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('ordems.codigo_ordem', 'like', '%' . $request->q . '%')
+            ->orWhere('viaturas.matricula', 'like', '%' . $request->q . '%')
+            ->orWhere('bombas.nome_bombas', 'like', '%' . $request->q . '%')
+            ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->q . '%')
+            ->orWhere('rotas.nome_rota', 'like', '%' . $request->q . '%')
+            ->orderBy('ordems.updated_at', 'desc')->whereBetween('created_at', $request->intervalo)->orderBy('updated_at', 'desc')->paginate(10);
+
+            return response()->json($ordem_viatura, 200);
+        }
+        else{
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->paginate(10);
             return response()->json($ordem_viatura, 200);
         }
@@ -344,13 +359,25 @@ class OrdemController extends Controller
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
             // return $pdf->download('Relatorio.pdf');
+        }else if($request->intervalo && $request->q){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereDate('created_at', Carbon::today()) ->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('ordems.codigo_ordem', 'like', '%' . $request->q . '%')
+            ->orWhere('viaturas.matricula', 'like', '%' . $request->q . '%')
+            ->orWhere('bombas.nome_bombas', 'like', '%' . $request->q . '%')
+            ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->q . '%')
+            ->orWhere('rotas.nome_rota', 'like', '%' . $request->q . '%')->orderBy('updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
         }else{
 
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->get();
             // return view('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
-            return $pdf->download('Relatorio.pdf');
+            return $pdf->output();
         }
 
     }

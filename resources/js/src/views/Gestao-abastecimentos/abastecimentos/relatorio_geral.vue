@@ -45,14 +45,12 @@
             </b-col>
             <b-col cols="4" md="4">
               <b-form-group
-                id="input-group-8"
                 label="Filtrar por periodo:"
                 label-for="input-8"
                 description="Datas periodicas."
               >
                 <v-select  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'" :options="dateOptions"
                  :clearable="false"
-              class="per-page-selector d-inline-block mx-50"
               ></v-select>
               </b-form-group>
             </b-col>
@@ -242,14 +240,66 @@ export default {
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY')
     }
-     const dateOptions = [
-    { label: 'Hoje', value: 'Hoje' },
-    { label: 'Semanal', value: 'Semanal' },
-    { label: 'Mes', value: 'Mensal' },
-    { label: 'Ano', value: 'Anual' },
-  ]
+    const dateOptions = [
+      { label: 'Hoje', value: 'Hoje' },
+      { label: 'Semanal', value: 'Semanal' },
+      { label: 'Mes', value: 'Mensal' },
+      { label: 'Ano', value: 'Anual' },
+    ]
 
     function imprimir() {
+        const newLocal = 'download'
+      if (this.intervalo) {
+
+        this.$http.post('/api/printRelatorio', this.intervalo, {
+          responseType: 'blob',
+          Accept: 'application/pdf',
+        }).then(response => {
+          const fileURL = window.URL.createObjectURL(
+            new Blob([response.data], {
+              type: 'application/pdf',
+            }),
+          );
+          const fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        })
+      } else if (this.searchDatas !== '') {
+ this.$http.post('/api/printRelatorio', this.searchDatas, {
+          responseType: 'blob',
+          Accept: 'application/pdf',
+        }).then(response => {
+          const fileURL = window.URL.createObjectURL(
+            new Blob([response.data], {
+              type: 'application/pdf',
+            }),
+          );
+          const fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        })
+      } else {
+        this.$http.post('/api/printRelatorio', {
+          responseType: 'blob',
+          Accept: 'application/pdf',
+        }).then(response => {
+          const fileURL = window.URL.createObjectURL(
+            new Blob([response.data], {
+              type: 'application/pdf',
+            }),
+          );
+          const fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        })
+      }
+
 
     }
     const fieldColumns = [

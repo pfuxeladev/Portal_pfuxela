@@ -112,7 +112,7 @@ Route::group(['middleware'=>'auth:api'], function () {
 
 Route::get('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
 
-Route::get('printRelatorio', [App\Http\Controllers\API\Back\OrdemController::class, 'printRelatorio']);
+Route::post('printRelatorio', [App\Http\Controllers\API\Back\OrdemController::class, 'printRelatorio']);
 
 Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);
 Route::get('ordemAberta/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'OrdensAberta']);
