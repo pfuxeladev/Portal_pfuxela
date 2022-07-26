@@ -163,7 +163,7 @@
           <tbody>
             <tr
               v-for="(order, index) in OpenOrder.ordem_viatura"
-              :key="index"
+              :key="'r'+index"
             >
               <td>{{ order.viatura.matricula }}</td>
               <td>{{ order.viatura.kilometragem }}</td>
@@ -374,7 +374,7 @@ export default {
           this.$Progress.finish()
           this.form.reset()
           // eslint-disable-next-line no-restricted-globals
-          router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+          this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
           window.location.reload()
         }
       }).catch(err => {
@@ -461,8 +461,8 @@ export default {
                   variant: 'success',
                 },
               })
-              this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
-              window.location.reload()
+              router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+            //   window.location.reload()
             })
             .catch(err => {
               if (err) {

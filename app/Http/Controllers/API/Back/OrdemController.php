@@ -251,7 +251,6 @@ class OrdemController extends Controller
     }
     public function update(Request $request)
     {
-        // return $request->all();
 
         $ordem = Ordem::where('refs', $request->refs)->first();
         $ordem->bombas_id = $request->bombas_id;

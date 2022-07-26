@@ -24,8 +24,8 @@
                       <thead>
                           <tr>
                               <th>viatura</th>
-                              <th>projecto</th>
-                              <th>rotas</th>
+                              <th>Rota requisita</th>
+                              <th>Rota a substituir</th>
                               <th>qtd</th>
                           </tr>
                       </thead>
@@ -33,11 +33,14 @@
                           <tr v-for="(vi, z) in orderData.ordem_viatura" :key="z">
                                 <td>
                                     {{vi.viatura.matricula}}</td>
-                                <td><span v-for="rota in vi.ordem_viatura_rota" :key="rota">{{rota.projecto.name}}</span></td>
+                                <td><span v-for="(rt, i) in vi.ordem_viatura_rota" :key="i">
+                                        {{rt.rota.nome_rota}},
+                                    </span></td>
                                 <td>
                                     <span v-for="(rt, i) in vi.ordem_viatura_rota" :key="i">
-                                        {{rt.rota.nome_rota}},
+                                    <v-select v-model="rt.rota.nome_rota" label="nome_rota" :options="rota" :reduce="rota => rota.id"></v-select>
                                     </span>
+
                                     </td>
                                 <td>
                                     <b-form-input type="text" v-model="vi.qtd_abastecida"></b-form-input>
@@ -77,8 +80,8 @@ import {
   BLink,
   BBadge,
   BFormTextarea,
-} from "bootstrap-vue";
-import vSelect from "vue-select";
+} from 'bootstrap-vue';
+import vSelect from 'vue-select';
 import { ref, onUnmounted } from '@vue/composition-api';
 import Ripple from 'vue-ripple-directive'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
@@ -86,7 +89,7 @@ import { useToast } from 'vue-toastification/composition'
 import store from '@/store'
 import router from '@/router'
 import storeOrderModule from './storeOrderModule'
-import Form from "vform";
+import Form from 'vform';
 export default {
   components: {
     BCard,
@@ -124,6 +127,7 @@ export default {
       this.viaturas = res.data
     })
     this.fetchProjectos()
+    this.fetchRotas()
   },
   methods: {
     fetchProjectos() {
@@ -134,10 +138,9 @@ export default {
       })
     },
 
-    fetchRotas(pro) {
-      console.log(pro)
+    fetchRotas() {
       //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
-      this.$http.get(`/api/RotaByProject/${pro}`).then(res => {
+      this.$http.get('/api/todasRotas/').then(res => {
         this.rota = res.data
         if (res.data === '') {
           this.$swal.fire({
@@ -169,7 +172,7 @@ export default {
 
     const form = ref(
       JSON.parse(
-        JSON.stringify(new Form()),
+        JSON.stringify(new Form({ orderData, rota_id: {} })),
       ),
     )
     store.dispatch('Supply/fetchOrder', {
@@ -196,8 +199,8 @@ export default {
               variant: 'success',
             },
           })
-          window.location.reload()
-          this.$router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
+        //   window.location.reload()
+          router.push({ name: 'supply-details', params: { refs: router.currentRoute.params.refs } })
         })
         .catch(err => {
           if (err) {
