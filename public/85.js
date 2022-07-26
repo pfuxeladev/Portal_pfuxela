@@ -168,6 +168,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -216,6 +219,7 @@ __webpack_require__.r(__webpack_exports__);
       _this.viaturas = res.data;
     });
     this.fetchProjectos();
+    this.fetchRotas();
   },
   methods: {
     fetchProjectos: function fetchProjectos() {
@@ -227,12 +231,11 @@ __webpack_require__.r(__webpack_exports__);
         console.log(err);
       });
     },
-    fetchRotas: function fetchRotas(pro) {
+    fetchRotas: function fetchRotas() {
       var _this3 = this;
 
-      console.log(pro); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
-
-      this.$http.get("/api/RotaByProject/".concat(pro)).then(function (res) {
+      //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
+      this.$http.get('/api/todasRotas/').then(function (res) {
         _this3.rota = res.data;
 
         if (res.data === '') {
@@ -264,7 +267,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     });
     var orderData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_10__["default"]())));
+    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_10__["default"]({
+      orderData: orderData,
+      rota_id: {}
+    }))));
     _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/fetchOrder', {
       refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
     }).then(function (response) {
@@ -277,8 +283,6 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     function Actualizar() {
-      var _this4 = this;
-
       _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Supply/updateOrder', orderData.value).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -287,10 +291,9 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        });
-        window.location.reload();
+        }); //   window.location.reload()
 
-        _this4.$router.push({
+        _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
           name: 'supply-details',
           params: {
             refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
@@ -577,9 +580,9 @@ var render = function () {
                                 _c("tr", [
                                   _c("th", [_vm._v("viatura")]),
                                   _vm._v(" "),
-                                  _c("th", [_vm._v("projecto")]),
+                                  _c("th", [_vm._v("Rota requisita")]),
                                   _vm._v(" "),
-                                  _c("th", [_vm._v("rotas")]),
+                                  _c("th", [_vm._v("Rota a substituir")]),
                                   _vm._v(" "),
                                   _c("th", [_vm._v("qtd")]),
                                 ]),
@@ -602,10 +605,12 @@ var render = function () {
                                         "td",
                                         _vm._l(
                                           vi.ordem_viatura_rota,
-                                          function (rota) {
-                                            return _c("span", { key: rota }, [
+                                          function (rt, i) {
+                                            return _c("span", { key: i }, [
                                               _vm._v(
-                                                _vm._s(rota.projecto.name)
+                                                "\n                                      " +
+                                                  _vm._s(rt.rota.nome_rota) +
+                                                  ",\n                                  "
                                               ),
                                             ])
                                           }
@@ -618,13 +623,34 @@ var render = function () {
                                         _vm._l(
                                           vi.ordem_viatura_rota,
                                           function (rt, i) {
-                                            return _c("span", { key: i }, [
-                                              _vm._v(
-                                                "\n                                      " +
-                                                  _vm._s(rt.rota.nome_rota) +
-                                                  ",\n                                  "
-                                              ),
-                                            ])
+                                            return _c(
+                                              "span",
+                                              { key: i },
+                                              [
+                                                _c("v-select", {
+                                                  attrs: {
+                                                    label: "nome_rota",
+                                                    options: _vm.rota,
+                                                    reduce: function (rota) {
+                                                      return rota.id
+                                                    },
+                                                  },
+                                                  model: {
+                                                    value: rt.rota.nome_rota,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        rt.rota,
+                                                        "nome_rota",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "rt.rota.nome_rota",
+                                                  },
+                                                }),
+                                              ],
+                                              1
+                                            )
                                           }
                                         ),
                                         0

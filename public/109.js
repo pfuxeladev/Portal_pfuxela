@@ -392,12 +392,13 @@ __webpack_require__.r(__webpack_exports__);
           _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
 
 
-          _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
+          _this8.$router.push({
             name: 'supply-details',
             params: {
               refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
             }
           });
+
           window.location.reload();
         }
       })["catch"](function (err) {
@@ -463,8 +464,6 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function enviarPedido(order) {
-      var _this11 = this;
-
       this.$swal({
         title: 'Submeter a ordem? <br/> Não poderá reverter essa acção!',
         // text: 'Nao podera reverter essa accao!',
@@ -487,15 +486,12 @@ __webpack_require__.r(__webpack_exports__);
                 variant: 'success'
               }
             });
-
-            _this11.$router.push({
+            _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
               name: 'supply-details',
               params: {
                 refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
               }
-            });
-
-            window.location.reload();
+            }); //   window.location.reload()
           })["catch"](function (err) {
             if (err) {
               toast({
@@ -1053,7 +1049,7 @@ var render = function () {
                       _vm._l(
                         _vm.OpenOrder.ordem_viatura,
                         function (order, index) {
-                          return _c("tr", { key: index }, [
+                          return _c("tr", { key: "r" + index }, [
                             _c("td", [_vm._v(_vm._s(order.viatura.matricula))]),
                             _vm._v(" "),
                             _c("td", [
