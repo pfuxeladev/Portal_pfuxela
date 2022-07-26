@@ -174,7 +174,7 @@ class CheckListInController extends Controller
         'hr_fim'=>'required',
     ]);
     // try {
-        $checkList_out = CheckListOut::where('viatura_id', $request->viatura_id)->first();
+        $checkList_out = CheckListOut::where('id', $request->id)->first();
 
         // return $checkList_out;
 

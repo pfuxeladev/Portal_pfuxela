@@ -14,10 +14,18 @@ export default {
           .catch(error => reject(error))
       })
     },
-    fetchProjectoDetails(ctx, { id }) {
+    fetchProjectoDetails(ctx, { name }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/Projectos/${id}`)
+          .get(`/api/Projecto/${name}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    fetchRotaProject(ctx, { name, queryParams }) {
+      return new Promise((resolve, reject) => {
+        axios
+          .get(`/api/RelatorioProjecto/${name}`, { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

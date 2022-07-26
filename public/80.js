@@ -83,10 +83,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -97,39 +97,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index */ "./resources/js/src/views/Gestao-abastecimentos/projectos/index.js");
-/* harmony import */ var _storeProjectos__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storeProjectos */ "./resources/js/src/views/Gestao-abastecimentos/projectos/storeProjectos.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _useMotoristasList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./useMotoristasList */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js");
+/* harmony import */ var _storeMotoritaModules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storeMotoritaModules */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js");
 //
 //
 //
@@ -254,11 +223,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "Projects",
   components: {
     BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
     BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
@@ -269,66 +235,61 @@ __webpack_require__.r(__webpack_exports__);
     BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdown"],
     BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdownItem"],
     BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BPagination"],
-    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BTooltip: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTooltip"],
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
   },
-  setup: function setup() {
-    var PROJECT_APP_STORE_MODULE_NAME = "app-projects"; // Register module
+  setup: function setup(props) {
+    var DRIVER_STORE_MODULE_NAME = "Picket"; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(PROJECT_APP_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_3__["default"].registerModule(PROJECT_APP_STORE_MODULE_NAME, _storeProjectos__WEBPACK_IMPORTED_MODULE_5__["default"]);
+    if (!_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(DRIVER_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_3__["default"].registerModule(DRIVER_STORE_MODULE_NAME, _storeMotoritaModules__WEBPACK_IMPORTED_MODULE_5__["default"]);
     } // UnRegister on leave
 
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_2__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(PROJECT_APP_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_3__["default"].unregisterModule(PROJECT_APP_STORE_MODULE_NAME);
+      if (_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(DRIVER_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_3__["default"].unregisterModule(DRIVER_STORE_MODULE_NAME);
       }
     });
-    var isAddNewProjectsidebarActive = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_2__["ref"])(false);
-    var roleOptions = [];
-    var planOptions = [];
-    var statusOptions = [];
+    var statusOptions = [{
+      label: "Active",
+      value: "active"
+    }, {
+      label: "Inactive",
+      value: "inactive"
+    }];
 
-    var _useprojectsList = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
-        fetchProjects = _useprojectsList.fetchProjects,
-        tableColumns = _useprojectsList.tableColumns,
-        perPage = _useprojectsList.perPage,
-        currentPage = _useprojectsList.currentPage,
-        totalProjects = _useprojectsList.totalProjects,
-        dataMeta = _useprojectsList.dataMeta,
-        perPageOptions = _useprojectsList.perPageOptions,
-        searchQuery = _useprojectsList.searchQuery,
-        sortBy = _useprojectsList.sortBy,
-        isSortDirDesc = _useprojectsList.isSortDirDesc,
-        refProjectListTable = _useprojectsList.refProjectListTable,
-        refetchData = _useprojectsList.refetchData,
-        roleFilter = _useprojectsList.roleFilter,
-        planFilter = _useprojectsList.planFilter,
-        statusFilter = _useprojectsList.statusFilter;
+    var _useMotoristasList = Object(_useMotoristasList__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+        fetctDriver = _useMotoristasList.fetctDriver,
+        tableColumns = _useMotoristasList.tableColumns,
+        perPage = _useMotoristasList.perPage,
+        currentPage = _useMotoristasList.currentPage,
+        totalDrivers = _useMotoristasList.totalDrivers,
+        dataMeta = _useMotoristasList.dataMeta,
+        perPageOptions = _useMotoristasList.perPageOptions,
+        searchQuery = _useMotoristasList.searchQuery,
+        sortBy = _useMotoristasList.sortBy,
+        isSortDirDesc = _useMotoristasList.isSortDirDesc,
+        refDriverTableList = _useMotoristasList.refDriverTableList,
+        refetchData = _useMotoristasList.refetchData,
+        departmentFilter = _useMotoristasList.departmentFilter;
 
     return {
-      // Sidebar
-      isAddNewProjectsidebarActive: isAddNewProjectsidebarActive,
-      fetchProjects: fetchProjects,
+      fetctDriver: fetctDriver,
       tableColumns: tableColumns,
       perPage: perPage,
       currentPage: currentPage,
-      totalProjects: totalProjects,
+      totalDrivers: totalDrivers,
       dataMeta: dataMeta,
       perPageOptions: perPageOptions,
       searchQuery: searchQuery,
       sortBy: sortBy,
       isSortDirDesc: isSortDirDesc,
-      refProjectListTable: refProjectListTable,
+      refDriverTableList: refDriverTableList,
       refetchData: refetchData,
-      roleOptions: roleOptions,
-      planOptions: planOptions,
-      statusOptions: statusOptions,
       // Extra Filters
-      roleFilter: roleFilter,
-      planFilter: planFilter,
-      statusFilter: statusFilter
+      statusOptions: statusOptions,
+      departmentFilter: departmentFilter
     };
   }
 });
@@ -464,10 +425,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4&":
-/*!***************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4& ***!
-  \***************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -483,331 +444,361 @@ var render = function () {
     "b-card",
     { attrs: { "no-body": "" } },
     [
-      _c("b-card-header", { staticClass: "pb-50" }, [
-        _c("h5", [_vm._v("Filtros")]),
-      ]),
-      _vm._v(" "),
       _c(
-        "b-card-body",
+        "div",
+        { staticClass: "m-2" },
         [
           _c(
             "b-row",
             [
               _c(
                 "b-col",
-                { staticClass: "mb-md-0 mb-2", attrs: { cols: "12", md: "4" } },
+                {
+                  staticClass:
+                    "d-flex align-items-center justify-content-start mb-1 mb-md-0",
+                  attrs: { cols: "12", md: "6" },
+                },
                 [
-                  _c("label", [_vm._v("Projetos")]),
+                  _c("label", [_vm._v("Entradas")]),
                   _vm._v(" "),
                   _c("v-select", {
-                    staticClass: "w-100",
+                    staticClass: "per-page-selector d-inline-block ml-50 mr-1",
                     attrs: {
                       dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
-                      value: _vm.roleFilter,
-                      "primary-key": "id",
-                      options: _vm.roleOptions,
-                      reduce: function (val) {
-                        return val.value
-                      },
+                      options: _vm.perPageOptions,
+                      clearable: false,
                     },
-                    on: {
-                      input: function (val) {
-                        return _vm.$emit("update:roleFilter", val)
-                      },
-                    },
-                  }),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-col",
-                { staticClass: "mb-md-0 mb-2", attrs: { cols: "12", md: "4" } },
-                [
-                  _c("label", [_vm._v("Nome")]),
-                  _vm._v(" "),
-                  _c("v-select", {
-                    staticClass: "w-100",
-                    attrs: {
-                      dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
-                      value: _vm.planFilter,
-                      options: _vm.planOptions,
-                      reduce: function (val) {
-                        return val.value
-                      },
-                    },
-                    on: {
-                      input: function (val) {
-                        return _vm.$emit("update:NameFilter", val)
-                      },
-                    },
-                  }),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-col",
-                { staticClass: "mb-md-0 mb-2", attrs: { cols: "12", md: "4" } },
-                [
-                  _c("label", [_vm._v("pesquisar")]),
-                  _vm._v(" "),
-                  _c("b-form-input", {
-                    staticClass: "d-inline-block mr-1",
-                    attrs: { placeholder: "Search..." },
                     model: {
-                      value: _vm.searchQuery,
+                      value: _vm.perPage,
                       callback: function ($$v) {
-                        _vm.searchQuery = $$v
+                        _vm.perPage = $$v
                       },
-                      expression: "searchQuery",
+                      expression: "perPage",
                     },
                   }),
+                  _vm._v(" "),
+                  _c(
+                    "b-button",
+                    {
+                      attrs: {
+                        variant: "outline-primary",
+                        to: { name: "New-Driver" },
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\r\n                    Novo motorista\r\n                "
+                      ),
+                    ]
+                  ),
                 ],
                 1
               ),
+              _vm._v(" "),
+              _c("b-col", { attrs: { cols: "12", md: "6" } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "d-flex align-items-center justify-content-end",
+                  },
+                  [
+                    _c("b-form-input", {
+                      staticClass: "d-inline-block mr-1",
+                      attrs: { placeholder: "Search..." },
+                      model: {
+                        value: _vm.searchQuery,
+                        callback: function ($$v) {
+                          _vm.searchQuery = $$v
+                        },
+                        expression: "searchQuery",
+                      },
+                    }),
+                  ],
+                  1
+                ),
+              ]),
             ],
             1
           ),
-          _vm._v(" "),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-table", {
+        ref: "refDriverTableList",
+        staticClass: "position-relative",
+        attrs: {
+          items: _vm.fetctDriver,
+          responsive: "",
+          fields: _vm.tableColumns,
+          "primary-key": "id",
+          "sort-by": _vm.sortBy,
+          "show-empty": "",
+          "empty-text": "Nenhum motorista registado",
+          "sort-desc": _vm.isSortDirDesc,
+        },
+        on: {
+          "update:sortBy": function ($event) {
+            _vm.sortBy = $event
+          },
+          "update:sort-by": function ($event) {
+            _vm.sortBy = $event
+          },
+          "update:sortDesc": function ($event) {
+            _vm.isSortDirDesc = $event
+          },
+          "update:sort-desc": function ($event) {
+            _vm.isSortDirDesc = $event
+          },
+        },
+        scopedSlots: _vm._u([
+          {
+            key: "cell(nome_completo)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.person.nome_completo) +
+                    " " +
+                    _vm._s(data.item.person.apelido) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(Endereço)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.person.endereco) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(cargo)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.person.cargo) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(NUIT)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.person.NUIT) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(Documento)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.doc_type) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(Nr_do_documento)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.nr_documento) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(Carta_de_Condução)",
+            fn: function (data) {
+              return [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(data.item.carta_conducao) +
+                    "\r\n        "
+                ),
+              ]
+            },
+          },
+          {
+            key: "cell(acções)",
+            fn: function (data) {
+              return [
+                _c(
+                  "b-dropdown",
+                  {
+                    attrs: {
+                      variant: "link",
+                      "no-caret": "",
+                      right: _vm.$store.state.appConfig.isRTL,
+                    },
+                    scopedSlots: _vm._u(
+                      [
+                        {
+                          key: "button-content",
+                          fn: function () {
+                            return [
+                              _c("feather-icon", {
+                                staticClass: "align-middle text-body",
+                                attrs: { icon: "MoreVerticalIcon", size: "16" },
+                              }),
+                            ]
+                          },
+                          proxy: true,
+                        },
+                      ],
+                      null,
+                      true
+                    ),
+                  },
+                  [
+                    _vm._v(" "),
+                    _c(
+                      "b-dropdown-item",
+                      {
+                        attrs: {
+                          to: {
+                            name: "driver-details",
+                            params: { id: data.item.id },
+                          },
+                        },
+                      },
+                      [
+                        _c("feather-icon", { attrs: { icon: "FileTextIcon" } }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "align-middle ml-50" }, [
+                          _vm._v("Detalhes"),
+                        ]),
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "b-dropdown-item",
+                      {
+                        attrs: {
+                          to: {
+                            name: "driver-edit",
+                            params: { id: data.item.id },
+                          },
+                        },
+                      },
+                      [
+                        _c("feather-icon", { attrs: { icon: "EditIcon" } }),
+                        _vm._v(" "),
+                        _c("span", { staticClass: "align-middle ml-50" }, [
+                          _vm._v("Editar"),
+                        ]),
+                      ],
+                      1
+                    ),
+                  ],
+                  1
+                ),
+              ]
+            },
+          },
+        ]),
+      }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mx-2 mb-2" },
+        [
           _c(
             "b-row",
             [
               _c(
                 "b-col",
-                { staticClass: "table-responsive mt-2", attrs: { cols: "12" } },
+                {
+                  staticClass:
+                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-start\r\n            ",
+                  attrs: { cols: "12", sm: "6" },
+                },
                 [
-                  _c("b-table", {
-                    ref: "refProjectListTable",
-                    staticClass: "position-relative",
-                    attrs: {
-                      items: _vm.fetchProjects,
-                      responsive: "",
-                      fields: _vm.tableColumns,
-                      "primary-key": "id",
-                      "sort-by": _vm.sortBy,
-                      "show-empty": "",
-                      "empty-text": "No matching records found",
-                      "sort-desc": _vm.isSortDirDesc,
-                    },
-                    on: {
-                      "update:sortBy": function ($event) {
-                        _vm.sortBy = $event
-                      },
-                      "update:sort-by": function ($event) {
-                        _vm.sortBy = $event
-                      },
-                      "update:sortDesc": function ($event) {
-                        _vm.isSortDirDesc = $event
-                      },
-                      "update:sort-desc": function ($event) {
-                        _vm.isSortDirDesc = $event
-                      },
-                    },
-                    scopedSlots: _vm._u([
-                      {
-                        key: "cell(acções)",
-                        fn: function (data) {
-                          return [
-                            _c(
-                              "b-dropdown",
-                              {
-                                attrs: {
-                                  variant: "link",
-                                  "no-caret": "",
-                                  right: _vm.$store.state.appConfig.isRTL,
-                                },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "button-content",
-                                      fn: function () {
-                                        return [
-                                          _c("feather-icon", {
-                                            staticClass:
-                                              "align-middle text-body",
-                                            attrs: {
-                                              icon: "MoreVerticalIcon",
-                                              size: "16",
-                                            },
-                                          }),
-                                        ]
-                                      },
-                                      proxy: true,
-                                    },
-                                  ],
-                                  null,
-                                  true
-                                ),
-                              },
-                              [
-                                _vm._v(" "),
-                                _c(
-                                  "b-dropdown-item",
-                                  {
-                                    attrs: {
-                                      to: {
-                                        name: "apps-users-view",
-                                        params: { id: data.item.id },
-                                      },
-                                    },
-                                  },
-                                  [
-                                    _c("feather-icon", {
-                                      attrs: { icon: "FileTextIcon" },
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "align-middle ml-50" },
-                                      [_vm._v("Detalhes")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "b-dropdown-item",
-                                  {
-                                    attrs: {
-                                      to: {
-                                        name: "apps-users-edit",
-                                        params: { id: data.item.id },
-                                      },
-                                    },
-                                  },
-                                  [
-                                    _c("feather-icon", {
-                                      attrs: { icon: "EditIcon" },
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "align-middle ml-50" },
-                                      [_vm._v("Editar")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "b-dropdown-item",
-                                  [
-                                    _c("feather-icon", {
-                                      attrs: { icon: "TrashIcon" },
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "align-middle ml-50" },
-                                      [_vm._v("Delete")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                              ],
-                              1
-                            ),
-                          ]
-                        },
-                      },
-                    ]),
-                  }),
-                ],
-                1
+                  _c("span", { staticClass: "text-muted" }, [
+                    _vm._v(
+                      "mostrar " +
+                        _vm._s(_vm.dataMeta.from) +
+                        " para " +
+                        _vm._s(_vm.dataMeta.to) +
+                        " de\r\n              " +
+                        _vm._s(_vm.dataMeta.of) +
+                        " entradas"
+                    ),
+                  ]),
+                ]
               ),
               _vm._v(" "),
               _c(
-                "div",
-                { staticClass: "mx-2 mb-2" },
+                "b-col",
+                {
+                  staticClass:
+                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-end\r\n            ",
+                  attrs: { cols: "12", sm: "6" },
+                },
                 [
-                  _c(
-                    "b-row",
-                    [
-                      _c(
-                        "b-col",
-                        {
-                          staticClass:
-                            "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
-                          attrs: { cols: "10", sm: "10" },
+                  _c("b-pagination", {
+                    staticClass: "mb-0 mt-1 mt-sm-0",
+                    attrs: {
+                      "total-rows": _vm.totalDrivers,
+                      "per-page": _vm.perPage,
+                      "first-number": "",
+                      "last-number": "",
+                      "prev-class": "prev-item",
+                      "next-class": "next-item",
+                    },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "prev-text",
+                        fn: function () {
+                          return [
+                            _c("feather-icon", {
+                              attrs: { icon: "ChevronLeftIcon", size: "18" },
+                            }),
+                          ]
                         },
-                        [
-                          _c("span", { staticClass: "text-muted" }, [
-                            _vm._v(
-                              "mostrar " +
-                                _vm._s(_vm.dataMeta.from) +
-                                " à " +
-                                _vm._s(_vm.dataMeta.to) +
-                                " de\n              " +
-                                _vm._s(_vm.dataMeta.of) +
-                                " entradas"
-                            ),
-                          ]),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        {
-                          staticClass:
-                            "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
-                          attrs: { cols: "2", sm: "2" },
+                        proxy: true,
+                      },
+                      {
+                        key: "next-text",
+                        fn: function () {
+                          return [
+                            _c("feather-icon", {
+                              attrs: { icon: "ChevronRightIcon", size: "18" },
+                            }),
+                          ]
                         },
-                        [
-                          _c("b-pagination", {
-                            staticClass: "mb-0 mt-1 mt-sm-0",
-                            attrs: {
-                              "total-rows": _vm.totalProjects,
-                              "per-page": _vm.perPage,
-                              "first-number": "",
-                              "last-number": "",
-                              "prev-class": "prev-item",
-                              "next-class": "next-item",
-                            },
-                            scopedSlots: _vm._u([
-                              {
-                                key: "prev-text",
-                                fn: function () {
-                                  return [
-                                    _c("feather-icon", {
-                                      attrs: {
-                                        icon: "ChevronLeftIcon",
-                                        size: "18",
-                                      },
-                                    }),
-                                  ]
-                                },
-                                proxy: true,
-                              },
-                              {
-                                key: "next-text",
-                                fn: function () {
-                                  return [
-                                    _c("feather-icon", {
-                                      attrs: {
-                                        icon: "ChevronRightIcon",
-                                        size: "18",
-                                      },
-                                    }),
-                                  ]
-                                },
-                                proxy: true,
-                              },
-                            ]),
-                            model: {
-                              value: _vm.currentPage,
-                              callback: function ($$v) {
-                                _vm.currentPage = $$v
-                              },
-                              expression: "currentPage",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
+                        proxy: true,
+                      },
+                    ]),
+                    model: {
+                      value: _vm.currentPage,
+                      callback: function ($$v) {
+                        _vm.currentPage = $$v
+                      },
+                      expression: "currentPage",
+                    },
+                  }),
                 ],
                 1
               ),
@@ -817,8 +808,6 @@ var render = function () {
         ],
         1
       ),
-      _vm._v(" "),
-      _c("b-modal"),
     ],
     1
   )
@@ -1129,142 +1118,18 @@ var useRouter = function useRouter() {
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/index.js":
-/*!*************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/index.js ***!
-  \*************************************************************************/
+/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue ***!
+  \*******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useprojectsList; });
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-
- // Notification
-
-
-
-
-function useprojectsList() {
-  // Use toast
-  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])();
-  var refProjectListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
-
-  var tableColumns = [{
-    key: 'name',
-    sortable: true
-  }, {
-    key: 'email',
-    sortable: true
-  }, {
-    key: 'telephone',
-    sortable: true
-  }, {
-    key: 'address_xtense',
-    sortable: true
-  }, {
-    key: 'contact_emg',
-    sortable: true
-  }, {
-    key: 'nrPassagers',
-    sortable: true
-  }, // { key: 'rota', sortable: true },
-  {
-    key: 'acções'
-  }];
-  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
-  var totalProjects = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
-  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
-  var perPageOptions = [10, 25, 50, 100];
-  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
-  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
-  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
-  var roleFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var planFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var statusFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount = refProjectListTable.value ? refProjectListTable.value.localItems.length : 0;
-    return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalProjects.value
-    };
-  });
-
-  var refetchData = function refetchData() {
-    refProjectListTable.value.refresh();
-  };
-
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, roleFilter, planFilter, statusFilter], function () {
-    refetchData();
-  });
-
-  var fetchProjects = function fetchProjects(ctx, callback) {
-    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('app-projects/fetchProjectos', {
-      q: searchQuery.value,
-      perPage: perPage.value,
-      page: currentPage.value,
-      sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value
-    }).then(function (response) {
-      var projects = response.data;
-      callback(projects.data);
-      totalProjects.value = projects.total;
-    })["catch"](function () {
-      toast({
-        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-        props: {
-          title: 'Error fetching projects list',
-          icon: 'AlertTriangleIcon',
-          variant: 'danger'
-        }
-      });
-    });
-  }; // *===============================================---*
-  // *--------- UI ---------------------------------------*
-  // *===============================================---*
-
-
-  return {
-    fetchProjects: fetchProjects,
-    tableColumns: tableColumns,
-    perPage: perPage,
-    currentPage: currentPage,
-    totalProjects: totalProjects,
-    dataMeta: dataMeta,
-    perPageOptions: perPageOptions,
-    searchQuery: searchQuery,
-    sortBy: sortBy,
-    isSortDirDesc: isSortDirDesc,
-    refProjectListTable: refProjectListTable,
-    refetchData: refetchData,
-    // Extra Filters
-    roleFilter: roleFilter,
-    planFilter: planFilter,
-    statusFilter: statusFilter
-  };
-}
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue":
-/*!**************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lista.vue?vue&type=template&id=162568f4& */ "./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4&");
-/* harmony import */ var _lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lista.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lista.vue?vue&type=template&id=55e2aadc& */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&");
+/* harmony import */ var _lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lista.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -1274,8 +1139,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1285,47 +1150,47 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue"
+component.options.__file = "resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc& ***!
+  \**************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=template&id=162568f4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/lista.vue?vue&type=template&id=162568f4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=template&id=55e2aadc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_162568f4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/storeProjectos.js":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/storeProjectos.js ***!
-  \**********************************************************************************/
+/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js ***!
+  \*********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1342,9 +1207,9 @@ __webpack_require__.r(__webpack_exports__);
   getters: {},
   mutations: {},
   actions: {
-    fetchProjectos: function fetchProjectos(ctx, queryParams) {
+    fetchDrivers: function fetchDrivers(ctx, queryParams) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/Projectos', {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/motorista', {
           params: queryParams
         }).then(function (response) {
           return resolve(response);
@@ -1353,21 +1218,19 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    fetchProjectoDetails: function fetchProjectoDetails(ctx, _ref) {
+    fetchDriver: function fetchDriver(ctx, _ref) {
       var id = _ref.id;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Projectos/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/motorista/".concat(id)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    addProjecto: function addProjecto(ctx, ProjectDatas) {
+    addDriver: function addDriver(ctx, driverData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/Projectos', {
-          projecto: ProjectDatas
-        }).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/motorista', driverData).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1376,6 +1239,129 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useMotoristasList; });
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+
+
+ // Notification
+
+
+
+function useMotoristasList() {
+  // Use toast
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
+  var refDriverTableList = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
+
+  var tableColumns = [{
+    key: 'nome_completo',
+    sortable: true
+  }, {
+    key: 'Endereço',
+    sortable: true
+  }, {
+    key: 'Cargo',
+    sortable: true
+  }, {
+    Key: 'NUIT',
+    sortable: true
+  }, {
+    key: 'Documento',
+    sortable: true
+  }, {
+    key: 'Nr_do_documento',
+    sortable: true
+  }, {
+    Key: 'Carta_de_Condução',
+    sortable: true
+  }, {
+    key: 'acções'
+  }];
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var totalDrivers = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var perPageOptions = [10, 25, 50, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
+  var departmentFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refDriverTableList.value ? refDriverTableList.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalDrivers.value
+    };
+  });
+
+  var refetchData = function refetchData() {
+    refDriverTableList.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, departmentFilter], function () {
+    refetchData();
+  });
+
+  var fetctDriver = function fetctDriver(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch('Picket/fetchDrivers', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value,
+      departamento: departmentFilter.value
+    }).then(function (response) {
+      var motoristas = response.data;
+      callback(motoristas.data);
+      totalDrivers.value = motoristas.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+        props: {
+          title: 'Erro na listagem de motoristas',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  }; // *===============================================---*
+  // *--------- UI ---------------------------------------*
+  // *===============================================---*
+
+
+  return {
+    fetctDriver: fetctDriver,
+    tableColumns: tableColumns,
+    perPage: perPage,
+    currentPage: currentPage,
+    totalDrivers: totalDrivers,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    refDriverTableList: refDriverTableList,
+    refetchData: refetchData,
+    // Extra Filters
+    departmentFilter: departmentFilter
+  };
+}
 
 /***/ })
 

@@ -106,9 +106,13 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::post('AutorizarSaida', [App\Http\Controllers\API\Back\CheckListOutController::class, 'InstantCheckout']);
     Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
         // Relatorio Geral de Abastecimentos
-
-
+        Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
+        
+        Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
+        Route::get('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
 });
+
+
 
 Route::get('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
 

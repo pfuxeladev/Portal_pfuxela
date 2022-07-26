@@ -78,6 +78,11 @@ export default
     component: () => import('@/views/Gestao-abastecimentos/projectos/lista.vue'),
   },
   {
+    path: '/Supply/:name/Report',
+    name: 'Project Report',
+    component: () => import('@/views/Gestao-abastecimentos/projectos/detalhes.vue'),
+  },
+  {
     path: '/Supply/Routes-Supply',
     name: 'Routes Supply',
     component: () => import('@/views/Gestao-abastecimentos/rotas/rotas.vue'),

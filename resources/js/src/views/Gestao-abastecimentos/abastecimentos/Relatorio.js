@@ -20,6 +20,7 @@ export default function useRelatorioList() {
   const RelatorioGeral = ref(null)
   const totalHistoricos = ref(null)
   const dateOptions = ref(null)
+  const dateReport = ref(null)
 
   const dataHistory = computed(() => {
     const localItemsCount = RelatorioGeral.value ? RelatorioGeral.value.localItems.length : 0
@@ -33,7 +34,7 @@ export default function useRelatorioList() {
   const refetchHistory = () => {
     RelatorioGeral.value.refresh()
   }
-  watch([currentPage, perPage, searchDatas, intervalo], () => {
+  watch([currentPage, perPage, searchDatas, intervalo, dateReport], () => {
     refetchHistory()
   })
 
@@ -45,6 +46,7 @@ export default function useRelatorioList() {
       sortBy: sortBy.value,
       sortDesc: isSortDirDesc.value,
       intervalo: intervalo.value,
+      dateReport: dateReport.value,
     }).then(response => {
       const Historico = response.data
       callback(Historico.data)
@@ -72,6 +74,7 @@ export default function useRelatorioList() {
     dataHistory,
     searchDatas,
     intervalo,
+    dateReport,
     perPage,
     currentPage,
     sortBy,
