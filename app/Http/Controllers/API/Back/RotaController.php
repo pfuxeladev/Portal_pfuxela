@@ -18,12 +18,12 @@ class RotaController extends Controller
     public function index()
     {
 
-        return $this->rota->with(['projecto', 'horario'])->orderBy('nome_rota', 'asc')->paginate(15);
+        return $this->rota->with(['projecto', 'horario'])->where('projecto_id', 1)->orderBy('nome_rota', 'asc')->paginate(15);
     }
 
     function todasRotas()
     {
-        return $this->rota->with('projecto')->get();
+        return $this->rota->with('projecto')->where('projecto_id', 1)->get();
     }
 
     function todosProjectos(){
@@ -44,12 +44,16 @@ class RotaController extends Controller
             'tipoRota'=>'required',
             'projecto_id'=>'required|integer'
         ], ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]);
+        if(Rota::where('nome_rota', $request->nome_rota)->first()){
+            return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
+        }
 
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
         $rota->distancia_km = $request->distancia_km;
         $rota->tipoRota = $request->tipoRota;
         $rota->projecto_id  = $request->projecto_id ;
+        $rota->is_active = true;
         $rota->save();
 
         foreach($request->horario as $horario){

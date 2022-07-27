@@ -136,6 +136,9 @@ class OrdemController extends Controller
             } else {
                 $ordem->codigo_ordem = $counter;
             }
+            if(Ordem::where('estado', 'Aberta')->where('createdBy', auth()->user()->id)->first())
+            return response()->json(['error'=> 'Erro! Ja existe uma ordem aberta no sistema nao pode abrir mais uma novamente'], 200);
+
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bomba_id;
             $ordem->estado = 'Aberta';
@@ -282,10 +285,9 @@ class OrdemController extends Controller
                         }
                     }
 
-                    ordem_viatura::where('ordem_id', $ordem->id)->update(['qtd_abastecida' => $v['qtd_abastecida'], 'preco_cunsumo' => $preco]);
+                    ordem_viatura::where('ordem_id','=', $ordem->id)->update(['qtd_abastecida' => $v['qtd_abastecida'], 'preco_cunsumo' => $preco]);
 
-                    $viatura1->qtd_disponivel = $v['qtd_abastecida'];
-                    $viatura1->update();
+                    DB::table('viaturas')->where('id', $v['viatura_id'])->update(['qtd_disponivel'=>$v['qtd_abastecida']]);
                 }
             }
             return response()->json(['success' => 'actualizado com sucesso'], 200);

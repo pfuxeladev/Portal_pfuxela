@@ -9,73 +9,17 @@
 
         <b-card-header>
             <h3>
-                Matricula: {{entrada.viatura.matricula}}
+                Matricula: {{entrada.check_list_out.viatura.matricula}}
             </h3>
         </b-card-header>
       <div class="mb-2">
          <b-row>
             <b-col cols="6">
                 <b-list-group>
-                    <b-list-group-item>
-                        Carta de condu&ccedil;&atilde;o do motorista: {{entrada.motorista.carta_conducao}}
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Livrete: <span v-if="entrada.livrete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>Falta</span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Colete do motorista: <span v-if="entrada.colete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else> <b-badge variant="danger">Falta</b-badge></span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Lista de presen&ccedil;a: <span v-if="entrada.lista_presenca==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
+
                 </b-list-group>
                 </b-col>
                 <b-col cols="6">
-                <b-list-group>
-                    <b-list-group-item>
-                        Seguros: <span v-if="entrada.seguros_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Document de Inspe&ccedil;&atilde;o: <span v-if="entrada.inspencao_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Taxa de radio difus&atilde;o: <span v-if="entrada.taxaradio_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Licen&ccedil;a da viatura: <span v-if="entrada.licenca_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                </b-list-group>
                 </b-col>
           </b-row>
         <b-card-body>
@@ -98,73 +42,6 @@
                     <th>Tri&acirc;ngulo</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span v-if="entrada.CintoSeguracaState == 1">Ok</span>
-                        <span v-if="entrada.CintoSeguracaState == 0">No</span>
-                    </td>
-                    <td>
-                        {{entrada.ACState}}
-                    </td>
-                    <td>
-                        <span v-if="entrada.kit_reboque_saida == 1">Ok</span>
-                        <span v-if="entrada.kit_reboque_saida == 0">No</span>
-                    </td>
-                    <td>
-                        {{entrada.SistemaABS_State}}
-                    </td>
-                    <td>
-                        Ok
-                    </td>
-                    <td>
-                       <span v-if="entrada.kit_1_socorros_saida == 1">Ok</span>
-                       <span v-if="entrada.kit_1_socorros_saida == 0">Falta</span>
-                    </td>
-                    <td>
-                        <span v-if="entrada.extintor_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                       <span v-if="entrada.triangulo_saida == 1">Ok</span>
-                       <span v-else>Falta</span>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Estado mec&acirc;nico
-                    </th>
-                </tr>
-                <tr class="text-uppercase" style="font-size: 0.857rem;">
-                    <th>Nível Vaso Expansor</th>
-                    <th>Nível Liquido Vidros</th>
-                    <th>Nível Óleo de Motor</th>
-                    <th>Nível &Oacute;leo de Direção</th>
-                    <th>Nível Óleo Travões</th>
-                    <th>Macaco</th>
-                    <th>Pneu sobressalente</th>
-                    <th>Chave de roda</th>
-                </tr>
-                <tr>
-                    <td>{{entrada.vasoEspansorState}}</td>
-                    <td>{{entrada.LiquidoVidroState}}</td>
-                    <td> {{entrada.OleoMotorState}} </td>
-                    <td>{{entrada.OleoDirecaoState}}</td>
-                    <td>{{entrada.OleoTravoesState}}</td>
-                    <td>
-                        <span v-if="entrada.macaco_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="entrada.pneu_sobr_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="entrada.chave_roda_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                </tr>
-            </tbody>
           </table>
         </b-card-body>
       </div>

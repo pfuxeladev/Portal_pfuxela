@@ -103,7 +103,7 @@ class AbastecimentoController extends Controller
 
             $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->where('ordem_viaturas.created_at', '>', $datetime)->where('viaturas.id', $request->viatura_id)->first();
+        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordem_viaturas.created_at', '>', $datetime)->where('ordems.estado', '!=', 'Cancelada')->where('viaturas.id', $request->viatura_id)->first();
         // return $lastOrderViatura;
         if (!empty($lastOrderViatura)) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
@@ -128,11 +128,11 @@ class AbastecimentoController extends Controller
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
         foreach ($request->rota_id as $key => $rt) {
-            // $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            // ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.created_at','<', Carbon::now()->subHours(3)->toDateTimeString())->orWhere('viaturas.locate', 'IN')->first();
-            // if (!empty($ordem_rota)) {
-            //     return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
-            // }
+            $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->whereRaw('ordem_viaturas.updated_at = DATE_ADD(NOW(), INTERVAL -8 HOUR')->orWhere('viaturas.locate', 'IN')->first();
+            if (!empty($ordem_rota)) {
+                return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
+            }
         }
 
 
@@ -155,7 +155,7 @@ class AbastecimentoController extends Controller
             foreach ($rotas as $key => $dist) {
                 $distanciaTotal += $dist->distancia_km;
             }
-            $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media) + 15;
+            $qtdNecessaria = (($distanciaTotal * $viatura->capacidade_media) + 15);
 
             if ($request->qtd_abastecer > $qtdNecessaria) {
 

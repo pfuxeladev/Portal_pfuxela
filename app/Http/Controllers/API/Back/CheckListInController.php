@@ -228,9 +228,9 @@ class CheckListInController extends Controller
        return response()->json(['message'=>'Viatura deu entrada com sucesso'], 200);
 
    }
-    public function show(CheckListIn $checkListIn)
+    public function show($id)
     {
-        //
+        return $this->checkListIn->with(['CheckListOut.viatura', 'checklist'])->findOrFail($id);
     }
 
     /**
