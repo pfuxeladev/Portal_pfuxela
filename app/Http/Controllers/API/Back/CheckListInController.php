@@ -45,7 +45,7 @@ class CheckListInController extends Controller
             'hr_fim'=>'required',
         ]);
         // try {
-            $checkList_out = CheckListOut::where('viatura_id', $request->viatura_id)->first();
+            $checkList_out = CheckListOut::where('id', $request->viatura_id)->first();
 
             // return $checkList_out;
 
@@ -174,7 +174,7 @@ class CheckListInController extends Controller
         'hr_fim'=>'required',
     ]);
     // try {
-        $checkList_out = CheckListOut::where('id', $request->id)->first();
+        $checkList_out = CheckListOut::where('id', $request->viatura_id)->first();
 
         // return $checkList_out;
 
@@ -200,7 +200,7 @@ class CheckListInController extends Controller
         $checkListIn->save();
 
         if($request->viatura_id !=null){
-            $viatura = Viatura::where('id', $request->viatura_id)->first();
+            $viatura = Viatura::where('id', $checkList_out->viatura_id)->first();
              $viatura->locate = 'IN';
              $viatura->update();
         }

@@ -40,7 +40,7 @@ class ordem_viatura extends Model
 
     public function roles()
     {
-        return this->belongsToMany('App\Role', 'role_user_table', 'user_id', 'role_id');
+        return $this->belongsToMany('App\Role', 'role_user_table', 'user_id', 'role_id');
     }
 
 }

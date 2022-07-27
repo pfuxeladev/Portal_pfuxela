@@ -31,15 +31,19 @@ class CheckListOutController extends Controller
             $viatura = Viatura::where('viaturas.locate', '=', 'OUT')->where('matricula', 'like', '%' . $request->q . '%')->orWhere('kilometragem', 'like', '%' . $request->q . '%' )->first();
             return $this->checkListOut->with(['viatura', 'motorista.person'])
             ->join('motoristas', 'checklist_out.motorista_id', '=', 'motoristas.id')->join('people', 'motoristas.person_id', '=', 'people.id')
-            ->whereDate('checklist_out.created_at', '>=', Carbon::now()->subDay())
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
             ->where('viatura_id', $viatura->id)
             ->orWhere('checklist_out.created_at', 'like', '%' . $request->q . '%' )
             ->orWhere('people.nome_completo', 'like', '%' . $request->q . '%' )
             ->orderBy('checklist_out.created_at', 'desc')->paginate(15);
         }else if($request->perPage){
-            return $this->checkListOut->with(['viatura', 'motorista.person'])->whereDate('checklist_out.created_at', '>=', Carbon::now()->subDay())->orderBy('checklist_out.created_at', 'desc')->paginate($request->perPage);
+            return $this->checkListOut->with(['viatura', 'motorista.person'])
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
+            ->orderBy('checklist_out.created_at', 'desc')->paginate($request->perPage);
         }else{
-            return $this->checkListOut->with(['viatura', 'motorista.person'])->whereDate('checklist_out.created_at', '>=', Carbon::now()->subDay())->orderBy('checklist_out.created_at', 'desc')->paginate(15);
+            return $this->checkListOut->with(['viatura', 'motorista.person'])
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
+            ->orderBy('checklist_out.created_at', 'desc')->paginate(15);
         }
 
     }
