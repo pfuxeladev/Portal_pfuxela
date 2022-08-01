@@ -54,8 +54,14 @@
                     <b-form-input v-model="form.km_fim" type="number" />
                   </b-form-group>
                 </b-col>
+
               </b-row>
 
+            </b-col>
+             <b-col cols="12" md="3" lg="6" xl="6">
+              <b-form-group label="qtd actual de combustivel">
+                <b-form-input v-model="form.litros_tanque" type="text" />
+              </b-form-group>
             </b-col>
             <b-col cols="12" md="3" lg="6" xl="6">
               <b-row>
@@ -75,6 +81,21 @@
             <b-col cols="12" md="6" lg="8" xl="10">
               <table class="table table-bordered">
                 <tbody>
+                    <tr v-for="(chk, i) in form.checklist_var" :key="'B' + i">
+                    <td>
+                      <input type="hidden" v-model="chk.id" />
+                      {{ chk.checklist_name }}
+                    </td>
+                    <td>
+                      <b-form-group>
+                        <b-form-radio-group
+                          v-model="chk.opcao"
+                          :options="options"
+                          required
+                        ></b-form-radio-group>
+                      </b-form-group>
+                    </td>
+                  </tr>
                   <tr>
                     <td>Houve algum incidente</td>
                     <td>
@@ -202,10 +223,6 @@ export default {
         text: 'Parcial',
         value: 'Parcial',
       },
-      {
-        text: 'Em Falta',
-        value: 'Em Falta',
-      },
       ],
     }
   },
@@ -279,6 +296,7 @@ export default {
             relatorio_geral: '',
             is_incidente: false,
             anexos: null,
+            litros_tanque: '',
             checklist_var: {
               id: null, checklist_name: '', opcao: false,
             },
@@ -306,7 +324,8 @@ export default {
     }
 
     function OnSubmit() {
-    //   form.value.anexos = formData.append('anexos', listFiles)
+      const formData = new FormData()
+      form.value.anexos = formData.append('anexos', listFiles)
       store
         .dispatch('Picket/addCheckListIn', form.value)
         .then(response => {

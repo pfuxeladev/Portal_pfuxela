@@ -82,11 +82,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 
 
 
@@ -274,61 +269,96 @@ var render = function () {
                 [
                   _c("h3", [_vm._v("Estado da viatura")]),
                   _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
                   _c(
                     "b-row",
-                    _vm._l(ver.checklists, function (chk, i) {
+                    _vm._l(ver.categoria, function (chk, i) {
                       return _c(
                         "b-col",
-                        { key: chk.id, attrs: { cols: "3" } },
+                        {
+                          key: "a" + i,
+                          staticClass: "mb-2",
+                          attrs: { cols: "3" },
+                        },
                         [
-                          _c("table", { staticClass: "mb-2" }, [
-                            _c("tr", [
-                              _c("td", [_vm._v(_vm._s(1 + i))]),
-                              _vm._v(" "),
-                              _c("td", [
-                                _c("b", [_vm._v(_vm._s(chk.checklist_name))]),
-                              ]),
-                              _vm._v(" "),
-                              _c("td", { staticClass: "text-right" }, [
-                                chk.opcao === "No"
-                                  ? _c(
-                                      "span",
-                                      [
-                                        _c(
-                                          "b-badge",
-                                          { attrs: { variant: "danger" } },
-                                          [_vm._v(_vm._s(chk.opcao))]
-                                        ),
-                                      ],
-                                      1
-                                    )
-                                  : chk.opcao === "Parci"
-                                  ? _c(
-                                      "span",
-                                      [
-                                        _c(
-                                          "b-badge",
-                                          { attrs: { variant: "warning" } },
-                                          [_vm._v("Parcial")]
-                                        ),
-                                      ],
-                                      1
-                                    )
-                                  : _c(
-                                      "span",
-                                      [
-                                        _c(
-                                          "b-badge",
-                                          { attrs: { variant: "success" } },
-                                          [_vm._v(_vm._s(chk.opcao))]
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                              ]),
-                            ]),
+                          _c("h3", { staticClass: "card-title" }, [
+                            _vm._v(_vm._s(chk.nome_categoria)),
                           ]),
-                        ]
+                          _vm._v(" "),
+                          _vm._l(ver.checklists, function (checklst, k) {
+                            return _c("b-row", { key: k }, [
+                              checklst.categoria === chk.id
+                                ? _c("span", { staticClass: "ml-2" }, [
+                                    _c(
+                                      "table",
+                                      { staticClass: "table table-responsive" },
+                                      [
+                                        _c("tr", [
+                                          _c("td", [
+                                            _vm._v(
+                                              _vm._s(checklst.checklist_name)
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            { staticClass: "text-right" },
+                                            [
+                                              checklst.opcao === "Ok"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-check",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "green",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "No"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-remove",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "red",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "Parcial"
+                                                ? _c(
+                                                    "b-badge",
+                                                    {
+                                                      attrs: {
+                                                        variant: "warning",
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fa fa-exclamation-triangle",
+                                                        staticStyle: {
+                                                          "font-size": "48px",
+                                                          color: "orange",
+                                                        },
+                                                      }),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ],
+                                            1
+                                          ),
+                                        ]),
+                                      ]
+                                    ),
+                                  ])
+                                : _vm._e(),
+                            ])
+                          }),
+                        ],
+                        2
                       )
                     }),
                     1

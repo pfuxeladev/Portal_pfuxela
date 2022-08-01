@@ -31,7 +31,7 @@
                 {{ data.item.user.name }}
             </template>
             <template #cell(acções)="data">
-            <b-dropdown v-if="data.item.viatura.locate !== 'IN'" variant="link" no-caret :right="$store.state.appConfig.isRTL">
+            <b-dropdown v-if="data.item.viatura.locate !== 'OUT'" variant="link" no-caret :right="$store.state.appConfig.isRTL">
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>

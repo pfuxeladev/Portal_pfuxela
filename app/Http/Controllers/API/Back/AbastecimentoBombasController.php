@@ -11,9 +11,10 @@ use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
-use PDF;
-use Mail;
+use Barryvdh\DomPDF\PDF;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Carbon;
 class AbastecimentoBombasController extends Controller
 {
    private $abastecimento_bomba;
@@ -49,6 +50,14 @@ class AbastecimentoBombasController extends Controller
         ]);
         // $image = File::get(url('public/images/pfuxelalogo.png'));
         $ordem = new Ordem();
+
+        $bombas = Bombas::where('id', $request->fornecedor_id)->first();
+
+        $bombas_verify = abastecimento_bomba::whereDate('created_at', Carbon::today())->where('fornecedor', $bombas->nome_bombas)->where('qtd_abastecida',$request->qtd_abastecida)->first();
+        if($bombas_verify){
+            return response()->json(['error'=>'Nao pode abastecer duas vezes a bomba no mesmo dia']);
+        }
+
         try {
             $counter = 10000;
             $uuid = Str::uuid()->toString();
@@ -67,7 +76,7 @@ class AbastecimentoBombasController extends Controller
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 
-        $bombas = Bombas::where('id', $request->fornecedor_id)->first();
+
 
         $emails = responsavelBombas::where('bombas_id', $bombas->id)->first();
 
@@ -99,8 +108,7 @@ class AbastecimentoBombasController extends Controller
          $path = Storage::put('public/pdf/Abastecimento_bomba.pdf', $pdf->output());
 
         Mail::send('orderMail.ExtraOrder', compact('abastecimento_bomba'), function($message)use($data, $pdf) {
-            $message->from(env('MAIL_USERNAME'));
-            $message->to($data["email"], $data['email'])
+            $message->to($data["email"])
                     ->subject($data["title"])
                     ->attachData($pdf->output(), "ordem.pdf");
         });
@@ -114,8 +122,8 @@ class AbastecimentoBombasController extends Controller
     public function show($id)
     {
         $abastecimento_bomba = $this->abastecimento_bomba->with(['bombas', 'user', 'ordem'])->findOrFail($id);
-        $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'Verdana']);
-        return $pdf->download('ordem.pdf');
+        // $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'Verdana']);
+        // return $pdf->download('ordem.pdf');
         // return response()->json($abastecimento_bomba, 200);
         return view('orderMail.ExtraOrder', compact('abastecimento_bomba'));
     }

@@ -37,5 +37,4 @@ class ordem_viatura extends Model
         return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }
 
-
 }

@@ -22,9 +22,18 @@ class ViaturaController extends Controller
     {
         $this->Viatura = $viatura;
     }
-    public function index()
+    public function index(Request $request)
     {
-        return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
+        if($request->q){
+            return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->where('matricula', 'like', '%' . $request->q . '%')->orWhere('kilometragem', 'like', '%' . $request->q . '%' )->orWhere('descricao', 'like', '%' . $request->q . '%' )->orderBy('id', 'desc')->paginate(15);
+         }else if($request->perPage && $request->q){
+            return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->where('matricula', 'like', '%' . $request->q . '%')->orWhere('kilometragem', 'like', '%' . $request->q . '%' )->orWhere('descricao', 'like', '%' . $request->q . '%' )->orderBy('id', 'desc')->paginate($request->perPage);
+         }else if($request->perPage){
+            return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate($request->perPage);
+        }else{
+            return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
+         }
+
     }
 
 

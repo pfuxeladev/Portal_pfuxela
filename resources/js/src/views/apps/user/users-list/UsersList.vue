@@ -139,7 +139,7 @@
             :right="$store.state.appConfig.isRTL"
           >
 
-            <template #button-content>
+            <template #button-content v-can="'Edit All Users'">
               <feather-icon
                 icon="MoreVerticalIcon"
                 size="16"

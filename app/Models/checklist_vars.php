@@ -20,4 +20,8 @@ class checklist_vars extends Model
     public function checklist_role(){
         return $this->hasMany(checkListRole::class);
     }
+
+    public function categoria(){
+        return $this->belongsTo(Categoria::class, 'categoria', 'id');
+    }
 }

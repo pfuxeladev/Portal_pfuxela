@@ -20,8 +20,8 @@ use App\Models\Rota;
 use App\Models\rotaViatura;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-use PDF;
-use Mail;
+use Barryvdh\DomPDF\Facade\PDF;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Carbon;
@@ -103,8 +103,7 @@ class AbastecimentoController extends Controller
 
             $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordem_viaturas.created_at', '>', $datetime)->where('ordems.estado', '!=', 'Cancelada')->where('viaturas.id', $request->viatura_id)->first();
-        // return $lastOrderViatura;
+         $lastOrderViatura = ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordem_viaturas.created_at', '>', $datetime)->where('ordems.estado', '!=', 'Cancelada')->where('viaturas.id', $request->viatura_id)->first();
         if (!empty($lastOrderViatura)) {
             return response()->json(['erro' => 'Erro! Essa viatura ja foi abastecida contacte o administrador ou faça abastecimento extraordinario'], 421);
         }
@@ -129,12 +128,11 @@ class AbastecimentoController extends Controller
         }
         foreach ($request->rota_id as $key => $rt) {
             $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->whereRaw('ordem_viaturas.updated_at = DATE_ADD(NOW(), INTERVAL -8 HOUR')->orWhere('viaturas.locate', 'IN')->first();
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.created_at','>=', Carbon::now()->subHours(5))->orWhere('viaturas.locate', 'IN')->first();
             if (!empty($ordem_rota)) {
                 return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
             }
         }
-
 
         $ordemViatura = ordem_viatura::create([
             'ordem_id' => $ordem->id,
@@ -147,25 +145,26 @@ class AbastecimentoController extends Controller
 
         //abastecer por rota
         $distanciaTotal = 0;
+        $distanciaTotal = Rota::whereIn('id', $request->rota_id)->sum('distancia_km');
+
+        $qtdNecessaria = $distanciaTotal * $viatura->capacidade_media;
+
+       if ($request->qtd_abastecer > $qtdNecessaria) {
+
+           $ordemViatura->delete();
+
+           return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de ' . $qtdNecessaria], 421);
+       }
+       if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) && $viatura->capacidade_tanque < $qtdNecessaria) {
+           return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
+       } else {
+           $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd_abastecer);
+
+           $viatura->qtd_disponivel = $qtdAbastecer;
+           $viatura->update();
+       }
 
         foreach ($request->rota_id as $key => $rt) {
-            $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->get();
-            $rotas = Rota::where('id', $rt)->get();
-
-            foreach ($rotas as $key => $dist) {
-                $distanciaTotal += $dist->distancia_km;
-            }
-            $qtdNecessaria = (($distanciaTotal * $viatura->capacidade_media) + 15);
-
-            if ($request->qtd_abastecer > $qtdNecessaria) {
-
-                $ordemViatura->delete();
-
-                // return $qtdNecessaria;
-
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de ' . $qtdNecessaria], 421);
-            }
-
             $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt,
                 'qtd' => $request->qtd_abastecer,
@@ -174,14 +173,6 @@ class AbastecimentoController extends Controller
             ]);
         }
 
-        if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) && $viatura->capacidade_tanque < $qtdNecessaria) {
-            return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
-        } else {
-            $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd_abastecer);
-
-            $viatura->qtd_disponivel = $qtdAbastecer;
-            $viatura->update();
-        }
 
         $ordem->estado = 'Aberta';
         $ordem->update();

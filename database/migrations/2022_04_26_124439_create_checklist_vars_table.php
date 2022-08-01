@@ -16,7 +16,7 @@ class CreateChecklistVarsTable extends Migration
         Schema::create('checklist_vars', function (Blueprint $table) {
             $table->id();
             $table->string('checklist_name')->nullable();
-            $table->string('categoria')->nullable();
+            $table->unsignedBigInteger('categoria')->nullable();
             $table->unsignedBigInteger('createdBy');
             $table->foreign('createdBy')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

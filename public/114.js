@@ -71,6 +71,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 
 
 
@@ -161,10 +166,10 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    [
-      _c(
+    _vm._l(_vm.entrada, function (ent, index) {
+      return _c(
         "b-card",
-        { attrs: { "no-body": "" } },
+        { key: index, attrs: { "no-body": "" } },
         [
           _c(
             "b-row",
@@ -192,7 +197,7 @@ var render = function () {
             _c("h3", [
               _vm._v(
                 "\n              Matricula: " +
-                  _vm._s(_vm.entrada.check_list_out.viatura.matricula) +
+                  _vm._s(ent.checklistIn.check_list_out.viatura.matricula) +
                   "\n          "
               ),
             ]),
@@ -208,63 +213,144 @@ var render = function () {
                   _c(
                     "b-col",
                     { attrs: { cols: "6" } },
-                    [_c("b-list-group")],
+                    [
+                      _c(
+                        "b-list-group",
+                        [
+                          _c("b-list-group-item", [
+                            _vm._v(
+                              "\n                      Kilometragem: " +
+                                _vm._s(ent.checklistIn.km_fim) +
+                                "\n                  "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-list-group-item", [
+                            _vm._v(
+                              "\n                      Hora de partida: " +
+                                _vm._s(
+                                  ent.checklistIn.check_list_out.hr_inicio
+                                ) +
+                                "\n                  "
+                            ),
+                          ]),
+                          _vm._v(" "),
+                          _c("b-list-group-item", [
+                            _vm._v(
+                              "\n                      Hora de entrada: " +
+                                _vm._s(ent.checklistIn.hr_fim) +
+                                "\n                  "
+                            ),
+                          ]),
+                        ],
+                        1
+                      ),
+                    ],
                     1
                   ),
-                  _vm._v(" "),
-                  _c("b-col", { attrs: { cols: "6" } }),
                 ],
                 1
               ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-card-body",
+            [
+              _c("h3", [_vm._v("Estado da viatura")]),
               _vm._v(" "),
-              _c("b-card-body", [
-                _c("h3", [_vm._v("Estado da viatura")]),
-                _vm._v(" "),
-                _c("table", { staticClass: "table table-striped" }, [
-                  _c("thead", [
-                    _c("tr", [
-                      _c(
-                        "th",
-                        {
-                          staticClass:
-                            "bg-dark text-center text-uppercase text-white",
-                          attrs: { colspan: "8" },
-                        },
-                        [
-                          _vm._v(
-                            "\n                      Conforto e Segurança\n                  "
-                          ),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("th", [_vm._v("Cinto de segurança")]),
+              _c("hr"),
+              _vm._v(" "),
+              _c(
+                "b-row",
+                _vm._l(ent.categoria, function (chk, i) {
+                  return _c(
+                    "b-col",
+                    { key: "a" + i, staticClass: "mb-2", attrs: { cols: "3" } },
+                    [
+                      _c("h3", { staticClass: "card-title" }, [
+                        _vm._v(_vm._s(chk.nome_categoria)),
+                      ]),
                       _vm._v(" "),
-                      _c("th", [_vm._v("AC")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Kit de reboque")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Sistema ABS")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Retrovisores")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Kit de primeiros Socorros")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Extintor")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Triângulo")]),
-                    ]),
-                  ]),
-                ]),
-              ]),
+                      _vm._l(ent.checklists, function (checklst, k) {
+                        return _c("b-row", { key: k }, [
+                          checklst.categoria === chk.id
+                            ? _c("span", { staticClass: "ml-2" }, [
+                                _c(
+                                  "table",
+                                  { staticClass: "table table-responsive" },
+                                  [
+                                    _c("tr", [
+                                      _c("td", [
+                                        _vm._v(_vm._s(checklst.checklist_name)),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { staticClass: "text-right" },
+                                        [
+                                          checklst.opcao === "Ok"
+                                            ? _c("span", [
+                                                _c("i", {
+                                                  staticClass: "fa fa-check",
+                                                  staticStyle: {
+                                                    "font-size": "24px",
+                                                    color: "green",
+                                                  },
+                                                }),
+                                              ])
+                                            : checklst.opcao === "No"
+                                            ? _c("span", [
+                                                _c("i", {
+                                                  staticClass: "fa fa-remove",
+                                                  staticStyle: {
+                                                    "font-size": "24px",
+                                                    color: "red",
+                                                  },
+                                                }),
+                                              ])
+                                            : checklst.opcao === "Parcial"
+                                            ? _c(
+                                                "b-badge",
+                                                {
+                                                  attrs: { variant: "warning" },
+                                                },
+                                                [
+                                                  _c("i", {
+                                                    staticClass:
+                                                      "fa fa-exclamation-triangle",
+                                                    staticStyle: {
+                                                      "font-size": "48px",
+                                                      color: "orange",
+                                                    },
+                                                  }),
+                                                ]
+                                              )
+                                            : _vm._e(),
+                                        ],
+                                        1
+                                      ),
+                                    ]),
+                                  ]
+                                ),
+                              ])
+                            : _vm._e(),
+                        ])
+                      }),
+                    ],
+                    2
+                  )
+                }),
+                1
+              ),
             ],
             1
           ),
         ],
         1
-      ),
-    ],
+      )
+    }),
     1
   )
 }

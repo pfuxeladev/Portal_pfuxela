@@ -36,27 +36,22 @@
         </b-row>
         <b-card-body>
           <h3>Estado da viatura</h3>
+          <hr>
           <b-row>
-            <b-col cols="3" v-for="(chk, i) in ver.checklists" :key="chk.id">
-              <table class="mb-2">
-                <tr>
-                  <td>{{ 1 + i }}</td>
-                  <td>
-                    <b>{{ chk.checklist_name }}</b>
-                  </td>
-                  <td class="text-right">
-                    <span v-if="chk.opcao === 'No'">
-                      <b-badge variant="danger">{{ chk.opcao }}</b-badge></span
-                    >
-                    <span v-else-if="chk.opcao === 'Parci'">
-                      <b-badge variant="warning">Parcial</b-badge>
+            <b-col cols="3" class="mb-2" v-for="(chk, i) in ver.categoria" :key="'a'+i">
+                 <h3 class="card-title">{{chk.nome_categoria}}</h3>
+                <b-row v-for="(checklst, k) in ver.checklists" :key="k">
+                    <span class="ml-2" v-if="checklst.categoria === chk.id">
+                    <table class="table table-responsive">
+                        <tr>
+                            <td>{{checklst.checklist_name}}</td>
+                            <td class="text-right"> <span v-if="checklst.opcao === 'Ok'"><i class="fa fa-check" style="font-size:24px;color:green"></i></span>
+                        <span v-else-if="checklst.opcao === 'No'"><i class="fa fa-remove" style="font-size:24px;color:red"></i></span>
+                        <b-badge v-else-if="checklst.opcao === 'Parcial'" variant="warning"><i class="fa fa-exclamation-triangle" style="font-size:48px;color:orange"></i></b-badge></td>
+                        </tr>
+                    </table>
                     </span>
-                    <span v-else>
-                      <b-badge variant="success">{{ chk.opcao }}</b-badge></span
-                    >
-                  </td>
-                </tr>
-              </table>
+                </b-row>
             </b-col>
           </b-row>
         </b-card-body>

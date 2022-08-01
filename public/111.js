@@ -153,6 +153,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -179,6 +235,7 @@ __webpack_require__.r(__webpack_exports__);
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
     BFormTimepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTimepicker"],
     BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"],
+    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckboxGroup"],
     BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BModal"]
   },
   data: function data() {
@@ -188,24 +245,24 @@ __webpack_require__.r(__webpack_exports__);
       viatura: [],
       value: null,
       options: [{
-        text: 'Ok',
-        value: 'Ok'
+        text: "Ok",
+        value: "Ok"
       }, {
-        text: 'No',
-        value: 'No'
+        text: "No",
+        value: "No"
       }, {
-        text: 'Parcial',
-        value: 'Parcial'
+        text: "Parcial",
+        value: "Parcial"
       }],
       options2: [{
-        text: 'Rota',
-        value: 'Rota'
+        text: "Rota",
+        value: "Rota"
       }, {
-        text: 'Outros Servicos',
-        value: 'Outros Servicos'
+        text: "Outros Servicos",
+        value: "Outros Servicos"
       }, {
-        text: 'Expediente',
-        value: 'Expediente'
+        text: "Expediente",
+        value: "Expediente"
       }]
     };
   },
@@ -225,21 +282,21 @@ __webpack_require__.r(__webpack_exports__);
     getRotas: function getRotas() {
       var _this = this;
 
-      this.$http.get('/api/todasRotas').then(function (res) {
+      this.$http.get("/api/todasRotas").then(function (res) {
         _this.rota = res.data;
       });
     },
     getViaturas: function getViaturas() {
       var _this2 = this;
 
-      this.$http.get('/api/listViaturaDentro').then(function (res) {
+      this.$http.get("/api/listViaturaDentro").then(function (res) {
         _this2.viatura = res.data;
       });
     },
     getMotoristas: function getMotoristas() {
       var _this3 = this;
 
-      this.$http.get('/api/listMotoristas').then(function (res) {
+      this.$http.get("/api/listMotoristas").then(function (res) {
         _this3.motoristas = res.data;
       });
     },
@@ -262,21 +319,31 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     openModal: function openModal() {
-      this.$refs['Atributos'].show();
+      this.$refs["Atributos"].show();
     }
   },
   setup: function setup() {
-    var CHECKLISTOUT_STORE_MODULE_NAME = 'Picket';
+    var CHECKLISTOUT_STORE_MODULE_NAME = "Picket";
     if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(CHECKLISTOUT_STORE_MODULE_NAME, _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["onUnmounted"])(function () {
       if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(CHECKLISTOUT_STORE_MODULE_NAME);
     });
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__["useToast"])();
+    var options = [{
+      text: "Okay",
+      value: "Okay"
+    }, {
+      text: "No",
+      value: "No"
+    }, {
+      text: "Parcial",
+      value: "Parcial"
+    }];
     var chklst = [{
       id: null,
-      checklist_name: '',
-      opcao: ''
+      checklist_name: "",
+      opcao: ""
     }];
     var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
       motorista_id: null,
@@ -285,27 +352,29 @@ __webpack_require__.r(__webpack_exports__);
       isOuthers: false,
       carta_conducao: true,
       km_inicio: 0,
-      hora_inicio: '0:00',
-      tipo_saida: '',
-      litros_tanque: 0 // checklist_var: {
-      //   id: null, checklist_name: '', opcao: '',
-      // },
-
+      hora_inicio: "0:00",
+      tipo_saida: "",
+      litros_tanque: 0,
+      checklist_var: {
+        id: null,
+        checklist_name: "",
+        opcao: ""
+      }
     }))));
     var attributeChecklist = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
       checklist_name: null,
-      categoria: '',
-      email_forward: ''
+      categoria: "",
+      email_forward: ""
     }))));
 
     function addMore() {
-      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addAtributo', attributeChecklist.value).then(function (res) {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch("Picket/addAtributo", attributeChecklist.value).then(function (res) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
           props: {
             title: res.data.success,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
+            icon: "CheckSquareIcon",
+            variant: "success"
           }
         });
         window.location.reload();
@@ -315,8 +384,8 @@ __webpack_require__.r(__webpack_exports__);
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
               title: err.response.data.erro,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         }
@@ -326,18 +395,18 @@ __webpack_require__.r(__webpack_exports__);
     function OnSubmit() {
       var _this5 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addCheckListOut', form.value).then(function (response) {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch("Picket/addCheckListOut", form.value).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
           props: {
             title: response.data.message,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
+            icon: "CheckSquareIcon",
+            variant: "success"
           }
         });
 
         _this5.$router.push({
-          name: 'Vehicle-movements'
+          name: "Vehicle-movements"
         });
       })["catch"](function (err) {
         if (err.response.status === 421) {
@@ -345,17 +414,17 @@ __webpack_require__.r(__webpack_exports__);
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
               title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         } else if (err.response.status === 422) {
           toast({
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
-              title: 'Erro..! verifique se todos campos estão devidamente preenchidos',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              title: "Erro..! verifique se todos campos estão devidamente preenchidos",
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         } else {
@@ -363,8 +432,8 @@ __webpack_require__.r(__webpack_exports__);
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
             props: {
               title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         }
@@ -376,13 +445,14 @@ __webpack_require__.r(__webpack_exports__);
       form: form,
       attributeChecklist: attributeChecklist,
       chklst: chklst,
-      addMore: addMore
+      addMore: addMore,
+      options: options
     };
   },
   created: function created() {
     var _this6 = this;
 
-    _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/getAtributos').then(function (res) {
+    _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch("Picket/getAtributos").then(function (res) {
       _this6.form.checklist_var = res.data;
     }); // this.form.checklist_var = this.chklst
   }
@@ -450,7 +520,7 @@ var render = function () {
                       },
                       [
                         _vm._v(
-                          "\n                        Pedido de Autorização de Saida\n                    "
+                          "\n            Pedido de Autorização de Saida\n          "
                         ),
                       ]
                     ),
@@ -542,9 +612,7 @@ var render = function () {
             "b-card-header",
             [
               _c("b-card-title", [
-                _vm._v(
-                  "\n                Formulário de inspenção\n            "
-                ),
+                _vm._v("\n        Formulário de inspenção\n      "),
               ]),
               _vm._v(" "),
               _c("hr"),
@@ -694,31 +762,6 @@ var render = function () {
                         [
                           _c(
                             "b-form-group",
-                            { attrs: { label: "qtd actual de combustivel" } },
-                            [
-                              _c("b-form-input", {
-                                attrs: { type: "text" },
-                                model: {
-                                  value: _vm.form.litros_tanque,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "litros_tanque", $$v)
-                                  },
-                                  expression: "form.litros_tanque",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
                             { attrs: { label: "hora de partida" } },
                             [
                               _c("b-form-timepicker", {
@@ -743,34 +786,107 @@ var render = function () {
                         { attrs: { cols: "12", md: "6", lg: "8", xl: "10" } },
                         [
                           _c("table", { staticClass: "table table-bordered" }, [
-                            _c("tbody", [
-                              _c("tr", [
-                                _c("td", [_vm._v("Tipo de Saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("v-select", {
-                                      attrs: {
-                                        label: "text",
-                                        options: _vm.options2,
-                                        reduce: function (options2) {
-                                          return options2.value
-                                        },
-                                      },
-                                      model: {
-                                        value: _vm.form.tipo_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "tipo_saida", $$v)
-                                        },
-                                        expression: "form.tipo_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
+                            _c(
+                              "tbody",
+                              [
+                                _vm._l(
+                                  _vm.form.checklist_var,
+                                  function (chk, i) {
+                                    return _c("tr", { key: "B" + i }, [
+                                      _c("td", [
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: chk.id,
+                                              expression: "chk.id",
+                                            },
+                                          ],
+                                          attrs: { type: "hidden" },
+                                          domProps: { value: chk.id },
+                                          on: {
+                                            input: function ($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                chk,
+                                                "id",
+                                                $event.target.value
+                                              )
+                                            },
+                                          },
+                                        }),
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(chk.checklist_name) +
+                                            "\n                  "
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        [
+                                          _c(
+                                            "b-form-group",
+                                            [
+                                              _c("b-form-radio-group", {
+                                                attrs: {
+                                                  options: _vm.options,
+                                                  required: "",
+                                                },
+                                                model: {
+                                                  value: chk.opcao,
+                                                  callback: function ($$v) {
+                                                    _vm.$set(chk, "opcao", $$v)
+                                                  },
+                                                  expression: "chk.opcao",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ])
+                                  }
                                 ),
-                              ]),
-                            ]),
+                                _vm._v(" "),
+                                _c("tr", [
+                                  _c("td", [_vm._v("Tipo de Saida")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "td",
+                                    [
+                                      _c("v-select", {
+                                        attrs: {
+                                          label: "text",
+                                          options: _vm.options2,
+                                          reduce: function (options2) {
+                                            return options2.value
+                                          },
+                                        },
+                                        model: {
+                                          value: _vm.form.tipo_saida,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.form,
+                                              "tipo_saida",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "form.tipo_saida",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ]),
+                              ],
+                              2
+                            ),
                           ]),
                         ]
                       ),
@@ -787,9 +903,7 @@ var render = function () {
                         { attrs: { cols: "6", md: "6" } },
                         [
                           _c("b-button", { attrs: { type: "reset" } }, [
-                            _vm._v(
-                              "\n                            limpar\n                        "
-                            ),
+                            _vm._v(" limpar "),
                           ]),
                         ],
                         1
@@ -807,11 +921,7 @@ var render = function () {
                                 variant: "outline-primary",
                               },
                             },
-                            [
-                              _vm._v(
-                                "\n                            submeter\n                        "
-                              ),
-                            ]
+                            [_vm._v("\n              submeter\n            ")]
                           ),
                         ],
                         1
@@ -962,9 +1072,7 @@ var render = function () {
                         },
                         [
                           _c("i", { staticClass: "fas fa-paper-plane" }),
-                          _vm._v(
-                            "\n                        adicionar\n                    "
-                          ),
+                          _vm._v("\n            adicionar\n          "),
                         ]
                       ),
                     ],

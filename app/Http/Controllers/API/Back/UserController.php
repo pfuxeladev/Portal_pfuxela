@@ -24,10 +24,25 @@ class UserController extends Controller
    {
         $this->user = $user;
    }
-    public function index()
+    public function index(Request $request)
     {
-
-        return $this->user->with(['departamento', 'person', 'roles'])->paginate(10)->except(auth()->user()->id);
+        if($request->perPage){
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'desc')->paginate($request->perPage)->except(auth()->user()->id);
+        }else if($request->q && $request->perPage){
+            return $this->user->with(['departamento', 'person', 'roles'])->join('people', 'users.person_id', '=', 'people.id')->join('departamentos', 'users.departamento_id', '=', 'departamentos.id')
+            ->where('users.name', 'like', '%'. $request->q . '%')
+            ->orWhere('users.email', 'like', '%'.$request->q.'%')
+            ->orWhere('people.nome_completo', 'like', '%'.$request.'%')->orderBy('id', 'desc')->paginate($request->perPage)->except(auth()->user()->id);
+        }else if($request->q){
+            return $this->user->with(['departamento', 'person', 'roles'])->join('people', 'users.person_id', '=', 'people.id')->join('departamentos', 'users.departamento_id', '=', 'departamentos.id')
+            ->where('users.name', 'like', '%'. $request->q . '%')
+            ->orWhere('users.email', 'like', '%'.$request->q.'%')
+            ->orWhere('people.nome_completo', 'like', '%'.$request.'%')->orderBy('id', 'desc')->paginate(10)->except(auth()->user()->id);
+        }else if($request->sortDesc == true){
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'asc')->paginate(10)->except(auth()->user()->id);
+        }else{
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'desc')->paginate(10)->except(auth()->user()->id);
+        }
     }
 
     public function permissionsIndex()

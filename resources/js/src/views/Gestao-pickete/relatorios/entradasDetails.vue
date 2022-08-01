@@ -1,6 +1,6 @@
 <template>
   <section>
-    <b-card no-body>
+    <b-card no-body v-for="(ent, index) in entrada" :key="index">
         <b-row>
             <b-col cols="3">
                 <b-link :to="{ name: 'Vehicle-movements' }" class="btn btn-md btn-outline-primary">voltar</b-link>
@@ -9,42 +9,47 @@
 
         <b-card-header>
             <h3>
-                Matricula: {{entrada.check_list_out.viatura.matricula}}
+                Matricula: {{ent.checklistIn.check_list_out.viatura.matricula}}
             </h3>
         </b-card-header>
       <div class="mb-2">
          <b-row>
             <b-col cols="6">
                 <b-list-group>
-
+                    <b-list-group-item>
+                        Kilometragem: {{ent.checklistIn.km_fim}}
+                    </b-list-group-item>
+                    <b-list-group-item>
+                        Hora de partida: {{ent.checklistIn.check_list_out.hr_inicio}}
+                    </b-list-group-item>
+                    <b-list-group-item>
+                        Hora de entrada: {{ent.checklistIn.hr_fim}}
+                    </b-list-group-item>
                 </b-list-group>
                 </b-col>
-                <b-col cols="6">
-                </b-col>
           </b-row>
-        <b-card-body>
-            <h3>Estado da viatura</h3>
-             <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Conforto e Segurança
-                    </th>
-                </tr>
-                <tr>
-                    <th>Cinto de segurança</th>
-                    <th>AC</th>
-                    <th>Kit de reboque</th>
-                    <th>Sistema ABS</th>
-                    <th>Retrovisores</th>
-                    <th>Kit de primeiros Socorros</th>
-                    <th>Extintor</th>
-                    <th>Tri&acirc;ngulo</th>
-                </tr>
-            </thead>
-          </table>
-        </b-card-body>
       </div>
+       <b-card-body>
+          <h3>Estado da viatura</h3>
+          <hr>
+          <b-row>
+            <b-col cols="3" class="mb-2" v-for="(chk, i) in ent.categoria" :key="'a'+i">
+                 <h3 class="card-title">{{chk.nome_categoria}}</h3>
+                <b-row v-for="(checklst, k) in ent.checklists" :key="k">
+                    <span class="ml-2" v-if="checklst.categoria === chk.id">
+                    <table class="table table-responsive">
+                        <tr>
+                            <td>{{checklst.checklist_name}}</td>
+                            <td class="text-right"> <span v-if="checklst.opcao === 'Ok'"><i class="fa fa-check" style="font-size:24px;color:green"></i></span>
+                        <span v-else-if="checklst.opcao === 'No'"><i class="fa fa-remove" style="font-size:24px;color:red"></i></span>
+                        <b-badge v-else-if="checklst.opcao === 'Parcial'" variant="warning"><i class="fa fa-exclamation-triangle" style="font-size:48px;color:orange"></i></b-badge></td>
+                        </tr>
+                    </table>
+                    </span>
+                </b-row>
+            </b-col>
+          </b-row>
+        </b-card-body>
     </b-card>
   </section>
 </template>

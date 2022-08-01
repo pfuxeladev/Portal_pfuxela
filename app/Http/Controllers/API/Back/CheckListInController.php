@@ -11,11 +11,13 @@ use App\Models\checklists;
 use App\Models\incidente;
 use App\Models\ocorrencia_checklist;
 use App\Models\Viatura;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\ImageManagerStatic as Image;
 use Intervention\Image\Exception\NotReadableException;
 use Illuminate\Support\Facades\DB;
+use App\Models\Categoria;
 class CheckListInController extends Controller
 {
     private $checkListIn;
@@ -45,7 +47,7 @@ class CheckListInController extends Controller
             'hr_fim'=>'required',
         ]);
         // try {
-            $checkList_out = CheckListOut::where('viatura_id', $request->viatura_id)->first();
+            $checkList_out = CheckListOut::where('id', $request->viatura_id)->first();
 
             // return $checkList_out;
 
@@ -98,8 +100,9 @@ class CheckListInController extends Controller
 
                             $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
                                 'checklist_vars_id'=>$value->id,
-                                'opcao_entrada'=>1,
-                                'check_list_in_id'=>$checkListIn->id
+                                'opcao_entrada'=>$var["opcao"],
+                                'check_list_in_id'=>$checkListIn->id,
+                                'updated_at'=>Carbon::now()
                                ]);
                         }
 
@@ -108,8 +111,9 @@ class CheckListInController extends Controller
 
                             $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
                                 'checklist_vars_id'=>$value->id,
-                                'opcao_entrada'=>false,
-                                'check_list_in_id'=>$checkListIn->id
+                                'opcao_entrada'=>$var["opcao"],
+                                'check_list_in_id'=>$checkListIn->id,
+                                'updated_at'=>Carbon::now()
                                ]);
                         }
                     }
@@ -117,42 +121,47 @@ class CheckListInController extends Controller
 
                 //    return $checklists;
 
-                   $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 1)->get();
+                   $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
 
                    $ocorrencia = [];
                    foreach($checkList as $chkOc){
                    $ocorrencia[] = [
                         'descricao'=>checklist_vars::where('id', $chkOc->checklist_vars_id)->pluck('checklist_name'),
                         'situacao_entrada'=>$chkOc->opcao,
-                        'checklists_id'=>$chkOc->id
+                        'checklists_id'=>$chkOc->id,
+                        'created_at'=>Carbon::now()
                     ];
                 }
                    ocorrencia_checklist::insert($ocorrencia);
 
 
-                if($request->viatura_id !=null){
-                    $viatura = Viatura::where('id', $request->viatura_id)->first();
-                     $viatura->locate = 'IN';
-                     $viatura->update();
-                }
+                // if($request->viatura_id !=null){
+                //     $viatura = Viatura::where('id', $request->viatura_id)->first();
+                //      $viatura->locate = 'IN';
+                //      $viatura->update();
+                // }
 
 
 
-                $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
+            $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
 
              $consumo = $delta_percorrido * $viatura1->capacidade_media;
 
-                if($viatura1->qtd_disponinvel > $consumo){
-                    $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
-                }else{
-                    $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
-                }
-                // return $viatura1->qtd_disponivel;
-                if($qtd_disponivel < 0){
-                    $viatura1->qtd_disponivel = 0;
-                }else{
-                    $viatura1->qtd_disponivel = $qtd_disponivel;
-                }
+             $delta_percorrido = $request->km_fim - $viatura1->kilometragem;
+             $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+             if($viatura1->qtd_disponinvel > $consumo){
+                 $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+             }else if($viatura1->capacidade_tanque < $consumo){
+                 $viatura1->qtd_disponivel = $request->litros_tanque;
+             }else{
+                 $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
+             }
+             // return $viatura1->qtd_disponivel;
+             if($qtd_disponivel < 0){
+                 $viatura1->qtd_disponivel = $request->litros_tanque;
+             }else{
+                 $viatura1->qtd_disponivel = $request->litros_tanque;
+             }
                 $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
                 $viatura1->update();
@@ -174,7 +183,7 @@ class CheckListInController extends Controller
         'hr_fim'=>'required',
     ]);
     // try {
-        $checkList_out = CheckListOut::where('id', $request->id)->first();
+        $checkList_out = CheckListOut::where('id', $request->viatura_id)->first();
 
         // return $checkList_out;
 
@@ -200,7 +209,7 @@ class CheckListInController extends Controller
         $checkListIn->save();
 
         if($request->viatura_id !=null){
-            $viatura = Viatura::where('id', $request->viatura_id)->first();
+            $viatura = Viatura::where('id', $checkList_out->viatura_id)->first();
              $viatura->locate = 'IN';
              $viatura->update();
         }
@@ -212,6 +221,8 @@ class CheckListInController extends Controller
 
         if($viatura1->qtd_disponinvel > $consumo){
             $qtd_disponivel = ($viatura1->qtd_disponivel - $consumo);
+        }else if($viatura1->capacidade_tanque < $consumo){
+            $viatura1->qtd_disponivel = $request->litros_tanque;
         }else{
             $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
         }
@@ -219,7 +230,7 @@ class CheckListInController extends Controller
         if($qtd_disponivel < 0){
             $viatura1->qtd_disponivel = 0;
         }else{
-            $viatura1->qtd_disponivel = $qtd_disponivel;
+            $viatura1->qtd_disponivel = $request->litros_tanque;
         }
         $viatura1->kilometragem = $request->km_fim;
         $viatura1->locate = 'IN';
@@ -230,7 +241,21 @@ class CheckListInController extends Controller
    }
     public function show($id)
     {
-        return $this->checkListIn->with(['CheckListOut.viatura', 'checklist'])->findOrFail($id);
+        $checkListIn =  $this->checkListIn->with(['CheckListOut.viatura', 'checklist'])->findOrFail($id);
+
+        $chklst = checklists::with('ocorrencia_checklist')->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_in_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
+        ->orderBy('checklist_vars.categoria', 'asc')
+        ->get();
+
+        $categoria = Categoria::with('checklist_vars.checklists')->get();
+
+        $dados[] = [
+            'checklistIn'=>$checkListIn,
+            'checklists'=>$chklst,
+            'categoria'=>$categoria
+        ];
+
+       return response()->json($dados, 200);
     }
 
     /**

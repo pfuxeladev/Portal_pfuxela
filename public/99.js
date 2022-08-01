@@ -267,6 +267,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -337,13 +340,16 @@ __webpack_require__.r(__webpack_exports__);
     }];
 
     function imprimir() {
-      var newLocal = 'download';
+      var newLocal = 'download'; //   alert(this.intervalo)
 
       if (this.intervalo) {
-        this.$http.post('/api/printRelatorio', this.intervalo, {
+        this.$http.post('/api/printRelatorio', {
+          intervalo: this.intervalo
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
+          // console.log(response.data)
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
             type: 'application/pdf'
           }));
@@ -354,7 +360,9 @@ __webpack_require__.r(__webpack_exports__);
           fileLink.click();
         });
       } else if (this.searchDatas !== '') {
-        this.$http.post('/api/printRelatorio', this.searchDatas, {
+        this.$http.post('/api/printRelatorio', {
+          searchDatas: this.searchDatas
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
@@ -368,7 +376,27 @@ __webpack_require__.r(__webpack_exports__);
           fileLink.click();
         });
       } else if (this.dateReport !== '') {
-        this.$http.post('/api/printRelatorio', this.dateReport, {
+        this.$http.post('/api/printRelatorio', {
+          dateReport: this.dateReport
+        }, {
+          responseType: 'blob',
+          Accept: 'application/pdf'
+        }).then(function (response) {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data], {
+            type: 'application/pdf'
+          }));
+          var fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        });
+      } else if (this.dateReport !== '' && this.intervalo !== '' && this.searchDatas !== '') {
+        this.$http.post('/api/printRelatorio', {
+          dateReport: this.dateReport,
+          intervalo: this.intervalo,
+          searchDatas: this.searchDatas
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
@@ -1164,11 +1192,17 @@ var render = function () {
                               key: "cell(autor)",
                               fn: function (data) {
                                 return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.ordem.approved_by.name) +
-                                      "\n              "
-                                  ),
+                                  data.item.ordem.approved_by !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                  " +
+                                            _vm._s(
+                                              data.item.ordem.approved_by.name
+                                            ) +
+                                            "\n                  "
+                                        ),
+                                      ])
+                                    : _vm._e(),
                                 ]
                               },
                             },

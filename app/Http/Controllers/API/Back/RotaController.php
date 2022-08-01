@@ -18,12 +18,12 @@ class RotaController extends Controller
     public function index()
     {
 
-        return $this->rota->with(['projecto', 'horario'])->where('projecto_id', 1)->orderBy('nome_rota', 'asc')->paginate(15);
+        return $this->rota->with(['projecto', 'horario'])->where('is_active', true)->orderBy('nome_rota', 'asc')->paginate(15);
     }
 
     function todasRotas()
     {
-        return $this->rota->with('projecto')->where('projecto_id', 1)->get();
+        return $this->rota->with('projecto')->where('is_active', true)->get();
     }
 
     function todosProjectos(){
@@ -48,6 +48,9 @@ class RotaController extends Controller
             return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
         }
 
+ if(Rota::where('nome_rota', $request->nome_rota)->first()){
+            return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
+        }
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
         $rota->distancia_km = $request->distancia_km;
