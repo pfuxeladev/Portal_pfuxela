@@ -145,25 +145,29 @@ class AbastecimentoController extends Controller
         ]);
 
         //abastecer por rota
-        $distanciaTotal = 0;
+       $distanciaTotal = 0;
+        $distanciaTotal = Rota::whereIn('id', $request->rota_id)->sum('distancia_km');
+
+        $qtdNecessaria = $distanciaTotal * $viatura->capacidade_media;
+
+       if ($request->qtd_abastecer > $qtdNecessaria) {
+
+           $ordemViatura->delete();
+
+           return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de ' . $qtdNecessaria], 421);
+       }
+       if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) && $viatura->capacidade_tanque < $qtdNecessaria) {
+           return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
+       } else {
+           $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd_abastecer);
+
+           $viatura->qtd_disponivel = $qtdAbastecer;
+           $viatura->update();
+       }
 
         foreach ($request->rota_id as $key => $rt) {
             $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->get();
-            $rotas = Rota::where('id', $rt)->get();
 
-            foreach ($rotas as $key => $dist) {
-                $distanciaTotal += $dist->distancia_km;
-            }
-            $qtdNecessaria = ($distanciaTotal * $viatura->capacidade_media) + 15;
-
-            if ($request->qtd_abastecer > $qtdNecessaria) {
-
-                $ordemViatura->delete();
-
-                // return $qtdNecessaria;
-
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima do que a rota necessita, a rota so precisa de ' . $qtdNecessaria], 421);
-            }
 
             $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt,
@@ -173,14 +177,6 @@ class AbastecimentoController extends Controller
             ]);
         }
 
-        if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd_abastecer) && $viatura->capacidade_tanque < $qtdNecessaria) {
-            return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatura'], 421);
-        } else {
-            $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd_abastecer);
-
-            $viatura->qtd_disponivel = $qtdAbastecer;
-            $viatura->update();
-        }
 
         $ordem->estado = 'Aberta';
         $ordem->update();
