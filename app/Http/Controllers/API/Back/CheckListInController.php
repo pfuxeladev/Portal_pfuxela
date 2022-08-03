@@ -28,7 +28,7 @@ class CheckListInController extends Controller
     }
     public function index()
     {
-        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy(request('sortBy'), 'ASC')->paginate(request('perPage'));
+        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy('created_at', 'desc')->paginate(10);
     }
 
   function listViaturaFora(){
