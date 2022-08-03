@@ -68,7 +68,7 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
     Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
     // Abastecer bomba
-    Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
+
     Route::get('/abastecimentoPendente/{id}', [AbastecimentoBombasController::class, 'abastecimentoPendente']);
     // end
     Route::resource('Ordem', App\Http\Controllers\API\Back\OrdemController::class);
@@ -107,14 +107,14 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
         // Relatorio Geral de Abastecimentos
         Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
-        
+
         Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
-        Route::get('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
+        // Route::get('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
 });
 
+Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
 
-
-Route::get('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
+Route::post('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
 
 Route::post('printRelatorio', [App\Http\Controllers\API\Back\OrdemController::class, 'printRelatorio']);
 

@@ -37,10 +37,4 @@ class ordem_viatura extends Model
         return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }
 
-
-    public function roles()
-    {
-        return $this->belongsToMany('App\Role', 'role_user_table', 'user_id', 'role_id');
-    }
-
 }

@@ -40,13 +40,13 @@ class User extends Authenticatable
         return $this->hasMany(abastecimento::class);
     }
 
-    // public function jsPermissions()
-    // {
-    //     return json_encode([
-    //             'roles' => $this->getRoleNames(),
-    //             'permissions' => $this->getAllPermissions()->pluck('name'),
-    //         ]);
-    // }
+    public function jsPermissions()
+    {
+        return json_encode([
+                'roles' => $this->getRoleNames(),
+                'permissions' => $this->getAllPermissions()->pluck('name'),
+            ]);
+    }
 
     protected $fillable = [
         'name',

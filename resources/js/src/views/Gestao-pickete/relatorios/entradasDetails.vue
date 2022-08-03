@@ -1,6 +1,6 @@
 <template>
   <section>
-    <b-card no-body>
+    <b-card no-body v-for="(ent, index) in entrada" :key="index">
         <b-row>
             <b-col cols="3">
                 <b-link :to="{ name: 'Vehicle-movements' }" class="btn btn-md btn-outline-primary">voltar</b-link>
@@ -9,7 +9,7 @@
 
         <b-card-header>
             <h3>
-                Matricula: {{entrada.viatura.matricula}}
+                Matricula: {{ent.checklistIn.check_list_out.viatura.matricula}}
             </h3>
         </b-card-header>
       <div class="mb-2">
@@ -17,157 +17,45 @@
             <b-col cols="6">
                 <b-list-group>
                     <b-list-group-item>
-                        Carta de condu&ccedil;&atilde;o do motorista: {{entrada.motorista.carta_conducao}}
+                        Kilometragem: {{ent.checklistIn.km_fim}}
                     </b-list-group-item>
-                     <b-list-group-item>
-                        Livrete: <span v-if="entrada.livrete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>Falta</span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Colete do motorista: <span v-if="entrada.colete_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else> <b-badge variant="danger">Falta</b-badge></span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Lista de presen&ccedil;a: <span v-if="entrada.lista_presenca==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                </b-list-group>
-                </b-col>
-                <b-col cols="6">
-                <b-list-group>
                     <b-list-group-item>
-                        Seguros: <span v-if="entrada.seguros_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
+                        Hora de partida: {{ent.checklistIn.check_list_out.hr_inicio}}
                     </b-list-group-item>
-                     <b-list-group-item>
-                        Document de Inspe&ccedil;&atilde;o: <span v-if="entrada.inspencao_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Taxa de radio difus&atilde;o: <span v-if="entrada.taxaradio_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
-                    </b-list-group-item>
-                     <b-list-group-item>
-                        Licen&ccedil;a da viatura: <span v-if="entrada.licenca_saida==1">
-                            <b-badge variant="primary">Ok</b-badge>
-                        </span>
-                         <span v-else>
-                            <b-badge variant="danger">Falta</b-badge>
-                            </span>
+                    <b-list-group-item>
+                        Hora de entrada: {{ent.checklistIn.hr_fim}}
                     </b-list-group-item>
                 </b-list-group>
                 </b-col>
           </b-row>
-        <b-card-body>
-            <h3>Estado da viatura</h3>
-             <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Conforto e Segurança
-                    </th>
-                </tr>
-                <tr>
-                    <th>Cinto de segurança</th>
-                    <th>AC</th>
-                    <th>Kit de reboque</th>
-                    <th>Sistema ABS</th>
-                    <th>Retrovisores</th>
-                    <th>Kit de primeiros Socorros</th>
-                    <th>Extintor</th>
-                    <th>Tri&acirc;ngulo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <span v-if="entrada.CintoSeguracaState == 1">Ok</span>
-                        <span v-if="entrada.CintoSeguracaState == 0">No</span>
-                    </td>
-                    <td>
-                        {{entrada.ACState}}
-                    </td>
-                    <td>
-                        <span v-if="entrada.kit_reboque_saida == 1">Ok</span>
-                        <span v-if="entrada.kit_reboque_saida == 0">No</span>
-                    </td>
-                    <td>
-                        {{entrada.SistemaABS_State}}
-                    </td>
-                    <td>
-                        Ok
-                    </td>
-                    <td>
-                       <span v-if="entrada.kit_1_socorros_saida == 1">Ok</span>
-                       <span v-if="entrada.kit_1_socorros_saida == 0">Falta</span>
-                    </td>
-                    <td>
-                        <span v-if="entrada.extintor_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                       <span v-if="entrada.triangulo_saida == 1">Ok</span>
-                       <span v-else>Falta</span>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="8" class="bg-dark text-center text-uppercase text-white">
-                        Estado mec&acirc;nico
-                    </th>
-                </tr>
-                <tr class="text-uppercase" style="font-size: 0.857rem;">
-                    <th>Nível Vaso Expansor</th>
-                    <th>Nível Liquido Vidros</th>
-                    <th>Nível Óleo de Motor</th>
-                    <th>Nível &Oacute;leo de Direção</th>
-                    <th>Nível Óleo Travões</th>
-                    <th>Macaco</th>
-                    <th>Pneu sobressalente</th>
-                    <th>Chave de roda</th>
-                </tr>
-                <tr>
-                    <td>{{entrada.vasoEspansorState}}</td>
-                    <td>{{entrada.LiquidoVidroState}}</td>
-                    <td> {{entrada.OleoMotorState}} </td>
-                    <td>{{entrada.OleoDirecaoState}}</td>
-                    <td>{{entrada.OleoTravoesState}}</td>
-                    <td>
-                        <span v-if="entrada.macaco_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="entrada.pneu_sobr_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                    <td>
-                         <span v-if="entrada.chave_roda_saida == 1">Ok</span>
-                        <span v-else>Falta</span>
-                    </td>
-                </tr>
-            </tbody>
-          </table>
-        </b-card-body>
       </div>
+       <b-card-body>
+          <h3>Estado da viatura</h3>
+          <hr>
+          <b-row v-if="ent.checklists !== ''">
+
+            <b-col cols="3" class="mb-2" v-for="(chk, i) in ent.categoria" :key="'a'+i">
+                 <h3 class="card-title">{{chk.nome_categoria}}</h3>
+                <b-row v-for="(checklst, k) in ent.checklists" :key="k">
+                    <span class="ml-2" v-if="checklst.categoria === chk.id">
+                    <table class="table table-responsive">
+                        <tr>
+                            <td>{{checklst.checklist_name}}</td>
+                            <td class="text-right"> <span v-if="checklst.opcao === 'Ok'"><i class="fa fa-check" style="font-size:24px;color:green"></i></span>
+                        <span v-else-if="checklst.opcao === 'No'"><i class="fa fa-remove" style="font-size:24px;color:red"></i></span>
+                        <b-badge v-else-if="checklst.opcao === 'Parcial'" variant="warning"><i class="fa fa-exclamation-triangle" style="font-size:48px;color:orange"></i></b-badge></td>
+                        </tr>
+                    </table>
+                    </span>
+                </b-row>
+            </b-col>
+          </b-row>
+          <b-row v-else>
+            <b-col cols="3">
+                <b-button variant="primary">Verificar o estado da viatura</b-button>
+            </b-col>
+          </b-row>
+        </b-card-body>
     </b-card>
   </section>
 </template>

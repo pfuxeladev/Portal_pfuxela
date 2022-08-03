@@ -18,7 +18,7 @@
                 </b-col>
             </b-row>
         </div>
-        <b-row>
+        <b-row v-if="can('View Report')">
             <b-col cols="12" xl="12" md="12" class="table-responsive">
                 <b-table ref="refAbastecimentoListTable" :items="fetchAbastecimentos" responsive :fields="tableColumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="No matching records found" :sort-desc.sync="isSortDirDesc" class="position-relative">
                      <template #cell(ordem)="data">

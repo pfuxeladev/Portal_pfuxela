@@ -82,118 +82,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -284,10 +172,10 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    [
-      _c(
+    _vm._l(_vm.entrada, function (ent, index) {
+      return _c(
         "b-card",
-        { attrs: { "no-body": "" } },
+        { key: index, attrs: { "no-body": "" } },
         [
           _c(
             "b-row",
@@ -315,7 +203,7 @@ var render = function () {
             _c("h3", [
               _vm._v(
                 "\n              Matricula: " +
-                  _vm._s(_vm.entrada.viatura.matricula) +
+                  _vm._s(ent.checklistIn.check_list_out.viatura.matricula) +
                   "\n          "
               ),
             ]),
@@ -337,212 +225,28 @@ var render = function () {
                         [
                           _c("b-list-group-item", [
                             _vm._v(
-                              "\n                      Carta de condução do motorista: " +
-                                _vm._s(_vm.entrada.motorista.carta_conducao) +
+                              "\n                      Kilometragem: " +
+                                _vm._s(ent.checklistIn.km_fim) +
                                 "\n                  "
                             ),
                           ]),
                           _vm._v(" "),
                           _c("b-list-group-item", [
-                            _vm._v("\n                      Livrete: "),
-                            _vm.entrada.livrete_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c("span", [_vm._v("Falta")]),
+                            _vm._v(
+                              "\n                      Hora de partida: " +
+                                _vm._s(
+                                  ent.checklistIn.check_list_out.hr_inicio
+                                ) +
+                                "\n                  "
+                            ),
                           ]),
                           _vm._v(" "),
                           _c("b-list-group-item", [
                             _vm._v(
-                              "\n                      Colete do motorista: "
+                              "\n                      Hora de entrada: " +
+                                _vm._s(ent.checklistIn.hr_fim) +
+                                "\n                  "
                             ),
-                            _vm.entrada.colete_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Lista de presença: "
-                            ),
-                            _vm.entrada.lista_presenca == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                          ]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    { attrs: { cols: "6" } },
-                    [
-                      _c(
-                        "b-list-group",
-                        [
-                          _c("b-list-group-item", [
-                            _vm._v("\n                      Seguros: "),
-                            _vm.entrada.seguros_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Document de Inspeção: "
-                            ),
-                            _vm.entrada.inspencao_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Taxa de radio difusão: "
-                            ),
-                            _vm.entrada.taxaradio_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Licença da viatura: "
-                            ),
-                            _vm.entrada.licenca_saida == 1
-                              ? _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "primary" } },
-                                      [_vm._v("Ok")]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              : _c(
-                                  "span",
-                                  [
-                                    _c(
-                                      "b-badge",
-                                      { attrs: { variant: "danger" } },
-                                      [_vm._v("Falta")]
-                                    ),
-                                  ],
-                                  1
-                                ),
                           ]),
                         ],
                         1
@@ -553,196 +257,133 @@ var render = function () {
                 ],
                 1
               ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-card-body",
+            [
+              _c("h3", [_vm._v("Estado da viatura")]),
               _vm._v(" "),
-              _c("b-card-body", [
-                _c("h3", [_vm._v("Estado da viatura")]),
-                _vm._v(" "),
-                _c("table", { staticClass: "table table-striped" }, [
-                  _c("thead", [
-                    _c("tr", [
-                      _c(
-                        "th",
+              _c("hr"),
+              _vm._v(" "),
+              ent.checklists !== ""
+                ? _c(
+                    "b-row",
+                    _vm._l(ent.categoria, function (chk, i) {
+                      return _c(
+                        "b-col",
                         {
-                          staticClass:
-                            "bg-dark text-center text-uppercase text-white",
-                          attrs: { colspan: "8" },
+                          key: "a" + i,
+                          staticClass: "mb-2",
+                          attrs: { cols: "3" },
                         },
                         [
-                          _vm._v(
-                            "\n                      Conforto e Segurança\n                  "
-                          ),
-                        ]
-                      ),
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("th", [_vm._v("Cinto de segurança")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("AC")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Kit de reboque")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Sistema ABS")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Retrovisores")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Kit de primeiros Socorros")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Extintor")]),
-                      _vm._v(" "),
-                      _c("th", [_vm._v("Triângulo")]),
-                    ]),
-                  ]),
-                  _vm._v(" "),
-                  _c("tbody", [
-                    _c("tr", [
-                      _c("td", [
-                        _vm.entrada.CintoSeguracaState == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.entrada.CintoSeguracaState == 0
-                          ? _c("span", [_vm._v("No")])
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          "\n                      " +
-                            _vm._s(_vm.entrada.ACState) +
-                            "\n                  "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.kit_reboque_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.entrada.kit_reboque_saida == 0
-                          ? _c("span", [_vm._v("No")])
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          "\n                      " +
-                            _vm._s(_vm.entrada.SistemaABS_State) +
-                            "\n                  "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm._v(
-                          "\n                      Ok\n                  "
-                        ),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.kit_1_socorros_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.entrada.kit_1_socorros_saida == 0
-                          ? _c("span", [_vm._v("Falta")])
-                          : _vm._e(),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.extintor_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _c("span", [_vm._v("Falta")]),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.triangulo_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _c("span", [_vm._v("Falta")]),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c("tr", [
+                          _c("h3", { staticClass: "card-title" }, [
+                            _vm._v(_vm._s(chk.nome_categoria)),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(ent.checklists, function (checklst, k) {
+                            return _c("b-row", { key: k }, [
+                              checklst.categoria === chk.id
+                                ? _c("span", { staticClass: "ml-2" }, [
+                                    _c(
+                                      "table",
+                                      { staticClass: "table table-responsive" },
+                                      [
+                                        _c("tr", [
+                                          _c("td", [
+                                            _vm._v(
+                                              _vm._s(checklst.checklist_name)
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            { staticClass: "text-right" },
+                                            [
+                                              checklst.opcao === "Ok"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-check",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "green",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "No"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-remove",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "red",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "Parcial"
+                                                ? _c(
+                                                    "b-badge",
+                                                    {
+                                                      attrs: {
+                                                        variant: "warning",
+                                                      },
+                                                    },
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fa fa-exclamation-triangle",
+                                                        staticStyle: {
+                                                          "font-size": "48px",
+                                                          color: "orange",
+                                                        },
+                                                      }),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ],
+                                            1
+                                          ),
+                                        ]),
+                                      ]
+                                    ),
+                                  ])
+                                : _vm._e(),
+                            ])
+                          }),
+                        ],
+                        2
+                      )
+                    }),
+                    1
+                  )
+                : _c(
+                    "b-row",
+                    [
                       _c(
-                        "th",
-                        {
-                          staticClass:
-                            "bg-dark text-center text-uppercase text-white",
-                          attrs: { colspan: "8" },
-                        },
+                        "b-col",
+                        { attrs: { cols: "3" } },
                         [
-                          _vm._v(
-                            "\n                      Estado mecânico\n                  "
-                          ),
-                        ]
+                          _c("b-button", { attrs: { variant: "primary" } }, [
+                            _vm._v("Verificar o estado da viatura"),
+                          ]),
+                        ],
+                        1
                       ),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "tr",
-                      {
-                        staticClass: "text-uppercase",
-                        staticStyle: { "font-size": "0.857rem" },
-                      },
-                      [
-                        _c("th", [_vm._v("Nível Vaso Expansor")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Nível Liquido Vidros")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Nível Óleo de Motor")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Nível Óleo de Direção")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Nível Óleo Travões")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Macaco")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Pneu sobressalente")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Chave de roda")]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("tr", [
-                      _c("td", [_vm._v(_vm._s(_vm.entrada.vasoEspansorState))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm.entrada.LiquidoVidroState))]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm._v(" " + _vm._s(_vm.entrada.OleoMotorState) + " "),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm.entrada.OleoDirecaoState))]),
-                      _vm._v(" "),
-                      _c("td", [_vm._v(_vm._s(_vm.entrada.OleoTravoesState))]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.macaco_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _c("span", [_vm._v("Falta")]),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.pneu_sobr_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _c("span", [_vm._v("Falta")]),
-                      ]),
-                      _vm._v(" "),
-                      _c("td", [
-                        _vm.entrada.chave_roda_saida == 1
-                          ? _c("span", [_vm._v("Ok")])
-                          : _c("span", [_vm._v("Falta")]),
-                      ]),
-                    ]),
-                  ]),
-                ]),
-              ]),
+                    ],
+                    1
+                  ),
             ],
             1
           ),
         ],
         1
-      ),
-    ],
+      )
+    }),
     1
   )
 }

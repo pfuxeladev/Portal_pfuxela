@@ -423,6 +423,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -713,7 +714,7 @@ var render = function () {
                 key: "cell(acções)",
                 fn: function (data) {
                   return [
-                    data.item.viatura.locate !== "IN"
+                    data.item.viatura.locate !== "OUT"
                       ? _c(
                           "b-dropdown",
                           {
@@ -918,19 +919,22 @@ var render = function () {
                 [
                   _c(
                     "b-col",
+                    { attrs: { cols: "12" } },
                     [
-                      _c(
-                        "b-link",
-                        {
-                          staticClass: "btn btn-outline-primary",
-                          attrs: { to: { name: "CheckList-Out" } },
-                        },
-                        [
-                          _c("span", { staticClass: "text-nowrap" }, [
-                            _vm._v("Nova autorização de saida"),
-                          ]),
-                        ]
-                      ),
+                      _vm.can("Create Checklist_out")
+                        ? _c(
+                            "b-link",
+                            {
+                              staticClass: "btn btn-outline-primary",
+                              attrs: { to: { name: "CheckList-Out" } },
+                            },
+                            [
+                              _c("span", { staticClass: "text-nowrap" }, [
+                                _vm._v("Nova autorização de saida"),
+                              ]),
+                            ]
+                          )
+                        : _vm._e(),
                     ],
                     1
                   ),
@@ -1085,64 +1089,62 @@ var render = function () {
                 key: "cell(acções)",
                 fn: function (data) {
                   return [
-                    data.item.viatura.locate !== "IN"
-                      ? _c(
-                          "b-dropdown",
+                    _c(
+                      "b-dropdown",
+                      {
+                        attrs: {
+                          variant: "link",
+                          "no-caret": "",
+                          right: _vm.$store.state.appConfig.isRTL,
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "button-content",
+                              fn: function () {
+                                return [
+                                  _c("feather-icon", {
+                                    staticClass: "align-middle text-body",
+                                    attrs: {
+                                      icon: "MoreVerticalIcon",
+                                      size: "16",
+                                    },
+                                  }),
+                                ]
+                              },
+                              proxy: true,
+                            },
+                          ],
+                          null,
+                          true
+                        ),
+                      },
+                      [
+                        _vm._v(" "),
+                        _c(
+                          "b-dropdown-item",
                           {
                             attrs: {
-                              variant: "link",
-                              "no-caret": "",
-                              right: _vm.$store.state.appConfig.isRTL,
+                              to: {
+                                name: "CheckList-out-details",
+                                params: { id: data.item.id },
+                              },
                             },
-                            scopedSlots: _vm._u(
-                              [
-                                {
-                                  key: "button-content",
-                                  fn: function () {
-                                    return [
-                                      _c("feather-icon", {
-                                        staticClass: "align-middle text-body",
-                                        attrs: {
-                                          icon: "MoreVerticalIcon",
-                                          size: "16",
-                                        },
-                                      }),
-                                    ]
-                                  },
-                                  proxy: true,
-                                },
-                              ],
-                              null,
-                              true
-                            ),
                           },
                           [
+                            _c("feather-icon", {
+                              attrs: { icon: "FileTextIcon" },
+                            }),
                             _vm._v(" "),
-                            _c(
-                              "b-dropdown-item",
-                              {
-                                attrs: {
-                                  to: {
-                                    name: "CheckList-out-details",
-                                    params: { id: data.item.id },
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "FileTextIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("Detalhes")]
-                                ),
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
+                            _c("span", { staticClass: "align-middle ml-50" }, [
+                              _vm._v("Detalhes"),
+                            ]),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        data.item.viatura.locate === "OUT"
+                          ? _c(
                               "b-dropdown-item",
                               {
                                 attrs: {
@@ -1164,11 +1166,11 @@ var render = function () {
                                 ),
                               ],
                               1
-                            ),
-                          ],
-                          1
-                        )
-                      : _vm._e(),
+                            )
+                          : _vm._e(),
+                      ],
+                      1
+                    ),
                   ]
                 },
               },

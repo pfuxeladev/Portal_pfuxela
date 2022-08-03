@@ -716,6 +716,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -2077,442 +2078,469 @@ var render = function () {
         },
       }),
       _vm._v(" "),
-      _c(
-        "b-card",
-        { staticClass: "mb-0", attrs: { "no-body": "" } },
-        [
-          _c(
-            "div",
-            { staticClass: "m-2" },
+      _vm.can("View All Users")
+        ? _c(
+            "b-card",
+            { staticClass: "mb-0", attrs: { "no-body": "" } },
             [
               _c(
-                "b-row",
+                "div",
+                { staticClass: "m-2" },
                 [
                   _c(
-                    "b-col",
-                    {
-                      staticClass:
-                        "d-flex align-items-center justify-content-start mb-1 mb-md-0",
-                      attrs: { cols: "12", md: "6" },
-                    },
+                    "b-row",
                     [
-                      _c("label", [_vm._v("Show")]),
-                      _vm._v(" "),
-                      _c("v-select", {
-                        staticClass: "per-page-selector d-inline-block mx-50",
-                        attrs: {
-                          dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
-                          options: _vm.perPageOptions,
-                          clearable: false,
+                      _c(
+                        "b-col",
+                        {
+                          staticClass:
+                            "d-flex align-items-center justify-content-start mb-1 mb-md-0",
+                          attrs: { cols: "12", md: "6" },
                         },
-                        model: {
-                          value: _vm.perPage,
-                          callback: function ($$v) {
-                            _vm.perPage = $$v
-                          },
-                          expression: "perPage",
-                        },
-                      }),
-                      _vm._v(" "),
-                      _c("label", [_vm._v("entries")]),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("b-col", { attrs: { cols: "12", md: "6" } }, [
-                    _c(
-                      "div",
-                      {
-                        staticClass:
-                          "d-flex align-items-center justify-content-end",
-                      },
-                      [
-                        _c("b-form-input", {
-                          staticClass: "d-inline-block mr-1",
-                          attrs: { placeholder: "Search..." },
-                          model: {
-                            value: _vm.searchQuery,
-                            callback: function ($$v) {
-                              _vm.searchQuery = $$v
+                        [
+                          _c("label", [_vm._v("Show")]),
+                          _vm._v(" "),
+                          _c("v-select", {
+                            staticClass:
+                              "per-page-selector d-inline-block mx-50",
+                            attrs: {
+                              dir: _vm.$store.state.appConfig.isRTL
+                                ? "rtl"
+                                : "ltr",
+                              options: _vm.perPageOptions,
+                              clearable: false,
                             },
-                            expression: "searchQuery",
-                          },
-                        }),
-                        _vm._v(" "),
+                            model: {
+                              value: _vm.perPage,
+                              callback: function ($$v) {
+                                _vm.perPage = $$v
+                              },
+                              expression: "perPage",
+                            },
+                          }),
+                          _vm._v(" "),
+                          _c("label", [_vm._v("entries")]),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("b-col", { attrs: { cols: "12", md: "6" } }, [
                         _c(
-                          "b-button",
+                          "div",
                           {
-                            directives: [
-                              {
-                                name: "can",
-                                rawName: "v-can",
-                                value: "Create User",
-                                expression: "'Create User'",
-                              },
-                            ],
-                            attrs: { variant: "primary" },
-                            on: {
-                              click: function ($event) {
-                                _vm.isAddNewUserSidebarActive = true
-                              },
-                            },
+                            staticClass:
+                              "d-flex align-items-center justify-content-end",
                           },
                           [
-                            _c("span", { staticClass: "text-nowrap" }, [
-                              _vm._v("Add User"),
-                            ]),
-                          ]
-                        ),
-                      ],
-                      1
-                    ),
-                  ]),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-table", {
-            ref: "refUserListTable",
-            staticClass: "position-relative",
-            attrs: {
-              items: _vm.fetchUsers,
-              responsive: "",
-              fields: _vm.tableColumns,
-              "primary-key": "id",
-              "sort-by": _vm.sortBy,
-              "show-empty": "",
-              "empty-text": "Nenhum utilizador registado",
-              "sort-desc": _vm.isSortDirDesc,
-            },
-            on: {
-              "update:sortBy": function ($event) {
-                _vm.sortBy = $event
-              },
-              "update:sort-by": function ($event) {
-                _vm.sortBy = $event
-              },
-              "update:sortDesc": function ($event) {
-                _vm.isSortDirDesc = $event
-              },
-              "update:sort-desc": function ($event) {
-                _vm.isSortDirDesc = $event
-              },
-            },
-            scopedSlots: _vm._u([
-              {
-                key: "cell(user)",
-                fn: function (data) {
-                  return [
-                    _c(
-                      "b-media",
-                      {
-                        attrs: { "vertical-align": "center" },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "aside",
-                              fn: function () {
-                                return [
-                                  _c("b-avatar", {
-                                    attrs: {
-                                      size: "32",
-                                      src: data.item.avatar,
-                                      text: _vm.avatarText(
-                                        data.item.person.nome_completo
-                                      ),
-                                      variant:
-                                        "light-" +
-                                        _vm.resolveUserRoleVariant(
-                                          data.item.role
-                                        ),
-                                      to: {
-                                        name: "apps-users-view",
-                                        params: { id: data.item.id },
+                            _c("b-form-input", {
+                              staticClass: "d-inline-block mr-1",
+                              attrs: { placeholder: "Search..." },
+                              model: {
+                                value: _vm.searchQuery,
+                                callback: function ($$v) {
+                                  _vm.searchQuery = $$v
+                                },
+                                expression: "searchQuery",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _vm.can("Create User")
+                              ? _c(
+                                  "b-button",
+                                  {
+                                    attrs: { variant: "primary" },
+                                    on: {
+                                      click: function ($event) {
+                                        _vm.isAddNewUserSidebarActive = true
                                       },
                                     },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ],
-                          null,
-                          true
-                        ),
-                      },
-                      [
-                        _vm._v(" "),
-                        _c(
-                          "b-link",
-                          {
-                            staticClass: "font-weight-bold d-block text-nowrap",
-                            attrs: {
-                              to: {
-                                name: "apps-users-view",
-                                params: { id: data.item.id },
-                              },
-                            },
-                          },
-                          [
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(data.item.person.nome_completo) +
-                                "\n          "
-                            ),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("small", { staticClass: "text-muted" }, [
-                          _vm._v("@" + _vm._s(data.item.username)),
-                        ]),
-                      ],
-                      1
-                    ),
-                  ]
-                },
-              },
-              {
-                key: "cell(role)",
-                fn: function (data) {
-                  return [
-                    _c(
-                      "div",
-                      { staticClass: "text-nowrap" },
-                      [
-                        _c("feather-icon", {
-                          staticClass: "mr-50",
-                          class:
-                            "text-" +
-                            _vm.resolveUserRoleVariant(data.item.role),
-                          attrs: {
-                            icon: _vm.resolveUserRoleIcon(data.item.role),
-                            size: "18",
-                          },
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "align-text-top text-capitalize" },
-                          [_vm._v(_vm._s(data.item.roles[0].name))]
-                        ),
-                      ],
-                      1
-                    ),
-                  ]
-                },
-              },
-              {
-                key: "cell(status)",
-                fn: function (data) {
-                  return [
-                    _c(
-                      "b-badge",
-                      {
-                        staticClass: "text-capitalize",
-                        attrs: {
-                          pill: "",
-                          variant:
-                            "light-" +
-                            _vm.resolveUserStatusVariant(data.item.is_active),
-                        },
-                      },
-                      [
-                        data.item.is_active === 1
-                          ? _c("span", [_vm._v("Activo")])
-                          : _c("span", [_vm._v("Inactivo")]),
-                      ]
-                    ),
-                  ]
-                },
-              },
-              {
-                key: "cell(actions)",
-                fn: function (data) {
-                  return [
-                    _c(
-                      "b-dropdown",
-                      {
-                        attrs: {
-                          variant: "link",
-                          "no-caret": "",
-                          right: _vm.$store.state.appConfig.isRTL,
-                        },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "button-content",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    staticClass: "align-middle text-body",
-                                    attrs: {
-                                      icon: "MoreVerticalIcon",
-                                      size: "16",
-                                    },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ],
-                          null,
-                          true
-                        ),
-                      },
-                      [
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "apps-users-view",
-                                params: { id: data.item.id },
-                              },
-                            },
-                          },
-                          [
-                            _c("feather-icon", {
-                              attrs: { icon: "FileTextIcon" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Details"),
-                            ]),
+                                  },
+                                  [
+                                    _c("span", { staticClass: "text-nowrap" }, [
+                                      _vm._v("Add User"),
+                                    ]),
+                                  ]
+                                )
+                              : _vm._e(),
                           ],
                           1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "apps-users-edit",
-                                params: { id: data.item.id },
-                              },
-                            },
-                          },
-                          [
-                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Edit"),
-                            ]),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          [
-                            _c("feather-icon", {
-                              attrs: { icon: "TrashIcon" },
-                            }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Delete"),
-                            ]),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                  ]
-                },
-              },
-            ]),
-          }),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "mx-2 mb-2" },
-            [
-              _c(
-                "b-row",
-                [
-                  _c(
-                    "b-col",
-                    {
-                      staticClass:
-                        "d-flex align-items-center justify-content-center justify-content-sm-start",
-                      attrs: { cols: "12", sm: "6" },
-                    },
-                    [
-                      _c("span", { staticClass: "text-muted" }, [
-                        _vm._v(
-                          "Showing " +
-                            _vm._s(_vm.dataMeta.from) +
-                            " to " +
-                            _vm._s(_vm.dataMeta.to) +
-                            " of " +
-                            _vm._s(_vm.dataMeta.of) +
-                            " entries"
                         ),
                       ]),
-                    ]
+                    ],
+                    1
                   ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("b-table", {
+                ref: "refUserListTable",
+                staticClass: "position-relative",
+                attrs: {
+                  items: _vm.fetchUsers,
+                  responsive: "",
+                  fields: _vm.tableColumns,
+                  "primary-key": "id",
+                  "sort-by": _vm.sortBy,
+                  "show-empty": "",
+                  "empty-text": "Nenhum utilizador registado",
+                  "sort-desc": _vm.isSortDirDesc,
+                },
+                on: {
+                  "update:sortBy": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sort-by": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sortDesc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                  "update:sort-desc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                },
+                scopedSlots: _vm._u(
+                  [
                     {
-                      staticClass:
-                        "d-flex align-items-center justify-content-center justify-content-sm-end",
-                      attrs: { cols: "12", sm: "6" },
+                      key: "cell(user)",
+                      fn: function (data) {
+                        return [
+                          _c(
+                            "b-media",
+                            {
+                              attrs: { "vertical-align": "center" },
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "aside",
+                                    fn: function () {
+                                      return [
+                                        _c("b-avatar", {
+                                          attrs: {
+                                            size: "32",
+                                            src: data.item.avatar,
+                                            text: _vm.avatarText(
+                                              data.item.person.nome_completo
+                                            ),
+                                            variant:
+                                              "light-" +
+                                              _vm.resolveUserRoleVariant(
+                                                data.item.role
+                                              ),
+                                            to: {
+                                              name: "apps-users-view",
+                                              params: { id: data.item.id },
+                                            },
+                                          },
+                                        }),
+                                      ]
+                                    },
+                                    proxy: true,
+                                  },
+                                ],
+                                null,
+                                true
+                              ),
+                            },
+                            [
+                              _vm._v(" "),
+                              _c(
+                                "b-link",
+                                {
+                                  staticClass:
+                                    "font-weight-bold d-block text-nowrap",
+                                  attrs: {
+                                    to: {
+                                      name: "apps-users-view",
+                                      params: { id: data.item.id },
+                                    },
+                                  },
+                                },
+                                [
+                                  _vm._v(
+                                    "\n            " +
+                                      _vm._s(data.item.person.nome_completo) +
+                                      "\n          "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("small", { staticClass: "text-muted" }, [
+                                _vm._v("@" + _vm._s(data.item.username)),
+                              ]),
+                            ],
+                            1
+                          ),
+                        ]
+                      },
                     },
+                    {
+                      key: "cell(role)",
+                      fn: function (data) {
+                        return [
+                          _c(
+                            "div",
+                            { staticClass: "text-nowrap" },
+                            [
+                              _c("feather-icon", {
+                                staticClass: "mr-50",
+                                class:
+                                  "text-" +
+                                  _vm.resolveUserRoleVariant(data.item.role),
+                                attrs: {
+                                  icon: _vm.resolveUserRoleIcon(data.item.role),
+                                  size: "18",
+                                },
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "align-text-top text-capitalize",
+                                },
+                                [_vm._v(_vm._s(data.item.roles[0].name))]
+                              ),
+                            ],
+                            1
+                          ),
+                        ]
+                      },
+                    },
+                    {
+                      key: "cell(status)",
+                      fn: function (data) {
+                        return [
+                          _c(
+                            "b-badge",
+                            {
+                              staticClass: "text-capitalize",
+                              attrs: {
+                                pill: "",
+                                variant:
+                                  "light-" +
+                                  _vm.resolveUserStatusVariant(
+                                    data.item.is_active
+                                  ),
+                              },
+                            },
+                            [
+                              data.item.is_active === 1
+                                ? _c("span", [_vm._v("Activo")])
+                                : _c("span", [_vm._v("Inactivo")]),
+                            ]
+                          ),
+                        ]
+                      },
+                    },
+                    {
+                      key: "cell(actions)",
+                      fn: function (data) {
+                        return [
+                          _c(
+                            "b-dropdown",
+                            {
+                              attrs: {
+                                variant: "link",
+                                "no-caret": "",
+                                right: _vm.$store.state.appConfig.isRTL,
+                              },
+                              scopedSlots: _vm._u(
+                                [
+                                  _vm.can("Edit All Users")
+                                    ? {
+                                        key: "button-content",
+                                        fn: function () {
+                                          return [
+                                            _c("feather-icon", {
+                                              staticClass:
+                                                "align-middle text-body",
+                                              attrs: {
+                                                icon: "MoreVerticalIcon",
+                                                size: "16",
+                                              },
+                                            }),
+                                          ]
+                                        },
+                                        proxy: true,
+                                      }
+                                    : null,
+                                ],
+                                null,
+                                true
+                              ),
+                            },
+                            [
+                              _vm._v(" "),
+                              _c(
+                                "b-dropdown-item",
+                                {
+                                  attrs: {
+                                    to: {
+                                      name: "apps-users-view",
+                                      params: { id: data.item.id },
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("feather-icon", {
+                                    attrs: { icon: "FileTextIcon" },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "align-middle ml-50" },
+                                    [_vm._v("Details")]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-dropdown-item",
+                                {
+                                  attrs: {
+                                    to: {
+                                      name: "apps-users-edit",
+                                      params: { id: data.item.id },
+                                    },
+                                  },
+                                },
+                                [
+                                  _c("feather-icon", {
+                                    attrs: { icon: "EditIcon" },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "align-middle ml-50" },
+                                    [_vm._v("Edit")]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-dropdown-item",
+                                [
+                                  _c("feather-icon", {
+                                    attrs: { icon: "TrashIcon" },
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "align-middle ml-50" },
+                                    [_vm._v("Delete")]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ]
+                      },
+                    },
+                  ],
+                  null,
+                  false,
+                  4280215962
+                ),
+              }),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mx-2 mb-2" },
+                [
+                  _c(
+                    "b-row",
                     [
-                      _c("b-pagination", {
-                        staticClass: "mb-0 mt-1 mt-sm-0",
-                        attrs: {
-                          "total-rows": _vm.totalUsers,
-                          "per-page": _vm.perPage,
-                          "first-number": "",
-                          "last-number": "",
-                          "prev-class": "prev-item",
-                          "next-class": "next-item",
+                      _c(
+                        "b-col",
+                        {
+                          staticClass:
+                            "d-flex align-items-center justify-content-center justify-content-sm-start",
+                          attrs: { cols: "12", sm: "6" },
                         },
-                        scopedSlots: _vm._u([
-                          {
-                            key: "prev-text",
-                            fn: function () {
-                              return [
-                                _c("feather-icon", {
-                                  attrs: {
-                                    icon: "ChevronLeftIcon",
-                                    size: "18",
-                                  },
-                                }),
-                              ]
-                            },
-                            proxy: true,
-                          },
-                          {
-                            key: "next-text",
-                            fn: function () {
-                              return [
-                                _c("feather-icon", {
-                                  attrs: {
-                                    icon: "ChevronRightIcon",
-                                    size: "18",
-                                  },
-                                }),
-                              ]
-                            },
-                            proxy: true,
-                          },
-                        ]),
-                        model: {
-                          value: _vm.currentPage,
-                          callback: function ($$v) {
-                            _vm.currentPage = $$v
-                          },
-                          expression: "currentPage",
+                        [
+                          _c("span", { staticClass: "text-muted" }, [
+                            _vm._v(
+                              "Showing " +
+                                _vm._s(_vm.dataMeta.from) +
+                                " to " +
+                                _vm._s(_vm.dataMeta.to) +
+                                " of " +
+                                _vm._s(_vm.dataMeta.of) +
+                                " entries"
+                            ),
+                          ]),
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-col",
+                        {
+                          staticClass:
+                            "d-flex align-items-center justify-content-center justify-content-sm-end",
+                          attrs: { cols: "12", sm: "6" },
                         },
-                      }),
+                        [
+                          _c("b-pagination", {
+                            staticClass: "mb-0 mt-1 mt-sm-0",
+                            attrs: {
+                              "total-rows": _vm.totalUsers,
+                              "per-page": _vm.perPage,
+                              "first-number": "",
+                              "last-number": "",
+                              "prev-class": "prev-item",
+                              "next-class": "next-item",
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "prev-text",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        attrs: {
+                                          icon: "ChevronLeftIcon",
+                                          size: "18",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                                {
+                                  key: "next-text",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        attrs: {
+                                          icon: "ChevronRightIcon",
+                                          size: "18",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                              ],
+                              null,
+                              false,
+                              1308952388
+                            ),
+                            model: {
+                              value: _vm.currentPage,
+                              callback: function ($$v) {
+                                _vm.currentPage = $$v
+                              },
+                              expression: "currentPage",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
                     ],
                     1
                   ),
@@ -2521,10 +2549,8 @@ var render = function () {
               ),
             ],
             1
-          ),
-        ],
-        1
-      ),
+          )
+        : _vm._e(),
     ],
     1
   )

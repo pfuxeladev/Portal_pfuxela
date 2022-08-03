@@ -92,169 +92,171 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
-/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _core_comp_functions_forms_form_utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/comp-functions/forms/form-utils */ "./resources/js/src/@core/comp-functions/forms/form-utils.js");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _userStoreModule__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../userStoreModule */ "./resources/js/src/views/apps/user/userStoreModule.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _users_list_useUsersList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../users-list/useUsersList */ "./resources/js/src/views/apps/user/users-list/useUsersList.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_comp_functions_forms_form_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/comp-functions/forms/form-utils */ "./resources/js/src/@core/comp-functions/forms/form-utils.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _userStoreModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../userStoreModule */ "./resources/js/src/views/apps/user/userStoreModule.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _users_list_useUsersList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../users-list/useUsersList */ "./resources/js/src/views/apps/user/users-list/useUsersList.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 
 
@@ -267,20 +269,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BMedia: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BMedia"],
-    BAvatar: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BAvatar"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BForm"],
-    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BTable"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardHeader"],
-    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardTitle"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_4___default.a
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BMedia: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BMedia"],
+    BAvatar: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BAvatar"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormCheckbox"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_3___default.a
   },
   props: {
     userData: {
@@ -293,9 +295,10 @@ __webpack_require__.r(__webpack_exports__);
     this.getPermissions();
   },
   setup: function setup(props) {
-    var _useUsersList = Object(_users_list_useUsersList__WEBPACK_IMPORTED_MODULE_10__["default"])(),
+    var _useUsersList = Object(_users_list_useUsersList__WEBPACK_IMPORTED_MODULE_11__["default"])(),
         resolveUserRoleVariant = _useUsersList.resolveUserRoleVariant;
 
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_5__["useToast"])();
     var roleOptions = [{
       name: '',
       id: null
@@ -307,12 +310,12 @@ __webpack_require__.r(__webpack_exports__);
       label: 'Inactive',
       value: false
     }];
-    var permissionsData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(null); // ? Demo Purpose => Update image on click of update
+    var permissionsData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_7__["ref"])(null); // ? Demo Purpose => Update image on click of update
 
-    var refInputEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(null);
-    var previewEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(null);
+    var refInputEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_7__["ref"])(null);
+    var previewEl = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_7__["ref"])(null);
 
-    var _useInputImageRendere = Object(_core_comp_functions_forms_form_utils__WEBPACK_IMPORTED_MODULE_5__["useInputImageRenderer"])(refInputEl, function (base64) {
+    var _useInputImageRendere = Object(_core_comp_functions_forms_form_utils__WEBPACK_IMPORTED_MODULE_4__["useInputImageRenderer"])(refInputEl, function (base64) {
       // eslint-disable-next-line no-param-reassign
       props.userData.avatar = base64;
     }),
@@ -336,20 +339,32 @@ __webpack_require__.r(__webpack_exports__);
 
     var USER_APP_STORE_MODULE_NAME = 'app-user'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(USER_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(USER_APP_STORE_MODULE_NAME, _userStoreModule__WEBPACK_IMPORTED_MODULE_7__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(USER_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_10__["default"].registerModule(USER_APP_STORE_MODULE_NAME, _userStoreModule__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(USER_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].unregisterModule(USER_APP_STORE_MODULE_NAME);
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_7__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(USER_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_10__["default"].unregisterModule(USER_APP_STORE_MODULE_NAME);
     });
 
     function updateUser() {
-      var _this3 = this;
-
-      this.$http.put("/api/users/".concat(_router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.id), this.userData).then(function (response) {
-        _this3.userData.value = response.data;
+      this.$http.put("/api/users/".concat(_router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.id), this.userData).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+          props: {
+            title: response.data.success,
+            icon: "CheckSquareIcon",
+            variant: "success"
+          }
+        });
       })["catch"](function (error) {
         if (error.response.status === 404) {
-          _this3.userData.value = undefined;
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+            props: {
+              title: error.response.data.erro,
+              icon: "AlertTriangleIcon",
+              variant: "danger"
+            }
+          });
         }
       });
     }
@@ -358,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
       getRoles: getRoles,
       getPermissions: getPermissions,
       resolveUserRoleVariant: resolveUserRoleVariant,
-      avatarText: _core_utils_filter__WEBPACK_IMPORTED_MODULE_3__["avatarText"],
+      avatarText: _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__["avatarText"],
       roleOptions: roleOptions,
       statusOptions: statusOptions,
       permissionsData: permissionsData,
@@ -367,10 +382,10 @@ __webpack_require__.r(__webpack_exports__);
       previewEl: previewEl,
       inputImageRenderer: inputImageRenderer,
       updateUser: updateUser,
-      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({
-        username: this.userData.name,
-        nome_completo: this.userData.person.nome_completo,
-        role_id: this.userData.roles.id,
+      form: new vform__WEBPACK_IMPORTED_MODULE_1__["default"]({
+        username: '',
+        nome_completo: '',
+        role_id: '',
         permissions: ''
       })
     };
@@ -1463,11 +1478,11 @@ var render = function () {
                           "input-id": "user-role",
                         },
                         model: {
-                          value: _vm.userData.roles.id,
+                          value: _vm.userData.role_id,
                           callback: function ($$v) {
-                            _vm.$set(_vm.userData.roles, "id", $$v)
+                            _vm.$set(_vm.userData, "role_id", $$v)
                           },
-                          expression: "userData.roles.id",
+                          expression: "userData.role_id",
                         },
                       }),
                     ],
@@ -1559,11 +1574,11 @@ var render = function () {
                                     checked: _vm.userData.can[p.name],
                                   },
                                   model: {
-                                    value: _vm.userData.permissions[i],
+                                    value: _vm.userData.permissions,
                                     callback: function ($$v) {
-                                      _vm.$set(_vm.userData.permissions, i, $$v)
+                                      _vm.$set(_vm.userData, "permissions", $$v)
                                     },
-                                    expression: "userData.permissions[i]",
+                                    expression: "userData.permissions",
                                   },
                                 },
                                 [

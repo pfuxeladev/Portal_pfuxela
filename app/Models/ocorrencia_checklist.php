@@ -14,4 +14,8 @@ class ocorrencia_checklist extends Model
         'situacao',
         'checklists_id'
     ];
+
+    public function checkists(){
+        return $this->belongsTo(checklists::class, 'checklists_id', 'id');
+    }
 }

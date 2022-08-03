@@ -44,6 +44,9 @@ class RotaController extends Controller
             'tipoRota'=>'required',
             'projecto_id'=>'required|integer'
         ], ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]);
+        if(Rota::where('nome_rota', $request->nome_rota)->first()){
+            return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
+        }
 
  if(Rota::where('nome_rota', $request->nome_rota)->first()){
             return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);

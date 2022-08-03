@@ -342,7 +342,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     addCheckListOut: function addCheckListOut(ctx, CheckListOutData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/AutorizarSaida', CheckListOutData).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/CheckListOut', CheckListOutData).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -373,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     addCheckListIn: function addCheckListIn(ctx, CheckListInData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/AutorizarEntrada', CheckListInData).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/CheckListIn', CheckListInData).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

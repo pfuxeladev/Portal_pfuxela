@@ -11,6 +11,11 @@ class Viatura extends Model
 
     protected $guard = 'api';
 
+    protected $fillable = [
+        'qtd_disponivel',
+        'kilometragem'
+    ];
+
     public function marca(){
         return $this->belongsTo(marca::class);
     }

@@ -559,7 +559,7 @@ __webpack_require__.r(__webpack_exports__);
       var name = _ref2.name,
           queryParams = _ref2.queryParams;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_2__["default"].get("/api/RelatorioProjecto/".concat(name), {
+        _axios__WEBPACK_IMPORTED_MODULE_2__["default"].post("/api/RelatorioProjecto/".concat(name), {
           params: queryParams
         }).then(function (response) {
           return resolve(response);

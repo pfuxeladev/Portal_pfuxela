@@ -85,7 +85,7 @@
             <b-col></b-col>
           </b-row>
         </div>
-        <b-card-body>
+        <b-card-body v-if="can('View Report')">
           <b-row>
             <b-col cols="3">
               <b-button variant="outline-primary" @click="imprimir()"
@@ -139,7 +139,10 @@
                   {{ data.item.ordem.bombas.nome_bombas }}
                 </template>
                 <template #cell(autor)="data">
-                  {{ data.item.ordem.approved_by.name }}
+                    <span v-if="data.item.ordem.approved_by !==null">
+                    {{ data.item.ordem.approved_by.name }}
+                    </span>
+
                 </template>
                 <template #cell(Subtotal)="data">
                   {{ data.item.preco_cunsumo | toCurrency }}
@@ -312,13 +315,15 @@ export default {
 
     function imprimir() {
       const newLocal = 'download';
+    //   alert(this.intervalo)
       if (this.intervalo) {
         this.$http
-          .post('/api/printRelatorio', this.intervalo, {
+          .post('/api/printRelatorio', { intervalo: this.intervalo }, {
             responseType: 'blob',
             Accept: 'application/pdf',
           })
           .then((response) => {
+            // console.log(response.data)
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
                 type: 'application/pdf',
@@ -332,7 +337,7 @@ export default {
           });
       } else if (this.searchDatas !== '') {
         this.$http
-          .post('/api/printRelatorio', this.searchDatas, {
+          .post('/api/printRelatorio', { searchDatas: this.searchDatas }, {
             responseType: 'blob',
             Accept: 'application/pdf',
           })
@@ -350,7 +355,25 @@ export default {
           });
       } else if (this.dateReport !== '') {
         this.$http
-          .post('/api/printRelatorio', this.dateReport, {
+          .post('/api/printRelatorio', { dateReport: this.dateReport }, {
+            responseType: 'blob',
+            Accept: 'application/pdf',
+          })
+          .then((response) => {
+            const fileURL = window.URL.createObjectURL(
+              new Blob([response.data], {
+                type: 'application/pdf',
+              })
+            );
+            const fileLink = document.createElement('a');
+            fileLink.href = fileURL;
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+            document.body.appendChild(fileLink);
+            fileLink.click();
+          });
+      } else if (this.dateReport !== '' && this.intervalo !== '' && this.searchDatas !== '') {
+        this.$http
+          .post('/api/printRelatorio', {dateReport: this.dateReport, intervalo: this.intervalo, searchDatas: this.searchDatas }, {
             responseType: 'blob',
             Accept: 'application/pdf',
           })
@@ -367,7 +390,7 @@ export default {
             fileLink.click();
           });
       } else {
-        this.$http
+         this.$http
           .post('/api/printRelatorio', {
             responseType: 'blob',
             Accept: 'application/pdf',

@@ -3,8 +3,9 @@
     <b-card no-body>
       <div class="mb-2">
         <b-row>
-          <b-col>
+          <b-col cols="12">
             <b-link
+            v-if="can('Create Checklist_out')"
               :to="{ name: 'CheckList-Out' }"
               class="btn btn-outline-primary"
             >
@@ -68,7 +69,7 @@
           {{ data.item.tipo_saida }}
         </template>
         <template #cell(acções)="data">
-            <b-dropdown v-if="data.item.viatura.locate !== 'IN'" variant="link" no-caret :right="$store.state.appConfig.isRTL">
+            <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>
@@ -77,7 +78,7 @@
                     <span class="align-middle ml-50">Detalhes</span>
                 </b-dropdown-item>
 
-                <b-dropdown-item  :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
+                <b-dropdown-item v-if="data.item.viatura.locate === 'OUT'" :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
                     <feather-icon icon="EditIcon" />
                     <span class="align-middle ml-50">Dar entrada</span>
                 </b-dropdown-item>

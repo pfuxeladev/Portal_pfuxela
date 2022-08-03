@@ -267,6 +267,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -337,13 +340,16 @@ __webpack_require__.r(__webpack_exports__);
     }];
 
     function imprimir() {
-      var newLocal = 'download';
+      var newLocal = 'download'; //   alert(this.intervalo)
 
       if (this.intervalo) {
-        this.$http.post('/api/printRelatorio', this.intervalo, {
+        this.$http.post('/api/printRelatorio', {
+          intervalo: this.intervalo
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
+          // console.log(response.data)
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
             type: 'application/pdf'
           }));
@@ -354,7 +360,9 @@ __webpack_require__.r(__webpack_exports__);
           fileLink.click();
         });
       } else if (this.searchDatas !== '') {
-        this.$http.post('/api/printRelatorio', this.searchDatas, {
+        this.$http.post('/api/printRelatorio', {
+          searchDatas: this.searchDatas
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
@@ -368,7 +376,27 @@ __webpack_require__.r(__webpack_exports__);
           fileLink.click();
         });
       } else if (this.dateReport !== '') {
-        this.$http.post('/api/printRelatorio', this.dateReport, {
+        this.$http.post('/api/printRelatorio', {
+          dateReport: this.dateReport
+        }, {
+          responseType: 'blob',
+          Accept: 'application/pdf'
+        }).then(function (response) {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data], {
+            type: 'application/pdf'
+          }));
+          var fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        });
+      } else if (this.dateReport !== '' && this.intervalo !== '' && this.searchDatas !== '') {
+        this.$http.post('/api/printRelatorio', {
+          dateReport: this.dateReport,
+          intervalo: this.intervalo,
+          searchDatas: this.searchDatas
+        }, {
           responseType: 'blob',
           Accept: 'application/pdf'
         }).then(function (response) {
@@ -981,371 +1009,412 @@ var render = function () {
               1
             ),
             _vm._v(" "),
-            _c(
-              "b-card-body",
-              [
-                _c(
-                  "b-row",
+            _vm.can("View Report")
+              ? _c(
+                  "b-card-body",
                   [
                     _c(
-                      "b-col",
-                      { attrs: { cols: "3" } },
+                      "b-row",
                       [
                         _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-primary" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.imprimir()
-                              },
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-print" }),
-                            _vm._v(" Imprimir"),
-                          ]
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      {
-                        staticClass: "table-responsive",
-                        attrs: { cols: "12", xl: "12", md: "12" },
-                      },
-                      [
-                        _c("b-table", {
-                          ref: "RelatorioGeral",
-                          attrs: {
-                            items: _vm.generalReport,
-                            fields: _vm.fieldColumns,
-                            "primary-key": "id",
-                            "sort-by": _vm.sortBy,
-                            "show-empty": "",
-                            "empty-text": "Nenhum dado encontrado",
-                            "sort-desc": _vm.isSortDirDesc,
-                            "head-variant": "light",
-                          },
-                          on: {
-                            "update:sortBy": function ($event) {
-                              _vm.sortBy = $event
-                            },
-                            "update:sort-by": function ($event) {
-                              _vm.sortBy = $event
-                            },
-                            "update:sortDesc": function ($event) {
-                              _vm.isSortDirDesc = $event
-                            },
-                            "update:sort-desc": function ($event) {
-                              _vm.isSortDirDesc = $event
-                            },
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "cell(ordem)",
-                              fn: function (data) {
-                                return [
-                                  data.item.ordem !== null
-                                    ? _c("span", [
-                                        _vm._v(
-                                          "\n                  " +
-                                            _vm._s(
-                                              data.item.ordem.codigo_ordem
-                                            ) +
-                                            "\n                "
-                                        ),
-                                      ])
-                                    : _vm._e(),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(Data_de_emissao)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm.dateTime(data.item.ordem.updated_at)
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(viatura_matricula)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.viatura.matricula) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(combustivel)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        data.item.viatura.tipo_combustivel
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(qtd)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.qtd_abastecida) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(preço)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm._f("toCurrency")(
-                                          data.item.preco_cunsumo /
-                                            data.item.qtd_abastecida
-                                        )
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(rotas_tomadas)",
-                              fn: function (data) {
-                                return _vm._l(
-                                  data.item.ordem_viatura_rota,
-                                  function (rotas, i) {
-                                    return _c("div", { key: "A" + i }, [
-                                      _c("span", { staticClass: "mr-1" }, [
-                                        _vm._v(_vm._s(rotas.rota.nome_rota)),
-                                      ]),
-                                    ])
-                                  }
-                                )
-                              },
-                            },
-                            {
-                              key: "cell(bombas)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        data.item.ordem.bombas.nome_bombas
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(autor)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.ordem.approved_by.name) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(Subtotal)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm._f("toCurrency")(
-                                          data.item.preco_cunsumo
-                                        )
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(acção)",
-                              fn: function (data) {
-                                return [
-                                  _c(
-                                    "b-dropdown",
-                                    {
-                                      attrs: {
-                                        variant: "link",
-                                        "no-caret": "",
-                                        right: _vm.$store.state.appConfig.isRTL,
-                                      },
-                                      scopedSlots: _vm._u(
-                                        [
-                                          {
-                                            key: "button-content",
-                                            fn: function () {
-                                              return [
-                                                _c("feather-icon", {
-                                                  staticClass:
-                                                    "align-middle text-body",
-                                                  attrs: {
-                                                    icon: "MoreVerticalIcon",
-                                                    size: "16",
-                                                  },
-                                                }),
-                                              ]
-                                            },
-                                            proxy: true,
-                                          },
-                                        ],
-                                        null,
-                                        true
-                                      ),
-                                    },
-                                    [
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: {
-                                            to: {
-                                              name: "supply-details",
-                                              params: {
-                                                refs: data.item.ordem.refs,
-                                              },
-                                            },
-                                          },
-                                        },
-                                        [
-                                          _c("feather-icon", {
-                                            attrs: { icon: "FileTextIcon" },
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "span",
-                                            {
-                                              staticClass: "align-middle ml-50",
-                                            },
-                                            [_vm._v("Details")]
-                                          ),
-                                        ],
-                                        1
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]
-                              },
-                            },
-                          ]),
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "mx-2 mb-2" },
+                          "b-col",
+                          { attrs: { cols: "3" } },
                           [
                             _c(
-                              "b-row",
+                              "b-button",
+                              {
+                                attrs: { variant: "outline-primary" },
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.imprimir()
+                                  },
+                                },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-print" }),
+                                _vm._v(" Imprimir"),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          {
+                            staticClass: "table-responsive",
+                            attrs: { cols: "12", xl: "12", md: "12" },
+                          },
+                          [
+                            _c("b-table", {
+                              ref: "RelatorioGeral",
+                              attrs: {
+                                items: _vm.generalReport,
+                                fields: _vm.fieldColumns,
+                                "primary-key": "id",
+                                "sort-by": _vm.sortBy,
+                                "show-empty": "",
+                                "empty-text": "Nenhum dado encontrado",
+                                "sort-desc": _vm.isSortDirDesc,
+                                "head-variant": "light",
+                              },
+                              on: {
+                                "update:sortBy": function ($event) {
+                                  _vm.sortBy = $event
+                                },
+                                "update:sort-by": function ($event) {
+                                  _vm.sortBy = $event
+                                },
+                                "update:sortDesc": function ($event) {
+                                  _vm.isSortDirDesc = $event
+                                },
+                                "update:sort-desc": function ($event) {
+                                  _vm.isSortDirDesc = $event
+                                },
+                              },
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "cell(ordem)",
+                                    fn: function (data) {
+                                      return [
+                                        data.item.ordem !== null
+                                          ? _c("span", [
+                                              _vm._v(
+                                                "\n                  " +
+                                                  _vm._s(
+                                                    data.item.ordem.codigo_ordem
+                                                  ) +
+                                                  "\n                "
+                                              ),
+                                            ])
+                                          : _vm._e(),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(Data_de_emissao)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm.dateTime(
+                                                data.item.ordem.updated_at
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(viatura_matricula)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.viatura.matricula
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(combustivel)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.viatura.tipo_combustivel
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(qtd)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(data.item.qtd_abastecida) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(preço)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm._f("toCurrency")(
+                                                data.item.preco_cunsumo /
+                                                  data.item.qtd_abastecida
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(rotas_tomadas)",
+                                    fn: function (data) {
+                                      return _vm._l(
+                                        data.item.ordem_viatura_rota,
+                                        function (rotas, i) {
+                                          return _c("div", { key: "A" + i }, [
+                                            _c(
+                                              "span",
+                                              { staticClass: "mr-1" },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(rotas.rota.nome_rota)
+                                                ),
+                                              ]
+                                            ),
+                                          ])
+                                        }
+                                      )
+                                    },
+                                  },
+                                  {
+                                    key: "cell(bombas)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.ordem.bombas.nome_bombas
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(autor)",
+                                    fn: function (data) {
+                                      return [
+                                        data.item.ordem.approved_by !== null
+                                          ? _c("span", [
+                                              _vm._v(
+                                                "\n                  " +
+                                                  _vm._s(
+                                                    data.item.ordem.approved_by
+                                                      .name
+                                                  ) +
+                                                  "\n                  "
+                                              ),
+                                            ])
+                                          : _vm._e(),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(Subtotal)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm._f("toCurrency")(
+                                                data.item.preco_cunsumo
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(acção)",
+                                    fn: function (data) {
+                                      return [
+                                        _c(
+                                          "b-dropdown",
+                                          {
+                                            attrs: {
+                                              variant: "link",
+                                              "no-caret": "",
+                                              right:
+                                                _vm.$store.state.appConfig
+                                                  .isRTL,
+                                            },
+                                            scopedSlots: _vm._u(
+                                              [
+                                                {
+                                                  key: "button-content",
+                                                  fn: function () {
+                                                    return [
+                                                      _c("feather-icon", {
+                                                        staticClass:
+                                                          "align-middle text-body",
+                                                        attrs: {
+                                                          icon: "MoreVerticalIcon",
+                                                          size: "16",
+                                                        },
+                                                      }),
+                                                    ]
+                                                  },
+                                                  proxy: true,
+                                                },
+                                              ],
+                                              null,
+                                              true
+                                            ),
+                                          },
+                                          [
+                                            _vm._v(" "),
+                                            _c(
+                                              "b-dropdown-item",
+                                              {
+                                                attrs: {
+                                                  to: {
+                                                    name: "supply-details",
+                                                    params: {
+                                                      refs: data.item.ordem
+                                                        .refs,
+                                                    },
+                                                  },
+                                                },
+                                              },
+                                              [
+                                                _c("feather-icon", {
+                                                  attrs: {
+                                                    icon: "FileTextIcon",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    staticClass:
+                                                      "align-middle ml-50",
+                                                  },
+                                                  [_vm._v("Details")]
+                                                ),
+                                              ],
+                                              1
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                ],
+                                null,
+                                false,
+                                1832948982
+                              ),
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mx-2 mb-2" },
                               [
                                 _c(
-                                  "b-col",
-                                  {
-                                    staticClass:
-                                      "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-start\n                  ",
-                                    attrs: { cols: "12", sm: "8" },
-                                  },
+                                  "b-row",
                                   [
-                                    _c("span", { staticClass: "text-muted" }, [
-                                      _vm._v(
-                                        "mostrar " +
-                                          _vm._s(_vm.dataHistory.from) +
-                                          " de\n                    " +
-                                          _vm._s(_vm.dataHistory.to) +
-                                          " para\n                    " +
-                                          _vm._s(_vm.dataHistory.of) +
-                                          " entradas"
-                                      ),
-                                    ]),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "b-col",
-                                  {
-                                    staticClass:
-                                      "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-end\n                  ",
-                                    attrs: { cols: "12", sm: "4" },
-                                  },
-                                  [
-                                    _c("b-pagination", {
-                                      staticClass: "mb-0 mt-1 mt-sm-0",
-                                      attrs: {
-                                        "total-rows": _vm.totalHistoricos,
-                                        "per-page": _vm.perPage,
-                                        "first-number": "",
-                                        "last-number": "",
-                                        "prev-class": "prev-item",
-                                        "next-class": "next-item",
+                                    _c(
+                                      "b-col",
+                                      {
+                                        staticClass:
+                                          "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-start\n                  ",
+                                        attrs: { cols: "12", sm: "8" },
                                       },
-                                      scopedSlots: _vm._u([
-                                        {
-                                          key: "prev-text",
-                                          fn: function () {
-                                            return [
-                                              _c("feather-icon", {
-                                                attrs: {
-                                                  icon: "ChevronLeftIcon",
-                                                  size: "18",
-                                                },
-                                              }),
-                                            ]
-                                          },
-                                          proxy: true,
-                                        },
-                                        {
-                                          key: "next-text",
-                                          fn: function () {
-                                            return [
-                                              _c("feather-icon", {
-                                                attrs: {
-                                                  icon: "ChevronRightIcon",
-                                                  size: "18",
-                                                },
-                                              }),
-                                            ]
-                                          },
-                                          proxy: true,
-                                        },
-                                      ]),
-                                      model: {
-                                        value: _vm.currentPage,
-                                        callback: function ($$v) {
-                                          _vm.currentPage = $$v
-                                        },
-                                        expression: "currentPage",
+                                      [
+                                        _c(
+                                          "span",
+                                          { staticClass: "text-muted" },
+                                          [
+                                            _vm._v(
+                                              "mostrar " +
+                                                _vm._s(_vm.dataHistory.from) +
+                                                " de\n                    " +
+                                                _vm._s(_vm.dataHistory.to) +
+                                                " para\n                    " +
+                                                _vm._s(_vm.dataHistory.of) +
+                                                " entradas"
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-col",
+                                      {
+                                        staticClass:
+                                          "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-end\n                  ",
+                                        attrs: { cols: "12", sm: "4" },
                                       },
-                                    }),
+                                      [
+                                        _c("b-pagination", {
+                                          staticClass: "mb-0 mt-1 mt-sm-0",
+                                          attrs: {
+                                            "total-rows": _vm.totalHistoricos,
+                                            "per-page": _vm.perPage,
+                                            "first-number": "",
+                                            "last-number": "",
+                                            "prev-class": "prev-item",
+                                            "next-class": "next-item",
+                                          },
+                                          scopedSlots: _vm._u(
+                                            [
+                                              {
+                                                key: "prev-text",
+                                                fn: function () {
+                                                  return [
+                                                    _c("feather-icon", {
+                                                      attrs: {
+                                                        icon: "ChevronLeftIcon",
+                                                        size: "18",
+                                                      },
+                                                    }),
+                                                  ]
+                                                },
+                                                proxy: true,
+                                              },
+                                              {
+                                                key: "next-text",
+                                                fn: function () {
+                                                  return [
+                                                    _c("feather-icon", {
+                                                      attrs: {
+                                                        icon: "ChevronRightIcon",
+                                                        size: "18",
+                                                      },
+                                                    }),
+                                                  ]
+                                                },
+                                                proxy: true,
+                                              },
+                                            ],
+                                            null,
+                                            false,
+                                            1308952388
+                                          ),
+                                          model: {
+                                            value: _vm.currentPage,
+                                            callback: function ($$v) {
+                                              _vm.currentPage = $$v
+                                            },
+                                            expression: "currentPage",
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    ),
                                   ],
                                   1
                                 ),
@@ -1360,10 +1429,8 @@ var render = function () {
                     ),
                   ],
                   1
-                ),
-              ],
-              1
-            ),
+                )
+              : _vm._e(),
           ],
           1
         ),

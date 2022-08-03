@@ -78,7 +78,7 @@
         <b-col cols="12" md="4">
           <b-form-group label="User Role" label-for="user-role">
             <v-select
-              v-model="userData.roles.id"
+              v-model="userData.role_id"
               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
               label="name"
               :options="roleOptions"
@@ -115,7 +115,7 @@
                 class="mb-1"
               >
                 <b-form-checkbox
-                  v-model="userData.permissions[i]"
+                  v-model="userData.permissions"
                   v-bind:value="p.id"
                   :checked="userData.can[p.name]"
                 >
@@ -167,6 +167,8 @@ import Form from 'vform'
 import { avatarText } from '@core/utils/filter'
 import vSelect from 'vue-select'
 import { useInputImageRenderer } from '@core/comp-functions/forms/form-utils'
+import { useToast } from "vue-toastification/composition";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
 import { ref, onUnmounted } from '@vue/composition-api'
 import userStoreModule from '../userStoreModule'
 import router from '@/router'
@@ -202,7 +204,7 @@ export default {
   },
   setup(props) {
     const { resolveUserRoleVariant } = useUsersList()
-
+    const toast = useToast()
     const roleOptions = [
       {
         name: '',
@@ -258,10 +260,26 @@ export default {
 
     function updateUser() {
       this.$http.put(`/api/users/${router.currentRoute.params.id}`, this.userData)
-        .then(response => { this.userData.value = response.data })
+        .then(response => {
+        toast({
+            component: ToastificationContent,
+            props: {
+              title: response.data.success,
+              icon: "CheckSquareIcon",
+              variant: "success",
+            },
+          })
+         })
         .catch(error => {
           if (error.response.status === 404) {
-            this.userData.value = undefined
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: error.response.data.erro,
+                icon: "AlertTriangleIcon",
+                variant: "danger",
+              },
+            })
           }
         })
     }
@@ -279,10 +297,10 @@ export default {
       inputImageRenderer,
       updateUser,
       form: new Form({
-        username: this.userData.name,
-        nome_completo: this.userData.person.nome_completo,
-        role_id: this.userData.roles.id,
-        permissions:'' ,
+        username: '',
+        nome_completo: '',
+        role_id: '',
+        permissions: '',
       }),
     }
   },

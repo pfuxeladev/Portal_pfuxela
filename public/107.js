@@ -150,6 +150,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -197,9 +218,6 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         text: 'Parcial',
         value: 'Parcial'
-      }, {
-        text: 'Em Falta',
-        value: 'Em Falta'
       }]
     };
   },
@@ -271,6 +289,7 @@ __webpack_require__.r(__webpack_exports__);
       relatorio_geral: '',
       is_incidente: false,
       anexos: null,
+      litros_tanque: '',
       checklist_var: {
         id: null,
         checklist_name: '',
@@ -304,7 +323,8 @@ __webpack_require__.r(__webpack_exports__);
     function OnSubmit() {
       var _this6 = this;
 
-      //   form.value.anexos = formData.append('anexos', listFiles)
+      var formData = new FormData();
+      form.value.anexos = formData.append('anexos', listFiles);
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/addCheckListIn', form.value).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -948,6 +968,31 @@ var render = function () {
                         { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
                         [
                           _c(
+                            "b-form-group",
+                            { attrs: { label: "qtd actual de combustivel" } },
+                            [
+                              _c("b-form-input", {
+                                attrs: { type: "text" },
+                                model: {
+                                  value: _vm.form.litros_tanque,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.form, "litros_tanque", $$v)
+                                  },
+                                  expression: "form.litros_tanque",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
+                        [
+                          _c(
                             "b-row",
                             [
                               _c(
@@ -1008,128 +1053,205 @@ var render = function () {
                         { attrs: { cols: "12", md: "6", lg: "8", xl: "10" } },
                         [
                           _c("table", { staticClass: "table table-bordered" }, [
-                            _c("tbody", [
-                              _c("tr", [
-                                _c("td", [_vm._v("Houve algum incidente")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.is_incidente,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "is_incidente",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.is_incidente",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "tr",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: _vm.form.is_incidente === true,
-                                      expression: "form.is_incidente === true",
-                                    },
-                                  ],
-                                  attrs: { id: "rotas" },
-                                },
-                                [
-                                  _c(
-                                    "td",
-                                    { attrs: { colspan: "2" } },
-                                    [
-                                      _c(
-                                        "b-form-radio-group",
-                                        _vm._l(_vm.incidentes, function (inc) {
-                                          return _c(
-                                            "b-form-radio",
+                            _c(
+                              "tbody",
+                              [
+                                _vm._l(
+                                  _vm.form.checklist_var,
+                                  function (chk, i) {
+                                    return _c("tr", { key: "B" + i }, [
+                                      _c("td", [
+                                        _c("input", {
+                                          directives: [
                                             {
-                                              key: inc.id,
-                                              attrs: { value: inc.id },
-                                              model: {
-                                                value: _vm.form.incidente_id,
-                                                callback: function ($$v) {
-                                                  _vm.$set(
-                                                    _vm.form,
-                                                    "incidente_id",
-                                                    $$v
-                                                  )
-                                                },
-                                                expression: "form.incidente_id",
-                                              },
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: chk.id,
+                                              expression: "chk.id",
                                             },
-                                            [
-                                              _vm._v(
-                                                "\n                        " +
-                                                  _vm._s(inc.tipo_incidente) +
-                                                  "\n                      "
-                                              ),
-                                            ]
-                                          )
+                                          ],
+                                          attrs: { type: "hidden" },
+                                          domProps: { value: chk.id },
+                                          on: {
+                                            input: function ($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                chk,
+                                                "id",
+                                                $event.target.value
+                                              )
+                                            },
+                                          },
                                         }),
+                                        _vm._v(
+                                          "\n                    " +
+                                            _vm._s(chk.checklist_name) +
+                                            "\n                  "
+                                        ),
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        [
+                                          _c(
+                                            "b-form-group",
+                                            [
+                                              _c("b-form-radio-group", {
+                                                attrs: {
+                                                  options: _vm.options,
+                                                  required: "",
+                                                },
+                                                model: {
+                                                  value: chk.opcao,
+                                                  callback: function ($$v) {
+                                                    _vm.$set(chk, "opcao", $$v)
+                                                  },
+                                                  expression: "chk.opcao",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                        ],
                                         1
                                       ),
+                                    ])
+                                  }
+                                ),
+                                _vm._v(" "),
+                                _c("tr", [
+                                  _c("td", [_vm._v("Houve algum incidente")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "td",
+                                    [
+                                      _c("b-form-checkbox", {
+                                        attrs: { switch: "", size: "lg" },
+                                        model: {
+                                          value: _vm.form.is_incidente,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.form,
+                                              "is_incidente",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "form.is_incidente",
+                                        },
+                                      }),
                                     ],
                                     1
                                   ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Relatório geral")]),
+                                ]),
                                 _vm._v(" "),
                                 _c(
-                                  "td",
-                                  [
-                                    _c("b-form-textarea", {
-                                      model: {
-                                        value: _vm.form.relatorio_geral,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "relatorio_geral",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.relatorio_geral",
+                                  "tr",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "show",
+                                        rawName: "v-show",
+                                        value: _vm.form.is_incidente === true,
+                                        expression:
+                                          "form.is_incidente === true",
                                       },
-                                    }),
-                                  ],
-                                  1
+                                    ],
+                                    attrs: { id: "rotas" },
+                                  },
+                                  [
+                                    _c(
+                                      "td",
+                                      { attrs: { colspan: "2" } },
+                                      [
+                                        _c(
+                                          "b-form-radio-group",
+                                          _vm._l(
+                                            _vm.incidentes,
+                                            function (inc) {
+                                              return _c(
+                                                "b-form-radio",
+                                                {
+                                                  key: inc.id,
+                                                  attrs: { value: inc.id },
+                                                  model: {
+                                                    value:
+                                                      _vm.form.incidente_id,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.form,
+                                                        "incidente_id",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "form.incidente_id",
+                                                  },
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                        " +
+                                                      _vm._s(
+                                                        inc.tipo_incidente
+                                                      ) +
+                                                      "\n                      "
+                                                  ),
+                                                ]
+                                              )
+                                            }
+                                          ),
+                                          1
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ]
                                 ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Anexar Ficheiros")]),
                                 _vm._v(" "),
-                                _c("td", [
-                                  _c("input", {
-                                    staticClass: "form-control",
-                                    attrs: {
-                                      type: "file",
-                                      placeholder:
-                                        "Selecione ficheiros e descarregue aqui...",
-                                      "drop-placeholder": "Drop file here...",
-                                    },
-                                    on: { input: _vm.onChange },
-                                  }),
+                                _c("tr", [
+                                  _c("td", [_vm._v("Relatório geral")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "td",
+                                    [
+                                      _c("b-form-textarea", {
+                                        model: {
+                                          value: _vm.form.relatorio_geral,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.form,
+                                              "relatorio_geral",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "form.relatorio_geral",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
                                 ]),
-                              ]),
-                            ]),
+                                _vm._v(" "),
+                                _c("tr", [
+                                  _c("td", [_vm._v("Anexar Ficheiros")]),
+                                  _vm._v(" "),
+                                  _c("td", [
+                                    _c("input", {
+                                      staticClass: "form-control",
+                                      attrs: {
+                                        type: "file",
+                                        placeholder:
+                                          "Selecione ficheiros e descarregue aqui...",
+                                        "drop-placeholder": "Drop file here...",
+                                      },
+                                      on: { input: _vm.onChange },
+                                    }),
+                                  ]),
+                                ]),
+                              ],
+                              2
+                            ),
                           ]),
                         ]
                       ),

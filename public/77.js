@@ -2532,15 +2532,18 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
-    } // addViatura(ctx, userData) {
-    //   return new Promise((resolve, reject) => {
-    //     axios
-    //       .post('/api/viatura', { user: userData })
-    //       .then(response => resolve(response))
-    //       .catch(error => reject(error))
-    //   })
-    // },
-
+    },
+    OcorrenciaViaturas: function OcorrenciaViaturas(ctx, queryParams) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/ocorrenciaViatura', {
+          params: queryParams
+        }).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    }
   }
 });
 

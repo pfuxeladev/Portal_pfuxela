@@ -86,6 +86,7 @@
                 placeholder="Search..."
               />
               <b-button
+              v-if="can('Create Ordem')"
                 variant="primary"
                 @click="showModal"
               >

@@ -24,10 +24,25 @@ class UserController extends Controller
    {
         $this->user = $user;
    }
-    public function index()
+    public function index(Request $request)
     {
-
-        return $this->user->with(['departamento', 'person', 'roles'])->paginate(10)->except(auth()->user()->id);
+        if($request->perPage){
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'desc')->paginate($request->perPage)->except(auth()->user()->id);
+        }else if($request->q && $request->perPage){
+            return $this->user->with(['departamento', 'person', 'roles'])->join('people', 'users.person_id', '=', 'people.id')->join('departamentos', 'users.departamento_id', '=', 'departamentos.id')
+            ->where('users.name', 'like', '%'. $request->q . '%')
+            ->orWhere('users.email', 'like', '%'.$request->q.'%')
+            ->orWhere('people.nome_completo', 'like', '%'.$request.'%')->orderBy('id', 'desc')->paginate($request->perPage)->except(auth()->user()->id);
+        }else if($request->q){
+            return $this->user->with(['departamento', 'person', 'roles'])->join('people', 'users.person_id', '=', 'people.id')->join('departamentos', 'users.departamento_id', '=', 'departamentos.id')
+            ->where('users.name', 'like', '%'. $request->q . '%')
+            ->orWhere('users.email', 'like', '%'.$request->q.'%')
+            ->orWhere('people.nome_completo', 'like', '%'.$request.'%')->orderBy('id', 'desc')->paginate(10)->except(auth()->user()->id);
+        }else if($request->sortDesc == true){
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'asc')->paginate(10)->except(auth()->user()->id);
+        }else{
+            return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'desc')->paginate(10)->except(auth()->user()->id);
+        }
     }
 
     public function permissionsIndex()
@@ -124,8 +139,6 @@ class UserController extends Controller
 
             $user->assignRole($role);
 
-            // Mail::mailer('accounts')->to($user)->send(new AccountCreated($mailData));
-
             return response()->json(['success'=>'utilizador criado']);
         }
 
@@ -149,7 +162,27 @@ class UserController extends Controller
    }
     public function update(Request $request, $id)
     {
-     return $request->all();
+     $user = User::findOrFail($id);
+
+     $person = Person::where('id', $request->person_id)->first();
+     $person->nome_completo = $request->person['nome_completo'];
+     $person->update();
+
+     $user->name = $request->name;
+     $user->email = $request->email;
+     $user->update();
+
+     $user->createToken('access_token')->accessToken;
+     if($request->role_id !== null && $request->permissions !== ''){
+        $user->assignRole($request->role_id);
+        $Role = Role::where('id', $request->role_id)->first();
+
+        $user->givePermissionTo([$request->permissions]);
+
+           $Role->givePermissionTo([$request->permissions]);
+     }
+     return response()->json(['success'=>'utilizador actualizado']);
+
     }
 
     /**

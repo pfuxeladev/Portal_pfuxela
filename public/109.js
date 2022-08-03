@@ -387,19 +387,10 @@ __webpack_require__.r(__webpack_exports__);
           }); // location.reload()
 
 
-          _this8.$Progress.finish();
+          _this8.$Progress.finish(); //   this.form.reset()
+          // eslint-disable-next-line no-restricted-globals
+          //   window.location.reload()
 
-          _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
-
-
-          _this8.$router.push({
-            name: 'supply-details',
-            params: {
-              refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
-            }
-          });
-
-          window.location.reload();
         }
       })["catch"](function (err) {
         if (err.response.status === 421) {
@@ -520,8 +511,7 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        });
-        window.location.reload();
+        }); //   window.location.reload()
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({

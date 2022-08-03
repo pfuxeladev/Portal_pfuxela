@@ -25,7 +25,7 @@ export default {
     fetchRotaProject(ctx, { name, queryParams }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/RelatorioProjecto/${name}`, { params: queryParams })
+          .post(`/api/RelatorioProjecto/${name}`, { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

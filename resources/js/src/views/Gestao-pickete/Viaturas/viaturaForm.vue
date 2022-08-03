@@ -503,6 +503,7 @@
                   </b-col>
                   <b-col cols="6">
                     <b-button
+                    v-if="can('Create Viatura')"
                       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
                       variant="success"
                       class="mr-2"

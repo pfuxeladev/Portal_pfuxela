@@ -20,8 +20,8 @@ use App\Models\Rota;
 use App\Models\rotaViatura;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
-use PDF;
-use Mail;
+use Barryvdh\DomPDF\Facade\PDF;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use Illuminate\Support\Carbon;
@@ -45,8 +45,9 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())
-            ->where('viaturas.locate', '=', 'OUT')->where('viaturas.estado', true)
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->join('checklist_in', 'checklist_in.check_list_out_id', '=', 'checklist_out.id')->whereMonth('checklist_in.created_at', date('m'))
+        ->whereYear('checklist_in.created_at', date('Y'))
+            ->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -127,13 +128,14 @@ class AbastecimentoController extends Controller
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
         foreach ($request->rota_id as $key => $rt) {
-            // $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            // ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.created_at','>=', Carbon::now()->subHours(5)->toDateTimeString())->orWhere('viaturas.locate', 'IN')->first();
-            // if (!empty($ordem_rota)) {
-            //     return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
-            // }
-        }
+            $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
 
+            // return $ordem_rota;
+            if (!empty($ordem_rota)) {
+                return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
+            }
+        }
 
         $ordemViatura = ordem_viatura::create([
             'ordem_id' => $ordem->id,
@@ -145,7 +147,9 @@ class AbastecimentoController extends Controller
         ]);
 
         //abastecer por rota
+
        $distanciaTotal = 0;
+
         $distanciaTotal = Rota::whereIn('id', $request->rota_id)->sum('distancia_km');
 
         $qtdNecessaria = $distanciaTotal * $viatura->capacidade_media;
@@ -166,7 +170,6 @@ class AbastecimentoController extends Controller
        }
 
         foreach ($request->rota_id as $key => $rt) {
-            $ordem_rota = OrdemViaturaRota::where(['rota_id' => $rt])->whereDate('created_at', Carbon::today())->get();
 
 
             $ordemViatura->ordemViaturaRota()->create([

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Models\Categoria;
 use App\Models\checklist_vars;
 use App\Models\CheckListOut;
 use App\Models\checklistOutDestination;
@@ -31,18 +32,18 @@ class CheckListOutController extends Controller
             $viatura = Viatura::where('viaturas.locate', '=', 'OUT')->where('matricula', 'like', '%' . $request->q . '%')->orWhere('kilometragem', 'like', '%' . $request->q . '%' )->first();
             return $this->checkListOut->with(['viatura', 'motorista.person'])
             ->join('motoristas', 'checklist_out.motorista_id', '=', 'motoristas.id')->join('people', 'motoristas.person_id', '=', 'people.id')
-            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 3 ))
             ->where('viatura_id', $viatura->id)
             ->orWhere('checklist_out.created_at', 'like', '%' . $request->q . '%' )
             ->orWhere('people.nome_completo', 'like', '%' . $request->q . '%' )
             ->orderBy('checklist_out.created_at', 'desc')->paginate(15);
         }else if($request->perPage){
             return $this->checkListOut->with(['viatura', 'motorista.person'])
-            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 3 ))
             ->orderBy('checklist_out.created_at', 'desc')->paginate($request->perPage);
         }else{
             return $this->checkListOut->with(['viatura', 'motorista.person'])
-            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 2 ))
+            ->whereDate('checklist_out.created_at', '>=', Carbon::today()->subDays( 3 ))
             ->orderBy('checklist_out.created_at', 'desc')->paginate(15);
         }
 
@@ -74,9 +75,14 @@ class CheckListOutController extends Controller
         ]);
 
         try {
+            // $categoria = new Categoria();
+
+            $categoria = Categoria::firstOrCreate(
+                ['nome_categoria'=>$request->categoria],
+                ['createdBy'=>auth()->user()->id]);
 
         $checklistVars->checklist_name = $request->checklist_name;
-        $checklistVars->categoria = $request->categoria;
+        $checklistVars->categoria = $categoria->id;
         $checklistVars->createdBy = auth()->user()->id;
         $checklistVars->save();
 
@@ -164,9 +170,11 @@ class CheckListOutController extends Controller
                     'checklists_id'=>$chkOc->id
                 ];
             }
-               ocorrencia_checklist::insert($ocorrencia);
+              $ocorrencia_checlist = ocorrencia_checklist::insert($ocorrencia);
                $viatura->locate = 'OUT';
                $viatura->update();
+
+
 
             //    $pdf = PDF::loadView('reportMail.ocorrencia_check', compact('checkList'))->setOptions(['defaultFont' => 'sans-serif']);
             //     $path = Storage::put('public/checklist_pdf/checkList' . $checkListOut->id . '.pdf', $pdf->output());
@@ -183,13 +191,16 @@ class CheckListOutController extends Controller
     {
         $checkListOut = $this->checkListOut->with(['viatura', 'motorista'])->where('id', $id)->first();
 
-         $chklst = checklists::join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_out_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
+         $chklst = checklists::with('ocorrencia_checklist')->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_out_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
         ->orderBy('checklist_vars.categoria', 'asc')
         ->get();
+
+        $categoria = Categoria::with('checklist_vars.checklists')->get();
 
         $dados[] = [
             'checklistOut'=>$checkListOut,
             'checklists'=>$chklst,
+            'categoria'=>$categoria
         ];
 
         return response()->json($dados, 200);

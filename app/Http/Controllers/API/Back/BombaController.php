@@ -259,7 +259,7 @@ class BombaController extends Controller
 
     }
 
-    public function RelatorioBomba(){
-        
+    public function RelatorioBomba(Request $request, $id){
+
     }
 }
