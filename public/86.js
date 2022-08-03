@@ -326,6 +326,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -940,21 +941,23 @@ var render = function () {
                     ),
                   ]),
                   _vm._v(" "),
-                  _c(
-                    "b-col",
-                    { attrs: { cols: "6", md: "3" } },
-                    [
-                      _c(
-                        "b-button",
-                        {
-                          attrs: { variant: "outline-primary" },
-                          on: { click: _vm.showModal },
-                        },
-                        [_vm._v("criar pedido de abastecimento")]
-                      ),
-                    ],
-                    1
-                  ),
+                  _vm.can("Create Abastecimento_recorrente")
+                    ? _c(
+                        "b-col",
+                        { attrs: { cols: "6", md: "3" } },
+                        [
+                          _c(
+                            "b-button",
+                            {
+                              attrs: { variant: "outline-primary" },
+                              on: { click: _vm.showModal },
+                            },
+                            [_vm._v("criar pedido de abastecimento")]
+                          ),
+                        ],
+                        1
+                      )
+                    : _vm._e(),
                 ],
                 1
               ),

@@ -24,7 +24,7 @@
 
           <!-- Search -->
           <b-col cols="12" md="6"
-            ><div v-can="'Create Viatura'">
+            ><div v-if="can('Create Viatura')">
               <div class="d-flex align-items-center justify-content-end">
                 <b-form-input
                   v-model="searchQuery"
@@ -69,6 +69,7 @@
             variant="link"
             no-caret
             :right="$store.state.appConfig.isRTL"
+            v-if="can('Update Viatura')"
           >
             <template #button-content>
               <feather-icon
@@ -85,13 +86,13 @@
             </b-dropdown-item>
 
             <b-dropdown-item
-            v-can="'Update Viatura'" :to="{ name: 'Edit-car', params: { id: data.item.id } }"
+             :to="{ name: 'Edit-car', params: { id: data.item.id } }"
             >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
             </b-dropdown-item>
             <b-dropdown-item
-            v-can="'Update Viatura'"
+
               v-if="data.item.estado == 1"
               @click="Deactivate(data.item.id)"
             >
@@ -99,7 +100,6 @@
               <span class="align-middle ml-50">desactivar</span>
             </b-dropdown-item>
             <b-dropdown-item
-            v-can="'Update Viatura'"
               v-if="data.item.estado == 0"
               @click="Activate(data.item.id)"
             >

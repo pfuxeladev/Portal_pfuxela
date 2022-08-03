@@ -33,7 +33,8 @@
               />
             </div>
           </b-col>
-          <b-col cols="6" md="3">
+
+          <b-col cols="6" md="3" v-if="can('Create Abastecimento_recorrente')">
             <b-button @click="showModal" variant="outline-primary">criar pedido de abastecimento</b-button>
           </b-col>
         </b-row>

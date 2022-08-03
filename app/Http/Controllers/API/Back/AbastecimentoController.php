@@ -45,8 +45,9 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->whereDate('checklist_out.created_at', Carbon::today())
-            ->where('viaturas.locate', '=', 'OUT')->where('viaturas.estado', true)
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->join('checklist_in', 'checklist_in.check_list_out_id', '=', 'checklist_out.id')->whereMonth('checklist_in.created_at', date('m'))
+        ->whereYear('checklist_in.created_at', date('Y'))
+            ->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
             ->select('viaturas.matricula', 'viaturas.id')->get();
     }
 
@@ -128,7 +129,9 @@ class AbastecimentoController extends Controller
         }
         foreach ($request->rota_id as $key => $rt) {
             $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.created_at','>=', Carbon::now()->subHours(5))->orWhere('viaturas.locate', 'IN')->first();
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
+
+            // return $ordem_rota;
             if (!empty($ordem_rota)) {
                 return response()->json(['erro' => 'Nao pode abastecer mais de duas viatura na mesma rota'], 421);
             }

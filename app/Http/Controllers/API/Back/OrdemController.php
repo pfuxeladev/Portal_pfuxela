@@ -351,7 +351,7 @@ class OrdemController extends Controller
 
             // return $pdf->download('Relatorio.pdf');
         }else{
-            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->paginate($request->params['perPage']);
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->paginate(10);
             return response()->json($ordem_viatura, 200);
         }
 

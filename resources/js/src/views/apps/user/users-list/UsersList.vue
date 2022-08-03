@@ -23,6 +23,7 @@
     <b-card
       no-body
       class="mb-0"
+      v-if="can('View All Users')"
     >
 
       <div class="m-2">
@@ -59,7 +60,7 @@
                 placeholder="Search..."
               />
               <b-button
-                v-can="'Create User'"
+                v-if="can('Create User')"
                 variant="primary"
                 @click="isAddNewUserSidebarActive = true"
               >
@@ -139,7 +140,7 @@
             :right="$store.state.appConfig.isRTL"
           >
 
-            <template #button-content v-can="'Edit All Users'">
+            <template #button-content v-if="can('Edit All Users')">
               <feather-icon
                 icon="MoreVerticalIcon"
                 size="16"

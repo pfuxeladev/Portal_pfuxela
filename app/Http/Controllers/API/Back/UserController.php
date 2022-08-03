@@ -139,8 +139,6 @@ class UserController extends Controller
 
             $user->assignRole($role);
 
-            // Mail::mailer('accounts')->to($user)->send(new AccountCreated($mailData));
-
             return response()->json(['success'=>'utilizador criado']);
         }
 
@@ -164,7 +162,27 @@ class UserController extends Controller
    }
     public function update(Request $request, $id)
     {
-     return $request->all();
+     $user = User::findOrFail($id);
+
+     $person = Person::where('id', $request->person_id)->first();
+     $person->nome_completo = $request->person['nome_completo'];
+     $person->update();
+
+     $user->name = $request->name;
+     $user->email = $request->email;
+     $user->update();
+
+     $user->createToken('access_token')->accessToken;
+     if($request->role_id !== null && $request->permissions !== ''){
+        $user->assignRole($request->role_id);
+        $Role = Role::where('id', $request->role_id)->first();
+
+        $user->givePermissionTo([$request->permissions]);
+
+           $Role->givePermissionTo([$request->permissions]);
+     }
+     return response()->json(['success'=>'utilizador actualizado']);
+
     }
 
     /**

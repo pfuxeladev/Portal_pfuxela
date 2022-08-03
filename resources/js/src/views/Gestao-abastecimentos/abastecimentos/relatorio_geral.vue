@@ -85,7 +85,7 @@
             <b-col></b-col>
           </b-row>
         </div>
-        <b-card-body>
+        <b-card-body v-if="can('View Report')">
           <b-row>
             <b-col cols="3">
               <b-button variant="outline-primary" @click="imprimir()"

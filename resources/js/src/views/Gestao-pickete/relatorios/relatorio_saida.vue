@@ -3,8 +3,9 @@
     <b-card no-body>
       <div class="mb-2">
         <b-row>
-          <b-col>
+          <b-col cols="12">
             <b-link
+            v-if="can('Create Checklist_out')"
               :to="{ name: 'CheckList-Out' }"
               class="btn btn-outline-primary"
             >

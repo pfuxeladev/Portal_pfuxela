@@ -372,9 +372,9 @@ export default {
           })
           // location.reload()
           this.$Progress.finish()
-          this.form.reset()
+        //   this.form.reset()
           // eslint-disable-next-line no-restricted-globals
-          window.location.reload()
+        //   window.location.reload()
         }
       }).catch(err => {
         if (err.response.status === 421) {

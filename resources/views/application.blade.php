@@ -25,10 +25,10 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
         rel="stylesheet">
     <script type="text/javascript">
-        window.Laravel =<?php echo json_encode([
-            'csrfToken' => csrf_token(),
-            'jsPermissions'=> auth()->check()?auth()->user()->jsPermissions():null
-            ]); ?>
+        window.Laravel = {
+            csrfToken: "{{ csrf_token() }}",
+            jsPermissions: {!! auth()->check()?auth()->user()->jsPermissions():null !!}
+        }
     </script>
 </head>
 

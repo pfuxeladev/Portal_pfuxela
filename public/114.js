@@ -76,6 +76,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -262,88 +268,115 @@ var render = function () {
               _vm._v(" "),
               _c("hr"),
               _vm._v(" "),
-              _c(
-                "b-row",
-                _vm._l(ent.categoria, function (chk, i) {
-                  return _c(
-                    "b-col",
-                    { key: "a" + i, staticClass: "mb-2", attrs: { cols: "3" } },
-                    [
-                      _c("h3", { staticClass: "card-title" }, [
-                        _vm._v(_vm._s(chk.nome_categoria)),
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(ent.checklists, function (checklst, k) {
-                        return _c("b-row", { key: k }, [
-                          checklst.categoria === chk.id
-                            ? _c("span", { staticClass: "ml-2" }, [
-                                _c(
-                                  "table",
-                                  { staticClass: "table table-responsive" },
-                                  [
-                                    _c("tr", [
-                                      _c("td", [
-                                        _vm._v(_vm._s(checklst.checklist_name)),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "td",
-                                        { staticClass: "text-right" },
-                                        [
-                                          checklst.opcao === "Ok"
-                                            ? _c("span", [
-                                                _c("i", {
-                                                  staticClass: "fa fa-check",
-                                                  staticStyle: {
-                                                    "font-size": "24px",
-                                                    color: "green",
-                                                  },
-                                                }),
-                                              ])
-                                            : checklst.opcao === "No"
-                                            ? _c("span", [
-                                                _c("i", {
-                                                  staticClass: "fa fa-remove",
-                                                  staticStyle: {
-                                                    "font-size": "24px",
-                                                    color: "red",
-                                                  },
-                                                }),
-                                              ])
-                                            : checklst.opcao === "Parcial"
-                                            ? _c(
-                                                "b-badge",
-                                                {
-                                                  attrs: { variant: "warning" },
-                                                },
-                                                [
-                                                  _c("i", {
-                                                    staticClass:
-                                                      "fa fa-exclamation-triangle",
-                                                    staticStyle: {
-                                                      "font-size": "48px",
-                                                      color: "orange",
+              ent.checklists !== ""
+                ? _c(
+                    "b-row",
+                    _vm._l(ent.categoria, function (chk, i) {
+                      return _c(
+                        "b-col",
+                        {
+                          key: "a" + i,
+                          staticClass: "mb-2",
+                          attrs: { cols: "3" },
+                        },
+                        [
+                          _c("h3", { staticClass: "card-title" }, [
+                            _vm._v(_vm._s(chk.nome_categoria)),
+                          ]),
+                          _vm._v(" "),
+                          _vm._l(ent.checklists, function (checklst, k) {
+                            return _c("b-row", { key: k }, [
+                              checklst.categoria === chk.id
+                                ? _c("span", { staticClass: "ml-2" }, [
+                                    _c(
+                                      "table",
+                                      { staticClass: "table table-responsive" },
+                                      [
+                                        _c("tr", [
+                                          _c("td", [
+                                            _vm._v(
+                                              _vm._s(checklst.checklist_name)
+                                            ),
+                                          ]),
+                                          _vm._v(" "),
+                                          _c(
+                                            "td",
+                                            { staticClass: "text-right" },
+                                            [
+                                              checklst.opcao === "Ok"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-check",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "green",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "No"
+                                                ? _c("span", [
+                                                    _c("i", {
+                                                      staticClass:
+                                                        "fa fa-remove",
+                                                      staticStyle: {
+                                                        "font-size": "24px",
+                                                        color: "red",
+                                                      },
+                                                    }),
+                                                  ])
+                                                : checklst.opcao === "Parcial"
+                                                ? _c(
+                                                    "b-badge",
+                                                    {
+                                                      attrs: {
+                                                        variant: "warning",
+                                                      },
                                                     },
-                                                  }),
-                                                ]
-                                              )
-                                            : _vm._e(),
-                                        ],
-                                        1
-                                      ),
-                                    ]),
-                                  ]
-                                ),
-                              ])
-                            : _vm._e(),
-                        ])
-                      }),
-                    ],
-                    2
+                                                    [
+                                                      _c("i", {
+                                                        staticClass:
+                                                          "fa fa-exclamation-triangle",
+                                                        staticStyle: {
+                                                          "font-size": "48px",
+                                                          color: "orange",
+                                                        },
+                                                      }),
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                            ],
+                                            1
+                                          ),
+                                        ]),
+                                      ]
+                                    ),
+                                  ])
+                                : _vm._e(),
+                            ])
+                          }),
+                        ],
+                        2
+                      )
+                    }),
+                    1
                   )
-                }),
-                1
-              ),
+                : _c(
+                    "b-row",
+                    [
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "3" } },
+                        [
+                          _c("b-button", { attrs: { variant: "primary" } }, [
+                            _vm._v("Verificar o estado da viatura"),
+                          ]),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
             ],
             1
           ),

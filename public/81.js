@@ -423,6 +423,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -918,19 +919,22 @@ var render = function () {
                 [
                   _c(
                     "b-col",
+                    { attrs: { cols: "12" } },
                     [
-                      _c(
-                        "b-link",
-                        {
-                          staticClass: "btn btn-outline-primary",
-                          attrs: { to: { name: "CheckList-Out" } },
-                        },
-                        [
-                          _c("span", { staticClass: "text-nowrap" }, [
-                            _vm._v("Nova autorização de saida"),
-                          ]),
-                        ]
-                      ),
+                      _vm.can("Create Checklist_out")
+                        ? _c(
+                            "b-link",
+                            {
+                              staticClass: "btn btn-outline-primary",
+                              attrs: { to: { name: "CheckList-Out" } },
+                            },
+                            [
+                              _c("span", { staticClass: "text-nowrap" }, [
+                                _vm._v("Nova autorização de saida"),
+                              ]),
+                            ]
+                          )
+                        : _vm._e(),
                     ],
                     1
                   ),

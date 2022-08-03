@@ -577,260 +577,282 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _c(
-            "b-row",
-            [
-              _c(
-                "b-col",
-                {
-                  staticClass: "table-responsive",
-                  attrs: { cols: "12", xl: "12", md: "12" },
-                },
+          _vm.can("View Report")
+            ? _c(
+                "b-row",
                 [
-                  _c("b-table", {
-                    ref: "refAbastecimentoListTable",
-                    staticClass: "position-relative",
-                    attrs: {
-                      items: _vm.fetchAbastecimentos,
-                      responsive: "",
-                      fields: _vm.tableColumns,
-                      "primary-key": "id",
-                      "sort-by": _vm.sortBy,
-                      "show-empty": "",
-                      "empty-text": "No matching records found",
-                      "sort-desc": _vm.isSortDirDesc,
-                    },
-                    on: {
-                      "update:sortBy": function ($event) {
-                        _vm.sortBy = $event
-                      },
-                      "update:sort-by": function ($event) {
-                        _vm.sortBy = $event
-                      },
-                      "update:sortDesc": function ($event) {
-                        _vm.isSortDirDesc = $event
-                      },
-                      "update:sort-desc": function ($event) {
-                        _vm.isSortDirDesc = $event
-                      },
-                    },
-                    scopedSlots: _vm._u([
-                      {
-                        key: "cell(ordem)",
-                        fn: function (data) {
-                          return [
-                            data.item.ordem !== null
-                              ? _c("span", [
-                                  _vm._v(
-                                    "\n                        " +
-                                      _vm._s(data.item.ordem.codigo_ordem) +
-                                      "\n                        "
-                                  ),
-                                ])
-                              : _vm._e(),
-                          ]
-                        },
-                      },
-                      {
-                        key: "cell(estado)",
-                        fn: function (data) {
-                          return [
-                            data.item.ordem !== null
-                              ? _c("span", [
-                                  _vm._v(
-                                    "\n                        " +
-                                      _vm._s(data.item.ordem.estado) +
-                                      "\n                        "
-                                  ),
-                                ])
-                              : _c("span", [
-                                  _vm._v(
-                                    "\n                            -\n                        "
-                                  ),
-                                ]),
-                          ]
-                        },
-                      },
-                      {
-                        key: "cell(bombas)",
-                        fn: function (data) {
-                          return [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(data.item.ordem.bombas.nome_bombas) +
-                                "\n                    "
-                            ),
-                          ]
-                        },
-                      },
-                      {
-                        key: "cell(Data_de_emissao)",
-                        fn: function (data) {
-                          return [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(
-                                  _vm.dateTime(data.item.ordem.created_at)
-                                ) +
-                                "\n                    "
-                            ),
-                          ]
-                        },
-                      },
-                      {
-                        key: "cell(acções)",
-                        fn: function (data) {
-                          return [
-                            _c(
-                              "b-dropdown",
-                              {
-                                attrs: {
-                                  variant: "link",
-                                  "no-caret": "",
-                                  right: _vm.$store.state.appConfig.isRTL,
-                                },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "button-content",
-                                      fn: function () {
-                                        return [
-                                          _c("feather-icon", {
-                                            staticClass:
-                                              "align-middle text-body",
-                                            attrs: {
-                                              icon: "MoreVerticalIcon",
-                                              size: "16",
-                                            },
-                                          }),
-                                        ]
-                                      },
-                                      proxy: true,
-                                    },
-                                  ],
-                                  null,
-                                  true
-                                ),
-                              },
-                              [
-                                _vm._v(" "),
-                                _c(
-                                  "b-dropdown-item",
-                                  {
-                                    attrs: {
-                                      to: {
-                                        name: "supply-details",
-                                        params: { refs: data.item.ordem.refs },
-                                      },
-                                    },
-                                  },
-                                  [
-                                    _c("feather-icon", {
-                                      attrs: { icon: "FileTextIcon" },
-                                    }),
-                                    _vm._v(" "),
-                                    _c(
-                                      "span",
-                                      { staticClass: "align-middle ml-50" },
-                                      [_vm._v("Details")]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                              ],
-                              1
-                            ),
-                          ]
-                        },
-                      },
-                    ]),
-                  }),
-                  _vm._v(" "),
                   _c(
-                    "div",
-                    { staticClass: "mx-2 mb-2" },
+                    "b-col",
+                    {
+                      staticClass: "table-responsive",
+                      attrs: { cols: "12", xl: "12", md: "12" },
+                    },
                     [
+                      _c("b-table", {
+                        ref: "refAbastecimentoListTable",
+                        staticClass: "position-relative",
+                        attrs: {
+                          items: _vm.fetchAbastecimentos,
+                          responsive: "",
+                          fields: _vm.tableColumns,
+                          "primary-key": "id",
+                          "sort-by": _vm.sortBy,
+                          "show-empty": "",
+                          "empty-text": "No matching records found",
+                          "sort-desc": _vm.isSortDirDesc,
+                        },
+                        on: {
+                          "update:sortBy": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sort-by": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sortDesc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                          "update:sort-desc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "cell(ordem)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(
+                                              data.item.ordem.codigo_ordem
+                                            ) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _vm._e(),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(estado)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(data.item.ordem.estado) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _c("span", [
+                                        _vm._v(
+                                          "\n                            -\n                        "
+                                        ),
+                                      ]),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(bombas)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        data.item.ordem.bombas.nome_bombas
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(Data_de_emissao)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        _vm.dateTime(data.item.ordem.created_at)
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(acções)",
+                              fn: function (data) {
+                                return [
+                                  _c(
+                                    "b-dropdown",
+                                    {
+                                      attrs: {
+                                        variant: "link",
+                                        "no-caret": "",
+                                        right: _vm.$store.state.appConfig.isRTL,
+                                      },
+                                      scopedSlots: _vm._u(
+                                        [
+                                          {
+                                            key: "button-content",
+                                            fn: function () {
+                                              return [
+                                                _c("feather-icon", {
+                                                  staticClass:
+                                                    "align-middle text-body",
+                                                  attrs: {
+                                                    icon: "MoreVerticalIcon",
+                                                    size: "16",
+                                                  },
+                                                }),
+                                              ]
+                                            },
+                                            proxy: true,
+                                          },
+                                        ],
+                                        null,
+                                        true
+                                      ),
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          attrs: {
+                                            to: {
+                                              name: "supply-details",
+                                              params: {
+                                                refs: data.item.ordem.refs,
+                                              },
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "FileTextIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("Details")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ]
+                              },
+                            },
+                          ],
+                          null,
+                          false,
+                          2534658875
+                        ),
+                      }),
+                      _vm._v(" "),
                       _c(
-                        "b-row",
+                        "div",
+                        { staticClass: "mx-2 mb-2" },
                         [
                           _c(
-                            "b-col",
-                            {
-                              staticClass:
-                                "d-flex align-items-center justify-content-center justify-content-sm-start",
-                              attrs: { cols: "12", sm: "8" },
-                            },
+                            "b-row",
                             [
-                              _c("span", { staticClass: "text-muted" }, [
-                                _vm._v(
-                                  "mostrar " +
-                                    _vm._s(_vm.dataMeta.from) +
-                                    " de " +
-                                    _vm._s(_vm.dataMeta.to) +
-                                    " para " +
-                                    _vm._s(_vm.dataMeta.of) +
-                                    " entradas"
-                                ),
-                              ]),
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "b-col",
-                            {
-                              staticClass:
-                                "d-flex align-items-center justify-content-center justify-content-sm-end",
-                              attrs: { cols: "12", sm: "4" },
-                            },
-                            [
-                              _c("b-pagination", {
-                                staticClass: "mb-0 mt-1 mt-sm-0",
-                                attrs: {
-                                  "total-rows": _vm.totalAbastecimentos,
-                                  "per-page": _vm.perPage,
-                                  "first-number": "",
-                                  "last-number": "",
-                                  "prev-class": "prev-item",
-                                  "next-class": "next-item",
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-start",
+                                  attrs: { cols: "12", sm: "8" },
                                 },
-                                scopedSlots: _vm._u([
-                                  {
-                                    key: "prev-text",
-                                    fn: function () {
-                                      return [
-                                        _c("feather-icon", {
-                                          attrs: {
-                                            icon: "ChevronLeftIcon",
-                                            size: "18",
-                                          },
-                                        }),
-                                      ]
-                                    },
-                                    proxy: true,
-                                  },
-                                  {
-                                    key: "next-text",
-                                    fn: function () {
-                                      return [
-                                        _c("feather-icon", {
-                                          attrs: {
-                                            icon: "ChevronRightIcon",
-                                            size: "18",
-                                          },
-                                        }),
-                                      ]
-                                    },
-                                    proxy: true,
-                                  },
-                                ]),
-                                model: {
-                                  value: _vm.currentPage,
-                                  callback: function ($$v) {
-                                    _vm.currentPage = $$v
-                                  },
-                                  expression: "currentPage",
+                                [
+                                  _c("span", { staticClass: "text-muted" }, [
+                                    _vm._v(
+                                      "mostrar " +
+                                        _vm._s(_vm.dataMeta.from) +
+                                        " de " +
+                                        _vm._s(_vm.dataMeta.to) +
+                                        " para " +
+                                        _vm._s(_vm.dataMeta.of) +
+                                        " entradas"
+                                    ),
+                                  ]),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-end",
+                                  attrs: { cols: "12", sm: "4" },
                                 },
-                              }),
+                                [
+                                  _c("b-pagination", {
+                                    staticClass: "mb-0 mt-1 mt-sm-0",
+                                    attrs: {
+                                      "total-rows": _vm.totalAbastecimentos,
+                                      "per-page": _vm.perPage,
+                                      "first-number": "",
+                                      "last-number": "",
+                                      "prev-class": "prev-item",
+                                      "next-class": "next-item",
+                                    },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "prev-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronLeftIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                        {
+                                          key: "next-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronRightIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                      ],
+                                      null,
+                                      false,
+                                      1308952388
+                                    ),
+                                    model: {
+                                      value: _vm.currentPage,
+                                      callback: function ($$v) {
+                                        _vm.currentPage = $$v
+                                      },
+                                      expression: "currentPage",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
                             ],
                             1
                           ),
@@ -842,10 +864,8 @@ var render = function () {
                   ),
                 ],
                 1
-              ),
-            ],
-            1
-          ),
+              )
+            : _vm._e(),
         ],
         1
       ),

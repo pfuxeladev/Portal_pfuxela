@@ -701,56 +701,45 @@ var render = function () {
                   ),
                   _vm._v(" "),
                   _c("b-col", { attrs: { cols: "12", md: "6" } }, [
-                    _c(
-                      "div",
-                      {
-                        directives: [
-                          {
-                            name: "can",
-                            rawName: "v-can",
-                            value: "Create Viatura",
-                            expression: "'Create Viatura'",
-                          },
-                        ],
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "d-flex align-items-center justify-content-end",
-                          },
-                          [
-                            _c("b-form-input", {
-                              staticClass: "d-inline-block mr-1",
-                              attrs: { placeholder: "Search..." },
-                              model: {
-                                value: _vm.searchQuery,
-                                callback: function ($$v) {
-                                  _vm.searchQuery = $$v
+                    _vm.can("Create Viatura")
+                      ? _c("div", [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "d-flex align-items-center justify-content-end",
+                            },
+                            [
+                              _c("b-form-input", {
+                                staticClass: "d-inline-block mr-1",
+                                attrs: { placeholder: "Search..." },
+                                model: {
+                                  value: _vm.searchQuery,
+                                  callback: function ($$v) {
+                                    _vm.searchQuery = $$v
+                                  },
+                                  expression: "searchQuery",
                                 },
-                                expression: "searchQuery",
-                              },
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "b-link",
-                              {
-                                staticClass: "btn btn-outline-primary",
-                                attrs: { to: { name: "New-car" } },
-                              },
-                              [
-                                _c("span", { staticClass: "text-nowrap" }, [
-                                  _c("i", { staticClass: "fas fa-plus" }),
-                                  _vm._v(" viatura"),
-                                ]),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
-                      ]
-                    ),
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "b-link",
+                                {
+                                  staticClass: "btn btn-outline-primary",
+                                  attrs: { to: { name: "New-car" } },
+                                },
+                                [
+                                  _c("span", { staticClass: "text-nowrap" }, [
+                                    _c("i", { staticClass: "fas fa-plus" }),
+                                    _vm._v(" viatura"),
+                                  ]),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                        ])
+                      : _vm._e(),
                   ]),
                 ],
                 1
@@ -821,156 +810,140 @@ var render = function () {
                 key: "cell(actions)",
                 fn: function (data) {
                   return [
-                    _c(
-                      "b-dropdown",
-                      {
-                        attrs: {
-                          variant: "link",
-                          "no-caret": "",
-                          right: _vm.$store.state.appConfig.isRTL,
-                        },
-                        scopedSlots: _vm._u(
+                    _vm.can("Update Viatura")
+                      ? _c(
+                          "b-dropdown",
+                          {
+                            attrs: {
+                              variant: "link",
+                              "no-caret": "",
+                              right: _vm.$store.state.appConfig.isRTL,
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "button-content",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        staticClass: "align-middle text-body",
+                                        attrs: {
+                                          icon: "MoreVerticalIcon",
+                                          size: "16",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                              ],
+                              null,
+                              true
+                            ),
+                          },
                           [
-                            {
-                              key: "button-content",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    staticClass: "align-middle text-body",
-                                    attrs: {
-                                      icon: "MoreVerticalIcon",
-                                      size: "16",
+                            _vm._v(" "),
+                            _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "cars-details",
+                                    params: { id: data.item.id },
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "FileTextIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Details")]
+                                ),
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "b-dropdown-item",
+                              {
+                                attrs: {
+                                  to: {
+                                    name: "Edit-car",
+                                    params: { id: data.item.id },
+                                  },
+                                },
+                              },
+                              [
+                                _c("feather-icon", {
+                                  attrs: { icon: "EditIcon" },
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
+                                  [_vm._v("Editar")]
+                                ),
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            data.item.estado == 1
+                              ? _c(
+                                  "b-dropdown-item",
+                                  {
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.Deactivate(data.item.id)
+                                      },
                                     },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ],
-                          null,
-                          true
-                        ),
-                      },
-                      [
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            attrs: {
-                              to: {
-                                name: "cars-details",
-                                params: { id: data.item.id },
-                              },
-                            },
-                          },
-                          [
-                            _c("feather-icon", {
-                              attrs: { icon: "FileTextIcon" },
-                            }),
+                                  },
+                                  [
+                                    _c("feather-icon", {
+                                      attrs: { icon: "XSquareIcon" },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "align-middle ml-50" },
+                                      [_vm._v("desactivar")]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
                             _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Details"),
-                            ]),
+                            data.item.estado == 0
+                              ? _c(
+                                  "b-dropdown-item",
+                                  {
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.Activate(data.item.id)
+                                      },
+                                    },
+                                  },
+                                  [
+                                    _c("feather-icon", {
+                                      attrs: { icon: "CheckCircleIcon" },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      { staticClass: "align-middle ml-50" },
+                                      [_vm._v("activar")]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
                           ],
                           1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown-item",
-                          {
-                            directives: [
-                              {
-                                name: "can",
-                                rawName: "v-can",
-                                value: "Update Viatura",
-                                expression: "'Update Viatura'",
-                              },
-                            ],
-                            attrs: {
-                              to: {
-                                name: "Edit-car",
-                                params: { id: data.item.id },
-                              },
-                            },
-                          },
-                          [
-                            _c("feather-icon", { attrs: { icon: "EditIcon" } }),
-                            _vm._v(" "),
-                            _c("span", { staticClass: "align-middle ml-50" }, [
-                              _vm._v("Editar"),
-                            ]),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        data.item.estado == 1
-                          ? _c(
-                              "b-dropdown-item",
-                              {
-                                directives: [
-                                  {
-                                    name: "can",
-                                    rawName: "v-can",
-                                    value: "Update Viatura",
-                                    expression: "'Update Viatura'",
-                                  },
-                                ],
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.Deactivate(data.item.id)
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "XSquareIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("desactivar")]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        data.item.estado == 0
-                          ? _c(
-                              "b-dropdown-item",
-                              {
-                                directives: [
-                                  {
-                                    name: "can",
-                                    rawName: "v-can",
-                                    value: "Update Viatura",
-                                    expression: "'Update Viatura'",
-                                  },
-                                ],
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.Activate(data.item.id)
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "CheckCircleIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("activar")]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
-                      ],
-                      1
-                    ),
+                        )
+                      : _vm._e(),
                   ]
                 },
               },

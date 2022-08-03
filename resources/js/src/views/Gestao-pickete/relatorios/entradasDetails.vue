@@ -32,7 +32,8 @@
        <b-card-body>
           <h3>Estado da viatura</h3>
           <hr>
-          <b-row>
+          <b-row v-if="ent.checklists !== ''">
+
             <b-col cols="3" class="mb-2" v-for="(chk, i) in ent.categoria" :key="'a'+i">
                  <h3 class="card-title">{{chk.nome_categoria}}</h3>
                 <b-row v-for="(checklst, k) in ent.checklists" :key="k">
@@ -47,6 +48,11 @@
                     </table>
                     </span>
                 </b-row>
+            </b-col>
+          </b-row>
+          <b-row v-else>
+            <b-col cols="3">
+                <b-button variant="primary">Verificar o estado da viatura</b-button>
             </b-col>
           </b-row>
         </b-card-body>

@@ -60,7 +60,7 @@ Vue.use(VueCompositionAPI)
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
-Vue.directive('can', (el, binding) => window.Laravel.jsPermissions.indexOf(binding) !== -1)
+// Vue.directive('can', (el, binding) => window.Laravel.jsPermissions.indexOf(binding) !== -1)
 
 Vue.use(VueCookies, { expire: '1h' })
 // Vue.prototype.can = function (value) {
