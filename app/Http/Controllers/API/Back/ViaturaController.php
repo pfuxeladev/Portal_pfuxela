@@ -42,7 +42,7 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)->whereDate('checklist_out.created_at', Carbon::today())->where('viaturas.locate', 'OUT')
+        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)->whereDate('checklist_out.created_at', Carbon::today()->subDays( 3 ))
         ->orderBy('viaturas.id', 'desc')->get();
     }
     public function store(Request $request)
