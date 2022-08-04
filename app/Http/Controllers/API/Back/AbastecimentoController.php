@@ -45,10 +45,8 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->join('checklist_in', 'checklist_in.check_list_out_id', '=', 'checklist_out.id')->whereMonth('checklist_in.created_at', date('m'))
-        ->whereYear('checklist_in.created_at', date('Y'))
-            ->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
-            ->select('viaturas.matricula', 'viaturas.id')->get();
+        return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(14))
+            ->select('matricula', 'id')->get();
     }
 
     function RotaByProject(Request $request)
