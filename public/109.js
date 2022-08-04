@@ -387,10 +387,12 @@ __webpack_require__.r(__webpack_exports__);
           }); // location.reload()
 
 
-          _this8.$Progress.finish(); //   this.form.reset()
-          // eslint-disable-next-line no-restricted-globals
-          //   window.location.reload()
+          _this8.$Progress.finish();
 
+          _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
+
+
+          window.location.reload();
         }
       })["catch"](function (err) {
         if (err.response.status === 421) {
