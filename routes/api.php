@@ -112,6 +112,8 @@ Route::group(['middleware'=>'auth:api'], function () {
         // Route::get('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
 });
 
+Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
+
 Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
 
 Route::post('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);

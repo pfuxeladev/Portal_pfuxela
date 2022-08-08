@@ -549,6 +549,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -2382,33 +2383,36 @@ var render = function () {
                                     "b-col",
                                     { attrs: { cols: "6" } },
                                     [
-                                      _c(
-                                        "b-button",
-                                        {
-                                          directives: [
+                                      _vm.can("Create Viatura")
+                                        ? _c(
+                                            "b-button",
                                             {
-                                              name: "ripple",
-                                              rawName: "v-ripple.400",
-                                              value:
-                                                "rgba(255, 255, 255, 0.15)",
-                                              expression:
-                                                "'rgba(255, 255, 255, 0.15)'",
-                                              modifiers: { 400: true },
+                                              directives: [
+                                                {
+                                                  name: "ripple",
+                                                  rawName: "v-ripple.400",
+                                                  value:
+                                                    "rgba(255, 255, 255, 0.15)",
+                                                  expression:
+                                                    "'rgba(255, 255, 255, 0.15)'",
+                                                  modifiers: { 400: true },
+                                                },
+                                              ],
+                                              staticClass: "mr-2",
+                                              attrs: {
+                                                variant: "success",
+                                                type: "submit",
+                                              },
                                             },
-                                          ],
-                                          staticClass: "mr-2",
-                                          attrs: {
-                                            variant: "success",
-                                            type: "submit",
-                                          },
-                                        },
-                                        [
-                                          _vm._v("cadastrar "),
-                                          _c("i", {
-                                            staticClass: "fas fa-paper-plane",
-                                          }),
-                                        ]
-                                      ),
+                                            [
+                                              _vm._v("cadastrar "),
+                                              _c("i", {
+                                                staticClass:
+                                                  "fas fa-paper-plane",
+                                              }),
+                                            ]
+                                          )
+                                        : _vm._e(),
                                     ],
                                     1
                                   ),

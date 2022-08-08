@@ -114,6 +114,7 @@
                     <tr>
                         <th>Ordem</th>
                         <th>Data</th>
+                        <th>Bombas</th>
                         <th>Viaturas</th>
                         <th>Tipo de Combustivel</th>
 
@@ -129,6 +130,7 @@
                         <tr>
                             <td>{{ $ordens->ordem->codigo_ordem }}</td>
                             <td>{{ $ordens->ordem->created_at }}</td>
+                            <td>{{ $ordens->ordem->bombas->nome_bombas }}</td>
                             <td>{{ $ordens->viatura->matricula }}</td>
                             <td>{{ $ordens->viatura->tipo_combustivel }}</td>
                             <td>

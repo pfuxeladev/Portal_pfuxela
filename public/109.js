@@ -384,8 +384,7 @@ __webpack_require__.r(__webpack_exports__);
           _this8.$swal.fire({
             icon: 'success',
             title: res.data.success
-          }); // location.reload()
-
+          });
 
           _this8.$Progress.finish();
 
@@ -504,7 +503,7 @@ __webpack_require__.r(__webpack_exports__);
     function removerPedido(order) {
       //   console.log(order)
       _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Supply/removeLine', {
-        refs: order.ordem_id
+        refs: order.id
       }).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
@@ -513,7 +512,8 @@ __webpack_require__.r(__webpack_exports__);
             icon: 'CheckSquareIcon',
             variant: 'success'
           }
-        }); //   window.location.reload()
+        });
+        window.location.reload();
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({

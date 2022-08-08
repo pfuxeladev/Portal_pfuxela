@@ -195,8 +195,8 @@ class AbastecimentoController extends Controller
     function removeLine($refs)
     {
         try {
-            $ordem = ordem::where('id', $refs)->first();
-            $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('ordem_id', $ordem->id)->get();
+            // $ordem = ordem::where('id', $refs)->first();
+            $ordem_viatura = ordem_viatura::with(['ordem.viatura', 'ordem.bombas', 'ordemViaturaRota'])->where('id', $refs)->get();
             foreach ($ordem_viatura as $key => $ordVi) {
 
                 $viatura = Viatura::where('id', $ordVi->viatura_id)->first();
@@ -317,7 +317,7 @@ class AbastecimentoController extends Controller
         $ordem->createdBy = auth()->user()->id;
         $ordem->save();
 
-        $viatura = Viatura::where('id', $request->viatura_id)->first();
+        $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
 
         // if (!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first()))
         //     return response()->json(['erro' => 'Erro! Esta viatura ja abasteceu'], 421);
@@ -355,7 +355,7 @@ class AbastecimentoController extends Controller
         }
 
         // try {
-        $ordem_viatura->viatura_id = $request->viatura_id;
+        $ordem_viatura->viatura_id = $viatura->id;
         $ordem_viatura->ordem_id = $ordem->id;
         $ordem_viatura->qtd_abastecida = $request->qtd;
 
@@ -387,7 +387,7 @@ class AbastecimentoController extends Controller
             $abastecimento_extra->abastecimento_id = $abastecimento->id;
         }
 
-        $abastecimento_extra->viatura_id = $request->viatura_id;
+        $abastecimento_extra->viatura_id = $viatura->id;
         $abastecimento_extra->motorista_id = $request->motorista_id;
         $abastecimento_extra->qtd = $request->qtd;
         $abastecimento_extra->horaSaida = date('h:i:s', strtotime($request->horaSaida));

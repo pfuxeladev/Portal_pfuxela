@@ -270,6 +270,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -310,10 +321,15 @@ __webpack_require__.r(__webpack_exports__);
     DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_12__["default"]
   },
   created: function created() {
+    var _this = this;
+
     this.moment = moment__WEBPACK_IMPORTED_MODULE_10___default.a;
+    this.$http.get("/api/bombas").then(function (response) {
+      _this.bombas = response.data;
+    });
   },
   setup: function setup() {
-    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
 
     if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_13__["default"]); // UnRegister on leave
 
@@ -322,104 +338,123 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_10___default()(value).format('DD/MM/YYYY');
+      return moment__WEBPACK_IMPORTED_MODULE_10___default()(value).format("DD/MM/YYYY");
     }
 
     var dateOptions = [{
-      label: 'Hoje',
-      value: 'Hoje'
+      label: "Hoje",
+      value: "Hoje"
     }, {
-      label: 'Semanal',
-      value: 'Semanal'
+      label: "Semanal",
+      value: "Semanal"
     }, {
-      label: 'Mes',
-      value: 'Mensal'
+      label: "Mes",
+      value: "Mensal"
     }, {
-      label: 'Ano',
-      value: 'Anual'
+      label: "Ano",
+      value: "Anual"
     }];
 
     function imprimir() {
-      var newLocal = 'download'; //   alert(this.intervalo)
+      var newLocal = "download"; //   alert(this.intervalo)
 
       if (this.intervalo) {
-        this.$http.post('/api/printRelatorio', {
+        this.$http.post("/api/printRelatorio", {
           intervalo: this.intervalo
         }, {
-          responseType: 'blob',
-          Accept: 'application/pdf'
+          responseType: "blob",
+          Accept: "application/pdf"
         }).then(function (response) {
           // console.log(response.data)
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: 'application/pdf'
+            type: "application/pdf"
           }));
-          var fileLink = document.createElement('a');
+          var fileLink = document.createElement("a");
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.searchDatas !== '') {
-        this.$http.post('/api/printRelatorio', {
+      } else if (this.searchDatas !== "") {
+        this.$http.post("/api/printRelatorio", {
           searchDatas: this.searchDatas
         }, {
-          responseType: 'blob',
-          Accept: 'application/pdf'
+          responseType: "blob",
+          Accept: "application/pdf"
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: 'application/pdf'
+            type: "application/pdf"
           }));
-          var fileLink = document.createElement('a');
+          var fileLink = document.createElement("a");
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.dateReport !== '') {
-        this.$http.post('/api/printRelatorio', {
+      } else if (this.dateReport !== "") {
+        this.$http.post("/api/printRelatorio", {
           dateReport: this.dateReport
         }, {
-          responseType: 'blob',
-          Accept: 'application/pdf'
+          responseType: "blob",
+          Accept: "application/pdf"
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: 'application/pdf'
+            type: "application/pdf"
           }));
-          var fileLink = document.createElement('a');
+          var fileLink = document.createElement("a");
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.dateReport !== '' && this.intervalo !== '' && this.searchDatas !== '') {
-        this.$http.post('/api/printRelatorio', {
+      } else if (this.dateReport !== "" && this.intervalo !== "" && this.searchDatas !== "") {
+        this.$http.post("/api/printRelatorio", {
           dateReport: this.dateReport,
           intervalo: this.intervalo,
           searchDatas: this.searchDatas
         }, {
-          responseType: 'blob',
-          Accept: 'application/pdf'
+          responseType: "blob",
+          Accept: "application/pdf"
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: 'application/pdf'
+            type: "application/pdf"
           }));
-          var fileLink = document.createElement('a');
+          var fileLink = document.createElement("a");
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        });
+      } else if (this.dateReport !== "" && this.intervalo !== "" && this.searchDatas !== "" && this.bombaNome !== "") {
+        this.$http.post("/api/printRelatorio", {
+          dateReport: this.dateReport,
+          intervalo: this.intervalo,
+          searchDatas: this.searchDatas,
+          bombaNome: this.bombaNome
+        }, {
+          responseType: "blob",
+          Accept: "application/pdf"
+        }).then(function (response) {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data], {
+            type: "application/pdf"
+          }));
+          var fileLink = document.createElement("a");
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else {
-        this.$http.post('/api/printRelatorio', {
-          responseType: 'blob',
-          Accept: 'application/pdf'
+        this.$http.post("/api/printRelatorio", {
+          responseType: "blob",
+          Accept: "application/pdf"
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: 'application/pdf'
+            type: "application/pdf"
           }));
-          var fileLink = document.createElement('a');
+          var fileLink = document.createElement("a");
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          fileLink.setAttribute(newLocal, "Relatorio.pdf");
           document.body.appendChild(fileLink);
           fileLink.click();
         });
@@ -427,37 +462,37 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     var fieldColumns = [{
-      key: 'ordem',
+      key: "ordem",
       sortable: true
     }, {
-      key: 'Data_de_emissao',
+      key: "Data_de_emissao",
       sortable: true
     }, {
-      key: 'viatura_matricula',
+      key: "viatura_matricula",
       sortable: true
     }, {
-      key: 'Combustivel',
+      key: "Combustivel",
       sortable: true
     }, {
-      key: 'qtd',
+      key: "qtd",
       sortable: true
     }, {
-      key: 'preço',
+      key: "preço",
       sortable: true
     }, {
-      key: 'rotas_tomadas',
+      key: "rotas_tomadas",
       sortable: true
     }, {
-      key: 'bombas',
+      key: "bombas",
       sortable: true
     }, {
-      key: 'autor',
+      key: "autor",
       sortable: true
     }, {
-      key: 'Subtotal',
+      key: "Subtotal",
       sortable: true
     }, {
-      key: 'acção'
+      key: "acção"
     }];
     var bomba = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_8__["ref"])(null);
     var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_8__["ref"])(null);
@@ -475,7 +510,8 @@ __webpack_require__.r(__webpack_exports__);
         searchDatas = _useRelatorioList.searchDatas,
         intervalo = _useRelatorioList.intervalo,
         sortBy = _useRelatorioList.sortBy,
-        isSortDirDesc = _useRelatorioList.isSortDirDesc;
+        isSortDirDesc = _useRelatorioList.isSortDirDesc,
+        bombaNome = _useRelatorioList.bombaNome;
 
     return {
       perPage: perPage,
@@ -495,8 +531,10 @@ __webpack_require__.r(__webpack_exports__);
       searchDatas: searchDatas,
       sortBy: sortBy,
       isSortDirDesc: isSortDirDesc,
+      bombaNome: bombaNome,
       dateTime: dateTime,
-      imprimir: imprimir
+      imprimir: imprimir,
+      bombas: []
     };
   }
 });
@@ -848,27 +886,35 @@ var render = function () {
                   [
                     _c(
                       "b-col",
-                      { attrs: { cols: "4", md: "4" } },
+                      { attrs: { cols: "12", md: "4" } },
                       [
                         _c(
                           "b-form-group",
                           {
                             attrs: {
-                              id: "input-group-8",
-                              label: "Dados da lista abaixo:",
-                              "label-for": "input-8",
+                              label: "Filtrar por Bombas:",
+                              "label-for": "input-10",
                             },
                           },
                           [
-                            _c("b-form-input", {
-                              staticClass: "d-inline-block mr-1",
-                              attrs: { placeholder: "pesquisar..." },
-                              model: {
-                                value: _vm.searchDatas,
-                                callback: function ($$v) {
-                                  _vm.searchDatas = $$v
+                            _c("v-select", {
+                              attrs: {
+                                dir: _vm.$store.state.appConfig.isRTL
+                                  ? "rtl"
+                                  : "ltr",
+                                label: "nome_bombas",
+                                options: _vm.bombas,
+                                reduce: function (bombas) {
+                                  return bombas.nome_bombas
                                 },
-                                expression: "searchDatas",
+                                clearable: false,
+                              },
+                              model: {
+                                value: _vm.bombaNome,
+                                callback: function ($$v) {
+                                  _vm.bombaNome = $$v
+                                },
+                                expression: "bombaNome",
                               },
                             }),
                           ],
@@ -887,9 +933,9 @@ var render = function () {
                           {
                             attrs: {
                               id: "input-group-8",
-                              label: "Data cadastro de viatura:",
+                              label: "Intervalo de datas:",
                               "label-for": "input-8",
-                              description: "Data cadastro de viatura.",
+                              description: "Intervalo de datas.",
                             },
                           },
                           [
@@ -969,7 +1015,7 @@ var render = function () {
                       {
                         staticClass:
                           "\n              d-flex\n              align-items-center\n              justify-content-start\n              mb-1 mb-md-0\n            ",
-                        attrs: { cols: "12", md: "4" },
+                        attrs: { cols: "12", md: "3" },
                       },
                       [
                         _c("label", [_vm._v("mostrar")]),
@@ -997,11 +1043,39 @@ var render = function () {
                       1
                     ),
                     _vm._v(" "),
-                    _c("b-col"),
+                    _c("b-col", { attrs: { cols: "12", md: "5" } }),
                     _vm._v(" "),
-                    _c("b-col"),
-                    _vm._v(" "),
-                    _c("b-col"),
+                    _c(
+                      "b-col",
+                      { attrs: { cols: "4", md: "4" } },
+                      [
+                        _c(
+                          "b-form-group",
+                          {
+                            attrs: {
+                              id: "input-group-8",
+                              label: "Dados da lista abaixo:",
+                              "label-for": "input-8",
+                            },
+                          },
+                          [
+                            _c("b-form-input", {
+                              staticClass: "d-inline-block mr-1",
+                              attrs: { placeholder: "pesquisar..." },
+                              model: {
+                                value: _vm.searchDatas,
+                                callback: function ($$v) {
+                                  _vm.searchDatas = $$v
+                                },
+                                expression: "searchDatas",
+                              },
+                            }),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
                   ],
                   1
                 ),
@@ -1212,7 +1286,7 @@ var render = function () {
                                                     data.item.ordem.approved_by
                                                       .name
                                                   ) +
-                                                  "\n                  "
+                                                  "\n                "
                                               ),
                                             ])
                                           : _vm._e(),
@@ -1314,7 +1388,7 @@ var render = function () {
                                 ],
                                 null,
                                 false,
-                                1832948982
+                                606402198
                               ),
                             }),
                             _vm._v(" "),
@@ -1695,6 +1769,7 @@ function useRelatorioList() {
   var totalHistoricos = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var dateOptions = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var dateReport = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var bombaNome = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var dataHistory = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
     var localItemsCount = RelatorioGeral.value ? RelatorioGeral.value.localItems.length : 0;
     return {
@@ -1708,7 +1783,7 @@ function useRelatorioList() {
     RelatorioGeral.value.refresh();
   };
 
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchDatas, intervalo, dateReport], function () {
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchDatas, intervalo, dateReport, bombaNome], function () {
     refetchHistory();
   });
 
@@ -1720,7 +1795,8 @@ function useRelatorioList() {
       sortBy: sortBy.value,
       sortDesc: isSortDirDesc.value,
       intervalo: intervalo.value,
-      dateReport: dateReport.value
+      dateReport: dateReport.value,
+      bombaNome: bombaNome.value
     }).then(function (response) {
       var Historico = response.data;
       callback(Historico.data);
@@ -1747,6 +1823,7 @@ function useRelatorioList() {
     perPageOptions: perPageOptions,
     dataHistory: dataHistory,
     searchDatas: searchDatas,
+    bombaNome: bombaNome,
     intervalo: intervalo,
     dateReport: dateReport,
     perPage: perPage,

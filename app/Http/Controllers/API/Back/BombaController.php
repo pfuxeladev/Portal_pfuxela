@@ -261,5 +261,27 @@ class BombaController extends Controller
 
     public function RelatorioBomba(Request $request, $id){
 
+        if($request->dia){
+            $bomba = Bombas::findOrFail($id);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->where('created_at', $request->dia)->orderBy('codigo_ordem', 'desc')->paginate(15);
+
+            return response()->json($ordem, 200);
+        }else if($request->intervalo){
+            $bomba = Bombas::findOrFail($id);
+
+            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate(15);
+
+            return response()->json($ordem, 200);
+        }else if($request->intervalo && $request->perPage){
+            $bomba = Bombas::findOrFail($id);
+
+            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+
+            return response()->json($ordem, 200);
+        }
+        $bomba = Bombas::with(['ordem.ordem_viatura', 'ordem.ordem_viatura.ordem_viatura.rota', 'ordem.abastecimento.abastecimento_extra'])->findOrFail($id);
+
+        return response()->json($bomba, 200);
+
     }
 }

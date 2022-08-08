@@ -303,7 +303,7 @@ var render = function () {
                                             "td",
                                             { staticClass: "text-right" },
                                             [
-                                              checklst.opcao === "Ok"
+                                              checklst.opcao_entrada === "Ok"
                                                 ? _c("span", [
                                                     _c("i", {
                                                       staticClass:
@@ -314,7 +314,8 @@ var render = function () {
                                                       },
                                                     }),
                                                   ])
-                                                : checklst.opcao === "No"
+                                                : checklst.opcao_entrada ===
+                                                  "No"
                                                 ? _c("span", [
                                                     _c("i", {
                                                       staticClass:
@@ -325,7 +326,8 @@ var render = function () {
                                                       },
                                                     }),
                                                   ])
-                                                : checklst.opcao === "Parcial"
+                                                : checklst.opcao_entrada ===
+                                                  "Parcial"
                                                 ? _c(
                                                     "b-badge",
                                                     {

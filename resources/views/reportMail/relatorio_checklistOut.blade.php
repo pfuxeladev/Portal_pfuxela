@@ -94,5 +94,79 @@
                 Relatorio De saida da viatura
             </h3>
         </div>
+        <div class="content">
+            <div class="side-company">
+                <ul class="list-unstyled">
+                    <li class="dado">Viatura</li>
+                    <li class="dado">Mes</li>
+                    <li class="dado">Semana</li>
+                </ul>
+            </div>
+            <div class="row-data">
+                <table class="table-content">
+                   <thead>
+                    <tr>
+                        <th rowspan="5">
+                            Itens a verificar
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Segunda</th>
+                        <th>Terca</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
+                        <th>Sabado</th>
+                        <th>Domingo</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>Km</th>
+                        <th>Km</th>
+                        <th>Km</th>
+                        <th>Km</th>
+                        <th>Km</th>
+                        <th>Km</th>
+                        <th>Km</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                   </thead>
+                   <tbody>
+                    <tr>
+                        <td colspan="8">Categoria</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                   </tbody>
+                </table>
+            </div>
+
+        </div>
+
     </div>
 </body>

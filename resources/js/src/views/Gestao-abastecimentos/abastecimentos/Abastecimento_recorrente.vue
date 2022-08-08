@@ -107,12 +107,11 @@
       >
         <div class="d-block">
           <validation-observer
-            #default="{ handleSubmit }"
             ref="refFormObserver"
           >
             <b-form
               ref="form"
-              @submit.prevent="handleSubmit(submitSupply)"
+              @submit.prevent="submitSupply"
             >
               <b-form-row>
                 <b-col cols="6" md="6">
@@ -145,16 +144,15 @@
                     name="Viatura"
                     rules="required"
                   >
-                    <b-form-group label="Viatura" label-for="Viatura">
+                    <b-form-group label="Viatura">
                       <v-select
                         id="Viatura"
-                        v-model="OrderForm.viatura_id"
+                        v-model="OrderForm.viatura_matricula"
                         :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                         label="matricula"
                         :options="viaturas"
-                        :reduce="viaturas => viaturas.viatura_id"
+                        :reduce="viaturas => viaturas.matricula"
                         :clearable="false"
-                        input-id="viatura"
                         :state="getValidationState(validationContext)"
                       ></v-select>
                       <b-form-invalid-feedback>
@@ -398,7 +396,7 @@ export default {
     if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
     const toast = useToast();
     const form = new Form({
-      viatura_id: null,
+      viatura_matricula: '',
       bombas_id: null,
       qtd: null,
       horaSaida: '',

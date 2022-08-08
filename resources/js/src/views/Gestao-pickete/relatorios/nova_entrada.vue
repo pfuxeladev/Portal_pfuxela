@@ -298,7 +298,7 @@ export default {
             anexos: null,
             litros_tanque: '',
             checklist_var: {
-              id: null, checklist_name: '', opcao: false,
+              id: null, checklist_name: '', opcao: '',
             },
             incidente_id: null,
           }),

@@ -355,6 +355,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -1176,18 +1177,20 @@ var render = function () {
                           },
                         }),
                         _vm._v(" "),
-                        _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "primary" },
-                            on: { click: _vm.showModal },
-                          },
-                          [
-                            _c("span", { staticClass: "text-nowrap" }, [
-                              _vm._v("Nova Ordem"),
-                            ]),
-                          ]
-                        ),
+                        _vm.can("Create Ordem")
+                          ? _c(
+                              "b-button",
+                              {
+                                attrs: { variant: "primary" },
+                                on: { click: _vm.showModal },
+                              },
+                              [
+                                _c("span", { staticClass: "text-nowrap" }, [
+                                  _vm._v("Nova Ordem"),
+                                ]),
+                              ]
+                            )
+                          : _vm._e(),
                       ],
                       1
                     ),

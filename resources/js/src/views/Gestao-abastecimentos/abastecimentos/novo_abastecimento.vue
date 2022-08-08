@@ -370,7 +370,6 @@ export default {
             icon: 'success',
             title: res.data.success,
           })
-          // location.reload()
           this.$Progress.finish()
           this.form.reset()
           // eslint-disable-next-line no-restricted-globals
@@ -483,7 +482,7 @@ export default {
     function removerPedido(order) {
     //   console.log(order)
       store.dispatch('Supply/removeLine', {
-        refs: order.ordem_id,
+        refs: order.id,
       })
         .then(response => {
           toast({
@@ -494,7 +493,7 @@ export default {
               variant: 'success',
             },
           })
-        //   window.location.reload()
+          window.location.reload()
         })
         .catch(err => {
           if (err.response.status === 421) {

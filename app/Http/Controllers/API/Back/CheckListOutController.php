@@ -49,9 +49,22 @@ class CheckListOutController extends Controller
 
     }
 
+    public function RelatorioSemanal(Request $request, $id){
+        $viatura = Viatura::where('id', $id)->first();
+
+        $checkListOut = CheckListOut::with(['viatura', 'checklists.checklist_vars'])->where('viatura_id', $viatura->id)->select('*')->where('created_at', '>=', Carbon::now()->subDays(7))->get()->groupBy(function($date) {
+            return Carbon::parse($date->created_at)->format('l');
+       });
+
+       return view('reportMail.relatorio_checklistOut');
+
+        return response()->json($checkListOut, 200);
+    }
+
    function listViaturaDentro(){
        return Viatura::where('viaturas.locate', 'IN')->where('viaturas.estado', true)->get();
    }
+
    function kmActual(Request $request){
         if ($request->viatura_id) {
             return response()->json(Viatura::where('id', $request->viatura_id)->select('kilometragem')->first(), 200);

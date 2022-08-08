@@ -7,7 +7,7 @@
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-abastecimentos\\abastecimentos\\relatorio_geral.vue: Unexpected token, expected \",\" (376:127)\n\n\u001b[0m \u001b[90m 374 |\u001b[39m       } \u001b[36melse\u001b[39m \u001b[36mif\u001b[39m (\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdateReport \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m \u001b[33m&&\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mintervalo \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m \u001b[33m&&\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msearchDatas \u001b[33m!==\u001b[39m \u001b[32m''\u001b[39m) {\u001b[0m\n\u001b[0m \u001b[90m 375 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m$http\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 376 |\u001b[39m           \u001b[33m.\u001b[39mpost(\u001b[32m'/api/printRelatorio'\u001b[39m\u001b[33m,\u001b[39m {dateReport\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mdateReport\u001b[33m,\u001b[39m intervalo\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mintervalo\u001b[33m,\u001b[39m searchDatas\u001b[33m:\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msearchDatas} {\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m                                                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 377 |\u001b[39m             responseType\u001b[33m:\u001b[39m \u001b[32m'blob'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 378 |\u001b[39m             \u001b[33mAccept\u001b[39m\u001b[33m:\u001b[39m \u001b[32m'application/pdf'\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 379 |\u001b[39m           })\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.unexpected (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3372:16)\n    at Object.expect (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:4001:28)\n    at Object.parseCallExpressionArguments (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12747:14)\n    at Object.parseCoverCallAndAsyncArrowHead (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12662:29)\n    at Object.parseSubscript (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12587:19)\n    at Object.parseSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12556:19)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12545:17)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at Object.parseExpressionBase (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12149:23)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12143:17)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14671:23)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Object.parseBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Object.parseBlock (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14612:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseIfStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14922:28)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14579:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseIfStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14923:42)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14579:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseIfStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14923:42)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14579:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\wamp64\\www\\portal_pfuxela\\resources\\js\\src\\views\\Gestao-abastecimentos\\abastecimentos\\relatorio_geral.vue: Unexpected keyword 'function'. (332:4)\n\n\u001b[0m \u001b[90m 330 |\u001b[39m     \u001b[36mconst\u001b[39m \u001b[0m\n\u001b[0m \u001b[90m 331 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 332 |\u001b[39m     \u001b[36mfunction\u001b[39m imprimir() {\u001b[0m\n\u001b[0m \u001b[90m     |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 333 |\u001b[39m       \u001b[36mconst\u001b[39m newLocal \u001b[33m=\u001b[39m \u001b[32m\"download\"\u001b[39m\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 334 |\u001b[39m       \u001b[90m//   alert(this.intervalo)\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 335 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mintervalo) {\u001b[0m\n    at instantiate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:72:32)\n    at constructor (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:358:12)\n    at Object.raise (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:3334:19)\n    at Object.checkReservedWord (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14031:12)\n    at Object.parseIdentifierName (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13980:12)\n    at Object.parseIdentifier (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13950:23)\n    at Object.parseBindingAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:11839:17)\n    at Object.parseVarId (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15279:20)\n    at Object.parseVar (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15254:12)\n    at Object.parseVarStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15057:10)\n    at Object.parseStatementContent (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14603:21)\n    at Object.parseStatement (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14528:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15167:25)\n    at Object.parseBlockBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15158:10)\n    at Object.parseBlock (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15142:10)\n    at Object.parseFunctionBody (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13836:24)\n    at Object.parseFunctionBodyAndFinish (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13820:10)\n    at Object.parseMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13770:10)\n    at Object.parseObjectMethod (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13646:19)\n    at Object.parseObjPropValue (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13687:23)\n    at Object.parsePropertyDefinition (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13604:10)\n    at Object.parseObjectLike (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:13494:21)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12889:23)\n    at Object.parseExprAtom (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:8033:20)\n    at Object.parseExprSubscripts (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12539:23)\n    at Object.parseUpdate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12518:21)\n    at Object.parseMaybeUnary (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12489:23)\n    at Object.parseMaybeUnaryOrPrivate (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12283:61)\n    at Object.parseExprOps (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12290:23)\n    at Object.parseMaybeConditional (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12260:23)\n    at Object.parseMaybeAssign (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12213:21)\n    at C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12171:39\n    at Object.allowInAnd (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:14231:16)\n    at Object.parseMaybeAssignAllowIn (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:12171:17)\n    at Object.parseExportDefaultExpression (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15898:22)\n    at Object.parseExport (C:\\wamp64\\www\\portal_pfuxela\\node_modules\\@babel\\parser\\lib\\index.js:15786:31)");
 
 /***/ }),
 
@@ -54,27 +54,35 @@ var render = function () {
                   [
                     _c(
                       "b-col",
-                      { attrs: { cols: "4", md: "4" } },
+                      { attrs: { cols: "12", md: "4" } },
                       [
                         _c(
                           "b-form-group",
                           {
                             attrs: {
-                              id: "input-group-8",
-                              label: "Dados da lista abaixo:",
-                              "label-for": "input-8",
+                              label: "Filtrar por Bombas:",
+                              "label-for": "input-10",
                             },
                           },
                           [
-                            _c("b-form-input", {
-                              staticClass: "d-inline-block mr-1",
-                              attrs: { placeholder: "pesquisar..." },
-                              model: {
-                                value: _vm.searchDatas,
-                                callback: function ($$v) {
-                                  _vm.searchDatas = $$v
+                            _c("v-select", {
+                              attrs: {
+                                dir: _vm.$store.state.appConfig.isRTL
+                                  ? "rtl"
+                                  : "ltr",
+                                label: "nome_bombas",
+                                options: _vm.bombas,
+                                reduce: function (bombas) {
+                                  return bombas.nome_bombas
                                 },
-                                expression: "searchDatas",
+                                clearable: false,
+                              },
+                              model: {
+                                value: _vm.bombaNome,
+                                callback: function ($$v) {
+                                  _vm.bombaNome = $$v
+                                },
+                                expression: "bombaNome",
                               },
                             }),
                           ],
@@ -93,9 +101,9 @@ var render = function () {
                           {
                             attrs: {
                               id: "input-group-8",
-                              label: "Data cadastro de viatura:",
+                              label: "Intervalo de datas:",
                               "label-for": "input-8",
-                              description: "Data cadastro de viatura.",
+                              description: "Intervalo de datas.",
                             },
                           },
                           [
@@ -175,7 +183,7 @@ var render = function () {
                       {
                         staticClass:
                           "\n              d-flex\n              align-items-center\n              justify-content-start\n              mb-1 mb-md-0\n            ",
-                        attrs: { cols: "12", md: "4" },
+                        attrs: { cols: "12", md: "3" },
                       },
                       [
                         _c("label", [_vm._v("mostrar")]),
@@ -203,11 +211,39 @@ var render = function () {
                       1
                     ),
                     _vm._v(" "),
-                    _c("b-col"),
+                    _c("b-col", { attrs: { cols: "12", md: "5" } }),
                     _vm._v(" "),
-                    _c("b-col"),
-                    _vm._v(" "),
-                    _c("b-col"),
+                    _c(
+                      "b-col",
+                      { attrs: { cols: "4", md: "4" } },
+                      [
+                        _c(
+                          "b-form-group",
+                          {
+                            attrs: {
+                              id: "input-group-8",
+                              label: "Dados da lista abaixo:",
+                              "label-for": "input-8",
+                            },
+                          },
+                          [
+                            _c("b-form-input", {
+                              staticClass: "d-inline-block mr-1",
+                              attrs: { placeholder: "pesquisar..." },
+                              model: {
+                                value: _vm.searchDatas,
+                                callback: function ($$v) {
+                                  _vm.searchDatas = $$v
+                                },
+                                expression: "searchDatas",
+                              },
+                            }),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
                   ],
                   1
                 ),
@@ -215,377 +251,412 @@ var render = function () {
               1
             ),
             _vm._v(" "),
-            _c(
-              "b-card-body",
-              [
-                _c(
-                  "b-row",
+            _vm.can("View Report")
+              ? _c(
+                  "b-card-body",
                   [
                     _c(
-                      "b-col",
-                      { attrs: { cols: "3" } },
+                      "b-row",
                       [
                         _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-primary" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.imprimir()
-                              },
-                            },
-                          },
-                          [
-                            _c("i", { staticClass: "fas fa-print" }),
-                            _vm._v(" Imprimir"),
-                          ]
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      {
-                        staticClass: "table-responsive",
-                        attrs: { cols: "12", xl: "12", md: "12" },
-                      },
-                      [
-                        _c("b-table", {
-                          ref: "RelatorioGeral",
-                          attrs: {
-                            items: _vm.generalReport,
-                            fields: _vm.fieldColumns,
-                            "primary-key": "id",
-                            "sort-by": _vm.sortBy,
-                            "show-empty": "",
-                            "empty-text": "Nenhum dado encontrado",
-                            "sort-desc": _vm.isSortDirDesc,
-                            "head-variant": "light",
-                          },
-                          on: {
-                            "update:sortBy": function ($event) {
-                              _vm.sortBy = $event
-                            },
-                            "update:sort-by": function ($event) {
-                              _vm.sortBy = $event
-                            },
-                            "update:sortDesc": function ($event) {
-                              _vm.isSortDirDesc = $event
-                            },
-                            "update:sort-desc": function ($event) {
-                              _vm.isSortDirDesc = $event
-                            },
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "cell(ordem)",
-                              fn: function (data) {
-                                return [
-                                  data.item.ordem !== null
-                                    ? _c("span", [
-                                        _vm._v(
-                                          "\n                  " +
-                                            _vm._s(
-                                              data.item.ordem.codigo_ordem
-                                            ) +
-                                            "\n                "
-                                        ),
-                                      ])
-                                    : _vm._e(),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(Data_de_emissao)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm.dateTime(data.item.ordem.updated_at)
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(viatura_matricula)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.viatura.matricula) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(combustivel)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        data.item.viatura.tipo_combustivel
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(qtd)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(data.item.qtd_abastecida) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(preço)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm._f("toCurrency")(
-                                          data.item.preco_cunsumo /
-                                            data.item.qtd_abastecida
-                                        )
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(rotas_tomadas)",
-                              fn: function (data) {
-                                return _vm._l(
-                                  data.item.ordem_viatura_rota,
-                                  function (rotas, i) {
-                                    return _c("div", { key: "A" + i }, [
-                                      _c("span", { staticClass: "mr-1" }, [
-                                        _vm._v(_vm._s(rotas.rota.nome_rota)),
-                                      ]),
-                                    ])
-                                  }
-                                )
-                              },
-                            },
-                            {
-                              key: "cell(bombas)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        data.item.ordem.bombas.nome_bombas
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(autor)",
-                              fn: function (data) {
-                                return [
-                                  data.item.ordem.approved_by !== null
-                                    ? _c("span", [
-                                        _vm._v(
-                                          "\n                  " +
-                                            _vm._s(
-                                              data.item.ordem.approved_by.name
-                                            ) +
-                                            "\n                  "
-                                        ),
-                                      ])
-                                    : _vm._e(),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(Subtotal)",
-                              fn: function (data) {
-                                return [
-                                  _vm._v(
-                                    "\n                " +
-                                      _vm._s(
-                                        _vm._f("toCurrency")(
-                                          data.item.preco_cunsumo
-                                        )
-                                      ) +
-                                      "\n              "
-                                  ),
-                                ]
-                              },
-                            },
-                            {
-                              key: "cell(acção)",
-                              fn: function (data) {
-                                return [
-                                  _c(
-                                    "b-dropdown",
-                                    {
-                                      attrs: {
-                                        variant: "link",
-                                        "no-caret": "",
-                                        right: _vm.$store.state.appConfig.isRTL,
-                                      },
-                                      scopedSlots: _vm._u(
-                                        [
-                                          {
-                                            key: "button-content",
-                                            fn: function () {
-                                              return [
-                                                _c("feather-icon", {
-                                                  staticClass:
-                                                    "align-middle text-body",
-                                                  attrs: {
-                                                    icon: "MoreVerticalIcon",
-                                                    size: "16",
-                                                  },
-                                                }),
-                                              ]
-                                            },
-                                            proxy: true,
-                                          },
-                                        ],
-                                        null,
-                                        true
-                                      ),
-                                    },
-                                    [
-                                      _vm._v(" "),
-                                      _c(
-                                        "b-dropdown-item",
-                                        {
-                                          attrs: {
-                                            to: {
-                                              name: "supply-details",
-                                              params: {
-                                                refs: data.item.ordem.refs,
-                                              },
-                                            },
-                                          },
-                                        },
-                                        [
-                                          _c("feather-icon", {
-                                            attrs: { icon: "FileTextIcon" },
-                                          }),
-                                          _vm._v(" "),
-                                          _c(
-                                            "span",
-                                            {
-                                              staticClass: "align-middle ml-50",
-                                            },
-                                            [_vm._v("Details")]
-                                          ),
-                                        ],
-                                        1
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]
-                              },
-                            },
-                          ]),
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "mx-2 mb-2" },
+                          "b-col",
+                          { attrs: { cols: "3" } },
                           [
                             _c(
-                              "b-row",
+                              "b-button",
+                              {
+                                attrs: { variant: "outline-primary" },
+                                on: {
+                                  click: function ($event) {
+                                    return _vm.imprimir()
+                                  },
+                                },
+                              },
+                              [
+                                _c("i", { staticClass: "fas fa-print" }),
+                                _vm._v(" Imprimir"),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          {
+                            staticClass: "table-responsive",
+                            attrs: { cols: "12", xl: "12", md: "12" },
+                          },
+                          [
+                            _c("b-table", {
+                              ref: "RelatorioGeral",
+                              attrs: {
+                                items: _vm.generalReport,
+                                fields: _vm.fieldColumns,
+                                "primary-key": "id",
+                                "sort-by": _vm.sortBy,
+                                "show-empty": "",
+                                "empty-text": "Nenhum dado encontrado",
+                                "sort-desc": _vm.isSortDirDesc,
+                                "head-variant": "light",
+                              },
+                              on: {
+                                "update:sortBy": function ($event) {
+                                  _vm.sortBy = $event
+                                },
+                                "update:sort-by": function ($event) {
+                                  _vm.sortBy = $event
+                                },
+                                "update:sortDesc": function ($event) {
+                                  _vm.isSortDirDesc = $event
+                                },
+                                "update:sort-desc": function ($event) {
+                                  _vm.isSortDirDesc = $event
+                                },
+                              },
+                              scopedSlots: _vm._u(
+                                [
+                                  {
+                                    key: "cell(ordem)",
+                                    fn: function (data) {
+                                      return [
+                                        data.item.ordem !== null
+                                          ? _c("span", [
+                                              _vm._v(
+                                                "\n                  " +
+                                                  _vm._s(
+                                                    data.item.ordem.codigo_ordem
+                                                  ) +
+                                                  "\n                "
+                                              ),
+                                            ])
+                                          : _vm._e(),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(Data_de_emissao)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm.dateTime(
+                                                data.item.ordem.updated_at
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(viatura_matricula)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.viatura.matricula
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(combustivel)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.viatura.tipo_combustivel
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(qtd)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(data.item.qtd_abastecida) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(preço)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm._f("toCurrency")(
+                                                data.item.preco_cunsumo /
+                                                  data.item.qtd_abastecida
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(rotas_tomadas)",
+                                    fn: function (data) {
+                                      return _vm._l(
+                                        data.item.ordem_viatura_rota,
+                                        function (rotas, i) {
+                                          return _c("div", { key: "A" + i }, [
+                                            _c(
+                                              "span",
+                                              { staticClass: "mr-1" },
+                                              [
+                                                _vm._v(
+                                                  _vm._s(rotas.rota.nome_rota)
+                                                ),
+                                              ]
+                                            ),
+                                          ])
+                                        }
+                                      )
+                                    },
+                                  },
+                                  {
+                                    key: "cell(bombas)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              data.item.ordem.bombas.nome_bombas
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(autor)",
+                                    fn: function (data) {
+                                      return [
+                                        data.item.ordem.approved_by !== null
+                                          ? _c("span", [
+                                              _vm._v(
+                                                "\n                  " +
+                                                  _vm._s(
+                                                    data.item.ordem.approved_by
+                                                      .name
+                                                  ) +
+                                                  "\n                "
+                                              ),
+                                            ])
+                                          : _vm._e(),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(Subtotal)",
+                                    fn: function (data) {
+                                      return [
+                                        _vm._v(
+                                          "\n                " +
+                                            _vm._s(
+                                              _vm._f("toCurrency")(
+                                                data.item.preco_cunsumo
+                                              )
+                                            ) +
+                                            "\n              "
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                  {
+                                    key: "cell(acção)",
+                                    fn: function (data) {
+                                      return [
+                                        _c(
+                                          "b-dropdown",
+                                          {
+                                            attrs: {
+                                              variant: "link",
+                                              "no-caret": "",
+                                              right:
+                                                _vm.$store.state.appConfig
+                                                  .isRTL,
+                                            },
+                                            scopedSlots: _vm._u(
+                                              [
+                                                {
+                                                  key: "button-content",
+                                                  fn: function () {
+                                                    return [
+                                                      _c("feather-icon", {
+                                                        staticClass:
+                                                          "align-middle text-body",
+                                                        attrs: {
+                                                          icon: "MoreVerticalIcon",
+                                                          size: "16",
+                                                        },
+                                                      }),
+                                                    ]
+                                                  },
+                                                  proxy: true,
+                                                },
+                                              ],
+                                              null,
+                                              true
+                                            ),
+                                          },
+                                          [
+                                            _vm._v(" "),
+                                            _c(
+                                              "b-dropdown-item",
+                                              {
+                                                attrs: {
+                                                  to: {
+                                                    name: "supply-details",
+                                                    params: {
+                                                      refs: data.item.ordem
+                                                        .refs,
+                                                    },
+                                                  },
+                                                },
+                                              },
+                                              [
+                                                _c("feather-icon", {
+                                                  attrs: {
+                                                    icon: "FileTextIcon",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "span",
+                                                  {
+                                                    staticClass:
+                                                      "align-middle ml-50",
+                                                  },
+                                                  [_vm._v("Details")]
+                                                ),
+                                              ],
+                                              1
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                      ]
+                                    },
+                                  },
+                                ],
+                                null,
+                                false,
+                                606402198
+                              ),
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "mx-2 mb-2" },
                               [
                                 _c(
-                                  "b-col",
-                                  {
-                                    staticClass:
-                                      "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-start\n                  ",
-                                    attrs: { cols: "12", sm: "8" },
-                                  },
+                                  "b-row",
                                   [
-                                    _c("span", { staticClass: "text-muted" }, [
-                                      _vm._v(
-                                        "mostrar " +
-                                          _vm._s(_vm.dataHistory.from) +
-                                          " de\n                    " +
-                                          _vm._s(_vm.dataHistory.to) +
-                                          " para\n                    " +
-                                          _vm._s(_vm.dataHistory.of) +
-                                          " entradas"
-                                      ),
-                                    ]),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "b-col",
-                                  {
-                                    staticClass:
-                                      "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-end\n                  ",
-                                    attrs: { cols: "12", sm: "4" },
-                                  },
-                                  [
-                                    _c("b-pagination", {
-                                      staticClass: "mb-0 mt-1 mt-sm-0",
-                                      attrs: {
-                                        "total-rows": _vm.totalHistoricos,
-                                        "per-page": _vm.perPage,
-                                        "first-number": "",
-                                        "last-number": "",
-                                        "prev-class": "prev-item",
-                                        "next-class": "next-item",
+                                    _c(
+                                      "b-col",
+                                      {
+                                        staticClass:
+                                          "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-start\n                  ",
+                                        attrs: { cols: "12", sm: "8" },
                                       },
-                                      scopedSlots: _vm._u([
-                                        {
-                                          key: "prev-text",
-                                          fn: function () {
-                                            return [
-                                              _c("feather-icon", {
-                                                attrs: {
-                                                  icon: "ChevronLeftIcon",
-                                                  size: "18",
-                                                },
-                                              }),
-                                            ]
-                                          },
-                                          proxy: true,
-                                        },
-                                        {
-                                          key: "next-text",
-                                          fn: function () {
-                                            return [
-                                              _c("feather-icon", {
-                                                attrs: {
-                                                  icon: "ChevronRightIcon",
-                                                  size: "18",
-                                                },
-                                              }),
-                                            ]
-                                          },
-                                          proxy: true,
-                                        },
-                                      ]),
-                                      model: {
-                                        value: _vm.currentPage,
-                                        callback: function ($$v) {
-                                          _vm.currentPage = $$v
-                                        },
-                                        expression: "currentPage",
+                                      [
+                                        _c(
+                                          "span",
+                                          { staticClass: "text-muted" },
+                                          [
+                                            _vm._v(
+                                              "mostrar " +
+                                                _vm._s(_vm.dataHistory.from) +
+                                                " de\n                    " +
+                                                _vm._s(_vm.dataHistory.to) +
+                                                " para\n                    " +
+                                                _vm._s(_vm.dataHistory.of) +
+                                                " entradas"
+                                            ),
+                                          ]
+                                        ),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-col",
+                                      {
+                                        staticClass:
+                                          "\n                    d-flex\n                    align-items-center\n                    justify-content-center justify-content-sm-end\n                  ",
+                                        attrs: { cols: "12", sm: "4" },
                                       },
-                                    }),
+                                      [
+                                        _c("b-pagination", {
+                                          staticClass: "mb-0 mt-1 mt-sm-0",
+                                          attrs: {
+                                            "total-rows": _vm.totalHistoricos,
+                                            "per-page": _vm.perPage,
+                                            "first-number": "",
+                                            "last-number": "",
+                                            "prev-class": "prev-item",
+                                            "next-class": "next-item",
+                                          },
+                                          scopedSlots: _vm._u(
+                                            [
+                                              {
+                                                key: "prev-text",
+                                                fn: function () {
+                                                  return [
+                                                    _c("feather-icon", {
+                                                      attrs: {
+                                                        icon: "ChevronLeftIcon",
+                                                        size: "18",
+                                                      },
+                                                    }),
+                                                  ]
+                                                },
+                                                proxy: true,
+                                              },
+                                              {
+                                                key: "next-text",
+                                                fn: function () {
+                                                  return [
+                                                    _c("feather-icon", {
+                                                      attrs: {
+                                                        icon: "ChevronRightIcon",
+                                                        size: "18",
+                                                      },
+                                                    }),
+                                                  ]
+                                                },
+                                                proxy: true,
+                                              },
+                                            ],
+                                            null,
+                                            false,
+                                            1308952388
+                                          ),
+                                          model: {
+                                            value: _vm.currentPage,
+                                            callback: function ($$v) {
+                                              _vm.currentPage = $$v
+                                            },
+                                            expression: "currentPage",
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    ),
                                   ],
                                   1
                                 ),
@@ -600,10 +671,8 @@ var render = function () {
                     ),
                   ],
                   1
-                ),
-              ],
-              1
-            ),
+                )
+              : _vm._e(),
           ],
           1
         ),

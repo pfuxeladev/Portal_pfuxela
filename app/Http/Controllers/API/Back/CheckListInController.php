@@ -95,29 +95,17 @@ class CheckListInController extends Controller
                     // $checklists[$key] = $var["opcao"];
 
                     $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
-                    if(isset($var['opcao']) == true){
                         foreach ($checklistVars[$key] as $key => $value) {
 
-                            $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
+                            $checklists[$key] = [
                                 'checklist_vars_id'=>$value->id,
                                 'opcao_entrada'=>$var["opcao"],
                                 'check_list_in_id'=>$checkListIn->id,
                                 'updated_at'=>Carbon::now()
-                               ]);
+                               ];
                         }
-
-                    }else {
-                        foreach ($checklistVars[$key] as $key => $value) {
-
-                            $datas[$key] = DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
-                                'checklist_vars_id'=>$value->id,
-                                'opcao_entrada'=>$var["opcao"],
-                                'check_list_in_id'=>$checkListIn->id,
-                                'updated_at'=>Carbon::now()
-                               ]);
-                        }
-                    }
                    }
+                   DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update($checklists);
 
                 //    return $checklists;
 
@@ -239,7 +227,7 @@ class CheckListInController extends Controller
     {
         $checkListIn =  $this->checkListIn->with(['CheckListOut.viatura', 'checklist'])->findOrFail($id);
 
-        $chklst = checklists::with('ocorrencia_checklist')->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_in_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
+        $chklst = checklists::with(['ocorrencia_checklist'])->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_in_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
         ->orderBy('checklist_vars.categoria', 'asc')
         ->get();
 

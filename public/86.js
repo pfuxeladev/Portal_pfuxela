@@ -325,8 +325,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -419,7 +417,7 @@ __webpack_require__.r(__webpack_exports__);
     if (!_store__WEBPACK_IMPORTED_MODULE_17__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_17__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_15__["default"]);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_12__["useToast"])();
     var form = new vform__WEBPACK_IMPORTED_MODULE_10__["default"]({
-      viatura_id: null,
+      viatura_matricula: '',
       bombas_id: null,
       qtd: null,
       horaSaida: '',
@@ -1263,703 +1261,585 @@ var render = function () {
                 "div",
                 { staticClass: "d-block" },
                 [
-                  _c("validation-observer", {
-                    ref: "refFormObserver",
-                    scopedSlots: _vm._u([
-                      {
-                        key: "default",
-                        fn: function (ref) {
-                          var handleSubmit = ref.handleSubmit
-                          return [
-                            _c(
-                              "b-form",
-                              {
-                                ref: "form",
-                                on: {
-                                  submit: function ($event) {
-                                    $event.preventDefault()
-                                    return handleSubmit(_vm.submitSupply)
-                                  },
-                                },
-                              },
-                              [
-                                _c(
-                                  "b-form-row",
-                                  [
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Bombas",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label: "Bombas",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("v-select", {
-                                                          attrs: {
-                                                            id: "Bombas",
-                                                            dir: _vm.$store
-                                                              .state.appConfig
-                                                              .isRTL
-                                                              ? "rtl"
-                                                              : "ltr",
-                                                            label:
-                                                              "nome_bombas",
-                                                            options: _vm.bombas,
-                                                            reduce: function (
-                                                              bombas
-                                                            ) {
-                                                              return bombas.id
-                                                            },
-                                                            clearable: false,
-                                                            "input-id":
-                                                              "bombas",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .bombas_id,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "bombas_id",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.bombas_id",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Viatura",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label: "Viatura",
-                                                          "label-for":
-                                                            "Viatura",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("v-select", {
-                                                          attrs: {
-                                                            id: "Viatura",
-                                                            dir: _vm.$store
-                                                              .state.appConfig
-                                                              .isRTL
-                                                              ? "rtl"
-                                                              : "ltr",
-                                                            label: "matricula",
-                                                            options:
-                                                              _vm.viaturas,
-                                                            reduce: function (
-                                                              viaturas
-                                                            ) {
-                                                              return viaturas.viatura_id
-                                                            },
-                                                            clearable: false,
-                                                            "input-id":
-                                                              "viatura",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .viatura_id,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "viatura_id",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.viatura_id",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Motorista",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label: "Motorista",
-                                                          "label-for":
-                                                            "Motorista",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("v-select", {
-                                                          attrs: {
-                                                            id: "Motorista",
-                                                            dir: _vm.$store
-                                                              .state.appConfig
-                                                              .isRTL
-                                                              ? "rtl"
-                                                              : "ltr",
-                                                            label: "nome",
-                                                            options:
-                                                              _vm.motoristas,
-                                                            reduce: function (
-                                                              motoristas
-                                                            ) {
-                                                              return motoristas.id
-                                                            },
-                                                            clearable: false,
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .motorista_id,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "motorista_id",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.motorista_id",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Qtd a abastecer",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label:
-                                                            "Qtd a abastecer",
-                                                          "label-for":
-                                                            "Qtd_abastecer",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("b-form-input", {
-                                                          attrs: {
-                                                            id: "Qtd_abastecer",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                            trim: "",
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm.qtd,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "qtd",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.qtd",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Hora prevista de saida",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label:
-                                                            "Hora prevista de saida",
-                                                          "label-for":
-                                                            "Hora_prevista_de_saida",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("cleave", {
-                                                          staticClass:
-                                                            "form-control",
-                                                          attrs: {
-                                                            id: "Hora_prevista_de_saida",
-                                                            raw: false,
-                                                            options:
-                                                              _vm.options.time,
-                                                            placeholder:
-                                                              "hh:mm:ss",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                            trim: "",
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .horaSaida,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "horaSaida",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.horaSaida",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Destino",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label: "Destino",
-                                                          "label-for":
-                                                            "destino",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("b-form-input", {
-                                                          attrs: {
-                                                            id: "Destino",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                            trim: "",
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .destino,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "destino",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.destino",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      { attrs: { cols: "6", md: "6" } },
-                                      [
-                                        _c("validation-provider", {
-                                          attrs: {
-                                            name: "Descricao",
-                                            rules: "required",
-                                          },
-                                          scopedSlots: _vm._u(
-                                            [
-                                              {
-                                                key: "default",
-                                                fn: function (
-                                                  validationContext
-                                                ) {
-                                                  return [
-                                                    _c(
-                                                      "b-form-group",
-                                                      {
-                                                        attrs: {
-                                                          label: "Descricao",
-                                                          "label-for":
-                                                            "Descricao",
-                                                        },
-                                                      },
-                                                      [
-                                                        _c("b-form-textarea", {
-                                                          attrs: {
-                                                            id: "Descricao",
-                                                            state:
-                                                              _vm.getValidationState(
-                                                                validationContext
-                                                              ),
-                                                            trim: "",
-                                                          },
-                                                          model: {
-                                                            value:
-                                                              _vm.OrderForm
-                                                                .descricao,
-                                                            callback: function (
-                                                              $$v
-                                                            ) {
-                                                              _vm.$set(
-                                                                _vm.OrderForm,
-                                                                "descricao",
-                                                                $$v
-                                                              )
-                                                            },
-                                                            expression:
-                                                              "OrderForm.descricao",
-                                                          },
-                                                        }),
-                                                        _vm._v(" "),
-                                                        _c(
-                                                          "b-form-invalid-feedback",
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  validationContext
-                                                                    .errors[0]
-                                                                ) +
-                                                                "\n                    "
-                                                            ),
-                                                          ]
-                                                        ),
-                                                      ],
-                                                      1
-                                                    ),
-                                                  ]
-                                                },
-                                              },
-                                            ],
-                                            null,
-                                            true
-                                          ),
-                                        }),
-                                      ],
-                                      1
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "b-form-row",
-                                  [
-                                    _c(
-                                      "b-col",
-                                      [
-                                        _c(
-                                          "b-button",
-                                          {
-                                            attrs: {
-                                              type: "button",
-                                              variant: "secondary",
-                                            },
-                                            on: { click: _vm.hideModal },
-                                          },
-                                          [_vm._v("cancelar")]
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      [
-                                        _c(
-                                          "b-button",
-                                          {
-                                            attrs: {
-                                              type: "submit",
-                                              variant: "success",
-                                            },
-                                          },
-                                          [_vm._v("enviar pedido")]
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                  ],
-                                  1
-                                ),
-                              ],
-                              1
-                            ),
-                          ]
+                  _c(
+                    "validation-observer",
+                    { ref: "refFormObserver" },
+                    [
+                      _c(
+                        "b-form",
+                        {
+                          ref: "form",
+                          on: {
+                            submit: function ($event) {
+                              $event.preventDefault()
+                              return _vm.submitSupply.apply(null, arguments)
+                            },
+                          },
                         },
-                      },
-                    ]),
-                  }),
+                        [
+                          _c(
+                            "b-form-row",
+                            [
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Bombas",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              { attrs: { label: "Bombas" } },
+                                              [
+                                                _c("v-select", {
+                                                  attrs: {
+                                                    id: "Bombas",
+                                                    dir: _vm.$store.state
+                                                      .appConfig.isRTL
+                                                      ? "rtl"
+                                                      : "ltr",
+                                                    label: "nome_bombas",
+                                                    options: _vm.bombas,
+                                                    reduce: function (bombas) {
+                                                      return bombas.id
+                                                    },
+                                                    clearable: false,
+                                                    "input-id": "bombas",
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm.bombas_id,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "bombas_id",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.bombas_id",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Viatura",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              { attrs: { label: "Viatura" } },
+                                              [
+                                                _c("v-select", {
+                                                  attrs: {
+                                                    id: "Viatura",
+                                                    dir: _vm.$store.state
+                                                      .appConfig.isRTL
+                                                      ? "rtl"
+                                                      : "ltr",
+                                                    label: "matricula",
+                                                    options: _vm.viaturas,
+                                                    reduce: function (
+                                                      viaturas
+                                                    ) {
+                                                      return viaturas.matricula
+                                                    },
+                                                    clearable: false,
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm
+                                                        .viatura_matricula,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "viatura_matricula",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.viatura_matricula",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Motorista",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              {
+                                                attrs: {
+                                                  label: "Motorista",
+                                                  "label-for": "Motorista",
+                                                },
+                                              },
+                                              [
+                                                _c("v-select", {
+                                                  attrs: {
+                                                    id: "Motorista",
+                                                    dir: _vm.$store.state
+                                                      .appConfig.isRTL
+                                                      ? "rtl"
+                                                      : "ltr",
+                                                    label: "nome",
+                                                    options: _vm.motoristas,
+                                                    reduce: function (
+                                                      motoristas
+                                                    ) {
+                                                      return motoristas.id
+                                                    },
+                                                    clearable: false,
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm
+                                                        .motorista_id,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "motorista_id",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.motorista_id",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Qtd a abastecer",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              {
+                                                attrs: {
+                                                  label: "Qtd a abastecer",
+                                                  "label-for": "Qtd_abastecer",
+                                                },
+                                              },
+                                              [
+                                                _c("b-form-input", {
+                                                  attrs: {
+                                                    id: "Qtd_abastecer",
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                    trim: "",
+                                                  },
+                                                  model: {
+                                                    value: _vm.OrderForm.qtd,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "qtd",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression: "OrderForm.qtd",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Hora prevista de saida",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              {
+                                                attrs: {
+                                                  label:
+                                                    "Hora prevista de saida",
+                                                  "label-for":
+                                                    "Hora_prevista_de_saida",
+                                                },
+                                              },
+                                              [
+                                                _c("cleave", {
+                                                  staticClass: "form-control",
+                                                  attrs: {
+                                                    id: "Hora_prevista_de_saida",
+                                                    raw: false,
+                                                    options: _vm.options.time,
+                                                    placeholder: "hh:mm:ss",
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                    trim: "",
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm.horaSaida,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "horaSaida",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.horaSaida",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Destino",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              {
+                                                attrs: {
+                                                  label: "Destino",
+                                                  "label-for": "destino",
+                                                },
+                                              },
+                                              [
+                                                _c("b-form-input", {
+                                                  attrs: {
+                                                    id: "Destino",
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                    trim: "",
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm.destino,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "destino",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.destino",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                { attrs: { cols: "6", md: "6" } },
+                                [
+                                  _c("validation-provider", {
+                                    attrs: {
+                                      name: "Descricao",
+                                      rules: "required",
+                                    },
+                                    scopedSlots: _vm._u([
+                                      {
+                                        key: "default",
+                                        fn: function (validationContext) {
+                                          return [
+                                            _c(
+                                              "b-form-group",
+                                              {
+                                                attrs: {
+                                                  label: "Descricao",
+                                                  "label-for": "Descricao",
+                                                },
+                                              },
+                                              [
+                                                _c("b-form-textarea", {
+                                                  attrs: {
+                                                    id: "Descricao",
+                                                    state:
+                                                      _vm.getValidationState(
+                                                        validationContext
+                                                      ),
+                                                    trim: "",
+                                                  },
+                                                  model: {
+                                                    value:
+                                                      _vm.OrderForm.descricao,
+                                                    callback: function ($$v) {
+                                                      _vm.$set(
+                                                        _vm.OrderForm,
+                                                        "descricao",
+                                                        $$v
+                                                      )
+                                                    },
+                                                    expression:
+                                                      "OrderForm.descricao",
+                                                  },
+                                                }),
+                                                _vm._v(" "),
+                                                _c("b-form-invalid-feedback", [
+                                                  _vm._v(
+                                                    "\n                      " +
+                                                      _vm._s(
+                                                        validationContext
+                                                          .errors[0]
+                                                      ) +
+                                                      "\n                    "
+                                                  ),
+                                                ]),
+                                              ],
+                                              1
+                                            ),
+                                          ]
+                                        },
+                                      },
+                                    ]),
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-form-row",
+                            [
+                              _c(
+                                "b-col",
+                                [
+                                  _c(
+                                    "b-button",
+                                    {
+                                      attrs: {
+                                        type: "button",
+                                        variant: "secondary",
+                                      },
+                                      on: { click: _vm.hideModal },
+                                    },
+                                    [_vm._v("cancelar")]
+                                  ),
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                [
+                                  _c(
+                                    "b-button",
+                                    {
+                                      attrs: {
+                                        type: "submit",
+                                        variant: "success",
+                                      },
+                                    },
+                                    [_vm._v("enviar pedido")]
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
                 ],
                 1
               ),
