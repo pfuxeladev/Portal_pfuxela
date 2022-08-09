@@ -96,18 +96,17 @@ class CheckListInController extends Controller
 
                     $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
                         foreach ($checklistVars[$key] as $key => $value) {
-
-                            $checklists[$key] = [
+                            DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
                                 'checklist_vars_id'=>$value->id,
                                 'opcao_entrada'=>$var["opcao"],
                                 'check_list_in_id'=>$checkListIn->id,
                                 'updated_at'=>Carbon::now()
-                               ];
+                               ]);
+                            
                         }
                    }
-                   DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update($checklists);
+                   
 
-                //    return $checklists;
 
                    $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
 
