@@ -102,6 +102,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -160,6 +163,10 @@ __webpack_require__.r(__webpack_exports__);
       return moment__WEBPACK_IMPORTED_MODULE_7___default()(value).format('DD/MM/YYYY hh:mm');
     }
 
+    function PrintOrder(ordem) {
+      console.log(ordem);
+    }
+
     var _useAbastecimentoList = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
         fetchAbastecimentos = _useAbastecimentoList.fetchAbastecimentos,
         tableColumns = _useAbastecimentoList.tableColumns,
@@ -187,7 +194,8 @@ __webpack_require__.r(__webpack_exports__);
       isSortDirDesc: isSortDirDesc,
       refAbastecimentoListTable: refAbastecimentoListTable,
       refetchData: refetchData,
-      dateTime: dateTime
+      dateTime: dateTime,
+      PrintOrder: PrintOrder
     };
   }
 });
@@ -670,6 +678,24 @@ var render = function () {
                               },
                             },
                             {
+                              key: "cell(imprimir)",
+                              fn: function (data) {
+                                return [
+                                  _c(
+                                    "span",
+                                    {
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.PrintOrder(data.item.ordem)
+                                        },
+                                      },
+                                    },
+                                    [_c("i", { staticClass: "fas fa-print" })]
+                                  ),
+                                ]
+                              },
+                            },
+                            {
                               key: "cell(Data_de_emissao)",
                               fn: function (data) {
                                 return [
@@ -756,7 +782,7 @@ var render = function () {
                           ],
                           null,
                           false,
-                          2534658875
+                          1103006253
                         ),
                       }),
                       _vm._v(" "),
@@ -1209,6 +1235,9 @@ function useAbastecimentoList() {
     sortable: true
   }, {
     key: 'user.name',
+    sortable: true
+  }, {
+    Key: 'imprimir',
     sortable: true
   }, {
     key: 'acções'

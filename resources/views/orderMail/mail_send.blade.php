@@ -68,11 +68,16 @@
             height: 100vh;
             border-collapse: collapse;
         }
-        table.table-content td, table.table-content th {
+
+        table.table-content td,
+        table.table-content th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
-        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
+
+        table.table-content tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
         .row-data {
             width: 100%;
@@ -95,20 +100,70 @@
             </h3>
         </div>
         <div class='card'>
-            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}" style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
+            <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}"
+                style="width:150px; margin-bottom:20px; margin-left:40px" alt="">
 
             <div class='card-header p-4'>
 
                 <div style="margin-left: 20px">
                     <h3 class='mb-0 card-title'>ORDEM DE ABASTECIMENTO #
-                        <b style='color:#eb691e;'>{{ $ordem->codigo_ordem; }}</b></h3>
-                            <hr>
+                        <b style='color:#eb691e;'>{{ $ordem->codigo_ordem }}</b>
+                    </h3>
+                    <hr>
                     <div>Data de Emissão: <b>{{ $ordem->updated_at->format('d/m/Y') }}</b></div>
                     <div>Hora da Emissão: <b>{{ $ordem->updated_at->format('h:i:s') }}</b></div>
 
                 </div>
             </div>
+            <div class='card-body' style="margin-left: 20px;">
+                <div class='row ml-4 mb-3'>
+                    <div class='col-sm-6'>
+
+                        <h5 class='mb-1'>Da: <strong>Pfuxela Exhibitions Gallery<strong /></h5>
+                        <div>Av. Paulo Samuel Kankomba</div>
+                        <div>Maputo, Mozambique 1114</div>
+                        <div>Email: info@pfuxela.co.mz</div>
+                        <div>Phone: +258 84 1000 170</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class='row ml-4 mb-3'>
+                <div class='col-sm-6'>
+
+                    <h3 class='mb-1'>Para: {{ $ordem->bombas->nome_bombas }}</h3>
+                </div>
+
+            </div><br>
+            <p class="margin-left:20px">
+                A <b><Pfuxela Exhibition Gallery/b> vem por esta meio fazer o pedido de cancelamento da ordem {{ $ordem->codigo_ordem }}
+                que acidentalmente o enviou sem devida verificação do destinatario.
+                Nossas Sincera desculpa pelo incoveniente.
+            </p>
+            <div class="card-footer" style="margin-left: 20px; margin-top:40px;">
+                <div style="width:100%; display: block; float:left; position: relative;">
+                    <p style="font-size: 14px; margin-top: 6px; margin-bottom: 20px;">
+                        Gestor da Pfuxela
+                        <br>
+                        <hr style="float: left;" width="300">
+                    </p>
+                    <br>
+                    <p style="font-size: 14px; margin-top: 6px; margin-bottom: 20px;">
+                        Assinatura(Gestor da bomba)
+                        <br>
+                        <hr style="float: left;" width="300">
+                    </p>
+                    <br>
+                    <p
+                        style="font-size: 14px; margin-top: 6px; margin-bottom: 20px; float: left;">
+                        <strong>Nota</strong>: A Pfuxela Exhibitions Gallery se
+                        responsabiliza só e somente por abastecimentos enviados
+                        automaticamente pelo sistema e mediante a
+                        apresentação da cópia física devidamente assinada pelo gestor.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
 </body>
+
 </html>

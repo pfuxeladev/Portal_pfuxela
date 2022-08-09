@@ -49,7 +49,13 @@ export default {
           .catch(error => reject(error))
       })
     },
-
+    UndoOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.post(`/api/DesfazerOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
     CancelOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/CancelarOrdem/${refs}`)
@@ -65,7 +71,7 @@ export default {
           .catch(error => reject(error))
       })
     },
-   
+
     fetchAbstRecDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios

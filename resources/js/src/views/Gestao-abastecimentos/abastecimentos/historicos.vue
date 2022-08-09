@@ -37,6 +37,9 @@
                     <template #cell(bombas)="data">
                         {{data.item.ordem.bombas.nome_bombas}}
                     </template>
+                    <template #cell(imprimir)="data">
+                        <span @click="PrintOrder(data.item.ordem)"><i class="fas fa-print"></i></span>
+                    </template>
                      <template #cell(Data_de_emissao)="data">
                         {{ dateTime(data.item.ordem.created_at) }}
                     </template>
@@ -166,7 +169,9 @@ export default {
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
-
+    function PrintOrder(ordem) {
+      console.log(ordem)
+    }
     const {
       fetchAbastecimentos,
       tableColumns,
@@ -196,6 +201,7 @@ export default {
       refAbastecimentoListTable,
       refetchData,
       dateTime,
+      PrintOrder,
     };
   },
 };

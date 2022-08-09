@@ -21,6 +21,7 @@ export default function useAbastecimentoList() {
     { key: 'bombas', sortable: true },
     { key: 'Data_de_emissao', sortable: true },
     { key: 'user.name', sortable: true },
+    { Key: 'imprimir', sortable: true },
     { key: 'acções' },
   ]
 

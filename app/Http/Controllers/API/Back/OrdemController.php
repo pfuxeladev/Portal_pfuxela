@@ -100,12 +100,51 @@ class OrdemController extends Controller
                         $v->update();
                     }
                 }
+                $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
+                $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+                foreach ($responsavel as $key => $bombas_mail) {
+                    $data["email"] = $bombas_mail->email_bomba;
+                    $data["title"] = "Pedido de Cancelamento da Ordem de abastecimento Nr. " . $ordem->codigo_ordem;
+
+                    $pdf = PDF::loadView('orderMail.mail_send', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                    $path = Storage::put('public/pdf/Cancelamento_ordem' . $ordem->codigo_ordem . '.pdf', $pdf->output());
+
+                    Mail::send('orderMail.mail_send', compact('ordem'), function ($message) use ($data, $pdf) {
+                        $message->to($data["email"])
+                            ->subject($data["title"])
+                            ->attachData($pdf->output(), "ordem.pdf");
+                    });
+                }
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
             }
         } catch (\Exception $e) {
             return response()->json(['error' => 'Erro na transacao, contacte o administrador', $e->getMessage()], 421);
         }
+    }
+
+    function DesfazerOrdem(Request $request, $refs){
+        try {
+            $ordem = Ordem::where('refs', $request->refs)->first();
+            $ordem->estado = 'Cancelada';
+            $ordem->approvedBy = auth()->user()->id;
+            $ordem->update();
+
+            if ($ordem) {
+
+                $ordem_viatura = ordem_viatura::where('ordem_id', $ordem->id)->get();
+                foreach ($ordem_viatura as $ov => $ordVi) {
+                    $viatura = Viatura::where('id', $ordVi->viatura_id)->get();
+                    foreach ($viatura as $key => $v) {
+                        $v->qtd_disponivel = ($v->qtd_disponivel - $ordVi->qtd_abastecida);
+                        $v->update();
+                    }
+                }
+                return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
+            }
+            } catch (\Exception $e) {
+                    return response()->json(['error' => 'Erro na transacao, contacte o administrador', $e->getMessage()], 421);
+                }
     }
 
     function ReabrirOrdem($refs)
@@ -391,7 +430,7 @@ class OrdemController extends Controller
             ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
             ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
             ->where('bombas.nome_bombas', $request->params['bombaNome'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
-            
+
             return response()->json($ordem_viatura, 200);
         }else{
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->paginate(10);

@@ -122,8 +122,8 @@
       </b-col>
       <b-col cols="12" xl="2" md="2">
         <span v-if="SupplyData.estado === 'Pendente'">
-          <b-button variant="outline-danger" @click="Reprovar(SupplyData.refs)">
-            Cancelar
+          <b-button variant="outline-danger" @click="Desfazer(SupplyData.refs)">
+            cancelar envio
           </b-button>
         </span>
       </b-col>
@@ -259,6 +259,43 @@ export default {
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm');
     }
+    function Desfazer(refs) {
+      store
+        .dispatch('Supply/UndoOrder', { refs })
+        .then((res) => {
+          this.$emit('refetch-data');
+          toast({
+            component: ToastificationContent,
+            props: {
+              title: res.data.message,
+              icon: 'CheckSquareIcon',
+              variant: 'success',
+            },
+          });
+          router.push({ name: 'Orders' });
+        })
+        .catch((err) => {
+          if (err.response.status === 421) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: err.response.data.erro,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            });
+          } else if (err.response.status === 500) {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: 'Erro do sistema contacte o administrador',
+                icon: 'AlertTriangleIcon',
+                variant: 'danger',
+              },
+            });
+          }
+        });
+    }
     function Reprovar(refs) {
       store
         .dispatch('Supply/CancelOrder', { refs })
@@ -348,6 +385,7 @@ export default {
       Reprovar,
       dateTime,
       reabrirOrdem,
+      Desfazer,
     };
   },
 };

@@ -65,6 +65,7 @@ Route::group(['middleware'=>'auth:api'], function () {
     // Aprovar abastecimento e reprovar
     Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
     Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
+    Route::post('/DesfazerOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'DesfazerOrdem']);
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
     Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
     // Abastecer bomba

@@ -261,13 +261,55 @@ __webpack_require__.r(__webpack_exports__);
       return moment__WEBPACK_IMPORTED_MODULE_9___default()(value).format('DD/MM/YYYY hh:mm');
     }
 
-    function Reprovar(refs) {
+    function Desfazer(refs) {
       var _this2 = this;
+
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/UndoOrder', {
+        refs: refs
+      }).then(function (res) {
+        _this2.$emit('refetch-data');
+
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+          props: {
+            title: res.data.message,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
+          name: 'Orders'
+        });
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: err.response.data.erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        } else if (err.response.status === 500) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: 'Erro do sistema contacte o administrador',
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    function Reprovar(refs) {
+      var _this3 = this;
 
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/CancelOrder', {
         refs: refs
       }).then(function (res) {
-        _this2.$emit('refetch-data');
+        _this3.$emit('refetch-data');
 
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -304,12 +346,12 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function reabrirOrdem(refs) {
-      var _this3 = this;
+      var _this4 = this;
 
       _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReopenOrder', {
         refs: refs
       }).then(function (res) {
-        _this3.$emit('refetch-data');
+        _this4.$emit('refetch-data');
 
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -360,7 +402,8 @@ __webpack_require__.r(__webpack_exports__);
       Aprovar: Aprovar,
       Reprovar: Reprovar,
       dateTime: dateTime,
-      reabrirOrdem: reabrirOrdem
+      reabrirOrdem: reabrirOrdem,
+      Desfazer: Desfazer
     };
   }
 });
@@ -1205,11 +1248,11 @@ var render = function () {
                             attrs: { variant: "outline-danger" },
                             on: {
                               click: function ($event) {
-                                return _vm.Reprovar(_vm.SupplyData.refs)
+                                return _vm.Desfazer(_vm.SupplyData.refs)
                               },
                             },
                           },
-                          [_vm._v("\n          Cancelar\n        ")]
+                          [_vm._v("\n          cancelar envio\n        ")]
                         ),
                       ],
                       1
