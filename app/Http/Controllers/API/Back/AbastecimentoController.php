@@ -126,8 +126,8 @@ class AbastecimentoController extends Controller
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
         foreach ($request->rota_id as $key => $rt) {
-            $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
+            $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')->join('ordems', 'ordems.id', '=','ordem_viaturas.ordem_id')
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where('ordems.estado', '!=', 'Cancelada')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
 
             // return $ordem_rota;
             if (!empty($ordem_rota)) {
