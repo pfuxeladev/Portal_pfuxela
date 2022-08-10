@@ -106,8 +106,6 @@ class CheckListInController extends Controller
                         }
                    }
 
-
-
                    $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
 
                    $ocorrencia = [];
@@ -142,7 +140,7 @@ class CheckListInController extends Controller
              // return $viatura1->qtd_disponivel;
              if($qtd_disponivel < 0){
                  $viatura1->qtd_disponivel = $request->litros_tanque;
-             }else if($qtd_disponivel >=0 && $viatura1->qtd_disponivel > $qtd_disponivel) {
+             }else if($qtd_disponivel >=0 && $viatura1->capacidade_tanque > $qtd_disponivel) {
                  $viatura1->qtd_disponivel = $request->litros_tanque;
              }
                 $viatura1->kilometragem = $request->km_fim;
