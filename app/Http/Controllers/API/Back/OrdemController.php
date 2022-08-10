@@ -483,6 +483,7 @@ class OrdemController extends Controller
             ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
             ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
             ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('bombas.nome_bombas', $request->bombaNome)
             ->where('ordems.codigo_ordem', 'like', '%' . $request->searchDatas . '%')
             ->orWhere('viaturas.matricula', 'like', '%' . $request->searchDatas . '%')
             ->orWhere('bombas.nome_bombas', 'like', '%' . $request->bombaNome . '%')
@@ -531,6 +532,16 @@ class OrdemController extends Controller
             ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
             ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
             ->where('bombas.nome_bombas', 'like', '%' . $request->bombaNome . '%')
+            ->orderBy('ordem_viaturas.updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+        }else if($request->bombaNome && $request->intervalo){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])
+            ->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('bombas.nome_bombas', $request->bombaNome)
+            ->whereBetween('ordems.created_at', $request->intervalo)
             ->orderBy('ordem_viaturas.updated_at', 'desc')->get();
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
         }else{
