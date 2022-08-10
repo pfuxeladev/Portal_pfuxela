@@ -82,6 +82,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -306,27 +307,36 @@ var render = function () {
                                             { staticClass: "text-right" },
                                             [
                                               checklst.opcao === "Ok"
-                                                ? _c("span", [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fa fa-check",
-                                                      staticStyle: {
-                                                        "font-size": "24px",
-                                                        color: "green",
-                                                      },
-                                                    }),
-                                                  ])
+                                                ? _c(
+                                                    "span",
+                                                    [
+                                                      _c("feather-icon", {
+                                                        staticStyle: {
+                                                          color: "green",
+                                                        },
+                                                        attrs: {
+                                                          icon: "CheckIcon",
+                                                        },
+                                                      }),
+                                                    ],
+                                                    1
+                                                  )
                                                 : checklst.opcao === "No"
-                                                ? _c("span", [
-                                                    _c("i", {
-                                                      staticClass:
-                                                        "fa fa-remove",
-                                                      staticStyle: {
-                                                        "font-size": "24px",
-                                                        color: "red",
-                                                      },
-                                                    }),
-                                                  ])
+                                                ? _c(
+                                                    "span",
+                                                    [
+                                                      _c("feather-icon", {
+                                                        staticStyle: {
+                                                          "font-size": "24px",
+                                                          color: "red",
+                                                        },
+                                                        attrs: {
+                                                          icon: "XIcon",
+                                                        },
+                                                      }),
+                                                    ],
+                                                    1
+                                                  )
                                                 : checklst.opcao === "Parcial"
                                                 ? _c(
                                                     "b-badge",
@@ -336,15 +346,17 @@ var render = function () {
                                                       },
                                                     },
                                                     [
-                                                      _c("i", {
-                                                        staticClass:
-                                                          "fa fa-exclamation-triangle",
+                                                      _c("feather-icon", {
                                                         staticStyle: {
                                                           "font-size": "48px",
                                                           color: "orange",
                                                         },
+                                                        attrs: {
+                                                          icon: "AlertTriangleIcon",
+                                                        },
                                                       }),
-                                                    ]
+                                                    ],
+                                                    1
                                                   )
                                                 : _vm._e(),
                                             ],

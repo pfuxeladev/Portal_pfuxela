@@ -664,24 +664,6 @@ var render = function () {
                               },
                             },
                             {
-                              key: "cell(imprimir)",
-                              fn: function (data) {
-                                return [
-                                  _c(
-                                    "span",
-                                    {
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.PrintOrder(data.item.ordem)
-                                        },
-                                      },
-                                    },
-                                    [_c("i", { staticClass: "fas fa-print" })]
-                                  ),
-                                ]
-                              },
-                            },
-                            {
                               key: "cell(bombas)",
                               fn: function (data) {
                                 return [
@@ -800,11 +782,7 @@ var render = function () {
                           ],
                           null,
                           false,
-<<<<<<< HEAD
                           1103006253
-=======
-                          3543154989
->>>>>>> 20fa3bc0c32ae8bc24c8688a326084ecb14588f4
                         ),
                       }),
                       _vm._v(" "),

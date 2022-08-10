@@ -44,10 +44,11 @@
                     <span class="ml-2" v-if="checklst.categoria === chk.id">
                     <table class="table table-responsive">
                         <tr>
+
                             <td>{{checklst.checklist_name}}</td>
-                            <td class="text-right"> <span v-if="checklst.opcao === 'Ok'"><i class="fa fa-check" style="font-size:24px;color:green"></i></span>
-                        <span v-else-if="checklst.opcao === 'No'"><i class="fa fa-remove" style="font-size:24px;color:red"></i></span>
-                        <b-badge v-else-if="checklst.opcao === 'Parcial'" variant="warning"><i class="fa fa-exclamation-triangle" style="font-size:48px;color:orange"></i></b-badge></td>
+                            <td class="text-right"> <span v-if="checklst.opcao === 'Ok'"><feather-icon icon="CheckIcon" style="color:green"></feather-icon></span>
+                        <span v-else-if="checklst.opcao === 'No'"><feather-icon icon="XIcon" style="font-size:24px;color:red"></feather-icon></span>
+                        <b-badge v-else-if="checklst.opcao === 'Parcial'" variant="warning"><feather-icon icon="AlertTriangleIcon" style="font-size:48px;color:orange"></feather-icon></b-badge></td>
                         </tr>
                     </table>
                     </span>
