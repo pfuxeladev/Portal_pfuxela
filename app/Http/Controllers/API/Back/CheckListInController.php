@@ -102,10 +102,10 @@ class CheckListInController extends Controller
                                 'check_list_in_id'=>$checkListIn->id,
                                 'updated_at'=>Carbon::now()
                                ]);
-                            
+
                         }
                    }
-                   
+
 
 
                    $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
