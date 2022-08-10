@@ -167,7 +167,9 @@ class CheckListOutController extends Controller
                   $checklists[] = [
                         'checklist_vars_id'=>$value['id'],
                         'opcao'=>$var['opcao'],
-                        'check_list_out_id'=>$checkListOut->id
+                        'check_list_out_id'=>$checkListOut->id,
+                        'created_at'=>Carbon::now(),
+                        'updated_at'=>Carbon::now()
                        ];
                 }
                }
@@ -181,7 +183,8 @@ class CheckListOutController extends Controller
                $ocorrencia[] = [
                     'descricao'=>checklist_vars::where('id', $chkOc->checklist_vars_id)->pluck('checklist_name'),
                     'situacao'=>$chkOc->opcao,
-                    'checklists_id'=>$chkOc->id
+                    'checklists_id'=>$chkOc->id,
+                    'created_at'=>Carbon::now(),
                 ];
             }
               $ocorrencia_checlist = ocorrencia_checklist::insert($ocorrencia);
