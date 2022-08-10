@@ -423,13 +423,22 @@ class OrdemController extends Controller
             ->orderBy('ordems.updated_at', 'desc')->whereBetween('ordems.created_at', $request->params['intervalo'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
 
             return response()->json($ordem_viatura, 200);
+        }else if($request->params['bombaNome'] && $request->params['intervalo']){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])
+            ->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('bombas.nome_bombas', $request->params['bombaNome'])->whereBetween('ordems.created_at', $request->params['intervalo'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
+
+            return response()->json($ordem_viatura, 200);
         }else if($request->params['bombaNome']){
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])
             ->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
             ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
             ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
             ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-            ->where('bombas.nome_bombas', $request->params['bombaNome'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
+            ->where('bombas.nome_bombas', $request->params['bombaNome'])->orWhereBetween('ordems.created_at', $request->params['intervalo'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
 
             return response()->json($ordem_viatura, 200);
         }else{
@@ -477,6 +486,22 @@ class OrdemController extends Controller
             ->where('ordems.codigo_ordem', 'like', '%' . $request->searchDatas . '%')
             ->orWhere('viaturas.matricula', 'like', '%' . $request->searchDatas . '%')
             ->orWhere('bombas.nome_bombas', 'like', '%' . $request->bombaNome . '%')
+            ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->searchDatas . '%')
+            ->orWhere('rotas.nome_rota', 'like', '%' . $request->searchDatas . '%')
+            ->orderBy('ordem_viaturas.updated_at', 'desc')->get();
+            $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+            return $pdf->output();
+
+        }else if($request->intervalo && $request->searchDatas && $request->bombaNome){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereBetween('ordems.created_at', $request->intervalo)->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('bombas.nome_bombas', $request->bombaNome)
+            ->where('ordems.codigo_ordem', 'like', '%' . $request->searchDatas . '%')
+            ->orWhere('viaturas.matricula', 'like', '%' . $request->searchDatas . '%')
+            ->orWhere('bombas.nome_bombas', 'like', '%' . $request->seachDatas . '%')
             ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->searchDatas . '%')
             ->orWhere('rotas.nome_rota', 'like', '%' . $request->searchDatas . '%')
             ->orderBy('ordem_viaturas.updated_at', 'desc')->get();
