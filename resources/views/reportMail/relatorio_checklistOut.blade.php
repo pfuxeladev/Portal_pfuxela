@@ -68,11 +68,16 @@
             height: 100vh;
             border-collapse: collapse;
         }
-        table.table-content td, table.table-content th {
+
+        table.table-content td,
+        table.table-content th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
-        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
+
+        table.table-content tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
         .row-data {
             width: 100%;
@@ -97,72 +102,46 @@
         <div class="content">
             <div class="side-company">
                 <ul class="list-unstyled">
-                    <li class="dado">Viatura</li>
+                    <li class="dado">Viatura: {{ $viatura->matricula }}, {{ $viatura->nome_viatura }}</li>
                     <li class="dado">Mes</li>
                     <li class="dado">Semana</li>
                 </ul>
+
             </div>
             <div class="row-data">
                 <table class="table-content">
-                   <thead>
-                    <tr>
-                        <th rowspan="5">
-                            Itens a verificar
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>Segunda</th>
-                        <th>Terca</th>
-                        <th>Quarta</th>
-                        <th>Quinta</th>
-                        <th>Sexta</th>
-                        <th>Sabado</th>
-                        <th>Domingo</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                    <tr>
-                        <th>Km</th>
-                        <th>Km</th>
-                        <th>Km</th>
-                        <th>Km</th>
-                        <th>Km</th>
-                        <th>Km</th>
-                        <th>Km</th>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                   </thead>
-                   <tbody>
-                    <tr>
-                        <td colspan="8">Categoria</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            @foreach ($checkListOut as $key => $chk)
+                                <th>{{ $key }}</th>
+                            @endforeach
+                        </tr>
 
-                   </tbody>
+                        <tr>
+                            @foreach ($checkListOut as $key => $chk)
+                                @foreach ($chk as $k)
+                                    <th>{{ $k->km_inicio }}</th>
+                                @endforeach
+                            @endforeach
+
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        <tr>
+                            @foreach ($checkListOut as $key => $chk)
+                            <td></td>
+                                @foreach ($chk as $ck)
+                                    <td>
+                                        @foreach ($ck->checklists as $checklist)
+                                       {{$checklist->opcao}}
+                                       <br>
+                                        @endforeach
+                                    </td>
+                                @endforeach
+                            @endforeach
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
