@@ -585,7 +585,7 @@ class OrdemController extends Controller
         foreach (User::all() as $key => $user) {
 
 
-            // if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
+            if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
                 $data["email"] = $user->email;
                 $data["title"] = "Relatorio Semanal";
                 $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
@@ -604,7 +604,7 @@ class OrdemController extends Controller
                 });
 
                 return response()->json(['message'=>'email sent to: '.$user->email]);
-            // }
+            }
         }
 
     }
