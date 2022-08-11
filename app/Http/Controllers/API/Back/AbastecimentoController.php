@@ -118,6 +118,9 @@ class AbastecimentoController extends Controller
         if (!empty($combustivel)) {
 
                 if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
+                    if($viatura->capacidade_tanque  < ($viatura->qtd_disponivel + $request->qtd_abastecer)){
+                        return response()->json(['erro'=> 'Nao pode abastecer acima do que a viatura necessita'], 421);
+                    }
                     $preco = ($combustivel->preco_actual * $request->qtd_abastecer);
                 } else {
                     return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);

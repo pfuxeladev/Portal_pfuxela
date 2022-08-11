@@ -1432,8 +1432,7 @@ function useRelatorioEntradaList() {
       perPage: perPage.value,
       page: currentPage.value,
       sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value,
-      rota: rotaFilter.value
+      sortDesc: isSortDirDesc.value
     }).then(function (response) {
       var checklistIn = response.data;
       callback(checklistIn.data);

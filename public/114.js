@@ -325,7 +325,6 @@ var render = function () {
                                                     [
                                                       _c("feather-icon", {
                                                         staticStyle: {
-                                                          "font-size": "24px",
                                                           color: "red",
                                                         },
                                                         attrs: {
@@ -347,7 +346,6 @@ var render = function () {
                                                     [
                                                       _c("feather-icon", {
                                                         staticStyle: {
-                                                          "font-size": "48px",
                                                           color: "orange",
                                                         },
                                                         attrs: {

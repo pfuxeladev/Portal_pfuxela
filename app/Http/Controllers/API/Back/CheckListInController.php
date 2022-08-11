@@ -26,9 +26,17 @@ class CheckListInController extends Controller
     {
         $this->checkListIn = $checkListIn;
     }
-    public function index()
+    public function index(Request $request)
     {
-        return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy('created_at', 'desc')->paginate(10);
+        if ($request->q) {
+            return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->where('created_at', 'like', '%'.$request->q.'%')->orderBy('created_at', 'desc')->paginate(10);
+        } else if($request->q && $request->perPage) {
+            return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->where('created_at', 'like', '%'.$request->q.'%')->orderBy('created_at', 'desc')->paginate($request->perPage);
+        }else{
+            return $this->checkListIn->with(['viatura', 'motorista', 'user', 'CheckListOut.viatura'])->orderBy('created_at', 'desc')->paginate(10);
+        }
+
+
     }
 
   function listViaturaFora(){
@@ -89,22 +97,18 @@ class CheckListInController extends Controller
             if($checkListIn){
 
                 // return $request->checklist_var;
-                $checklists = array();
 
                 foreach ($request->checklist_var as $key => $var) {
-                    // $checklists[$key] = $var["opcao"];
 
                     $checklistVars[$key] = checklist_vars::where('id', $var['id'])->get();
-                        foreach ($checklistVars[$key] as $key => $value) {
-                            DB::table('checklists')->where('check_list_out_id', $checkList_out->id)->update([
-                                'checklist_vars_id'=>$value->id,
-                                'opcao_entrada'=>$var["opcao"],
-                                'check_list_in_id'=>$checkListIn->id,
-                                'updated_at'=>Carbon::now()
-                               ]);
-
-                        }
+                    // $checklists = checklists::where('checklist_vars_id', $var['id'])->first();
+                    foreach ($checklistVars[$key] as $key => $value) {
+                        // return $value['id'];
+                      checklists::where('checklist_vars_id',$value['id'])->update(['opcao_entrada'=>$var['opcao'], 'check_list_in_id'=>$checkListIn->id]);
+                    }
                    }
+
+
 
                    $checkList = DB::table('checklists')->where('check_list_in_id', $checkListIn->id)->where('opcao','!=', 'Ok')->get();
 
@@ -224,7 +228,7 @@ class CheckListInController extends Controller
     {
         $checkListIn =  $this->checkListIn->with(['CheckListOut.viatura', 'checklist'])->findOrFail($id);
 
-        $chklst = checklists::with(['ocorrencia_checklist'])->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_in_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao', DB::raw('checklist_vars.categoria as categoria'))
+        $chklst = checklists::with(['ocorrencia_checklist'])->join('checklist_vars', 'checklist_vars.id', '=', 'checklists.checklist_vars_id')->where('checklists.check_list_in_id', $id)->select('checklist_vars.categoria', 'checklist_vars.checklist_name', 'checklists.opcao_entrada', DB::raw('checklist_vars.categoria as categoria'))
         ->orderBy('checklist_vars.categoria', 'asc')
         ->get();
 

@@ -57,7 +57,6 @@ export default function useRelatorioEntradaList() {
         page: currentPage.value,
         sortBy: sortBy.value,
         sortDesc: isSortDirDesc.value,
-        rota: rotaFilter.value,
       })
       .then(response => {
         const checklistIn = response.data
