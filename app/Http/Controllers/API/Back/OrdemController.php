@@ -72,7 +72,7 @@ class OrdemController extends Controller
                         ->subject($data["title"])
                         ->attachData($pdf->output(), "ordem.pdf");
                 });
-                
+
                 $pdf->download('Ordem'.$ordem->codigo_ordem.'.pdf');
 
             }
@@ -576,6 +576,32 @@ class OrdemController extends Controller
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
             return $pdf->output();
+        }
+
+    }
+
+    // Relatorio Semanal
+    public function SendWeeklyReport(){
+        foreach (User::all() as $key => $user) {
+
+
+            if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
+                $data["email"] = $user->email;
+                $data["title"] = "Relatorio Semanal";
+                $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
+
+
+                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->where('created_at', Carbon::now()->subdays(7))->orderBy('updated_at', 'desc')->get();
+
+                $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+
+                $path = Storage::put('public/pdf/relatorioAbastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+                Mail::send($data["body"], $data, function ($message) use ($data, $pdf) {
+                    $message->to($data["email"], $data["email"])
+                        ->subject($data["title"])
+                        ->attachData($pdf->output(), 'RelatorioSemanal' . date('Y-m-d H:i:s') . '.pdf');
+                });
+            }
         }
 
     }
