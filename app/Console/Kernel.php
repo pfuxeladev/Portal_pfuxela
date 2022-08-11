@@ -4,18 +4,18 @@ namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-
+use App\Console\Commands\ReportDatasdayCron;
 class Kernel extends ConsoleKernel
 {
     protected $commands = [
         // 'App\Console\Commands\Inspire',
-        'App\Console\Commands\ReportDatasdayCron',
+        ReportDatasdayCron::class,
         ];
 
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('ReportDatasCron')->weekly();
+        $schedule->command('ReportDatasCron:cron')->weekly()->timezone('Africa/Maputo');
     }
 
     /**
