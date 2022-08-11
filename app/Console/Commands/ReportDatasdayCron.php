@@ -41,7 +41,7 @@ class ReportDatasdayCron extends Command
      *
      * @return int
      */
-    public function fire()
+    public function handle()
     {
         foreach (User::all() as $key => $user) {
 
