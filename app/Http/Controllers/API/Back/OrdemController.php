@@ -82,13 +82,13 @@ class OrdemController extends Controller
                     $data["email"] = $usrs->email;
                 $data["title"] = "Ordem de abastecimento Nr. " . $ordem->codigo_ordem . " com respectivas rota e projectos";
 
-                $pdf = PDF::loadView('orderMail.orderWithRotasr', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                $pdf = PDF::loadView('orderMail.orderWithRotas', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
                 $path = Storage::put('public/pdf/ordem_rotas' . $ordem->codigo_ordem . '.pdf', $pdf->output());
 
                 Mail::send('orderMail.orderWithRotasr', compact('ordem'), function ($message) use ($data, $pdf) {
                     $message->to($data["email"])
                         ->subject($data["title"])
-                        ->attachData($pdf->output(), "ordem.pdf");
+                        ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') . "pdf");
                 });
                 }
             }
@@ -136,7 +136,7 @@ class OrdemController extends Controller
                     Mail::send('orderMail.mail_send', compact('ordem'), function ($message) use ($data, $pdf) {
                         $message->to($data["email"])
                             ->subject($data["title"])
-                            ->attachData($pdf->output(), "ordem.pdf");
+                            ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') . ".pdf");
                     });
                 }
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
@@ -585,7 +585,7 @@ class OrdemController extends Controller
         foreach (User::all() as $key => $user) {
 
 
-            if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
+            // if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
                 $data["email"] = $user->email;
                 $data["title"] = "Relatorio Semanal";
                 $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
@@ -596,13 +596,15 @@ class OrdemController extends Controller
 
                 $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
-                $path = Storage::put('public/pdf/relatorioAbastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+                $path = Storage::put('public/pdf/relatorio_bastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
                 Mail::send($data["body"], $data, function ($message) use ($data, $pdf) {
                     $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'RelatorioSemanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
-            }
+
+                return response()->json(['message'=>'email sent to: '.$user->email]);
+            // }
         }
 
     }
