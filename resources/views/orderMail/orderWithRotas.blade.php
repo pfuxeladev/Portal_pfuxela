@@ -88,6 +88,11 @@
                                     </p>
                                 </th>
                                 <th>
+                                    <p>
+                                        Km
+                                    </p>
+                                </th>
+                                <th>
                                     <p>Combustivel</p>
                                 </th>
                                 <th>
@@ -110,6 +115,11 @@
                                         <span style="margin: 2px;">{{$rota->nome_rota}} - projecto ({{$rota->projecto->name}})</span><br>
                                         @endforeach
                                     </td>
+                                    <td>
+                                        @foreach ($ordViatura->rota as $rota)
+                                        <span style="margin: 2px;">{{$rota->distancia_km}} km</span><br>
+                                        @endforeach
+                                    </td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
                                     <td>{{ $ordViatura->qtd_abastecida }}</td>
                                     <td>{{ $ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida }}</td>
@@ -121,12 +131,12 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="3"></td>
+                                <td colspan="4"></td>
                                 <th>Subtotal</th>
                                 <td>{{ $total }}</td>
                             </tr>
                             <tr>
-                                <td colspan="3"></td>
+                                <td colspan="4"></td>
                                 <th>Total</th>
                                 <td>{{ $total }}</td>
                             </tr>
