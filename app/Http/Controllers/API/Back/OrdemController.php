@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\responsavelBombas;
 use App\Models\combustivelBomba;
+use App\Models\User;
 use Illuminate\Support\Carbon;
 
 class OrdemController extends Controller
@@ -71,7 +72,29 @@ class OrdemController extends Controller
                         ->subject($data["title"])
                         ->attachData($pdf->output(), "ordem.pdf");
                 });
+                
+                $pdf->download('Ordem'.$ordem->codigo_ordem.'.pdf');
+
             }
+
+            foreach (User::all() as $key => $usrs) {
+                if ($usrs->email === 'mauro@pfuxela.co.mz' && $usrs->email === 'fausia@pfuxela.co.mz' && $usrs->email === 'supportdesk@pfuxela.co.mz') {
+                    $data["email"] = $usrs->email;
+                $data["title"] = "Ordem de abastecimento Nr. " . $ordem->codigo_ordem . " com respectivas rota e projectos";
+
+                $pdf = PDF::loadView('orderMail.orderWithRotasr', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
+                $path = Storage::put('public/pdf/ordem_rotas' . $ordem->codigo_ordem . '.pdf', $pdf->output());
+
+                Mail::send('orderMail.orderWithRotasr', compact('ordem'), function ($message) use ($data, $pdf) {
+                    $message->to($data["email"])
+                        ->subject($data["title"])
+                        ->attachData($pdf->output(), "ordem.pdf");
+                });
+                }
+            }
+
+
+
             return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
         }
     }
@@ -280,7 +303,9 @@ class OrdemController extends Controller
         Storage::put('public/pdf/ordem_abastecimento.pdf', $pdf->output());
         // return $pdf->download('ordem.pdf');
 
-        return view('orderMail.mail_order', compact('ordem'));
+        // return response()->json($ordem, 200);
+
+        return view('orderMail.orderWithRotas', compact('ordem'));
     }
 
     function editOrder(Request $request, $refs)
