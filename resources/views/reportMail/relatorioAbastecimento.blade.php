@@ -97,7 +97,7 @@
         <div class="content">
             <div class="side-company">
                 <ul class="list-unstyled">
-                    <li class="dado">Imprimido por: {{ auth()->user()->name }}</li>
+                    {{--  <li class="dado">Imprimido por: {{ auth()->user()->name }}</li>  --}}
                     <li class="dado">Data de Emissao: <?php echo date('Y-m-d H:i:s'); ?></li>
                 </ul>
             </div>

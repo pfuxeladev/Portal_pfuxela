@@ -130,6 +130,8 @@ Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoCont
 
 Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBombasController::class, 'printAbast']);
 
+Route::get('SendWeeklyReport', [App\Http\Controllers\API\Back\OrdemController::class, 'SendWeeklyReport']);
+
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
