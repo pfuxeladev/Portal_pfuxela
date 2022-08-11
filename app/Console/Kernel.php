@@ -15,7 +15,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         // $schedule->command('inspire')->hourly();
-        $schedule->command('ReportDatasCron:cron')->everyMinute()->timezone('Africa/Maputo');
+        $schedule->command('ReportAbastecimento:cron')->everyMinute()->timezone('Africa/Maputo');
     }
 
     /**
