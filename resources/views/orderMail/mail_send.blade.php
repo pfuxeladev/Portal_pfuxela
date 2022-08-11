@@ -136,7 +136,7 @@
 
             </div><br>
             <p class="margin-left:20px">
-                A <b><Pfuxela Exhibition Gallery/b> vem por esta meio fazer o pedido de cancelamento da ordem {{ $ordem->codigo_ordem }}
+                A <b><Pfuxela Exhibition Gallery</b> vem por esta meio fazer o pedido de cancelamento da ordem {{ $ordem->codigo_ordem }}
                 que acidentalmente o enviou sem devida verificação do destinatario.
                 Nossas Sincera desculpa pelo incoveniente.
             </p>
