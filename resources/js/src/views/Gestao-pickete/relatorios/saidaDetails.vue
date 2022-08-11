@@ -1,7 +1,6 @@
 <template>
   <section>
-    <b-card no-body v-for="(ver, i) in saidas" :key="i">
-      <b-row>
+     <b-row>
         <b-col cols="3">
           <b-link
             :to="{ name: 'Vehicle-movements' }"
@@ -10,7 +9,7 @@
           >
         </b-col>
       </b-row>
-
+    <b-card id="checklists" no-body v-for="(ver, i) in saidas" :key="i">
       <b-card-header>
         <h3>Matricula: {{ ver.checklistOut.viatura.matricula }}</h3>
       </b-card-header>
@@ -58,6 +57,11 @@
         </b-card-body>
       </div>
     </b-card>
+    <b-card>
+        <b-card-footer>
+            <b-button variant="outline-success" @click="imprimirCheck">Imprimir <i class="fas fa-print"></i></b-button>
+        </b-card-footer>
+    </b-card>
   </section>
 </template>
 
@@ -72,6 +76,8 @@ import {
   BCardHeader,
   BListGroup,
   BListGroupItem,
+  BCardFooter,
+  BButton,
 } from "bootstrap-vue";
 import { ref, onUnmounted } from "@vue/composition-api";
 import moment from "moment";
@@ -98,6 +104,8 @@ export default {
     BCardHeader,
     BListGroup,
     BListGroupItem,
+    BCardFooter,
+    BButton,
   },
   setup(props) {
     const saidas = ref(null);
@@ -106,6 +114,34 @@ export default {
     // Register module
     if (!store.hasModule(SAIDAS_STORE_MODULE_NAME)) {
       store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule);
+    }
+
+    function imprimirCheck() {
+      const prtHtml = document.getElementById('checklists').innerHTML
+
+      // Get all stylesheets HTML
+      let stylesHtml = ''
+      for (const node of [...document.querySelectorAll('link[rel="stylesheet"], style')]) {
+        stylesHtml += node.outerHTML
+      }
+
+      // Open the print window
+      const WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+
+      WinPrint.document.write(`<!DOCTYPE html>
+        <html>
+        <head>
+            ${stylesHtml}
+        </head>
+        <body>
+            ${prtHtml}
+        </body>
+        </html>`)
+
+      WinPrint.document.close();
+      WinPrint.focus();
+      WinPrint.print();
+      WinPrint.close()
     }
 
     // UnRegister on leave
@@ -122,6 +158,7 @@ export default {
     return {
       dateTime,
       saidas,
+      imprimirCheck,
     };
   },
   created() {
