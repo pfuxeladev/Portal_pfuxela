@@ -55,7 +55,7 @@ class ReportDatasdayCron extends Command
                 $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
                 $path = Storage::put('public/pdf/relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
-                Mail::send('reportMail.relatorioAbastecimento', $data, function ($message) use ($data, $pdf) {
+                Mail::send('reportMail.relatorioAbastecimento', compact('ordem'), $data, function ($message) use ($data, $pdf) {
                     $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
