@@ -45,7 +45,7 @@ class ReportDatasdayCron extends Command
     public function handle()
     {
 
-                $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz'];
+                $data["email"] = 'supportdesk@pfuxela.co.mz';
                 $data["title"] = "Relatorio Semanal";
                 // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
