@@ -43,11 +43,8 @@ class ReportDatasdayCron extends Command
      */
     public function handle()
     {
-        foreach (User::all() as $key => $user) {
 
-
-            if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
-                $data["email"] = $user->email;
+                $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz'];
                 $data["title"] = "Relatorio Semanal";
                 $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
@@ -62,7 +59,6 @@ class ReportDatasdayCron extends Command
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'RelatorioSemanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
-            }
-        }
+           
     }
 }
