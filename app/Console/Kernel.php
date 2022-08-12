@@ -8,13 +8,13 @@ use App\Console\Commands\ReportDatasdayCron;
 class Kernel extends ConsoleKernel
 {
     protected $commands = [
-        'App\Console\Commands\Inspire',
+        // 'App\Console\Commands\Inspire',
         ReportDatasdayCron::class,
         ];
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('inspire')->everyMinute();
+        // $schedule->command('inspire')->everyMinute();
         $schedule->command('ReportAbastecimento:cron')->everyMinute();
     }
 
