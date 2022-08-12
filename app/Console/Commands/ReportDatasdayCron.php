@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use App\Models\ordem_viatura;
 use Illuminate\Support\Carbon;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
