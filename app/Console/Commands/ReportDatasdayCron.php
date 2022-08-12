@@ -47,7 +47,7 @@ class ReportDatasdayCron extends Command
 
                 $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz'];
                 $data["title"] = "Relatorio Semanal";
-                $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
+                // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
                 $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->where('created_at', Carbon::now()->subdays(7))->orderBy('updated_at', 'desc')->get();
@@ -55,7 +55,7 @@ class ReportDatasdayCron extends Command
                 $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
                 $path = Storage::put('public/pdf/relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
-                Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+                Mail::send('reportMail.relatorioAbastecimento', $data, function ($message) use ($data, $pdf) {
                     $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
