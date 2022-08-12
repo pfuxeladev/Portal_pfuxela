@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Models\responsavelBombas;
 use App\Models\combustivelBomba;
 use App\Models\User;
+use Exception;
 use Illuminate\Support\Carbon;
 
 class OrdemController extends Controller
@@ -572,6 +573,8 @@ class OrdemController extends Controller
     // Relatorio Semanal
     public function SendWeeklyReport()
     {
+        try {
+
         foreach (User::all() as $key => $user) {
 
 
@@ -596,6 +599,11 @@ class OrdemController extends Controller
                 return response()->json(['message' => 'email sent to: ' . $user->email]);
             }
         }
+        return "Done!";
+
+    } catch (Exception $e) {
+        return "Something went wrong! ".$e->getMessage();
+    }
     }
 
     public function printPdf()
