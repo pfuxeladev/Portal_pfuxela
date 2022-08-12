@@ -9,6 +9,7 @@ use Barryvdh\DomPDF\PDF;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Mail;
 use App\Models\User;
+use Illuminate\Support\Facades\Log;
 
 class ReportDatasdayCron extends Command
 {
@@ -59,6 +60,6 @@ class ReportDatasdayCron extends Command
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'RelatorioSemanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
-           
+                Log::info("Successful");
     }
 }
