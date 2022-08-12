@@ -58,8 +58,9 @@ class ReportDatasdayCron extends Command
                 Mail::send($data["body"], $data, function ($message) use ($data, $pdf) {
                     $message->to($data["email"], $data["email"])
                         ->subject($data["title"])
-                        ->attachData($pdf->output(), 'RelatorioSemanal' . date('Y-m-d H:i:s') . '.pdf');
+                        ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
+
                 Log::info("Successful");
     }
 }
