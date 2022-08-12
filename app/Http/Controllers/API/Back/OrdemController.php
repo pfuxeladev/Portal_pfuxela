@@ -70,7 +70,7 @@ class OrdemController extends Controller
                 Mail::send('orderMail.mail_order', compact('ordem'), function ($message) use ($data, $pdf) {
                     $message->to($data["email"])
                         ->subject($data["title"])
-                        ->attachData($pdf->output(), "ordem.pdf");
+                        ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') . ".pdf");
                 });
 
                 $pdf->download('Ordem' . $ordem->codigo_ordem . '.pdf');
