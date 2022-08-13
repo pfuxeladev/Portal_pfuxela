@@ -105,6 +105,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -678,24 +679,6 @@ var render = function () {
                               },
                             },
                             {
-                              key: "cell(imprimir)",
-                              fn: function (data) {
-                                return [
-                                  _c(
-                                    "span",
-                                    {
-                                      on: {
-                                        click: function ($event) {
-                                          return _vm.PrintOrder(data.item.ordem)
-                                        },
-                                      },
-                                    },
-                                    [_c("i", { staticClass: "fas fa-print" })]
-                                  ),
-                                ]
-                              },
-                            },
-                            {
                               key: "cell(Data_de_emissao)",
                               fn: function (data) {
                                 return [
@@ -773,6 +756,33 @@ var render = function () {
                                         ],
                                         1
                                       ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.PrintOrder(
+                                                data.item.ordem
+                                              )
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "PrinterIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("imprimir")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
                                     ],
                                     1
                                   ),
@@ -782,7 +792,7 @@ var render = function () {
                           ],
                           null,
                           false,
-                          1103006253
+                          1889232419
                         ),
                       }),
                       _vm._v(" "),
@@ -1235,9 +1245,6 @@ function useAbastecimentoList() {
     sortable: true
   }, {
     key: 'user.name',
-    sortable: true
-  }, {
-    Key: 'imprimir',
     sortable: true
   }, {
     key: 'acções'

@@ -37,9 +37,6 @@
                     <template #cell(bombas)="data">
                         {{data.item.ordem.bombas.nome_bombas}}
                     </template>
-                    <template #cell(imprimir)="data">
-                        <span @click="PrintOrder(data.item.ordem)"><i class="fas fa-print"></i></span>
-                    </template>
                      <template #cell(Data_de_emissao)="data">
                         {{ dateTime(data.item.ordem.created_at) }}
                     </template>
@@ -52,6 +49,10 @@
                             <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.ordem.refs } }">
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Details</span>
+                            </b-dropdown-item>
+                             <b-dropdown-item @click="PrintOrder(data.item.ordem)">
+                                <feather-icon icon="PrinterIcon" />
+                                <span class="align-middle ml-50">imprimir</span>
                             </b-dropdown-item>
                         </b-dropdown>
                     </template>
