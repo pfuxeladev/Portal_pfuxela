@@ -113,12 +113,13 @@
                 <thead>
                     <tr>
                         <th>Ordem</th>
+                        <th>Estado</th>
                         <th>Data</th>
                         <th>Bombas</th>
                         <th>Viaturas</th>
-                        <th>Tipo de Combustivel</th>
+                        <th>Tipo</th>
 
-                        <th>Qtd abastecida</th>
+                        <th>Qtd</th>
                         <th>Preco Unitario</th>
                         <th>Rotas</th>
                         <th>Total</th>
@@ -129,6 +130,7 @@
                     @foreach ($ordem_viatura as $ordens)
                         <tr>
                             <td>{{ $ordens->ordem->codigo_ordem }}</td>
+                            <td>{{ $ordens->ordem->estado }}</td>
                             <td>{{ $ordens->ordem->created_at }}</td>
                             <td>{{ $ordens->ordem->bombas->nome_bombas }}</td>
                             <td>{{ $ordens->viatura->matricula }}</td>
@@ -157,7 +159,7 @@
                 </tbody>
                 <tfoot>
                     <tr style="border: 1px;">
-                        <td colspan="7" style="text-align: right">
+                        <td colspan="8" style="text-align: right">
                             TOTAL
                         </td>
                         <td>{{ $total }} MT</td>

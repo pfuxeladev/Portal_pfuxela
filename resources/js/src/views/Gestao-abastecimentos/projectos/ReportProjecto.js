@@ -13,7 +13,7 @@ export default function useRotasList() {
   const refRotatListTable = ref(null)
 
   const toast = useToast()
-  const perPage = ref(10)
+  const perPage = ref(25)
   const totalRotas = ref(0)
   const currentPage = ref(1)
   const perPageOptions = [10, 25, 50, 100]
@@ -52,8 +52,8 @@ export default function useRotasList() {
     store
       .dispatch(
         'app-projects/fetchRotaProject',
-        { name: router.currentRoute.params.name },
         {
+          name: router.currentRoute.params.name,
           q: searchQuery.value,
           perPage: perPage.value,
           page: currentPage.value,
