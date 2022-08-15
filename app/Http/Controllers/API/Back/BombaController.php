@@ -278,10 +278,16 @@ class BombaController extends Controller
             $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
 
             return response()->json($ordem, 200);
-        }
-        $bomba = Bombas::with(['ordem.ordem_viatura', 'ordem.ordem_viatura.ordem_viatura.rota', 'ordem.abastecimento.abastecimento_extra'])->findOrFail($id);
+        }else{
+            $bomba = Bombas::findOrFail($id);
 
-        return response()->json($bomba, 200);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+
+            return response()->json($ordem, 200);
+        }
+        // $bomba = Bombas::with(['ordem.ordem_viatura', 'ordem.ordem_viatura.ordem_viatura.rota', 'ordem.abastecimento.abastecimento_extra'])->findOrFail($id);
+
+        // return response()->json($bomba, 200);
 
     }
 }

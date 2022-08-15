@@ -47,11 +47,34 @@
                 </b-list-group>
               </b-col>
             </b-row>
-            <hr />
+            <hr>
+           <b-row>
+            <b-col>
+                <b-form-group label="Pesquisar por codigo">
+                    <b-form-input type="search"></b-form-input>
+                </b-form-group>
+            </b-col>
+            <b-col>
+                <b-form-group label="Intervalo de datas">
+                    <date-picker
+                     value-type="format"
+                  format="YYYY-MM-DD"
+                  style="width: 100%"
+                  id="example-datepicker1"
+                   range
+                  locale="pt"
+                  class="mb-1"
+                    ></date-picker>
+                </b-form-group>
+            </b-col>
+            <b-col>
+                <b-button class="mt-2" variant="outline-primary"> imprimir <i class="fas fa-print"></i> </b-button>
+            </b-col>
+           </b-row>
             <b-row cols="12" v-for="(ordem, index) in bomba.ordem" :key="index">
               <b-col
                 cols="12"
-                v-if="ordem.tipo_ordem === 'abastecimento_interno'"
+                v-if="ordem.tipo_ordem === 'abastecimento_interna'"
               >
                 <b-card-header>
                     <h3 class="card-title">Abastecimento da bombas locais</h3>
@@ -146,6 +169,7 @@
         </b-card>
       </b-col>
     </b-row>
+   <b-modal id="modal-xl" size="xl" title="Relatorio de abastecimento">Hello Extra Large Modal!</b-modal>
   </section>
 </template>
 
@@ -163,17 +187,22 @@ import {
   BListGroupItem,
   BImg,
   BFormGroup,
+  BFormInput,
   BModal,
+  BButton,
   // eslint-disable-next-line import/newline-after-import
 } from "bootstrap-vue";
 import { useToast } from "vue-toastification/composition";
 import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
 import { ref, onUnmounted } from "@vue/composition-api";
 import moment from "moment";
+import flatPickr from "vue-flatpickr-component";
+import DatePicker from "vue2-datepicker";
 import Form from "vform";
 import store from "@/store";
 import router from "@/router";
 import Table from "../../table/bs-table/Table.vue";
+import "vue2-datepicker/index.css";
 export default {
   components: {
     BCard,
@@ -186,15 +215,22 @@ export default {
     BCol,
     BListGroup,
     BListGroupItem,
+    BFormInput,
     BImg,
     BFormGroup,
     Table,
     BModal,
+    DatePicker,
+    flatPickr,
+    BButton
   },
   setup() {
     const bomba = ref(null);
 
     const toast = useToast();
+    const datas = ref()
+    const codigo = ref()
+
 
     function getBombasDetails() {
       this.$http

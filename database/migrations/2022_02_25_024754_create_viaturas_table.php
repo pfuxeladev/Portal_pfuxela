@@ -24,6 +24,7 @@ class CreateViaturasTable extends Migration
             $table->integer('lotacao')->nullable();
             $table->string('capacidade_tanque');
             $table->string('capacidade_media');
+            $table->decimal('qtd_existente')->nullable();
             $table->bigInteger('qtd_disponivel')->default(0);
             $table->decimal('qtd_autorizada', 10,2)->nullable();
             $table->string('tipo_combustivel')->nullable();
