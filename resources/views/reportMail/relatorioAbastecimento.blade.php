@@ -79,7 +79,7 @@
             margin-top: 180px;
             margin-right: 10px;
             position: relative;
-            font-size: 10pt;
+            font-size: 9pt;
             height: auto;
 
         }

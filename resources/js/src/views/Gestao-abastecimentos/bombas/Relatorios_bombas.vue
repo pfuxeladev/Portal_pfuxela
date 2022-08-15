@@ -2,7 +2,9 @@
   <section class="invoice-add-wrapper mt-3">
     <b-row class="invoice-add">
       <b-col cols="12">
-        <b-card no-body> </b-card>
+        <b-card no-body>
+          <b-card-header style="width:100%"></b-card-header>
+        </b-card>
       </b-col>
     </b-row>
   </section>

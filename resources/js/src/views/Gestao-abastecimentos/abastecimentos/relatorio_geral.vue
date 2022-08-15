@@ -354,7 +354,7 @@ export default {
             document.body.appendChild(fileLink);
             fileLink.click();
           });
-      } else if (this.searchDatas !== "") {
+      } else if (this.searchDatas) {
         this.$http
           .post(
             "/api/printRelatorio",
@@ -376,7 +376,7 @@ export default {
             document.body.appendChild(fileLink);
             fileLink.click();
           });
-      } else if (this.dateReport !== "") {
+      } else if (this.dateReport) {
         this.$http
           .post(
             "/api/printRelatorio",
@@ -399,9 +399,9 @@ export default {
             fileLink.click();
           });
       } else if (
-        this.dateReport !== "" &&
-        this.intervalo !== "" &&
-        this.searchDatas !== ""
+        this.dateReport &&
+        this.intervalo &&
+        this.searchDatas
       ) {
         this.$http
           .post(
@@ -429,10 +429,10 @@ export default {
             fileLink.click();
           });
       } else if (
-        this.dateReport !== "" &&
-        this.intervalo !== "" &&
-        this.searchDatas !== "" &&
-        this.bombaNome !== ""
+        this.dateReport &&
+        this.intervalo &&
+        this.searchDatas &&
+        this.bombaNome
       ) {
         this.$http
           .post(

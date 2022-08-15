@@ -375,7 +375,7 @@ __webpack_require__.r(__webpack_exports__);
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.searchDatas !== "") {
+      } else if (this.searchDatas) {
         this.$http.post("/api/printRelatorio", {
           searchDatas: this.searchDatas
         }, {
@@ -391,7 +391,7 @@ __webpack_require__.r(__webpack_exports__);
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.dateReport !== "") {
+      } else if (this.dateReport) {
         this.$http.post("/api/printRelatorio", {
           dateReport: this.dateReport
         }, {
@@ -407,7 +407,7 @@ __webpack_require__.r(__webpack_exports__);
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.dateReport !== "" && this.intervalo !== "" && this.searchDatas !== "") {
+      } else if (this.dateReport && this.intervalo && this.searchDatas) {
         this.$http.post("/api/printRelatorio", {
           dateReport: this.dateReport,
           intervalo: this.intervalo,
@@ -425,7 +425,7 @@ __webpack_require__.r(__webpack_exports__);
           document.body.appendChild(fileLink);
           fileLink.click();
         });
-      } else if (this.dateReport !== "" && this.intervalo !== "" && this.searchDatas !== "" && this.bombaNome !== "") {
+      } else if (this.dateReport && this.intervalo && this.searchDatas && this.bombaNome) {
         this.$http.post("/api/printRelatorio", {
           dateReport: this.dateReport,
           intervalo: this.intervalo,
