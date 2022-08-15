@@ -45,7 +45,8 @@ class ProjectoController extends Controller
              'nrPassagers'=>$project['nrPassagers'],
              'recomendation'=>$project['recomendation'],
              'createdBy'=>auth()->user()->id,
-             'updatedBy'=>auth()->user()->id],
+             'updatedBy'=>auth()->user()->id,
+             ]
            );
      }
      return $projecto;
@@ -76,7 +77,7 @@ class ProjectoController extends Controller
     ->where('rotas.nome_rota','like', '%' . $request->q . '%')
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
-    ->orderBy('ordem_viaturas.updated_at', 'desc')
+    // ->orderBy('ordem_viaturas.updated_at', 'desc')
     ->paginate(10);
 
     return response()->json($rotas, 200);
@@ -86,7 +87,7 @@ class ProjectoController extends Controller
     ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')->where('projectos.name', $name)->select('rotas.id', 'rotas.nome_rota')
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
-    ->orderBy('ordem_viaturas.updated_at', 'desc')
+    // ->orderBy('ordem_viaturas.updated_at', 'desc')
     ->paginate($request->perPage);
 
     return response()->json($rotas, 200);
@@ -97,7 +98,7 @@ class ProjectoController extends Controller
     ->where('rotas.nome_rota','like', '%' . $request->q . '%')
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
-    ->orderBy('ordem_viaturas.updated_at', 'desc')
+    // ->orderBy('ordem_viaturas.updated_at', 'desc')
     ->paginate($request->perPage);
 
     return response()->json($rotas, 200);
@@ -107,7 +108,7 @@ class ProjectoController extends Controller
     ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')->where('projectos.name', $name)->select('rotas.id', 'rotas.nome_rota')
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
-    ->orderBy('ordem_viaturas.updated_at', 'desc')
+    // ->orderBy('ordem_viaturas.updated_at', 'desc')
     ->paginate(10);
 
     return response()->json($rotas, 200);

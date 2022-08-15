@@ -490,7 +490,7 @@ class OrdemController extends Controller
 
             // return $pdf->download('Relatorio.pdf');
         } else if ($request->dateReport === 'Hoje') {
-            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereDate('created_at', Carbon::today())->orderBy('ordems.updated_at', 'desc')->get();
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereDate('created_at', Carbon::today())->orderBy('updated_at', 'desc')->get();
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
             return $pdf->output();
