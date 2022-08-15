@@ -21,7 +21,7 @@ class ProjectoController extends Controller
    }
     public function index()
     {
-        return $this->projecto->orderBy('name', 'desc')->paginate(10);
+        return $this->projecto->orderBy('name', 'desc')->paginate(20);
     }
 
     function listProjecto()
@@ -77,8 +77,8 @@ class ProjectoController extends Controller
     ->where('rotas.nome_rota','like', '%' . $request->q . '%')
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
-    // ->orderBy('ordem_viaturas.updated_at', 'desc')
-    ->paginate(10);
+    ->orderBy('ordem_viaturas.updated_at', 'desc')
+    ->paginate(20);
 
     return response()->json($rotas, 200);
 
@@ -100,7 +100,6 @@ class ProjectoController extends Controller
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
     // ->orderBy('ordem_viaturas.updated_at', 'desc')
     ->paginate($request->perPage);
-
     return response()->json($rotas, 200);
 
     }else{
@@ -109,7 +108,7 @@ class ProjectoController extends Controller
     ->addSelect(DB::raw('sum(ordem_viaturas.preco_cunsumo) AS total_order'), DB::raw('sum(ordem_viaturas.qtd_abastecida) as total_abastecido'))
     ->groupBy(['rotas.id', 'rotas.nome_rota'])
     // ->orderBy('ordem_viaturas.updated_at', 'desc')
-    ->paginate(10);
+    ->paginate(20);
 
     return response()->json($rotas, 200);
     }

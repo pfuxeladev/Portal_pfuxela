@@ -1049,7 +1049,7 @@ function useRotasList() {
   //   Use toast
   var refRotatListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(null);
   var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
-  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(10);
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(25);
   var totalRotas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(0);
   var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(1);
   var perPageOptions = [10, 25, 50, 100];
@@ -1088,8 +1088,7 @@ function useRotasList() {
 
   var fetchRotas = function fetchRotas(ctx, callback) {
     _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('app-projects/fetchRotaProject', {
-      name: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.name
-    }, {
+      name: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.name,
       q: searchQuery.value,
       perPage: perPage.value,
       page: currentPage.value,
