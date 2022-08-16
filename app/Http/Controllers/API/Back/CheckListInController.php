@@ -145,7 +145,7 @@ class CheckListInController extends Controller
              if($qtd_disponivel < 0){
                  $viatura1->qtd_disponivel = $request->litros_tanque;
              }else if($qtd_disponivel >=0 && $viatura1->capacidade_tanque > $qtd_disponivel) {
-                 $viatura1->qtd_disponivel = $request->litros_tanque;
+                 $viatura1->qtd_disponivel = $qtd_disponivel;
              }
                 $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
