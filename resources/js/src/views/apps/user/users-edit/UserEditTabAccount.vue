@@ -117,9 +117,9 @@
                 <b-form-checkbox
                   v-model="userData.permissions"
                   v-bind:value="p.id"
-                  :checked="userData.can[p.name]"
+                  :checked="userData.permissions[i]"
                 >
-                  {{ p.name }}
+                  {{ userData.permissions[i] }}
                 </b-form-checkbox>
               </b-col>
             </b-row>

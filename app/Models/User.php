@@ -55,22 +55,23 @@ class User extends Authenticatable
         'departamento_id',
         'password',
     ];
+    // protected $appends = ['all_permissions','can'];
 
-    public function getAllPermissionsAttribute() {
-        $permissions = [];
-          foreach (Permission::all() as $permission) {
-            if (Auth::user()->can($permission->name)) {
-              $permissions[] = $permission->name;
-            }
-          }
-          return $permissions;
-      }
+    // public function getAllPermissionsAttribute() {
+    //     $permissions = [];
+    //       foreach (Permission::all() as $permission) {
+    //         if (auth()->user()->can($permission->name)) {
+    //           $permissions[] = $permission->name;
+    //         }
+    //       }
+    //       return $permissions;
+    //   }
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    protected $appends = ['all_permissions','can'];
+
 
     /**
      * The attributes that should be cast.
