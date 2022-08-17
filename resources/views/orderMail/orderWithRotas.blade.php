@@ -77,7 +77,7 @@
                     </div><br>
 
                     <?php $total = 0; ?>
-                    <table class="table table-striped text-left">
+                    <table class="table table-striped text-left" style="width: 100%">
                         <thead>
                             <tr>
                                 <th>
