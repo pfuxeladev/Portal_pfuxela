@@ -578,7 +578,7 @@ class OrdemController extends Controller
 
 
                 $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
-                $data["title"] = "Relatorio Semanal";
+                $data["title"] = "Relatorio Diario";
                 // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
