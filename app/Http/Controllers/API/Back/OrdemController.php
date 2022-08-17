@@ -583,7 +583,7 @@ class OrdemController extends Controller
 
 
                 $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])
-                ->where('created_at','>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
+                ->where('created_at','>=', Carbon::now()->subDays(1))->orderBy('updated_at', 'desc')->get();
 
 
                 $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
