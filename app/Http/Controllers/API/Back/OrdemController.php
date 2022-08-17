@@ -23,6 +23,7 @@ use App\Models\combustivelBomba;
 use App\Models\User;
 use Exception;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class OrdemController extends Controller
 {
@@ -575,33 +576,33 @@ class OrdemController extends Controller
     {
         try {
 
-        // foreach (User::all() as $key => $user) {
+        foreach (User::all() as $key => $user) {
 
 
-        //     if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
-        //         $data["email"] = $user->email;
-        //         $data["title"] = "Relatorio Semanal";
-        //         $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
+            if ($user->email === 'mauro@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'supportdesk@pfuxela.co.mz') {
+                $data["email"] = $user->email;
+                $data["title"] = "Relatorio Semanal";
+                $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
                 $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])
                 ->where('created_at','>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
 
 
-                // $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+                $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
-            //     $path = Storage::put('public/pdf/relatorio_bastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
-            //     Mail::send($data["body"], $data, function ($message) use ($data, $pdf) {
-            //         $message->to($data["email"], $data["email"])
-            //             ->subject($data["title"])
-            //             ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
-            //     });
-
-            //     return response()->json(['message' => 'email sent to: ' . $user->email]);
-            // }
-        // }
+                $path = Storage::put('public/pdf/relatorio_bastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+                Mail::send($data["body"], $data, function ($message) use ($data, $pdf) {
+                    $message->to($data["email"], $data["email"])
+                        ->subject($data["title"])
+                        ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
+                });
+                Log::info('email sent to: ' . $user->email);
+                return response()->json(['message' => 'email sent to: ' . $user->email]);
+            }
+        }
         // return $ordem_viatura;
-        return view('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
+        // return view('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
     } catch (Exception $e) {
         return "Something went wrong! ".$e->getMessage();

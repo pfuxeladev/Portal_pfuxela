@@ -406,7 +406,7 @@ class AbastecimentoController extends Controller
             foreach (User::all() as $key => $user) {
 
 
-                if ($user->email === 'contratos@pfuxela.co.mz' && $user->email === 'qualidade@pfuxela.co.mz') {
+                if ($user->email === 'contratos@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'mauro@pfuxela.co.mz') {
                     $data["email"] = $user->email;
                     $data["title"] = "info@pfuxela.co.mz";
                     $data["body"] = "Ordem de abastecimento nr " . $ordem->codigo_ordem;
