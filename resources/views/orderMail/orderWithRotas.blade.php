@@ -123,10 +123,10 @@
                                     </td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
                                     <td>
-                                        @if ($ordeViatura->justificacao == null)
+                                        @if ($ordViatura->justificacao == null)
                                         <span>Abastecimento da rota</span>
                                         @else
-                                        {{ $ordeViatura->justificacao }}
+                                        {{ $ordViatura->justificacao }}
                                         @endif
                                         </td>
                                     <td>{{ $ordViatura->qtd_abastecida }}</td>
