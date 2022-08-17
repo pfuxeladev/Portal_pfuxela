@@ -579,7 +579,7 @@ class OrdemController extends Controller
 
                 $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
                 $data["title"] = "Relatorio Semanal";
-                $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
+                // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
                 $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])
@@ -594,8 +594,8 @@ class OrdemController extends Controller
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
-                Log::info('email sent to: ' . $data["email"]);
-                return response()->json(['message' => 'email sent to: ' . $data["email"]]);
+                Log::info('email sent to: Users');
+                return response()->json(['message' => 'email sent to: Users successfully']);
 
 
     } catch (Exception $e) {

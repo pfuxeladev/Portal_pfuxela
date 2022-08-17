@@ -91,7 +91,7 @@
         <div class="content-header">
             <h3 class="centered-title"
                 style="text-align: center !important; color: whitesmoke; position: relative; width: 100%;">
-                Relatorio Geral de Abastecimento
+                Relatorio de Abastecimento
             </h3>
         </div>
         <div class="content">
@@ -107,8 +107,9 @@
             </div>
         </div>
         <div class="row-data">
+            <p>Cordiais Saudadoes</p>
             <p>
-                Receba em anexo o relatorio de abastecimento enviado pelo sistema
+                Receba em anexo o relat&oacute;rio de abastecimento enviado pelo sistema
             </p>
         </div>
     </div>
