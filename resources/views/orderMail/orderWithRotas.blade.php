@@ -48,6 +48,7 @@
                         <h3 class='mb-0 card-title'>ORDEM DE ABASTECIMENTO #
                             <b style='color:#eb691e;'>{{ $ordem->codigo_ordem; }}</b></h3>
                                 <hr>
+                        <div>Tipo de abastecimemto: <b>{{$ordem->tipo_ordem}}</b></div>
                         <div>Data de Emissão: <b>{{ $ordem->updated_at->format('d/m/Y') }}</b></div>
                         <div>Hora da Emissão: <b>{{ $ordem->updated_at->format('h:i:s') }}</b></div>
 
@@ -98,7 +99,9 @@
                                 <th>
                                     <p>Qtd</p>
                                 </th>
-                                <th>justifica&ccedil;&atilde;o</th>
+                                <th>
+                                    <p>justifica&ccedil;&atilde;o</p>
+                                </th>
                                 <th>
                                     <p>Pre&ccedil;o Unit</p>
                                 </th>
@@ -144,7 +147,7 @@
                                 <td>{{ $total }}</td>
                             </tr>
                             <tr>
-                                <td colspan="4"></td>
+                                <td colspan="5"></td>
                                 <th>Total</th>
                                 <td>{{ $total }}</td>
                             </tr>

@@ -418,7 +418,7 @@ class AbastecimentoController extends Controller
                         $message->from(env('MAIL_USERNAME'));
                         $message->to($data["email"], $data['email'])
                             ->subject($data["title"])
-                            ->attachData($pdf->output(), "ordem.pdf");
+                            ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') .".pdf");
                     });
                 }
             }
