@@ -584,7 +584,7 @@ class OrdemController extends Controller
         //         $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
-                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->orderBy('updated_at', 'desc')->get();
+                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])->orderBy('updated_at', 'desc')->get();
 
 
                 // $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
@@ -599,7 +599,8 @@ class OrdemController extends Controller
             //     return response()->json(['message' => 'email sent to: ' . $user->email]);
             // }
         // }
-        return $ordem_viatura;
+        // return $ordem_viatura;
+        return view('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
     } catch (Exception $e) {
         return "Something went wrong! ".$e->getMessage();

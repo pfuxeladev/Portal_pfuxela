@@ -49,7 +49,7 @@ class ReportDatasdayCron extends Command
                 $data["title"] = "Relatorio Semanal";
                 // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
-                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->where('created_at', Carbon::today())->orderBy('updated_at', 'desc')->get();
+                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])->where('created_at', Carbon::today())->orderBy('updated_at', 'desc')->get();
 
                 $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
@@ -59,7 +59,7 @@ class ReportDatasdayCron extends Command
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
-                
+
                 Log::info("Successful");
     }
 }

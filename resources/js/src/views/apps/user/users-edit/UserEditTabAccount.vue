@@ -114,12 +114,12 @@
                 cols="3"
                 class="mb-1"
               >
+
                 <b-form-checkbox
                   v-model="userData.permissions"
-                  v-bind:value="p.id"
-                  :checked="userData.permissions[i]"
+                  v-bind:value="p"
                 >
-                  {{ userData.permissions[i] }}
+                  {{ p.name }}
                 </b-form-checkbox>
               </b-col>
             </b-row>
@@ -196,6 +196,10 @@ export default {
     userData: {
       type: Object,
       required: true,
+      permissions: [{
+        id: null,
+        name: '',
+      }],
     },
   },
   created() {

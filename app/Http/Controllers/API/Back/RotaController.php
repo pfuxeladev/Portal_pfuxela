@@ -23,7 +23,12 @@ class RotaController extends Controller
 
     function todasRotas()
     {
-        return $this->rota->with('projecto')->where('is_active', true)->get();
+        if(auth()->user()->hasRole('Gestor de Frotas')){
+            return $this->rota->with('projecto')->where('is_active', true)->get();
+        }else{
+            return $this->rota->with('projecto')->where('is_active', true)->where('projecto_id', '!=', '29')->get();
+        }
+
     }
 
     function todosProjectos(){

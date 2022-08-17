@@ -102,8 +102,8 @@
                                     <td>{{ $ordViatura->viatura->matricula }}</td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
                                     <td>{{ $ordViatura->qtd_abastecida }}</td>
-                                    <td>{{ $ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida }}</td>
-                                    <td>{{ $ordViatura->preco_cunsumo }}</td>
+                                    <td>{{ number_format($ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida, 2, ',', '.') }}</td>
+                                    <td>{{ number_format($ordViatura->preco_cunsumo, 2, ',', '.') }}</td>
 
                                 </tr>
                                 <?php $total += $ordViatura->preco_cunsumo; ?>
