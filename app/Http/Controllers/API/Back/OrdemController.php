@@ -584,7 +584,8 @@ class OrdemController extends Controller
         //         $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
 
-                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])->orderBy('updated_at', 'desc')->get();
+                $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])
+                ->where('created_at','>=', Carbon::now()->subDays(7))->orderBy('updated_at', 'desc')->get();
 
 
                 // $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
