@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="row-data">
-            <p>Cordiais Saudadoes</p>
+            <p>Cordiais Sauda&ccedil;&otilde;es</p>
             <p>
                 Receba em anexo o relat&oacute;rio de abastecimento enviado pelo sistema
             </p>
