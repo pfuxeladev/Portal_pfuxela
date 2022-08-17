@@ -107,7 +107,6 @@
             </div>
         </div>
         <div class="row-data">
-            {{-- <h4 class="head-title" style="margin-left:5px; text-align:center; width: 100%;">Relatorio dos Abastecimentos</h4> --}}
             <?php $total = 0; ?>
             <table class="table-content">
                 <thead>
@@ -123,7 +122,6 @@
                         <th>Preco Unitario</th>
                         <th>Rotas</th>
                         <th>Total</th>
-                        {{--  <th>Autor</th>  --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -147,11 +145,7 @@
                                 @endforeach
                             </td>
                             <td>{{ number_format($ordens->preco_cunsumo, 2, ',', '.') }} MT</td>
-                            {{--  <td>
-                                @if ($ordens->ordem->approved_by !== null)
-                                    {{ $ordens->ordem->approved_by->name}}
-                                @endif
-                            </td>  --}}
+
                             <?php $total += $ordens->preco_cunsumo; ?>
                         </tr>
                     @endforeach
@@ -159,7 +153,7 @@
                 </tbody>
                 <tfoot>
                     <tr style="border: 1px;">
-                        <td colspan="8" style="text-align: right">
+                        <td colspan="9" style="text-align: right">
                             TOTAL
                         </td>
                         <td>{{ $total }} MT</td>

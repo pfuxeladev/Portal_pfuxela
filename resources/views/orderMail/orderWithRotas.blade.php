@@ -98,6 +98,7 @@
                                 <th>
                                     <p>Qtd</p>
                                 </th>
+                                <th>justifica&ccedil;&atilde;o</th>
                                 <th>
                                     <p>Pre&ccedil;o Unit</p>
                                 </th>
@@ -121,8 +122,15 @@
                                         @endforeach
                                     </td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
+                                    <td>
+                                        @if ($ordeViatura->justificacao == null)
+                                        <span>Abastecimento da rota</span>
+                                        @else
+                                        {{ $ordeViatura->justificacao }}
+                                        @endif
+                                        </td>
                                     <td>{{ $ordViatura->qtd_abastecida }}</td>
-                                    <td>{{ $ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida }}</td>
+                                    <td>{{ number_format($ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida, 2, ',', '.') }}</td>
                                     <td>{{ $ordViatura->preco_cunsumo }}</td>
 
                                 </tr>
@@ -131,7 +139,7 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="4"></td>
+                                <td colspan="5"></td>
                                 <th>Subtotal</th>
                                 <td>{{ $total }}</td>
                             </tr>

@@ -1,14 +1,14 @@
 <template>
-  <b-card title="User Timeline">
+  <b-card title="Correspondencias e Ocorrencias diarias">
     <app-timeline>
 
       <!-- 12 INVOICES HAVE BEEN PAID -->
       <app-timeline-item>
         <div class="d-flex flex-sm-row flex-column flex-wrap justify-content-between mb-1 mb-sm-0">
-          <h6>12 Invoices have been paid</h6>
+          <h6>Viaturas nao abastecidas</h6>
           <small class="text-muted">12 min ago</small>
         </div>
-        <p>Invoices have been paid to the company.</p>
+        <p>Nao consegui abastecer viatura do turno da manha.</p>
         <p class="mb-0">
           <b-img
             :src="require('@/assets/images/icons/pdf.png')"

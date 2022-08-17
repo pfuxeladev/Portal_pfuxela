@@ -78,7 +78,7 @@ class CheckListInController extends Controller
             $checkListIn->estado = 'ENTRADA';
             $checkListIn->chefe_operacao = $request->chefe_operacao;
             $checkListIn->user_id = auth()->user()->id;
-            $checkListIn->save();
+
 
             if ($request->anexos != null) {
 
@@ -93,6 +93,7 @@ class CheckListInController extends Controller
 
                 $checkListIn->anexos = $filename;
             }
+            $checkListIn->save();
 
             if($checkListIn){
 
