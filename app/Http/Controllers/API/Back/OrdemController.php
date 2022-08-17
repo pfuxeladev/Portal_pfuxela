@@ -577,7 +577,7 @@ class OrdemController extends Controller
         try {
 
 
-                $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz'];
+                $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
                 $data["title"] = "Relatorio Semanal";
                 $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
@@ -590,7 +590,7 @@ class OrdemController extends Controller
 
                 $path = Storage::put('public/pdf/relatorio_bastecimento' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
                 Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
-                    $message->to($data["email"], $data["email"])
+                    $message->to($data["email"])
                         ->subject($data["title"])
                         ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
                 });
