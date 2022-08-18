@@ -290,4 +290,20 @@ class BombaController extends Controller
         // return response()->json($bomba, 200);
 
     }
+
+    public function relatorioDiarioBombas(){
+        $bombas = Bombas::all();
+
+        $ordens = array();
+
+        foreach ($bombas as $key => $b) {
+           $ordens[$key] = ['bombas'=>$b->nome_bombas,
+            'ordens'=>Ordem::with(['ordem_viatura.viatura', 'ordem_viatura.rota.projecto', 'bombas'])->join('users', 'ordems.createdBy', '=', 'users.id')
+           ->where('ordems.bombas_id', $b->id)
+           ->orderBy('ordems.created_at', 'desc')->get()];
+
+
+        }
+        return $ordens;
+    }
 }

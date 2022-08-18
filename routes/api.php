@@ -131,6 +131,7 @@ Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoCont
 Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBombasController::class, 'printAbast']);
 
 Route::get('SendWeeklyReport', [App\Http\Controllers\API\Back\OrdemController::class, 'SendWeeklyReport']);
+Route::get('RelatorioBombasSemanal', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioDiarioBombas']);
 
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 

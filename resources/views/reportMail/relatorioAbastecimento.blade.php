@@ -140,9 +140,13 @@
                                 {{ number_format($ordens->preco_cunsumo / $ordens->qtd_abastecida, 2, ',', '.') }}
                             </td>
                             <td>
+                                @if ($ordens->ordemViaturaRota == null)
+                                    Abastecimento extraordinario
+                                @else
                                 @foreach ($ordens->ordemViaturaRota as $rt)
-                                    {{ $rt->rota->nome_rota }},
-                                @endforeach
+                                {{ $rt->rota->nome_rota }},
+                            @endforeach
+                                @endif
                             </td>
                             <td>{{ number_format($ordens->preco_cunsumo, 2, ',', '.') }} MT</td>
 
