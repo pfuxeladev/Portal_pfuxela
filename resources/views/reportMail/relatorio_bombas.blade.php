@@ -78,7 +78,7 @@
             margin-top: 180px;
             margin-right: 10px;
             position: relative;
-            font-size: 9pt;
+            font-size: 8pt;
             height: auto;
 
         }
