@@ -125,6 +125,7 @@
                                         @endforeach
                                     </td>
                                     <td>{{ $ordViatura->viatura->tipo_combustivel }}</td>
+                                     <td>{{ $ordViatura->qtd_abastecida }}</td>
                                     <td>
                                         @if ($ordViatura->justificacao == null)
                                         <span>Abastecimento da rota</span>
@@ -132,7 +133,7 @@
                                         {{ $ordViatura->justificacao }}
                                         @endif
                                         </td>
-                                    <td>{{ $ordViatura->qtd_abastecida }}</td>
+                    
                                     <td>{{ number_format($ordViatura->preco_cunsumo / $ordViatura->qtd_abastecida, 2, ',', '.') }}</td>
                                     <td>{{ $ordViatura->preco_cunsumo }}</td>
 
