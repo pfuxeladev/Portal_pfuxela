@@ -129,7 +129,7 @@
                         <tr>
                             <td>{{ $ordens->ordem->codigo_ordem }}</td>
                             <td>{{ $ordens->ordem->estado }}</td>
-                            <td>{{ $ordens->ordem->created_at }}</td>
+                            <td>{{ $ordens->ordem->created_at->format('d/m/Y') }}</td>
                             <td>{{ $ordens->ordem->bombas->nome_bombas }}</td>
                             <td>{{ $ordens->viatura->matricula }}</td>
                             <td>{{ $ordens->viatura->tipo_combustivel }}</td>

@@ -15,6 +15,7 @@ use PDF;
 use Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Ordem;
+use Carbon\Carbon;
 
 class BombaController extends Controller
 {
@@ -144,18 +145,12 @@ class BombaController extends Controller
         $responsavel->contacto_alt = $request->contacto_alt;
         $responsavel->save();
     }
-    public function show($id)
+
+    public function show(Request $request, $id)
     {
-        $b_interna = Bombas::where('id', $id)->first();
-        if($b_interna->tipo_bomba === 'interna'){
-            $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel', 'abastecimentoBomba.ordem'])->findOrFail($id);
 
-            return response()->json($bombas, 200);
-        }else{
-            $bombas = Bombas::with(['ordem.ordem_viatura.viatura', 'ordem.abastecimento.abastecimento_extra', 'responsavel', 'combustivel_bomba.combustivel'])->findOrFail($id);
-
-            return response()->json($bombas, 200);
-        }
+        $b_interna = Bombas::with(['responsavel', 'combustivel'])->where('id', $id)->first();
+        return response()->json($b_interna, 200);
 
     }
 
@@ -263,31 +258,28 @@ class BombaController extends Controller
 
         if($request->dia){
             $bomba = Bombas::findOrFail($id);
-            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->where('created_at', $request->dia)->orderBy('codigo_ordem', 'desc')->paginate(15);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->where('created_at', $request->dia)->orderBy('codigo_ordem', 'desc')->paginate(15);
 
             return response()->json($ordem, 200);
         }else if($request->intervalo){
             $bomba = Bombas::findOrFail($id);
 
-            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate(15);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate(15);
 
             return response()->json($ordem, 200);
         }else if($request->intervalo && $request->perPage){
             $bomba = Bombas::findOrFail($id);
 
-            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
 
             return response()->json($ordem, 200);
         }else{
             $bomba = Bombas::findOrFail($id);
 
-            $ordem = Ordem::with(['ordem_viatura.rota', 'abastecimento.abastecimento_extra'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
 
             return response()->json($ordem, 200);
         }
-        // $bomba = Bombas::with(['ordem.ordem_viatura', 'ordem.ordem_viatura.ordem_viatura.rota', 'ordem.abastecimento.abastecimento_extra'])->findOrFail($id);
-
-        // return response()->json($bomba, 200);
 
     }
 
@@ -298,12 +290,13 @@ class BombaController extends Controller
 
         foreach ($bombas as $key => $b) {
            $ordens[$key] = ['bombas'=>$b->nome_bombas,
-            'ordens'=>Ordem::with(['ordem_viatura.viatura', 'ordem_viatura.rota.projecto', 'bombas'])->join('users', 'ordems.createdBy', '=', 'users.id')
-           ->where('ordems.bombas_id', $b->id)
-           ->orderBy('ordems.created_at', 'desc')->get()];
+            'ordens'=>Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])
+           ->where('bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(7))
+           ->orderBy('created_at', 'desc')->get()];
 
 
         }
-        return $ordens;
+        // return $ordens;
+        return view('reportMail.relatorio_bombas', compact('ordens'));
     }
 }

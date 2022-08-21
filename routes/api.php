@@ -110,7 +110,8 @@ Route::group(['middleware'=>'auth:api'], function () {
         Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
 
         Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
-        // Route::get('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
+        Route::get('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+        Route::post('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
 });
 
 Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
