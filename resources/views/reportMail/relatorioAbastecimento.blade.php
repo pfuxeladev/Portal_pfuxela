@@ -129,7 +129,7 @@
                         <tr>
                             <td>{{ $ordens->ordem->codigo_ordem }}</td>
                             <td>{{ $ordens->ordem->estado }}</td>
-                            <td>{{ $ordens->ordem->created_at }}</td>
+                            <td>{{ $ordens->ordem->created_at->format('d/m/Y') }}</td>
                             <td>{{ $ordens->ordem->bombas->nome_bombas }}</td>
                             <td>{{ $ordens->viatura->matricula }}</td>
                             <td>{{ $ordens->viatura->tipo_combustivel }}</td>
@@ -140,9 +140,13 @@
                                 {{ number_format($ordens->preco_cunsumo / $ordens->qtd_abastecida, 2, ',', '.') }}
                             </td>
                             <td>
+                                @if ($ordens->ordemViaturaRota == null)
+                                    Abastecimento extraordinario
+                                @else
                                 @foreach ($ordens->ordemViaturaRota as $rt)
-                                    {{ $rt->rota->nome_rota }},
-                                @endforeach
+                                {{ $rt->rota->nome_rota }},
+                            @endforeach
+                                @endif
                             </td>
                             <td>{{ number_format($ordens->preco_cunsumo, 2, ',', '.') }} MT</td>
 
