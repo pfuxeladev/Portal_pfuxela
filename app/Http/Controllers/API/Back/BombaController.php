@@ -12,10 +12,12 @@ use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use PDF;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Ordem;
-use Carbon\Carbon;
+use Exception;
+use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Log;
 
 class BombaController extends Controller
 {
@@ -151,7 +153,6 @@ class BombaController extends Controller
 
         $b_interna = Bombas::with(['responsavel', 'combustivel'])->where('id', $id)->first();
         return response()->json($b_interna, 200);
-
     }
 
 
@@ -251,52 +252,70 @@ class BombaController extends Controller
         $bomba = Bombas::findOrFail($id);
 
         $Inspecao = new bombaInspecao();
-
     }
 
-    public function RelatorioBomba(Request $request, $id){
+    public function RelatorioBomba(Request $request, $id)
+    {
 
-        if($request->dia){
+        if ($request->dia) {
             $bomba = Bombas::findOrFail($id);
             $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->where('created_at', $request->dia)->orderBy('codigo_ordem', 'desc')->paginate(15);
 
             return response()->json($ordem, 200);
-        }else if($request->intervalo){
+        } else if ($request->intervalo) {
             $bomba = Bombas::findOrFail($id);
 
             $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate(15);
 
             return response()->json($ordem, 200);
-        }else if($request->intervalo && $request->perPage){
+        } else if ($request->intervalo && $request->perPage) {
             $bomba = Bombas::findOrFail($id);
 
             $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
 
             return response()->json($ordem, 200);
-        }else{
+        } else {
             $bomba = Bombas::findOrFail($id);
 
             $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
 
             return response()->json($ordem, 200);
         }
-
     }
 
-    public function relatorioDiarioBombas(){
+    public function relatorioDiarioBombas()
+    {
         $bombas = Bombas::all();
 
         $ordens = array();
-
-        foreach ($bombas as $key => $b) {
-           $ordens[$key] = ['bombas'=>$b->nome_bombas,
-            'ordens'=>Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])
-           ->where('bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(7))
-           ->orderBy('created_at', 'desc')->get()];
+        try {
 
 
+            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+            $data["title"] = "Relatorio Diario";
+
+            foreach ($bombas as $key => $b) {
+                $ordens[$key] = [
+                    'bombas' => $b->nome_bombas,
+                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])
+                        ->where('bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(7))
+                        ->orderBy('created_at', 'desc')->get()
+                ];
+            }
+            // return $ordens;
+            // return view('reportMail.relatorio_bombas', compact('ordens'));
+            $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('ordens'));
+
+            $path = Storage::put('public/pdf/relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+            Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+                $message->to($data["email"])
+                    ->subject($data["title"])
+                    ->attachData($pdf->output(), 'relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf');
+            });
+            Log::info('email sent to: Users');
+            return response()->json(['message' => 'email sent to: Users successfully']);
+        } catch (Exception $e) {
+            return "Something went wrong! " . $e->getMessage();
         }
-        // return $ordens;
-        return view('reportMail.relatorio_bombas', compact('ordens'));
     }
 }
