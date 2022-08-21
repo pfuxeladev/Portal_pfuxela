@@ -292,7 +292,7 @@ class BombaController extends Controller
 
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
-            $data["title"] = "Relatorio Diario";
+            $data["title"] = "Relatorio Semanal";
 
             foreach ($bombas as $key => $b) {
                 $ordens[$key] = [
