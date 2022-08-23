@@ -42,10 +42,17 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
-        // return Viatura::join('checklist_out', 'viaturas.id', '=', 'checklist_out.viatura_id')->where('viaturas.estado', 1)->whereDate('checklist_out.created_at', Carbon::today()->subDays( 3 ))->orWhere('updated_at', '>=', Carbon::now()->subDays(14))
-        // ->orderBy('viaturas.id', 'desc')->get();
-        return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(28))
+
+        // $roles = auth()->user()->getRoleNames();
+        if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('nome_viatura', '!=', 'BUS')->where('updated_at', '>=', Carbon::now()->subDays(28))
             ->select('matricula', 'id')->get();
+        } else {
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(28))
+            ->select('matricula', 'id')->get();
+        }
+
+
     }
     public function store(Request $request)
     {
