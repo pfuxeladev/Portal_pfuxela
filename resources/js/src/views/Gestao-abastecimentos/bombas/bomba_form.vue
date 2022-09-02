@@ -8,7 +8,7 @@
         <div class="card-header" v-if="abastecimento_pendente.length > 0">
           <h3 class="card-title">Abastecimento recem pedidos em espera</h3>
         </div>
-        <table class="table table-stripped" v-if="abastecimento_pendente.length > 0">
+        <table class="table table-stripped" v-if="abastecimento_pendente.length > 0 || abastecimento_pendente !== null">
           <thead>
             <tr>
               <th>Ordem</th>
