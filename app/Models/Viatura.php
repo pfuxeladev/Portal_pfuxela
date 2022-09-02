@@ -11,11 +11,14 @@ class Viatura extends Model
 
     protected $guard = 'api';
 
+<<<<<<< HEAD
     protected $fillable = [
         'qtd_disponivel',
         'kilometragem'
     ];
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function marca(){
         return $this->belongsTo(marca::class);
     }
@@ -42,8 +45,14 @@ class Viatura extends Model
     function ordem(){
         return $this->belongsToMany(Ordem::class, 'ordem_viaturas', 'viatura_id', 'ordem_id');
     }
+<<<<<<< HEAD
     function ordem_viatura(){
         return $this->hasMany(ordem_viatura::class, 'viatura_id', 'id');
     }
+=======
+
+
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
 }

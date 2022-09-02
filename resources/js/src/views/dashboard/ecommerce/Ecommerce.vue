@@ -38,6 +38,10 @@
             lg="12"
             md="6"
           >
+<<<<<<< HEAD
+=======
+            <ecommerce-earnings-chart :data="data.earningsChart" />
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           </b-col>
         </b-row>
       </b-col>
@@ -51,10 +55,53 @@
 
     <b-row class="match-height">
       <!-- Company Table Card -->
+<<<<<<< HEAD
       <b-col lg="12">
         <ecommerce-company-table :table-data="data.companyTable" />
       </b-col>
       <!--/ Company Table Card -->
+=======
+      <b-col lg="8">
+        <ecommerce-company-table :table-data="data.companyTable" />
+      </b-col>
+      <!--/ Company Table Card -->
+
+      <!-- Developer Meetup Card -->
+      <b-col
+        lg="4"
+        md="6"
+      >
+        <ecommerce-meetup :data="data.meetup" />
+      </b-col>
+      <!--/ Developer Meetup Card -->
+
+      <!-- Browser States Card -->
+      <b-col
+        lg="4"
+        md="6"
+      >
+        <ecommerce-browser-states />
+      </b-col>
+      <!--/ Browser States Card -->
+
+      <!-- Goal Overview Card -->
+      <b-col
+        lg="4"
+        md="6"
+      >
+        <ecommerce-goal-overview :data="data.goalOverview" />
+      </b-col>
+      <!--/ Goal Overview Card -->
+
+      <!-- Transaction Card -->
+      <b-col
+        lg="4"
+        md="6"
+      >
+        <ecommerce-transactions :data="data.transactionData" />
+      </b-col>
+      <!--/ Transaction Card -->
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </b-row>
   </section>
 </template>
@@ -68,7 +115,16 @@ import EcommerceStatistics from './EcommerceStatistics.vue'
 import EcommerceRevenueReport from './EcommerceRevenueReport.vue'
 import EcommerceOrderChart from './EcommerceOrderChart.vue'
 import EcommerceProfitChart from './EcommerceProfitChart.vue'
+<<<<<<< HEAD
 import EcommerceCompanyTable from './EcommerceCompanyTable.vue'
+=======
+import EcommerceEarningsChart from './EcommerceEarningsChart.vue'
+import EcommerceCompanyTable from './EcommerceCompanyTable.vue'
+import EcommerceMeetup from './EcommerceMeetup.vue'
+import EcommerceBrowserStates from './EcommerceBrowserStates.vue'
+import EcommerceGoalOverview from './EcommerceGoalOverview.vue'
+import EcommerceTransactions from './EcommerceTransactions.vue'
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
 export default {
   components: {
@@ -80,8 +136,17 @@ export default {
     EcommerceRevenueReport,
     EcommerceOrderChart,
     EcommerceProfitChart,
+<<<<<<< HEAD
     EcommerceCompanyTable,
 
+=======
+    EcommerceEarningsChart,
+    EcommerceCompanyTable,
+    EcommerceMeetup,
+    EcommerceBrowserStates,
+    EcommerceGoalOverview,
+    EcommerceTransactions,
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
   data() {
     return {

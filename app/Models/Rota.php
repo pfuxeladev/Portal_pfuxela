@@ -19,10 +19,13 @@ class Rota extends Model
         return $this->hasMany(Abastecimento_rota::class);
     }
 
+<<<<<<< HEAD
     public function ordem_viatura(){
         return $this->belongsToMany(ordem_viatura::class,'ordem_viatura_rotas', 'rota_id', 'ordem_viatura_id');
     }
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function viatura(){
         return $this->belongsToMany(viatura::class);
     }
@@ -34,9 +37,12 @@ class Rota extends Model
     public function horario(){
         return $this->hasMany(Horario::class);
     }
+<<<<<<< HEAD
 
 
    
 
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

@@ -13,7 +13,7 @@ Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::c
 Route::get('checklists', [ChecklistController::class, 'index']);
 Route::post('checklist-out', [ChecklistController::class, 'saveChacklistOut']);
 
-Route::group(['middleware'=>'auth:api'], function () {
+Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/permissions', [App\Http\Controllers\API\Back\UserController::class, 'permissionsIndex'])
         ->name('permissions.index')
@@ -75,21 +75,23 @@ Route::group(['middleware'=>'auth:api'], function () {
     Route::resource('Ordem', App\Http\Controllers\API\Back\OrdemController::class);
 
     Route::apiResources(
-        ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
-        'modelos' => App\Http\Controllers\API\Back\ModeloController::class,
-        'Rotas'=>App\Http\Controllers\API\Back\RotaController::class,
-        'bombas'=> App\Http\Controllers\API\Back\BombaController::class,
-        'Abastecimento'=>App\Http\Controllers\API\Back\AbastecimentoController::class,
-        'Ordems'=>App\Http\Controllers\API\Back\OrdemController::class,
-        'Projectos'=>App\Http\Controllers\API\Back\ProjectoController::class,
-        'Ocorrencia'=>App\Http\Controllers\API\Back\OcorrenciaController::class,
-        'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
-        'marca' => App\Http\Controllers\API\MarcaController::class,
-        'combustivel' => App\Http\Controllers\API\CombustivelController::class,
-        'users' => \App\Http\Controllers\API\Back\UserController::class,
-        'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
-        'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
-        ]);
+        [
+            'viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
+            'modelos' => App\Http\Controllers\API\Back\ModeloController::class,
+            'Rotas' => App\Http\Controllers\API\Back\RotaController::class,
+            'bombas' => App\Http\Controllers\API\Back\BombaController::class,
+            'Abastecimento' => App\Http\Controllers\API\Back\AbastecimentoController::class,
+            'Ordems' => App\Http\Controllers\API\Back\OrdemController::class,
+            'Projectos' => App\Http\Controllers\API\Back\ProjectoController::class,
+            'Ocorrencia' => App\Http\Controllers\API\Back\OcorrenciaController::class,
+            'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
+            'marca' => App\Http\Controllers\API\MarcaController::class,
+            'combustivel' => App\Http\Controllers\API\CombustivelController::class,
+            'users' => \App\Http\Controllers\API\Back\UserController::class,
+            'CheckListOut' => \App\Http\Controllers\API\Back\CheckListOutController::class,
+            'CheckListIn' => \App\Http\Controllers\API\Back\CheckListInController::class
+        ]
+    );
 
     Route::get('ReabrirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'ReabrirOrdem']);
     Route::get('removeLine/{refs}', [\App\Http\Controllers\API\Back\AbastecimentoController::class, 'removeLine']);
@@ -106,13 +108,17 @@ Route::group(['middleware'=>'auth:api'], function () {
 
     Route::post('AutorizarSaida', [App\Http\Controllers\API\Back\CheckListOutController::class, 'InstantCheckout']);
     Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
-        // Relatorio Geral de Abastecimentos
-        Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
+    // Relatorio Geral de Abastecimentos
+    Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
 
-        Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
-        Route::get('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
-        Route::post('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+    Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
+    Route::get('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+    Route::post('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+
+    // Alocar viaturas
+    Route::post('alocarViatura', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'store']);
 });
+Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
 
 Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
 

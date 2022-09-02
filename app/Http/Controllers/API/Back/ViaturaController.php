@@ -13,7 +13,10 @@ use App\Models\Modelo;
 use App\Models\Ordem;
 use App\Models\viaturaDocument;
 use Illuminate\Support\Facades\Storage;
+<<<<<<< HEAD
 use Illuminate\Support\Carbon;
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 class ViaturaController extends Controller
 {
     private $viatura;
@@ -22,6 +25,7 @@ class ViaturaController extends Controller
     {
         $this->Viatura = $viatura;
     }
+<<<<<<< HEAD
     public function index(Request $request)
     {
         if($request->q){
@@ -34,6 +38,11 @@ class ViaturaController extends Controller
             return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
          }
 
+=======
+    public function index()
+    {
+        return $this->Viatura->with(['marca', 'modelo', 'createdBy'])->orderBy('id', 'desc')->paginate(15);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
 
@@ -42,6 +51,7 @@ class ViaturaController extends Controller
     }
 
     function listViatura(){
+<<<<<<< HEAD
 
         // $roles = auth()->user()->getRoleNames();
         if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
@@ -53,6 +63,9 @@ class ViaturaController extends Controller
         }
 
 
+=======
+        return Viatura::where('estado', true)->orderBy('id', 'desc')->get();
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
     public function store(Request $request)
     {
@@ -68,7 +81,11 @@ class ViaturaController extends Controller
             $request,
             [
                 'modelo'=>'required|string',
+<<<<<<< HEAD
                 'marca_id' =>'required|integer|exists:marcas,id',
+=======
+               'marca_id' =>'required|integer|exists:marcas,id',
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 'descricao'=> "required|string|max:300",
                 'ano_fabrico'=> "required|numeric|min:1960",
                 'kilometragem'=>'required|numeric|min:0',
@@ -79,7 +96,11 @@ class ViaturaController extends Controller
                 'nr_motor'=> "required",
                 'nr_chassi'=> "required",
                 'nr_livrete'=> "required",
+<<<<<<< HEAD
                 'matricula'=> "required|string|unique:viaturas",
+=======
+                'matricula'=> "required",
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 'data_licenca'=> "required|date|before_or_equal:" . $todayDate,
                 'data_inspencao'=> "required|date|before_or_equal:" . $todayDate,
                 'data_manifesto'=> "required|date|before_or_equal:" . $todayDate,
@@ -91,7 +112,11 @@ class ViaturaController extends Controller
                 'prazo_radio_difusao'=> "required|date",
                 'prazo_seguros'=> "required|date",
             ],
+<<<<<<< HEAD
             ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico','unique' => 'O :attribute, Ja existe uma viatura cadastrada com esse atributo.']
+=======
+            ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         );
         $modelo_exists = Modelo::where('nome_modelo',$request->modelo)->first();
 
@@ -122,7 +147,10 @@ class ViaturaController extends Controller
         $viatura->kilometragem = $request->kilometragem;
         $viatura->tipo_combustivel = $combustivel->tipo_combustivel;
         $viatura->marca()->associate($request->marca_id);
+<<<<<<< HEAD
         $viatura->estado = false;
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $viatura->createdBy = auth()->user()->id;
         // $viatura->updatedBy = auth()->user()->id;
         $viatura->save();
@@ -170,6 +198,7 @@ class ViaturaController extends Controller
         }
     }
 
+<<<<<<< HEAD
     function activarViatura(Request $request, $id){
         $viatura = Viatura::findOrFail($id);
         try {
@@ -197,6 +226,17 @@ class ViaturaController extends Controller
     public function show($id)
     {
         return $this->Viatura->with(['marca', 'modelo', 'createdBy', 'ordem_viatura.ordem.bombas.combustivel', 'viaturaDocument'])->where('id', $id)->first();
+=======
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\Viatura  $viatura
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Viatura $viatura)
+    {
+        return $this->viatura->with(['fabricante', 'modelo', 'createdBy'])->findOrFail($viatura);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function HistoricoAbastecimento($id){
@@ -204,6 +244,7 @@ class ViaturaController extends Controller
 
         return response()->json($abastecimentos, 200);
     }
+<<<<<<< HEAD
 
     function alocarRotas(Request $request, $id){
         $viatura = Viatura::findOrFail($id);
@@ -223,12 +264,34 @@ class ViaturaController extends Controller
     {
         $viatura = Viatura::findOrFail($id);
 
+=======
+    public function update(Request $request, $id)
+    {
+        $viatura = $this->viatura->findOrFail($id);
+        $this->validate($request, [
+            'modelo_id' => 'required|integer|exists:modelos,id',
+            'marca_id' => 'required|integer|exists:fabricantes,id',
+            'nome_viatura' => 'required|string',
+            'matricula' => 'required|string| unique:viaturas',
+            'nr_chassi' => 'required|string| unique:viaturas',
+            'nr_motor' => 'required|string| unique:viaturas',
+            'ano_fabrico' => 'required|date|before:created_at',
+            'capacidade_tanque' => 'required|integer',
+            'capacidade_media' => 'required|integer',
+            'data_inspencao' => 'required|date|before:created_at',
+            'data_manifesto' => 'required|date|before:created_at',
+            'data_seguros' => 'required|date|before:created_at',
+            'data_licenca' => 'required|date|before:created_at',
+            'data_taxa_radio' => 'required|date|before:created_at',
+        ]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $viatura->matricula = $request->matricula;
         $viatura->nome_viatura = $request->nome_viatura;
         $viatura->nr_chassi = $request->nr_chassi;
         $viatura->nr_motor = $request->nr_motor;
         $viatura->nr_livrete = $request->nr_livrete;
         $viatura->ano_fabrico = $request->ano_fabrico;
+<<<<<<< HEAD
         $viatura->lotacao = $request->lotacao;
         $viatura->capacidade_tanque = $request->capacidade_tanque;
         $viatura->capacidade_media = $request->capacidade_media;
@@ -260,5 +323,29 @@ class ViaturaController extends Controller
         } else{
             return response()->json(['message' => false, 'error' => 'erro na insercao de dados verifique os campos'], 421);
         }
+=======
+        $viatura->capacidade_tanque = $request->capacidade_tanque;
+        $viatura->capacidade_media = $request->capacidade_media;
+        $viatura->modelo()->associate($request->modelo_id);
+        $viatura->fabricante()->associate($request->fabricante_id);
+        $viatura->createdBy()->associate(auth()->user()->id);
+        $viatura->data_inspencao = $request->data_inspencao;
+        $viatura->data_manifesto = $request->data_manifesto;
+        $viatura->data_seguros = $request->data_seguros;
+        $viatura->data_licenca = $request->data_licenca;
+        $viatura->data_taxa_radio = $request->data_taxa_radio;
+        $viatura->update();
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Viatura  $viatura
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Viatura $viatura)
+    {
+        //
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 }

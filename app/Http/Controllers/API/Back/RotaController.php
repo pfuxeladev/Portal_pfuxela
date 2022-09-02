@@ -18,17 +18,25 @@ class RotaController extends Controller
     public function index()
     {
 
+<<<<<<< HEAD
         return $this->rota->with(['projecto', 'horario'])->where('is_active', true)->orderBy('nome_rota', 'asc')->paginate(15);
+=======
+        return $this->rota->with(['projecto', 'horario'])->orderBy('nome_rota', 'asc')->paginate(15);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function todasRotas()
     {
+<<<<<<< HEAD
         if(auth()->user()->hasRole('Gestor de Frotas') || auth()->user()->hasRole('SuperAdmin') || auth()->user()->hasDirectPermission('Create Abastecimento_recorrente')){
             return $this->rota->with('projecto')->where('is_active', true)->get();
         }else{
             return $this->rota->with('projecto')->where('is_active', true)->where('projecto_id', '!=', '29')->get();
         }
 
+=======
+        return $this->rota->with('projecto')->get();
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function todosProjectos(){
@@ -49,6 +57,7 @@ class RotaController extends Controller
             'tipoRota'=>'required',
             'projecto_id'=>'required|integer'
         ], ['required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric'=> 'O campo :attribute deve ser valor numerico',]);
+<<<<<<< HEAD
         if(Rota::where('nome_rota', $request->nome_rota)->first()){
             return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
         }
@@ -56,12 +65,18 @@ class RotaController extends Controller
  if(Rota::where('nome_rota', $request->nome_rota)->first()){
             return response()->json(['err'=>'Ja existe uma rota cadastrada com esses dados'], 421);
         }
+=======
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $rota->nome_rota = $request->nome_rota;
         $rota->endereco = $request->endereco;
         $rota->distancia_km = $request->distancia_km;
         $rota->tipoRota = $request->tipoRota;
         $rota->projecto_id  = $request->projecto_id ;
+<<<<<<< HEAD
         $rota->is_active = true;
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $rota->save();
 
         foreach($request->horario as $horario){

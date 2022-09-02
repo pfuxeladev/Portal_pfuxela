@@ -193,6 +193,7 @@
   "New Driver":"New Driver",
   "CheckList-Out": "CheckList-Out",
   "CheckList-In":"CheckList-In",
+<<<<<<< HEAD
   "CheckList-out-details":"CheckList-out-details",
   "CheckList-in-details":"CheckList-in-details",
   "recurring supply":"recurring supply",
@@ -201,4 +202,8 @@
   "Edit car": "Edit car",
   "Supply history": "Supply history",
   "Project Report": "Project Report"
+=======
+  "recurring supply":"recurring supply",
+  "Edit-Order":"Edit-Order"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

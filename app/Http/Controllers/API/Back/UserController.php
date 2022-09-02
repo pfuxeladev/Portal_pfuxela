@@ -24,6 +24,7 @@ class UserController extends Controller
    {
         $this->user = $user;
    }
+<<<<<<< HEAD
     public function index(Request $request)
     {
         if($request->perPage){
@@ -43,6 +44,12 @@ class UserController extends Controller
         }else{
             return $this->user->with(['departamento', 'person', 'roles'])->orderBy('id', 'desc')->paginate(10)->except(auth()->user()->id);
         }
+=======
+    public function index()
+    {
+
+        return $this->user->with(['departamento', 'person', 'roles'])->paginate(10)->except(auth()->user()->id);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     public function permissionsIndex()
@@ -104,7 +111,11 @@ class UserController extends Controller
         ]);
 
 
+<<<<<<< HEAD
         $password = $request->password;
+=======
+        $password = Str::random(8);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
         Log::info($password);
 
@@ -135,7 +146,10 @@ class UserController extends Controller
                 'departamento_id'=>$departamento->id,
                 'password'=>Hash::make($password),
             ]);
+<<<<<<< HEAD
            $user->createToken('access_token')->accessToken;
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
             $user->assignRole($role);
 
@@ -152,6 +166,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
+<<<<<<< HEAD
         return Response::json($this->user->with(['departamento', 'person', 'roles.permissions', 'permissions'])->findOrFail($id));
     }
 
@@ -183,6 +198,21 @@ class UserController extends Controller
      }
      return response()->json(['success'=>'utilizador actualizado']);
 
+=======
+        return Response::json($this->user->with(['departamento', 'person', 'roles'])->findOrFail($id));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\User  $user
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, User $user)
+    {
+        //
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     /**

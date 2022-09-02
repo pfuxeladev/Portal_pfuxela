@@ -10,7 +10,11 @@ class abastecimento extends Model
     use HasFactory;
 
     public function ordem(){
+<<<<<<< HEAD
         return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
+=======
+        return $this->belongsTo(Ordem::class);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     public function abastecimento_extra(){
@@ -21,6 +25,7 @@ class abastecimento extends Model
         return $this->hasMany(abastecimentoRotaViatura::class);
     }
 
+<<<<<<< HEAD
     function user(){
         return $this->belongsTo(User::class);
     }
@@ -29,4 +34,6 @@ class abastecimento extends Model
         return $this->belongsTo(Bombas::class);
     }
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

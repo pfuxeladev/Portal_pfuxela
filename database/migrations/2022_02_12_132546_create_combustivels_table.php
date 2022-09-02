@@ -16,7 +16,10 @@ class CreateCombustivelsTable extends Migration
         Schema::create('combustivels', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_combustivel');
+<<<<<<< HEAD
             $table->decimal('preco_actual', 8,2)->nullable();
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             $table->timestamps();
         });
     }

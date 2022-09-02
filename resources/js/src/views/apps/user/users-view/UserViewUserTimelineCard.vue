@@ -1,14 +1,25 @@
 <template>
+<<<<<<< HEAD
   <b-card title="Correspondencias e Ocorrencias diarias">
+=======
+  <b-card title="User Timeline">
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     <app-timeline>
 
       <!-- 12 INVOICES HAVE BEEN PAID -->
       <app-timeline-item>
         <div class="d-flex flex-sm-row flex-column flex-wrap justify-content-between mb-1 mb-sm-0">
+<<<<<<< HEAD
           <h6>Viaturas nao abastecidas</h6>
           <small class="text-muted">12 min ago</small>
         </div>
         <p>Nao consegui abastecer viatura do turno da manha.</p>
+=======
+          <h6>12 Invoices have been paid</h6>
+          <small class="text-muted">12 min ago</small>
+        </div>
+        <p>Invoices have been paid to the company.</p>
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         <p class="mb-0">
           <b-img
             :src="require('@/assets/images/icons/pdf.png')"

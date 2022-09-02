@@ -122,7 +122,11 @@
               </b-form-invalid-feedback>
             </b-form-group>
           </validation-provider>
+<<<<<<< HEAD
             <validation-provider
+=======
+ <validation-provider
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             #default="validationContext"
             name="Empresa"
             rules="required"
@@ -204,6 +208,7 @@
               </b-form-invalid-feedback>
             </b-form-group>
           </validation-provider>
+<<<<<<< HEAD
   <!-- departamento -->
           <validation-provider
             #default="validationContext"
@@ -224,6 +229,9 @@
               </b-form-invalid-feedback>
             </b-form-group>
           </validation-provider>
+=======
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           <!-- Form Actions -->
           <div class="d-flex mt-2">
             <b-button
@@ -344,7 +352,10 @@ export default {
       departamento: '',
       contacto: '',
       empresa: '',
+<<<<<<< HEAD
       password: '',
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     })
 
     const userData = ref(JSON.parse(JSON.stringify(form)))

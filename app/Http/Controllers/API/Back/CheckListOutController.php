@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Models\Categoria;
 use App\Models\checklist_vars;
 use App\Models\CheckListOut;
@@ -18,6 +19,13 @@ use Barryvdh\DomPDF\PDF;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+=======
+use App\Models\CheckListOut;
+use App\Models\motorista;
+use App\Models\Viatura;
+use Illuminate\Http\Request;
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 class CheckListOutController extends Controller
 {
     private $checkListOut;
@@ -26,6 +34,7 @@ class CheckListOutController extends Controller
     {
         $this->checkListOut = $checkListOut;
     }
+<<<<<<< HEAD
     public function index(Request $request)
     {
         if($request->q){
@@ -66,6 +75,16 @@ class CheckListOutController extends Controller
        return Viatura::where('viaturas.locate', 'IN')->where('viaturas.estado', true)->get();
    }
 
+=======
+    public function index()
+    {
+        return $this->checkListOut->with(['viatura', 'motorista.person', 'checkListIn'])->orderBy('id', 'desc')->paginate(10);
+    }
+
+   function listViaturaDentro(){
+       return Viatura::where('locate', 'IN')->where('estado', true)->get();
+   }
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
    function kmActual(Request $request){
         if ($request->viatura_id) {
             return response()->json(Viatura::where('id', $request->viatura_id)->select('kilometragem')->first(), 200);
@@ -77,6 +96,7 @@ class CheckListOutController extends Controller
    function ListMotoristas(){
        return motorista::join('people', 'motoristas.person_id', '=', 'people.id')->select('people.nome_completo as nome', 'motoristas.id')->orderBy('id','desc')->get();
    }
+<<<<<<< HEAD
 
    function storeChecklistVars(Request $request){
         $checklistVars = new checklist_vars();
@@ -116,6 +136,8 @@ class CheckListOutController extends Controller
     return response()->json($checkList, 200);
    }
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -124,10 +146,23 @@ class CheckListOutController extends Controller
             'motorista_id'=>'required|integer|exists:motoristas,id',
             'km_inicio'=>'required|numeric|min:0',
             'hora_inicio'=>'required',
+<<<<<<< HEAD
         ], [
             'required'=>'O :attribute é obrigatório'
         ]);
 
+=======
+            'limpezaState'=> 'required',
+            'vasoEspansorState' =>'required|string',
+            'LiquidoVidroState' =>'required|string',
+            'OleoMotorState' =>'required|string',
+            'OleoDirecaoState' =>'required|string',
+            'OleoTravoesState' =>'required|string',
+            'SistemaABS_State' =>'required|string',
+        ], [
+            'required'=>'O :attribute é obrigatório'
+        ]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
         if ($viatura->kilometragem > $request->km_inicio) {
@@ -135,7 +170,11 @@ class CheckListOutController extends Controller
         }
 
         if($viatura->estado == false || $viatura->locate == 'OUT'){
+<<<<<<< HEAD
             return response()->json(['error' => 'A viatura desejada se encontra fora do parque!'], 404);
+=======
+            return response()->json(['error' => 'A viatura desejada não se encontra fora do parque!'], 404);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         }
 
         $motorista = motorista::where('id', $request->motorista_id)->first();
@@ -144,6 +183,7 @@ class CheckListOutController extends Controller
             return response()->json(['error' => 'O motorista não foi encontrado!'], 404);
         }
 
+<<<<<<< HEAD
         $checkListOut = new CheckListOut();
 
         $checkListOut->viatura()->associate($request->viatura_id);
@@ -151,11 +191,55 @@ class CheckListOutController extends Controller
         $checkListOut->km_inicio = $request->km_inicio;
         $checkListOut->hr_inicio = $request->hora_inicio;
         $checkListOut->estado = $request->tipo_saida;
+=======
+
+
+
+
+        $checkListOut = new CheckListOut();
+        $checkListOut->viatura_id = $viatura->id;
+        $checkListOut->motorista_id = $motorista->id;
+        $checkListOut->carta_conducao = $request->carta_conducao;
+        $checkListOut->km_inicio = $request->km_inicio;
+        $checkListOut->hr_inicio = $request->hora_inicio;
+        $checkListOut->uniforme = $request->uniforme;
+        $checkListOut->limpezaState = $request->limpezaState;
+        $checkListOut->vasoEspansorState = $request->vasoEspansorState;
+        $checkListOut->LiquidoVidroState = $request->LiquidoVidroState;
+        $checkListOut->OleoMotorState = $request->OleoMotorState;
+        $checkListOut->OleoDirecaoState = $request->OleoDirecaoState;
+        $checkListOut->OleoTravoesState = $request->OleoTravoesState;
+        $checkListOut->ACState = $request->ACState;
+        $checkListOut->SistemaABS_State = $request->SistemaABS_State;
+        $checkListOut->CintoSeguracaState = $request->CintoSeguracaState;
+        if ($request->isRota == true) {
+            $checkListOut->tipo_saida = 'ROTAS';
+          }
+          if ($request->isOuthers == true) {
+              $checkListOut->tipo_saida = 'OUTROS';
+            }
+        $checkListOut->motorista_dss = $request->motorista_dss;
+        $checkListOut->lista_presenca = $request->lista_presenca;
+        $checkListOut->colete_saida = $request->colete_saida;
+        $checkListOut->pneu_sobr_saida = $request->pneu_sobr_saida;
+        $checkListOut->macaco_saida = $request->macaco_saida;
+        $checkListOut->inspencao_saida = $request->inspencao_saida;
+        $checkListOut->triangulo_saida = $request->triangulo_saida;
+        $checkListOut->chave_roda_saida = $request->chave_roda_saida;
+        $checkListOut->kit_reboque_saida = $request->kit_reboque_saida;
+        $checkListOut->kit_1_socorros_saida = $request->kit_1_socorro_saida;
+        $checkListOut->extintor_saida = $request->extintor_saida;
+        $checkListOut->livrete_saida = $request->livrete_saida;
+        $checkListOut->licenca_saida = $request->licenca_saida;
+        $checkListOut->seguros_saida = $request->seguros_saida;
+        $checkListOut->taxaradio_saida = $request->taxaradio_saida;
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         $checkListOut->user_id = auth()->user()->id;
         $checkListOut->save();
 
         if($checkListOut){
 
+<<<<<<< HEAD
             // return $request->checklist_var;
             $checklists = array();
 
@@ -271,6 +355,49 @@ class CheckListOutController extends Controller
 
         return response()->json(['message'=>'viatura inspencionada com sucesso']);
     }
+=======
+            if ($checkListOut->tipo_saida === 'OUTROS') {
+                $checkListOut->checklistOutDestination()->create([
+                    'descricao_trajecto'=>$request->trajecto,
+                    'horaPrevistaSaida'=>$request->horaPrevistaSaida,
+                    'horaPrevistaEntrada'=>$request->horaPrevistaEntrada,
+                ]);
+            }
+            else if($checkListOut->tipo_saida === 'ROTAS'){
+                    foreach ($request->rota_id as $key => $rota_id) {
+                        $checkListOut->checkListRota()->create([
+                            'rota_id'=>$rota_id
+                        ]);
+                    }
+
+            }
+
+            $viatura->locate = 'OUT';
+            $viatura->update();
+
+            return response()->json(['message'=>'viatura  inspencionada com sucesso']);
+        }
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\CheckListOut  $checkListOut
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        return $this->checkListOut->with(['viatura', 'motorista'])->findOrFail($id);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\CheckListOut  $checkListOut
+     * @return \Illuminate\Http\Response
+     */
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function update(Request $request, CheckListOut $checkListOut)
     {
         //

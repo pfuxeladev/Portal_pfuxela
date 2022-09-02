@@ -1428,6 +1428,15 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
+    },
+    alocateVehicle: function alocateVehicle(ctx, viatura) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/alocarViatura', viatura).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });

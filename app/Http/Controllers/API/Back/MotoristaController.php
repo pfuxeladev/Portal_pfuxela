@@ -30,7 +30,14 @@ class MotoristaController extends Controller
     public function store(Request $request)
     {
 
+<<<<<<< HEAD
        
+=======
+        $request->validate([
+            'cartaConducao' => 'required|string|min:5',
+            'nr_documento' => 'required|string|min:9',
+        ]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
         $motorista = new motorista();
 
@@ -48,13 +55,19 @@ class MotoristaController extends Controller
 
         if ($people) {
             $contact = new Contactos();
+<<<<<<< HEAD
             $contact->cont_type = 'mobile';
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             $contact->content = $request->contacto;
             $contact->person_id = $people->id;
             $contact->save();
             if ($contact) {
                 $contact1 = new Contactos();
+<<<<<<< HEAD
                 $contact1->cont_type = 'mobile';
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 $contact1->content = $request->contacto_alt;
                 $contact1->person_id = $people->id;
                 $contact1->save();

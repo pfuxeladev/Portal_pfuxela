@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+<<<<<<< HEAD
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -53,6 +54,56 @@
     </div>
 
     <script src="{{ asset(mix('js/app.js')) }}"></script>
+=======
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+
+  <title>PORTAL PFUXELA .lda</title>
+
+  <!-- Splash Screen/Loader Styles -->
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/loader.css') }}" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{{ asset('images/logo/favicon.png') }}">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
+    rel="stylesheet">
+    <script>
+        @auth
+          window.Permissions = {!! json_encode(auth()->user()->allPermissions, true) !!};
+        @else
+          window.Permissions = [];
+        @endauth
+      </script>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template doesn't work properly without
+      JavaScript enabled. Please enable it to continue.</strong>
+  </noscript>
+  <div id="loading-bg">
+    <div class="loading-logo">
+      <img src="{{ asset('logo.png') }}" alt="Logo" />
+    </div>
+    <div class="loading">
+      <div class="effect-1 effects"></div>
+      <div class="effect-2 effects"></div>
+      <div class="effect-3 effects"></div>
+    </div>
+  </div>
+  <div id="app">
+  </div>
+
+  <script src="{{ asset('js/app.js') }}"></script>
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
 </body>
 

@@ -23,6 +23,10 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+<<<<<<< HEAD
+=======
+        // \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     ];
 
     /**
@@ -44,7 +48,11 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:api',
+<<<<<<< HEAD
             // \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
+=======
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
     ];

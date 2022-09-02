@@ -4,7 +4,11 @@
     class="card-tiny-line-stats"
     body-class="pb-50"
   >
+<<<<<<< HEAD
     <h6>Requisi&ccedil;&otilde;es</h6>
+=======
+    <h6>Profit</h6>
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     <h2 class="font-weight-bolder mb-1">
       6,24k
     </h2>

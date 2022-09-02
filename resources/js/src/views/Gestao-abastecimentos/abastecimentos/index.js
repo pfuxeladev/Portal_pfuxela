@@ -14,13 +14,21 @@ export default function useAbastecimentoList() {
   const refAbstRecorrente = ref(null)
   // Table Handlers
   const tableColumns = [
+<<<<<<< HEAD
     { key: 'ordem.codigo_ordem', sortable: true },
+=======
+    { key: 'ordem', sortable: true },
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'qtd_ant', sortable: true },
     { key: 'qtd_rec', sortable: true },
     { key: 'estado', sortable: true },
     { key: 'bombas', sortable: true },
+<<<<<<< HEAD
     { key: 'Data_de_emissao', sortable: true },
     { key: 'user.name', sortable: true },
+=======
+    // { key: 'rota', sortable: true },
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'acções' },
   ]
 
@@ -28,11 +36,17 @@ export default function useAbastecimentoList() {
     { key: 'ordem', sortable: true },
     { key: 'bombas', sortable: true },
     { key: 'viatura', sortable: true },
+<<<<<<< HEAD
     { key: 'destino', sortable: true },
     { key: 'descricao', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'hora_de_saida', sortable: true },
     { key: 'user', sortable: true },
+=======
+    { key: 'motorista', sortable: true },
+    { key: 'hora_de_saida', sortable: true },
+    // { key: 'rota', sortable: true },
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'acções' },
   ]
   const perPage = ref(10)
@@ -122,14 +136,21 @@ export default function useAbastecimentoList() {
         toast({
           component: ToastificationContent,
           props: {
+<<<<<<< HEAD
             title: 'Erro na listagem',
+=======
+            title: 'Erro na listagem de abastecimentos',
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             icon: 'AlertTriangleIcon',
             variant: 'danger',
           },
         })
       })
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   // *===============================================---*
   // *--------- UI ---------------------------------------*
   // *===============================================---*
@@ -157,6 +178,9 @@ export default function useAbastecimentoList() {
     roleFilter,
     planFilter,
     statusFilter,
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   }
 }

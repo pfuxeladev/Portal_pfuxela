@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
 use App\Models\ordem_viatura;
 use App\Models\OrdemViaturaRota;
 use App\Models\projecto;
@@ -11,6 +12,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\DB;
+=======
+use App\Models\projecto;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use GuzzleHttp\Client;
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 class ProjectoController extends Controller
 {
    private $projecto;
@@ -21,7 +28,11 @@ class ProjectoController extends Controller
    }
     public function index()
     {
+<<<<<<< HEAD
         return $this->projecto->orderBy('name', 'desc')->paginate(20);
+=======
+        return $this->projecto->orderBy('name', 'desc')->paginate(10);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function listProjecto()
@@ -35,19 +46,40 @@ class ProjectoController extends Controller
      foreach ($api_resource['data'] as $key => $project) {
          $key++;
 
+<<<<<<< HEAD
          $projecto = projecto::firstOrNew(
              ['id'=>$project['id'],
              'name'=>$project['name'],
              'email'=>$project['email'],
+=======
+         $projecto = projecto::updateOrCreate(
+             ['id'=>$project['id']],
+             ['name'=>$project['name']],
+             ['email'=>$project['email'],
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
              'telephone'=>$project['telephone'],
              'address_xtense'=>$project['address_xtense'],
              'contact_emg'=>$project['contact_emg'],
              'nrPassagers'=>$project['nrPassagers'],
              'recomendation'=>$project['recomendation'],
              'createdBy'=>auth()->user()->id,
+<<<<<<< HEAD
              'updatedBy'=>auth()->user()->id,
              ]
            );
+=======
+             'updatedBy'=>auth()->user()->id],
+            );
+        //  $projecto->name = $project['name'];
+        //  $projecto->email = $project['email'];
+        //  $projecto->address_xtense = $project['address_xtense'];
+        //  $projecto->contact_emg = $project['contact_emg'];
+        //  $projecto->nrPassagers = $project['nrPassagers'];
+        //  $projecto->recomendation = $project['recomendation'];
+        //  $projecto->createdBy = auth()->user()->id;
+        //  $projecto->updatedBy = auth()->user()->id;
+        //  $projecto->save();
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
      }
      return $projecto;
     }
@@ -58,6 +90,7 @@ class ProjectoController extends Controller
      * @param  \App\Models\projecto  $projecto
      * @return \Illuminate\Http\Response
      */
+<<<<<<< HEAD
     public function show($name)
     {
        $projecto = $this->projecto->with(['rota'])->where('name', $name)->first();
@@ -114,6 +147,20 @@ class ProjectoController extends Controller
     }
 
    }
+=======
+    public function show(projecto $projecto)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\projecto  $projecto
+     * @return \Illuminate\Http\Response
+     */
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function update(Request $request, projecto $projecto)
     {
         //

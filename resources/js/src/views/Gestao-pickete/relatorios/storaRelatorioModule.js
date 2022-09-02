@@ -58,6 +58,7 @@ export default {
           .catch(error => reject(error))
       })
     },
+<<<<<<< HEAD
     addAtributo(ctx, chklstVar) {
       return new Promise((resolve, reject) => {
         axios
@@ -74,6 +75,8 @@ export default {
           .catch(error => reject(error))
       })
     },
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
   },
 }

@@ -35,8 +35,11 @@ class Bombas extends Model
         return $this->hasMany(Ordem::class);
     }
 
+<<<<<<< HEAD
     public function abastecimentoBomba(){
         return $this->hasMany(abastecimento_bomba::class, 'bombas_id', 'id');
     }
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

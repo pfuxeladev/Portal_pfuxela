@@ -26,13 +26,29 @@
       <b-row>
         <b-col
           cols="12"
+<<<<<<< HEAD
           xl="12"
           lg="10"
+=======
+          xl="9"
+          lg="8"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           md="7"
         >
           <user-view-user-info-card :user-data="userData" />
         </b-col>
+<<<<<<< HEAD
 
+=======
+        <b-col
+          cols="12"
+          md="5"
+          xl="3"
+          lg="4"
+        >
+          <user-view-user-plan-card />
+        </b-col>
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       </b-row>
 
       <b-row>
@@ -46,9 +62,17 @@
           cols="12"
           lg="6"
         >
+<<<<<<< HEAD
           <user-view-user-permissions-card :roles-data="userData.roles"/>
         </b-col>
       </b-row>
+=======
+          <user-view-user-permissions-card />
+        </b-col>
+      </b-row>
+
+      <invoice-list />
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </template>
 
   </div>
@@ -61,8 +85,15 @@ import { ref, onUnmounted } from '@vue/composition-api'
 import {
   BRow, BCol, BAlert, BLink,
 } from 'bootstrap-vue'
+<<<<<<< HEAD
 import userStoreModule from '../userStoreModule'
 import UserViewUserInfoCard from './UserViewUserInfoCard.vue'
+=======
+import InvoiceList from '@/views/apps/invoice/invoice-list/InvoiceList.vue'
+import userStoreModule from '../userStoreModule'
+import UserViewUserInfoCard from './UserViewUserInfoCard.vue'
+import UserViewUserPlanCard from './UserViewUserPlanCard.vue'
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 import UserViewUserTimelineCard from './UserViewUserTimelineCard.vue'
 import UserViewUserPermissionsCard from './UserViewUserPermissionsCard.vue'
 
@@ -75,8 +106,16 @@ export default {
 
     // Local Components
     UserViewUserInfoCard,
+<<<<<<< HEAD
     UserViewUserTimelineCard,
     UserViewUserPermissionsCard,
+=======
+    UserViewUserPlanCard,
+    UserViewUserTimelineCard,
+    UserViewUserPermissionsCard,
+
+    InvoiceList,
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
   setup() {
     const userData = ref(null)

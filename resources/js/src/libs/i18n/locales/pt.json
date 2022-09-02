@@ -197,6 +197,7 @@
   "Drivers":"Motoristas",
   "New Driver": "Novo Motorista",
   "CheckList-Out": "CheckList de Saida",
+<<<<<<< HEAD
   "CheckList-out-details":"Detalhes da checkout list",
   "CheckList-in-details":"Detalhes da Checkin",
   "CheckList-In":"CheckList de entrada",
@@ -206,4 +207,9 @@
   "Edit car":"Actualizar viatura",
   "Supply history": "Historico geral",
   "Project Report": "Relatorio do Projecto"
+=======
+  "CheckList-In":"CheckList de entrada",
+  "recurring supply":"Abastecimento recorrente",
+  "Edit-Order":"Actualizar Ordem"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

@@ -36,16 +36,27 @@ return [
     */
 
     'guards' => [
+<<<<<<< HEAD
         'api' => [
             'driver' => 'passport',
             'provider' => 'users',
             'hash' => false,
         ],
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
         ],
 
+<<<<<<< HEAD
+=======
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'users',
+            'hash' => false,
+        ],
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     ],
 
     /*

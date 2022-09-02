@@ -67,7 +67,11 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'timezone' => 'Africa/Maputo',
+=======
+    'timezone' => 'UTC',
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
     /*
     |--------------------------------------------------------------------------
@@ -176,8 +180,12 @@ return [
         App\Providers\RouteServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
+<<<<<<< HEAD
         Intervention\Image\ImageServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+=======
+        Intervention\Image\ImageServiceProvider::class
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
     ],
 
@@ -230,8 +238,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+<<<<<<< HEAD
         'Image' => Intervention\Image\Facades\Image::class,
         'PDF' => Barryvdh\DomPDF\Facade::class
+=======
+        'Image' => Intervention\Image\Facades\Image::class
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
     ],
 

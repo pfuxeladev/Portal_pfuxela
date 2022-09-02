@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <template>
   <div class="section">
     <b-card no-body>
@@ -415,3 +416,6 @@ export default {
 
 <style>
 </style>
+=======
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033

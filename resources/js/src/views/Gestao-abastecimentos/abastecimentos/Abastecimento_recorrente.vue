@@ -33,8 +33,12 @@
               />
             </div>
           </b-col>
+<<<<<<< HEAD
 
           <b-col cols="6" md="3" v-if="can('Create Abastecimento_recorrente')">
+=======
+          <b-col cols="6" md="3">
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             <b-button @click="showModal" variant="outline-primary">criar pedido de abastecimento</b-button>
           </b-col>
         </b-row>
@@ -57,16 +61,23 @@
                     <template #cell(hora_de_saida)="data">
                         {{data.item.horaSaida}}
                     </template>
+<<<<<<< HEAD
                      <template #cell(user)="data">
                         {{data.item.abastecimento.user.name}}
                     </template>
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
 
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                             </template>
+<<<<<<< HEAD
                             <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
+=======
+                            <b-dropdown-item @click="details(data.item.abastecimento.ordem.refs)">
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Mostrar</span>
                             </b-dropdown-item>
@@ -107,11 +118,19 @@
       >
         <div class="d-block">
           <validation-observer
+<<<<<<< HEAD
+=======
+            #default="{ handleSubmit }"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             ref="refFormObserver"
           >
             <b-form
               ref="form"
+<<<<<<< HEAD
               @submit.prevent="submitSupply"
+=======
+              @submit.prevent="handleSubmit(submitSupply)"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             >
               <b-form-row>
                 <b-col cols="6" md="6">
@@ -144,6 +163,7 @@
                     name="Viatura"
                     rules="required"
                   >
+<<<<<<< HEAD
                     <b-form-group label="Viatura">
                       <v-select
                         id="Viatura"
@@ -153,6 +173,18 @@
                         :options="viaturas"
                         :reduce="viaturas => viaturas.matricula"
                         :clearable="false"
+=======
+                    <b-form-group label="Viatura" label-for="Viatura">
+                      <v-select
+                        id="Viatura"
+                        v-model="OrderForm.viatura_id"
+                        :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                        label="matricula"
+                        :options="viaturas"
+                        :reduce="viaturas => viaturas.id"
+                        :clearable="false"
+                        input-id="viatura"
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                         :state="getValidationState(validationContext)"
                       ></v-select>
                       <b-form-invalid-feedback>
@@ -396,7 +428,11 @@ export default {
     if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
     const toast = useToast();
     const form = new Form({
+<<<<<<< HEAD
       viatura_matricula: '',
+=======
+      viatura_id: null,
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       bombas_id: null,
       qtd: null,
       horaSaida: '',
@@ -409,7 +445,12 @@ export default {
       OrderForm.value = JSON.parse(JSON.stringify(form));
     };
     onUnmounted(() => {
+<<<<<<< HEAD
       if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
+=======
+      if (store.hasModule(SUPPLY_STORE_MODULE_NAME))
+        store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     });
 
     function submitSupply() {
@@ -426,7 +467,10 @@ export default {
             },
           })
           this.$refs.AbastecimentoForm.hide()
+<<<<<<< HEAD
           window.location.reload()
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         })
         .catch(err => {
           if (err.response.status === 421) {

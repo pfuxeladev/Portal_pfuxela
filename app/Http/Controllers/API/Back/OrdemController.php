@@ -13,6 +13,7 @@ use App\Models\abastecimento;
 use App\Models\ordem_viatura;
 use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
+<<<<<<< HEAD
 use App\Models\Bombas;
 use App\Models\OrdemViaturaRota;
 use PDF;
@@ -25,6 +26,8 @@ use Exception;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 class OrdemController extends Controller
 {
     private $ordem;
@@ -36,6 +39,7 @@ class OrdemController extends Controller
     public function index()
     {
 
+<<<<<<< HEAD
         $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->paginate(15);
 
         return response()->json($ordem, 200);
@@ -50,6 +54,12 @@ class OrdemController extends Controller
         }
 
         return response()->json($ordem_viatura, 200);
+=======
+        $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->orderBy('id', 'desc')->paginate(15);
+
+        return response()->json($ordem, 200);
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function AprovarOrdem(Request $request)
@@ -58,6 +68,7 @@ class OrdemController extends Controller
         $ordem->estado = 'Autorizado';
         $ordem->approvedBy = auth()->user()->id;
         $ordem->update();
+<<<<<<< HEAD
         if ($ordem) {
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
@@ -97,6 +108,10 @@ class OrdemController extends Controller
     function getBomba($refs)
     {
         return Bombas::join('ordems', 'ordems.bombas_id', '=', 'bombas.id')->where('ordems.refs', $refs)->select('bombas.nome_bombas as bombas', 'bombas.id')->first();
+=======
+
+        return response()->json(['success' => 'Ordem aprovada, a encaminhar para as bombas']);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 
     function CancelarOrdem(Request $request)
@@ -111,6 +126,7 @@ class OrdemController extends Controller
 
                 $ordem_viatura = ordem_viatura::where('ordem_id', $ordem->id)->get();
                 foreach ($ordem_viatura as $ov => $ordVi) {
+<<<<<<< HEAD
                     $viatura = Viatura::where('id', $ordVi->viatura_id)->get();
                     foreach ($viatura as $key => $v) {
                         $v->qtd_disponivel = ($v->qtd_disponivel - $ordVi->qtd_abastecida);
@@ -133,6 +149,13 @@ class OrdemController extends Controller
                             ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') . ".pdf");
                     });
                 }
+=======
+                    $viatura[$ov] = Viatura::where('id', $ordVi->viatura_id)->get();
+                    $viatura[$ov]->qtd_disponivel = ($viatura[$ov]->qtd_disponivel - $ordVi->qtd_abastecida);
+                    $viatura[$ov]->update();
+                }
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 return response()->json(['message' => 'Ordem cancelada com sucesso'], 200);
             }
         } catch (\Exception $e) {
@@ -140,6 +163,7 @@ class OrdemController extends Controller
         }
     }
 
+<<<<<<< HEAD
     function DesfazerOrdem(Request $request, $refs)
     {
         try {
@@ -179,6 +203,8 @@ class OrdemController extends Controller
         }
     }
 
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function store(Request $request)
     {
         try {
@@ -193,6 +219,7 @@ class OrdemController extends Controller
             } else {
                 $ordem->codigo_ordem = $counter;
             }
+<<<<<<< HEAD
             if (Ordem::where('estado', 'Aberta')->where('createdBy', auth()->user()->id)->first())
                 return response()->json(['error' => 'Erro! Ja existe uma ordem aberta no sistema nao pode abrir mais uma novamente'], 200);
 
@@ -200,6 +227,11 @@ class OrdemController extends Controller
             $ordem->bombas_id = $request->bomba_id;
             $ordem->estado = 'Aberta';
             $ordem->tipo_ordem = 'rota';
+=======
+            $ordem->refs = $uuid;
+            $ordem->bombas_id = $request->bomba_id;
+            $ordem->estado = 'aberta';
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 
@@ -207,7 +239,11 @@ class OrdemController extends Controller
                 return $ordem->refs;
             }
         } catch (\Exception $e) {
+<<<<<<< HEAD
             return response()->json(['error' => 'erro na abertura da ordem', 'erro' => true], 421);
+=======
+            return response()->json(['error' => 'erro na abertura da ordem', 'erro' => true]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         }
     }
 
@@ -250,7 +286,11 @@ class OrdemController extends Controller
                             'razao_abastecimento' => $item['observacao']
                         ]);
                     } else {
+<<<<<<< HEAD
                         return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err' => true], 421);
+=======
+                        return response()->json(['erro' => 'Nao pode abastecer acima da capacidade viatura ou tamanho da rota', 'err' => true]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     }
                 }
 
@@ -279,17 +319,26 @@ class OrdemController extends Controller
             }
             return response()->json(['success' => 'submetido com sucesso', 'err' => false]);
         } catch (\Throwable $th) {
+<<<<<<< HEAD
             return response()->json(['error' => 'Erro no insercao de pedido de abastecimento', 'err' => true], 421);
+=======
+            return response()->json(['error' => 'Erro no insercao de pedido de abastecimento', 'err' => true]);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         }
     }
 
     public function show(Ordem $ordem, $refs)
     {
+<<<<<<< HEAD
         $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
+=======
+        $ordem  = Ordem::where('refs', $refs)->with(['abastecimento', 'abastecimento_rota.viatura', 'bombas', 'abastecimento_extra'])->first();
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
         return response()->json($ordem, 200);
     }
 
+<<<<<<< HEAD
     function imprimirOrdem($refs)
     {
         $ordem  = Ordem::where('refs', $refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
@@ -607,5 +656,28 @@ class OrdemController extends Controller
     {
         $pdf = PDF::loadView('orderMail.ExtraOrder')->setOptions(['defaultFont' => 'Verdana']);
         return $pdf->download('ordem.pdf');
+=======
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Ordem  $ordem
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Ordem $ordem)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Ordem  $ordem
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Ordem $ordem)
+    {
+        //
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 }

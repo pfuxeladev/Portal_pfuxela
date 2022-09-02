@@ -5,7 +5,11 @@
         <b-card-title>Actualizar a ordem de abastecimento</b-card-title>
       </b-card-header>
       <b-card-body>
+<<<<<<< HEAD
           <b-form @submit.prevent="Actualizar()">
+=======
+          <b-form>
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               <b-form-row>
               <b-col>
                   <b-form-group label="Referencia da ordem" label-for="Referencia da ordem">
@@ -18,6 +22,7 @@
                   </b-form-group>
               </b-col>
           </b-form-row>
+<<<<<<< HEAD
           <b-form-row>
               <b-col cols="12" class="table-responsive" style="height:300px;">
                   <table class="table table-light height-auto">
@@ -56,6 +61,8 @@
                   Actualizar a ordem
                 </b-button>
           </b-form-row>
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           </b-form>
       </b-card-body>
     </b-card>
@@ -80,8 +87,13 @@ import {
   BLink,
   BBadge,
   BFormTextarea,
+<<<<<<< HEAD
 } from 'bootstrap-vue';
 import vSelect from 'vue-select';
+=======
+} from "bootstrap-vue";
+import vSelect from "vue-select";
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 import { ref, onUnmounted } from '@vue/composition-api';
 import Ripple from 'vue-ripple-directive'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
@@ -89,7 +101,11 @@ import { useToast } from 'vue-toastification/composition'
 import store from '@/store'
 import router from '@/router'
 import storeOrderModule from './storeOrderModule'
+<<<<<<< HEAD
 import Form from 'vform';
+=======
+import Form from "vform";
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 export default {
   components: {
     BCard,
@@ -114,14 +130,19 @@ export default {
     return {
       bombas: [],
       viaturas: [],
+<<<<<<< HEAD
       rota: [],
       projecto: [],
+=======
+      rotas: [],
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
   },
   created() {
     this.$http.get('/api/bombas').then(res => {
       this.bombas = res.data
     })
+<<<<<<< HEAD
 
     this.$http.get('/api/listarViaturas').then(res => {
       this.viaturas = res.data
@@ -158,6 +179,11 @@ export default {
     },
   },
   setup(props) {
+=======
+  },
+  setup(props) {
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     const ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply'
     const toast = useToast()
     // Register module
@@ -168,11 +194,28 @@ export default {
       if (store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME) }
     })
 
+<<<<<<< HEAD
     const orderData = ref(null)
 
     const form = ref(
       JSON.parse(
         JSON.stringify(new Form({ orderData, rota_id: {} })),
+=======
+    const form = new Form({
+      refs: router.currentRoute.params.refs,
+      bomba_id: null,
+      abastecer: [{
+        projecto_id: null,
+        viatura_id: null,
+        rota_id: null,
+        qtd_abastecer: 0,
+        observacao: null,
+      }],
+    })
+    const orderData = ref(
+      JSON.parse(
+        JSON.stringify(form),
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       ),
     )
     store.dispatch('Supply/fetchOrder', {
@@ -180,7 +223,10 @@ export default {
     })
       .then(response => {
         orderData.value = response.data
+<<<<<<< HEAD
         form.value = orderData
+=======
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       })
       .catch(error => {
         if (error.response.status === 404) {
@@ -188,6 +234,7 @@ export default {
         }
       })
 
+<<<<<<< HEAD
     function Actualizar() {
       store.dispatch('Supply/updateOrder', orderData.value)
         .then(response => {
@@ -220,6 +267,11 @@ export default {
       orderData,
       form,
       Actualizar,
+=======
+    return {
+      orderData,
+      form,
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
   },
 }

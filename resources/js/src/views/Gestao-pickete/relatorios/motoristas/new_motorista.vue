@@ -150,7 +150,11 @@ export default {
     const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
     // 15th two months prior
     const minDate = new Date(today);
+<<<<<<< HEAD
     minDate.setFullYear(minDate.getFullYear() - 80);
+=======
+    minDate.setFullYear(minDate.getFullYear() - 40);
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     minDate.setDate(15);
     // 15th in two months
     const maxDate = new Date(today);

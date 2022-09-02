@@ -1,5 +1,6 @@
 <template>
   <div class="car-details">
+<<<<<<< HEAD
     <section class="invoice-add-wrapper mt-3">
       <b-row class="invoice-add">
           <b-col>
@@ -225,10 +226,14 @@
         </b-col>
       </b-row>
     </section>
+=======
+      detalhes da viatura
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
 import {
   BCard, BCardHeader, BCardBody, BCardFooter, BBadge, BLink, BRow, BCol, BListGroup, BListGroupItem, BImg,
   BFormGroup,
@@ -292,5 +297,9 @@ export default {
     // },
 
   },
+=======
+export default {
+
+>>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }
 </script>
