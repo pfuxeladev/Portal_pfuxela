@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
   <section>
     <b-card no-body>
       <b-card-header>
@@ -284,13 +283,5 @@ export default {
       fetchRotas,
     }
   },
-=======
-
-</template>
-
-<script>
-export default {
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }
 </script>

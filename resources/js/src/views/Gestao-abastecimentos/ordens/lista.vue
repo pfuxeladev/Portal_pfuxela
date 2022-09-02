@@ -86,10 +86,7 @@
                 placeholder="Search..."
               />
               <b-button
-<<<<<<< HEAD
               v-if="can('Create Ordem')"
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 variant="primary"
                 @click="showModal"
               >
@@ -117,12 +114,6 @@
         <template #cell(data_de_emissao)="data">
           {{ dateTime(data.item.created_at) }}
         </template>
-<<<<<<< HEAD
-=======
-        <template #cell(bomba)="data">
-          {{ data.item.bombas.nome_bombas }}
-        </template>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         <template #cell(status)="data">
              <b-badge
             pill
@@ -148,17 +139,12 @@
                 class="align-middle text-body"
               />
             </template>
-<<<<<<< HEAD
             <b-dropdown-item v-if="data.item.estado !== 'Aberta'"
-=======
-            <b-dropdown-item
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
-<<<<<<< HEAD
              <b-dropdown-item  v-if="data.item.estado === 'Aberta'"
               :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
             >
@@ -166,10 +152,6 @@
               <span class="align-middle ml-50">continuar</span>
             </b-dropdown-item>
             <b-dropdown-item v-if="data.item.estado === 'Pendente'"
-=======
-
-            <b-dropdown-item
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />

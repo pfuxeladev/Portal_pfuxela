@@ -16,11 +16,7 @@ export default function useOrdersList() {
   const tableColumns = [
     { key: 'cogido_ordem', sortable: true },
     { key: 'data_de_emissao', sortable: true },
-<<<<<<< HEAD
     { key: 'bombas.nome_bombas', sortable: true },
-=======
-    { key: 'bomba', sortable: true },
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'status', sortable: true },
     { Key: 'emitida_por', sortable: true },
     { key: 'acções' },
@@ -90,11 +86,7 @@ export default function useOrdersList() {
   const resolveOrdersStatusVariant = status => {
     if (status === 'pendente') return 'warning'
     if (status === 'aprovada') return 'success'
-<<<<<<< HEAD
     if (status === 'cancelada') return 'danger'
-=======
-    if (status === 'cancelada') return 'secondary'
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     return 'primary'
   }
 

@@ -28,7 +28,6 @@ export default {
           .then(response => resolve(response)).catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
     OcorrenciaViaturas(ctx, queryParams) {
       return new Promise((resolve, reject) => {
         axios
@@ -37,15 +36,5 @@ export default {
           .catch(error => reject(error))
       })
     },
-=======
-    // addViatura(ctx, userData) {
-    //   return new Promise((resolve, reject) => {
-    //     axios
-    //       .post('/api/viatura', { user: userData })
-    //       .then(response => resolve(response))
-    //       .catch(error => reject(error))
-    //   })
-    // },
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
 }

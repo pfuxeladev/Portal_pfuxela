@@ -3,15 +3,9 @@
     v-if="data"
     body-class="pb-50"
   >
-<<<<<<< HEAD
     <h6>Ordens de abastecimento</h6>
     <h2 class="font-weight-bolder mb-1">
       2,76k MT
-=======
-    <h6>Orders</h6>
-    <h2 class="font-weight-bolder mb-1">
-      2,76k
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </h2>
     <!-- chart -->
     <vue-apex-charts

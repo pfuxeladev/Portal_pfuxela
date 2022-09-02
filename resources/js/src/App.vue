@@ -120,8 +120,5 @@ export default {
     }
   },
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 </script>

@@ -307,14 +307,9 @@
                           >
                             <date-picker
                               v-model="form.data_radio_difusao"
-<<<<<<< HEAD
                               class="mb-1"
                               value-type="format"
                               locate="pt-Br"
-=======
-                              class="form-control mb-1"
-                              value-type="format"
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -330,14 +325,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_radio_difusao"
-<<<<<<< HEAD
                               class="mb-1"
                               value-type="format"
                               locate="pt-Br"
-=======
-                              class="form-control mb-1"
-                              value-type="format"
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -357,14 +347,9 @@
                           >
                             <date-picker
                               v-model="form.data_seguros"
-<<<<<<< HEAD
                               class="mb-1"
                               value-type="format"
                               locate="pt-Br"
-=======
-                              class="form-control mb-1"
-                              value-type="format"
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -382,14 +367,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_seguros"
-<<<<<<< HEAD
                               class="mb-1"
                               value-type="format"
                               locate="pt-Br"
-=======
-                              class="form-control mb-1"
-                              value-type="format"
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -523,10 +503,7 @@
                   </b-col>
                   <b-col cols="6">
                     <b-button
-<<<<<<< HEAD
                     v-if="can('Create Viatura')"
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
                       variant="success"
                       class="mr-2"
@@ -567,13 +544,8 @@ import {
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
-<<<<<<< HEAD
 import DatePicker from 'vue2-datepicker'
 import store from '@/store'
-=======
-import store from '@/store'
-import DatePicker from 'vue2-datepicker'
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 import 'vue2-datepicker/index.css'
 export default {
   components: {
@@ -669,11 +641,7 @@ export default {
       this.$Progress.start()
       this.form
         .post('/api/viaturas')
-<<<<<<< HEAD
         .then(response => {
-=======
-        .then((response) => {
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           this.$swal.fire({
             icon: 'success',
             title: response.data.success,
@@ -686,11 +654,7 @@ export default {
             name: 'Cars',
           })
         })
-<<<<<<< HEAD
         .catch(error => {
-=======
-        .catch((error) => {
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           if (error.response.data.status === 401) {
             this.$swal.fire({
               icon: 'error',

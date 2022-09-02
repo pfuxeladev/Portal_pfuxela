@@ -14,42 +14,25 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
     fetchAbastecimentoDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios
           .get(`/api/Ordems/${refs}`)
-=======
-    fetchAbastecimentoDetails(ctx, { refs }) {
-      return new Promise((resolve, reject) => {
-        axios
-          .get(`/api/Abastecimento/${refs}`)
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
     addAbastecimento(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
           .post('/api/submeterAbst', SupplyDatas)
-=======
-    addAbastecimento(ctx, SupplyDatas) {
-      return new Promise((resolve, reject) => {
-        axios
-          .post('/api/Abastecimento', { abastecimento: SupplyDatas })
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     addAbastecimentoRecorrente(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
@@ -58,10 +41,7 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     ApproveOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/AprovarOrdem/${refs}`)
@@ -69,7 +49,6 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
     UndoOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/DesfazerOrdem/${refs}`)
@@ -77,8 +56,6 @@ export default {
           .catch(error => reject(error))
       })
     },
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     CancelOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/CancelarOrdem/${refs}`)
@@ -86,10 +63,7 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     AbastecimentoRecorrente(ctx, abstData) {
       return new Promise((resolve, reject) => {
         axios.get('/api/AbastecimentoRecorrente', abstData)
@@ -97,10 +71,7 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     fetchAbstRecDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios
@@ -108,7 +79,6 @@ export default {
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
-<<<<<<< HEAD
     },
     getHistory(ctx, queryParams) {
       return new Promise((resolve, reject) => {
@@ -143,8 +113,5 @@ export default {
           .catch(error => reject(error))
       })
     },
-=======
-    }
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
 }

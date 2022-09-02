@@ -8,12 +8,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import axios from 'axios'
 // import Swal from 'sweetalert2'
-<<<<<<< HEAD
 // import Permissions from './@core/mixins/Permissions.vue'
 import LaravelPermissionToVueJS from 'laravel-permission-to-vuejs'
-=======
-import Permissions from '@core/mixins/Permissions.vue'
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 import i18n from '@/libs/i18n'
 import router from './router'
 import store from './store'
@@ -21,11 +17,8 @@ import App from './App.vue'
 // Global Components
 import './global-components'
 
-<<<<<<< HEAD
 import VueCookies from 'vue-cookies'
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 // 3rd party plugins
 import '@axios'
 import '@/libs/acl'
@@ -36,10 +29,6 @@ import '@/libs/sweet-alerts'
 import '@/libs/vue-select'
 import '@/libs/tour'
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 // Axios Mock Adapter
 import '@/@fake-db/db'
 
@@ -56,25 +45,7 @@ const options = {
   location: 'left',
   inverse: false,
 }
-<<<<<<< HEAD
 
-=======
-// const Toast = Swal.mixin({
-//   confirmButtonColor: '#41b882',
-//   cancelButtonColor: '#ff7674',
-//   toast: true,
-//   position: 'top-end',
-//   showConfirmButton: false,
-//   timer: 3000,
-//   timerProgressBar: true,
-//   onOpen: toast => {
-//     toast.addEventListener('mouseenter')
-//     toast.addEventListener('mouseleave')
-//   },
-// })
-// window.Swal = Swal
-// window.toast = Toast
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 const Fire = new Vue()
 window.Fire = Fire
 // Vue.use(VueSweetalert2, Toast)
@@ -86,7 +57,6 @@ Vue.use(VueProgressBar, options)
 
 // Composition API
 Vue.use(VueCompositionAPI)
-<<<<<<< HEAD
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
@@ -110,11 +80,6 @@ Vue.filter('toCurrency', value => {
   })
   return formatter.format(value)
 })
-=======
-Vue.mixin(Permissions)
-// Feather font icon - For form-wizard
-// * Shall remove it if not using font-icons of feather-icons - For form-wizard
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 require('@core/assets/fonts/feather/iconfont.css') // For form-wizard
 
 // import core styles

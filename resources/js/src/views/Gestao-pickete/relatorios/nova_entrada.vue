@@ -16,17 +16,10 @@
                     <polyline points="9 22 9 12 15 12 15 22" /></svg></b-link>
                 </li>
                 <li class="breadcrumb-item">
-<<<<<<< HEAD
                   <a href="#" target="_self" class=""> {{checkListIn[0].checklistOut.viatura.matricula}} </a>
                 </li>
                 <li class="breadcrumb-item active">
                   <span aria-current="location">data da saida: {{ dateTime(checkListIn[0].checklistOut.created_at) }} </span>
-=======
-                  <a href="#" target="_self" class=""> {{checkListIn.viatura.matricula}} </a>
-                </li>
-                <li class="breadcrumb-item active">
-                  <span aria-current="location">data da saida: {{ dateTime(checkListIn.created_at) }} </span>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 </li>
               </ol>
             </div>
@@ -45,14 +38,6 @@
         <b-form @submit.prevent="OnSubmit" enctype="multipart/form-data">
           <b-row>
             <b-col cols="12" md="3" lg="6" xl="6">
-<<<<<<< HEAD
-=======
-              <b-form-group label="Matricula da viatura reserva">
-                <v-select v-model="form.viatura_id" label="matricula" :options="viatura" :reduce="(viatura) => viatura.id" />
-              </b-form-group>
-            </b-col>
-            <b-col cols="12" md="3" lg="6" xl="6">
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               <b-form-group label="Motorista">
                 <v-select v-model="form.motorista_id" label="nome" :options="motoristas" :reduce="(motoristas) => motoristas.id" />
               </b-form-group>
@@ -61,11 +46,7 @@
               <b-row>
                 <b-col>
                   <b-form-group label="Kilometragem na saida">
-<<<<<<< HEAD
                     <b class="text-right"> {{ checkListIn[0].checklistOut.km_inicio }} Km</b>
-=======
-                    <b class="text-right"> {{ checkListIn.km_inicio }} Km</b>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                   </b-form-group>
                 </b-col>
                 <b-col>
@@ -73,7 +54,6 @@
                     <b-form-input v-model="form.km_fim" type="number" />
                   </b-form-group>
                 </b-col>
-<<<<<<< HEAD
 
               </b-row>
 
@@ -83,20 +63,11 @@
                 <b-form-input v-model="form.litros_tanque" type="text" />
               </b-form-group>
             </b-col>
-=======
-              </b-row>
-
-            </b-col>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             <b-col cols="12" md="3" lg="6" xl="6">
               <b-row>
                 <b-col>
                   <b-form-group label="hora de saida">
-<<<<<<< HEAD
                     <b> {{ checkListIn[0].checklistOut.hr_inicio }} </b>
-=======
-                    <b> {{ checkListIn.hr_inicio }} </b>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                   </b-form-group>
                 </b-col>
                 <b-col>
@@ -110,7 +81,6 @@
             <b-col cols="12" md="6" lg="8" xl="10">
               <table class="table table-bordered">
                 <tbody>
-<<<<<<< HEAD
                     <tr v-for="(chk, i) in form.checklist_var" :key="'B' + i">
                     <td>
                       <input type="hidden" v-model="chk.id" />
@@ -124,130 +94,6 @@
                           required
                         ></b-form-radio-group>
                       </b-form-group>
-=======
-                  <tr>
-                    <td style="width: 30%">
-                      Tinha cinto de Segurança
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="form.CintoSeguracaState" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 30%">
-                      Tinha Carta de condu&ccedil;&atilde;o
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="form.carta_conducao" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 30%">
-                      O Motorista Paticipou no DSS?
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="form.motorista_dss" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 30%">
-                      Teste de &aacute;lcool
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="form.teste_alcool" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="width: 30%">
-                      Kit de primeiros socorros
-                    </td>
-                    <td>
-                      <b-form-checkbox v-model="form.kit_1_socorro_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Extintor na saida</td>
-                    <td>
-                      <b-form-checkbox v-model="form.extintor_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Livrete da viatura</td>
-                    <td>
-                      <b-form-checkbox v-model="form.livrete_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                   <tr>
-                    <td>Licen&ccedil;a</td>
-                    <td>
-                      <b-form-checkbox v-model="form.licenca_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Documento de seguros em dia</td>
-                    <td>
-                      <b-form-checkbox v-model="form.seguros_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Taxa de radio de fus&atilde;o</td>
-                    <td>
-                      <b-form-checkbox v-model="form.taxaradio_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Tinha uniforme</td>
-                    <td>
-                      <b-form-checkbox v-model="form.uniforme" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Lista de presen&ccedil;a</td>
-                    <td>
-                      <b-form-checkbox v-model="form.lista_presenca" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Colete na saida</td>
-                    <td>
-                      <b-form-checkbox v-model="form.colete_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Pneu sobressalente</td>
-                    <td>
-                      <b-form-checkbox v-model="form.pneu_sobr_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Macaco na saida</td>
-                    <td>
-                      <b-form-checkbox v-model="form.macaco_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Documento de inspen&ccedil;&atilde;o</td>
-                    <td>
-                      <b-form-checkbox v-model="form.inspencao_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Tri&acirc;ngulo</td>
-                    <td>
-                      <b-form-checkbox v-model="form.triangulo_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Chave de rodas</td>
-                    <td>
-                      <b-form-checkbox v-model="form.chave_roda_entrada" switch size="lg" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Kit de reboque</td>
-                    <td>
-                      <b-form-checkbox v-model="form.kit_reboque_entrada" switch size="lg" />
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     </td>
                   </tr>
                   <tr>
@@ -377,13 +223,6 @@ export default {
         text: 'Parcial',
         value: 'Parcial',
       },
-<<<<<<< HEAD
-=======
-      {
-        text: 'Em Falta',
-        value: 'Em Falta',
-      },
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       ],
     }
   },
@@ -401,13 +240,10 @@ export default {
     this.$http.get('/api/listaIncedentes').then(res => {
       this.incidentes = res.data
     })
-<<<<<<< HEAD
 
     store.dispatch('Picket/getAtributos').then(res => {
       this.form.checklist_var = res.data
     })
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
   methods: {
     getRotas() {
@@ -452,7 +288,6 @@ export default {
       JSON.parse(
         JSON.stringify(
           new Form({
-<<<<<<< HEAD
             check_list_out_id: null,
             motorista_id: null,
             viatura_id: router.currentRoute.params.id,
@@ -465,46 +300,12 @@ export default {
             checklist_var: {
               id: null, checklist_name: '', opcao: '',
             },
-=======
-            check_list_out_id: router.currentRoute.params.id,
-            motorista_id: null,
-            viatura_id: null,
-            carta_conducao: true,
-            km_fim: 0,
-            hr_fim: '0:00',
-            teste_alcool: false,
-            uniforme: false,
-            CintoSeguracaState: false,
-            colete_entrada: false,
-            lista_presenca: false,
-            licenca_entrada: false,
-            pneu_sobr_entrada: false,
-            macaco_entrada: false,
-            inspencao_entrada: false,
-            triangulo_entrada: false,
-            chave_roda_entrada: false,
-            kit_reboque_entrada: false,
-            kit_1_socorro_entrada: false,
-            extintor_entrada: false,
-            livrete_entrada: false,
-            seguros_entrada: false,
-            taxaradio_entrada: false,
-            motorista_dss: false,
-            relatorio_geral: '',
-            is_incidente: false,
-            anexos: null,
-            // incidente
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             incidente_id: null,
           }),
         ),
       ),
     )
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     store.dispatch('Picket/fetchSaida', { id: router.currentRoute.params.id })
       .then(response => { checkListIn.value = response.data })
       .catch(error => {
@@ -523,12 +324,8 @@ export default {
     }
 
     function OnSubmit() {
-<<<<<<< HEAD
       const formData = new FormData()
       form.value.anexos = formData.append('anexos', listFiles)
-=======
-    //   form.value.anexos = formData.append('anexos', listFiles)
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       store
         .dispatch('Picket/addCheckListIn', form.value)
         .then(response => {
@@ -540,26 +337,16 @@ export default {
               variant: 'success',
             },
           })
-<<<<<<< HEAD
           this.$router.push({
             name: 'Vehicle-movements',
           })
-=======
-        //   this.$router.push({
-        //     name: 'Vehicle-movements',
-        //   })
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         })
         .catch(err => {
           if (err) {
             toast({
               component: ToastificationContent,
               props: {
-<<<<<<< HEAD
                 title: err.response.data.Erro,
-=======
-                title: 'Erro no cadastro do relatorio verifique os campos',
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                 icon: 'AlertTriangleIcon',
                 variant: 'danger',
               },
@@ -577,11 +364,7 @@ export default {
       listFiles,
       dateTime,
       onChange,
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
   },
 }

@@ -19,19 +19,12 @@ export default function viaturaList() {
     { key: 'lotacao', sortable: true },
     { key: 'capacidade_tanque', sortable: true },
     { key: 'capacidade_media', sortable: true },
-<<<<<<< HEAD
     { Key: 'qtd_disponivel', sortable: true },
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'tipo_combustivel', sortable: true },
     { key: 'modelo.nome_modelo', sortable: true },
     { key: 'marca.nome', sortable: true },
     { key: 'created_by.email', sortable: true },
-<<<<<<< HEAD
     { key: 'estado', sortable: true },
-=======
-    { key: 'status', sortable: true },
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     { key: 'actions' },
   ]
   const perPage = ref(10)

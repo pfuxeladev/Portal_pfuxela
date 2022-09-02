@@ -11,7 +11,6 @@
             </b-col>
         </b-row>
          </div>
-<<<<<<< HEAD
         <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative">
             <template #cell(Data_de_registo)="data">
                 {{ dateTime(data.item.created_at) }}
@@ -90,16 +89,6 @@
           </b-col>
         </b-row>
       </div>
-=======
-        <b-table ref="refSaidaTableList" :items="fetchEntradas" responsive :fields="tableColumns1" primary-key="id" sort-by.sync="sortBy" show-empty empty-text="Nenhuma de lista de saida de viaturas cadastrada" :sort-desc.sync="isSortDirDesc" class="position-relative">
-            <template #cell(Data_de_registo)="data">
-                {{ dateTime(data.item.created_at) }}
-            </template>
-            <template #cell(Matricula)="data">
-                {{ data.item.check_list_out.viatura.matricula }}
-            </template>
-        </b-table>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </b-card>
 
 </section>
@@ -125,11 +114,7 @@ import {
   onUnmounted
 } from '@vue/composition-api'
 import moment from 'moment'
-<<<<<<< HEAD
 import useRelatorioEntradaList from './relatorioEntrada'
-=======
-import useOcorrenciaList from './relatorioOcorrencia'
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 import storeRelatorioModule from './storaRelatorioModule'
 import store from '@/store'
 
@@ -162,19 +147,11 @@ export default {
     }
     const {
       fetchEntradas,
-<<<<<<< HEAD
       tableColumns,
       perPage,
       currentPage,
       totalEntradas,
       dataMeta,
-=======
-      tableColumns1,
-      perPage,
-      currentPage,
-      totalEntradas,
-      dataMeta1,
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       perPageOptions,
       searchQuery,
       sortBy,
@@ -182,7 +159,6 @@ export default {
       refEntradasTableList,
       refetchData1,
       rotaFilter,
-<<<<<<< HEAD
     } = useRelatorioEntradaList()
     return {
       fetchEntradas,
@@ -191,16 +167,6 @@ export default {
       currentPage,
       totalEntradas,
       dataMeta,
-=======
-    } = useOcorrenciaList()
-    return {
-      fetchEntradas,
-      tableColumns1,
-      perPage,
-      currentPage,
-      totalEntradas,
-      dataMeta1,
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       perPageOptions,
       searchQuery,
       sortBy,

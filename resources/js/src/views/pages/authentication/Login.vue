@@ -48,21 +48,14 @@
           </b-card-text>
 
           <b-alert
-<<<<<<< HEAD
           v-if="valid === true"
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             variant="primary"
             show
           >
             <div class="alert-body font-small-2">
 
               <p>
-<<<<<<< HEAD
                 <small class="mr-50"><span class="font-weight-bold">{{erro}}</span></small>
-=======
-                <small class="mr-50"><span class="font-weight-bold">Ensira Email e password</span></small>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               </p>
             </div>
             <feather-icon
@@ -288,11 +281,8 @@ export default {
       // validation rules
       required,
       email,
-<<<<<<< HEAD
       valid: true,
       erro: '',
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
   },
   computed: {
@@ -326,23 +316,14 @@ export default {
 
               localStorage.setItem('userData', JSON.stringify(userData))
               this.$ability.update(userData.ability)
-<<<<<<< HEAD
               //   location.reload()
               this.valid = false
-=======
-              location.reload()
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               this.$router.replace(getHomeRouteForLoggedInUser(userData.role)).then(() => {
                 this.$toast({
                   component: ToastificationContent,
                   position: 'top-right',
                   props: {
-<<<<<<< HEAD
                     title: `Welcome ${userData[0].email}`,
-=======
-                    title: `Welcome ${userData.name || userData.email}`,
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     icon: 'CoffeeIcon',
                     variant: 'success',
                     text: `You have successfully logged in as ${userData.role}. Now you can start to explore!`,
@@ -351,7 +332,6 @@ export default {
               })
             })
             .catch(error => {
-<<<<<<< HEAD
               if (error.response.status === 422) {
                 this.$refs.loginForm.setErrors(error.response.data.errors)
               } else if (error.response.status === 421) {
@@ -367,11 +347,6 @@ export default {
                 this.erro = error.response.data.error
                 // this.$refs.loginForm.setErrors(error.response.data.error)
               }
-=======
-              //   if (error) {
-              //     this.$refs.loginForm.setErrors(error.response.data.error)
-              //   }
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             })
         }
       })

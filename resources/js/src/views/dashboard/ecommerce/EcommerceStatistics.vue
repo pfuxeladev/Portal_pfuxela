@@ -5,15 +5,9 @@
     class="card-statistics"
   >
     <b-card-header>
-<<<<<<< HEAD
       <b-card-title>Estat&iacute;sticas</b-card-title>
       <b-card-text class="font-small-2 mr-25 mb-0">
         Actualizado 1 m&ecirc;s atr&aacute;s
-=======
-      <b-card-title>Statistics</b-card-title>
-      <b-card-text class="font-small-2 mr-25 mb-0">
-        Updated 1 month ago
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       </b-card-text>
     </b-card-header>
     <b-card-body class="statistics-body">

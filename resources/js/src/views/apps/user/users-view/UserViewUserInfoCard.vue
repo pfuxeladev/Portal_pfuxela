@@ -32,15 +32,6 @@
               >
                 Edit
               </b-button>
-<<<<<<< HEAD
-=======
-              <b-button
-                variant="outline-danger"
-                class="ml-1"
-              >
-                Delete
-              </b-button>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </div>
           </div>
         </div>
@@ -61,11 +52,7 @@
               <h5 class="mb-0">
                 23.3k
               </h5>
-<<<<<<< HEAD
               <small>Ordens Mensais</small>
-=======
-              <small>Monthly Sales</small>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </div>
           </div>
 
@@ -83,11 +70,7 @@
               <h5 class="mb-0">
                 $99.87k
               </h5>
-<<<<<<< HEAD
               <small>Ordens Mensais(MT)</small>
-=======
-              <small>Annual Profit</small>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </div>
           </div>
         </div>
@@ -108,11 +91,7 @@
               <span class="font-weight-bold">Username</span>
             </th>
             <td class="pb-50">
-<<<<<<< HEAD
               {{ userData.name }}
-=======
-              {{ userData.username }}
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </td>
           </tr>
           <tr>
@@ -124,14 +103,10 @@
               <span class="font-weight-bold">Status</span>
             </th>
             <td class="pb-50 text-capitalize">
-<<<<<<< HEAD
                 <span v-if="userData.is_active === 0">Inactivo</span>
                 <span v-else>
                     Activo
                 </span>
-=======
-              {{ userData.status }}
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </td>
           </tr>
           <tr>
@@ -142,13 +117,8 @@
               />
               <span class="font-weight-bold">Role</span>
             </th>
-<<<<<<< HEAD
             <td class="pb-50 text-capitalize" v-for="(role, r) in userData.roles" :key="'r'+r">
               {{ role.name }}
-=======
-            <td class="pb-50 text-capitalize">
-              {{ userData.role }}
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </td>
           </tr>
           <tr>
@@ -157,17 +127,10 @@
                 icon="FlagIcon"
                 class="mr-75"
               />
-<<<<<<< HEAD
               <span class="font-weight-bold">departamento</span>
             </th>
             <td class="pb-50">
               {{ userData.departamento.nome }}
-=======
-              <span class="font-weight-bold">Country</span>
-            </th>
-            <td class="pb-50">
-              {{ userData.country }}
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             </td>
           </tr>
           <tr>

@@ -34,11 +34,7 @@
             size="16"
             class="mr-0 mr-sm-50"
           />
-<<<<<<< HEAD
           <span class="d-none d-sm-inline">Conta</span>
-=======
-          <span class="d-none d-sm-inline">Account</span>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         </template>
         <user-edit-tab-account
           :user-data="userData"
@@ -54,30 +50,10 @@
             size="16"
             class="mr-0 mr-sm-50"
           />
-<<<<<<< HEAD
           <span class="d-none d-sm-inline">Informa&ccedil;&atilde;o adicional</span>
         </template>
         <user-edit-tab-information class="mt-2 pt-75" />
       </b-tab>
-=======
-          <span class="d-none d-sm-inline">Information</span>
-        </template>
-        <user-edit-tab-information class="mt-2 pt-75" />
-      </b-tab>
-
-      <!-- Tab: Social -->
-      <b-tab>
-        <template #title>
-          <feather-icon
-            icon="Share2Icon"
-            size="16"
-            class="mr-0 mr-sm-50"
-          />
-          <span class="d-none d-sm-inline">Social</span>
-        </template>
-        <user-edit-tab-social class="mt-2 pt-75" />
-      </b-tab>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </b-tabs>
   </component>
 </template>
@@ -127,7 +103,6 @@ export default {
         }
       })
 
-<<<<<<< HEAD
     // function updateUser() {
     //   store.dispatch(`app/updateUser/${router.currentRoute.params.id}`, userData)
     //     .then(response => { userData.value = response.data })
@@ -140,9 +115,6 @@ export default {
 
     return {
     //   updateUser,
-=======
-    return {
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       userData,
     }
   },

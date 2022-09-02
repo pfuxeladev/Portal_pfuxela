@@ -30,7 +30,6 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
     updateUser(ctx, { id, userData }) {
       return new Promise((resolve, reject) => {
         axios
@@ -40,7 +39,5 @@ export default {
       })
     },
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
 }

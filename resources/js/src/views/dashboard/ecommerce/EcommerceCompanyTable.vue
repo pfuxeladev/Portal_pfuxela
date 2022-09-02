@@ -4,10 +4,7 @@
     no-body
     class="card-company-table"
   >
-<<<<<<< HEAD
     <b-card-title class="pl-3 mt-2">Lista das reservas rec&eacute;m feitas</b-card-title>
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     <b-table
       :items="tableData"
       responsive
@@ -82,20 +79,13 @@
 
 <script>
 import {
-<<<<<<< HEAD
   BCard, BTable, BAvatar, BImg, BCardTitle,
-=======
-  BCard, BTable, BAvatar, BImg,
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 } from 'bootstrap-vue'
 
 export default {
   components: {
     BCard,
-<<<<<<< HEAD
     BCardTitle,
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     BTable,
     BAvatar,
     BImg,
@@ -110,19 +100,11 @@ export default {
   data() {
     return {
       fields: [
-<<<<<<< HEAD
         { key: 'Cliente', label: 'Cliente' },
         { key: 'Viaturas', label: 'Viaturas' },
         { key: 'Nr_Pessoas', label: 'Nr_Pessoas' },
         { key: 'Total_pago', label: 'Total_pago' },
         { key: 'Data_reserva', label: 'Data_reserva' },
-=======
-        { key: 'company', label: 'COMPANY' },
-        { key: 'category', label: 'CATEGORY' },
-        { key: 'views', label: 'VIEWS' },
-        { key: 'revenue', label: 'REVENUE' },
-        { key: 'sales', label: 'SALES' },
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
       ],
     }
   },

@@ -33,20 +33,13 @@ export default {
       })
     },
 
-<<<<<<< HEAD
     updateOrder(ctx, orderData) {
       return new Promise((resolve, reject) => {
         axios.post('/api/UpdateOrdem', orderData)
-=======
-    updateOrder(refs, orderData) {
-      return new Promise((resolve, reject) => {
-        axios.put(`/api/Ordem/${refs}`, orderData)
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
     editOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.get(`/api/ordemAberta/${refs}`)
@@ -55,7 +48,5 @@ export default {
       })
     },
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
   },
 }

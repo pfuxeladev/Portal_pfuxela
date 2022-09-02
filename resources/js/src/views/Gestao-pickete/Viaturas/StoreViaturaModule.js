@@ -30,7 +30,6 @@ export default {
           .catch(error => reject(error))
       })
     },
-<<<<<<< HEAD
     activateViatura(ctx, { id }) {
       return new Promise((resolve, reject) => {
         axios.get(`/api/activateViatura/${id}`)
@@ -45,7 +44,13 @@ export default {
           .catch(error => reject(error))
       })
     },
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
+
+    alocateVehicle(ctx, viatura) {
+      return new Promise((resolve, reject) => {
+        axios.post('/api/alocarViatura', viatura)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

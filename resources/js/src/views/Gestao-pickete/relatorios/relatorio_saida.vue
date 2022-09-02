@@ -3,14 +3,9 @@
     <b-card no-body>
       <div class="mb-2">
         <b-row>
-<<<<<<< HEAD
           <b-col cols="12">
             <b-link
             v-if="can('Create Checklist_out')"
-=======
-          <b-col>
-            <b-link
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
               :to="{ name: 'CheckList-Out' }"
               class="btn btn-outline-primary"
             >
@@ -19,7 +14,6 @@
               >
             </b-link>
           </b-col>
-<<<<<<< HEAD
           <b-col
             class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
           >
@@ -33,8 +27,6 @@
             />
             <label>entradas</label>
           </b-col>
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
           <b-col>
             <b-form-input
               v-model="searchQuery"
@@ -42,20 +34,10 @@
               placeholder="Search..."
             />
           </b-col>
-<<<<<<< HEAD
         </b-row>
       </div>
       <b-table
         ref="refSaidasTableList"
-=======
-          <b-col>
-            <v-select />
-          </b-col>
-        </b-row>
-      </div>
-      <b-table
-        ref="refSaidaTableList"
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         :items="fetchSaidas"
         responsive
         :fields="tableColumns"
@@ -69,7 +51,6 @@
         <template #cell(Data_de_registo)="data">
           {{ dateTime(data.item.created_at) }} </template
         >
-<<<<<<< HEAD
         <template #cell(hora_de_saida)="data">
             {{data.item.hr_inicio}}
         </template>
@@ -81,40 +62,23 @@
                 {{data.item.km_inicio}}
             </div>
         </template>
-=======
-        <template #cell(Matricula)="data">
-          {{ data.item.viatura.matricula }}
-        </template>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         <template #cell(Motorista)="data">
           {{ data.item.motorista.person.nome_completo }}
         </template>
          <template #cell(Tipo)="data">
           {{ data.item.tipo_saida }}
         </template>
-<<<<<<< HEAD
         <template #cell(acções)="data">
-=======
-                <template #cell(acções)="data">
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>
-<<<<<<< HEAD
                 <b-dropdown-item :to="{ name: 'CheckList-out-details', params: { id: data.item.id } }">
-=======
-                <b-dropdown-item :to="{ name: 'driver-details', params: { id: data.item.id } }">
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     <feather-icon icon="FileTextIcon" />
                     <span class="align-middle ml-50">Detalhes</span>
                 </b-dropdown-item>
 
-<<<<<<< HEAD
                 <b-dropdown-item v-if="data.item.viatura.locate === 'OUT'" :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
-=======
-                <b-dropdown-item :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     <feather-icon icon="EditIcon" />
                     <span class="align-middle ml-50">Dar entrada</span>
                 </b-dropdown-item>
@@ -122,7 +86,6 @@
             </b-dropdown>
         </template>
       </b-table>
-<<<<<<< HEAD
       <div class="mx-2 mb-2">
         <b-row>
           <b-col
@@ -169,8 +132,6 @@
           </b-col>
         </b-row>
       </div>
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     </b-card>
   </section>
 </template>
@@ -213,29 +174,16 @@ export default {
     const SAIDAS_STORE_MODULE_NAME = 'Picket'
 
     // Register module
-<<<<<<< HEAD
     if (!store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
 
     // UnRegister on leave
     onUnmounted(() => {
       if (store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
-=======
-    if (!store.hasModule(SAIDAS_STORE_MODULE_NAME))
-      store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
-
-    // UnRegister on leave
-    onUnmounted(() => {
-      if (store.hasModule(SAIDAS_STORE_MODULE_NAME))
-        store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     })
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     const {
       fetchSaidas,
       tableColumns,

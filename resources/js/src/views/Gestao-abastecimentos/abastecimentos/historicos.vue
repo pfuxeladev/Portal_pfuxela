@@ -3,11 +3,7 @@
 <section>
     <b-card no-body>
         <b-card-header class="pb-50">
-<<<<<<< HEAD
             <h3>Relat&oacute;rio de abastacimentos</h3>
-=======
-            <h3>Relat&oacute;rio de abastacementos</h3>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         </b-card-header>
         <div class="m-2">
             <!-- Table Top -->
@@ -22,7 +18,6 @@
                 </b-col>
             </b-row>
         </div>
-<<<<<<< HEAD
         <b-row v-if="can('View Report')">
             <b-col cols="12" xl="12" md="12" class="table-responsive">
                 <b-table ref="refAbastecimentoListTable" :items="fetchAbastecimentos" responsive :fields="tableColumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="No matching records found" :sort-desc.sync="isSortDirDesc" class="position-relative">
@@ -45,25 +40,12 @@
                      <template #cell(Data_de_emissao)="data">
                         {{ dateTime(data.item.ordem.created_at) }}
                     </template>
-=======
-        <b-row>
-            <b-col cols="12" xl="12" md="12" class="table-responsive">
-                <b-table ref="refAbastecimentoListTable" :items="fetchAbastecimentos" responsive :fields="tableColumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="No matching records found" :sort-desc.sync="isSortDirDesc" class="position-relative">
-                     <template #cell(ordem)="data">
-                        {{data.item.codigo_ordem}}
-                    </template>
-                    <template #cell(bombas)="data">
-                        {{data.item.nome_bombas}}
-                    </template>
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
 
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                             </template>
-<<<<<<< HEAD
                             <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.ordem.refs } }">
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Details</span>
@@ -71,20 +53,10 @@
                              <b-dropdown-item @click="PrintOrder(data.item.ordem)">
                                 <feather-icon icon="PrinterIcon" />
                                 <span class="align-middle ml-50">imprimir</span>
-=======
-                            <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
-                                <feather-icon icon="FileTextIcon" />
-                                <span class="align-middle ml-50">Details</span>
-                            </b-dropdown-item>
-                            <b-dropdown-item>
-                                <feather-icon icon="TrashIcon" />
-                                <span class="align-middle ml-50">Delete</span>
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                             </b-dropdown-item>
                         </b-dropdown>
                     </template>
                 </b-table>
-<<<<<<< HEAD
                  <div class="mx-2 mb-2">
                 <b-row>
 
@@ -93,17 +65,6 @@
                     </b-col>
                     <!-- Pagination -->
                     <b-col cols="12" sm="4" class="d-flex align-items-center justify-content-center justify-content-sm-end">
-=======
-            </b-col cols="12">
-            <div class="mx-2 mb-2">
-                <b-row>
-
-                    <b-col cols="12" sm="6" class="d-flex align-items-center justify-content-center justify-content-sm-start">
-                        <span class="text-muted">mostrar {{ dataMeta.from }} de {{ dataMeta.to }} para {{ dataMeta.of }} entradas</span>
-                    </b-col>
-                    <!-- Pagination -->
-                    <b-col cols="12" sm="6" class="d-flex align-items-center justify-content-center justify-content-sm-end">
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
                         <b-pagination v-model="currentPage" :total-rows="totalAbastecimentos" :per-page="perPage" first-number last-number class="mb-0 mt-1 mt-sm-0" prev-class="prev-item" next-class="next-item">
                             <template #prev-text>
@@ -118,10 +79,7 @@
 
                 </b-row>
             </div>
-<<<<<<< HEAD
             </b-col>
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         </b-row>
     </b-card>
 </section>
@@ -209,16 +167,12 @@ export default {
     onUnmounted(() => {
       if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
-<<<<<<< HEAD
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
     function PrintOrder(ordem) {
       console.log(ordem)
     }
-=======
-
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     const {
       fetchAbastecimentos,
       tableColumns,
@@ -247,11 +201,8 @@ export default {
       isSortDirDesc,
       refAbastecimentoListTable,
       refetchData,
-<<<<<<< HEAD
       dateTime,
       PrintOrder,
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     };
   },
 };

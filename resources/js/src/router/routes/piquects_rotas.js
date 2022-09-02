@@ -17,7 +17,6 @@ export default
     },
   },
   {
-<<<<<<< HEAD
     path: '/Picket/Cars/:id/Car-edit',
     name: 'Edit-car',
     component: () => import('@/views/Gestao-pickete/Viaturas/viaturaEditForm.vue'),
@@ -34,8 +33,6 @@ export default
     },
   },
   {
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     path: '/Picket/Occurrences',
     name: 'Occurrences',
     component: () => import('@/views/Gestao-pickete/relatorios/gestao_ocorrencias.vue'),
@@ -68,7 +65,6 @@ export default
     },
   },
   {
-<<<<<<< HEAD
     path: '/Picket/vehicle-movements/:id/CheckList-out-details',
     name: 'CheckList-out-details',
     component: () => import('@/views/Gestao-pickete/relatorios/saidaDetails.vue'),
@@ -85,8 +81,6 @@ export default
     },
   },
   {
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     path: '/Picket/drivers',
     name: 'Drivers',
     component: () => import('@/views/Gestao-pickete/relatorios/motoristas/lista.vue'),
@@ -114,6 +108,14 @@ export default
     path: '/Picket/drivers/driver-edit',
     name: 'driver-edit',
     component: () => import('@/views/Gestao-pickete/relatorios/motoristas/new_motorista.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
+    path: '/Picket/allocate-vehicles',
+    name: 'allocate-vehicles',
+    component: () => import('@/views/Gestao-pickete/Viaturas/AlocarViatura.vue'),
     meta: {
       authOnly: true,
     },
