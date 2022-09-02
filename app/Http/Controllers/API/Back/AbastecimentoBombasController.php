@@ -104,7 +104,7 @@ class AbastecimentoBombasController extends Controller
 
         $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $bombas->id)->latest()->first();
 
-        $data["email"] = [$emails->email_bomba, 'mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+        $data["email"] = ['deize.manuel@i2aconsultoria.onmicrosoft.com', 'mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
         $data["title"] = "info@pfuxela.co.mz";
         $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 
