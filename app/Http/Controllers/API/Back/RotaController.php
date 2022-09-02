@@ -23,7 +23,7 @@ class RotaController extends Controller
 
     function todasRotas()
     {
-        if(auth()->user()->hasRole('Gestor de Frotas') || auth()->user()->hasRole('SuperAdmin')){
+        if(auth()->user()->hasRole('Gestor de Frotas') || auth()->user()->hasRole('SuperAdmin') || auth()->user()->hasDirectPermission('Create Abastecimento_recorrente')){
             return $this->rota->with('projecto')->where('is_active', true)->get();
         }else{
             return $this->rota->with('projecto')->where('is_active', true)->where('projecto_id', '!=', '29')->get();

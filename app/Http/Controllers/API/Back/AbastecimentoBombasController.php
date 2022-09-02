@@ -110,7 +110,7 @@ class AbastecimentoBombasController extends Controller
         Mail::send('orderMail.ExtraOrder', compact('abastecimento_bomba'), function($message)use($data, $pdf) {
             $message->to($data["email"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), "ordem.pdf");
+                    ->attachData($pdf->output(), "Ordem_bomba".date('Y-m-d H:i:s') .".pdf");
         });
         return response()->json(['success' => 'Requisicao de abastecimento da bomba feita com Sucesso', 'erro' => false], 200);
     } catch (\Exception $e) {
