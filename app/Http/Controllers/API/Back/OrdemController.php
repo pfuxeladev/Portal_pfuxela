@@ -13,6 +13,7 @@ use App\Models\abastecimento;
 use App\Models\ordem_viatura;
 use App\Models\Viatura;
 use App\Models\abastecimentoExtra;
+use App\Models\bombaInspecao;
 use App\Models\Bombas;
 use App\Models\OrdemViaturaRota;
 use PDF;
@@ -62,6 +63,20 @@ class OrdemController extends Controller
             $ordem  = Ordem::where('refs', $request->refs)->with(['bombas.combustivel_bomba', 'bombas.responsavel', 'ordem_viatura.viatura', 'ordem_viatura.ordemViaturaRota.rota.projecto', 'abastecimento', 'createdBy', 'approvedBy'])->first();
 
             $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
+            $bomba_interna = Bombas::where('id', $ordem->bombas_id)->where('tipo_bomba','interna')->first();
+            if(!empty($bomba_interna)){
+                $ordem_qtd = ordem_viatura::where('ordem_id', $ordem->id)->sum('qtd_abastecida');
+
+                $bomba_interna->qtd_disponivel = ($bomba_interna->qtd_disponivel - $ordem_qtd);
+                $bomba_interna->update();
+
+                $bomba_inspect = new bombaInspecao();
+
+                $bomba_inspect->bomba_id = $bomba_interna->id;
+                $bomba_inspect->user_id = auth()->user()->id;
+                $bomba_inspect->Qtd_actual = $bomba_interna->qtd_disponivel;
+                $bomba_inspect->save();
+            }
             foreach ($responsavel as $key => $bombas_mail) {
                 $data["email"] = $bombas_mail->email_bomba;
                 $data["title"] = "Ordem de abastecimento Nr. " . $ordem->codigo_ordem;

@@ -11,7 +11,7 @@ use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Carbon;
@@ -98,11 +98,16 @@ class AbastecimentoBombasController extends Controller
         $abastecimento_bomba->sub_total = $preco;
         $abastecimento_bomba->save();
 
+        // foreach(){
+
+        // }
+
         $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $bombas->id)->latest()->first();
 
-        $data["email"] = $emails->email_bomba;
+        $data["email"] = [$emails->email_bomba, 'mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
         $data["title"] = "info@pfuxela.co.mz";
         $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
+
 
          $pdf = PDF::loadView('orderMail.ExtraOrder', compact('abastecimento_bomba'))->setOptions(['defaultFont' => 'sans-serif']);
          $path = Storage::put('public/pdf/Abastecimento_bomba.pdf', $pdf->output());
@@ -112,7 +117,7 @@ class AbastecimentoBombasController extends Controller
                     ->subject($data["title"])
                     ->attachData($pdf->output(), "Ordem_bomba".date('Y-m-d H:i:s') .".pdf");
         });
-        return response()->json(['success' => 'Requisicao de abastecimento da bomba feita com Sucesso', 'erro' => false], 200);
+        return response()->json(['success' => 'Requisicao de abastecimento da bomba enviada com Sucesso', 'erro' => false], 200);
     } catch (\Exception $e) {
         return response()->json(['error' => 'erro no pedido de abastecimento '.$e->getMessage(), 'erro' => true], 421);
     }
@@ -145,7 +150,7 @@ class AbastecimentoBombasController extends Controller
         $abastecimento = abastecimento_bomba::findOrFail($id);
 
         $abastecimento->nome_motorista = $request->nome_motorista;
-        $abastecimento->data_recepcao = $request->data_recepcao;
+        // $abastecimento->data_recepcao = $request->data_recepcao;
         $abastecimento->identificacao = $request->identificacao;
         $abastecimento->selo_abastecimento = $request->selo_abastecimento;
         $abastecimento->viatura_fornecedora = $request->viatura_fornecedora;
