@@ -112,4 +112,12 @@ export default
       authOnly: true,
     },
   },
+  {
+    path: '/Picket/allocate-vehicles',
+    name: 'allocate-vehicles',
+    component: () => import('@/views/Gestao-pickete/Viaturas/AlocarViatura.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
 ]

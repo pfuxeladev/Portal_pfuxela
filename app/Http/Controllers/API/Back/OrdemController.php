@@ -494,7 +494,7 @@ class OrdemController extends Controller
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereDate('created_at', Carbon::today())->orderBy('updated_at', 'desc')->get();
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
-            return $pdf->output();
+            // return $pdf->output();
 
             // return $pdf->download('Relatorio.pdf');
         } else if ($request->intervalo && $request->searchDatas && $request->bombaNome) {
@@ -592,7 +592,7 @@ class OrdemController extends Controller
                 Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
                     $message->to($data["email"])
                         ->subject($data["title"])
-                        ->attachData($pdf->output(), 'relatorio_semanal' . date('Y-m-d H:i:s') . '.pdf');
+                        ->attachData($pdf->output(), 'relatorio_diario' . date('Y-m-d H:i:s') . '.pdf');
                 });
                 Log::info('email sent to: Users');
                 return response()->json(['message' => 'email sent to: Users successfully']);

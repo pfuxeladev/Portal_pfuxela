@@ -297,14 +297,20 @@ class BombaController extends Controller
             foreach ($bombas as $key => $b) {
                 $ordens[$key] = [
                     'bombas' => $b->nome_bombas,
-                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])
-                        ->where('bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(7))
+                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])->join('ordem_viaturas', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
+                    ->join('viaturas','ordem_viaturas.viatura_id', '=','viaturas.id')
+                    ->join('ordem_viatura_rotas','ordem_viatura_rotas.ordem_viatura_id','=','ordem_viatura_rotas.id')
+                    ->join('rotas', 'ordem_viatura_rotas.rota_id','=','rotas.id')
+                        ->where('ordems.bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(14))
+                        ->select('ordems.codigo_ordem as codigo_ordem','','','','','','','','','','')
                         ->orderBy('created_at', 'desc')->get()
                 ];
             }
             // return $ordens;
             // return view('reportMail.relatorio_bombas', compact('ordens'));
             $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('ordens'));
+
+            return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
 
             $path = Storage::put('public/pdf/relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {

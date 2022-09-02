@@ -44,5 +44,13 @@ export default {
           .catch(error => reject(error))
       })
     },
+
+    alocateVehicle(ctx, viatura) {
+      return new Promise((resolve, reject) => {
+        axios.post('/api/alocarViatura', viatura)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }
