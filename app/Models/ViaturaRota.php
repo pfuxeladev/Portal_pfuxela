@@ -9,6 +9,10 @@ class ViaturaRota extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'viatura_id', 'rota_id', 'createdBy', 'updatedBy'
+    ];
+
     function viatura(){
         return $this->belongsToMany(Viatura::class);
     }

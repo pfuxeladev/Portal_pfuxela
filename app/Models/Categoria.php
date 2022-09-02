@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
 
     protected $fillable = [
         'nome_categoria',
@@ -20,6 +19,4 @@ class Categoria extends Model
     }
 
 
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 }

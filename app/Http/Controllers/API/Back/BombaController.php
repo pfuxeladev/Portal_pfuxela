@@ -3,18 +3,14 @@
 namespace App\Http\Controllers\API\BACK;
 
 use App\Http\Controllers\Controller;
-<<<<<<< HEAD
 use App\Models\abastecimento_bomba;
 use App\Models\bombaInspecao;
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 use App\Models\Bombas;
 use App\Models\combustivel;
 use App\Models\combustivelBomba;
 use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
-<<<<<<< HEAD
 use PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
@@ -22,8 +18,6 @@ use App\Models\Ordem;
 use Exception;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
-=======
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 
 class BombaController extends Controller
 {
@@ -35,7 +29,6 @@ class BombaController extends Controller
     }
     public function index()
     {
-<<<<<<< HEAD
         return Bombas::with(['responsavel', 'createdBy', 'combustivel'])->get();
     }
 
@@ -54,23 +47,11 @@ class BombaController extends Controller
         }
         return response()->json(['success' => 'actualizado com sucesso'], 200);
     }
-=======
-        return Bombas::with(['responsavel', 'createdBy', 'combustivel_bomba.combustivel', 'combustivel'])->get();
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function store(Request $request)
     {
         // $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-<<<<<<< HEAD
 
 
         if ($request->tipo_bomba === 'interna') {
@@ -152,67 +133,6 @@ class BombaController extends Controller
                 if ($responsavel) {
                     return response()->json(['message' => 'cadastrou a bomba com sucesso']);
                 }
-=======
-        $this->validate(
-            $request,
-            [
-                'nome_bombas' => 'required|string',
-                'capacidade' => 'required| string',
-                'tipo_bomba' => 'required|string',
-                'responsavel' => 'required|array|min:1',
-                'responsavel*nome' => 'required|string',
-                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
-                'responsavel*contacto' => 'required|string',
-                'responsavel*combustivel_tipos' => 'required',
-
-            ],
-            [
-                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
-                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
-            ]
-        );
-
-
-
-        $bombas = $this->bombas->create([
-            'nome_bombas' => $request->nome_bombas,
-            'capacidade' => $request->capacidade,
-            'tipo_bomba' => $request->tipo_bomba,
-            'createdBy' => auth()->user()->id,
-            // 'updatedBy'=>auth()->user()->id,
-        ]);
-
-        if ($bombas) {
-            $bomba = Bombas::where('id', $bombas->id)->first();
-
-            foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::create([
-                    'nome' => $resp['nome'],
-                    'email_bomba' => $resp['email_bomba'],
-                    'contacto' => $resp['contacto'],
-                    'contacto_alt' => $resp['contacto_alt'],
-                    'bombas_id' => $bomba->id,
-                    'createdBy' => auth()->user()->id,
-                    'updatedBy' => auth()->user()->id,
-                ]);
-            }
-
-
-            foreach ($request->combustivel_tipos as $key => $comb) {
-                $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
-                foreach ($combustivel as $key => $c) {
-
-                    if ($c->tipo_combustivel === 'diesel') {
-                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_diesel]);
-                    }else if ($c->tipo_combustivel === 'diesel') {
-                        $conustivel_bombas = combustivelBomba::create(['bomba_id' => $bombas->id, 'combustivel_id' => $c->id, 'preco_actual'=>$request->preco_gasolina]);
-                    }
-                }
-            }
-
-            if ($responsavel) {
-                return response()->json(['message' => 'cadastrou a bomba com sucesso']);
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             }
         }
     }
@@ -227,7 +147,6 @@ class BombaController extends Controller
         $responsavel->contacto_alt = $request->contacto_alt;
         $responsavel->save();
     }
-<<<<<<< HEAD
 
     public function show(Request $request, $id)
     {
@@ -237,26 +156,11 @@ class BombaController extends Controller
     }
 
 
-=======
-    public function show(Bombas $bombas)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bombas  $bombas
-     * @return \Illuminate\Http\Response
-     */
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     public function update(Request $request, $id)
     {
         $uuid = Str::uuid()->toString();
 
         $responsavel = new responsavelBombas();
-<<<<<<< HEAD
 
         try {
             $bombas = Bombas::where('id', $id)->update([
@@ -393,14 +297,20 @@ class BombaController extends Controller
             foreach ($bombas as $key => $b) {
                 $ordens[$key] = [
                     'bombas' => $b->nome_bombas,
-                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])
-                        ->where('bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(7))
+                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])->join('ordem_viaturas', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
+                    ->join('viaturas','ordem_viaturas.viatura_id', '=','viaturas.id')
+                    ->join('ordem_viatura_rotas','ordem_viatura_rotas.ordem_viatura_id','=','ordem_viatura_rotas.id')
+                    ->join('rotas', 'ordem_viatura_rotas.rota_id','=','rotas.id')
+                        ->where('ordems.bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(14))
+                        ->select('ordems.codigo_ordem as codigo_ordem','','','','','','','','','','')
                         ->orderBy('created_at', 'desc')->get()
                 ];
             }
             // return $ordens;
             // return view('reportMail.relatorio_bombas', compact('ordens'));
             $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('ordens'));
+
+            return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
 
             $path = Storage::put('public/pdf/relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
@@ -413,72 +323,5 @@ class BombaController extends Controller
         } catch (Exception $e) {
             return "Something went wrong! " . $e->getMessage();
         }
-=======
-        $this->validate(
-            $request,
-            [
-                'nome_bombas' => 'required|string',
-                'capacidade' => 'required| string',
-                'tipo_bomba' => 'required|string',
-                'responsavel' => 'required|array|min:1',
-                'responsavel*nome' => 'required|string',
-                'responsavel*email_bomba' => 'required|string|email', 'max:255', 'unique:responsavel_bombas',
-                'responsavel*contacto' => 'required|string',
-                'responsavel*combustivel_tipos' => 'required',
-
-            ],
-            [
-                'required' => 'O campo :attribute &eacute; obrigat&oacute;rio',
-                'unique' => 'O :attribute Ja existe um utilizador cadastrado com esse email'
-            ]
-        );
-
-        $bomba = Bombas::findOrFail($id);
-
-        $bomba->nome_bombas = $request->nome_bombas;
-        $bomba->capacidade = $request->capacidade;
-        $bomba->tipo_bomba = $request->tipo_bomba;
-        $bomba->createdBy = auth()->user()->id;
-        $bomba->update();
-
-
-            foreach ($request->responsavel as $key => $resp) {
-                $responsavel = responsavelBombas::updateOrCreate([
-                    'nome' => $resp['nome'],
-                    'email_bomba' => $resp['email_bomba'],
-                    'contacto' => $resp['contacto'],
-                    'contacto_alt' => $resp['contacto_alt'],
-                    'bombas_id' => $bomba->id,
-                    'createdBy' => auth()->user()->id,
-                    'updatedBy' => auth()->user()->id,
-                ]);
-            }
-
-            if ($request->tipo_combustivel != null) {
-
-                foreach ($request->combustivel_tipos as $key => $comb) {
-                    $combustivel = combustivel::where('tipo_combustivel', $comb)->get();
-                    foreach ($combustivel as $key => $c) {
-                        $conustivel_bombas = combustivelBomba::updateOrCreate(['bomba_id' => $id, 'combustivel_id' => $c->id]);
-                    }
-                }
-            }
-
-            // if ($responsavel) {
-                return response()->json(['message' => 'actualizou a bomba com sucesso']);
-            // /}
-        // }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Bombas  $bombas
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Bombas $bombas)
-    {
-        //
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 }

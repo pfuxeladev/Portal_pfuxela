@@ -45,7 +45,6 @@ class AuthenticationController extends Controller
         return response()->json($response);
     }
 
-<<<<<<< HEAD
     /*
      *   $tokenResult = $user->createToken('access_token');
             $token = $tokenResult->token;
@@ -65,20 +64,12 @@ class AuthenticationController extends Controller
                 'accessToken' => $token2,
                 'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
-=======
-    /**
-     * Login
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
      */
     public function login(Request $request)
     {
         $this->validate($request, [
             'email' => 'required|email',
-<<<<<<< HEAD
             'password' => 'required|min:6',
-=======
-            'password' => 'required|min:8',
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         ]);
         $data = [
             'email' => $request->email,
@@ -86,7 +77,6 @@ class AuthenticationController extends Controller
         ];
 
         if (auth()->attempt($data)) {
-<<<<<<< HEAD
             $user = $request->user();
             $token = $request->user()->createToken('access_token')->accessToken;
 
@@ -98,33 +88,17 @@ class AuthenticationController extends Controller
             return response()->json([
                 'userData' => [
                     new UserResource($request->user()),
-=======
-            $token = auth()->user()->createToken('access_token')->accessToken;
-            $user = auth()->user();
-            // $token->expires_at = Carbon::now()->addWeeks(1)->toDateTimeString();
-            // $token->save();
-            return response()->json([
-                'userData' => [
-                    new UserResource(auth()->user()),
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
                     'ability' => [
                         'action' => $user->getPermissionNames(), 'subject' => $user->getRoleNames(),
                     ],
                     'role' => $user->getRoleNames()
                 ],
                 'refreshToken' => $token,
-<<<<<<< HEAD
                 'accessToken' => $token,
                 'expires_at'=>Carbon::parse($tokenResult->token->expires_at)->toDateTimeString(),
             ], 200);
         } else {
             return response()->json(['error' => 'Erro! Verifique as suas credenciais ou contacte o administrador sistema'], 421);
-=======
-                'accessToken' => $token
-            ], 200);
-        } else {
-            return response()->json(['error' => 'Unauthorised'], 401);
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         }
     }
 
@@ -143,11 +117,7 @@ class AuthenticationController extends Controller
     public function user(Request $request)
     {
 
-<<<<<<< HEAD
         return $user = $request->user();
-=======
-        return $user = auth()->user();
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
         return response()->json([new UserResource($user)], 200);
     }
 }

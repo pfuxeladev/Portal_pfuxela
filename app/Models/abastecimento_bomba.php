@@ -14,7 +14,7 @@ class abastecimento_bomba extends Model
     }
 
     public function ordem(){
-        return $this->belongsTo(Ordem::class);
+        return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
     }
     public function user(){
         return $this->belongsTo(User::class);

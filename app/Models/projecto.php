@@ -21,10 +21,6 @@ class projecto extends Model
         'updatedBy',
     ];
     public function rota(){
-<<<<<<< HEAD
         return $this->hasMany(Rota::class);
-=======
-        return $this->hasMany(rota::class);
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
     }
 }
