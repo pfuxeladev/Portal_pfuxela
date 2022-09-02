@@ -11,7 +11,7 @@ use App\Models\responsavelBombas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Carbon;
@@ -100,7 +100,7 @@ class AbastecimentoBombasController extends Controller
 
         $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $bombas->id)->latest()->first();
 
-        $data["email"] = $emails->email_bomba;
+        $data["email"] = ['deize.manuel@i2aconsultoria.onmicrosoft.com', 'mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
         $data["title"] = "info@pfuxela.co.mz";
         $data["body"] = "Ordem de abastecimento nr ".$ordem->codigo_ordem;
 

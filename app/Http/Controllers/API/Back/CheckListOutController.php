@@ -68,7 +68,7 @@ class CheckListOutController extends Controller
 
    function kmActual(Request $request){
         if ($request->viatura_id) {
-            return response()->json(DB::table('checklist_out')->where('id', $request->viatura_id)->select('km_inicio')->latest()->first(), 200);
+            return response()->json(DB::table('viaturas')->where('id', $request->viatura_id)->select('kilometragem')->first(), 200);
         }else{
             return 0;
         }
