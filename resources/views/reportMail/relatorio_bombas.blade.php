@@ -113,7 +113,7 @@
             @foreach ($ordens as $key => $order)
             <h3 class="card-title">{{1+ $key}} - {{$order['bombas']}}</h3>
             <table>
-                <table class="table-content">
+                <table class="table-content" style="font-size: 8pt;">
                     <thead>
                         <tr>
                             <td>data</td>

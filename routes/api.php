@@ -4,6 +4,7 @@ use App\Http\Controllers\API\Back\AbastecimentoBombasController;
 use App\Http\Controllers\API\BACK\BombaController;
 use App\Http\Controllers\API\Back\CheckListOutController;
 use App\Http\Controllers\API\Back\OrdemController;
+use App\Http\Controllers\API\BACK\RotaController;
 use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -139,6 +140,7 @@ Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBomb
 
 Route::get('SendWeeklyReport', [App\Http\Controllers\API\Back\OrdemController::class, 'SendWeeklyReport']);
 Route::get('RelatorioBombasSemanal', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioDiarioBombas']);
+Route::get('/enviarRelatorioSemanal', [RotaController::class, 'enviarRelatorioSemanal']);
 
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 

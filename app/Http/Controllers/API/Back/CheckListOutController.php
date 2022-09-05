@@ -50,16 +50,35 @@ class CheckListOutController extends Controller
     }
 
     public function RelatorioSemanal(Request $request, $id){
+
+        $checkList_datas = array();
+        $categories = array();
+        $chkelist_name = array();
+        $checklist_out_result = array();
         $viatura = Viatura::where('id', $id)->first();
 
-        $checkListOut = CheckListOut::with(['checklists.checklist_vars'])->where('viatura_id', $viatura->id)->select('id', 'km_inicio', 'hr_inicio', DB::raw("(DATE_FORMAT(created_at, '%W')) as dia"))->where('created_at', '>=', Carbon::now()->subDays(7))->get()->groupBy('dia');
+        $checkListOut = CheckListOut::with(['viatura'])->where('viatura_id', $viatura->id)->select('id', 'km_inicio', 'hr_inicio', DB::raw("(DATE_FORMAT(created_at, '%W')) as dia"))->where('created_at', '>=', Carbon::now()->subDays(30))->get()->groupBy('dia');
         $categoria = Categoria::all();
 
+        foreach ($checkListOut as $key1 => $chkout) {
+            $checklist_out_result[$key1]= $chkout;
+            foreach ($categoria as $key => $cat) {
+                $categories[$key] = $cat->nome_categoria;
+                $chkelist_name[$key] = checklists::join('checklist_vars', 'checklists.checklist_vars_id', '=', 'checklist_vars.id')->where('checklist_vars.categoria', $cat->id)->get();
+
+            }
 
 
-       return view('reportMail.relatorio_checklistOut', compact('viatura', 'checkListOut', 'categoria'));
+        }
 
-        return response()->json([$checkListOut, $categoria], 200);
+        $checkList_datas = array_combine($categories, $chkelist_name);
+
+
+
+
+       return view('reportMail.relatorio_checklistOut', compact('viatura', 'checkList_datas', 'checklist_out_result'));
+
+        // return response()->json([$viatura, $checkList_datas], 200);
     }
 
    function listViaturaDentro(){

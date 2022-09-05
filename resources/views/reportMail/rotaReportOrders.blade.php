@@ -68,42 +68,41 @@
             height: 100vh;
             border-collapse: collapse;
         }
-        table.table-content td, table.table-content th {
+
+        table.table-content td,
+        table.table-content th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
-        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
+
+        table.table-content tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
         .row-data {
             width: 100%;
             margin-top: 180px;
             margin-right: 10px;
             position: relative;
-            font-size: 9pt;
+            font-size: 10pt;
             height: auto;
 
         }
     </style>
 </head>
 
-<body style="font-family: sans-serif;">
+<bodystyle="font-family: sans-serif;">
     <div class="container">
         <div class="content-header">
             <h3 class="centered-title"
                 style="text-align: center !important; color: whitesmoke; position: relative; width: 100%;">
-                Relatorio Geral de Abastecimento
+                Relatorio Geral de Abastecimento por rota
             </h3>
         </div>
         <div class="content">
-            <div class="side-company">
-                <ul class="list-unstyled">
-                    {{--  <li class="dado">Imprimido por: {{ auth()->user()->name }}</li>  --}}
-                    <li class="dado">Data de Emissao: <?php echo date('Y-m-d H:i:s'); ?></li>
-                </ul>
-            </div>
             <div class="logotipo">
                 <img src="data:image/png;base64,{{ base64_encode(file_get_contents(public_path('/images/logo.png'))) }}"
-                    width="150px">
+                    width="180px">
             </div>
         </div>
         <div class="row-data">
@@ -111,63 +110,49 @@
             <table class="table-content" style="font-size: 8pt">
                 <thead>
                     <tr>
-                        <th>Ordem</th>
-                        <th>Estado</th>
                         <th>Data</th>
-                        <th>Bombas</th>
+                        <th>Codigo</th>
+                        <th>Projecto</th>
+                        <th>Rota</th>
+                        <th>Distancia</th>
                         <th>Viaturas</th>
-                        <th>Tipo</th>
-
+                        <th>Combustivel</th>
                         <th>Qtd</th>
                         <th>Preco Unitario</th>
-                        <th>Rotas</th>
-                        <th>Total</th>
+                        <th>Bombas</th>
+                        <th>Autor</th>
+                        <th>Subtotal</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($ordem_viatura as $ordens)
-                        <tr>
-                            <td>{{ $ordens->ordem->codigo_ordem }}</td>
-                            <td>{{ $ordens->ordem->estado }}</td>
-                            <td>{{ $ordens->ordem->created_at->format('d/m/Y') }}</td>
-                            <td>{{ $ordens->ordem->bombas->nome_bombas }}</td>
-                            <td>{{ $ordens->viatura->matricula }}</td>
-                            <td>{{ $ordens->viatura->tipo_combustivel }}</td>
-                            <td>
-                                {{ $ordens->qtd_abastecida }}
-                            </td>
-                            <td>
-                                {{ number_format($ordens->preco_cunsumo / $ordens->qtd_abastecida, 2, ',', '.') }}
-                            </td>
-                            <td>
-                                @if ($ordens->ordemViaturaRota == null)
-                                    Abastecimento extraordinario
-                                @else
-                                @foreach ($ordens->ordemViaturaRota as $rt)
-                                {{ $rt->rota->nome_rota }},
-                            @endforeach
-                                @endif
-                            </td>
-                            <td>{{ number_format($ordens->preco_cunsumo, 2, ',', '.') }} MT</td>
-
-                            <?php $total += $ordens->preco_cunsumo; ?>
-                        </tr>
+                    @foreach ($rotas as $item)
+                    <tr>
+                        <td>{{$item->data_registo }}</td>
+                        <td>{{$item->codigo}}</td>
+                        <td>{{$item->projecto}}</td>
+                        <td>{{$item->nome_rota}}</td>
+                        <td>{{$item->distancia}}</td>
+                        <td>{{$item->matricula}}</td>
+                        <td>{{$item->combustivel}}</td>
+                        <td>{{$item->qtd}}</td>
+                        <td>{{number_format($item->preco_total / $item->qtd, 2, ',', '.')}}</td>
+                        <td>{{$item->bombas}}</td>
+                        <td>{{$item->autor}}</td>
+                        <td>{{number_format($item->preco_total, 2, ',', '.')}}MT</td>
+                        <?php $total += $item->preco_total; ?>
+                    </tr>
                     @endforeach
-
                 </tbody>
                 <tfoot>
-                    <tr style="border: 1px;">
-                        <td colspan="9" style="text-align: right">
-                            TOTAL
-                        </td>
+                    <tr>
+                        <td colspan="10"></td>
+                        <td>Total</td>
                         <td>{{ $total }} MT</td>
                     </tr>
                 </tfoot>
             </table>
-
         </div>
-
     </div>
-</body>
 
+</body>
 </html>

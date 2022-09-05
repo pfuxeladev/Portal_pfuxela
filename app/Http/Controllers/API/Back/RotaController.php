@@ -6,8 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\projecto;
 use App\Models\Rota;
 use App\Models\Horario;
+use Carbon\Carbon;
+use Exception;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use PDF;
+use Illuminate\Support\Facades\Storage;
 class RotaController extends Controller
 {
     private $rota;
@@ -88,15 +93,50 @@ class RotaController extends Controller
         ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
         ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
         ->join('users', 'ordems.createdBy', '=', 'users.id')
-        ->select('rotas.id as rota_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at')
+        ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
         ->orderBy('ordems.id', 'desc')->get();
 
-    return response()->json($rotas, 200);
+    // return response()->json($rotas, 200);
+    // return  view('reportMail.rotaReportOrders', compact('rotas'));
+    $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+        Storage::put('public/pdf/relatorio_rota.pdf', $pdf->output());
+
+        return $pdf->download('relatorio_rota.pdf');
    }
-    public function show(Rota $rota)
-    {
-        //
+
+   function enviarRelatorioSemanal(){
+    try {
+
+
+        $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+        $data["title"] = "Relatorio Das Rotas";
+
+        $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.id')
+        ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+         ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+         ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
+         ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
+         ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
+         ->join('users', 'ordems.createdBy', '=', 'users.id')
+         ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
+         ->where('ordems.created_at','>=', Carbon::now()->subDays(7))
+         ->orderBy('ordems.id', 'desc')->get();
+
+     $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+         Storage::put('public/pdf/relatorio_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+
+        Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+            $message->to($data["email"])
+                ->subject($data["title"])
+                ->attachData($pdf->output(), 'relatorio_das_rotas' . date('Y-m-d H:i:s') . '.pdf');
+        });
+        Log::info('email sent to: Users');
+        return response()->json(['message' => 'email sent to: Users successfully']);
+
+    }catch(Exception $e){
+        return "Something went wrong! ".$e->getMessage();
     }
+   }
 
     /**
      * Update the specified resource in storage.

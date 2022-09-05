@@ -106,45 +106,34 @@
                     <li class="dado">Mes</li>
                     <li class="dado">Semana</li>
                 </ul>
-
+        
             </div>
+            @foreach ($checkList_datas as $key => $checklist_data)
+
+            {{--  <?php print_r($checklist_data); ?>  --}}
             <div class="row-data">
                 <table class="table-content">
                     <thead>
                         <tr>
-                            @foreach ($checkListOut as $key => $chk)
-                                <th>{{ $key }}</th>
-                            @endforeach
-                        </tr>
 
-                        <tr>
-                            @foreach ($checkListOut as $key => $chk)
-                                @foreach ($chk as $k)
-                                    <th>{{ $k->km_inicio }}</th>
-                                @endforeach
-                            @endforeach
 
                         </tr>
-
                     </thead>
                     <tbody>
                         <tr>
-                            @foreach ($checkListOut as $key => $chk)
-                            <td></td>
-                                @foreach ($chk as $ck)
-                                    <td>
-                                        @foreach ($ck->checklists as $checklist)
-                                       {{$checklist->opcao}}
-                                       <br>
-                                        @endforeach
-                                    </td>
-                                @endforeach
-                            @endforeach
+                            <th colspan="2">{{ $key }}</th>
                         </tr>
+                        @foreach ($checklist_data as $item)
+                        <tr>
+                            <td>{{$item->checklist_name}}</td>
+                            <td>{{$item->opcao}}</td>
+                        </tr>
+                        @endforeach
+
                     </tbody>
                 </table>
             </div>
-
+            @endforeach
         </div>
 
     </div>

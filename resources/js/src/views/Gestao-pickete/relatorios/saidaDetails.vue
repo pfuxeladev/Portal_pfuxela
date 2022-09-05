@@ -133,7 +133,7 @@ export default {
         <head>
             ${stylesHtml}
         </head>
-        <body>
+        <body style="font-size:12pt">
             ${prtHtml}
         </body>
         </html>`)
