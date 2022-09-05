@@ -4,7 +4,7 @@ use App\Http\Controllers\API\Back\AbastecimentoBombasController;
 use App\Http\Controllers\API\BACK\BombaController;
 use App\Http\Controllers\API\Back\CheckListOutController;
 use App\Http\Controllers\API\Back\OrdemController;
-use App\Http\Controllers\API\BACK\RotaController;
+use App\Http\Controllers\API\Back\RotaController;
 use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
