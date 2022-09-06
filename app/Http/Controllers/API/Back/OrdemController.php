@@ -596,7 +596,7 @@ class OrdemController extends Controller
                 $data["title"] = "Relatorio Diario";
                 // $data["body"] = "Receba em anexo o relatorio de abastecimento semanal enviado pelo sistema";
 
-
+                
                 $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas'])
                 ->where('created_at','>=', Carbon::now()->subDays(1))->orderBy('updated_at', 'desc')->get();
 
