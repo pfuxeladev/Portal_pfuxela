@@ -121,7 +121,7 @@ class RotaController extends Controller
          ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
          ->join('users', 'ordems.createdBy', '=', 'users.id')
          ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
-        //  ->where('ordems.created_at','>=', Carbon::today()->subDays(30))
+         ->where('ordems.created_at','>=', Carbon::today()->subDays(7))
          ->orderBy('ordems.id', 'desc')->get();
 
      $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
