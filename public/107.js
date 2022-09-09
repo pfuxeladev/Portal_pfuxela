@@ -193,6 +193,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -250,7 +252,7 @@ __webpack_require__.r(__webpack_exports__);
     });
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_6___default()(value).format('DD/MM/YYYY');
+      return moment__WEBPACK_IMPORTED_MODULE_6___default()(value).format('DD/MM/YYYY hh:mm');
     }
 
     var _useRotasList = Object(_ReportProjecto__WEBPACK_IMPORTED_MODULE_9__["default"])(),
@@ -849,6 +851,8 @@ var render = function () {
                               _c("tr", [
                                 _c("th", [_vm._v("Codigo")]),
                                 _vm._v(" "),
+                                _c("th", [_vm._v("Data")]),
+                                _vm._v(" "),
                                 _c("th", [_vm._v("Viatura")]),
                                 _vm._v(" "),
                                 _c("th", [_vm._v("Qtd")]),
@@ -869,6 +873,14 @@ var render = function () {
                                   return _c("tr", { key: "O" + index }, [
                                     _c("td", [
                                       _vm._v(_vm._s(orders.ordem.codigo_ordem)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.dateTime(orders.ordem.created_at)
+                                        )
+                                      ),
                                     ]),
                                     _vm._v(" "),
                                     _c("td", [

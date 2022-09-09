@@ -91,6 +91,7 @@
                 <thead class="thead-dark">
                   <tr>
                     <th>Codigo</th>
+                    <th>Data</th>
                     <th>Viatura</th>
                     <th>Qtd</th>
                     <th>Preco</th>
@@ -104,6 +105,7 @@
                     :key="'O' + index"
                   >
                     <td>{{ orders.ordem.codigo_ordem }}</td>
+                    <td>{{dateTime(orders.ordem.created_at)}}</td>
                     <td>{{ orders.viatura.matricula }}</td>
                     <td>{{ orders.qtd_abastecida }}</td>
                     <td>{{ orders.preco_cunsumo }}</td>
@@ -249,7 +251,7 @@ export default {
       })
 
     function dateTime(value) {
-      return moment(value).format('DD/MM/YYYY')
+      return moment(value).format('DD/MM/YYYY hh:mm')
     }
     const {
       tableColumns,

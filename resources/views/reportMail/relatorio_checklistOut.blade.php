@@ -65,7 +65,7 @@
         table.table-content {
             width: 100%;
             text-align: justify;
-            height: 100vh;
+            /*height: 100vh;*/
             border-collapse: collapse;
         }
 
@@ -100,41 +100,47 @@
             </h3>
         </div>
         <div class="content">
-            <div class="side-company">
-                <ul class="list-unstyled">
-                    <li class="dado">Viatura: {{ $viatura->matricula }}, {{ $viatura->nome_viatura }}</li>
-                    <li class="dado">Mes</li>
-                    <li class="dado">Semana</li>
-                </ul>
-        
-            </div>
-            @foreach ($checkList_datas as $key => $checklist_data)
+           <div class="row-data">
+            <table class="table table-content">
+                <thead>
+                    <tr>
+                        <th>viatura</th>
+                        <th>hra de partida</th>
+                        <th>km inicial</th>
+                        <th>hra de chegada</th>
+                        <th>km final</th>
+                        <th>km percorridos</th>
+                        <th>previsao de consumo</th>
+                        <th>motorista</th>
+                        <th>carta de conducao</th>
+                    </tr>
+                </thead>
+                <tbody>
 
-            {{--  <?php print_r($checklist_data); ?>  --}}
-            <div class="row-data">
-                <table class="table-content">
-                    <thead>
-                        <tr>
-
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th colspan="2">{{ $key }}</th>
-                        </tr>
-                        @foreach ($checklist_data as $item)
-                        <tr>
-                            <td>{{$item->checklist_name}}</td>
-                            <td>{{$item->opcao}}</td>
-                        </tr>
+                    <tr>
+                    @foreach ($check_viatura['viaturas'] as $viatura)
+                    <td>{{$viatura}}</td>
+                    @endforeach
+                </tr>
+                @foreach ($check_viatura['dados_checklist'] as $key => $item)
+                <tr>
+                    <th>{{$key}}</th>
+                    <td colspan="8">
+                        @if (empty($item))
+                         Nenhuma ocorrencia
+                        @else
+                        @foreach ($item as $chk)
+                        {{$chk->checklist_name}},
                         @endforeach
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
 
-                    </tbody>
-                </table>
-            </div>
-            @endforeach
+
+                </tbody>
+            </table>
+           </div>
         </div>
-
     </div>
 </body>

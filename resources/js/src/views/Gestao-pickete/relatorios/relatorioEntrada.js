@@ -17,7 +17,7 @@ export default function useRelatorioEntradaList() {
     { key: 'Hora_de_saida', sortable: true },
     { key: 'Hora_da_chegada', sortable: true },
     { key: 'Matricula', sortable: true },
-    { key: 'Kilometragem_actual', sortable: true },
+    { key: 'km_fim', sortable: true },
     { Key: 'Criado_por', sortable: true },
     { key: 'acções' },
   ]
