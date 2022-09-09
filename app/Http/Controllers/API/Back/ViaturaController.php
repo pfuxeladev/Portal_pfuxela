@@ -48,7 +48,7 @@ class ViaturaController extends Controller
             return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('nome_viatura', '!=', 'BUS')->where('updated_at', '>=', Carbon::now()->subDays(28))
             ->select('matricula', 'id')->get();
         } else {
-            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(28))
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(30))
             ->select('matricula', 'id')->get();
         }
 

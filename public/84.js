@@ -643,9 +643,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(_vm.dateTime(data.item.created_at)) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -655,9 +655,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.check_list_out.hr_inicio) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -667,9 +667,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.hr_fim) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -679,21 +679,21 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.check_list_out.viatura.matricula) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
               },
               {
-                key: "cell(Kilometrage_actual)",
+                key: "cell(km_fim)",
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.km_fim) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -703,9 +703,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\r\n                " +
+                      "\n                " +
                         _vm._s(data.item.user.name) +
-                        "\r\n            "
+                        "\n            "
                     ),
                   ]
                 },
@@ -791,7 +791,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-start\r\n            ",
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [
@@ -801,7 +801,7 @@ var render = function () {
                             _vm._s(_vm.dataMeta.from) +
                             " a " +
                             _vm._s(_vm.dataMeta.to) +
-                            " de\r\n              " +
+                            " de\n              " +
                             _vm._s(_vm.dataMeta.of) +
                             " entradas"
                         ),
@@ -813,7 +813,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-end\r\n            ",
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [
@@ -1392,7 +1392,7 @@ function useRelatorioEntradaList() {
     key: 'Matricula',
     sortable: true
   }, {
-    key: 'Kilometragem_actual',
+    key: 'km_fim',
     sortable: true
   }, {
     Key: 'Criado_por',

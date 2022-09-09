@@ -24,7 +24,7 @@
               <template #cell(Matricula)="data">
                 {{ data.item.check_list_out.viatura.matricula }}
             </template>
-             <template #cell(Kilometrage_actual)="data">
+             <template #cell(km_fim)="data">
                 {{ data.item.km_fim }}
             </template>
              <template #cell(Criado_por)="data">
