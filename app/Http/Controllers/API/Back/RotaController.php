@@ -86,6 +86,9 @@ class RotaController extends Controller
     }
 
    function relactorioRota(Request $request){
+       
+       $from = date('2022-07-01');
+$to = date('2022-07-30');
     $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
     ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
      ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
@@ -94,6 +97,7 @@ class RotaController extends Controller
      ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
      ->join('users', 'ordems.createdBy', '=', 'users.id')
      ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
+       ->whereBetween('ordems.created_at', [$from, $to])
         ->orderBy('ordems.id', 'desc')->get();
 
     // return response()->json($rotas, 200);
