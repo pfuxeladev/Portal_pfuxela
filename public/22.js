@@ -8687,6 +8687,12 @@ __webpack_require__.r(__webpack_exports__);
     route: 'recurring supply',
     icon: 'folderIcon'
   }]
+}, {
+  title: 'Inventory',
+  icon: 'folderIcon',
+  children: [{
+    title: 'stock management'
+  }]
 }]);
 
 /***/ }),
