@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\Back;
 use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\checklist_vars;
+use App\Models\checkListIn;
 use App\Models\CheckListOut;
 use App\Models\checklistOutDestination;
 use App\Models\checkListRole;
@@ -49,36 +50,41 @@ class CheckListOutController extends Controller
 
     }
 
-    public function RelatorioSemanal(Request $request, $id){
-
+    public function RelatorioSemanal(Request $request){
+        $km_percorridos = 0;
+        $custo = 0;
         $checkList_datas = array();
+        $check_viatura = array();
         $categories = array();
-        $chkelist_name = array();
+        $viaturas = array();
         $checklist_out_result = array();
-        $viatura = Viatura::where('id', $id)->first();
+        $checked_out = array();
+        $categorias = Categoria::all();
+        $checkList = checkListIn::join('checklist_out', 'checklist_in.check_list_out_id', '=','checklist_out.id')
+        ->join('viaturas', 'checklist_out.viatura_id', '=', 'viaturas.id')
+        ->join('motoristas', 'checklist_out.motorista_id', '=', 'motoristas.id')->join('people', 'motoristas.person_id', '=', 'people.id')->get();
+        foreach ($checkList as $key => $value) {
+            $checked_out[$key] = $value;
+            $km_percorridos = ($value->km_fim - $value->km_inicio);
+            $custo = number_format($km_percorridos * $value->capacidade_media, 2, ',', '.');
 
-        $checkListOut = CheckListOut::with(['viatura'])->where('viatura_id', $viatura->id)->select('id', 'km_inicio', 'hr_inicio', DB::raw("(DATE_FORMAT(created_at, '%W')) as dia"))->where('created_at', '>=', Carbon::now()->subDays(30))->get()->groupBy('dia');
-        $categoria = Categoria::all();
-
-        foreach ($checkListOut as $key1 => $chkout) {
-            $checklist_out_result[$key1]= $chkout;
-            foreach ($categoria as $key => $cat) {
-                $categories[$key] = $cat->nome_categoria;
-                $chkelist_name[$key] = checklists::join('checklist_vars', 'checklists.checklist_vars_id', '=', 'checklist_vars.id')->where('checklist_vars.categoria', $cat->id)->get();
-
-            }
-
-
+            $viaturas[$key] = ['matricula'=>$value->matricula, 'km_inicio'=>$value->km_inicio, 'km_fim'=>$value->km_fim, 'km_percorridos'=>$km_percorridos, 'litros_consumidos'=>$custo, 'motorista'=>$value->nome_completo, 'carta_conducao'=>$value->carta_conducao];
+           foreach ($categorias as $key => $cat) {
+            $categories[$key] = $cat->nome_categoria;
+            $checklist_out_result[$key] = ocorrencia_checklist::join('checklists', 'ocorrencia_checklists.checklists_id', '=', 'checklists.id')
+            ->join('checklist_vars', 'checklists.checklist_vars_id', '=', 'checklist_vars.id')
+            ->where('checklist_vars.categoria', $cat->id)
+            ->where('checklists.check_list_out_id', $value->check_list_out_id)
+            ->orderBy('ocorrencia_checklists.id', 'desc')->get();
+        }
         }
 
-        $checkList_datas = array_combine($categories, $chkelist_name);
+        $checkList_datas = array_combine($checked_out, $viaturas);
+         $check_viatura = array_combine($categories, $checklist_out_result);
 
+    //    return view('reportMail.relatorio_checklistOut', compact('viatura', 'checkList_datas', 'checklist_out_result'));
 
-
-
-       return view('reportMail.relatorio_checklistOut', compact('viatura', 'checkList_datas', 'checklist_out_result'));
-
-        // return response()->json([$viatura, $checkList_datas], 200);
+        return response()->json([$checkList_datas, $check_viatura], 200);
     }
 
    function listViaturaDentro(){

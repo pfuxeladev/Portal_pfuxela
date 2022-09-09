@@ -121,7 +121,7 @@ Route::group(['middleware' => 'auth:api'], function () {
 });
 Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
 
-Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
+Route::get('RelatorioSemanal', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
 
 Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
 

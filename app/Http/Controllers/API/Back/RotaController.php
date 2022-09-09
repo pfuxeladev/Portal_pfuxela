@@ -86,14 +86,14 @@ class RotaController extends Controller
     }
 
    function relactorioRota(Request $request){
-       $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.id')
-       ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-        ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-        ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
-        ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
-        ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
-        ->join('users', 'ordems.createdBy', '=', 'users.id')
-        ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
+    $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
+    ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+     ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+     ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
+     ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
+     ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
+     ->join('users', 'ordems.createdBy', '=', 'users.id')
+     ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
         ->orderBy('ordems.id', 'desc')->get();
 
     // return response()->json($rotas, 200);
@@ -101,7 +101,7 @@ class RotaController extends Controller
     $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
         Storage::put('public/pdf/relatorio_rota.pdf', $pdf->output());
 
-        return $pdf->download('relatorio_rota.pdf');
+        return $pdf->download('relatorio_rota' . date('Y-m-d H:i:s') . '.pdf');
    }
 
    function enviarRelatorioSemanal(){
