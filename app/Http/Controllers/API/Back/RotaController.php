@@ -87,8 +87,8 @@ class RotaController extends Controller
 
    function relactorioRota(Request $request){
        
-       $from = date('2022-07-15');
-       $to = date('2022-08-01');
+       $from = date('2022-08-16');
+       $to = date('2022-09-01');
     $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
     ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
      ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
@@ -96,8 +96,8 @@ class RotaController extends Controller
      ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
      ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
      ->join('users', 'ordems.createdBy', '=', 'users.id')
-     ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
-       ->whereBetween('ordems.created_at', [$from, $to])
+     ->whereBetween('ordems.created_at', [$from, $to])
+     ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula','viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
         ->orderBy('ordems.id', 'desc')->get();
 
     // return response()->json($rotas, 200);
@@ -112,19 +112,19 @@ class RotaController extends Controller
     try {
 
 
-        $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+        $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
         $data["title"] = "Relatorio Das Rotas";
 
         $date = \Carbon\Carbon::today()->subDays(30);
 
-        $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
-        ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-         ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-         ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
-         ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
-         ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
-         ->join('users', 'ordems.createdBy', '=', 'users.id')
-         ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
+        $rotas =  Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
+    ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+     ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+     ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
+     ->join('ordems','ordem_viaturas.ordem_id', 'ordems.id')
+     ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
+     ->join('users', 'ordems.createdBy', '=', 'users.id')
+     ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula','viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total','rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
          ->where('ordems.created_at','>=', Carbon::today()->subDays(7))
          ->orderBy('ordems.id', 'desc')->get();
 
