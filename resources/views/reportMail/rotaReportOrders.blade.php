@@ -143,7 +143,7 @@
                         <td>{{$item->bombas}}</td>
                         <td>{{$item->autor}}</td>
                         <td>{{$subtotal = number_format($qtd * ($item->preco_total / $item->qtd), 2, ',', '.')}}MT</td>
-                        <?php $total += $item->preco_total; ?>
+                        <?php $total += $subtotal; ?>
                     </tr>
                     @endforeach
                 </tbody>
