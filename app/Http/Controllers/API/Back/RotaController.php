@@ -87,8 +87,8 @@ class RotaController extends Controller
 
    function relactorioRota(Request $request){
        
-       $from = date('2022-07-01');
-$to = date('2022-07-30');
+       $from = date('2022-07-15');
+       $to = date('2022-08-01');
     $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
     ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
      ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
