@@ -120,7 +120,7 @@
 
                     <tr>
                     @foreach ($chek_datas as $key => $viatura)
-                    <td><?php echo json_encode($viatura); ?></td>
+                    <td><?php echo json_encode($chek_datas[$key]->matricula); ?></td>
                     @endforeach
                 </tr>
                 {{--  @foreach ($chek_datas as $key => $item)
