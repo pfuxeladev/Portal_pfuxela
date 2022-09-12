@@ -115,30 +115,32 @@
                         <th>carta de conducao</th>
                     </tr>
                 </thead>
+                @foreach ($check_viatura as $chek_datas)
                 <tbody>
 
                     <tr>
-                    @foreach ($check_viatura['viaturas'] as $viatura)
-                    <td>{{$viatura}}</td>
+                    @foreach ($chek_datas as $key => $viatura)
+                    <td><?php echo json_encode($viatura); ?></td>
                     @endforeach
                 </tr>
-                @foreach ($check_viatura['dados_checklist'] as $key => $item)
+                {{--  @foreach ($chek_datas as $key => $item)
                 <tr>
                     <th>{{$key}}</th>
                     <td colspan="8">
-                        @if (empty($item))
+                        @if (empty($item['dados_checklist']))
                          Nenhuma ocorrencia
                         @else
-                        @foreach ($item as $chk)
+                        @foreach ($item['dados_checklist'] as $chk)
                         {{$chk->checklist_name}},
                         @endforeach
                         @endif
                     </td>
                 </tr>
-                @endforeach
+                @endforeach  --}}
 
 
                 </tbody>
+                @endforeach
             </table>
            </div>
         </div>

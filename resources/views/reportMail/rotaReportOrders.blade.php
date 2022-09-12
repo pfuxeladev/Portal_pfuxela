@@ -106,7 +106,11 @@
             </div>
         </div>
         <div class="row-data">
-            <?php $total = 0; ?>
+            <?php $total = 0;
+            $qtd = 0;
+            $subtotal = 0;
+            $preco_ltr = 0;
+            ?>
             <table class="table-content" style="font-size: 8pt">
                 <thead>
                     <tr>
@@ -134,11 +138,11 @@
                         <td>{{$item->distancia}}</td>
                         <td>{{$item->matricula}}</td>
                         <td>{{$item->combustivel}}</td>
-                        <td>{{$item->qtd}}</td>
-                        <td>{{number_format($item->preco_total / $item->qtd, 2, ',', '.')}}</td>
+                        <td>{{$qtd = ($item->qtd_ltr *$item->distancia)}}</td>
+                        <td>{{$preco_ltr = number_format($item->preco_total / $item->qtd, 2, ',', '.')}}</td>
                         <td>{{$item->bombas}}</td>
                         <td>{{$item->autor}}</td>
-                        <td>{{number_format($item->preco_total, 2, ',', '.')}}MT</td>
+                        <td>{{$subtotal = number_format($qtd * ($item->preco_total / $item->qtd), 2, ',', '.')}}MT</td>
                         <?php $total += $item->preco_total; ?>
                     </tr>
                     @endforeach
