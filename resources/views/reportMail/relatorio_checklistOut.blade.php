@@ -88,6 +88,13 @@
             height: auto;
 
         }
+
+        button.btn {
+            border-radius: 8px;
+            padding: 0.3em;
+            border: 0.2px #ff0d0d solid;
+            background: #fee8e8
+        }
     </style>
 </head>
 
@@ -100,49 +107,50 @@
             </h3>
         </div>
         <div class="content">
-           <div class="row-data">
-            <table class="table table-content">
-                <thead>
-                    <tr>
-                        <th>viatura</th>
-                        <th>hra de partida</th>
-                        <th>km inicial</th>
-                        <th>hra de chegada</th>
-                        <th>km final</th>
-                        <th>km percorridos</th>
-                        <th>previsao de consumo</th>
-                        <th>motorista</th>
-                        <th>carta de conducao</th>
-                    </tr>
-                </thead>
-                @foreach ($check_viatura as $chek_datas)
-                <tbody>
-
-                    <tr>
-                    @foreach ($chek_datas as $key => $viatura)
-                    <td><?php echo json_encode($chek_datas[$key]->matricula); ?></td>
+            <div class="row-data">
+                <table class="table table-content">
+                    <thead>
+                        <tr>
+                            <th>viatura</th>
+                            <th>hra de partida</th>
+                            <th>km inicial</th>
+                            <th>hra de chegada</th>
+                            <th>km final</th>
+                            <th>km percorridos</th>
+                            <th>previsao de consumo</th>
+                            <th>motorista</th>
+                            <th>carta de conducao</th>
+                        </tr>
+                    </thead>
+                    @foreach ($viaturas as $key => $viatura)
+                        <tbody>
+                            <tr>
+                                <td>{{ $viatura['matricula'] }}</td>
+                                <td>{{ $viatura['hr_inicial'] }} hras</td>
+                                <td>{{ $viatura['km_inicio'] }} km</td>
+                                <td>{{ $viatura['hr_chegada'] }} hras</td>
+                                <td>{{ $viatura['km_fim'] }} km</td>
+                                <td>{{ $viatura['km_percorridos'] }} km</td>
+                                <td>{{ $viatura['litros_consumidos'] }} ltr</td>
+                                <td>{{ $viatura['motorista'] }}</td>
+                                <td>{{ $viatura['carta_conducao'] }}</td>
+                            </tr>
+                            @foreach ($check_viatura as $key => $chklst)
+                            <tr>
+                                <td>{{ $key }}</td>
+                                            <td colspan="8">
+                                                @foreach ($chklst as $item)
+                                                @if ($viatura['check_list_out_id'] === $item->check_list_out_id)
+                                                <button class="btn btn-outline">{{ $item->checklist_name }}</button>
+                                                @endif
+                                                @endforeach
+                                            </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
                     @endforeach
-                </tr>
-                {{--  @foreach ($chek_datas as $key => $item)
-                <tr>
-                    <th>{{$key}}</th>
-                    <td colspan="8">
-                        @if (empty($item['dados_checklist']))
-                         Nenhuma ocorrencia
-                        @else
-                        @foreach ($item['dados_checklist'] as $chk)
-                        {{$chk->checklist_name}},
-                        @endforeach
-                        @endif
-                    </td>
-                </tr>
-                @endforeach  --}}
-
-
-                </tbody>
-                @endforeach
-            </table>
-           </div>
+                </table>
+            </div>
         </div>
     </div>
 </body>
