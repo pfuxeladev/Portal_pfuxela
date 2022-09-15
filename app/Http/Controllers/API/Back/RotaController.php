@@ -144,13 +144,31 @@ class RotaController extends Controller
     }
    }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Rota  $rota
-     * @return \Illuminate\Http\Response
-     */
+   function RelatorioPorRota(){
+    try{
+        $data["email"] = ['supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+        $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
+    $date = \Carbon\Carbon::today()->subDays(8);
+
+        $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->join('ordem_viatura_rotas', 'rotas.id', '=',  'ordem_viatura_rotas.rota_id')->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=',  'ordem_viaturas.id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.created_at','>=', $date)->orderBy('rotas.id', 'desc')->get();
+
+        $pdf = PDF::loadView('reportMail.RelatorioPorRota', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+        $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+        Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+
+       Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+           $message->to($data["email"])
+               ->subject($data["title"])
+               ->attachData($pdf->output(), 'relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf');
+       });
+       Log::info('email sent to: Users');
+       return response()->json(['message' => 'email sent to: Users successfully']);
+
+   }catch(Exception $e){
+       return "Something went wrong! ".$e->getMessage();
+   }
+
+   }
     public function update(Request $request, Rota $rota)
     {
         //
