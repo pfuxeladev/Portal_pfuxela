@@ -155,7 +155,7 @@ class RotaController extends Controller
 
             $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->where('is_active',1)->orderBy('id', 'desc')->get();
 
-            return view('reportMail.RelatorioPorRota', compact('rotas'));
+            // return view('reportMail.RelatorioPorRota', compact('rotas'));
 
             $pdf = PDF::loadView('reportMail.RelatorioPorRota', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
 
