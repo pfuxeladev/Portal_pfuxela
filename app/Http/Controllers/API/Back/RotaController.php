@@ -153,7 +153,7 @@ class RotaController extends Controller
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
             $date = \Carbon\Carbon::today()->subDays(8);
 
-            $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->join('ordem_viatura_rotas', 'rotas.id', '=',  'ordem_viatura_rotas.rota_id')->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=',  'ordem_viaturas.id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.created_at', '>=', $date)->orderBy('rotas.id', 'desc')->get();
+            $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->where('is_active',1)->orderBy('id', 'desc')->get();
 
             return view('reportMail.RelatorioPorRota', compact('rotas'));
 

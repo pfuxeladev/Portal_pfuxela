@@ -103,6 +103,7 @@
                               $total = 0;
                             ?>
                         @foreach ($rota->ordem_viatura as $ordem)
+                        @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))
                         <tr>
                             <td>{{$ordem->ordem->codigo_ordem}}</td>
                             <td>{{$ordem->ordem->created_at}}</td>
@@ -115,6 +116,8 @@
                             <td>{{$ordem->preco_cunsumo}}</td>
                             <?php $total += $ordem->preco_cunsumo ?>
                         </tr>
+                        @endif
+
                         @endforeach
                     </tbody>
                     <tfoot>
