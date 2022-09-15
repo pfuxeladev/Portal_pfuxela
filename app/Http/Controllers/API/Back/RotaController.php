@@ -149,7 +149,7 @@ class RotaController extends Controller
     function RelatorioPorRota()
     {
         try {
-            $data["email"] = ['supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
             $date = \Carbon\Carbon::today()->subDays(8);
 
