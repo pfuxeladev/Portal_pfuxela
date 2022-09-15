@@ -86,7 +86,7 @@ class RotaController extends Controller
     }
 
    function relactorioRota(Request $request){
-       
+
        $from = date('2022-08-16');
        $to = date('2022-09-01');
     $rotas = Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
@@ -153,7 +153,7 @@ class RotaController extends Controller
         $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->join('ordem_viatura_rotas', 'rotas.id', '=',  'ordem_viatura_rotas.rota_id')->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=',  'ordem_viaturas.id')->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->where('ordems.created_at','>=', $date)->orderBy('rotas.id', 'desc')->get();
 
         $pdf = PDF::loadView('reportMail.RelatorioPorRota', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
-        $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+        
         Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
 
        Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
