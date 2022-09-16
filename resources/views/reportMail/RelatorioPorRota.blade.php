@@ -22,9 +22,14 @@
             align-content: center;
             color: whitesmoke;
             background-color: grey;
-            padding: 0.2em;
-            height: 60px;
+            padding: 0.5em;
+            margin-bottom: 0.5em;
+            height: 55px;
             font-size: 18pt;
+        }
+
+        div.relatorio_header > h3 {
+            margin-bottom: 15px;
         }
 
         .container {
@@ -69,7 +74,7 @@
 <body>
     <div class="container">
         <div class="relatorio_header">
-            <h3 class="relatorio_title">Relatorio abastecimento por cada rota</h3>
+            <h3 class="relatorio_title">Relatorio de abastecimento por rota</h3>
         </div>
         <div class="relatorio_subheader">
             <div class="header">
@@ -82,7 +87,7 @@
         </div>
         <div class="relatorio_content">
             @foreach ($rotas as $rota)
-                <h3>Rota: {{$rota->nome_rota}}</h3>
+                <h3>Rota: {{$rota->nome_rota}} - Projecto: ({{$rota->projecto->name}}), {{$rota->distancia_km}} km</h3>
 
                 <table class="table table-bordered">
                     <thead>
@@ -91,6 +96,7 @@
                             <th>data da criacao</th>
                             <th>estado</th>
                             <th>tipo</th>
+                            <th>Bombas</th>
                             <th>viatura</th>
                             <th>qtd</th>
                             <th>submetido por</th>
@@ -101,29 +107,37 @@
                         <?php $preco = 0;
                               $subtotal = 0;
                               $total = 0;
+                              $qtd_total = 0;
                             ?>
                         @foreach ($rota->ordem_viatura as $ordem)
                         @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))
-                        <tr>
+                        <tr
+                        <?php if($ordem->ordem->estado == 'Cancelada'){
+                            echo "style='background:rgb(255, 192, 199);'";
+                        }?>
+                        >
                             <td>{{$ordem->ordem->codigo_ordem}}</td>
                             <td>{{$ordem->ordem->created_at}}</td>
                             <td>{{$ordem->ordem->estado}}</td>
                             <td>{{$ordem->ordem->tipo_ordem}}</td>
+                            <td>{{$ordem->ordem->bombas->nome_bombas}}</td>
                             <td>{{$ordem->viatura->matricula}}</td>
+
                             <td>{{$ordem->qtd_abastecida}}</td>
+                            <?php $qtd_total += $ordem->qtd_abastecida ?>
                             <?php $user = App\Models\User::where('id', $ordem->ordem->createdBy)->first(); ?>
                             <td>{{$user->name}}</td>
                             <td>{{$ordem->preco_cunsumo}}</td>
                             <?php $total += $ordem->preco_cunsumo ?>
                         </tr>
                         @endif
-
                         @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
-
-                            <td style="text-align: right" colspan="7">Total</td>
+                            <th style="text-align: right" colspan="6">qtd total</th>
+                            <td>{{$qtd_total}}</td>
+                            <th style="text-align: right">Total</th>
                             <td>{{$total}}</td>
                         </tr>
                     </tfoot>
