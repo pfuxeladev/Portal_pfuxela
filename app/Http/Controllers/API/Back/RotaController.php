@@ -139,7 +139,7 @@ class RotaController extends Controller
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
                 $message->to($data["email"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), 'relatorio_da_amabastecimento_por_rota' . date('Y-m-d H:i:s') . '.pdf');
+                    ->attachData($pdf->output(), 'relatorio_da_abastecimento_por_rota' . date('Y-m-d H:i:s') . '.pdf');
             });
             Log::info('email sent to: Users');
             return response()->json(['message' => 'email sent to: Users successfully']);
