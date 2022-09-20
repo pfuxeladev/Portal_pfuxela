@@ -116,7 +116,7 @@ class RotaController extends Controller
 
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Geral de Abastecimento por Rota e Projectos";
+            $data["title"] = "Relatorio Geral de Abastecimento das Rota e Projectos";
 
             $date = \Carbon\Carbon::today()->subDays(30);
 
@@ -131,7 +131,7 @@ class RotaController extends Controller
                 ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
                 ->orderBy('ordems.id', 'desc')->get();
 
-                return  view('reportMail.rotaReportOrders', compact('rotas'));
+                // return  view('reportMail.rotaReportOrders', compact('rotas'));
 
             $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
             Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
