@@ -110,7 +110,7 @@
                               $qtd_total = 0;
                             ?>
                         @foreach ($rota->ordem_viatura as $ordem)
-                        @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))
+                        {{--  @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))  --}}
                         <tr
                         <?php if($ordem->ordem->estado == 'Cancelada'){
                             echo "style='background:rgb(255, 192, 199);'";
@@ -122,15 +122,17 @@
                             <td>{{$ordem->ordem->tipo_ordem}}</td>
                             <td>{{$ordem->ordem->bombas->nome_bombas}}</td>
                             <td>{{$ordem->viatura->matricula}}</td>
-
-                            <td>{{$ordem->qtd_abastecida}}</td>
-                            <?php $qtd_total += $ordem->qtd_abastecida ?>
+                            <?php $qtd = ($ordem->viatura->capacidade_media * $rota->distancia_km) ?>
+                            <td>{{$qtd}}</td>
+                            <?php $qtd_total += $qtd ?>
                             <?php $user = App\Models\User::where('id', $ordem->ordem->createdBy)->first(); ?>
+                            <?php $preco = ($ordem->preco_cunsumo / $ordem->qtd_abastecida)?>
                             <td>{{$user->name}}</td>
-                            <td>{{$ordem->preco_cunsumo}}</td>
-                            <?php $total += $ordem->preco_cunsumo ?>
+                            <?php $preco_consumo = $preco * $qtd?>
+                            <td>{{number_format($preco_consumo, 2, ',', '.')}}</td>
+                            <?php $total += $preco_consumo ?>
                         </tr>
-                        @endif
+                        {{--  @endif  --}}
                         @endforeach
                     </tbody>
                     <tfoot>
@@ -138,7 +140,7 @@
                             <th style="text-align: right" colspan="6">qtd total</th>
                             <td>{{$qtd_total}}</td>
                             <th style="text-align: right">Total</th>
-                            <td>{{$total}}</td>
+                            <td>{{number_format($total, 2, ',', '.')}}</td>
                         </tr>
                     </tfoot>
                 </table>

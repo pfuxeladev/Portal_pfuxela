@@ -41,21 +41,7 @@
                 />
               </b-form-group>
             </b-col>
-            <b-col cols="4" md="4">
-              <b-form-group
-                label="Filtrar por periodo:"
-                label-for="input-8"
-                description="Datas periodicas."
-              >
-                <v-select
-                  v-model="dateReport"
-                  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                  :options="dateOptions"
-                  :reduce="(dateOptions) => dateOptions.value"
-                  :clearable="false"
-                ></v-select>
-              </b-form-group>
-            </b-col>
+
           </b-row>
           <b-row>
             <b-col
@@ -78,8 +64,20 @@
               />
               <label>entradas</label>
             </b-col>
-            <b-col cols="12" md="5"
+            <b-col cols="5" md="5">
+              <b-form-group
+                label="Filtrar por periodo:"
+                label-for="input-8"
+                description="Datas periodicas."
               >
+                <v-select
+                  v-model="dateReport"
+                  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                  :options="dateOptions"
+                  :reduce="(dateOptions) => dateOptions.value"
+                  :clearable="false"
+                ></v-select>
+              </b-form-group>
             </b-col>
             <!-- Search -->
             <b-col cols="4" md="4">

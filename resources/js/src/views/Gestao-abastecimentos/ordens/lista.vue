@@ -108,7 +108,7 @@
         empty-text="Nenhuma ordem listada"
         :sort-desc.sync="isSortDirDesc"
       >
-        <template #cell(cogido_ordem)="data">
+        <template #cell(codigo_ordem)="data">
           {{ data.item.codigo_ordem }}
         </template>
         <template #cell(data_de_emissao)="data">
@@ -301,30 +301,30 @@ export default {
     })
   },
   setup() {
-    const ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply'
+    const ORDER_STORE_MODULE_NAME = 'Supply'
     // Register module
-    if (!store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.registerModule(ORDER_SUPPLY_STORE_MODULE_NAME, storeOrderModule) }
+    if (!store.hasModule(ORDER_STORE_MODULE_NAME)) { store.registerModule(ORDER_STORE_MODULE_NAME, storeOrderModule) }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME) }
+      if (store.hasModule(ORDER_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_STORE_MODULE_NAME) }
     })
     const statusOptions = [
       {
         label: 'aberta',
-        value: 'aberta',
+        value: 'Aberta',
       },
       {
         label: 'pendente',
-        value: 'pendente',
+        value: 'Pendente',
       },
       {
         label: 'aprovado',
-        value: 'aprovado',
+        value: 'Autorizado',
       },
       {
         label: 'cancelada',
-        value: 'cancelada',
+        value: 'Cancelada',
       },
     ]
 
@@ -349,7 +349,7 @@ export default {
         if (err) {
           this.$swal.fire({
             icon: 'error',
-            title: err.data.erro,
+            title: err.response.data.error,
           })
         }
       })

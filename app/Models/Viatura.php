@@ -45,5 +45,8 @@ class Viatura extends Model
     function ordem_viatura(){
         return $this->hasMany(ordem_viatura::class, 'viatura_id', 'id');
     }
+    function check_list_in(){
+        return $this->hasMany(checkListIn::class);
+    }
 
 }

@@ -392,30 +392,30 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   setup: function setup() {
-    var ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+    var ORDER_STORE_MODULE_NAME = 'Supply'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(ORDER_SUPPLY_STORE_MODULE_NAME, _storeOrderModule__WEBPACK_IMPORTED_MODULE_8__["default"]);
+    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(ORDER_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(ORDER_STORE_MODULE_NAME, _storeOrderModule__WEBPACK_IMPORTED_MODULE_8__["default"]);
     } // UnRegister on leave
 
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME);
+      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(ORDER_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(ORDER_STORE_MODULE_NAME);
       }
     });
     var statusOptions = [{
       label: 'aberta',
-      value: 'aberta'
+      value: 'Aberta'
     }, {
       label: 'pendente',
-      value: 'pendente'
+      value: 'Pendente'
     }, {
       label: 'aprovado',
-      value: 'aprovado'
+      value: 'Autorizado'
     }, {
       label: 'cancelada',
-      value: 'cancelada'
+      value: 'Cancelada'
     }];
 
     function dateTime(value) {
@@ -449,7 +449,7 @@ __webpack_require__.r(__webpack_exports__);
         if (err) {
           _this2.$swal.fire({
             icon: 'error',
-            title: err.data.erro
+            title: err.response.data.error
           });
         }
       });
@@ -1231,7 +1231,7 @@ var render = function () {
             },
             scopedSlots: _vm._u([
               {
-                key: "cell(cogido_ordem)",
+                key: "cell(codigo_ordem)",
                 fn: function (data) {
                   return [
                     _vm._v(
@@ -2032,7 +2032,7 @@ function useOrdersList() {
   var refOrdersListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
 
   var tableColumns = [{
-    key: 'cogido_ordem',
+    key: 'codigo_ordem',
     sortable: true
   }, {
     key: 'data_de_emissao',
@@ -2059,6 +2059,7 @@ function useOrdersList() {
   var rangeDate = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var bombasFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var statusFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var statusOptions = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
   var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
     var localItemsCount = refOrdersListTable.value ? refOrdersListTable.value.localItems.length : 0;
     return {

@@ -279,8 +279,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 
@@ -963,46 +961,6 @@ var render = function () {
                       ],
                       1
                     ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      { attrs: { cols: "4", md: "4" } },
-                      [
-                        _c(
-                          "b-form-group",
-                          {
-                            attrs: {
-                              label: "Filtrar por periodo:",
-                              "label-for": "input-8",
-                              description: "Datas periodicas.",
-                            },
-                          },
-                          [
-                            _c("v-select", {
-                              attrs: {
-                                dir: _vm.$store.state.appConfig.isRTL
-                                  ? "rtl"
-                                  : "ltr",
-                                options: _vm.dateOptions,
-                                reduce: function (dateOptions) {
-                                  return dateOptions.value
-                                },
-                                clearable: false,
-                              },
-                              model: {
-                                value: _vm.dateReport,
-                                callback: function ($$v) {
-                                  _vm.dateReport = $$v
-                                },
-                                expression: "dateReport",
-                              },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
                   ],
                   1
                 ),
@@ -1043,7 +1001,45 @@ var render = function () {
                       1
                     ),
                     _vm._v(" "),
-                    _c("b-col", { attrs: { cols: "12", md: "5" } }),
+                    _c(
+                      "b-col",
+                      { attrs: { cols: "5", md: "5" } },
+                      [
+                        _c(
+                          "b-form-group",
+                          {
+                            attrs: {
+                              label: "Filtrar por periodo:",
+                              "label-for": "input-8",
+                              description: "Datas periodicas.",
+                            },
+                          },
+                          [
+                            _c("v-select", {
+                              attrs: {
+                                dir: _vm.$store.state.appConfig.isRTL
+                                  ? "rtl"
+                                  : "ltr",
+                                options: _vm.dateOptions,
+                                reduce: function (dateOptions) {
+                                  return dateOptions.value
+                                },
+                                clearable: false,
+                              },
+                              model: {
+                                value: _vm.dateReport,
+                                callback: function ($$v) {
+                                  _vm.dateReport = $$v
+                                },
+                                expression: "dateReport",
+                              },
+                            }),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
                     _vm._v(" "),
                     _c(
                       "b-col",

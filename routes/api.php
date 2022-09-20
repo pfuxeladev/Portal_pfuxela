@@ -118,10 +118,11 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     // Alocar viaturas
     Route::post('alocarViatura', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'store']);
+    Route::get('getKmViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getViatura']);
 });
 Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
 
-Route::get('RelatorioSemanal', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
+Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
 
 Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
 
