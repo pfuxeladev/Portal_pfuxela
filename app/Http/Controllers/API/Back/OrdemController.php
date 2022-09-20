@@ -72,7 +72,7 @@ class OrdemController extends Controller
 
                 $bomba_inspect = new bombaInspecao();
 
-                $bomba_inspect->bomba_id = $bomba_interna->id;
+                $bomba_inspect->bombas_id = $bomba_interna->id;
                 $bomba_inspect->user_id = auth()->user()->id;
                 $bomba_inspect->Qtd_actual = $bomba_interna->qtd_disponivel;
                 $bomba_inspect->save();
