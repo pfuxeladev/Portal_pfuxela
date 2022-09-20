@@ -103,7 +103,7 @@ class RotaController extends Controller
             ->orderBy('ordems.id', 'desc')->get();
 
         // return response()->json($rotas, 200);
-        // return  view('reportMail.rotaReportOrders', compact('rotas'));
+        return  view('reportMail.rotaReportOrders', compact('rotas'));
         $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
         Storage::put('public/pdf/relatorio_rota.pdf', $pdf->output());
 
@@ -116,7 +116,7 @@ class RotaController extends Controller
 
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
+            $data["title"] = "Relatorio Geral de Abastecimento por Rota e Projectos";
 
             $date = \Carbon\Carbon::today()->subDays(30);
 
@@ -130,6 +130,8 @@ class RotaController extends Controller
                 ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total', 'rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
                 ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
                 ->orderBy('ordems.id', 'desc')->get();
+
+                return  view('reportMail.rotaReportOrders', compact('rotas'));
 
             $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
             Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
@@ -153,7 +155,11 @@ class RotaController extends Controller
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
             $date = \Carbon\Carbon::today()->subDays(8);
 
-            $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])->where('is_active',1)->orderBy('id', 'desc')->get();
+            $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])
+            // ->where('is_active',1)
+            ->orderBy('id', 'desc')->get();
+
+            // return response()->json($rotas, 200);
 
             // return view('reportMail.RelatorioPorRota', compact('rotas'));
 

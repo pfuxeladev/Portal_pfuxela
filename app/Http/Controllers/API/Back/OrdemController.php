@@ -34,12 +34,22 @@ class OrdemController extends Controller
     {
         $this->ordem = $ordem;
     }
-    public function index()
+    public function index(Request $request)
     {
-
-        $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->paginate(15);
-
+        if($request->q){
+            $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')
+            ->orWhere('codigo_ordem','like', '%' . $request->q . '%')->orderBy('id', 'desc')->orWhere('estado', $request->status)->paginate($request->perPage);
         return response()->json($ordem, 200);
+        }else if($request->status){
+            $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')
+            ->where('estado', $request->status)->orderBy('id', 'desc')->paginate($request->perPage);
+        return response()->json($ordem, 200);
+        }else{
+            $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->paginate($request->perPage);
+
+            return response()->json($ordem, 200);
+        }
+
     }
 
     public function OrdensAberta($refs)
@@ -209,7 +219,7 @@ class OrdemController extends Controller
                 $ordem->codigo_ordem = $counter;
             }
             if (Ordem::where('estado', 'Aberta')->where('createdBy', auth()->user()->id)->first())
-                return response()->json(['error' => 'Erro! Ja existe uma ordem aberta no sistema nao pode abrir mais uma novamente'], 200);
+                return response()->json(['error' => 'Erro! Ja existe uma ordem aberta no sistema nao pode abrir mais uma novamente'], 421);
 
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bomba_id;
@@ -372,9 +382,20 @@ class OrdemController extends Controller
 
     function RelatorioGeral(Request $request)
     {
+        if($request->params['q']){
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
+            ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->where('bombas.nome_bombas', $request->params['q'])
+            ->where('ordems.codigo_ordem', 'like', '%' . $request->params['q'] . '%')
+            ->orWhere('viaturas.matricula', 'like', '%' . $request->params['q'] . '%')
+            ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->params['q'] . '%')
+            ->orWhere('rotas.nome_rota', 'like', '%' . $request->params['q'] . '%')
+            ->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
 
-
-        if ($request->params['q'] && $request->params['bombaNome']) {
+            return response()->json($ordem_viatura, 200);
+        } else if ($request->params['q'] && $request->params['bombaNome']) {
             $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->join('ordems', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
                 ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
                 ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
@@ -463,7 +484,8 @@ class OrdemController extends Controller
                 ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')->join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')
                 ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
                 ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-                ->where('bombas.nome_bombas', $request->params['bombaNome'])->whereBetween(DB::raw('DATE(ordems.created_at)'), $request->params['intervalo'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
+                ->whereBetween(DB::raw('DATE(ordems.created_at)'), $request->params['intervalo'])
+                ->where('bombas.nome_bombas', $request->params['bombaNome'])->orderBy('ordems.updated_at', 'desc')->paginate($request->params['perPage']);
 
             return response()->json($ordem_viatura, 200);
         } else if ($request->params['bombaNome']) {

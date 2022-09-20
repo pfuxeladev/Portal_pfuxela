@@ -60,7 +60,6 @@ Vue.use(VueCompositionAPI)
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard
-// Vue.directive('can', (el, binding) => window.Laravel.jsPermissions.indexOf(binding) !== -1)
 
 Vue.use(VueCookies, { expire: '1h' })
 // Vue.prototype.can = function (value) {
@@ -70,6 +69,8 @@ Vue.use(VueCookies, { expire: '1h' })
 //   return window.Laravel.jsPermissions.roles.includes(value)
 // }
 // * Shall remove it if not using font-icons of feather-icons - For form-wizardx
+
+axios.defaults.withCredentials = true
 Vue.filter('toCurrency', value => {
   if (typeof value !== 'number') {
     return value
