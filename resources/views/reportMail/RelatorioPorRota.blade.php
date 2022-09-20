@@ -110,7 +110,7 @@
                               $qtd_total = 0;
                             ?>
                         @foreach ($rota->ordem_viatura as $ordem)
-                        {{--  @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))  --}}
+                        @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))
                         <tr
                         <?php if($ordem->ordem->estado == 'Cancelada'){
                             echo "style='background:rgb(255, 192, 199);'";
@@ -132,7 +132,7 @@
                             <td>{{number_format($preco_consumo, 2, ',', '.')}}</td>
                             <?php $total += $preco_consumo ?>
                         </tr>
-                        {{--  @endif  --}}
+                        @endif
                         @endforeach
                     </tbody>
                     <tfoot>

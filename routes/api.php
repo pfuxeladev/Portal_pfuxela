@@ -146,8 +146,4 @@ Route::get('RelatorioPorRota', [RotaController::class, 'RelatorioPorRota']);
 
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return auth()->user();
 
-
-// });
