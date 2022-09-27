@@ -90,7 +90,8 @@ Route::group(['middleware' => 'auth:api'], function () {
             'combustivel' => App\Http\Controllers\API\CombustivelController::class,
             'users' => \App\Http\Controllers\API\Back\UserController::class,
             'CheckListOut' => \App\Http\Controllers\API\Back\CheckListOutController::class,
-            'CheckListIn' => \App\Http\Controllers\API\Back\CheckListInController::class
+            'CheckListIn' => \App\Http\Controllers\API\Back\CheckListInController::class,
+            'viaturasAlocadas'=>\App\Http\Controllers\API\Back\ViaturaAlocadaController::class
         ]
     );
 

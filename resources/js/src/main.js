@@ -18,6 +18,7 @@ import App from './App.vue'
 import './global-components'
 
 import VueCookies from 'vue-cookies'
+import useJwt from '@/auth/jwt/useJwt'
 
 // 3rd party plugins
 import '@axios'
@@ -71,6 +72,27 @@ Vue.use(VueCookies, { expire: '1h' })
 // * Shall remove it if not using font-icons of feather-icons - For form-wizardx
 
 axios.defaults.withCredentials = true
+const token = localStorage.getItem('accessToken')
+if (token) {
+  axios.defaults.headers.common.Authorization = `Bearer${token}`
+}
+
+axios.interceptors.response.use(undefined, error => {
+  if (error) {
+    const originalRequest = error.config
+    if (error.response.status === 401 && !originalRequest._retry) {
+      originalRequest._retry = true
+      localStorage.removeItem(useJwt.jwtConfig.storageTokenKeyName)
+      localStorage.removeItem(useJwt.jwtConfig.storageRefreshTokenKeyName)
+
+      // Remove userData from localStorage
+      localStorage.removeItem('userData')
+      return router.push({ path: '/login' })
+    }
+  } else {
+    store.commit('handler_error', JSON.parse(error.response.data.error))
+  }
+})
 Vue.filter('toCurrency', value => {
   if (typeof value !== 'number') {
     return value
