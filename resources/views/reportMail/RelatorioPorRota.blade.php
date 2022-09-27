@@ -139,7 +139,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th style="text-align: right" colspan="6">qtd total</th>
+                            <th style="text-align: right" colspan="7">qtd total</th>
                             <td>{{$qtd_total}}</td>
                             <th style="text-align: right">Total</th>
                             <td>{{number_format($total, 2, ',', '.')}}</td>
