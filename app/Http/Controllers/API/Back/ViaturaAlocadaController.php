@@ -11,13 +11,17 @@ use Carbon\Carbon;
 
 class ViaturaAlocadaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $viatura_rota;
+
+    function __construct(ViaturaRota $viatura_rota)
+    {
+        $this->viatura_rota = $viatura_rota;
+    }
     public function index()
     {
+        $viatura_rota = $this->viatura_rota->with(['rota', 'viatura.viatura_historico'])->orderBy('created_at', 'desc')->paginate(15);
+
+        return response($viatura_rota, 200);
     }
 
     public function historicoDeLeitura()
@@ -33,10 +37,16 @@ class ViaturaAlocadaController extends Controller
     public function store(Request $request)
     {
 
-        $viatura_rota = ViaturaRota::whereIn('rota_id', $request->rota['rota_id'])->where('viatura_id', $request->viatura_id)->where('created_at', '>=', Carbon::now()->subMinutes(360)->toDateTimeString())->get();
-        if (!empty($viatura_rota)) {
-            return response(['error' => 'Nao pode duas viaturas na mesma rota'], 421);
+        foreach ($request->rota['rota_id'] as $key => $rota_id) {
+            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', Carbon::now()->subMinutes(360)->toDateTimeString())->first();
+
+            if ($viatura_rota !=0) {
+                // return $viatura_rota;
+                return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
+            }
         }
+
+
 
         $viaturaLeitura = new viatura_historico();
 
@@ -50,6 +60,9 @@ class ViaturaAlocadaController extends Controller
         $viaturaLeitura->estado = true;
         $viaturaLeitura->created_by_user_id = auth()->user()->id;
         $viaturaLeitura->save();
+
+        $viatura = Viatura::where('id', $request->viatura_id)->first();
+        
 
         if ($viaturaLeitura) {
             foreach ($request->rota['rota_id'] as $key => $rotas) {

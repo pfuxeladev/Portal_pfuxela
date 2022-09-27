@@ -69,6 +69,7 @@
     </b-card>
     <b-modal
       id="modal-lg"
+      ref="alocateModal"
       size="lg"
        hide-footer
        hide-backdrop
@@ -149,7 +150,7 @@
         </b-form-row>
         <b-form-row>
             <b-col>
-                <b-button variant="secondary">cancelar</b-button>
+                <b-button variant="secondary" type="reset"  @click="toggleModal()">cancelar</b-button>
             </b-col>
             <b-col>
                 <b-button type="submit" variant="outline-success">
@@ -278,6 +279,9 @@ export default {
       this.form.kmPercorridos = this.form.manometro_km - this.form.kmActual
       this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media)
     }
+    function toggleModal() {
+      this.$refs.alocateModal.toggle('#toggle-btn');
+    }
 
     // Alocar viatura
     const toast = useToast()
@@ -292,6 +296,7 @@ export default {
               variant: 'success',
             },
           })
+          this.$refs.alocateModal.toggle()
         }).catch(error => {
           if (error.response.status === 421) {
             toast({
@@ -320,6 +325,7 @@ export default {
       getKmActual,
       calculaKm,
       alocarViatura,
+      toggleModal,
     }
   },
   created() {

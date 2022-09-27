@@ -272,6 +272,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -376,12 +377,18 @@ __webpack_require__.r(__webpack_exports__);
     function calculaKm() {
       this.form.kmPercorridos = this.form.manometro_km - this.form.kmActual;
       this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media);
+    }
+
+    function toggleModal() {
+      this.$refs.alocateModal.toggle('#toggle-btn');
     } // Alocar viatura
 
 
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])();
 
     function alocarViatura() {
+      var _this5 = this;
+
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/alocateVehicle', this.form).then(function (response) {
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -391,6 +398,8 @@ __webpack_require__.r(__webpack_exports__);
             variant: 'success'
           }
         });
+
+        _this5.$refs.alocateModal.toggle();
       })["catch"](function (error) {
         if (error.response.status === 421) {
           toast({
@@ -418,7 +427,8 @@ __webpack_require__.r(__webpack_exports__);
       fetchRotas: fetchRotas,
       getKmActual: getKmActual,
       calculaKm: calculaKm,
-      alocarViatura: alocarViatura
+      alocarViatura: alocarViatura,
+      toggleModal: toggleModal
     };
   },
   created: function created() {
@@ -1037,6 +1047,7 @@ var render = function () {
       _c(
         "b-modal",
         {
+          ref: "alocateModal",
           attrs: {
             id: "modal-lg",
             size: "lg",
@@ -1317,9 +1328,18 @@ var render = function () {
                   _c(
                     "b-col",
                     [
-                      _c("b-button", { attrs: { variant: "secondary" } }, [
-                        _vm._v("cancelar"),
-                      ]),
+                      _c(
+                        "b-button",
+                        {
+                          attrs: { variant: "secondary", type: "reset" },
+                          on: {
+                            click: function ($event) {
+                              return _vm.toggleModal()
+                            },
+                          },
+                        },
+                        [_vm._v("cancelar")]
+                      ),
                     ],
                     1
                   ),

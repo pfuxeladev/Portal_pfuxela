@@ -45,7 +45,7 @@ class AbastecimentoController extends Controller
     function ListarViaturas()
     {
 
-        return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(14))
+        return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(60))
             ->select('matricula', 'id')->get();
     }
 

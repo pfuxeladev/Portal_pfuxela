@@ -98,9 +98,10 @@
                             <th>tipo</th>
                             <th>Bombas</th>
                             <th>viatura</th>
+                            <th>ltr/km</th>
                             <th>qtd</th>
                             <th>submetido por</th>
-                            <th>subtotal</th>
+                            <th>subtotal (MT)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -122,6 +123,7 @@
                             <td>{{$ordem->ordem->tipo_ordem}}</td>
                             <td>{{$ordem->ordem->bombas->nome_bombas}}</td>
                             <td>{{$ordem->viatura->matricula}}</td>
+                            <td>{{$ordem->viatura->capacidade_media}}</td>
                             <?php $qtd = ($ordem->viatura->capacidade_media * $rota->distancia_km) ?>
                             <td>{{$qtd}}</td>
                             <?php $qtd_total += $qtd ?>

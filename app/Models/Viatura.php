@@ -49,4 +49,8 @@ class Viatura extends Model
         return $this->hasMany(checkListIn::class);
     }
 
+    protected function viatura_historico(){
+        return $this->hasMany(viatura_historico::class, 'viatura_id', 'id');
+    }
+
 }
