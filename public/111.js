@@ -9,35 +9,24 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
-/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
+/* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 //
 //
 //
@@ -253,30 +242,29 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCollapse"],
-    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardSubTitle"],
-    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardTitle"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardHeader"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BModal"],
-    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRow"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BForm"],
-    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormText"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BLink"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BBadge"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"]
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_3___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BBadge"],
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormTextarea"]
   },
   data: function data() {
     return {
       viatura: [],
-      rota: [],
       projecto: [],
       rec_abast: null,
       bombas: {},
@@ -285,12 +273,15 @@ __webpack_require__.r(__webpack_exports__);
         nome_bombas: ''
       }],
       abastecimento: [],
+      ltr_km: 0,
       OpenOrder: {},
-      form: new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
+      form: new vform__WEBPACK_IMPORTED_MODULE_4__["default"]({
         bombas_id: null,
         ordem_id: this.$route.params.refs,
         projecto_id: null,
         viatura_id: null,
+        km_total: 0,
+        rota: [],
         rota_id: null,
         qtd_abastecer: 0,
         observacao: null
@@ -310,9 +301,21 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   directives: {
-    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_7__["default"]
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_8__["default"]
   },
-  mounted: function mounted() {// console.log(this.bombas)
+  computed: {
+    TotalDistance: function TotalDistance() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.form.km_total = this.form.rota.reduce(function (r, item) {
+        return r + item.distancia;
+      }, 0);
+      return this.form.km_total;
+    },
+    qtdAbastecer: function qtdAbastecer() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.form.qtd_abastecer = parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast;
+      return parseFloat(this.form.qtd_abastecer);
+    }
   },
   methods: {
     getQtd: function getQtd() {
@@ -322,7 +325,13 @@ __webpack_require__.r(__webpack_exports__);
       this.$http.get("/api/getQtdDisponivel/".concat(this.form.viatura_id)).then(function (res) {
         _this2.rec_abast = res.data;
         console.log(_this2.rec_abast);
-      })["catch"](function (err) {});
+      });
+      this.$http.get("/api/getAlocateRoute/".concat(this.form.viatura_id)).then(function (res) {
+        _this2.form.rota = res.data;
+      });
+      this.$http.get("/api/ltrPkm/".concat(this.form.viatura_id)).then(function (res) {
+        _this2.ltr_km = res.data;
+      });
     },
     fetchProjectos: function fetchProjectos() {
       var _this3 = this;
@@ -333,86 +342,66 @@ __webpack_require__.r(__webpack_exports__);
         console.log(err);
       });
     },
-    fetchRotas: function fetchRotas() {
-      var _this4 = this;
-
-      console.log(this.form.abastecer); //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
-
-      this.$http.get('/api/todasRotas').then(function (res) {
-        _this4.rota = res.data;
-
-        if (res.data === '') {
-          _this4.$swal.fire({
-            icon: 'error',
-            title: 'Nao existe nenhuma rota cadastrada!'
-          });
-        }
-      })["catch"](function (err) {
-        _this4.$swal.fire({
-          icon: 'error',
-          title: 'Erro ao tentar buscar!'
-        });
-      }); //   }
+    calculaKm: function calculaKm(rts) {
+      console.log(rts);
     },
     fetchBombas: function fetchBombas() {
-      var _this5 = this;
+      var _this4 = this;
 
       this.$http.get("/api/bomba/".concat(this.$route.params.refs)).then(function (res) {
-        _this5.bombas = res.data; // console.log(this.bombas)
+        _this4.bombas = res.data; // console.log(this.bombas)
       });
     },
     fetchViaturas: function fetchViaturas() {
-      var _this6 = this;
+      var _this5 = this;
 
       this.$http.get('/api/listarViaturas').then(function (res) {
-        _this6.viatura = res.data;
+        _this5.viatura = res.data;
       });
     },
     returnAbastecimento: function returnAbastecimento() {
-      var _this7 = this;
+      var _this6 = this;
 
       this.$http.get("/api/CurrentAbst/".concat(this.$route.params.refs)).then(function (res) {
-        _this7.abastecimento = res.data;
+        _this6.abastecimento = res.data;
       });
     },
     NovaOrdem: function NovaOrdem() {
-      var _this8 = this;
+      var _this7 = this;
 
       this.$Progress.start();
       this.form.post('/api/Abastecimento').then(function (res) {
         if (res.status === 200) {
-          _this8.$swal.fire({
+          _this7.$swal.fire({
             icon: 'success',
             title: res.data.success
           });
 
-          _this8.$Progress.finish();
-
-          _this8.form.reset(); // eslint-disable-next-line no-restricted-globals
+          _this7.$Progress.finish(); // eslint-disable-next-line no-restricted-globals
 
 
           window.location.reload();
         }
       })["catch"](function (err) {
         if (err.response.status === 421) {
-          _this8.$swal.fire({
+          _this7.$swal.fire({
             icon: 'error',
             title: err.response.data.erro
           });
 
-          _this8.$Progress.fail();
+          _this7.$Progress.fail();
         } else if (err.response.status === 422) {
-          _this8.$swal.fire({
+          _this7.$swal.fire({
             icon: 'error',
             title: "".concat(err.response.data.errors.viatura_id, "<br/>").concat(err.response.data.errors.rota_id, "<br/>").concat(err.response.data.errors.turno, "<br/>").concat(err.response.data.errors.qtd_abastecer)
           });
 
-          _this8.$Progress.fail();
+          _this7.$Progress.fail();
         }
       });
     },
     onReset: function onReset(event) {
-      var _this9 = this;
+      var _this8 = this;
 
       event.preventDefault(); // Reset our form values
 
@@ -420,31 +409,31 @@ __webpack_require__.r(__webpack_exports__);
 
       this.show = false;
       this.$nextTick(function () {
-        _this9.show = true;
+        _this8.show = true;
       });
     }
   },
   setup: function setup() {
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__["useToast"])();
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_7__["useToast"])();
     var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_10__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_10__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_11__["default"]); // UnRegister on leave
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_10__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
 
     function getSubmited() {
-      var _this10 = this;
+      var _this9 = this;
 
-      this.$http.get("/api/Ordems/".concat(_router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs)).then(function (response) {
-        _this10.OpenOrder = response.data;
-        console.log(_this10.OpenOrder);
+      this.$http.get("/api/Ordems/".concat(_router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.refs)).then(function (response) {
+        _this9.OpenOrder = response.data;
+        console.log(_this9.OpenOrder);
       })["catch"](function (error) {
         if (error) {
           console.log(error);
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
             props: {
               title: 'Nenhuma viatura submitida a ordem',
               icon: 'AlertTriangleIcon',
@@ -469,25 +458,25 @@ __webpack_require__.r(__webpack_exports__);
         buttonsStyling: false
       }).then(function (result) {
         if (result.value) {
-          _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Supply/addAbastecimento', order).then(function (response) {
+          _store__WEBPACK_IMPORTED_MODULE_10__["default"].dispatch('Supply/addAbastecimento', order).then(function (response) {
             toast({
-              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
               props: {
                 title: response.data.success,
                 icon: 'CheckSquareIcon',
                 variant: 'success'
               }
             });
-            _router__WEBPACK_IMPORTED_MODULE_8__["default"].push({
+            _router__WEBPACK_IMPORTED_MODULE_9__["default"].push({
               name: 'supply-details',
               params: {
-                refs: _router__WEBPACK_IMPORTED_MODULE_8__["default"].currentRoute.params.refs
+                refs: _router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.refs
               }
             }); //   window.location.reload()
           })["catch"](function (err) {
             if (err) {
               toast({
-                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
                 props: {
                   title: err.response.data.error,
                   icon: 'AlertTriangleIcon',
@@ -502,11 +491,11 @@ __webpack_require__.r(__webpack_exports__);
 
     function removerPedido(order) {
       //   console.log(order)
-      _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Supply/removeLine', {
+      _store__WEBPACK_IMPORTED_MODULE_10__["default"].dispatch('Supply/removeLine', {
         refs: order.id
       }).then(function (response) {
         toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
           props: {
             title: response.data.success,
             icon: 'CheckSquareIcon',
@@ -517,7 +506,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (err) {
         if (err.response.status === 421) {
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
             props: {
               title: err.response.data.erro,
               icon: 'AlertTriangleIcon',
@@ -694,9 +683,11 @@ var render = function () {
                                                   ]
                                                 ),
                                                 _vm._v(" "),
-                                                _c("th", [_vm._v("projecto")]),
+                                                _c("th", [
+                                                  _vm._v("Rotas e projecto"),
+                                                ]),
                                                 _vm._v(" "),
-                                                _c("th", [_vm._v("Rota")]),
+                                                _c("th", [_vm._v("Km(s)")]),
                                                 _vm._v(" "),
                                                 _c("th", [
                                                   _vm._v(
@@ -771,101 +762,81 @@ var render = function () {
                                                 {
                                                   staticStyle: { width: "20%" },
                                                 },
-                                                [
-                                                  _c("v-select", {
-                                                    attrs: {
-                                                      label: "name",
-                                                      options: _vm.projecto,
-                                                      reduce: function (
-                                                        projecto
-                                                      ) {
-                                                        return projecto.id
+                                                _vm._l(
+                                                  _vm.form.rota,
+                                                  function (rts, r) {
+                                                    return _c(
+                                                      "span",
+                                                      {
+                                                        key: "r" + r,
+                                                        staticClass: "m1",
                                                       },
-                                                    },
-                                                    on: {
-                                                      input: _vm.fetchRotas,
-                                                    },
-                                                    model: {
-                                                      value:
-                                                        _vm.form.projecto_id,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "projecto_id",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.projecto_id",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
+                                                      [
+                                                        _c(
+                                                          "span",
+                                                          {
+                                                            staticClass:
+                                                              "badge badge-primary",
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              _vm._s(
+                                                                rts.rota_projecto
+                                                              )
+                                                            ),
+                                                          ]
+                                                        ),
+                                                      ]
+                                                    )
+                                                  }
+                                                ),
+                                                0
                                               ),
                                               _vm._v(" "),
                                               _c(
                                                 "td",
                                                 {
-                                                  staticStyle: { width: "30%" },
+                                                  staticStyle: { width: "20%" },
                                                 },
                                                 [
-                                                  _c("v-select", {
-                                                    attrs: {
-                                                      multiple: "",
-                                                      label: "nome_rota",
-                                                      options: _vm.rota,
-                                                      reduce: function (rota) {
-                                                        return rota.id
-                                                      },
+                                                  _c(
+                                                    "span",
+                                                    {
+                                                      staticClass:
+                                                        "text-primary",
                                                     },
-                                                    model: {
-                                                      value: _vm.form.rota_id,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "rota_id",
-                                                          $$v
+                                                    [
+                                                      _vm._v(
+                                                        _vm._s(
+                                                          _vm.TotalDistance
                                                         )
-                                                      },
-                                                      expression:
-                                                        "form.rota_id",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "td",
-                                                [
-                                                  _c("b-form-input", {
-                                                    attrs: {
-                                                      type: "text",
-                                                      placeholder:
-                                                        "Qtd em litros",
-                                                    },
-                                                    model: {
-                                                      value:
-                                                        _vm.form.qtd_abastecer,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "qtd_abastecer",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.qtd_abastecer",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
+                                                      ),
+                                                    ]
+                                                  ),
+                                                  _vm._v(
+                                                    " Km's\n                        "
+                                                  ),
+                                                ]
                                               ),
                                               _vm._v(" "),
                                               _c(
                                                 "td",
                                                 {
-                                                  staticStyle: { width: "30%" },
+                                                  staticStyle: { width: "20%" },
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                          " +
+                                                      _vm._s(_vm.qtdAbastecer) +
+                                                      "\n                        "
+                                                  ),
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "td",
+                                                {
+                                                  staticStyle: { width: "25%" },
                                                 },
                                                 [
                                                   _c("v-select", {

@@ -16,8 +16,12 @@ class motorista extends Model
     public function checkListOut(){
         return $this->hasMany(checkListOut::class);
     }
-    
+
     public function checkListIn(){
         return $this->hasMany(checkListIn::class);
+    }
+
+    function viatura_historico(){
+        return $this->hasMany(viatura_historico::class);
     }
 }

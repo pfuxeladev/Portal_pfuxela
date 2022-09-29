@@ -9,7 +9,13 @@ class viatura_historico extends Model
 {
     use HasFactory;
 
+    protected $table = 'viatura_historicos';
+
     function viatura(){
-        return $this->belongsTo(Viatura::class, 'viatura_id','id');
+        return $this->belongsTo(Viatura::class);
+    }
+
+    function motorista(){
+        return $this->belongsTo(motorista::class);
     }
 }

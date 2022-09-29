@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Response;
 use App\Models\Modelo;
 use App\Models\Ordem;
 use App\Models\viaturaDocument;
+use App\Models\ViaturaRota;
+use DateTime;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Carbon;
 class ViaturaController extends Controller
@@ -45,14 +47,34 @@ class ViaturaController extends Controller
 
         // $roles = auth()->user()->getRoleNames();
         if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
-            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('nome_viatura', '!=', 'BUS')->where('updated_at', '>=', Carbon::now()->subDays(28))
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('nome_viatura', '!=', 'BUS')
             ->select('matricula', 'id')->get();
         } else {
-            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(30))
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)
             ->select('matricula', 'id')->get();
         }
 
 
+    }
+
+    function viaturaNaoAlocadas(){
+        return Viatura::join('checklist_in', 'viaturas.id', 'checklist_in.viatura_id')->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
+        ->whereDate('checklist_in.created_at', '=', (new DateTime())->format('Y-m-d'))->select('viaturas.matricula', 'viaturas.id')->get();
+
+    }
+    function litrosKm($viatura_id){
+        $km_ltr = 0;
+        $viatura = Viatura::where('id', $viatura_id)->first();
+        if ($viatura) {
+            $km_ltr =  $viatura->capacidade_media;
+
+            if (!empty($km_ltr)) {
+                return $km_ltr;
+            } else {
+                return 0;
+            }
+        }
+        return 0;
     }
     public function store(Request $request)
     {

@@ -49,22 +49,34 @@
         </b-col>
       </b-row>
       <b-card-body>
-        <table class="table table-bordered table-tripped table-responsive">
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>viatura</th>
-              <th>km anterior</th>
-              <th>km actual</th>
-              <th>qtd prevista</th>
-              <th>km percorridos</th>
-              <th>qtd abastecida</th>
-              <th>rotas alocadas</th>
-              <th>criado por</th>
-              <th>actualizado por</th>
-            </tr>
-          </thead>
-        </table>
+        <b-table
+        ref="refViaturaListTable"
+        class="position-relative"
+        :items="fetchViaturasAlocadas"
+        responsive
+        :fields="tableColumns"
+        primary-key="id"
+        :sort-by.sync="sortBy"
+        show-empty
+        empty-text="No matching records found"
+        :sort-desc.sync="isSortDirDesc"
+      >
+       <template #cell(matricula)="data">
+            {{ data.item.matricula }}
+        </template>
+        <template #cell(ltr_por_km)="data">
+            {{ data.item.capacidade_media }}
+        </template>
+        <template #cell(combustivel)="data">
+            {{ data.item.tipo_combustivel }}
+        </template>
+        <template #cell(kilometragem_ant)="data">
+            {{ data.item.kilometragem_ant }}
+        </template>
+        <template #cell(km_percorridos)="data">
+            {{ data.item.km_percorridos }}
+        </template>
+    </b-table>
       </b-card-body>
     </b-card>
     <b-modal
@@ -175,6 +187,7 @@ import {
   BFormRow,
   BFormGroup,
   BModal,
+  BTable,
 } from 'bootstrap-vue'
 import { useToast } from 'vue-toastification/composition'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
@@ -185,6 +198,7 @@ import Form from 'vform'
 import store from '@/store'
 import router from '@/router'
 import StoreViaturaModule from './StoreViaturaModule'
+import viatursAlocadasList from './viaturaAlocada'
 
 export default {
   name: 'AlocarViatura',
@@ -200,6 +214,7 @@ export default {
     BFormRow,
     BModal,
     vSelect,
+    BTable,
   },
   setup() {
 
@@ -216,7 +231,6 @@ export default {
         store.unregisterModule(PIQUETE_APP_STORE_MODULE_NAME)
       }
     })
-    const perPage = 10
     const pesquisar = ref('')
     const viatura = ref(null)
     const rotas = ref(null)
@@ -240,7 +254,7 @@ export default {
     )
     // buscar viaturas
     function fetchViaturas() {
-      this.$http.get('/api/listarViaturas').then(res => {
+      this.$http.get('/api/viaturaNaoAlocada').then(res => {
         this.viatura = res.data
       }).catch(err => {
         console.log(err)
@@ -310,12 +324,37 @@ export default {
           }
         })
     }
+    const {
+      fetchViaturasAlocadas,
+      tableColumns,
+      perPage,
+      currentPage,
+      totalViaturas,
+      dataMeta,
+      perPageOptions,
+      searchQuery,
+      sortBy,
+      isSortDirDesc,
+      refViaturaListTable,
+      refetchData,
+    } = viatursAlocadasList()
 
     return {
       viatura,
       rotas,
       form,
+      tableColumns,
       perPage,
+      currentPage,
+      totalViaturas,
+      dataMeta,
+      perPageOptions,
+      searchQuery,
+      sortBy,
+      isSortDirDesc,
+      refViaturaListTable,
+      refetchData,
+      fetchViaturasAlocadas,
       pesquisar,
       motoristas,
       dadosViatura,

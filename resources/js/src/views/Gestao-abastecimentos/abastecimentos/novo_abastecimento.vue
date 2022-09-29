@@ -45,8 +45,8 @@
                           <th class="text-danger">
                             viatura(matr)
                           </th>
-                          <th>projecto</th>
-                          <th>Rota</th>
+                          <th>Rotas e projecto</th>
+                          <th>Km(s)</th>
                           <th>
                             Qtd(<small class="text-lowercase">ltr</small>)
                           </th>
@@ -67,31 +67,17 @@
                             ({{ rec_abast }})Litros no tanque
                           </td>
                           <td style="width: 20%">
-                            <v-select
-                              v-model="form.projecto_id"
-                              label="name"
-                              :options="projecto"
-                              :reduce="(projecto) => projecto.id"
-                              @input="fetchRotas"
-                            />
+                            <span class="m1" v-for="(rts, r) in form.rota" :key="'r'+r">
+                                <span class="badge badge-primary">{{rts.rota_projecto}}</span>
+                            </span>
                           </td>
-                          <td style="width: 30%">
-                            <v-select
-                              v-model="form.rota_id"
-                              multiple
-                              label="nome_rota"
-                              :options="rota"
-                              :reduce="(rota) => rota.id"
-                            />
+                          <td style="width: 20%">
+                                <span class="text-primary">{{TotalDistance}}</span> Km's
                           </td>
-                          <td>
-                            <b-form-input
-                              v-model="form.qtd_abastecer"
-                              type="text"
-                              placeholder="Qtd em litros"
-                            />
+                          <td style="width:20%">
+                            {{qtdAbastecer}}
                           </td>
-                          <td style="width: 30%">
+                          <td style="width: 25%">
                             <v-select
                               v-model="form.turno"
                               :options="['manha', 'tarde']"
@@ -274,18 +260,20 @@ export default {
   data() {
     return {
       viatura: [],
-      rota: [],
       projecto: [],
       rec_abast: null,
       bombas: {},
       bomba: [{ id: null, nome_bombas: '' }],
       abastecimento: [],
+      ltr_km: 0,
       OpenOrder: {},
       form: new Form({
         bombas_id: null,
         ordem_id: this.$route.params.refs,
         projecto_id: null,
         viatura_id: null,
+        km_total: 0,
+        rota: [],
         rota_id: null,
         qtd_abastecer: 0,
         observacao: null,
@@ -306,8 +294,20 @@ export default {
   directives: {
     Ripple,
   },
-  mounted() {
-    // console.log(this.bombas)
+  computed: {
+    TotalDistance() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.form.km_total = this.form.rota.reduce((r, item) => r + (item.distancia), 0)
+
+      return this.form.km_total
+    },
+
+    qtdAbastecer() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      this.form.qtd_abastecer = parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast
+
+      return parseFloat(this.form.qtd_abastecer)
+    },
   },
   methods: {
     getQtd() {
@@ -315,8 +315,12 @@ export default {
       this.$http.get(`/api/getQtdDisponivel/${this.form.viatura_id}`).then(res => {
         this.rec_abast = res.data
         console.log(this.rec_abast)
-      }).catch(err => {
-
+      })
+      this.$http.get(`/api/getAlocateRoute/${this.form.viatura_id}`).then(res =>{
+        this.form.rota = res.data
+      })
+      this.$http.get(`/api/ltrPkm/${this.form.viatura_id}`).then(res =>{
+        this.ltr_km = res.data
       })
     },
     fetchProjectos() {
@@ -326,25 +330,8 @@ export default {
         console.log(err)
       })
     },
-
-    fetchRotas() {
-      console.log(this.form.abastecer)
-      //   for (let i = 0; i < this.form.abastecer.length; i++ ) {
-      this.$http.get('/api/todasRotas').then(res => {
-        this.rota = res.data
-        if (res.data === '') {
-          this.$swal.fire({
-            icon: 'error',
-            title: 'Nao existe nenhuma rota cadastrada!',
-          })
-        }
-      }).catch(err => {
-        this.$swal.fire({
-          icon: 'error',
-          title: 'Erro ao tentar buscar!',
-        })
-      })
-      //   }
+    calculaKm(rts) {
+      console.log(rts)
     },
     fetchBombas() {
       this.$http.get(`/api/bomba/${this.$route.params.refs}`).then(res => {
@@ -371,7 +358,6 @@ export default {
             title: res.data.success,
           })
           this.$Progress.finish()
-          this.form.reset()
           // eslint-disable-next-line no-restricted-globals
           window.location.reload()
         }

@@ -24,6 +24,8 @@ use Barryvdh\DomPDF\Facade\PDF;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
+use App\Models\ViaturaRota;
+use DateTime;
 use Illuminate\Support\Carbon;
 
 class AbastecimentoController extends Controller
@@ -44,9 +46,19 @@ class AbastecimentoController extends Controller
 
     function ListarViaturas()
     {
+        $viatura = array();
 
-        return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('updated_at', '>=', Carbon::now()->subDays(60))
-            ->select('matricula', 'id')->get();
+        $viatura_rota = ViaturaRota::whereDate('created_at', date('Y-m-d'))->get();
+
+            foreach ($viatura_rota as $key => $vr) {
+               $viatura[$key] = $vr->viatura_id;
+            }
+            if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
+                return Viatura::whereIn('viaturas.id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)->where('viaturas.nome_viatura', '!=', 'BUS')
+                ->select('viaturas.matricula', 'viaturas.id')->get();
+            } else {
+                return Viatura::whereIn('id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)->where('viaturas.updated_at', '>=', Carbon::now()->subDays(60))->get();
+            }
     }
 
     function RotaByProject(Request $request)
@@ -81,11 +93,11 @@ class AbastecimentoController extends Controller
     public function store(Request $request)
     {
 
-        // return $request->all();
+
         $totalAbastecer = 0;
         $this->validate($request, [
             'viatura_id' => 'required|integer|exists:viaturas,id',
-            'rota_id' => 'required',
+            'rota' => 'required',
             'qtd_abastecer' => 'required|numeric|min:0',
             'turno' => 'required|string|max:255',
         ], [
@@ -128,9 +140,9 @@ class AbastecimentoController extends Controller
         } else {
             return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
         }
-        foreach ($request->rota_id as $key => $rt) {
+        foreach ($request->rota as $key => $rt) {
             $ordem_rota = OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')->join('ordems', 'ordems.id', '=','ordem_viaturas.ordem_id')
-            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where('ordems.estado', '!=', 'Cancelada')->where(['ordem_viatura_rotas.rota_id' => $rt])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')->where('ordems.estado', '!=', 'Cancelada')->where(['ordem_viatura_rotas.rota_id' => $rt['id']])->where('ordem_viatura_rotas.updated_at','>', Carbon::now()->subHours(5))->first();
 
             // return $ordem_rota;
             if (!empty($ordem_rota)) {
@@ -151,7 +163,12 @@ class AbastecimentoController extends Controller
 
        $distanciaTotal = 0;
 
-        $distanciaTotal = Rota::whereIn('id', $request->rota_id)->sum('distancia_km');
+       $rotas = array();
+       foreach ($request->rota as $key => $route) {
+       $rotas[$key] = $route['id'];
+       }
+
+        $distanciaTotal = Rota::whereIn('id', $rotas)->sum('distancia_km');
 
         $qtdNecessaria = $distanciaTotal * $viatura->capacidade_media;
 
@@ -170,11 +187,11 @@ class AbastecimentoController extends Controller
            $viatura->update();
        }
 
-        foreach ($request->rota_id as $key => $rt) {
+        foreach ($request->rota as $key => $rt) {
 
 
             $ordemViatura->ordemViaturaRota()->create([
-                'rota_id' => $rt,
+                'rota_id' => $rt['id'],
                 'qtd' => $request->qtd_abastecer,
                 'preco_total' => $preco,
                 'justificacao' => $request->observacao,

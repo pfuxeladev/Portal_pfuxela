@@ -1,4 +1,5 @@
 import axios from '@axios'
+import { reject } from 'q'
 
 export default {
   namespaced: true,
@@ -48,6 +49,15 @@ export default {
     alocateVehicle(ctx, viatura) {
       return new Promise((resolve, reject) => {
         axios.post('/api/alocarViatura', viatura)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    alocatedVehicles(ctx, viatura) {
+      // eslint-disable-next-line no-shadow
+      return new Promise((resolve, reject) => {
+        axios.get('/api/viaturasAlocadas', viatura)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

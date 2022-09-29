@@ -32,7 +32,7 @@ class Viatura extends Model
     }
 
     public function rota(){
-        return $this->belongsToMany(Rota::class);
+        return $this->belongsToMany(Rota::class,'viatura_rotas', 'viatura_id', 'rota_id');
     }
 
     function anexo(){
@@ -49,8 +49,8 @@ class Viatura extends Model
         return $this->hasMany(checkListIn::class);
     }
 
-    protected function viatura_historico(){
-        return $this->hasMany(viatura_historico::class, 'viatura_id', 'id');
+     function viatura_historico(){
+        return $this->hasMany(viatura_historico::class);
     }
 
 }
