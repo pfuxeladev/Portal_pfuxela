@@ -218,8 +218,11 @@ class OrdemController extends Controller
             } else {
                 $ordem->codigo_ordem = $counter;
             }
-            if (Ordem::where('estado', 'Aberta')->where('createdBy', auth()->user()->id)->first())
+            $ordem = Ordem::where('estado', 'Aberta')->where('createdBy', auth()->user()->id)->get();
+            if (!empty($ordem)){
                 return response()->json(['error' => 'Erro! Ja existe uma ordem aberta no sistema nao pode abrir mais uma novamente'], 421);
+            }
+
 
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bomba_id;
