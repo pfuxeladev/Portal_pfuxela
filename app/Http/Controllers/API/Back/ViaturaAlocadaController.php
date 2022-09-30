@@ -17,17 +17,15 @@ class ViaturaAlocadaController extends Controller
     {
         $this->viatura_rota = $viatura_rota;
     }
-    public function index()
+    public function index(Request $request)
     {
         $viaturas = array();
-        
-        foreach ($this->viatura_rota->all() as $key => $vr) {
-            $viaturas[$key] = $vr->viatura_id;
-        }
+            $viaturas = viatura_historico::with(['viatura.rota'])->join('viaturas', 'viaturas.id','=', 'viatura_historicos.viatura_id')
+            ->select('viatura_historicos.viatura_id as viatura_id', 'viaturas.id as id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')
+            ->orderBy('viaturas.created_at', 'desc')->paginate(15);;
 
-        $viatura_rota = Viatura::whereIn('id', $viaturas)->with(['rota', 'viatura_historico.motorista.person'])->orderBy('created_at', 'desc')->paginate(15);
 
-        return response($viatura_rota, 200);
+        return response($viaturas, 200);
     }
 
     public function historicoDeLeitura()

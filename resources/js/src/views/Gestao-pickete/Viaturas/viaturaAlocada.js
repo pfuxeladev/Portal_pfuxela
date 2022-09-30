@@ -17,7 +17,12 @@ export default function viatursAlocadasList() {
     { key: 'ltr_por_km', sortable: true },
     { key: 'combustivel', sortable: true },
     { key: 'capacidade_tanque', sortable: true },
-    { Key: 'rota', sortable: true },
+    { key: 'kilometragem_ant', sortable: true },
+    { key: 'kilometragem', sortable: true },
+    { key: 'km_percorridos', sortable: true },
+    { Key: 'qtd_disponivel', sortable: true },
+    { key: 'qtd_prevista', sortable: true },
+    { Key: 'rotas', sortable: true },
     { key: 'actions' },
   ]
 
@@ -80,6 +85,7 @@ export default function viatursAlocadasList() {
     totalViaturas,
     dataMeta,
     perPageOptions,
+    refetchData,
     searchQuery,
     sortBy,
     isSortDirDesc,

@@ -54,10 +54,10 @@ export default {
       })
     },
 
-    alocatedVehicles(ctx, viatura) {
+    alocatedVehicles(ctx, queryParams) {
       // eslint-disable-next-line no-shadow
       return new Promise((resolve, reject) => {
-        axios.get('/api/viaturasAlocadas', viatura)
+        axios.get('/api/viaturasAlocadas', { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

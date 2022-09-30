@@ -12,7 +12,7 @@ class viatura_historico extends Model
     protected $table = 'viatura_historicos';
 
     function viatura(){
-        return $this->belongsTo(Viatura::class);
+        return $this->belongsTo(Viatura::class, 'viatura_id', 'id');
     }
 
     function motorista(){

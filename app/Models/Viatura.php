@@ -50,7 +50,7 @@ class Viatura extends Model
     }
 
      function viatura_historico(){
-        return $this->hasMany(viatura_historico::class);
+        return $this->hasMany(viatura_historico::class, 'viatura_id', 'id');
     }
 
 }
