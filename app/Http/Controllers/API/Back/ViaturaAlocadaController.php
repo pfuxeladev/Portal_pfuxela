@@ -17,16 +17,34 @@ class ViaturaAlocadaController extends Controller
     {
         $this->viatura_rota = $viatura_rota;
     }
-    public function index()
+    public function index(Request $request)
     {
-        $viatura_rota = $this->viatura_rota->with(['rota', 'viatura.viatura_historico'])->orderBy('created_at', 'desc')->paginate(15);
+        $viaturas = array();
+            $viaturas = viatura_historico::with(['viatura.rota'])->join('viaturas', 'viaturas.id','=', 'viatura_historicos.viatura_id')
+            ->select('viatura_historicos.viatura_id as viatura_id', 'viaturas.id as id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')
+            ->orderBy('viaturas.created_at', 'desc')->paginate(15);;
 
-        return response($viatura_rota, 200);
+
+        return response($viaturas, 200);
     }
 
     public function historicoDeLeitura()
     {
 
+    }
+
+    public function rotas($viatura_id){
+        $rotaList = array();
+        $rotas = $this->viatura_rota->join('rotas', 'viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')->where('viatura_rotas.viatura_id', $viatura_id)->select('rotas.id','rotas.nome_rota', 'projectos.name as projecto', 'rotas.distancia_km')->orderBy('rotas.id', 'desc')->get();
+
+        foreach ($rotas as $key => $rt) {
+           $rotaList[$key] = [
+            'id'=>$rt->id,
+            'rota_projecto'=> $rt->nome_rota.' - '.$rt->projecto,
+            'distancia'=>$rt->distancia_km
+           ];
+        }
+        return response($rotaList, 200);
     }
 
     public function getViatura($viatura_id)
@@ -38,11 +56,17 @@ class ViaturaAlocadaController extends Controller
     {
 
         foreach ($request->rota['rota_id'] as $key => $rota_id) {
-            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', Carbon::now()->subMinutes(360)->toDateTimeString())->first();
+            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->whereDate('created_at', Carbon::today())->first();
 
             if ($viatura_rota !=0) {
-                // return $viatura_rota;
-                return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
+
+                if(Viatura::where('id', $viatura_rota->viatura_id)->first() != null){
+                    return response(['error' => 'Nao pode alocar duas vezes a viatura no mesmo dia'], 421);
+                }else{
+                    return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
+                }
+
+
             }
         }
 
@@ -62,7 +86,13 @@ class ViaturaAlocadaController extends Controller
         $viaturaLeitura->save();
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        
+
+        $km_ant = $viatura->kilometragem + $request->kmPercorridos;
+        $viatura->kilometragem_ant = $viatura->kilometragem;
+        $viatura->kilometragem = $request->manometro_km;
+        $viatura->qtd_disponivel = $request->qtdActual;
+        $viatura->update();
+
 
         if ($viaturaLeitura) {
             foreach ($request->rota['rota_id'] as $key => $rotas) {

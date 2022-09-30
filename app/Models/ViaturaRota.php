@@ -14,11 +14,11 @@ class ViaturaRota extends Model
     ];
 
     function viatura(){
-        return $this->belongsToMany(Viatura::class);
+        return $this->belongsTo(Viatura::class, 'viatura_id', 'id');
     }
 
     function rota(){
-        return $this->belongsToMany(Rota::class);
+        return $this->belongsTo(Rota::class, 'rota_id', 'id');
     }
 
     function createdBy(){

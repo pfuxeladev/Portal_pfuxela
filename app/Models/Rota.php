@@ -24,7 +24,7 @@ class Rota extends Model
     }
 
     public function viatura(){
-        return $this->belongsToMany(viatura::class);
+        return $this->belongsToMany(viatura::class, 'viatura_rotas', 'rota_id', 'viatura_id');
     }
 
     function ordemViaturaRota(){
@@ -36,7 +36,7 @@ class Rota extends Model
     }
 
 
-   
+
 
 
 }

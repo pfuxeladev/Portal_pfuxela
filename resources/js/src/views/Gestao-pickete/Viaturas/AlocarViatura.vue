@@ -28,8 +28,11 @@
         >
           <label>mostrar</label>
           <v-select
-            v-model="perPage"
-            :options="['10', '25', '50', '100']"
+          v-model="perPage"
+              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+              :options="perPageOptions"
+              :clearable="false"
+              class="per-page-selector d-inline-block mx-50"
           />
           <label>entradas</label>
         </b-col>
@@ -41,31 +44,96 @@
           cols="12"
           md="4"
         >
-          <b-form-input
-            v-model="pesquisar"
-            type="search"
-            placeholder="Pesquisar"
-          />
+        <b-form-input
+                  v-model="searchQuery"
+                  class="d-inline-block mr-1"
+                  placeholder="Search..."
+                />
         </b-col>
       </b-row>
       <b-card-body>
-        <table class="table table-bordered table-tripped table-responsive">
-          <thead>
-            <tr>
-              <th>Data</th>
-              <th>viatura</th>
-              <th>km anterior</th>
-              <th>km actual</th>
-              <th>qtd prevista</th>
-              <th>km percorridos</th>
-              <th>qtd abastecida</th>
-              <th>rotas alocadas</th>
-              <th>criado por</th>
-              <th>actualizado por</th>
-            </tr>
-          </thead>
-        </table>
+        <b-table
+        ref="refViaturaListTable"
+        class="position-relative"
+        :items="fetchViaturasAlocadas"
+        responsive
+        :fields="tableColumns"
+        primary-key="id"
+        :sort-by.sync="sortBy"
+        show-empty
+        empty-text="No matching records found"
+        :sort-desc.sync="isSortDirDesc"
+      >
+       <template #cell(matricula)="data">
+            {{ data.item.matricula }}
+        </template>
+        <template #cell(ltr_por_km)="data">
+            {{ data.item.capacidade_media }}
+        </template>
+        <template #cell(combustivel)="data">
+            {{ data.item.tipo_combustivel }}
+        </template>
+        <template #cell(kilometragem_ant)="data">
+            {{ data.item.kilometragem_ant }}
+        </template>
+        <template #cell(km_percorridos)="data">
+            {{ data.item.km_percorridos }}
+        </template>
+        <template #cell(rotas)="data">
+            <div v-for="(rota, r) in data.item.viatura.rota" :key="'r'+r">
+                <b-badge variant="primary" class="m-1">{{rota.nome_rota}},</b-badge>
+            </div>
+        </template>
+    </b-table>
       </b-card-body>
+      <b-card-footer>
+        <div class="mx-2 mb-2">
+        <b-row>
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-start
+            "
+          >
+            <span class="text-muted"
+              >Showing {{ dataMeta.from }} to {{ dataMeta.to }} of
+              {{ dataMeta.of }} entries</span
+            >
+          </b-col>
+          <!-- Pagination -->
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-end
+            "
+          >
+            <b-pagination
+              v-model="currentPage"
+              :total-rows="totalViaturas"
+              :per-page="perPage"
+              first-number
+              last-number
+              class="mb-0 mt-1 mt-sm-0"
+              prev-class="prev-item"
+              next-class="next-item"
+            >
+              <template #prev-text>
+                <feather-icon icon="ChevronLeftIcon" size="18" />
+              </template>
+              <template #next-text>
+                <feather-icon icon="ChevronRightIcon" size="18" />
+              </template>
+            </b-pagination>
+          </b-col>
+        </b-row>
+      </div>
+      </b-card-footer>
     </b-card>
     <b-modal
       id="modal-lg"
@@ -175,6 +243,9 @@ import {
   BFormRow,
   BFormGroup,
   BModal,
+  BTable,
+  BPagination,
+  BCardFooter,
 } from 'bootstrap-vue'
 import { useToast } from 'vue-toastification/composition'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
@@ -185,6 +256,7 @@ import Form from 'vform'
 import store from '@/store'
 import router from '@/router'
 import StoreViaturaModule from './StoreViaturaModule'
+import viatursAlocadasList from './viaturaAlocada'
 
 export default {
   name: 'AlocarViatura',
@@ -200,6 +272,9 @@ export default {
     BFormRow,
     BModal,
     vSelect,
+    BTable,
+    BPagination,
+    BCardFooter,
   },
   setup() {
 
@@ -216,7 +291,6 @@ export default {
         store.unregisterModule(PIQUETE_APP_STORE_MODULE_NAME)
       }
     })
-    const perPage = 10
     const pesquisar = ref('')
     const viatura = ref(null)
     const rotas = ref(null)
@@ -240,7 +314,7 @@ export default {
     )
     // buscar viaturas
     function fetchViaturas() {
-      this.$http.get('/api/listarViaturas').then(res => {
+      this.$http.get('/api/viaturaNaoAlocada').then(res => {
         this.viatura = res.data
       }).catch(err => {
         console.log(err)
@@ -310,12 +384,37 @@ export default {
           }
         })
     }
+    const {
+      fetchViaturasAlocadas,
+      tableColumns,
+      perPage,
+      currentPage,
+      totalViaturas,
+      dataMeta,
+      perPageOptions,
+      searchQuery,
+      sortBy,
+      isSortDirDesc,
+      refViaturaListTable,
+      refetchData,
+    } = viatursAlocadasList()
 
     return {
       viatura,
       rotas,
       form,
+      tableColumns,
       perPage,
+      currentPage,
+      totalViaturas,
+      dataMeta,
+      perPageOptions,
+      searchQuery,
+      sortBy,
+      isSortDirDesc,
+      refViaturaListTable,
+      refetchData,
+      fetchViaturasAlocadas,
       pesquisar,
       motoristas,
       dadosViatura,

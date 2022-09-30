@@ -40,6 +40,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('/listProject', [App\Http\Controllers\API\Back\ProjectoController::class, 'listProjecto']);
     Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::class, 'getCombustivel']);
     Route::get('getQtdDisponivel/{viatura_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getQtdDisponivel']);
+    Route::get('ltrPkm/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'litrosKm']);
     Route::get('viaturaHistorico/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'HistoricoAbastecimento']);
     Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'RotaByProject']);
 
@@ -62,6 +63,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::post('/abastecimento_extra', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecer']);
     Route::get('/listCombustivel', [\App\Http\Controllers\API\Back\BombaController::class, 'fetchCombustivel']);
     Route::post('/updateCombustivel', [App\Http\Controllers\API\Back\BombaController::class, 'updtFuel']);
+    Route::get('/viaturaNaoAlocada', [App\Http\Controllers\API\Back\ViaturaController::class, 'viaturaNaoAlocadas']);
 
     // Aprovar abastecimento e reprovar
     Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
@@ -120,6 +122,8 @@ Route::group(['middleware' => 'auth:api'], function () {
     // Alocar viaturas
     Route::post('alocarViatura', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'store']);
     Route::get('getKmViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getViatura']);
+
+    Route::get('/getAlocateRoute/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'rotas']);
 });
 Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
 

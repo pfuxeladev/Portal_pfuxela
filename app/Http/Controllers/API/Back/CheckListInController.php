@@ -138,13 +138,13 @@ class CheckListInController extends Controller
 
              }else if($viatura1->capacidade_tanque < $consumo){
 
-                 $viatura1->qtd_disponivel = $request->litros_tanque;
+                 $viatura1->qtd_disponivel = 0;
              }else{
                  $qtd_disponivel = ($consumo - $viatura1->qtd_disponivel);
              }
              // return $viatura1->qtd_disponivel;
              if($qtd_disponivel < 0){
-                 $viatura1->qtd_disponivel = $request->litros_tanque;
+                 $viatura1->qtd_disponivel = 0;
              }else if($qtd_disponivel >=0 && $viatura1->capacidade_tanque > $qtd_disponivel) {
                  $viatura1->qtd_disponivel = $qtd_disponivel;
              }
