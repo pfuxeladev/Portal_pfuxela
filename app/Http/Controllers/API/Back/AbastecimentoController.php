@@ -339,14 +339,12 @@ class AbastecimentoController extends Controller
 
         $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
 
-        // if (!empty(ordem_viatura::join('viaturas', 'viaturas.id', '=', 'ordem_viaturas.viatura_id')->whereDate('ordem_viaturas.created_at', Carbon::today())->where('viaturas.id', $request->viatura_id)->first()))
-        //     return response()->json(['erro' => 'Erro! Esta viatura ja abasteceu'], 421);
-
-
         $preco = 0;
 
         $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
             ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
+
+            // return $combustivel;
 
         // if ($combustivel) {
         if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
@@ -356,9 +354,6 @@ class AbastecimentoController extends Controller
         } else {
             return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
         }
-        // } else {
-        //     return response()->json(['erro' => 'A Bomba nao tem ' . $viatura->tipo_combustivel], 421);
-        // }
 
 
         // verificar disponibilidade da viatura
