@@ -58,8 +58,18 @@ class ViaturaController extends Controller
     }
 
     function viaturaNaoAlocadas(){
-        return Viatura::join('checklist_in', 'viaturas.id', 'checklist_in.viatura_id')->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
-        ->whereDate('checklist_in.created_at', '=', (new DateTime())->format('Y-m-d'))->select('viaturas.matricula', 'viaturas.id')->get();
+
+        $viatura = array();
+        $viatura_rota = ViaturaRota::whereDate('created_at', date('Y-m-d'))->orderBy('id', 'desc')
+        ->get();
+
+        foreach ($viatura_rota as $key => $vr) {
+           $viatura[$key] =  $vr->viatura_id;
+        }
+        return Viatura::where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
+        ->whereNotIn('viaturas.id',$viatura)
+        // ->whereDate('checklist_in.created_at', '=', (new DateTime())->format('Y-m-d'))
+        ->select('viaturas.matricula', 'viaturas.id')->get();
 
     }
     function litrosKm($viatura_id){
