@@ -97,7 +97,8 @@ class ViaturaAlocadaController extends Controller
         if ($viaturaLeitura) {
             foreach ($request->rota['rota_id'] as $key => $rotas) {
                 ViaturaRota::create([
-                    'viatura_id' => $request->viatura_id, 'rota_id' => $rotas, 'createdBy' => auth()->user()->id, 'updatedBy' => auth()->user()->id
+                    'viatura_id' => $request->viatura_id, 'rota_id' => $rotas, 'createdBy' => auth()->user()->id, 'updatedBy' => auth()->user()->id, 'created_at'=>Carbon::now(),
+                    'updated_at'=>Carbon::now()
                 ]);
             }
 
