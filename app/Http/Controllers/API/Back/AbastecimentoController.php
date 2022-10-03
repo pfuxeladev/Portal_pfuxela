@@ -48,9 +48,9 @@ class AbastecimentoController extends Controller
     {
         $viatura = array();
 
-        $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
+        $datetime = \Carbon\Carbon::now()->subHours(8)->format("Y-m-d H:i:s");
 
-        $viatura_rota = ViaturaRota::where('created_at','>=', $datetime)->get();
+        $viatura_rota = ViaturaRota::whereDate('created_at', Carbon::today())->get();
 
             foreach ($viatura_rota as $key => $vr) {
                $viatura[$key] = $vr->viatura_id;
