@@ -35,7 +35,7 @@ class ViaturaAlocadaController extends Controller
 
     public function rotas($viatura_id){
         $rotaList = array();
-        $rotas = $this->viatura_rota->join('rotas', 'viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')->where('viatura_rotas.viatura_id', $viatura_id)->select('rotas.id','rotas.nome_rota', 'projectos.name as projecto', 'rotas.distancia_km')->orderBy('rotas.id', 'desc')->get();
+        $rotas = $this->viatura_rota->join('rotas', 'viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')->where('viatura_rotas.viatura_id', $viatura_id)->whereDate('viatura_rotas.created_at', Carbon::today())->select('rotas.id','rotas.nome_rota', 'projectos.name as projecto', 'rotas.distancia_km')->orderBy('rotas.id', 'desc')->get();
 
         foreach ($rotas as $key => $rt) {
            $rotaList[$key] = [
