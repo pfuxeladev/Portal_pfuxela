@@ -438,7 +438,7 @@ __webpack_require__.r(__webpack_exports__);
 
       //   console.log(this.form.viatura_id)
       this.$http.get("/api/getKmViatura/".concat(this.form.viatura_id)).then(function (res) {
-        _this4.form.kmActual = res.data.kilometragem;
+        _this4.form.kmActual = res.data.km_inicio;
         console.log(_this4.form.kmActual);
       });
       this.$http.get("/api/viaturas/".concat(this.form.viatura_id)).then(function (res) {

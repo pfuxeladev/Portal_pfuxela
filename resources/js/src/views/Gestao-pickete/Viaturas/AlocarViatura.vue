@@ -339,7 +339,7 @@ export default {
     function getKmActual() {
       //   console.log(this.form.viatura_id)
       this.$http.get(`/api/getKmViatura/${this.form.viatura_id}`).then(res => {
-        this.form.kmActual = res.data.kilometragem
+        this.form.kmActual = res.data.km_inicio
 
         console.log(this.form.kmActual)
       })
