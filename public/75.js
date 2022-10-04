@@ -398,9 +398,9 @@ __webpack_require__.r(__webpack_exports__);
             _auth_jwt_useJwt__WEBPACK_IMPORTED_MODULE_9__["default"].setRefreshToken(response.data.refreshToken);
             localStorage.setItem('userData', JSON.stringify(userData));
 
-            _this.$ability.update(userData.ability); //   location.reload()
+            _this.$ability.update(userData.ability);
 
-
+            window.location.reload();
             _this.valid = false;
 
             _this.$router.replace(Object(_auth_utils__WEBPACK_IMPORTED_MODULE_11__["getHomeRouteForLoggedInUser"])(userData.role)).then(function () {

@@ -316,7 +316,7 @@ export default {
 
               localStorage.setItem('userData', JSON.stringify(userData))
               this.$ability.update(userData.ability)
-              //   location.reload()
+              window.location.reload()
               this.valid = false
               this.$router.replace(getHomeRouteForLoggedInUser(userData.role)).then(() => {
                 this.$toast({
