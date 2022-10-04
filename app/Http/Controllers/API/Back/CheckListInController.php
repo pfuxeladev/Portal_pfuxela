@@ -148,6 +148,7 @@ class CheckListInController extends Controller
              }else if($qtd_disponivel >=0 && $viatura1->capacidade_tanque > $qtd_disponivel) {
                  $viatura1->qtd_disponivel = $qtd_disponivel;
              }
+                $viatura1->kilometragem_ant = $viatura1->kilometragem;
                 $viatura1->kilometragem = $request->km_fim;
                 $viatura1->locate = 'IN';
                 $viatura1->update();

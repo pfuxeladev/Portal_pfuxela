@@ -56,10 +56,10 @@ class AbastecimentoController extends Controller
                $viatura[$key] = $vr->viatura_id;
             }
             if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
-                return Viatura::whereIn('viaturas.id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)->where('viaturas.nome_viatura', '!=', 'BUS')
+                return Viatura::whereIn('viaturas.id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)
                 ->select('viaturas.matricula', 'viaturas.id')->get();
             } else {
-                return Viatura::whereIn('id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.estado', true)->where('viaturas.updated_at', '>=', Carbon::now()->subDays(60))->get();
+                return Viatura::whereIn('id', $viatura)->where('viaturas.locate', '=', 'IN')->where('viaturas.nome_viatura', '!=', 'BUS')->where('viaturas.estado', true)->where('viaturas.updated_at', '>=', Carbon::now()->subDays(60))->get();
             }
     }
 
