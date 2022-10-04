@@ -90,7 +90,7 @@ class ViaturaAlocadaController extends Controller
         $km_ant = $viatura->kilometragem + $request->kmPercorridos;
         $viatura->kilometragem_ant = $viatura->kilometragem;
         $viatura->kilometragem = $request->manometro_km;
-        $viatura->qtd_disponivel = $request->qtdActual;
+        $viatura->qtd_disponivel = $request->manometro_combustivel;
         $viatura->update();
 
 
