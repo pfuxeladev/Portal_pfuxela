@@ -49,7 +49,7 @@ class ViaturaAlocadaController extends Controller
 
     public function getViatura($viatura_id)
     {
-        return Viatura::where('id', $viatura_id)->first();
+        return Viatura::join('checklist_out', 'viaturas.id', 'checklist_out.viatura_id')->where('viaturas.id', $viatura_id)->first();
     }
 
     public function store(Request $request)
