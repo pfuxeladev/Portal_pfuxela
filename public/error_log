@@ -91,5 +91,3 @@
 [09-Sep-2022 09:30:05 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Cellmap.php on line 655
 [09-Sep-2022 09:33:42 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Cellmap.php on line 655
 [09-Sep-2022 09:34:09 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Cellmap.php on line 655
-[20-Sep-2022 11:20:57 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 638976 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/lib/Cpdf.php on line 3223
-[20-Sep-2022 11:20:58 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 622592 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/lib/Cpdf.php on line 3223

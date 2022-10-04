@@ -22,7 +22,7 @@ class ViaturaAlocadaController extends Controller
         $viaturas = array();
             $viaturas = viatura_historico::with(['viatura.rota'])->join('viaturas', 'viaturas.id','=', 'viatura_historicos.viatura_id')
             ->select('viatura_historicos.viatura_id as viatura_id', 'viaturas.id as id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')
-            ->orderBy('viaturas.created_at', 'desc')->paginate(15);;
+            ->orderBy('viatura_historicos.created_at', 'desc')->paginate(15);;
 
 
         return response($viaturas, 200);
