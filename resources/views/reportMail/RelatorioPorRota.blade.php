@@ -28,7 +28,7 @@
             font-size: 18pt;
         }
 
-        div.relatorio_header > h3 {
+        div.relatorio_header>h3 {
             margin-bottom: 15px;
         }
 
@@ -64,7 +64,9 @@
             font-size: 9pt;
             height: auto;
         }
-        table.table-bordered td, table.table-bordered th {
+
+        table.table-bordered td,
+        table.table-bordered th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
@@ -86,8 +88,20 @@
             </div>
         </div>
         <div class="relatorio_content">
+            <?php
+            $preco = 0;
+            $subtotal = 0;
+            $total = 0;
+            $qtd_total = 0;
+            $ordens_canceladas = 0;
+            $ordens = [];
+            $total_canceladas = 0;
+            $total_geral = 0;
+            $total_liquido = 0;
+            ?>
             @foreach ($rotas as $rota)
-                <h3>Rota: {{$rota->nome_rota}} - Projecto: ({{$rota->projecto->name}}), {{$rota->distancia_km}} km</h3>
+                <h3>Rota: {{ $rota->nome_rota }} - Projecto: ({{ $rota->projecto->name }}), {{ $rota->distancia_km }} km
+                </h3>
 
                 <table class="table table-bordered">
                     <thead>
@@ -105,49 +119,77 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $preco = 0;
-                              $subtotal = 0;
-                              $total = 0;
-                              $qtd_total = 0;
-                            ?>
-                        @foreach ($rota->ordem_viatura as $ordem)
-                        @if (!empty(App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()))
-                        <tr
-                        <?php if($ordem->ordem->estado == 'Cancelada'){
-                            echo "style='background:rgb(255, 192, 199);'";
-                        }?>
-                        >
-                            <td>{{$ordem->ordem->codigo_ordem}}</td>
-                            <td>{{$ordem->ordem->created_at}}</td>
-                            <td>{{$ordem->ordem->estado}}</td>
-                            <td>{{$ordem->ordem->tipo_ordem}}</td>
-                            <td>{{$ordem->ordem->bombas->nome_bombas}}</td>
-                            <td>{{$ordem->viatura->matricula}}</td>
-                            <td>{{$ordem->viatura->capacidade_media}}</td>
-                            <?php $qtd = ($ordem->viatura->capacidade_media * $rota->distancia_km) ?>
-                            <td>{{$qtd}}</td>
-                            <?php $qtd_total += $qtd ?>
-                            <?php $user = App\Models\User::where('id', $ordem->ordem->createdBy)->first(); ?>
-                            <?php $preco = ($ordem->preco_cunsumo / $ordem->qtd_abastecida)?>
-                            <td>{{$user->name}}</td>
-                            <?php $preco_consumo = $preco * $qtd?>
-                            <td>{{number_format($preco_consumo, 2, ',', '.')}}</td>
-                            <?php $total += $preco_consumo ?>
-                        </tr>
-                        @endif
+
+                        @foreach ($rota->ordem_viatura as $key => $ordem)
+                            @if (!empty(
+        App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()
+    ))
+                            <tr <?php if ($ordem->ordem->estado == 'Cancelada') {
+                                echo "style='background:rgb(255, 192, 199);'";
+                            } ?>>
+                                <?php
+                                $ordens[$key] = $ordem->id;
+                                ?>
+                                <td>{{ $ordem->ordem->codigo_ordem }}</td>
+                                <td>{{ $ordem->ordem->created_at }}</td>
+                                <td>{{ $ordem->ordem->estado }}</td>
+                                <td>{{ $ordem->ordem->tipo_ordem }}</td>
+                                <td>{{ $ordem->ordem->bombas->nome_bombas }}</td>
+                                <td>{{ $ordem->viatura->matricula }}</td>
+                                <td>{{ $ordem->viatura->capacidade_media }}</td>
+                                <?php $qtd = $ordem->viatura->capacidade_media * $rota->distancia_km; ?>
+                                <td>{{ $qtd }}</td>
+                                <?php $qtd_total += $qtd; ?>
+                                <?php $user = App\Models\User::where('id', $ordem->ordem->createdBy)->first(); ?>
+                                <?php $preco = $ordem->preco_cunsumo / $ordem->qtd_abastecida; ?>
+                                <td>{{ $user->name }}</td>
+                                <?php $preco_consumo = $preco * $qtd; ?>
+                                <td>{{ number_format($preco_consumo, 2, ',', '.') }}</td>
+                                <?php $total += $preco_consumo; ?>
+
+                            </tr>
+                            @endif
                         @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
                             <th style="text-align: right" colspan="7">qtd total</th>
-                            <td>{{$qtd_total}}</td>
+                            <td>{{ $qtd_total }}</td>
                             <th style="text-align: right">Total</th>
-                            <td>{{number_format($total, 2, ',', '.')}}</td>
+                            <td>{{ number_format($total, 2, ',', '.') }}</td>
                         </tr>
+                        <?php
+                        $ordens_canceladas = App\Models\Ordem::join('ordem_viaturas', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
+                            ->where('ordems.estado', '=', 'Cancelada')
+                            ->whereIn('ordem_viaturas.id', $ordens)
+                            ->sum('ordem_viaturas.preco_cunsumo');
+
+                        $total_canceladas += $ordens_canceladas;
+
+                        $total_geral += $total;
+                        ?>
+
                     </tfoot>
                 </table>
             @endforeach
-
+            <br>
+            <table class="table table-bordered">
+                <thead style="background:#6e6b7b; color:aliceblue">
+                    <tr>
+                        <th>Valor Total bruto (MZN)</th>
+                        <th>Valor Total das ordens canceladas (MZN)</th>
+                        <th>Valor liquido (MZN)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ number_format($total_geral, 2, ',', '.') }}</td>
+                        <td>{{ number_format($total_canceladas, 2, ',', '.') }}</td>
+                        <?php $total_liquido = $total_geral - $total_canceladas ?>
+                        <td>{{ number_format($total_liquido, 2, ',', '.') }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
