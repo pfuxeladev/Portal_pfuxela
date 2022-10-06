@@ -75,7 +75,7 @@ class ViaturaAlocadaController extends Controller
         $viaturaLeitura = new viatura_historico();
 
         $viaturaLeitura->viatura_id = $request->viatura_id;
-        $viaturaLeitura->manometro_km = $request->manometro_km;
+        $viaturaLeitura->manometro_km =  $request->manometro_km;
         $viaturaLeitura->manometro_combustivel = $request->manometro_combustivel;
         $viaturaLeitura->motorista_id = $request->motorista_id;
         $viaturaLeitura->km_percorridos = $request->kmPercorridos;
