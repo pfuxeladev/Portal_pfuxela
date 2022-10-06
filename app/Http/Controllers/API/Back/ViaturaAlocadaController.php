@@ -56,9 +56,10 @@ class ViaturaAlocadaController extends Controller
 
     public function store(Request $request)
     {
+        $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
 
         foreach ($request->rota['rota_id'] as $key => $rota_id) {
-            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->whereDate('created_at', Carbon::today())->first();
+            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->first();
 
             if (!empty($viatura_rota)) {
 
