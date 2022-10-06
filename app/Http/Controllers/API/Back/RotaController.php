@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\projecto;
 use App\Models\Rota;
 use App\Models\Horario;
+use App\Models\Ordem;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
@@ -113,12 +114,17 @@ class RotaController extends Controller
     function enviarRelatorioSemanal()
     {
         try {
-
+            $total_km = 0;
+            $rota_list = array();
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Geral de Abastecimento das Rota e Projectos";
 
             $date = \Carbon\Carbon::today()->subDays(30);
+
+            foreach (Ordem::orderBy('id') as $key => $value) {
+                # code...
+            }
 
             $rotas =  Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
                 ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
@@ -127,11 +133,14 @@ class RotaController extends Controller
                 ->join('ordems', 'ordem_viaturas.ordem_id', 'ordems.id')
                 ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
                 ->join('users', 'ordems.createdBy', '=', 'users.id')
-                ->select('ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total', 'rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
-                ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
+                ->select('rotas.id as id', 'ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total', 'rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
+                // ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
                 ->orderBy('ordems.id', 'desc')->get();
 
-                // return  view('reportMail.rotaReportOrders', compact('rotas'));
+
+
+
+                return  view('reportMail.rotaReportOrders', compact('rotas'));
 
             $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
             Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());

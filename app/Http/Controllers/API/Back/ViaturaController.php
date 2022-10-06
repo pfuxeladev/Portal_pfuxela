@@ -58,9 +58,9 @@ class ViaturaController extends Controller
     }
 
     function viaturaNaoAlocadas(){
-
+        $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $viatura = array();
-        $viatura_rota = ViaturaRota::whereDate('created_at', date('Y-m-d'))->orderBy('id', 'desc')
+        $viatura_rota = ViaturaRota::where('created_at', '>=', $datetime)->orderBy('id', 'desc')
         ->get();
 
         foreach ($viatura_rota as $key => $vr) {
