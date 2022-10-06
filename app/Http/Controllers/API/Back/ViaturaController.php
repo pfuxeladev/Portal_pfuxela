@@ -47,10 +47,10 @@ class ViaturaController extends Controller
 
         // $roles = auth()->user()->getRoleNames();
         if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
-            return Viatura::where('locate', '=', 'IN')->where('estado', true)->where('nome_viatura', '!=', 'BUS')
+            return Viatura::where('locate', '=', 'IN')->where('estado', true)
             ->select('matricula', 'id')->get();
         } else {
-            return Viatura::where('locate', '=', 'IN')->where('estado', true)
+            return Viatura::where('locate', '=', 'IN')->where('nome_viatura', '!=', 'BUS')->where('estado', true)
             ->select('matricula', 'id')->get();
         }
 
