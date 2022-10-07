@@ -137,7 +137,7 @@
             </div><br>
             <p class="margin-left:20px">
                 A <b><Pfuxela Exhibition Gallery</b> vem por esta meio fazer o pedido de cancelamento da ordem {{ $ordem->codigo_ordem }}.
-                Pelos transtornos causados, nossas sincera desculpa pelo incoveniente.
+                Pelos transtornos causados, nossas sinceras desculpas pelo incoveniente.
             </p>
             <div class="card-footer" style="margin-left: 20px; margin-top:40px;">
                 <div style="width:100%; display: block; float:left; position: relative;">

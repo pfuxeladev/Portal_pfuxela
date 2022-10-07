@@ -7,9 +7,13 @@ use App\Models\projecto;
 use App\Models\Rota;
 use App\Models\Horario;
 use App\Models\Ordem;
+use App\Models\ordem_viatura;
+use App\Models\OrdemViaturaRota;
+use App\Models\User;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use PDF;
@@ -113,39 +117,58 @@ class RotaController extends Controller
 
     function enviarRelatorioSemanal()
     {
+
+        $from = date('2022-08-16');
+        $to = date('2022-09-01');
         try {
-            $total_km = 0;
+            $total_km = array();
             $rota_list = array();
+            $ordems = array();
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Geral de Abastecimento das Rota e Projectos";
+            $data["title"] = "Relatorio Semanal de Abastecimentos feitos por Rota e Projectos";
 
             $date = \Carbon\Carbon::today()->subDays(30);
+            $ordemViatura = ordem_viatura::with(['rota', 'viatura', 'ordem.bombas.combustivel'])
+            ->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
+            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')
+            ->join('viaturas', 'ordem_viaturas.viatura_id', '=','viaturas.id')
+            ->join('ordem_viatura_rotas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
+            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
+            ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->whereBetween('ordems.created_at', [$from, $to])
+            ->select('ordem_viaturas.id','ordems.codigo_ordem','ordems.created_at', 'ordems.createdBy', 'ordems.estado', 'viaturas.matricula','viaturas.capacidade_media','viaturas.tipo_combustivel as combustivel','projectos.name', 'rotas.nome_rota', 'rotas.distancia_km', 'ordem_viaturas.qtd_abastecida', 'ordem_viaturas.preco_cunsumo as preco_total', 'bombas.nome_bombas')->get();
 
-            foreach (Ordem::orderBy('id') as $key => $value) {
-                # code...
+            foreach ($ordemViatura as $key => $ordVi) {
+               $rotas = OrdemViaturaRota::join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->where('ordem_viatura_rotas.ordem_viatura_id', $ordVi->id)->sum('rotas.distancia_km');
+
+               $ordems[$key] = [
+                'ordem_viatura_id'=>$ordVi->id,
+                'codigo'=>$ordVi->codigo_ordem,
+                'data_emissao'=>$ordVi->created_at,
+                'criado_por'=>User::where('id', $ordVi->createdBy)->first(),
+                'projecto'=>$ordVi->name,
+                'rota_nome'=>$ordVi->nome_rota,
+                'distancia'=>$ordVi->distancia_km,
+                'matricula'=>$ordVi->matricula,
+                'ltr_km'=>$ordVi->capacidade_media,
+                'combustivel'=>$ordVi->combustivel,
+                'qtd_abastecida'=>$ordVi->qtd_abastecida,
+                'preco_total'=>$ordVi->preco_total,
+                'bombas'=>$ordVi->nome_bombas,
+                'estado'=>$ordVi->estado,
+                'rota'=>$ordVi->rota,
+                'dist_per_order'=>$rotas,
+               ];
             }
 
-            $rotas =  Rota::join('ordem_viatura_rotas', 'rotas.id', '=', 'ordem_viatura_rotas.rota_id')
-                ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-                ->join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-                ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
-                ->join('ordems', 'ordem_viaturas.ordem_id', 'ordems.id')
-                ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
-                ->join('users', 'ordems.createdBy', '=', 'users.id')
-                ->select('rotas.id as id', 'ordems.id as ordem_id', 'ordems.codigo_ordem as codigo', 'viaturas.matricula as matricula', 'viaturas.capacidade_media as qtd_ltr', 'viaturas.tipo_combustivel as combustivel', 'bombas.nome_bombas as bombas', 'ordem_viatura_rotas.qtd as qtd', 'ordem_viatura_rotas.preco_total', 'rotas.nome_rota', 'rotas.distancia_km as distancia', 'projectos.name as projecto', 'users.name as autor', 'ordems.created_at as data_registo')
-                // ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
-                ->orderBy('ordems.id', 'desc')->get();
-
-
-
-
-                return  view('reportMail.rotaReportOrders', compact('rotas'));
+                // return $ordems;
+                // return  view('reportMail.rotaReportOrders', compact('ordems'));
 
             $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
             Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
 
-            Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+            Mail::send('reportMail.RelatorioPorRotaMessage', $data, function ($message) use ($data, $pdf) {
                 $message->to($data["email"])
                     ->subject($data["title"])
                     ->attachData($pdf->output(), 'relatorio_da_abastecimento_por_rota' . date('Y-m-d H:i:s') . '.pdf');
@@ -179,7 +202,7 @@ class RotaController extends Controller
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
                 $message->to($data["email"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), 'relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf');
+                    ->attachData($pdf->output(), 'relatorio_por_rota_e_projecto' . date('Y-m-d H:i:s') . '.pdf');
             });
             Log::info('email sent to: Users');
             return response()->json(['message' => 'email sent to: Users successfully']);
