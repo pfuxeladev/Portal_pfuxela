@@ -165,7 +165,7 @@ class RotaController extends Controller
                 // return $ordems;
                 // return  view('reportMail.rotaReportOrders', compact('ordems'));
 
-            $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
+            $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('ordems'))->setOptions(['defaultFont' => 'Times New Roman']);
             Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
 
             Mail::send('reportMail.RelatorioPorRotaMessage', $data, function ($message) use ($data, $pdf) {
