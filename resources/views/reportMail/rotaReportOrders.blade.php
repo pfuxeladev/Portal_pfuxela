@@ -110,17 +110,24 @@
             $qtd = 0;
             $subtotal = 0;
             $preco_ltr = 0;
+            $distancia_total = 0;
+            $km = array();
+            $preco_consumo = 0;
             ?>
-            <table class="table-content" style="font-size: 8pt">
+            <table class="table-content" style="font-size: 6pt">
                 <thead>
                     <tr>
                         <th>Data</th>
                         <th>Codigo</th>
+                        <th>
+                            Estado
+                        </th>
                         <th>Projecto</th>
                         <th>Rota</th>
                         <th>Distancia</th>
                         <th>Viaturas</th>
                         <th>Combustivel</th>
+                        <th>ltr/km</th>
                         <th>Qtd</th>
                         <th>Preco Unitario</th>
                         <th>Bombas</th>
@@ -129,29 +136,48 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($rotas as $item)
-                    <tr>
-                        <td>{{$item->data_registo }}</td>
-                        <td>{{$item->codigo}}</td>
-                        <td>{{$item->projecto}}</td>
-                        <td>{{$item->nome_rota}}</td>
-                        <td>{{$item->distancia}}</td>
-                        <td>{{$item->matricula}}</td>
-                        <td>{{$item->combustivel}}</td>
-                        <td>{{$qtd = ($item->qtd_ltr *$item->distancia)}}</td>
-                        <td>{{$preco_ltr = number_format($item->preco_total / $item->qtd, 2, ',', '.')}}</td>
-                        <td>{{$item->bombas}}</td>
-                        <td>{{$item->autor}}</td>
-                        <td>{{$subtotal = number_format($qtd * ($item->preco_total / $item->qtd), 2, ',', '.')}}MT</td>
-                        <?php $total += $qtd * ($item->preco_total / $item->qtd); ?>
+                    @foreach ($ordems as $item)
+                    <tr
+                    <?php if ($item['estado'] == 'Cancelada') {
+                        echo "style='background:rgb(252, 189, 196);'";
+                    } ?>
+                    >
+                        <td>{{$item['data_emissao']}}</td>
+                        <td>{{$item['codigo']}}</td>
+                        <td>{{$item['estado']}}</td>
+                        <td>{{$item['projecto']}}</td>
+                        <td>{{$item['rota_nome']}}</td>
+                        <td>{{$item['distancia']}}</td>
+                        <td>{{$item['matricula']}}</td>
+                        <td>{{$item['combustivel']}}</td>
+                        <td>{{$item['ltr_km']}}</td>
+                        <td>
+                            <?php
+                                $km = (($item['distancia']*$item['qtd_abastecida'])/$item['dist_per_order']);
+
+                            echo number_format($km, 2, ',', '.');
+                            ?>
+
+                        </td>
+                        <?php $preco = $item['preco_total']/ $item['qtd_abastecida']; ?>
+                        <td>
+                            {{number_format($preco, 2, ',', '.')}}
+                        </td>
+                        <td>{{$item['bombas']}}</td>
+                        <td>{{$item['criado_por']->name}}</td>
+                        <?php $preco_consumo = $preco * $km; ?>
+                        <td>{{number_format($preco_consumo, 2, ',', '.')}}</td>
+                        <?php
+                        $total += $preco_consumo;
+                        ?>
                     </tr>
                     @endforeach
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="10"></td>
+                        <td colspan="12"></td>
                         <td>Total</td>
-                        <td>{{ number_format($total, 2, ',', '.') }} MT</td>
+                        <td>{{number_format($total, 2, ',', '.')}} MT</td>
                     </tr>
                 </tfoot>
             </table>
