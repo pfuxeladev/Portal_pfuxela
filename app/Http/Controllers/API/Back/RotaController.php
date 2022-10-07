@@ -117,6 +117,9 @@ class RotaController extends Controller
 
     function enviarRelatorioSemanal()
     {
+
+        $from = date('2022-08-16');
+        $to = date('2022-09-01');
         try {
             $total_km = array();
             $rota_list = array();
@@ -133,6 +136,7 @@ class RotaController extends Controller
             ->join('ordem_viatura_rotas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
             ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
             ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
+            ->whereBetween('ordems.created_at', [$from, $to])
             ->select('ordem_viaturas.id','ordems.codigo_ordem','ordems.created_at', 'ordems.createdBy', 'ordems.estado', 'viaturas.matricula','viaturas.capacidade_media','viaturas.tipo_combustivel as combustivel','projectos.name', 'rotas.nome_rota', 'rotas.distancia_km', 'ordem_viaturas.qtd_abastecida', 'ordem_viaturas.preco_cunsumo as preco_total', 'bombas.nome_bombas')->get();
 
             foreach ($ordemViatura as $key => $ordVi) {
