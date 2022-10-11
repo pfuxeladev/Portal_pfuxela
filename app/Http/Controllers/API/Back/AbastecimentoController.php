@@ -189,14 +189,25 @@ class AbastecimentoController extends Controller
            $viatura->update();
        }
 
+    //    distancia de cada rota
+        $rotaAlocada = array();
+        $qtd_rota = 0;
+        $preco_rota = 0;
         foreach ($request->rota as $key => $rt) {
+
+            $rotaAlocada = Rota::where('id', $rt['id'])->get();
+
+            foreach ($rotaAlocada as $key => $rlt)
+                    $qtd_rota = (($rlt->distancia_km * $request->qtd_abastecer)/$distanciaTotal);
+                    $preco_rota = (($qtd_rota* $preco)/$request->qtd_abastecer);
 
 
             $ordemViatura->ordemViaturaRota()->create([
                 'rota_id' => $rt['id'],
-                'qtd' => $request->qtd_abastecer,
-                'preco_total' => $preco,
+                'qtd' => $qtd_rota,
+                'preco_total' => $preco_rota,
                 'justificacao' => $request->observacao,
+                'distancia'=>$rlt->distancia_km,
             ]);
         }
 
