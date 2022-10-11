@@ -523,7 +523,7 @@ class OrdemController extends Controller
     {
         // return $request->all();
         if ($request->intervalo) {
-            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereBetween('created_at', $request->intervalo)->orderBy('updated_at', 'desc')->get();
+            $ordem_viatura = ordem_viatura::with(['ordemViaturaRota.rota.projecto', 'viatura', 'ordem.bombas', 'ordem.approvedBy'])->whereBetween(DB::raw('DATE(ordems.created_at)'), $request->intervalo)->orderBy('updated_at', 'desc')->get();
             $pdf = PDF::loadView('reportMail.relatorioAbastecimento', compact('ordem_viatura'));
 
             return $pdf->output();
