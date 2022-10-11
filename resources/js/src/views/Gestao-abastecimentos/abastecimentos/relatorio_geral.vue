@@ -9,20 +9,28 @@
           <!-- Table Top -->
           <b-row>
             <!-- Per Page -->
-            <b-col cols="12" md="4"
-              ><b-form-group label="Filtrar por Bombas:" label-for="input-10">
-                <v-select
-                  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                  v-model="bombaNome"
-                  label="nome_bombas"
-                  :options="bombas"
-                  :reduce="(bombas) => bombas.nome_bombas"
-                  :clearable="false"
-                ></v-select>
-              </b-form-group>
+            <b-col
+              cols="12"
+              md="4"
+            ><b-form-group
+              label="Filtrar por Bombas:"
+              label-for="input-10"
+            >
+              <v-select
+                v-model="bombaNome"
+                :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                label="nome_bombas"
+                :options="bombas"
+                :reduce="(bombas) => bombas.nome_bombas"
+                :clearable="false"
+              />
+            </b-form-group>
             </b-col>
 
-            <b-col cols="4" md="4">
+            <b-col
+              cols="4"
+              md="4"
+            >
               <b-form-group
                 id="input-group-8"
                 label="Intervalo de datas:"
@@ -30,11 +38,11 @@
                 description="Intervalo de datas."
               >
                 <date-picker
+                  id="example-datepicker1"
+                  v-model="intervalo"
                   value-type="format"
                   format="YYYY-MM-DD"
                   style="width: 100%"
-                  id="example-datepicker1"
-                  v-model="intervalo"
                   range
                   locale="pt"
                   class="mb-1"
@@ -64,7 +72,10 @@
               />
               <label>entradas</label>
             </b-col>
-            <b-col cols="5" md="5">
+            <b-col
+              cols="5"
+              md="5"
+            >
               <b-form-group
                 label="Filtrar por periodo:"
                 label-for="input-8"
@@ -76,11 +87,14 @@
                   :options="dateOptions"
                   :reduce="(dateOptions) => dateOptions.value"
                   :clearable="false"
-                ></v-select>
+                />
               </b-form-group>
             </b-col>
             <!-- Search -->
-            <b-col cols="4" md="4">
+            <b-col
+              cols="4"
+              md="4"
+            >
               <b-form-group
                 id="input-group-8"
                 label="Dados da lista abaixo:"
@@ -98,11 +112,17 @@
         <b-card-body v-if="can('View Report')">
           <b-row>
             <b-col cols="3">
-              <b-button variant="outline-primary" @click="imprimir()"
-                ><i class="fas fa-print"></i> Imprimir</b-button
-              >
+              <b-button
+                variant="outline-primary"
+                @click="imprimir()"
+              ><i class="fas fa-print" /> Imprimir</b-button>
             </b-col>
-            <b-col cols="12" xl="12" md="12" class="table-responsive">
+            <b-col
+              cols="12"
+              xl="12"
+              md="12"
+              class="table-responsive"
+            >
               <b-table
                 ref="RelatorioGeral"
                 :items="generalReport"
@@ -192,11 +212,11 @@
                       justify-content-center justify-content-sm-start
                     "
                   >
-                    <span class="text-muted"
-                      >mostrar {{ dataHistory.from }} de
+                    <span
+                      class="text-muted"
+                    >mostrar {{ dataHistory.from }} de
                       {{ dataHistory.to }} para
-                      {{ dataHistory.of }} entradas</span
-                    >
+                      {{ dataHistory.of }} entradas</span>
                   </b-col>
                   <!-- Pagination -->
                   <b-col
@@ -219,10 +239,16 @@
                       next-class="next-item"
                     >
                       <template #prev-text>
-                        <feather-icon icon="ChevronLeftIcon" size="18" />
+                        <feather-icon
+                          icon="ChevronLeftIcon"
+                          size="18"
+                        />
                       </template>
                       <template #next-text>
-                        <feather-icon icon="ChevronRightIcon" size="18" />
+                        <feather-icon
+                          icon="ChevronRightIcon"
+                          size="18"
+                        />
                       </template>
                     </b-pagination>
                   </b-col>
@@ -259,18 +285,18 @@ import {
   BPagination,
   BDropdown,
   BDropdownItem,
-} from "bootstrap-vue";
-import vSelect from "vue-select";
-import Form from "vform";
-import { ref, onUnmounted } from "@vue/composition-api";
-import store from "@/store";
-import moment from "moment";
-import flatPickr from "vue-flatpickr-component";
-import DatePicker from "vue2-datepicker";
-import storeAbastecimentos from "./storeAbastecimentos";
-import "vue2-datepicker/index.css";
-import _ from "lodash";
-import useRelatorioList from "./Relatorio";
+} from 'bootstrap-vue'
+import vSelect from 'vue-select'
+import Form from 'vform'
+import { ref, onUnmounted } from '@vue/composition-api'
+import moment from 'moment'
+import flatPickr from 'vue-flatpickr-component'
+import DatePicker from 'vue2-datepicker'
+import storeAbastecimentos from './storeAbastecimentos'
+import 'vue2-datepicker/index.css'
+import _ from 'lodash'
+import store from '@/store'
+import useRelatorioList from './Relatorio'
 
 export default {
   components: {
@@ -300,141 +326,139 @@ export default {
     DatePicker,
   },
   created() {
-    this.moment = moment;
-    this.$http.get("/api/bombas").then((response) => {
-      this.bombas = response.data;
-    });
+    this.moment = moment
+    this.$http.get('/api/bombas').then(response => {
+      this.bombas = response.data
+    })
   },
   setup() {
-    const SUPPLY_STORE_MODULE_NAME = "Supply";
+    const SUPPLY_STORE_MODULE_NAME = 'Supply'
     // Register module
-    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME))
-      store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
+    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) { store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos) }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(SUPPLY_STORE_MODULE_NAME))
-        store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
-    });
+      if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) { store.unregisterModule(SUPPLY_STORE_MODULE_NAME) }
+    })
     function dateTime(value) {
-      return moment(value).format("DD/MM/YYYY");
+      return moment(value).format('DD/MM/YYYY')
     }
     const dateOptions = [
-      { label: "Hoje", value: "Hoje" },
-      { label: "Semanal", value: "Semanal" },
-      { label: "Mes", value: "Mensal" },
-      { label: "Ano", value: "Anual" },
-    ];
+      { label: 'Hoje', value: 'Hoje' },
+      { label: 'Semanal', value: 'Semanal' },
+      { label: 'Mes', value: 'Mensal' },
+      { label: 'Ano', value: 'Anual' },
+    ]
 
     function imprimir() {
-      const newLocal = "download";
+      const newLocal = 'download'
       //   alert(this.intervalo)
       if (this.intervalo) {
         this.$http
           .post(
-            "/api/printRelatorio",
+            '/api/printRelatorio',
             { intervalo: this.intervalo },
             {
-              responseType: "blob",
-              Accept: "application/pdf",
-            }
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
           )
-          .then((response) => {
+          .then(response => {
             // console.log(response.data)
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       } else if (this.searchDatas) {
         this.$http
           .post(
-            "/api/printRelatorio",
+            '/api/printRelatorio',
             { searchDatas: this.searchDatas },
             {
-              responseType: "blob",
-              Accept: "application/pdf",
-            }
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
           )
-          .then((response) => {
+          .then(response => {
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       } else if (this.dateReport) {
         this.$http
           .post(
-            "/api/printRelatorio",
+            '/api/printRelatorio',
             { dateReport: this.dateReport },
             {
-              responseType: "blob",
-              Accept: "application/pdf",
-            }
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
           )
-          .then((response) => {
+          .then(response => {
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       } else if (
-        this.dateReport &&
-        this.intervalo &&
-        this.searchDatas
+        this.dateReport
+        && this.intervalo
+        && this.searchDatas
       ) {
         this.$http
           .post(
-            "/api/printRelatorio",
+            '/api/printRelatorio',
             {
               dateReport: this.dateReport,
               intervalo: this.intervalo,
               searchDatas: this.searchDatas,
             },
             {
-              responseType: "blob",
-              Accept: "application/pdf",
-            }
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
           )
-          .then((response) => {
+          .then(response => {
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       } else if (
-        this.dateReport &&
-        this.intervalo &&
-        this.searchDatas &&
-        this.bombaNome
+        this.dateReport
+        && this.intervalo
+        && this.searchDatas
+        && this.bombaNome
       ) {
         this.$http
           .post(
-            "/api/printRelatorio",
+            '/api/printRelatorio',
             {
               dateReport: this.dateReport,
               intervalo: this.intervalo,
@@ -442,57 +466,82 @@ export default {
               bombaNome: this.bombaNome,
             },
             {
-              responseType: "blob",
-              Accept: "application/pdf",
-            }
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
           )
-          .then((response) => {
+          .then(response => {
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
+      } else if (this.intervalo && this.searchDatas) {
+        this.$http
+          .post(
+            '/api/printRelatorio',
+            {
+              intervalo: this.intervalo,
+              searchDatas: this.searchDatas,
+            },
+            {
+              responseType: 'blob',
+              Accept: 'application/pdf',
+            },
+          )
+          .then(response => {
+            const fileURL = window.URL.createObjectURL(
+              new Blob([response.data], {
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       } else {
         this.$http
-          .post("/api/printRelatorio", {
-            responseType: "blob",
-            Accept: "application/pdf",
+          .post('/api/printRelatorio', {
+            responseType: 'blob',
+            Accept: 'application/pdf',
           })
-          .then((response) => {
+          .then(response => {
             const fileURL = window.URL.createObjectURL(
               new Blob([response.data], {
-                type: "application/pdf",
-              })
-            );
-            const fileLink = document.createElement("a");
-            fileLink.href = fileURL;
-            fileLink.setAttribute(newLocal, "Relatorio.pdf");
-            document.body.appendChild(fileLink);
-            fileLink.click();
-          });
+                type: 'application/pdf',
+              }),
+            )
+            const fileLink = document.createElement('a')
+            fileLink.href = fileURL
+            fileLink.setAttribute(newLocal, 'Relatorio.pdf')
+            document.body.appendChild(fileLink)
+            fileLink.click()
+          })
       }
     }
     const fieldColumns = [
-      { key: "ordem", sortable: true },
-      { key: "Data_de_emissao", sortable: true },
-      { key: "viatura_matricula", sortable: true },
-      { key: "Combustivel", sortable: true },
-      { key: "qtd", sortable: true },
-      { key: "preço", sortable: true },
-      { key: "rotas_tomadas", sortable: true },
-      { key: "bombas", sortable: true },
-      { key: "autor", sortable: true },
-      { key: "Subtotal", sortable: true },
-      { key: "acção" },
-    ];
-    const bomba = ref(null);
-    const viatura = ref(null);
+      { key: 'ordem', sortable: true },
+      { key: 'Data_de_emissao', sortable: true },
+      { key: 'viatura_matricula', sortable: true },
+      { key: 'Combustivel', sortable: true },
+      { key: 'qtd', sortable: true },
+      { key: 'preço', sortable: true },
+      { key: 'rotas_tomadas', sortable: true },
+      { key: 'bombas', sortable: true },
+      { key: 'autor', sortable: true },
+      { key: 'Subtotal', sortable: true },
+      { key: 'acção' },
+    ]
+    const bomba = ref(null)
+    const viatura = ref(null)
 
     const {
       perPage,
@@ -509,7 +558,7 @@ export default {
       sortBy,
       isSortDirDesc,
       bombaNome,
-    } = useRelatorioList();
+    } = useRelatorioList()
 
     return {
       perPage,
@@ -533,7 +582,7 @@ export default {
       dateTime,
       imprimir,
       bombas: [],
-    };
+    }
   },
-};
+}
 </script>
