@@ -390,7 +390,7 @@ __webpack_require__.r(__webpack_exports__);
           });
 
           _this7.$Progress.fail();
-        } else if (err.response.status === 422) {
+        } else {
           _this7.$swal.fire({
             icon: 'error',
             title: "".concat(err.response.data.errors.viatura_id, "<br/>").concat(err.response.data.errors.rota_id, "<br/>").concat(err.response.data.errors.turno, "<br/>").concat(err.response.data.errors.qtd_abastecer)
@@ -428,7 +428,6 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$http.get("/api/Ordems/".concat(_router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.refs)).then(function (response) {
         _this9.OpenOrder = response.data;
-        console.log(_this9.OpenOrder);
       })["catch"](function (error) {
         if (error) {
           console.log(error);

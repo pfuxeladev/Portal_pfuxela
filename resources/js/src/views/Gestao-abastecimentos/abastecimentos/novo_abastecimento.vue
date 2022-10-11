@@ -368,7 +368,7 @@ export default {
             title: err.response.data.erro,
           })
           this.$Progress.fail()
-        } else if (err.response.status === 422) {
+        } else {
           this.$swal.fire({
             icon: 'error',
             title: `${err.response.data.errors.viatura_id}<br/>${err.response.data.errors.rota_id}<br/>${err.response.data.errors.turno}<br/>${err.response.data.errors.qtd_abastecer}`,
@@ -404,7 +404,6 @@ export default {
       this.$http.get(`/api/Ordems/${router.currentRoute.params.refs}`)
         .then(response => {
           this.OpenOrder = response.data
-          console.log(this.OpenOrder)
         })
         .catch(error => {
           if (error) {
@@ -503,7 +502,3 @@ export default {
 
 }
 </script>
-<style>
-
-
-</style>
