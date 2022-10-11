@@ -57,22 +57,23 @@ class ViaturaAlocadaController extends Controller
     public function store(Request $request)
     {
         $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
+        $rotas = array();
 
         foreach ($request->rota['rota_id'] as $key => $rota_id) {
-            $viatura_rota = ViaturaRota::where('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->first();
-
-            if (!empty($viatura_rota)) {
-
-                if(Viatura::where('id', $viatura_rota->viatura_id)->first() != null){
-                    return response(['error' => 'Nao pode alocar duas vezes a viatura no mesmo dia'], 421);
-                }else{
-                    return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
-                }
-
-
-            }
+            $rotas[$key] = $rota_id;
         }
+        $viatura_rota = ViaturaRota::whereIn('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->get();
 
+        if (!empty($viatura_rota)) {
+
+            if(Viatura::where('id', $viatura_rota[0]->viatura_id)->first() != null){
+                return response(['error' => 'Nao pode alocar duas vezes a viatura no mesmo dia'], 421);
+            }else{
+                return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
+            }
+
+
+        }
 
 
         $viaturaLeitura = new viatura_historico();
@@ -89,11 +90,16 @@ class ViaturaAlocadaController extends Controller
         $viaturaLeitura->save();
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-
+        $remanescente = ($viatura->qtd_disponivel - $request->qtdActual);
         $km_ant = $viatura->kilometragem + $request->kmPercorridos;
         $viatura->kilometragem_ant = $viatura->kilometragem;
         $viatura->kilometragem = $request->manometro_km;
-        $viatura->qtd_disponivel = $request->manometro_combustivel;
+        if($remanescente < 0){
+            $viatura->qtd_disponivel = 0;
+        }else{
+            $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $request->qtdActual);
+        }
+
         $viatura->update();
 
 
