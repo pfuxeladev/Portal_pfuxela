@@ -62,16 +62,16 @@ class ViaturaAlocadaController extends Controller
         foreach ($request->rota['rota_id'] as $key => $rota_id) {
             $rotas[$key] = $rota_id;
         }
-        $viatura_rota = ViaturaRota::whereIn('rota_id', $rota_id)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->get();
+        $viatura_rota = ViaturaRota::whereIn('rota_id', $rotas)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->get();
 
         if (!empty($viatura_rota)) {
-
-            if(Viatura::where('id', $viatura_rota[0]->viatura_id)->first() != null){
+            foreach($viatura_rota as $vr){
+             if(Viatura::where('id', $vr->viatura_id)->first() != null){
                 return response(['error' => 'Nao pode alocar duas vezes a viatura no mesmo dia'], 421);
             }else{
                 return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
+            }   
             }
-
 
         }
 
