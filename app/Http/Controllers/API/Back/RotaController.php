@@ -28,9 +28,9 @@ class RotaController extends Controller
 {
     private $rota;
 
-    // protected $rotaService;
+    protected $rotaService;
 
-    function __construct(Rota $rota, protected ServicesRotaService $rotaService)
+    function __construct(Rota $rota, ServicesRotaService $rotaService)
     {
         $this->rota = $rota;
 
