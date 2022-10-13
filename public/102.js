@@ -24,23 +24,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
-/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
-/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
-/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
-/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
+/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
 /* harmony import */ var _Relatorio__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./Relatorio */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/Relatorio.js");
 
 
 
 
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -315,144 +341,166 @@ __webpack_require__.r(__webpack_exports__);
     BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BTable"],
     BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BDropdown"],
     BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_5__["BDropdownItem"],
-    flatPickr: vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_11___default.a,
-    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_12__["default"]
+    flatPickr: vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_10___default.a,
+    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_11__["default"]
   },
   created: function created() {
     var _this = this;
 
-    this.moment = moment__WEBPACK_IMPORTED_MODULE_10___default.a;
-    this.$http.get("/api/bombas").then(function (response) {
+    this.moment = moment__WEBPACK_IMPORTED_MODULE_9___default.a;
+    this.$http.get('/api/bombas').then(function (response) {
       _this.bombas = response.data;
     });
   },
   setup: function setup() {
-    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
+    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_13__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_15__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_15__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_12__["default"]);
+    } // UnRegister on leave
+
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_8__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_9__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      if (_store__WEBPACK_IMPORTED_MODULE_15__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_15__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      }
     });
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_10___default()(value).format("DD/MM/YYYY");
+      return moment__WEBPACK_IMPORTED_MODULE_9___default()(value).format('DD/MM/YYYY');
     }
 
     var dateOptions = [{
-      label: "Hoje",
-      value: "Hoje"
+      label: 'Hoje',
+      value: 'Hoje'
     }, {
-      label: "Semanal",
-      value: "Semanal"
+      label: 'Semanal',
+      value: 'Semanal'
     }, {
-      label: "Mes",
-      value: "Mensal"
+      label: 'Mes',
+      value: 'Mensal'
     }, {
-      label: "Ano",
-      value: "Anual"
+      label: 'Ano',
+      value: 'Anual'
     }];
 
     function imprimir() {
-      var newLocal = "download"; //   alert(this.intervalo)
+      var newLocal = 'download'; //   alert(this.intervalo)
 
       if (this.intervalo) {
-        this.$http.post("/api/printRelatorio", {
+        this.$http.post('/api/printRelatorio', {
           intervalo: this.intervalo
         }, {
-          responseType: "blob",
-          Accept: "application/pdf"
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           // console.log(response.data)
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else if (this.searchDatas) {
-        this.$http.post("/api/printRelatorio", {
+        this.$http.post('/api/printRelatorio', {
           searchDatas: this.searchDatas
         }, {
-          responseType: "blob",
-          Accept: "application/pdf"
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else if (this.dateReport) {
-        this.$http.post("/api/printRelatorio", {
+        this.$http.post('/api/printRelatorio', {
           dateReport: this.dateReport
         }, {
-          responseType: "blob",
-          Accept: "application/pdf"
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else if (this.dateReport && this.intervalo && this.searchDatas) {
-        this.$http.post("/api/printRelatorio", {
+        this.$http.post('/api/printRelatorio', {
           dateReport: this.dateReport,
           intervalo: this.intervalo,
           searchDatas: this.searchDatas
         }, {
-          responseType: "blob",
-          Accept: "application/pdf"
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else if (this.dateReport && this.intervalo && this.searchDatas && this.bombaNome) {
-        this.$http.post("/api/printRelatorio", {
+        this.$http.post('/api/printRelatorio', {
           dateReport: this.dateReport,
           intervalo: this.intervalo,
           searchDatas: this.searchDatas,
           bombaNome: this.bombaNome
         }, {
-          responseType: "blob",
-          Accept: "application/pdf"
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        });
+      } else if (this.intervalo && this.searchDatas) {
+        this.$http.post('/api/printRelatorio', {
+          intervalo: this.intervalo,
+          searchDatas: this.searchDatas
+        }, {
+          responseType: 'blob',
+          Accept: 'application/pdf'
+        }).then(function (response) {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data], {
+            type: 'application/pdf'
+          }));
+          var fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
       } else {
-        this.$http.post("/api/printRelatorio", {
-          responseType: "blob",
-          Accept: "application/pdf"
+        this.$http.post('/api/printRelatorio', {
+          responseType: 'blob',
+          Accept: 'application/pdf'
         }).then(function (response) {
           var fileURL = window.URL.createObjectURL(new Blob([response.data], {
-            type: "application/pdf"
+            type: 'application/pdf'
           }));
-          var fileLink = document.createElement("a");
+          var fileLink = document.createElement('a');
           fileLink.href = fileURL;
-          fileLink.setAttribute(newLocal, "Relatorio.pdf");
+          fileLink.setAttribute(newLocal, 'Relatorio.pdf');
           document.body.appendChild(fileLink);
           fileLink.click();
         });
@@ -460,37 +508,37 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     var fieldColumns = [{
-      key: "ordem",
+      key: 'ordem',
       sortable: true
     }, {
-      key: "Data_de_emissao",
+      key: 'Data_de_emissao',
       sortable: true
     }, {
-      key: "viatura_matricula",
+      key: 'viatura_matricula',
       sortable: true
     }, {
-      key: "Combustivel",
+      key: 'Combustivel',
       sortable: true
     }, {
-      key: "qtd",
+      key: 'qtd',
       sortable: true
     }, {
-      key: "preço",
+      key: 'preço',
       sortable: true
     }, {
-      key: "rotas_tomadas",
+      key: 'rotas_tomadas',
       sortable: true
     }, {
-      key: "bombas",
+      key: 'bombas',
       sortable: true
     }, {
-      key: "autor",
+      key: 'autor',
       sortable: true
     }, {
-      key: "Subtotal",
+      key: 'Subtotal',
       sortable: true
     }, {
-      key: "acção"
+      key: 'acção'
     }];
     var bomba = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_8__["ref"])(null);
     var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_8__["ref"])(null);
@@ -941,9 +989,9 @@ var render = function () {
                               staticClass: "mb-1",
                               staticStyle: { width: "100%" },
                               attrs: {
+                                id: "example-datepicker1",
                                 "value-type": "format",
                                 format: "YYYY-MM-DD",
-                                id: "example-datepicker1",
                                 range: "",
                                 locale: "pt",
                               },

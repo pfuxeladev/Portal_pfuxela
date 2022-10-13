@@ -18,18 +18,27 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use PDF;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\RotaRequest;
+use App\Http\Resources\rotaResource;
+use App\Http\Services\RotaService as ServicesRotaService;
+use App\Services\RotaService;
+use InvalidArgumentException;
 
 class RotaController extends Controller
 {
     private $rota;
-    function __construct(Rota $rota)
+
+    // protected $rotaService;
+
+    function __construct(Rota $rota, protected ServicesRotaService $rotaService)
     {
         $this->rota = $rota;
+
     }
     public function index()
     {
 
-        return $this->rota->with(['projecto', 'horario'])->where('is_active', true)->orderBy('nome_rota', 'asc')->paginate(15);
+        return $this->rota->with(['projecto', 'horario'])->where('is_active', true)->orderBy('updated_at', 'DESC')->paginate(15);
     }
 
     function todasRotas()
@@ -211,9 +220,28 @@ class RotaController extends Controller
             return "Something went wrong! " . $e->getMessage();
         }
     }
-    public function update(Request $request, Rota $rota)
+    public function show($id)
     {
-        //
+        return Rota::with('projecto')->findOrFail($id);
+    }
+
+    public function update(RotaRequest $request, $id)
+    {
+        $result = ['status' => 200];
+
+        try {
+            $rota = $this->rotaService->UpdateRota($request, $id);
+            // $result['rota'] = new rotaResource($rota);
+
+        } catch (Exception $e) {
+            $result = [
+                'status' => 500,
+                'error' => $e->getMessage()
+            ];
+        }
+
+        return response()->json(['message'=>'rota actualizada com sucesso', $result['status'], new rotaResource($rota)]);
+
     }
 
     /**

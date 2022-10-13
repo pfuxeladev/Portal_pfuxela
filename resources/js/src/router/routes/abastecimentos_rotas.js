@@ -91,6 +91,14 @@ export default
     },
   },
   {
+    path: '/Supply/Routes-Supply/:id/edit',
+    name: 'Routes-update',
+    component: () => import('@/views/Gestao-abastecimentos/rotas/rotaEdit.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Supply/Orders',
     name: 'Orders',
     component: () => import('@/views/Gestao-abastecimentos/ordens/lista.vue'),

@@ -33,7 +33,7 @@ export default {
     updateRota(ctx, { rotaData, id }) {
       return new Promise((resolve, reject) => {
         axios
-          .post(`/api/Rotas/${id}`, { rota: rotaData })
+          .put(`/api/Rotas/${id}`, rotaData.value)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

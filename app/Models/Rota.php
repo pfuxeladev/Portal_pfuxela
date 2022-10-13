@@ -10,6 +10,15 @@ class Rota extends Model
     use HasFactory;
 
     protected $guard = 'api';
+    protected $table = 'rotas';
+
+    protected $fillable = [
+        'nome_rota',
+        'projecto_id',
+        'tipoRota',
+        'endereco',
+        'distancia_km'
+    ];
 
     public function projecto(){
         return $this->belongsTo(projecto::class);

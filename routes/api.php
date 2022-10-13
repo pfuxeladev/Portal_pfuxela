@@ -97,6 +97,9 @@ Route::group(['middleware' => 'auth:api'], function () {
         ]
     );
 
+// Rota update
+// Route::put('Rotas/{id}', [App\Http\Controllers\API\Back\RotaController::class, 'update']);
+
     Route::get('ReabrirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'ReabrirOrdem']);
     Route::get('removeLine/{refs}', [\App\Http\Controllers\API\Back\AbastecimentoController::class, 'removeLine']);
 
