@@ -39,4 +39,8 @@ class Ordem extends Model
     public function abastecimentoBomba(){
         return $this->hasMany(abastecimento_bomba::class, 'ordem_id', 'id');
     }
+
+    public function abastecimentoExtra(){
+        return $this->hasMany(abastecimentoExtra::class, 'ordem_id', 'id');
+    }
 }
