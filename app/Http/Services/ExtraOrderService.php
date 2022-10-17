@@ -20,7 +20,7 @@ class ExtraOrderService {
     }
 
     function getWeekReport(){
-        
+        $this->extraOrder->where('estado', Ordem::ESTADO_AUTH);
     }
 
     function getMonthlyReport(){

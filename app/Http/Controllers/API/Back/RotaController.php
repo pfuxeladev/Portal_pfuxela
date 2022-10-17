@@ -192,18 +192,44 @@ class RotaController extends Controller
 
     function RelatorioPorRota()
     {
+        $ordem_rota = array();
+
+        $dados = array();
+        $soma_qtd = array();
+        $soma_preco = 0;
         try {
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
-            $date = \Carbon\Carbon::today()->subDays(8);
+            $date = \Carbon\Carbon::today()->subDays(18);
 
-            $rotas = Rota::with(['ordem_viatura.viatura', 'ordem_viatura.ordem.bombas', 'projecto'])
-            ->where('is_active',1)
+            $rotas = Rota::with('projecto')->where('is_active',1)
             ->orderBy('id', 'desc')->get();
 
-            // return response()->json($rotas, 200);
+            foreach ($rotas as $key => $rt) {
+                $ordem_rota= OrdemViaturaRota::join('ordem_viaturas', 'ordem_viatura_rotas.ordem_viatura_id', '=','ordem_viaturas.id')
+                ->join('viaturas', 'ordem_viaturas.viatura_id', '=', 'viaturas.id')
+                ->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
+                ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
+                ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
+                ->select('rotas.*', 'ordems.*', 'ordems.estado as situacao', 'ordem_viatura_rotas.*', 'viaturas.*', 'ordem_viaturas.*', 'bombas.*')
+                ->where('ordem_viatura_rotas.rota_id', $rt->id)->where('ordems.created_at', '>=', $date)
+                ->orderBy('ordem_viatura_rotas.created_at', 'DESC')->get();
+               
+                $dados[$key] = [
+                    'rota_id'=>$rt->id,
+                    'rota'=>$rt->nome_rota,
+                    'distancia_rota'=>$rt->distancia_km,
+                    'projecto'=>$rt->projecto->name,
+                    'ordem_rota'=>$ordem_rota,
+                    'qtd_total'=>OrdemViaturaRota::join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->where('ordem_viatura_rotas.created_at', '>=', $date)->where('rotas.id', $rt->id)->sum('ordem_viatura_rotas.qtd'),
+                    'preco_total'=>OrdemViaturaRota::join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->where('ordem_viatura_rotas.created_at', '>=', $date)->where('rotas.id', $rt->id)->sum('ordem_viatura_rotas.preco_total')
+                ];
+            }
+            
 
-            // return view('reportMail.RelatorioPorRota', compact('rotas'));
+            // return response()->json($dados, 200);
+
+            return view('reportMail.RelatorioPorRota', compact('dados'));
 
             $pdf = PDF::loadView('reportMail.RelatorioPorRota', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
 
@@ -220,8 +246,8 @@ class RotaController extends Controller
             return "Something went wrong! " . $e->getMessage();
         }
     }
-    public function show($id)
-    {
+    public function show($id){
+    
         return Rota::with('projecto')->findOrFail($id);
     }
 
