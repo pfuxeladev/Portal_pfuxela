@@ -102,7 +102,7 @@ class OrdemController extends Controller
 
                 $pdf->download('Ordem' . $ordem->codigo_ordem . '.pdf');
             }
-                    $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz'];
+                    $data["email"] = ['mauro@pfuxela.co.mz','fausia@pfuxela.co.mz','supportdesk@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
                     $data["title"] = "Ordem de abastecimento Nr. " . $ordem->codigo_ordem . " com respectivas rota e projectos";
 
                     $pdf = PDF::loadView('orderMail.orderWithRotas', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
