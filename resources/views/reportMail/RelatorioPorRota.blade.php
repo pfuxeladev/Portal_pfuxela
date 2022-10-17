@@ -130,7 +130,7 @@
                             } ?>>
                                 
                                 <td>{{ $ordem->codigo_ordem }}</td>
-                                <td>{{ $ordem->created_at }}</td>
+                                <td>{{ $ordem->data_criacao }}</td>
                                 <td>{{ $ordem->situacao }}</td>
                                 <td>{{ $ordem->tipo_ordem }}</td>
                                 <td>{{ $ordem->nome_bombas }}</td>

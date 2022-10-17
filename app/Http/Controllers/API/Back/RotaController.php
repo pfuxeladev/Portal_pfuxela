@@ -200,7 +200,7 @@ class RotaController extends Controller
         try {
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
-            $date = \Carbon\Carbon::today()->subDays(18);
+            $date = \Carbon\Carbon::today()->subDays(7);
 
             $rotas = Rota::with('projecto')->where('is_active',1)
             ->orderBy('id', 'desc')->get();
@@ -211,9 +211,9 @@ class RotaController extends Controller
                 ->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
                 ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
                 ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
-                ->select('rotas.*', 'ordems.*', 'ordems.estado as situacao', 'ordem_viatura_rotas.*', 'viaturas.*', 'ordem_viaturas.*', 'bombas.*')
+                ->select('rotas.*', 'ordems.*','ordems.created_at as data_criacao', 'ordems.estado as situacao', 'ordem_viatura_rotas.*', 'viaturas.*', 'ordem_viaturas.*', 'bombas.*')
                 ->where('ordem_viatura_rotas.rota_id', $rt->id)->where('ordems.created_at', '>=', $date)
-                ->orderBy('ordem_viatura_rotas.created_at', 'DESC')->get();
+                ->orderBy('ordems.created_at', 'DESC')->get();
                
                 $dados[$key] = [
                     'rota_id'=>$rt->id,
