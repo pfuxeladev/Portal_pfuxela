@@ -229,7 +229,7 @@ class RotaController extends Controller
 
             // return response()->json($dados, 200);
 
-            return view('reportMail.RelatorioPorRota', compact('dados'));
+            // return view('reportMail.RelatorioPorRota', compact('dados'));
 
             $pdf = PDF::loadView('reportMail.RelatorioPorRota', compact('rotas'))->setOptions(['defaultFont' => 'Times New Roman']);
 
