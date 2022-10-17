@@ -11,6 +11,11 @@ class Ordem extends Model
     use HasFactory;
 
 
+    const ESTADO_AUTH = 'Autorizada';
+    const ESTADO_CANC = 'Cancelada';
+    const ESTADO_PEND = 'Pendente';
+    const ESTADO_EXTRA = 'extra';
+
     public function bombas(){
         return $this->belongsTo(Bombas::class);
     }
@@ -43,4 +48,21 @@ class Ordem extends Model
     public function abastecimentoExtra(){
         return $this->hasMany(abastecimentoExtra::class, 'ordem_id', 'id');
     }
+    public function scopeAuthorized( $query )
+    {
+        return $query->where( 'estado', self::ESTADO_AUTH );
+    }
+    public function scopPending( $query )
+    {
+        return $query->where( 'estado', self::ESTADO_PEND );
+    }
+    public function scopeCancelled( $query )
+    {
+        return $query->where( 'estado', self::ESTADO_CANC );
+    }
+    public function scopeExtra( $query )
+    {
+        return $query->where( 'estado', self::ESTADO_EXTRA );
+    }
+
 }

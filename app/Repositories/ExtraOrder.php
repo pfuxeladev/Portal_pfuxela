@@ -3,6 +3,7 @@
 namespace App\Repositories;
 
 use App\Models\Ordem;
+use Carbon\Carbon;
 use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
 //use Your Model
 

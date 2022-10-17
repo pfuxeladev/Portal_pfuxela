@@ -99,8 +99,8 @@
             $total_geral = 0;
             $total_liquido = 0;
             ?>
-            @foreach ($rotas as $rota)
-                <h3>Rota: {{ $rota->nome_rota }} - Projecto: ({{ $rota->projecto->name }}), {{ $rota->distancia_km }} km
+            @foreach ($dados as $rota)
+                <h3>Rota: {{ $rota['rota'] }} - Projecto: ({{ $rota['projecto'] }}), {{ $rota['distancia_rota'] }} km
                 </h3>
 
                 <table class="table table-bordered">
@@ -112,68 +112,58 @@
                             <th>tipo</th>
                             <th>Bombas</th>
                             <th>viatura</th>
+                            <th>Combustivel</th>
                             <th>ltr/km</th>
+                            <th>Distancia(km)</th>
                             <th>qtd</th>
+                            <th>preco</th>
                             <th>submetido por</th>
                             <th>subtotal (MT)</th>
                         </tr>
                     </thead>
                     <tbody>
 
-                        @foreach ($rota->ordem_viatura as $key => $ordem)
-                            @if (!empty(
-        App\Models\Ordem::where('id', $ordem->ordem->id)->where('created_at', '>=', \Carbon\Carbon::today()->subDays(7))->first()
-    ))
-                            <tr <?php if ($ordem->ordem->estado == 'Cancelada') {
+                        @foreach ($rota['ordem_rota'] as $key => $ordem)
+                          
+                            <tr <?php if ($ordem->situacao == 'Cancelada') {
                                 echo "style='background:rgb(255, 192, 199);'";
                             } ?>>
-                                <?php
-                                $ordens[$key] = $ordem->id;
-                                ?>
-                                <td>{{ $ordem->ordem->codigo_ordem }}</td>
-                                <td>{{ $ordem->ordem->created_at }}</td>
-                                <td>{{ $ordem->ordem->estado }}</td>
-                                <td>{{ $ordem->ordem->tipo_ordem }}</td>
-                                <td>{{ $ordem->ordem->bombas->nome_bombas }}</td>
-                                <td>{{ $ordem->viatura->matricula }}</td>
-                                <td>{{ $ordem->viatura->capacidade_media }}</td>
-                                <?php $qtd = $ordem->viatura->capacidade_media * $rota->distancia_km; ?>
+                                
+                                <td>{{ $ordem->codigo_ordem }}</td>
+                                <td>{{ $ordem->created_at }}</td>
+                                <td>{{ $ordem->situacao }}</td>
+                                <td>{{ $ordem->tipo_ordem }}</td>
+                                <td>{{ $ordem->nome_bombas }}</td>
+                                <td>{{ $ordem->matricula }}</td>
+                                <td>{{$ordem->tipo_combustivel}}</td>
+                                <td>{{ $ordem->capacidade_media }}</td>
+                                <td>{{$ordem->distancia}}</td>
+                                <?php $qtd = $ordem->qtd; ?>
                                 <td>{{ $qtd }}</td>
-                                <?php $qtd_total += $qtd; ?>
-                                <?php $user = App\Models\User::where('id', $ordem->ordem->createdBy)->first(); ?>
-                                <?php $preco = $ordem->preco_cunsumo / $ordem->qtd_abastecida; ?>
+                                <?php $qtd_total+= $qtd; ?>
+                                <?php $user = App\Models\User::where('id', $ordem->createdBy)->first(); ?>
+                                <?php $preco = $ordem->preco_total / $ordem->qtd; ?>
+                                <td>{{number_format($preco, 2, ',', '.')}}</td>
                                 <td>{{ $user->name }}</td>
                                 <?php $preco_consumo = $preco * $qtd; ?>
-                                <td>{{ number_format($preco_consumo, 2, ',', '.') }}</td>
-                                <?php $total += $preco_consumo; ?>
+                                <td>{{ number_format($ordem->preco_total, 2, ',', '.') }}</td>
+                                <?php $total += $ordem->preco_total; ?>
 
-                            </tr>
-                            @endif
+                            </tr> 
                         @endforeach
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th style="text-align: right" colspan="7">qtd total</th>
-                            <td>{{ $qtd_total }}</td>
-                            <th style="text-align: right">Total</th>
-                            <td>{{ number_format($total, 2, ',', '.') }}</td>
+                            <th colspan="9" style="text-align:right">qtd total por rota</th>
+                            <td>{{$rota['qtd_total']}}</td>
+                            <th colspan="2" style="text-align:right">Total Gasto</th>
+                            <td>{{$rota['preco_total']}}</td>
                         </tr>
-                        <?php
-                        $ordens_canceladas = App\Models\Ordem::join('ordem_viaturas', 'ordems.id', '=', 'ordem_viaturas.ordem_id')
-                            ->where('ordems.estado', '=', 'Cancelada')
-                            ->whereIn('ordem_viaturas.id', $ordens)
-                            ->sum('ordem_viaturas.preco_cunsumo');
-
-                        $total_canceladas += $ordens_canceladas;
-
-                        $total_geral += $total;
-                        ?>
-
                     </tfoot>
                 </table>
             @endforeach
             <br>
-            <table class="table table-bordered">
+            {{--  <table class="table table-bordered">
                 <thead style="background:#6e6b7b; color:aliceblue">
                     <tr>
                         <th>Valor Total bruto (MZN)</th>
@@ -189,7 +179,7 @@
                         <td>{{ number_format($total_liquido, 2, ',', '.') }}</td>
                     </tr>
                 </tbody>
-            </table>
+            </table>  --}}
         </div>
     </div>
 </body>
