@@ -200,7 +200,7 @@ class RotaController extends Controller
         try {
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
-            $date = \Carbon\Carbon::today()->subDays(18);
+            $date = \Carbon\Carbon::today()->subDays(7);
 
             $rotas = Rota::with('projecto')->where('is_active',1)
             ->orderBy('id', 'desc')->get();
