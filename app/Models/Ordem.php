@@ -11,10 +11,13 @@ class Ordem extends Model
     use HasFactory;
 
 
-    const ESTADO_AUTH = 'Autorizada';
+    const ESTADO_AUTH = 'Autorizado';
     const ESTADO_CANC = 'Cancelada';
     const ESTADO_PEND = 'Pendente';
-    const ESTADO_EXTRA = 'extra';
+    const TIPO_EXTRA = 'extra';
+    const TIPO_ROTA = 'rota';
+    const TIPO_BOMBA = 'bombas';
+
 
     public function bombas(){
         return $this->belongsTo(Bombas::class);
@@ -60,9 +63,9 @@ class Ordem extends Model
     {
         return $query->where( 'estado', self::ESTADO_CANC );
     }
-    public function scopeExtra( $query )
+     function scopeExtraType( $query )
     {
-        return $query->where( 'estado', self::ESTADO_EXTRA );
+        return $query->where( 'tipo_ordem', self::TIPO_EXTRA );
     }
 
 }

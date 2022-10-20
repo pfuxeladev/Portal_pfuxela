@@ -25,6 +25,7 @@ export default function viaturaList() {
     { key: 'marca.nome', sortable: true },
     { key: 'created_by.email', sortable: true },
     { key: 'estado', sortable: true },
+    { key: 'locate', sortable: true },
     { key: 'actions' },
   ]
   const perPage = ref(10)

@@ -21,6 +21,7 @@ class AbastecimentoResource extends JsonResource
             'user'=>$this->when($this->name()->exists(), function () {
                 return UserResource::collection($this->name);
             }),
+           
 
         ];
     }

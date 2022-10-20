@@ -212,9 +212,11 @@ class RotaController extends Controller
                 ->join('bombas', 'ordems.bombas_id', '=', 'bombas.id')
                 ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
                 ->select('rotas.*', 'ordems.*','ordems.created_at as data_criacao', 'ordems.estado as situacao', 'ordem_viatura_rotas.*', 'viaturas.*', 'ordem_viaturas.*', 'bombas.*')
-                ->where('ordem_viatura_rotas.rota_id', $rt->id)->where('ordems.created_at', '>=', $date)
+                ->where('ordem_viatura_rotas.rota_id', $rt->id)
+                // ->where('ordems.created_at', '>=', $date)
                 ->orderBy('ordems.created_at', 'DESC')->get();
-               
+
+
                 $dados[$key] = [
                     'rota_id'=>$rt->id,
                     'rota'=>$rt->nome_rota,
@@ -225,7 +227,6 @@ class RotaController extends Controller
                     'preco_total'=>OrdemViaturaRota::join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->where('ordem_viatura_rotas.created_at', '>=', $date)->where('rotas.id', $rt->id)->sum('ordem_viatura_rotas.preco_total')
                 ];
             }
-            
 
             // return response()->json($dados, 200);
 
@@ -247,7 +248,7 @@ class RotaController extends Controller
         }
     }
     public function show($id){
-    
+
         return Rota::with('projecto')->findOrFail($id);
     }
 

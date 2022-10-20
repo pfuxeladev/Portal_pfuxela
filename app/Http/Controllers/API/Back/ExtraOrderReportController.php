@@ -3,31 +3,27 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Http\Services\ExtraOrderService;
 use App\Models\Ordem;
 use Illuminate\Http\Request;
 
 class ExtraOrderReportController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    private $service;
+
+    function __construct(ExtraOrderService $service){
+        $this->service = $service;
+    }
     public function index()
     {
-        //
+        return $this->service->getWeekReport();
+
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+
+   public function MonthlyExtraOrderReport(){
+    return $this->service->getMonthlyReport();
+   }
 
     /**
      * Display the specified resource.

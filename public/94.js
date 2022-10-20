@@ -1,443 +1,187 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[94],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/layouts/components/Logo.vue */ "./resources/js/src/@core/layouts/components/Logo.vue");
-/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
-/* harmony import */ var _invoiceStoreModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../invoiceStoreModule */ "./resources/js/src/views/apps/invoice/invoiceStoreModule.js");
-/* harmony import */ var _InvoiceSidebarSendInvoice_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../InvoiceSidebarSendInvoice.vue */ "./resources/js/src/views/apps/invoice/InvoiceSidebarSendInvoice.vue");
-/* harmony import */ var _InvoiceSidebarAddPayment_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../InvoiceSidebarAddPayment.vue */ "./resources/js/src/views/apps/invoice/InvoiceSidebarAddPayment.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _typeof; });
+function _typeof(obj) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
+    return typeof obj;
+  } : function (obj) {
+    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+  }, _typeof(obj);
+}
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.find-index.js */ "./node_modules/core-js/modules/es.array.find-index.js");
+/* harmony import */ var core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_find_index_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _useEcommerce__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../useEcommerce */ "./resources/js/src/views/apps/e-commerce/useEcommerce.js");
 
 
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  directives: {
-    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_5__["default"],
-    'b-toggle': bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["VBToggle"]
-  },
   components: {
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCol"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCardBody"],
-    BTableLite: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BTableLite"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCardText"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BButton"],
-    BAlert: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BAlert"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BLink"],
-    Logo: _core_layouts_components_Logo_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    InvoiceSidebarAddPayment: _InvoiceSidebarAddPayment_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    InvoiceSidebarSendInvoice: _InvoiceSidebarSendInvoice_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BImg"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BLink"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"]
   },
   setup: function setup() {
-    var invoiceData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-    var paymentDetails = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])({}); // Invoice Description
-    // ? Your real data will contain this information
+    var _useEcommerceUi = Object(_useEcommerce__WEBPACK_IMPORTED_MODULE_5__["useEcommerceUi"])(),
+        handleWishlistCartActionClick = _useEcommerceUi.handleWishlistCartActionClick;
 
-    var invoiceDescription = [{
-      taskTitle: 'Native App Development',
-      taskDescription: 'Developed a full stack native app using React Native, Bootstrap & Python',
-      rate: '$60.00',
-      hours: '30',
-      total: '$1,800.00'
-    }, {
-      taskTitle: 'UI Kit Design',
-      taskDescription: 'Designed a UI kit for native app using Sketch, Figma & Adobe XD',
-      rate: '$60.00',
-      hours: '20',
-      total: '$1200.00'
-    }];
-    var INVOICE_APP_STORE_MODULE_NAME = 'app-invoice'; // Register module
+    var products = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])([]);
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_1__["default"].hasModule(INVOICE_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_1__["default"].registerModule(INVOICE_APP_STORE_MODULE_NAME, _invoiceStoreModule__WEBPACK_IMPORTED_MODULE_6__["default"]); // UnRegister on leave
+    var _useEcommerce = Object(_useEcommerce__WEBPACK_IMPORTED_MODULE_5__["useEcommerce"])(),
+        removeProductFromWishlist = _useEcommerce.removeProductFromWishlist;
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_1__["default"].hasModule(INVOICE_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_1__["default"].unregisterModule(INVOICE_APP_STORE_MODULE_NAME);
-    });
-    _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch('app-invoice/fetchInvoice', {
-      id: _router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.params.id
-    }).then(function (response) {
-      invoiceData.value = response.data.invoice;
-      paymentDetails.value = response.data.paymentDetails;
-    })["catch"](function (error) {
-      if (error.response.status === 404) {
-        invoiceData.value = undefined;
-      }
-    });
-
-    var printInvoice = function printInvoice() {
-      window.print();
+    var removeProductFromWishlistClick = function removeProductFromWishlistClick(product) {
+      removeProductFromWishlist(product.id).then(function () {
+        var productIndex = products.value.findIndex(function (p) {
+          return p.id === product.id;
+        });
+        products.value.splice(productIndex, 1);
+      });
     };
 
+    var fetchWishlistProducts = function fetchWishlistProducts() {
+      _store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch('app-ecommerce/fetchWishlistProducts').then(function (response) {
+        products.value = response.data.products;
+      });
+    };
+
+    fetchWishlistProducts();
     return {
-      invoiceData: invoiceData,
-      paymentDetails: paymentDetails,
-      invoiceDescription: invoiceDescription,
-      printInvoice: printInvoice
+      products: products,
+      // UI
+      handleWishlistCartActionClick: handleWishlistCartActionClick,
+      removeProductFromWishlistClick: removeProductFromWishlistClick
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -445,40 +189,22 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "[dir=ltr] .invoice-preview .invoice-padding[data-v-12670cf2], [dir=ltr] .invoice-edit .invoice-padding[data-v-12670cf2], [dir=ltr] .invoice-add .invoice-padding[data-v-12670cf2] {\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}[dir=rtl] .invoice-preview .invoice-padding[data-v-12670cf2], [dir=rtl] .invoice-edit .invoice-padding[data-v-12670cf2], [dir=rtl] .invoice-add .invoice-padding[data-v-12670cf2] {\n  padding-right: 2.5rem;\n  padding-left: 2.5rem;\n}\n[dir=ltr] .invoice-preview .table th[data-v-12670cf2]:first-child, [dir=ltr] .invoice-preview .table td[data-v-12670cf2]:first-child, [dir=ltr] .invoice-edit .table th[data-v-12670cf2]:first-child, [dir=ltr] .invoice-edit .table td[data-v-12670cf2]:first-child, [dir=ltr] .invoice-add .table th[data-v-12670cf2]:first-child, [dir=ltr] .invoice-add .table td[data-v-12670cf2]:first-child {\n  padding-left: 2.5rem;\n}\n[dir=rtl] .invoice-preview .table th[data-v-12670cf2]:first-child, [dir=rtl] .invoice-preview .table td[data-v-12670cf2]:first-child, [dir=rtl] .invoice-edit .table th[data-v-12670cf2]:first-child, [dir=rtl] .invoice-edit .table td[data-v-12670cf2]:first-child, [dir=rtl] .invoice-add .table th[data-v-12670cf2]:first-child, [dir=rtl] .invoice-add .table td[data-v-12670cf2]:first-child {\n  padding-right: 2.5rem;\n}\n.invoice-preview .logo-wrapper[data-v-12670cf2],\n.invoice-edit .logo-wrapper[data-v-12670cf2],\n.invoice-add .logo-wrapper[data-v-12670cf2] {\n  display: flex;\n  align-items: center;\n}\n[dir] .invoice-preview .logo-wrapper[data-v-12670cf2], [dir] .invoice-edit .logo-wrapper[data-v-12670cf2], [dir] .invoice-add .logo-wrapper[data-v-12670cf2] {\n  margin-bottom: 1.9rem;\n}\n.invoice-preview .logo-wrapper .invoice-logo[data-v-12670cf2],\n.invoice-edit .logo-wrapper .invoice-logo[data-v-12670cf2],\n.invoice-add .logo-wrapper .invoice-logo[data-v-12670cf2] {\n  font-size: 2.142rem;\n  font-weight: bold;\n  letter-spacing: -0.54px;\n}\n[dir] .invoice-preview .logo-wrapper .invoice-logo[data-v-12670cf2], [dir] .invoice-edit .logo-wrapper .invoice-logo[data-v-12670cf2], [dir] .invoice-add .logo-wrapper .invoice-logo[data-v-12670cf2] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-preview .logo-wrapper .invoice-logo[data-v-12670cf2], [dir=ltr] .invoice-edit .logo-wrapper .invoice-logo[data-v-12670cf2], [dir=ltr] .invoice-add .logo-wrapper .invoice-logo[data-v-12670cf2] {\n  margin-left: 1rem;\n}\n[dir=rtl] .invoice-preview .logo-wrapper .invoice-logo[data-v-12670cf2], [dir=rtl] .invoice-edit .logo-wrapper .invoice-logo[data-v-12670cf2], [dir=rtl] .invoice-add .logo-wrapper .invoice-logo[data-v-12670cf2] {\n  margin-right: 1rem;\n}\n.invoice-preview .invoice-title[data-v-12670cf2],\n.invoice-edit .invoice-title[data-v-12670cf2],\n.invoice-add .invoice-title[data-v-12670cf2] {\n  font-size: 1.285rem;\n}\n[dir] .invoice-preview .invoice-title[data-v-12670cf2], [dir] .invoice-edit .invoice-title[data-v-12670cf2], [dir] .invoice-add .invoice-title[data-v-12670cf2] {\n  margin-bottom: 1rem;\n}\n.invoice-preview .invoice-title .invoice-number[data-v-12670cf2],\n.invoice-edit .invoice-title .invoice-number[data-v-12670cf2],\n.invoice-add .invoice-title .invoice-number[data-v-12670cf2] {\n  font-weight: 600;\n}\n.invoice-preview .invoice-date-wrapper[data-v-12670cf2],\n.invoice-edit .invoice-date-wrapper[data-v-12670cf2],\n.invoice-add .invoice-date-wrapper[data-v-12670cf2] {\n  display: flex;\n  align-items: center;\n}\n[dir] .invoice-preview .invoice-date-wrapper[data-v-12670cf2]:not(:last-of-type), [dir] .invoice-edit .invoice-date-wrapper[data-v-12670cf2]:not(:last-of-type), [dir] .invoice-add .invoice-date-wrapper[data-v-12670cf2]:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\n.invoice-preview .invoice-date-wrapper .invoice-date-title[data-v-12670cf2],\n.invoice-edit .invoice-date-wrapper .invoice-date-title[data-v-12670cf2],\n.invoice-add .invoice-date-wrapper .invoice-date-title[data-v-12670cf2] {\n  width: 7rem;\n}\n[dir] .invoice-preview .invoice-date-wrapper .invoice-date-title[data-v-12670cf2], [dir] .invoice-edit .invoice-date-wrapper .invoice-date-title[data-v-12670cf2], [dir] .invoice-add .invoice-date-wrapper .invoice-date-title[data-v-12670cf2] {\n  margin-bottom: 0;\n}\n.invoice-preview .invoice-date-wrapper .invoice-date[data-v-12670cf2],\n.invoice-edit .invoice-date-wrapper .invoice-date[data-v-12670cf2],\n.invoice-add .invoice-date-wrapper .invoice-date[data-v-12670cf2] {\n  font-weight: 600;\n}\n[dir] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir] .invoice-add .invoice-date-wrapper .invoice-date[data-v-12670cf2] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir=ltr] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir=ltr] .invoice-add .invoice-date-wrapper .invoice-date[data-v-12670cf2] {\n  margin-left: 0.5rem;\n}\n[dir=rtl] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir=rtl] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-12670cf2], [dir=rtl] .invoice-add .invoice-date-wrapper .invoice-date[data-v-12670cf2] {\n  margin-right: 0.5rem;\n}\n[dir] .invoice-preview .invoice-spacing[data-v-12670cf2], [dir] .invoice-edit .invoice-spacing[data-v-12670cf2], [dir] .invoice-add .invoice-spacing[data-v-12670cf2] {\n  margin: 1.45rem 0;\n}\n.invoice-preview .invoice-number-date .title[data-v-12670cf2],\n.invoice-edit .invoice-number-date .title[data-v-12670cf2],\n.invoice-add .invoice-number-date .title[data-v-12670cf2] {\n  width: 115px;\n}\n.invoice-preview .invoice-total-wrapper[data-v-12670cf2],\n.invoice-edit .invoice-total-wrapper[data-v-12670cf2],\n.invoice-add .invoice-total-wrapper[data-v-12670cf2] {\n  width: 100%;\n  max-width: 12rem;\n}\n.invoice-preview .invoice-total-wrapper .invoice-total-item[data-v-12670cf2],\n.invoice-edit .invoice-total-wrapper .invoice-total-item[data-v-12670cf2],\n.invoice-add .invoice-total-wrapper .invoice-total-item[data-v-12670cf2] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n[dir] .invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-12670cf2], [dir] .invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-12670cf2], [dir] .invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-12670cf2] {\n  margin-bottom: 0.35rem;\n}\n.invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2],\n.invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2],\n.invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2] {\n  font-weight: 600;\n}\n[dir] .invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2], [dir] .invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2], [dir] .invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-12670cf2] {\n  margin-bottom: 0.35rem;\n}\n@media (min-width: 768px) {\n[dir] .invoice-preview .invoice-title[data-v-12670cf2], [dir] .invoice-edit .invoice-title[data-v-12670cf2], [dir] .invoice-add .invoice-title[data-v-12670cf2] {\n    margin-bottom: 3rem;\n}\n[dir=ltr] .invoice-preview .invoice-title[data-v-12670cf2], [dir=ltr] .invoice-edit .invoice-title[data-v-12670cf2], [dir=ltr] .invoice-add .invoice-title[data-v-12670cf2] {\n    text-align: right;\n}\n[dir=rtl] .invoice-preview .invoice-title[data-v-12670cf2], [dir=rtl] .invoice-edit .invoice-title[data-v-12670cf2], [dir=rtl] .invoice-add .invoice-title[data-v-12670cf2] {\n    text-align: left;\n}\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2], [dir] .invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2], [dir=ltr] .invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n  text-align: left;\n  margin-right: 3.5rem;\n}\n[dir=rtl] .invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2], [dir=rtl] .invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n  text-align: right;\n  margin-left: 3.5rem;\n}\n.invoice-edit .invoice-preview-card .invoice-edit-input[data-v-12670cf2],\n.invoice-edit .invoice-preview-card .invoice-edit-input-group[data-v-12670cf2],\n.invoice-add .invoice-preview-card .invoice-edit-input[data-v-12670cf2],\n.invoice-add .invoice-preview-card .invoice-edit-input-group[data-v-12670cf2] {\n  max-width: 11.21rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-product-details[data-v-12670cf2], [dir] .invoice-add .invoice-preview-card .invoice-product-details[data-v-12670cf2] {\n  background-color: #fcfcfc;\n  padding: 3.75rem 3.45rem 2.3rem 3.45rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-product-details .product-details-border[data-v-12670cf2], [dir] .invoice-add .invoice-preview-card .invoice-product-details .product-details-border[data-v-12670cf2] {\n  border: 1px solid #ebe9f1;\n  border-radius: 0.357rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-to-title[data-v-12670cf2], [dir] .invoice-add .invoice-preview-card .invoice-to-title[data-v-12670cf2] {\n  margin-bottom: 1.9rem;\n}\n.invoice-edit .invoice-preview-card .col-title[data-v-12670cf2],\n.invoice-add .invoice-preview-card .col-title[data-v-12670cf2] {\n  position: absolute;\n  top: -3.2rem;\n}\n.invoice-edit .invoice-preview-card .item-options-menu[data-v-12670cf2],\n.invoice-add .invoice-preview-card .item-options-menu[data-v-12670cf2] {\n  min-width: 20rem;\n}\n[dir] .invoice-edit .invoice-preview-card .repeater-wrapper[data-v-12670cf2]:not(:last-child), [dir] .invoice-add .invoice-preview-card .repeater-wrapper[data-v-12670cf2]:not(:last-child) {\n  margin-bottom: 3rem;\n}\n.invoice-edit .invoice-preview-card .invoice-calculations .total-amt-title[data-v-12670cf2],\n.invoice-add .invoice-preview-card .invoice-calculations .total-amt-title[data-v-12670cf2] {\n  width: 100px;\n}\n@media (max-width: 769px) {\n.invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2],\n.invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n    width: 115px;\n}\n[dir=ltr] .invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2], [dir=ltr] .invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n    margin-right: 0;\n}\n[dir=rtl] .invoice-edit .invoice-preview-card .invoice-title[data-v-12670cf2], [dir=rtl] .invoice-add .invoice-preview-card .invoice-title[data-v-12670cf2] {\n    margin-left: 0;\n}\n.invoice-edit .invoice-preview-card .invoice-edit-input[data-v-12670cf2],\n.invoice-add .invoice-preview-card .invoice-edit-input[data-v-12670cf2] {\n    max-width: 100%;\n}\n}\n@media (max-width: 992px) {\n.invoice-edit .col-title[data-v-12670cf2],\n.invoice-add .col-title[data-v-12670cf2] {\n    top: -1.5rem !important;\n}\n}\n@media print {\n[dir] .invoice-edit hr[data-v-12670cf2], [dir] .invoice-add hr[data-v-12670cf2] {\n    margin-top: 1rem !important;\n    margin-bottom: 1rem !important;\n}\n}", ""]);
+exports.push([module.i, ".ecommerce-application .content-body {\n  position: relative;\n}\n.ecommerce-application .body-content-overlay {\n  position: fixed !important;\n  z-index: 12 !important;\n}\n.ecommerce-application .sidebar-shop {\n  width: 260px;\n  z-index: 998;\n}\n[dir] .ecommerce-application .sidebar-shop {\n  margin-top: 0.85rem;\n}\n[dir] .ecommerce-application .sidebar-shop .filter-heading {\n  margin-bottom: 1.75rem;\n}\n[dir] .ecommerce-application .sidebar-shop .filter-title {\n  margin-bottom: 1rem;\n  margin-top: 2.5rem;\n}\n[dir] .ecommerce-application .sidebar-shop .price-range li:not(:last-child), [dir] .ecommerce-application .sidebar-shop .categories-list li:not(:last-child) {\n  margin-bottom: 0.75rem;\n}\n.ecommerce-application .sidebar-shop .brand-list li {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n[dir] .ecommerce-application .sidebar-shop .brand-list li {\n  margin-bottom: 0.75rem;\n}\n.ecommerce-application .sidebar-shop .range-slider.noUi-horizontal .noUi-handle .noUi-tooltip {\n  opacity: 0;\n}\n[dir=ltr] .ecommerce-application .sidebar-shop .range-slider.noUi-horizontal .noUi-handle .noUi-tooltip {\n  transform: translate(-50%, -15%);\n}\n[dir=rtl] .ecommerce-application .sidebar-shop .range-slider.noUi-horizontal .noUi-handle .noUi-tooltip {\n  transform: translate(50%, -15%);\n}\n.ecommerce-application .sidebar-shop .range-slider.noUi-horizontal .noUi-handle .noUi-tooltip:before {\n  content: \"$ \";\n}\n.ecommerce-application .sidebar-shop .range-slider.noUi-horizontal .noUi-handle:active .noUi-tooltip {\n  opacity: 1;\n}\n.ecommerce-application .sidebar-shop .ratings-list {\n  display: flex;\n  justify-content: space-between;\n}\n[dir] .ecommerce-application .sidebar-shop .ratings-list {\n  margin-bottom: 0.5rem;\n}\n[dir] .ecommerce-application .sidebar-shop .ratings-list:last-child {\n  margin-bottom: 2.5rem;\n}\n[dir] .ecommerce-application .sidebar-shop .ratings-list ul {\n  margin-bottom: 0;\n}\n.ecommerce-application .sidebar-shop .ratings-list ul .ratings-list-item svg,\n.ecommerce-application .sidebar-shop .ratings-list ul .ratings-list-item i {\n  width: 1.25rem;\n  height: 1.25rem;\n  font-size: 1.25rem;\n}\n.ecommerce-application .filled-star {\n  fill: #ff9f43;\n  stroke: #ff9f43;\n  color: #ff9f43;\n}\n.ecommerce-application .unfilled-star {\n  stroke: #babfc7;\n  color: #babfc7;\n}\n.ecommerce-application .ecommerce-header-items {\n  display: flex;\n  justify-content: space-between;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler {\n  display: flex;\n  align-items: center;\n}\n[dir=ltr] .ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler {\n  padding-left: 0;\n}\n[dir=rtl] .ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler {\n  padding-right: 0;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler:active, .ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler:focus {\n  outline: 0;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler .navbar-toggler-icon {\n  height: auto;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler .navbar-toggler-icon i,\n.ecommerce-application .ecommerce-header-items .result-toggler .shop-sidebar-toggler .navbar-toggler-icon svg {\n  color: #6e6b7b;\n  height: 1.5rem;\n  width: 1.5rem;\n  font-size: 1.5rem;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler .search-results {\n  font-weight: 500;\n  color: #5e5873;\n}\n[dir] .ecommerce-application .ecommerce-searchbar .input-group {\n  box-shadow: 0 2px 8px 0 rgba(34, 41, 47, 0.14);\n  border-radius: 0.3rem;\n}\n.ecommerce-application .search-product,\n.ecommerce-application .input-group-text {\n  height: 48px;\n  font-size: 0.95rem;\n}\n[dir] .ecommerce-application .search-product, [dir] .ecommerce-application .input-group-text {\n  border: none;\n}\n[dir=ltr] .ecommerce-application .search-product, [dir=ltr] .ecommerce-application .input-group-text {\n  padding-left: 1.25rem;\n}\n[dir=rtl] .ecommerce-application .search-product, [dir=rtl] .ecommerce-application .input-group-text {\n  padding-right: 1.25rem;\n}\n.ecommerce-application .search-product::placeholder,\n.ecommerce-application .input-group-text::placeholder {\n  font-size: 0.95rem;\n}\n[dir] .ecommerce-application .ecommerce-card:hover {\n  transform: translateY(-5px);\n  box-shadow: 0 4px 25px 0 rgba(34, 41, 47, 0.25);\n}\n[dir] .ecommerce-application .ecommerce-card .item-rating ul {\n  margin-bottom: 0;\n}\n.ecommerce-application .ecommerce-card .item-rating svg,\n.ecommerce-application .ecommerce-card .item-rating i {\n  height: 1.143rem;\n  width: 1.143rem;\n  font-size: 1.143rem;\n}\n[dir] .ecommerce-application .ecommerce-card .item-name {\n  margin-bottom: 0;\n}\n.ecommerce-application .ecommerce-card .item-name a {\n  font-weight: 600;\n  display: -webkit-box;\n  -webkit-line-clamp: 1;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.ecommerce-application .ecommerce-card .item-description {\n  font-size: 0.875rem;\n}\n.ecommerce-application .ecommerce-card .btn-wishlist span,\n.ecommerce-application .ecommerce-card .btn-cart span {\n  vertical-align: text-top;\n}\n.ecommerce-application .ecommerce-card .btn-wishlist i,\n.ecommerce-application .ecommerce-card .btn-wishlist svg,\n.ecommerce-application .ecommerce-card .btn-cart i,\n.ecommerce-application .ecommerce-card .btn-cart svg {\n  vertical-align: text-top;\n}\n[dir=ltr] .ecommerce-application .ecommerce-card .btn-wishlist i, [dir=ltr] .ecommerce-application .ecommerce-card .btn-wishlist svg, [dir=ltr] .ecommerce-application .ecommerce-card .btn-cart i, [dir=ltr] .ecommerce-application .ecommerce-card .btn-cart svg {\n  margin-right: 0.25rem;\n}\n[dir=rtl] .ecommerce-application .ecommerce-card .btn-wishlist i, [dir=rtl] .ecommerce-application .ecommerce-card .btn-wishlist svg, [dir=rtl] .ecommerce-application .ecommerce-card .btn-cart i, [dir=rtl] .ecommerce-application .ecommerce-card .btn-cart svg {\n  margin-left: 0.25rem;\n}\n.ecommerce-application .ecommerce-card .btn-wishlist i.text-danger,\n.ecommerce-application .ecommerce-card .btn-wishlist svg.text-danger,\n.ecommerce-application .ecommerce-card .btn-cart i.text-danger,\n.ecommerce-application .ecommerce-card .btn-cart svg.text-danger {\n  fill: #ea5455;\n}\n[dir] .ecommerce-application .grid-view:not(.wishlist-items), [dir] .ecommerce-application .list-view:not(.wishlist-items) {\n  margin-top: 2rem;\n}\n.ecommerce-application .grid-view {\n  display: grid;\n  grid-template-columns: 1fr 1fr 1fr;\n  column-gap: 2rem;\n}\n.ecommerce-application .grid-view.wishlist-items {\n  grid-template-columns: 1fr 1fr 1fr 1fr;\n}\n.ecommerce-application .grid-view .ecommerce-card {\n  overflow: hidden;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-img {\n  min-height: 15.85rem;\n  display: flex;\n  align-items: center;\n}\n[dir] .ecommerce-application .grid-view .ecommerce-card .item-img {\n  padding-top: 0.5rem;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-wrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: baseline;\n}\n.ecommerce-application .grid-view .ecommerce-card .shipping,\n.ecommerce-application .grid-view .ecommerce-card .item-company,\n.ecommerce-application .grid-view .ecommerce-card .item-options .item-price {\n  display: none;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-options {\n  display: flex;\n  flex-wrap: wrap;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-options .btn-cart,\n.ecommerce-application .grid-view .ecommerce-card .item-options .btn-wishlist {\n  flex-grow: 1;\n}\n[dir] .ecommerce-application .grid-view .ecommerce-card .item-options .btn-cart, [dir] .ecommerce-application .grid-view .ecommerce-card .item-options .btn-wishlist {\n  border-radius: 0;\n}\n[dir] .ecommerce-application .grid-view .ecommerce-card .item-name {\n  margin-top: 0.75rem;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-description {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n[dir] .ecommerce-application .grid-view .ecommerce-card .item-description {\n  margin-top: 0.2rem;\n}\n.ecommerce-application .grid-view .ecommerce-card .item-price {\n  font-weight: 600;\n}\n[dir] .ecommerce-application .grid-view .ecommerce-card .card-body {\n  padding: 1rem;\n}\n.ecommerce-application .list-view {\n  display: grid;\n  grid-template-columns: 1fr;\n}\n.ecommerce-application .list-view .ecommerce-card {\n  overflow: hidden;\n  display: grid;\n  grid-template-columns: 1fr 2fr 1fr;\n}\n.ecommerce-application .list-view .ecommerce-card .item-img {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n}\n.ecommerce-application .list-view .ecommerce-card .card-body {\n  display: flex;\n  flex-direction: column;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .card-body {\n  padding: 1.5rem 1rem;\n}\n[dir=ltr] .ecommerce-application .list-view .ecommerce-card .card-body {\n  border-right: 1px solid #ebe9f1;\n}\n[dir=rtl] .ecommerce-application .list-view .ecommerce-card .card-body {\n  border-left: 1px solid #ebe9f1;\n}\n.ecommerce-application .list-view .ecommerce-card .card-body .item-wrapper {\n  order: 2;\n}\n.ecommerce-application .list-view .ecommerce-card .card-body .item-name {\n  order: 1;\n}\n.ecommerce-application .list-view .ecommerce-card .card-body .item-description {\n  order: 3;\n  display: -webkit-box;\n  -webkit-line-clamp: 5;\n  -webkit-box-orient: vertical;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n.ecommerce-application .list-view .ecommerce-card .card-body .item-price {\n  display: none;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .card-body .item-rating {\n  margin-bottom: 0.3rem;\n}\n.ecommerce-application .list-view .ecommerce-card .item-company {\n  display: inline-flex;\n  font-weight: 400;\n  font-size: 0.875rem;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-company {\n  margin: 0.3rem 0 0.5rem;\n}\n.ecommerce-application .list-view .ecommerce-card .item-company .company-name {\n  font-weight: 600;\n}\n[dir=ltr] .ecommerce-application .list-view .ecommerce-card .item-company .company-name {\n  margin-left: 0.25rem;\n}\n[dir=rtl] .ecommerce-application .list-view .ecommerce-card .item-company .company-name {\n  margin-right: 0.25rem;\n}\n.ecommerce-application .list-view .ecommerce-card .item-options {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-options {\n  padding: 1rem;\n}\n.ecommerce-application .list-view .ecommerce-card .item-options .item-wrapper {\n  position: relative;\n}\n.ecommerce-application .list-view .ecommerce-card .item-options .item-wrapper .item-cost .item-price {\n  color: #7367f0;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-options .item-wrapper .item-cost .item-price {\n  margin-bottom: 0;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-options .shipping {\n  margin-top: 0.75rem;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-options .btn-wishlist, [dir] .ecommerce-application .list-view .ecommerce-card .item-options .btn-cart {\n  margin-top: 1rem;\n}\n[dir] .ecommerce-application .checkout-tab-steps .bs-stepper-header, [dir] .ecommerce-application .checkout-tab-steps .bs-stepper-content {\n  padding: 0;\n  margin: 0;\n}\n.ecommerce-application .checkout-items .ecommerce-card .item-img img {\n  width: 200px;\n}\n.ecommerce-application .checkout-items .ecommerce-card .item-name {\n  order: 0 !important;\n}\n[dir] .ecommerce-application .checkout-items .ecommerce-card .item-company, [dir] .ecommerce-application .checkout-items .ecommerce-card .item-rating {\n  margin-bottom: 0.4rem !important;\n}\n.ecommerce-application .checkout-items .ecommerce-card .item-quantity {\n  display: flex;\n  align-items: center;\n}\n[dir] .ecommerce-application .checkout-items .ecommerce-card .delivery-date {\n  margin-top: 1.2rem;\n  margin-bottom: 0.25rem;\n}\n.ecommerce-application .checkout-items .ecommerce-card .item-options .btn {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n[dir] .ecommerce-application .checkout-options .coupons:focus-within {\n  box-shadow: none;\n}\n.ecommerce-application .checkout-options .coupons input {\n  color: #6e6b7b;\n  font-weight: 600;\n}\n[dir] .ecommerce-application .checkout-options .coupons input {\n  border: none;\n}\n[dir=ltr] .ecommerce-application .checkout-options .coupons input {\n  padding-left: 0;\n}\n[dir=rtl] .ecommerce-application .checkout-options .coupons input {\n  padding-right: 0;\n}\n.ecommerce-application .checkout-options .coupons input::placeholder {\n  color: #6e6b7b;\n  font-weight: 600;\n}\n[dir] .ecommerce-application .checkout-options .coupons .input-group-append {\n  margin: 0;\n}\n.ecommerce-application .checkout-options .coupons .input-group-text {\n  height: auto;\n  font-weight: 600;\n}\n[dir] .ecommerce-application .checkout-options .coupons .input-group-text {\n  padding: inherit;\n}\n.ecommerce-application .checkout-options .price-details .price-title {\n  font-weight: 600;\n}\n[dir] .ecommerce-application .checkout-options .price-details .price-title {\n  margin-bottom: 0.75rem;\n  margin-top: 1.5rem;\n}\n.ecommerce-application .checkout-options .price-details .price-detail {\n  display: flex;\n  justify-content: space-between;\n}\n[dir] .ecommerce-application .checkout-options .price-details .price-detail {\n  margin-bottom: 0.75rem;\n}\n.ecommerce-application .checkout-options .price-details .price-detail .detail-title.detail-total {\n  font-weight: 600;\n}\n[dir] .ecommerce-application .payment-type .gift-card {\n  cursor: pointer;\n}\n[dir] .ecommerce-application .checkout-tab-steps {\n  background-color: transparent !important;\n  box-shadow: none !important;\n}\n[dir] .ecommerce-application .checkout-tab-steps .bs-stepper-header {\n  border: none;\n}\n@media (min-width: 992px) {\n.ecommerce-application .ecommerce-header-items .shop-sidebar-toggler {\n    display: none;\n}\n.ecommerce-application .product-checkout.list-view {\n    grid-template-columns: 2fr 1fr;\n    column-gap: 2rem;\n}\n}\n@media (max-width: 1199.98px) {\n.ecommerce-application .ecommerce-header-items .btn-group {\n    align-items: center;\n}\n[dir] .ecommerce-application .ecommerce-header-items .btn-group .btn-icon {\n    padding: 0.6rem 0.736rem;\n}\n.ecommerce-application .grid-view.wishlist-items {\n    grid-template-columns: 1fr 1fr 1fr;\n}\n.ecommerce-application .body-content-overlay {\n    position: fixed;\n    opacity: 0;\n    width: 100%;\n    height: 100%;\n    top: 0;\n    bottom: 0;\n}\n[dir=ltr] .ecommerce-application .body-content-overlay {\n    left: 0;\n    right: 0;\n}\n[dir=rtl] .ecommerce-application .body-content-overlay {\n    right: 0;\n    left: 0;\n}\n.ecommerce-application .body-content-overlay.show {\n    opacity: 1;\n}\n.ecommerce-application.horizontal-layout .body-content-overlay {\n    z-index: 998 !important;\n}\n.ecommerce-application.horizontal-layout .sidebar-shop {\n    z-index: 999 !important;\n}\n}\n@media (max-width: 991.98px) {\n[dir] .ecommerce-application .sidebar-left .sidebar .card {\n    border-radius: 0;\n    margin: 0;\n}\n.ecommerce-application .sidebar-left .sidebar .sidebar-shop {\n    transition: all 0.25s ease;\n    position: fixed;\n    top: 0;\n    height: 100%;\n    overflow-y: scroll;\n}\n[dir] .ecommerce-application .sidebar-left .sidebar .sidebar-shop {\n    margin: 0;\n}\n[dir=ltr] .ecommerce-application .sidebar-left .sidebar .sidebar-shop {\n    transform: translateX(-112%);\n    left: 0;\n}\n[dir=rtl] .ecommerce-application .sidebar-left .sidebar .sidebar-shop {\n    transform: translateX(112%);\n    right: 0;\n}\n.ecommerce-application .sidebar-left .sidebar .sidebar-shop.show {\n    transition: all 0.25s ease;\n}\n[dir] .ecommerce-application .sidebar-left .sidebar .sidebar-shop.show {\n    transform: translateX(0);\n}\n.ecommerce-application .grid-view {\n    grid-template-columns: 1fr 1fr;\n}\n.ecommerce-application .ecommerce-header-items .result-toggler .search-results {\n    display: none;\n}\n}\n@media (max-width: 767.98px) {\n.ecommerce-application .grid-view.wishlist-items {\n    grid-template-columns: 1fr 1fr;\n}\n.ecommerce-application .list-view .ecommerce-card {\n    grid-template-columns: 1fr;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .item-img {\n    padding-top: 2rem;\n    padding-bottom: 2rem;\n}\n[dir] .ecommerce-application .list-view .ecommerce-card .card-body {\n    border: none;\n}\n}\n@media (max-width: 575.98px) {\n.ecommerce-application .grid-view,\n.ecommerce-application .grid-view.wishlist-items {\n    grid-template-columns: 1fr;\n}\n}", ""]);
 // Exports
 module.exports = exports;
 
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&":
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "@media print {\n[dir] body {\n    background-color: transparent !important;\n}\nnav.header-navbar {\n    display: none;\n}\n.main-menu {\n    display: none;\n}\n.header-navbar-shadow {\n    display: none !important;\n}\n[dir] .content.app-content {\n    padding-top: 2rem !important;\n}\n[dir=ltr] .content.app-content {\n    margin-left: 0;\n}\n[dir=rtl] .content.app-content {\n    margin-right: 0;\n}\nfooter.footer {\n    display: none;\n}\n[dir] .card {\n    background-color: transparent;\n    box-shadow: none;\n}\n.customizer-toggle {\n    display: none !important;\n}\n.invoice-preview-wrapper .row.invoice-preview .col-md-8 {\n    max-width: 100%;\n    flex-grow: 1;\n}\n.invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row > .col-12 {\n    max-width: 50% !important;\n}\n.invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row .col-12:nth-child(2) {\n    display: flex;\n    align-items: flex-start;\n    justify-content: flex-end;\n}\n[dir] .invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row .col-12:nth-child(2) {\n    margin-top: 0 !important;\n}\n.invoice-preview-wrapper .invoice-actions {\n    display: none;\n}\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&");
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -500,40 +226,10 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=style&index=1&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true&":
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -547,661 +243,123 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "invoice-preview-wrapper" },
-    [
-      _c(
-        "b-alert",
-        { attrs: { variant: "danger", show: _vm.invoiceData === undefined } },
+    { staticClass: "grid-view wishlist-items" },
+    _vm._l(_vm.products, function (product) {
+      return _c(
+        "b-card",
+        {
+          key: product.id,
+          staticClass: "ecommerce-card",
+          attrs: { "no-body": "" },
+        },
         [
-          _c("h4", { staticClass: "alert-heading" }, [
-            _vm._v("\n      Error fetching invoice data\n    "),
-          ]),
-          _vm._v(" "),
           _c(
             "div",
-            { staticClass: "alert-body" },
+            { staticClass: "item-img text-center" },
             [
-              _vm._v(
-                "\n      No invoice found with this invoice id. Check\n      "
-              ),
               _c(
                 "b-link",
                 {
-                  staticClass: "alert-link",
-                  attrs: { to: { name: "apps-invoice-list" } },
+                  attrs: {
+                    to: {
+                      name: "apps-e-commerce-product-details",
+                      params: { slug: product.slug },
+                    },
+                  },
                 },
-                [_vm._v("\n        Invoice List\n      ")]
+                [
+                  _c("b-img", {
+                    staticClass: "card-img-top",
+                    attrs: {
+                      alt: product.name + "-" + product.id,
+                      fluid: "",
+                      src: product.image,
+                    },
+                  }),
+                ],
+                1
               ),
-              _vm._v("\n      for other invoices.\n    "),
             ],
             1
           ),
-        ]
-      ),
-      _vm._v(" "),
-      _vm.invoiceData
-        ? _c(
-            "b-row",
-            { staticClass: "invoice-preview" },
+          _vm._v(" "),
+          _c(
+            "b-card-body",
             [
-              _c(
-                "b-col",
-                { attrs: { cols: "12", xl: "9", md: "8" } },
-                [
+              _c("div", { staticClass: "item-wrapper" }, [
+                _c("div", { staticClass: "item-rating" }, [
                   _c(
-                    "b-card",
-                    {
-                      staticClass: "invoice-preview-card",
-                      attrs: { "no-body": "" },
-                    },
-                    [
-                      _c(
-                        "b-card-body",
-                        { staticClass: "invoice-padding pb-0" },
-                        [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "d-flex justify-content-between flex-md-row flex-column invoice-spacing mt-0",
-                            },
-                            [
-                              _c("div", [
-                                _c(
-                                  "div",
-                                  { staticClass: "logo-wrapper" },
-                                  [
-                                    _c("logo"),
-                                    _vm._v(" "),
-                                    _c(
-                                      "h3",
-                                      {
-                                        staticClass:
-                                          "text-primary invoice-logo",
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                  Vuexy\n                "
-                                        ),
-                                      ]
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "card-text mb-25" }, [
-                                  _vm._v(
-                                    "\n                Office 149, 450 South Brand Brooklyn\n              "
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "card-text mb-25" }, [
-                                  _vm._v(
-                                    "\n                San Diego County, CA 91905, USA\n              "
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c("p", { staticClass: "card-text mb-0" }, [
-                                  _vm._v(
-                                    "\n                +1 (123) 456 7891, +44 (876) 543 2198\n              "
-                                  ),
-                                ]),
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "mt-md-0 mt-2" }, [
-                                _c("h4", { staticClass: "invoice-title" }, [
-                                  _vm._v(
-                                    "\n                Invoice\n                "
-                                  ),
-                                  _c(
-                                    "span",
-                                    { staticClass: "invoice-number" },
-                                    [_vm._v("#" + _vm._s(_vm.invoiceData.id))]
-                                  ),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "invoice-date-wrapper" },
-                                  [
-                                    _c(
-                                      "p",
-                                      { staticClass: "invoice-date-title" },
-                                      [
-                                        _vm._v(
-                                          "\n                  Date Issued:\n                "
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", { staticClass: "invoice-date" }, [
-                                      _vm._v(
-                                        "\n                  " +
-                                          _vm._s(_vm.invoiceData.issuedDate) +
-                                          "\n                "
-                                      ),
-                                    ]),
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c(
-                                  "div",
-                                  { staticClass: "invoice-date-wrapper" },
-                                  [
-                                    _c(
-                                      "p",
-                                      { staticClass: "invoice-date-title" },
-                                      [
-                                        _vm._v(
-                                          "\n                  Due Date:\n                "
-                                        ),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("p", { staticClass: "invoice-date" }, [
-                                      _vm._v(
-                                        "\n                  " +
-                                          _vm._s(_vm.invoiceData.dueDate) +
-                                          "\n                "
-                                      ),
-                                    ]),
-                                  ]
-                                ),
-                              ]),
-                            ]
-                          ),
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "invoice-spacing" }),
-                      _vm._v(" "),
-                      _vm.invoiceData.client
-                        ? _c(
-                            "b-card-body",
-                            { staticClass: "invoice-padding pt-0" },
-                            [
-                              _c(
-                                "b-row",
-                                { staticClass: "invoice-spacing" },
-                                [
-                                  _c(
-                                    "b-col",
-                                    {
-                                      staticClass: "p-0",
-                                      attrs: { cols: "12", xl: "6" },
-                                    },
-                                    [
-                                      _c("h6", { staticClass: "mb-2" }, [
-                                        _vm._v(
-                                          "\n                Invoice To:\n              "
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("h6", { staticClass: "mb-25" }, [
-                                        _vm._v(
-                                          "\n                " +
-                                            _vm._s(
-                                              _vm.invoiceData.client.name
-                                            ) +
-                                            "\n              "
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "p",
-                                        { staticClass: "card-text mb-25" },
-                                        [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(
-                                                _vm.invoiceData.client.company
-                                              ) +
-                                              "\n              "
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "p",
-                                        { staticClass: "card-text mb-25" },
-                                        [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(
-                                                _vm.invoiceData.client.address
-                                              ) +
-                                              ", " +
-                                              _vm._s(
-                                                _vm.invoiceData.client.country
-                                              ) +
-                                              "\n              "
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "p",
-                                        { staticClass: "card-text mb-25" },
-                                        [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(
-                                                _vm.invoiceData.client.contact
-                                              ) +
-                                              "\n              "
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "p",
-                                        { staticClass: "card-text mb-0" },
-                                        [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(
-                                                _vm.invoiceData.client
-                                                  .companyEmail
-                                              ) +
-                                              "\n              "
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-col",
-                                    {
-                                      staticClass:
-                                        "p-0 mt-xl-0 mt-2 d-flex justify-content-xl-end",
-                                      attrs: { xl: "6", cols: "12" },
-                                    },
-                                    [
-                                      _c("div", [
-                                        _c("h6", { staticClass: "mb-2" }, [
-                                          _vm._v(
-                                            "\n                  Payment Details:\n                "
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("table", [
-                                          _c("tbody", [
-                                            _c("tr", [
-                                              _c(
-                                                "td",
-                                                { staticClass: "pr-1" },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        Total Due:\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("td", [
-                                                _c(
-                                                  "span",
-                                                  {
-                                                    staticClass:
-                                                      "font-weight-bold",
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      _vm._s(
-                                                        _vm.paymentDetails
-                                                          .totalDue
-                                                      )
-                                                    ),
-                                                  ]
-                                                ),
-                                              ]),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("tr", [
-                                              _c(
-                                                "td",
-                                                { staticClass: "pr-1" },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        Bank name:\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("td", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.paymentDetails.bankName
-                                                  )
-                                                ),
-                                              ]),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("tr", [
-                                              _c(
-                                                "td",
-                                                { staticClass: "pr-1" },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        Country:\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("td", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.paymentDetails.country
-                                                  )
-                                                ),
-                                              ]),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("tr", [
-                                              _c(
-                                                "td",
-                                                { staticClass: "pr-1" },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        IBAN:\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("td", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.paymentDetails.iban
-                                                  )
-                                                ),
-                                              ]),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("tr", [
-                                              _c(
-                                                "td",
-                                                { staticClass: "pr-1" },
-                                                [
-                                                  _vm._v(
-                                                    "\n                        SWIFT code:\n                      "
-                                                  ),
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c("td", [
-                                                _vm._v(
-                                                  _vm._s(
-                                                    _vm.paymentDetails.swiftCode
-                                                  )
-                                                ),
-                                              ]),
-                                            ]),
-                                          ]),
-                                        ]),
-                                      ]),
-                                    ]
-                                  ),
-                                ],
-                                1
-                              ),
-                            ],
-                            1
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _c("b-table-lite", {
-                        attrs: {
-                          responsive: "",
-                          items: _vm.invoiceDescription,
-                          fields: ["taskDescription", "rate", "hours", "total"],
+                    "ul",
+                    { staticClass: "unstyled-list list-inline" },
+                    _vm._l(5, function (star) {
+                      return _c(
+                        "li",
+                        {
+                          key: star,
+                          staticClass: "ratings-list-item",
+                          class: { "ml-25": star - 1 },
                         },
-                        scopedSlots: _vm._u(
-                          [
-                            {
-                              key: "cell(taskDescription)",
-                              fn: function (data) {
-                                return [
-                                  _c(
-                                    "b-card-text",
-                                    { staticClass: "font-weight-bold mb-25" },
-                                    [
-                                      _vm._v(
-                                        "\n              " +
-                                          _vm._s(data.item.taskTitle) +
-                                          "\n            "
-                                      ),
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "b-card-text",
-                                    { staticClass: "text-nowrap" },
-                                    [
-                                      _vm._v(
-                                        "\n              " +
-                                          _vm._s(data.item.taskDescription) +
-                                          "\n            "
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              },
-                            },
-                          ],
-                          null,
-                          false,
-                          141958717
-                        ),
-                      }),
-                      _vm._v(" "),
-                      _c(
-                        "b-card-body",
-                        { staticClass: "invoice-padding pb-0" },
                         [
-                          _c(
-                            "b-row",
-                            [
-                              _c(
-                                "b-col",
-                                {
-                                  staticClass: "mt-md-0 mt-3",
-                                  attrs: {
-                                    cols: "12",
-                                    md: "6",
-                                    order: "2",
-                                    "order-md": "1",
-                                  },
-                                },
-                                [
-                                  _c("b-card-text", { staticClass: "mb-0" }, [
-                                    _c(
-                                      "span",
-                                      { staticClass: "font-weight-bold" },
-                                      [_vm._v("Salesperson:")]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("span", { staticClass: "ml-75" }, [
-                                      _vm._v("Alfie Solomons"),
-                                    ]),
-                                  ]),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-col",
-                                {
-                                  staticClass:
-                                    "mt-md-6 d-flex justify-content-end",
-                                  attrs: {
-                                    cols: "12",
-                                    md: "6",
-                                    order: "1",
-                                    "order-md": "2",
-                                  },
-                                },
-                                [
-                                  _c(
-                                    "div",
-                                    { staticClass: "invoice-total-wrapper" },
-                                    [
-                                      _c(
-                                        "div",
-                                        { staticClass: "invoice-total-item" },
-                                        [
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-title",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Subtotal:\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-amount",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    $1800\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "invoice-total-item" },
-                                        [
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-title",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Discount:\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-amount",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    $28\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "invoice-total-item" },
-                                        [
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-title",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Tax:\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-amount",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    21%\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("hr", { staticClass: "my-50" }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "invoice-total-item" },
-                                        [
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-title",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    Total:\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "p",
-                                            {
-                                              staticClass:
-                                                "invoice-total-amount",
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                    $1690\n                  "
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      ),
-                                    ]
-                                  ),
-                                ]
-                              ),
+                          _c("feather-icon", {
+                            class: [
+                              { "fill-current": star <= product.rating },
+                              star <= product.rating
+                                ? "text-warning"
+                                : "text-muted",
                             ],
-                            1
-                          ),
+                            attrs: { icon: "StarIcon", size: "16" },
+                          }),
                         ],
                         1
+                      )
+                    }),
+                    0
+                  ),
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h6", { staticClass: "item-price" }, [
+                    _vm._v(
+                      "\n            $" + _vm._s(product.price) + "\n          "
+                    ),
+                  ]),
+                ]),
+              ]),
+              _vm._v(" "),
+              _c(
+                "h6",
+                { staticClass: "item-name" },
+                [
+                  _c(
+                    "b-link",
+                    {
+                      staticClass: "text-body",
+                      attrs: {
+                        to: {
+                          name: "apps-e-commerce-product-details",
+                          params: { slug: product.slug },
+                        },
+                      },
+                    },
+                    [
+                      _vm._v(
+                        "\n          " + _vm._s(product.name) + "\n        "
                       ),
-                      _vm._v(" "),
-                      _c("hr", { staticClass: "invoice-spacing" }),
-                      _vm._v(" "),
-                      _c(
-                        "b-card-body",
-                        { staticClass: "invoice-padding pt-0" },
-                        [
-                          _c("span", { staticClass: "font-weight-bold" }, [
-                            _vm._v("Note: "),
-                          ]),
-                          _vm._v(" "),
-                          _c("span", [
-                            _vm._v(
-                              "It was a pleasure working with you and your team. We hope you will keep us in mind for future freelance\n            projects. Thank You!"
-                            ),
-                          ]),
-                        ]
-                      ),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-card-text",
+                    { staticClass: "item-company" },
+                    [
+                      _vm._v("\n          By "),
+                      _c("b-link", { staticClass: "ml-25" }, [
+                        _vm._v(
+                          "\n            " +
+                            _vm._s(product.brand) +
+                            "\n          "
+                        ),
+                      ]),
                     ],
                     1
                   ),
@@ -1209,140 +367,71 @@ var render = function () {
                 1
               ),
               _vm._v(" "),
+              _c("b-card-text", { staticClass: "item-description" }, [
+                _vm._v("\n        " + _vm._s(product.description) + "\n      "),
+              ]),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "item-options text-center" },
+            [
               _c(
-                "b-col",
+                "b-button",
                 {
-                  staticClass: "invoice-actions",
-                  attrs: { cols: "12", md: "4", xl: "3" },
+                  staticClass: "btn-wishlist remove-wishlist",
+                  attrs: { variant: "light" },
+                  on: {
+                    click: function ($event) {
+                      return _vm.removeProductFromWishlistClick(product)
+                    },
+                  },
                 },
                 [
-                  _c(
-                    "b-card",
-                    [
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "ripple",
-                              rawName: "v-ripple.400",
-                              value: "rgba(255, 255, 255, 0.15)",
-                              expression: "'rgba(255, 255, 255, 0.15)'",
-                              modifiers: { 400: true },
-                            },
-                            {
-                              name: "b-toggle",
-                              rawName: "v-b-toggle.sidebar-send-invoice",
-                              modifiers: { "sidebar-send-invoice": true },
-                            },
-                          ],
-                          staticClass: "mb-75",
-                          attrs: { variant: "primary", block: "" },
-                        },
-                        [_vm._v("\n          Send Invoice\n        ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "ripple",
-                              rawName: "v-ripple.400",
-                              value: "rgba(186, 191, 199, 0.15)",
-                              expression: "'rgba(186, 191, 199, 0.15)'",
-                              modifiers: { 400: true },
-                            },
-                          ],
-                          staticClass: "mb-75",
-                          attrs: { variant: "outline-secondary", block: "" },
-                        },
-                        [_vm._v("\n          Download\n        ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "ripple",
-                              rawName: "v-ripple.400",
-                              value: "rgba(186, 191, 199, 0.15)",
-                              expression: "'rgba(186, 191, 199, 0.15)'",
-                              modifiers: { 400: true },
-                            },
-                          ],
-                          staticClass: "mb-75",
-                          attrs: { variant: "outline-secondary", block: "" },
-                          on: { click: _vm.printInvoice },
-                        },
-                        [_vm._v("\n          Print\n        ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "ripple",
-                              rawName: "v-ripple.400",
-                              value: "rgba(186, 191, 199, 0.15)",
-                              expression: "'rgba(186, 191, 199, 0.15)'",
-                              modifiers: { 400: true },
-                            },
-                          ],
-                          staticClass: "mb-75",
-                          attrs: {
-                            variant: "outline-secondary",
-                            block: "",
-                            to: {
-                              name: "apps-invoice-edit",
-                              params: { id: _vm.$route.params.id },
-                            },
-                          },
-                        },
-                        [_vm._v("\n          Edit\n        ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "b-toggle",
-                              rawName: "v-b-toggle.sidebar-invoice-add-payment",
-                              modifiers: {
-                                "sidebar-invoice-add-payment": true,
-                              },
-                            },
-                            {
-                              name: "ripple",
-                              rawName: "v-ripple.400",
-                              value: "rgba(255, 255, 255, 0.15)",
-                              expression: "'rgba(255, 255, 255, 0.15)'",
-                              modifiers: { 400: true },
-                            },
-                          ],
-                          staticClass: "mb-75",
-                          attrs: { variant: "success", block: "" },
-                        },
-                        [_vm._v("\n          Add Payment\n        ")]
-                      ),
-                    ],
-                    1
-                  ),
+                  _c("feather-icon", { attrs: { icon: "XIcon" } }),
+                  _vm._v(" "),
+                  _c("span", [_vm._v("Remove")]),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-button",
+                {
+                  staticClass: "btn-cart move-cart",
+                  attrs: { variant: "primary" },
+                  on: {
+                    click: function ($event) {
+                      return _vm.handleWishlistCartActionClick(
+                        product,
+                        _vm.removeProductFromWishlistClick
+                      )
+                    },
+                  },
+                },
+                [
+                  _c("feather-icon", {
+                    staticClass: "mr-50",
+                    attrs: { icon: "ShoppingCartIcon" },
+                  }),
+                  _vm._v(" "),
+                  _c("span", [
+                    _vm._v(
+                      _vm._s(product.isInCart ? "View In Cart" : "Move to Cart")
+                    ),
+                  ]),
                 ],
                 1
               ),
             ],
             1
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c("invoice-sidebar-send-invoice"),
-      _vm._v(" "),
-      _c("invoice-sidebar-add-payment"),
-    ],
+          ),
+        ],
+        1
+      )
+    }),
     1
   )
 }
@@ -1353,21 +442,114 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue":
-/*!********************************************************************************!*\
-  !*** ./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue ***!
-  \********************************************************************************/
+/***/ "./resources/js/src/@core/utils/utils.js":
+/*!***********************************************!*\
+  !*** ./resources/js/src/@core/utils/utils.js ***!
+  \***********************************************/
+/*! exports provided: isObject, isToday, getRandomBsVariant, isDynamicRouteActive, useRouter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return isObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isToday", function() { return isToday; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+
+
+ // eslint-disable-next-line object-curly-newline
+
+
+var isObject = function isObject(obj) {
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+};
+var isToday = function isToday(date) {
+  var today = new Date();
+  return (
+    /* eslint-disable operator-linebreak */
+    date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()
+    /* eslint-enable */
+
+  );
+};
+
+var getRandomFromArray = function getRandomFromArray(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}; // ? Light and Dark variant is not included
+// prettier-ignore
+
+
+var getRandomBsVariant = function getRandomBsVariant() {
+  return getRandomFromArray(['primary', 'secondary', 'success', 'warning', 'danger', 'info']);
+};
+var isDynamicRouteActive = function isDynamicRouteActive(route) {
+  var _router$resolve = _router__WEBPACK_IMPORTED_MODULE_2__["default"].resolve(route),
+      resolvedRoute = _router$resolve.route;
+
+  return resolvedRoute.path === _router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.path;
+}; // Thanks: https://medium.com/better-programming/reactive-vue-routes-with-the-composition-api-18c1abd878d1
+
+var useRouter = function useRouter() {
+  var vm = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["getCurrentInstance"])().proxy;
+  var state = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["reactive"])({
+    route: vm.$route
+  });
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["watch"])(function () {
+    return vm.$route;
+  }, function (r) {
+    state.route = r;
+  });
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+    router: vm.$router
+  });
+};
+/**
+ * This is just enhancement over Object.extend [Gives deep extend]
+ * @param {target} a Object which contains values to be overridden
+ * @param {source} b Object which contains values to override
+ */
+// export const objectExtend = (a, b) => {
+//   // Don't touch 'null' or 'undefined' objects.
+//   if (a == null || b == null) {
+//     return a
+//   }
+//   Object.keys(b).forEach(key => {
+//     if (Object.prototype.toString.call(b[key]) === '[object Object]') {
+//       if (Object.prototype.toString.call(a[key]) !== '[object Object]') {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = b[key]
+//       } else {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = objectExtend(a[key], b[key])
+//       }
+//     } else {
+//       // eslint-disable-next-line no-param-reassign
+//       a[key] = b[key]
+//     }
+//   })
+//   return a
+// }
+
+/***/ }),
+
+/***/ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue ***!
+  \******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true& */ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true&");
-/* harmony import */ var _InvoicePreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./InvoicePreview.vue?vue&type=script&lang=js& */ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& */ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&");
-/* harmony import */ var _InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./InvoicePreview.vue?vue&type=style&index=1&lang=scss& */ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
+/* harmony import */ var _ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ECommerceWishlist.vue?vue&type=template&id=39507fbc& */ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc&");
+/* harmony import */ var _ECommerceWishlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ECommerceWishlist.vue?vue&type=script&lang=js& */ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -1376,85 +558,193 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
-  _InvoicePreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ECommerceWishlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
-  "12670cf2",
+  null,
   null
   
 )
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue"
+component.options.__file = "resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ECommerceWishlist.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&":
-/*!******************************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& ***!
-  \******************************************************************************************************************************************/
+/***/ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&":
+/*!****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=0&id=12670cf2&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_0_id_12670cf2_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ECommerceWishlist.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss& ***!
-  \******************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=style&index=1&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=style&index=1&lang=scss&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true& ***!
-  \***************************************************************************************************************************/
+/***/ "./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc& ***!
+  \*************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/invoice/invoice-preview/InvoicePreview.vue?vue&type=template&id=12670cf2&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./ECommerceWishlist.vue?vue&type=template&id=39507fbc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/apps/e-commerce/e-commerce-wishlist/ECommerceWishlist.vue?vue&type=template&id=39507fbc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_InvoicePreview_vue_vue_type_template_id_12670cf2_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ECommerceWishlist_vue_vue_type_template_id_39507fbc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/apps/e-commerce/useEcommerce.js":
+/*!****************************************************************!*\
+  !*** ./resources/js/src/views/apps/e-commerce/useEcommerce.js ***!
+  \****************************************************************/
+/*! exports provided: useEcommerce, useEcommerceUi */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useEcommerce", function() { return useEcommerce; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useEcommerceUi", function() { return useEcommerceUi; });
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _core_utils_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/utils/utils */ "./resources/js/src/@core/utils/utils.js");
+
+
+var useEcommerce = function useEcommerce() {
+  // eslint-disable-next-line arrow-body-style
+  var addProductInWishlist = function addProductInWishlist(productId) {
+    return _store__WEBPACK_IMPORTED_MODULE_0__["default"].dispatch('app-ecommerce/addProductInWishlist', {
+      productId: productId
+    });
+  }; // eslint-disable-next-line arrow-body-style
+
+
+  var removeProductFromWishlist = function removeProductFromWishlist(productId) {
+    return _store__WEBPACK_IMPORTED_MODULE_0__["default"].dispatch('app-ecommerce/removeProductFromWishlist', {
+      productId: productId
+    });
+  }; // eslint-disable-next-line arrow-body-style
+
+
+  var addProductInCart = function addProductInCart(productId) {
+    return _store__WEBPACK_IMPORTED_MODULE_0__["default"].dispatch('app-ecommerce/addProductInCart', {
+      productId: productId
+    });
+  }; // eslint-disable-next-line arrow-body-style
+
+
+  var removeProductFromCart = function removeProductFromCart(productId) {
+    return _store__WEBPACK_IMPORTED_MODULE_0__["default"].dispatch('app-ecommerce/removeProductFromCart', {
+      productId: productId
+    });
+  };
+
+  return {
+    addProductInWishlist: addProductInWishlist,
+    removeProductFromWishlist: removeProductFromWishlist,
+    addProductInCart: addProductInCart,
+    removeProductFromCart: removeProductFromCart
+  };
+};
+var useEcommerceUi = function useEcommerceUi() {
+  var _useRouter = Object(_core_utils_utils__WEBPACK_IMPORTED_MODULE_1__["useRouter"])(),
+      router = _useRouter.router;
+
+  var toggleProductInWishlist = function toggleProductInWishlist(product) {
+    var _useEcommerce = useEcommerce(),
+        addProductInWishlist = _useEcommerce.addProductInWishlist,
+        removeProductFromWishlist = _useEcommerce.removeProductFromWishlist;
+
+    if (product.isInWishlist) {
+      removeProductFromWishlist(product.id).then(function () {
+        // eslint-disable-next-line no-param-reassign
+        product.isInWishlist = false;
+      });
+    } else {
+      addProductInWishlist(product.id).then(function () {
+        // eslint-disable-next-line no-param-reassign
+        product.isInWishlist = true;
+      });
+    }
+  };
+
+  var handleCartActionClick = function handleCartActionClick(product) {
+    var _useEcommerce2 = useEcommerce(),
+        addProductInCart = _useEcommerce2.addProductInCart;
+
+    if (product.isInCart) {
+      router.push({
+        name: 'apps-e-commerce-checkout'
+      });
+    } else {
+      addProductInCart(product.id).then(function () {
+        // eslint-disable-next-line no-param-reassign
+        product.isInCart = true; // Update cart items count
+
+        _store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', _store__WEBPACK_IMPORTED_MODULE_0__["default"].state['app-ecommerce'].cartItemsCount + 1);
+      });
+    }
+  };
+
+  var handleWishlistCartActionClick = function handleWishlistCartActionClick(product, removeProductFromWishlistUi) {
+    var _useEcommerce3 = useEcommerce(),
+        addProductInCart = _useEcommerce3.addProductInCart,
+        removeProductFromWishlist = _useEcommerce3.removeProductFromWishlist;
+
+    if (product.isInCart) {
+      router.push({
+        name: 'apps-e-commerce-checkout'
+      });
+    } else {
+      addProductInCart(product.id).then(function () {
+        // eslint-disable-next-line no-param-reassign
+        product.isInCart = true;
+        removeProductFromWishlist(product.id); // Update cart items count
+
+        _store__WEBPACK_IMPORTED_MODULE_0__["default"].commit('app-ecommerce/UPDATE_CART_ITEMS_COUNT', _store__WEBPACK_IMPORTED_MODULE_0__["default"].state['app-ecommerce'].cartItemsCount + 1);
+      }).then(function () {
+        // eslint-disable-next-line no-param-reassign
+        product.isInWishlist = false;
+        removeProductFromWishlistUi(product);
+      });
+    }
+  };
+
+  return {
+    toggleProductInWishlist: toggleProductInWishlist,
+    handleCartActionClick: handleCartActionClick,
+    handleWishlistCartActionClick: handleWishlistCartActionClick
+  };
+};
 
 /***/ })
 

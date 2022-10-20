@@ -198,73 +198,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -961,7 +894,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-start\n          ",
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [
@@ -971,7 +904,7 @@ var render = function () {
                             _vm._s(_vm.dataMeta.from) +
                             " to " +
                             _vm._s(_vm.dataMeta.to) +
-                            " of\n            " +
+                            " of\n                        " +
                             _vm._s(_vm.dataMeta.of) +
                             " entries"
                         ),
@@ -983,7 +916,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-end\n          ",
+                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [
@@ -1452,6 +1385,16 @@ __webpack_require__.r(__webpack_exports__);
           return reject(error);
         });
       });
+    },
+    ViewAlocatedVehicle: function ViewAlocatedVehicle(ctx, _ref4) {
+      var id = _ref4.id;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturasAlocadas/".concat(id)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
     }
   }
 });
@@ -1517,6 +1460,9 @@ function viaturaList() {
     sortable: true
   }, {
     key: 'estado',
+    sortable: true
+  }, {
+    key: 'locate',
     sortable: true
   }, {
     key: 'actions'

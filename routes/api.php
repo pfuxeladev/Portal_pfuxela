@@ -152,6 +152,8 @@ Route::get('RelatorioBombasSemanal', [App\Http\Controllers\API\Back\BombaControl
 Route::get('enviarRelatorioSemanal', [RotaController::class, 'enviarRelatorioSemanal']);
 Route::get('RelatorioPorRota', [RotaController::class, 'RelatorioPorRota']);
 
+Route::get('extraOrderReport', [App\Http\Controllers\API\Back\ExtraOrderReportController::class, 'index']);
+
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
 

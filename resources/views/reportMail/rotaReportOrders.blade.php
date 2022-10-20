@@ -91,7 +91,7 @@
     </style>
 </head>
 
-<bodystyle="font-family: sans-serif;">
+<body style="font-family: sans-serif;">
     <div class="container">
         <div class="content-header">
             <h3 class="centered-title"

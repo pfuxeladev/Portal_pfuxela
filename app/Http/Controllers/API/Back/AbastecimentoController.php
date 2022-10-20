@@ -27,6 +27,7 @@ use App\Models\User;
 use App\Models\ViaturaRota;
 use DateTime;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Validator;
 
 class AbastecimentoController extends Controller
 {
@@ -97,7 +98,7 @@ class AbastecimentoController extends Controller
 
 
         $totalAbastecer = 0;
-        $this->validate($request, [
+        $validate = Validator::make($request->all(), [
             'viatura_id' => 'required|integer|exists:viaturas,id',
             'rota' => 'required',
             'qtd_abastecer' => 'required|numeric|min:0',
@@ -105,6 +106,10 @@ class AbastecimentoController extends Controller
         ], [
             'required' => ' o campo :attribute e obrigat&oacute;rio', 'integer' => 'O :attribute deve ser um numero inteiro', 'before_or_equal' => 'O campo :attribute deve ser uma data ou anos antes da data actual', 'numeric' => 'O campo :attribute deve ser valor numerico'
         ]);
+
+        if($validate->fails()){
+            return response()->json(['errors'=>$validate->getMessageBag(), 'message'=>'erro de insercao verifique seus dados'], 422);
+        }
 
         $uuid = Str::uuid()->toString();
 
@@ -343,6 +348,7 @@ class AbastecimentoController extends Controller
         } else {
             $ordem->codigo_ordem = $counter;
         }
+        if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
         $ordem->refs = $uuid;
         $ordem->bombas_id = $request->bombas_id;
         $ordem->estado = 'Pendente';
@@ -450,7 +456,9 @@ class AbastecimentoController extends Controller
         }
 
         return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
-
+    }else{
+        return response()->json(['erro' => 'Nao tem permissao para fazer abastecimento extraordinario contacte o administrador'], 421);
+    }
         // } catch (\Exception $e) {
         //     return response()->json(['erro' => 'Erro! Ocorreu algum problema contacte o administrador'], 421);
         // }
