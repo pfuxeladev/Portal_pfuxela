@@ -63,9 +63,11 @@
                               :options="viatura"
                               :reduce="(viatura) => viatura.id"
                               @input="getQtd()"
+                              required
                             />
                             ({{ rec_abast }})Litros no tanque
                           </td>
+                          <div v-if="form.errors.has('viatura_id')" v-html="form.errors.get('viatura_id')"></div>
                           <td style="width: 20%">
                             <span class="m1" v-for="(rts, r) in form.rota" :key="'r'+r">
                                 <span class="badge badge-primary">{{rts.rota_projecto}}</span>
@@ -81,6 +83,7 @@
                             <v-select
                               v-model="form.turno"
                               :options="['manha', 'tarde']"
+                              required
                             />
                           </td>
                         </tr>
@@ -349,19 +352,23 @@ export default {
         this.abastecimento = res.data
       })
     },
-    NovaOrdem() {
-      this.$Progress.start()
-      this.form.post('/api/Abastecimento').then(res => {
-        if (res.status === 200) {
-          this.$swal.fire({
-            icon: 'success',
-            title: res.data.success,
-          })
-          this.$Progress.finish()
-          // eslint-disable-next-line no-restricted-globals
-          window.location.reload()
+    async NovaOrdem() {
+      await this.$Progress.start()
+      await this.form.post('/api/Abastecimento').then((res) => {
+        // console.log(res.data)
+        if (res !== undefined) {
+          if (res.status === 200) {
+            this.$swal.fire({
+              icon: 'success',
+              title: res.data.success,
+            })
+            this.$Progress.finish()
+            // eslint-disable-next-line no-restricted-globals
+            window.location.reload()
+          }
         }
       }).catch(err => {
+        console.log(err)
         if (err.response.status === 421) {
           this.$swal.fire({
             icon: 'error',

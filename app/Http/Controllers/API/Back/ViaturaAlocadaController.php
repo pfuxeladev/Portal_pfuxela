@@ -3,29 +3,28 @@
 namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
+use App\Interfaces\ViaturaAlocadaInterface;
 use Illuminate\Http\Request;
 use App\Models\Viatura;
 use App\Models\viatura_historico;
 use App\Models\ViaturaRota;
 use Carbon\Carbon;
+use Illuminate\Http\JsonResponse;
 
 class ViaturaAlocadaController extends Controller
 {
     private $viatura_rota;
+    private $viaturaAlocada;
 
-    function __construct(ViaturaRota $viatura_rota)
+    function __construct(ViaturaRota $viatura_rota, ViaturaAlocadaInterface $viaturaAlocada)
     {
         $this->viatura_rota = $viatura_rota;
+        $this->viaturaAlocada = $viaturaAlocada;
     }
-    public function index(Request $request)
+    public function index(Request $request): JsonResponse
     {
-        $viaturas = array();
-            $viaturas = viatura_historico::with(['viatura.rota'])->join('viaturas', 'viaturas.id','=', 'viatura_historicos.viatura_id')
-            ->select('viatura_historicos.viatura_id as viatura_id', 'viaturas.id as id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')
-            ->orderBy('viatura_historicos.created_at', 'desc')->paginate(15);;
 
-
-        return response($viaturas, 200);
+        return response()->json($this->viaturaAlocada->getAllAlocated($request));
     }
 
     public function historicoDeLeitura()
@@ -62,18 +61,19 @@ class ViaturaAlocadaController extends Controller
         foreach ($request->rota['rota_id'] as $key => $rota_id) {
             $rotas[$key] = $rota_id;
         }
-        $viatura_rota = ViaturaRota::whereIn('rota_id', $rotas)->where('viatura_id', $request->viatura_id)->where('created_at', '>=', $datetime)->get();
+
+        $viatura_rota = ViaturaRota::where('viatura_id', $request->viatura_id)->whereIn('rota_id', $rotas)->where('created_at', '>=', $datetime)->first();
 
         if (!empty($viatura_rota)) {
-            foreach($viatura_rota as $vr){
-             if(Viatura::where('id', $vr->viatura_id)->first() != null){
+
+            if(Viatura::where('id', $viatura_rota->viatura_id)->first() != null){
                 return response(['error' => 'Nao pode alocar duas vezes a viatura no mesmo dia'], 421);
             }else{
                 return response(['error' => 'Nao pode alocar duas viaturas na mesma rota'], 421);
             }   
             }
 
-        }
+        
 
 
         $viaturaLeitura = new viatura_historico();
@@ -116,13 +116,14 @@ class ViaturaAlocadaController extends Controller
             return response()->json(['message' => 'viatura escalada com sucesso']);
         }
     }
-
-    function viaturaAlocada($viatura_id){
-        $viatura = ViaturaRota::join('viaturas', 'viatura_alocadas.viatura_id', '=', 'viaturas.id')->get();
-    }
-    public function show($id)
+    
+    public function show(Request $request): JsonResponse
     {
-        //
+        $viaturaId = $request->route('id');
+        $viaturas = $this->viaturaAlocada->ViewViaturaAlocada($viaturaId);
+
+        return response()->json($viaturas, 200);
+
     }
 
     /**
@@ -132,9 +133,14 @@ class ViaturaAlocadaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request): JsonResponse
     {
-        //
+        $viaturaId = $request->route('id');
+        $viaturaDetails = $request->all();
+
+        return response()->json([
+            'data' => $this->viaturaAlocada->EditViaturaHistory($viaturaId, $viaturaDetails)
+        ]);
     }
 
     /**

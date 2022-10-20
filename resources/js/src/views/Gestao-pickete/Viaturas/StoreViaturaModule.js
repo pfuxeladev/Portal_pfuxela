@@ -62,5 +62,12 @@ export default {
           .catch(error => reject(error))
       })
     },
+    ViewAlocatedVehicle(ctx, { id }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/viaturasAlocadas/${id}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

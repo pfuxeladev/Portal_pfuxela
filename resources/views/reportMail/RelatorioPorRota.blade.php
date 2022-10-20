@@ -124,11 +124,11 @@
                     <tbody>
 
                         @foreach ($rota['ordem_rota'] as $key => $ordem)
-                          
+
                             <tr <?php if ($ordem->situacao == 'Cancelada') {
                                 echo "style='background:rgb(255, 192, 199);'";
                             } ?>>
-                                
+
                                 <td>{{ $ordem->codigo_ordem }}</td>
                                 <td>{{ $ordem->data_criacao }}</td>
                                 <td>{{ $ordem->situacao }}</td>
@@ -138,18 +138,34 @@
                                 <td>{{$ordem->tipo_combustivel}}</td>
                                 <td>{{ $ordem->capacidade_media }}</td>
                                 <td>{{$ordem->distancia}}</td>
-                                <?php $qtd = $ordem->qtd; ?>
+                                <?php
+                                if($ordem->distancia === null){
+                                    $qtd = $ordem->capacidade_media*$rota['distancia_rota'];
+                                }else{
+                                    $qtd = $ordem->qtd;
+                                }
+                                 ?>
                                 <td>{{ $qtd }}</td>
                                 <?php $qtd_total+= $qtd; ?>
-                                <?php $user = App\Models\User::where('id', $ordem->createdBy)->first(); ?>
+
                                 <?php $preco = $ordem->preco_total / $ordem->qtd; ?>
                                 <td>{{number_format($preco, 2, ',', '.')}}</td>
-                                <td>{{ $user->name }}</td>
-                                <?php $preco_consumo = $preco * $qtd; ?>
-                                <td>{{ number_format($ordem->preco_total, 2, ',', '.') }}</td>
-                                <?php $total += $ordem->preco_total; ?>
+                                <?php
+                                if($ordem->updatedBy !== null){
+                                    $user = App\Models\User::where('id', $ordem->updatedBy)->first();
+                                    ?>
+                                    <td>{{ $user->name }}</td>
+                                    <?php
+                                }else{
+                                    echo "<td> - </td>";
+                                }
+                                 ?>
 
-                            </tr> 
+                                <?php $preco_consumo = $preco * $qtd; ?>
+                                <td>{{ number_format($preco_consumo, 2, ',', '.') }}</td>
+                                <?php $total += $preco_consumo; ?>
+
+                            </tr>
                         @endforeach
                     </tbody>
                     <tfoot>

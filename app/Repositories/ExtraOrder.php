@@ -2,15 +2,23 @@
 
 namespace App\Repositories;
 
+use App\Http\Resources\ExtraOrder as ResourcesExtraOrder;
 use App\Models\Ordem;
+use PDF;
 use Carbon\Carbon;
-use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
+use Exception;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
+
+// use JasonGuru\LaravelMakeRepository\Repository\BaseRepository;
 //use Your Model
 
 /**
  * Class ExtraOrder.
  */
-class ExtraOrder extends BaseRepository
+class ExtraOrder
 {
     protected $extraOrder;
 
@@ -24,7 +32,45 @@ class ExtraOrder extends BaseRepository
     }
 
     function CreateWeeklyReport(){
-        $this->extraOrder->with(['abastecimento', 'viatura'])
-        ->where('created_at', '>=', Carbon::parse());
+       $MailOrderSender = $this->extraOrder->ExtraType()->with(['viatura', 'bombas'])
+       ->join('abastecimentos', 'ordems.id', '=', 'abastecimentos.ordem_id')
+       ->join('abastecimento_extras', 'abastecimentos.id', '=', 'abastecimento_extras.abastecimento_id')
+        ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
+        ->get();
+
+        return $this->sendEmailOrders($MailOrderSender);
+    }
+
+    function CreateMonthlyReport(){
+        $monthlyExtraOderMail = $this->extraOrder->ExtraType()->with(['viatura', 'bombas'])
+       ->join('abastecimentos', 'ordems.id', '=', 'abastecimentos.ordem_id')
+       ->join('abastecimento_extras', 'abastecimentos.id', '=', 'abastecimento_extras.abastecimento_id')
+       ->where('ordems.created_at', '>=', Carbon::today()->subDays(30))
+       ->get();
+
+       return $this->sendEmailOrders($monthlyExtraOderMail);
+    }
+
+    function sendEmailOrders($MailsOrder){
+        try {
+            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
+            $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
+
+            return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
+
+            $pdf = PDF::loadView('reportMail.OrdensExtrasReport', compact('MailsOrder'))->setOptions(['defaultFont' => 'Times New Roman']);
+
+            Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
+
+            Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
+                $message->to($data["email"])
+                    ->subject($data["title"])
+                    ->attachData($pdf->output(), 'relatorio_por_rota_e_projecto' . date('Y-m-d H:i:s') . '.pdf');
+            });
+            Log::info('email sent to: Users');
+            return response()->json(['message' => 'email sent to: Users successfully']);
+        }catch(Exception $e){
+
+        }
     }
 }

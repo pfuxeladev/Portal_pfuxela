@@ -40,8 +40,13 @@
         </b-row>
       </div>
       <b-row>
-        <b-col cols="12" >
+        <b-col cols="12" class="table-responsive" >
           <b-table  ref="refAbstRecorrente" :items="fetchAbstRecorrente" responsive :fields="fieldCollumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="Nenhum registo feito" :sort-desc.sync="isSortDirDesc" class="position-relative">
+            <template #cell(data_submissao)="data">
+                <div>
+                    {{dateTime(data.item.created_at) }}
+                </div>
+            </template>
                      <template #cell(ordem)="data">
                         {{data.item.abastecimento.ordem.codigo_ordem}}
                     </template>
@@ -50,6 +55,12 @@
                     </template>
                      <template #cell(viatura)="data">
                         {{data.item.viatura.matricula}}
+                    </template>
+                    <template #cell(qtd_disponivel)="data">
+                        {{data.item.qtd_disponivel}}
+                    </template>
+                    <template #cell(qtd_abastecida)="data">
+                        {{data.item.qtd}}
                     </template>
                     <template #cell(motorista)="data">
                         {{data.item.motorista.person.nome_completo}}
@@ -472,6 +483,9 @@ export default {
     function hideModal() {
       this.$refs.AbastecimentoForm.hide();
     }
+    function dateTime(value) {
+      return moment(value).format('DD/MM/YYYY hh:mm')
+    }
 
     const {
       fetchAbstRecorrente,
@@ -516,6 +530,7 @@ export default {
       AbstDetails,
       // show details
       details,
+      dateTime,
     }
   },
 }
