@@ -301,9 +301,6 @@ export default {
       store.dispatch('Picket/ViewAlocatedVehicle', { id: data.id })
         .then(res => {
           this.form = res.data
-          this.form.rota.id = res.data.rota.id
-          console.log(this.form.rota.id)
-          console.log(this.form)
         })
     }
     function alocarViatura() {
