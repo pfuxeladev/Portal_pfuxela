@@ -12,9 +12,11 @@ class AlocateViaturaRepository implements ViaturaAlocadaInterface {
 
 
     protected $viaturaHistorico = null;
+    protected $viaturaAlocada = null;
 
-    function __construct(viatura_historico $viaturaHistorico){
+    function __construct(viatura $viaturaAlocada, viatura_historico $viaturaHistorico){
         $this->viaturaHistorico = $viaturaHistorico;
+        $this->viaturaAlocada = $viaturaAlocada;
     }
 
 
@@ -83,8 +85,12 @@ class AlocateViaturaRepository implements ViaturaAlocadaInterface {
     }
 
 function ViewViaturaAlocada($viaturaId){
-    $viaturas = viatura_historico::with(['viatura.rota'])->find($viaturaId);
+    // $viatura = $this->viaturaHistorico->with(['viatura.rota'])->find($viaturaId);
 
-    return $viaturas;
+    // return $viaturaId;
+
+    return $this->viaturaAlocada->with('rota')
+    ->join('viatura_historicos', 'viaturas.id','=', 'viatura_historicos.viatura_id')
+    ->select('viaturas.id as id','viatura_historicos.viatura_id', 'viatura_historicos.id as historico_id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem_ant as kmActual', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel','viatura_historicos.motorista_id', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')->where('viatura_historicos.id', $viaturaId)->first();
 }
 }
