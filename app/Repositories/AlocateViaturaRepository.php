@@ -91,6 +91,6 @@ function ViewViaturaAlocada($viaturaId){
 
     return $this->viaturaAlocada->with('rota')
     ->join('viatura_historicos', 'viaturas.id','=', 'viatura_historicos.viatura_id')
-    ->select('viaturas.id as id','viatura_historicos.viatura_id', 'viatura_historicos.id as historico_id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem_ant as kmActual', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel','viatura_historicos.motorista_id', 'viatura_historicos.km_percorridos', 'viatura_historicos.qtd_prevista')->where('viatura_historicos.id', $viaturaId)->first();
+    ->select('viaturas.id as id','viatura_historicos.viatura_id', 'viatura_historicos.id as historico_id', 'viaturas.matricula', 'viaturas.capacidade_media', 'viaturas.qtd_disponivel', 'viaturas.tipo_combustivel', 'viaturas.capacidade_tanque', 'viaturas.kilometragem_ant as kmActual', 'viaturas.kilometragem_ant','viatura_historicos.manometro_km', 'viatura_historicos.manometro_combustivel','viatura_historicos.motorista_id', 'viatura_historicos.km_percorridos as kmPercorridos', 'viatura_historicos.qtd_prevista')->where('viatura_historicos.id', $viaturaId)->first();
 }
 }
