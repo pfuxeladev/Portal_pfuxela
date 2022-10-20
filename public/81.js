@@ -394,9 +394,6 @@ __webpack_require__.r(__webpack_exports__);
         id: data.id
       }).then(function (res) {
         _this5.form = res.data;
-        _this5.form.rota.id = res.data.rota.id;
-        console.log(_this5.form.rota.id);
-        console.log(_this5.form);
       });
     }
 
