@@ -58,7 +58,7 @@ class ViaturaAlocadaController extends Controller
         $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $rotas = array();
 
-        foreach ($request->rota['rota_id'] as $key => $rota_id) {
+        foreach ($request->rota['id'] as $key => $rota_id) {
             $rotas[$key] = $rota_id;
         }
 
@@ -106,7 +106,7 @@ class ViaturaAlocadaController extends Controller
 
 
         if ($viaturaLeitura) {
-            foreach ($request->rota['rota_id'] as $key => $rotas) {
+            foreach ($request->rota['id'] as $key => $rotas) {
                 ViaturaRota::updateOrCreate([
                     'viatura_id' => $request->viatura_id, 'rota_id' => $rotas, 'createdBy' => auth()->user()->id, 'updatedBy' => auth()->user()->id, 'created_at'=>Carbon::now(),
                     'updated_at'=>Carbon::now()
@@ -116,11 +116,12 @@ class ViaturaAlocadaController extends Controller
             return response()->json(['message' => 'viatura escalada com sucesso']);
         }
     }
-    
-    public function show(Request $request): JsonResponse
+
+    public function show(Request $request, $id):JsonResponse
     {
-        $viaturaId = $request->route('id');
-        $viaturas = $this->viaturaAlocada->ViewViaturaAlocada($viaturaId);
+        // $viaturaId = $request->route('id');
+
+        $viaturas = $this->viaturaAlocada->ViewViaturaAlocada($id);
 
         return response()->json($viaturas, 200);
 

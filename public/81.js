@@ -326,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
       kmActual: 0,
       kmPercorridos: 0,
       rota: {
-        rota_id: ''
+        id: ''
       }
     }))); // buscar viaturas
 
@@ -393,8 +393,10 @@ __webpack_require__.r(__webpack_exports__);
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/ViewAlocatedVehicle', {
         id: data.id
       }).then(function (res) {
-        _this5.form.value = res.data;
-        console.log(res.data);
+        _this5.form = res.data;
+        _this5.form.rota.id = res.data.rota.id;
+        console.log(_this5.form.rota.id);
+        console.log(_this5.form);
       });
     }
 
@@ -1610,11 +1612,11 @@ var render = function () {
                               multiple: "",
                             },
                             model: {
-                              value: _vm.form.rota.rota_id,
+                              value: _vm.form.rota.id,
                               callback: function ($$v) {
-                                _vm.$set(_vm.form.rota, "rota_id", $$v)
+                                _vm.$set(_vm.form.rota, "id", $$v)
                               },
-                              expression: "form.rota.rota_id",
+                              expression: "form.rota.id",
                             },
                           }),
                         ],

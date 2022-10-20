@@ -138,7 +138,7 @@
                 </b-col>
                 <b-col>
                     <b-form-group label="rotas a percorrer">
-                        <v-select v-model="form.rota.rota_id" :options="rotas" label="nome_rota" :reduce="rotas => rotas.id" multiple />
+                        <v-select v-model="form.rota.id" :options="rotas" label="nome_rota" :reduce="rotas => rotas.id" multiple />
                     </b-form-group>
                 </b-col>
             </b-form-row>
@@ -242,7 +242,7 @@ export default {
           kmActual: 0,
           kmPercorridos: 0,
           rota: {
-            rota_id: '',
+            id: '',
           },
         }),
       ),
@@ -300,8 +300,10 @@ export default {
       this.$refs.alocateModal.show()
       store.dispatch('Picket/ViewAlocatedVehicle', { id: data.id })
         .then(res => {
-          this.form.value = res.data
-          console.log(res.data)
+          this.form = res.data
+          this.form.rota.id = res.data.rota.id
+          console.log(this.form.rota.id)
+          console.log(this.form)
         })
     }
     function alocarViatura() {
