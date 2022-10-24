@@ -341,14 +341,14 @@ class AbastecimentoController extends Controller
 
 
 
-
-        if (!empty($last_order)) {
-            $new_code = ($last_order->codigo_ordem + 1);
-            $ordem->codigo_ordem = $new_code;
-        } else {
-            $ordem->codigo_ordem = $counter;
-        }
         if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
+            if (!empty($last_order)) {
+                $new_code = ($last_order->codigo_ordem + 1);
+                $ordem->codigo_ordem = $new_code;
+            } else {
+                $ordem->codigo_ordem = $counter;
+            }
+
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bombas_id;
             $ordem->estado = 'Pendente';
@@ -457,7 +457,6 @@ class AbastecimentoController extends Controller
         } else {
             return response()->json(['erro' => 'Nao tem permissao para fazer abastecimento extraordinario contacte o administrador'], 421);
         }
-
     }
 
     public function show($refs)
