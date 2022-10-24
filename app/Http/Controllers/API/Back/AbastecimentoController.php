@@ -349,6 +349,8 @@ class AbastecimentoController extends Controller
                 $ordem->codigo_ordem = $counter;
             }
 
+            $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
+
             $ordem->refs = $uuid;
             $ordem->bombas_id = $request->bombas_id;
             $ordem->estado = 'Pendente';
@@ -356,12 +358,11 @@ class AbastecimentoController extends Controller
             $ordem->createdBy = auth()->user()->id;
             $ordem->save();
 
-            $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
 
-            $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
-                ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->get();
+            $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $request->bombas_id)
+                ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
 
-            // return $combustivel;
+            
 
             // if ($combustivel) {
             if (!empty($combustivel->tipo_combustivel)) {
