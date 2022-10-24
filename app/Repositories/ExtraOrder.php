@@ -55,11 +55,11 @@ class ExtraOrder
     function sendEmailOrders($MailsOrder){
         try {
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
+            $data["title"] = "Relatorio Semanal de Abastecimento extraordinarios";
 
             // return $MailsOrder;
 
-            return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
+            // return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
 
             $pdf = PDF::loadView('reportMail.OrdensExtrasReport', compact('MailsOrder'))->setOptions(['defaultFont' => 'Times New Roman']);
 
@@ -68,7 +68,7 @@ class ExtraOrder
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
                 $message->to($data["email"])
                     ->subject($data["title"])
-                    ->attachData($pdf->output(), 'relatorio_por_rota_e_projecto' . date('Y-m-d H:i:s') . '.pdf');
+                    ->attachData($pdf->output(), 'relatorio_ordem_extras' . date('Y-m-d H:i:s') . '.pdf');
             });
             Log::info('email sent to: Users');
             return response()->json(['message' => 'email sent to: Users successfully']);
