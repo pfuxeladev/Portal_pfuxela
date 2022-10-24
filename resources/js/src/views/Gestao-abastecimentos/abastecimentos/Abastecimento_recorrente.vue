@@ -72,7 +72,7 @@
                         {{data.item.abastecimento.user.name}}
                     </template>
                     <template #cell(acções)="data">
-                        <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
+                        <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL"  v-if="can('Aprove Extra Order')">
 
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />

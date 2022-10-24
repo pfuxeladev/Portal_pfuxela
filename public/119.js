@@ -1,25 +1,33 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[119],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _relatorioOcorrencia__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./relatorioOcorrencia */ "./resources/js/src/views/Gestao-pickete/relatorios/relatorioOcorrencia.js");
-/* harmony import */ var _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./storaRelatorioModule */ "./resources/js/src/views/Gestao-pickete/relatorios/storaRelatorioModule.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
+/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _storeRotasModule__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./storeRotasModule */ "./resources/js/src/views/Gestao-abastecimentos/rotas/storeRotasModule.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
+
+
 //
 //
 //
@@ -82,6 +90,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -94,71 +112,133 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      entrada: {}
+      projecto: []
     };
   },
   components: {
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
-    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroup"],
-    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroupItem"]
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BForm"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormInput"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardHeader"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BLink"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_3___default.a,
+    BFormTimepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormTimepicker"]
   },
-  setup: function setup(props) {
-    var entrada = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(null);
-    var ENTRADAS_STORE_MODULE_NAME = 'Picket';
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])(); // Register module
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_7__["default"]
+  },
+  setup: function setup() {
+    var ROTA_APP_STORE_MODULE_NAME = 'app-rota'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(ENTRADAS_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(ENTRADAS_STORE_MODULE_NAME, _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_6__["default"]);
+    if (!_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(ROTA_APP_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_10__["default"].registerModule(ROTA_APP_STORE_MODULE_NAME, _storeRotasModule__WEBPACK_IMPORTED_MODULE_9__["default"]);
     } // UnRegister on leave
 
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(ENTRADAS_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(ENTRADAS_STORE_MODULE_NAME);
-      }
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_10__["default"].hasModule(ROTA_APP_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_10__["default"].unregisterModule(ROTA_APP_STORE_MODULE_NAME);
+    });
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_6__["useToast"])();
+    var rotaEdit = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_5__["default"]({
+      nome_rota: '',
+      horario: [{
+        turno: '',
+        horaPartida: '',
+        horaChegada: ''
+      }],
+      endereco: '',
+      distancia_km: '',
+      tipoRota: '',
+      projecto_id: null
+    }))));
+    _store__WEBPACK_IMPORTED_MODULE_10__["default"].dispatch('app-rota/fetchRota', {
+      id: _router__WEBPACK_IMPORTED_MODULE_11__["default"].currentRoute.params.id
+    }).then(function (response) {
+      rotaEdit.value = response.data;
     });
 
-    function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_2___default()(value).format('DD/MM/YYYY hh:mm');
+    function onSubmit() {
+      var _this = this;
+
+      this.$Progress.start();
+      _store__WEBPACK_IMPORTED_MODULE_10__["default"].dispatch('app-rota/updateRota', {
+        id: _router__WEBPACK_IMPORTED_MODULE_11__["default"].currentRoute.params.id,
+        rotaData: rotaEdit
+      }).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+          props: {
+            title: response.data.message,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+
+        _this.$router.push({
+          name: 'Routes Supply'
+        });
+      })["catch"](function (err) {
+        if (err) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+            props: {
+              title: err.response.data.Erro,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    function troca() {
+      var index = 0;
+
+      if (this.rotaEdit.tipoRota === 'Ida') {
+        if (this.rotaEdit.horario.length !== 1) {
+          this.rotaEdit.horario.splice(index, 1);
+        }
+      } else if (this.rotaEdit.tipoRota === 'Volta') {
+        if (this.rotaEdit.horario.length !== 1) {
+          this.rotaEdit.horario.splice(index, 1);
+        }
+      } else if (this.rotaEdit.tipoRota === 'Ida & Volta') {
+        if (this.rotaEdit.horario.length !== 2) {
+          this.rotaEdit.horario.push({
+            turno: null,
+            horaPartida: null,
+            horaChegada: null
+          });
+        }
+      }
     }
 
     return {
-      dateTime: dateTime,
-      entrada: entrada
+      rotaEdit: rotaEdit,
+      onSubmit: onSubmit,
+      troca: troca
     };
   },
   created: function created() {
-    var _this = this;
+    var _this2 = this;
 
-    _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/fetchEntrada', {
-      id: _router__WEBPACK_IMPORTED_MODULE_7__["default"].currentRoute.params.id
-    }).then(function (response) {
-      _this.entrada = response.data;
-      console.log(response.data);
-    })["catch"](function () {// toast({
-      //   component: ToastificationContent,
-      //   props: {
-      //     title: 'Erro! nenhum dado',
-      //     icon: 'AlertTriangleIcon',
-      //     variant: 'danger',
-      //   },
-      // })
+    this.$http.get('/api/listProject').then(function (response) {
+      _this2.projecto = response.data;
     });
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5&":
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5& ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -171,230 +251,360 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "section",
-    _vm._l(_vm.entrada, function (ent, index) {
-      return _c(
-        "b-card",
-        { key: index, attrs: { "no-body": "" } },
-        [
-          _c(
-            "b-row",
-            [
-              _c(
-                "b-col",
-                { attrs: { cols: "3" } },
-                [
-                  _c(
-                    "b-link",
-                    {
-                      staticClass: "btn btn-md btn-outline-primary",
-                      attrs: { to: { name: "Vehicle-movements" } },
+    "div",
+    [
+      _c("b-card", { staticClass: "mb-0", attrs: { "no-body": "" } }, [
+        _c(
+          "div",
+          { staticClass: "m-2" },
+          [
+            _c(
+              "b-card-body",
+              [
+                _c(
+                  "b-form",
+                  {
+                    attrs: { novalidate: "" },
+                    on: {
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        return _vm.onSubmit()
+                      },
                     },
-                    [_vm._v("voltar")]
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-card-header", [
-            _c("h3", [
-              _vm._v(
-                "\n              Matricula: " +
-                  _vm._s(ent.checklistIn.check_list_out.viatura.matricula) +
-                  "\n          "
-              ),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "mb-2" },
-            [
-              _c(
-                "b-row",
-                [
-                  _c(
-                    "b-col",
-                    { attrs: { cols: "6" } },
-                    [
-                      _c(
-                        "b-list-group",
-                        [
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Kilometragem: " +
-                                _vm._s(ent.checklistIn.km_fim) +
-                                "\n                  "
+                  },
+                  [
+                    _c(
+                      "b-row",
+                      [
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-5",
+                                  label: "Projecto:",
+                                  "label-for": "input-5",
+                                },
+                              },
+                              [
+                                _c("v-select", {
+                                  attrs: {
+                                    label: "name",
+                                    options: _vm.projecto,
+                                    reduce: function (projecto) {
+                                      return projecto.id
+                                    },
+                                  },
+                                  model: {
+                                    value: _vm.rotaEdit.projecto_id,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.rotaEdit, "projecto_id", $$v)
+                                    },
+                                    expression: "rotaEdit.projecto_id",
+                                  },
+                                }),
+                              ],
+                              1
                             ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Hora de partida: " +
-                                _vm._s(
-                                  ent.checklistIn.check_list_out.hr_inicio
-                                ) +
-                                "\n                  "
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-1",
+                                  label: "Nome da rota:",
+                                  "label-for": "input-1",
+                                },
+                              },
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    id: "input-1",
+                                    type: "text",
+                                    placeholder: "Digite o nome da rota",
+                                  },
+                                  model: {
+                                    value: _vm.rotaEdit.nome_rota,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.rotaEdit, "nome_rota", $$v)
+                                    },
+                                    expression: "rotaEdit.nome_rota",
+                                  },
+                                }),
+                              ],
+                              1
                             ),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-list-group-item", [
-                            _vm._v(
-                              "\n                      Hora de entrada: " +
-                                _vm._s(ent.checklistIn.hr_fim) +
-                                "\n                  "
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-2",
+                                  label: "Tamanho da rota:",
+                                  "label-for": "input-2",
+                                },
+                              },
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    id: "input-2",
+                                    type: "number",
+                                    step: "0.001",
+                                  },
+                                  model: {
+                                    value: _vm.rotaEdit.distancia_km,
+                                    callback: function ($$v) {
+                                      _vm.$set(
+                                        _vm.rotaEdit,
+                                        "distancia_km",
+                                        $$v
+                                      )
+                                    },
+                                    expression: "rotaEdit.distancia_km",
+                                  },
+                                }),
+                              ],
+                              1
                             ),
-                          ]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-card-body",
-            [
-              _c("h3", [_vm._v("Estado da viatura")]),
-              _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              ent.checklists !== ""
-                ? _c(
-                    "b-row",
-                    _vm._l(ent.categoria, function (chk, i) {
-                      return _c(
-                        "b-col",
-                        {
-                          key: "a" + i,
-                          staticClass: "mb-2",
-                          attrs: { cols: "3" },
-                        },
-                        [
-                          _c("h3", { staticClass: "card-title" }, [
-                            _vm._v(_vm._s(chk.nome_categoria)),
-                          ]),
-                          _vm._v(" "),
-                          _vm._l(ent.checklists, function (checklst, k) {
-                            return _c("b-row", { key: k }, [
-                              checklst.categoria === chk.id
-                                ? _c("span", { staticClass: "ml-2" }, [
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-2",
+                                  label: "Tipo:",
+                                  "label-for": "input-2",
+                                },
+                              },
+                              [
+                                _c("v-select", {
+                                  attrs: {
+                                    options: ["Ida", "Volta", "Ida & Volta"],
+                                  },
+                                  on: { input: _vm.troca },
+                                  model: {
+                                    value: _vm.rotaEdit.tipoRota,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.rotaEdit, "tipoRota", $$v)
+                                    },
+                                    expression: "rotaEdit.tipoRota",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-3",
+                                  label: "Endereco:",
+                                  "label-for": "input-4",
+                                },
+                              },
+                              [
+                                _c("b-form-input", {
+                                  attrs: { id: "input-4", required: "" },
+                                  model: {
+                                    value: _vm.rotaEdit.endereco,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.rotaEdit, "endereco", $$v)
+                                    },
+                                    expression: "rotaEdit.endereco",
+                                  },
+                                }),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12", md: "12", lg: "12" } },
+                          _vm._l(_vm.rotaEdit.horario, function (hr, index) {
+                            return _c(
+                              "b-row",
+                              { key: index },
+                              [
+                                _c(
+                                  "b-col",
+                                  { attrs: { cols: "12", md: "4" } },
+                                  [
                                     _c(
-                                      "table",
-                                      { staticClass: "table table-responsive" },
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-2",
+                                          label: "Turno:",
+                                          "label-for": "input-2",
+                                        },
+                                      },
                                       [
-                                        _c("tr", [
-                                          _c("td", [
-                                            _vm._v(
-                                              _vm._s(checklst.checklist_name)
-                                            ),
-                                          ]),
-                                          _vm._v(" "),
-                                          _c(
-                                            "td",
-                                            { staticClass: "text-right" },
-                                            [
-                                              checklst.opcao_entrada === "Ok"
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c("feather-icon", {
-                                                        staticStyle: {
-                                                          color: "green",
-                                                        },
-                                                        attrs: {
-                                                          icon: "CheckIcon",
-                                                        },
-                                                      }),
-                                                    ],
-                                                    1
-                                                  )
-                                                : checklst.opcao_entrada ===
-                                                  "No"
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c("feather-icon", {
-                                                        staticStyle: {
-                                                          color: "red",
-                                                        },
-                                                        attrs: {
-                                                          icon: "XIcon",
-                                                        },
-                                                      }),
-                                                    ],
-                                                    1
-                                                  )
-                                                : checklst.opcao_entrada ===
-                                                  "Parcial"
-                                                ? _c(
-                                                    "b-badge",
-                                                    {
-                                                      attrs: {
-                                                        variant: "warning",
-                                                      },
-                                                    },
-                                                    [
-                                                      _c("feather-icon", {
-                                                        staticStyle: {
-                                                          color: "orange",
-                                                        },
-                                                        attrs: {
-                                                          icon: "AlertTriangleIcon",
-                                                        },
-                                                      }),
-                                                    ],
-                                                    1
-                                                  )
-                                                : _vm._e(),
-                                            ],
-                                            1
-                                          ),
-                                        ]),
-                                      ]
+                                        _c("v-select", {
+                                          attrs: {
+                                            options: ["Diurno", "Noturno"],
+                                          },
+                                          model: {
+                                            value: hr.turno,
+                                            callback: function ($$v) {
+                                              _vm.$set(hr, "turno", $$v)
+                                            },
+                                            expression: "hr.turno",
+                                          },
+                                        }),
+                                      ],
+                                      1
                                     ),
-                                  ])
-                                : _vm._e(),
-                            ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-col",
+                                  { attrs: { cols: "12", md: "4" } },
+                                  [
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-6",
+                                          label: "Hora de partida:",
+                                          "label-for": "input-6",
+                                        },
+                                      },
+                                      [
+                                        _c("b-form-timepicker", {
+                                          attrs: {
+                                            "show-seconds": "",
+                                            locale: "en",
+                                          },
+                                          model: {
+                                            value: hr.horaPartida,
+                                            callback: function ($$v) {
+                                              _vm.$set(hr, "horaPartida", $$v)
+                                            },
+                                            expression: "hr.horaPartida",
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    ),
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "b-col",
+                                  { attrs: { cols: "12", md: "4" } },
+                                  [
+                                    _c(
+                                      "b-form-group",
+                                      {
+                                        attrs: {
+                                          id: "input-group-3",
+                                          label: "Hora de chegada:",
+                                          "label-for": "input-3",
+                                        },
+                                      },
+                                      [
+                                        _c("b-form-timepicker", {
+                                          attrs: {
+                                            "show-seconds": "",
+                                            locale: "en",
+                                          },
+                                          model: {
+                                            value: hr.horaChegada,
+                                            callback: function ($$v) {
+                                              _vm.$set(hr, "horaChegada", $$v)
+                                            },
+                                            expression: "hr.horaChegada",
+                                          },
+                                        }),
+                                      ],
+                                      1
+                                    ),
+                                  ],
+                                  1
+                                ),
+                              ],
+                              1
+                            )
                           }),
-                        ],
-                        2
-                      )
-                    }),
-                    1
-                  )
-                : _c(
-                    "b-row",
-                    [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "3" } },
-                        [
-                          _c("b-button", { attrs: { variant: "primary" } }, [
-                            _vm._v("Verificar o estado da viatura"),
-                          ]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-            ],
-            1
-          ),
-        ],
-        1
-      )
-    }),
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          {
+                            staticClass: "mt-2",
+                            attrs: { cols: "12", md: "12" },
+                          },
+                          [
+                            _c(
+                              "b-button",
+                              {
+                                attrs: {
+                                  type: "submit",
+                                  variant: "outline-primary",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                Actualizar\n                            "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
+          ],
+          1
+        ),
+      ]),
+    ],
     1
   )
 }
@@ -405,17 +615,17 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue":
-/*!******************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue ***!
-  \******************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue":
+/*!*************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue ***!
+  \*************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./entradasDetails.vue?vue&type=template&id=3736a4b5& */ "./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5&");
-/* harmony import */ var _entradasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./entradasDetails.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js&");
+/* harmony import */ var _rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./rotaEdit.vue?vue&type=template&id=1f7080a7& */ "./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7&");
+/* harmony import */ var _rotaEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./rotaEdit.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -425,9 +635,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _entradasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _rotaEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -437,38 +647,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_entradasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./entradasDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_entradasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_rotaEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./rotaEdit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_rotaEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7& ***!
+  \********************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./entradasDetails.vue?vue&type=template&id=3736a4b5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/entradasDetails.vue?vue&type=template&id=3736a4b5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./rotaEdit.vue?vue&type=template&id=1f7080a7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/rotas/rotaEdit.vue?vue&type=template&id=1f7080a7&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_entradasDetails_vue_vue_type_template_id_3736a4b5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_rotaEdit_vue_vue_type_template_id_1f7080a7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

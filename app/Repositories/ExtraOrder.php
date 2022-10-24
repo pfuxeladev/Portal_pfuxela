@@ -32,9 +32,10 @@ class ExtraOrder
     }
 
     function CreateWeeklyReport(){
-       $MailOrderSender = $this->extraOrder->ExtraType()->with(['viatura', 'bombas'])
+       $MailOrderSender = $this->extraOrder->ExtraType()->with(['viatura', 'abastecimento.bombas'])
        ->join('abastecimentos', 'ordems.id', '=', 'abastecimentos.ordem_id')
        ->join('abastecimento_extras', 'abastecimentos.id', '=', 'abastecimento_extras.abastecimento_id')
+       ->select('ordems.id as id', 'abastecimentos.bombas_id', 'ordems.codigo_ordem', 'ordems.created_at as data_criacao', 'ordems.estado', 'ordems.createdBy', 'ordems.approvedBy', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec', 'abastecimento_extras.destino', 'abastecimento_extras.qtd', 'abastecimento_extras.descricao')
         ->where('ordems.created_at', '>=', Carbon::today()->subDays(7))
         ->get();
 
@@ -56,7 +57,9 @@ class ExtraOrder
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal de Abastecimento por Rota";
 
-            return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
+            return $MailsOrder;
+
+            // return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
 
             $pdf = PDF::loadView('reportMail.OrdensExtrasReport', compact('MailsOrder'))->setOptions(['defaultFont' => 'Times New Roman']);
 
