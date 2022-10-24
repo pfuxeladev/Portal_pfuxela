@@ -59,7 +59,7 @@ class ExtraOrder
 
             // return $MailsOrder;
 
-            return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
+            // return view('reportMail.OrdensExtrasReport', compact('MailsOrder'));
 
             $pdf = PDF::loadView('reportMail.OrdensExtrasReport', compact('MailsOrder'))->setOptions(['defaultFont' => 'Times New Roman']);
 
