@@ -76,9 +76,11 @@
                           <td style="width: 20%">
                                 <span class="text-primary">{{TotalDistance}}</span> Km's
                           </td>
-                          <td style="width:20%">
+                          <td style="width:20%; text-align:center">
+                            <b-form-input type="number" steps="0.00" v-model="form.qtd_abastecer"> </b-form-input>
+                            <br/>
                             {{qtdAbastecer}}
-                          </td>
+                        </td>
                           <td style="width: 25%">
                             <v-select
                               v-model="form.turno"
@@ -307,9 +309,7 @@ export default {
 
     qtdAbastecer() {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.form.qtd_abastecer = parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast
-
-      return parseFloat(this.form.qtd_abastecer)
+      return parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast
     },
   },
   methods: {

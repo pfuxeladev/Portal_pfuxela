@@ -237,6 +237,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -321,8 +323,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     qtdAbastecer: function qtdAbastecer() {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      this.form.qtd_abastecer = parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast;
-      return parseFloat(this.form.qtd_abastecer);
+      return parseFloat(this.TotalDistance * this.ltr_km) - this.rec_abast;
     }
   },
   methods: {
@@ -865,15 +866,40 @@ var render = function () {
                                               _c(
                                                 "td",
                                                 {
-                                                  staticStyle: { width: "20%" },
+                                                  staticStyle: {
+                                                    width: "20%",
+                                                    "text-align": "center",
+                                                  },
                                                 },
                                                 [
+                                                  _c("b-form-input", {
+                                                    attrs: {
+                                                      type: "number",
+                                                      steps: "0.00",
+                                                    },
+                                                    model: {
+                                                      value:
+                                                        _vm.form.qtd_abastecer,
+                                                      callback: function ($$v) {
+                                                        _vm.$set(
+                                                          _vm.form,
+                                                          "qtd_abastecer",
+                                                          $$v
+                                                        )
+                                                      },
+                                                      expression:
+                                                        "form.qtd_abastecer",
+                                                    },
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c("br"),
                                                   _vm._v(
                                                     "\n                          " +
                                                       _vm._s(_vm.qtdAbastecer) +
-                                                      "\n                        "
+                                                      "\n                      "
                                                   ),
-                                                ]
+                                                ],
+                                                1
                                               ),
                                               _vm._v(" "),
                                               _c(
