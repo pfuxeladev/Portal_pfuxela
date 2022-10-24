@@ -358,15 +358,17 @@ class AbastecimentoController extends Controller
 
             $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
 
+            return $viatura;
+
             $preco = 0;
 
             $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
-                ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
+                ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->get();
 
             // return $combustivel;
 
             // if ($combustivel) {
-            if ($viatura->tipo_combustivel === $combustivel->tipo_combustivel) {
+            if (!empty($combustivel->tipo_combustivel)) {
 
                 $preco = ($combustivel->preco_actual * $request->qtd);
                 $ordem_viatura->preco_cunsumo = $preco;
@@ -459,7 +461,7 @@ class AbastecimentoController extends Controller
         } else {
             return response()->json(['erro' => 'Nao tem permissao para fazer abastecimento extraordinario contacte o administrador'], 421);
         }
-       
+
     }
 
     public function show($refs)
@@ -478,9 +480,9 @@ class AbastecimentoController extends Controller
                     $query->where('ordems.codigo_ordem', 'like', '%' . request('q') . '%')
                         ->orWhere('viaturas.matricula', 'like', '%' . request('q') . '%')
                         ->orWhere('bombas.nome_bombas', 'like', '%' . request('q') . '%');
-                })->with(['abastecimento.ordem', 'viatura', 'motorista.person', 'ordem'])->orderBy('abastecimento_extras.id', 'DESC')->paginate(request('perPage'));
+                })->with(['abastecimento.ordem', 'viatura', 'motorista.person', 'ordem'])->orderBy('ordems.created_at', 'DESC')->paginate(request('perPage'));
         } else {
-            return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person', 'abastecimento.user'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.id', 'DESC')->paginate(10);
+            return abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person', 'abastecimento.user'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->orderBy('abastecimento_extras.created_at', 'DESC')->paginate(10);
         }
     }
 
