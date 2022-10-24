@@ -358,10 +358,6 @@ class AbastecimentoController extends Controller
 
             $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
 
-            return $viatura;
-
-            $preco = 0;
-
             $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $ordem->bombas_id)
                 ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->get();
 
