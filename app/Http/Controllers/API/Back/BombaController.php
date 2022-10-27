@@ -295,13 +295,13 @@ class BombaController extends Controller
         try {
 
 
-            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
+            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
             $data["title"] = "Relatorio Semanal";
 
             $relatorios = $this->ordensBombas->GetWeekReport($ordens);
 
             // return response()->json([$relatorios],200);
-            return view('reportMail.relatorio_bombas', compact('relatorios'));
+            // return view('reportMail.relatorio_bombas', compact('relatorios'));
             $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('relatorios'));
 
             return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
