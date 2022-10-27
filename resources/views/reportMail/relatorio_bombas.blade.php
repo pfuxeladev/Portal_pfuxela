@@ -81,10 +81,10 @@
 
         .row-data {
             width: 100%;
-            margin-top: 180px;
-            margin-right: 10px;
+            margin-top: 150px;
+            margin-right: 5px;
             position: relative;
-            font-size: 8pt;
+            font-size: 9pt;
             height: auto;
 
         }
@@ -126,7 +126,7 @@
             <?php $total = 0;
             $preco_unit = 0; ?>
             @foreach ($relatorios as $key => $order)
-                <hr>
+
                 <h3 class="card-title">{{ 1 + $key }} - {{ $order['bombas'] }}</h3>
 
                 <ul id="combustivel-list">
@@ -135,7 +135,7 @@
                     @endforeach
                 </ul>
                 <table>
-                    <table class="table-content" style="font-size: 8pt;">
+                    <table class="table-content" style="font-size: 6pt;">
                         <thead>
                             <tr>
                                 <td>data</td>
