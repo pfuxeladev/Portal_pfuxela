@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API\BACK;
 
 use App\Http\Controllers\Controller;
+use App\Http\Services\OrdensBombasService;
+use App\Interfaces\OrdensBombasInterface;
 use App\Models\abastecimento_bomba;
 use App\Models\bombaInspecao;
 use App\Models\Bombas;
@@ -16,16 +18,19 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Ordem;
 use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 
 class BombaController extends Controller
 {
     private $bombas;
+    private $ordensBombas;
 
-    function __construct(Bombas $bombas)
+    function __construct(Bombas $bombas, OrdensBombasService $ordensBombas)
     {
         $this->bombas = $bombas;
+        $this->ordensBombas = $ordensBombas;
     }
     public function index()
     {
@@ -285,7 +290,6 @@ class BombaController extends Controller
 
     public function relatorioDiarioBombas()
     {
-        $bombas = Bombas::all();
 
         $ordens = array();
         try {
@@ -294,21 +298,11 @@ class BombaController extends Controller
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
             $data["title"] = "Relatorio Semanal";
 
-            foreach ($bombas as $key => $b) {
-                $ordens[$key] = [
-                    'bombas' => $b->nome_bombas,
-                    'ordens' => Ordem::with(['ordem_viatura', 'viatura', 'ordem_viatura.rota', 'bombas', 'createdBy'])->join('ordem_viaturas', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
-                    ->join('viaturas','ordem_viaturas.viatura_id', '=','viaturas.id')
-                    ->join('ordem_viatura_rotas','ordem_viatura_rotas.ordem_viatura_id','=','ordem_viatura_rotas.id')
-                    ->join('rotas', 'ordem_viatura_rotas.rota_id','=','rotas.id')
-                        ->where('ordems.bombas_id', $b->id)->where('created_at', '>=', Carbon::now()->subDays(14))
-                        ->select('ordems.codigo_ordem as codigo_ordem','','','','','','','','','','')
-                        ->orderBy('created_at', 'desc')->get()
-                ];
-            }
-            // return $ordens;
-            // return view('reportMail.relatorio_bombas', compact('ordens'));
-            $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('ordens'));
+            $relatorios = $this->ordensBombas->GetWeekReport($ordens);
+
+            // return response()->json([$relatorios],200);
+            return view('reportMail.relatorio_bombas', compact('relatorios'));
+            $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('relatorios'));
 
             return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
 
@@ -321,7 +315,7 @@ class BombaController extends Controller
             Log::info('email sent to: Users');
             return response()->json(['message' => 'email sent to: Users successfully']);
         } catch (Exception $e) {
-            return "Something went wrong! " . $e->getMessage();
+            return response()->json(['error'=>"Something went wrong! " . $e->getMessage()], 500);
         }
     }
 }

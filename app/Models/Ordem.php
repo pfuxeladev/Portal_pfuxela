@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\abastecimento;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -66,6 +67,10 @@ class Ordem extends Model
      function scopeExtraType( $query )
     {
         return $query->where( 'tipo_ordem', self::TIPO_EXTRA );
+    }
+
+    function scopeSumDataBySupply($query, $date, $id){
+        return $query->where('ordems.created_at', '>=',$date)->where('ordems.bombas_id',$id);
     }
 
 }

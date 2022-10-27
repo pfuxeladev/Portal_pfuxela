@@ -9,6 +9,11 @@ class Bombas extends Model
 {
     use HasFactory;
 
+    const ACTIVE = 'disponivel';
+    const INACTIVE = 'indisponivel';
+    const INTERNA = 'interna';
+    const EXTERNAL = 'externa';
+
     protected $fillable = [
         'nome_bombas',
         'tipo_bomba',
@@ -37,6 +42,11 @@ class Bombas extends Model
 
     public function abastecimentoBomba(){
         return $this->hasMany(abastecimento_bomba::class, 'bombas_id', 'id');
+    }
+
+    public function scopeActive( $query )
+    {
+        return $query->where( 'status', self::ACTIVE );
     }
 
 }
