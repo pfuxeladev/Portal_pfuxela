@@ -41,6 +41,7 @@ class OrdensBombasRepository extends BaseRepository
                     ->select('ordems.id', 'ordems.codigo_ordem as codigo_ordem','ordems.updated_at as data_emissao','viaturas.matricula as matricula','viaturas.capacidade_tanque as capacidade_tanque','viaturas.capacidade_media as ltr_km','viaturas.tipo_combustivel','viaturas.kilometragem', 'viaturas.kilometragem_ant', 'ordems.estado as estado','ordem_viaturas.qtd_abastecida as qtd_abastecida','ordems.approvedBy','ordem_viaturas.preco_cunsumo as preco_consumo', 'users.name as usuario')
                     ->orderBy('ordems.updated_at', 'desc')->get(),
                     'soma_total'=>$this->orders->SumDataBySupply($date_week, $bomba->id)->leftJoin('ordem_viaturas', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->sum('ordem_viaturas.qtd_abastecida'),
+                    'total'=>$this->orders->SumDataBySupply($date_week, $bomba->id)->leftJoin('ordem_viaturas', 'ordem_viaturas.ordem_id', '=', 'ordems.id')->sum('ordem_viaturas.preco_cunsumo'),
             ];
         }
         return $ordens;

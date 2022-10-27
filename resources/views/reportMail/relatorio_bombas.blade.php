@@ -195,9 +195,14 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="11"></td>
-                                <td>Total</td>
+                                <td colspan="6"></td>
+                                <th>qtd Total</th>
                                 <td>{{$order['soma_total']}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total(MT)</td>
+                                <td>{{$order['total']}}</td>
                             </tr>
                         </tfoot>
                     </table>
