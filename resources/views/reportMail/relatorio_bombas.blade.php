@@ -98,6 +98,9 @@
             display: block;
             list-style: none;
         }
+        .card-title{
+            margin-bottom:-10px
+        }
     </style>
 </head>
 
