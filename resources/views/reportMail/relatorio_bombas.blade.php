@@ -98,6 +98,9 @@
             display: block;
             list-style: none;
         }
+        .card-title{
+            margin-bottom:-10px
+        }
     </style>
 </head>
 
@@ -178,7 +181,7 @@
                                         @foreach ($lista->ordem_viatura as $rota)
                                             @if (!empty($rota->rota))
                                                 @foreach ($rota->rota as $rt)
-                                                {{$rt->nome_rota}}
+                                                {{$rt->nome_rota}},
                                                 @endforeach
                                             @else
                                                 <?php echo 'Abastecimento extraordinario'; ?>
