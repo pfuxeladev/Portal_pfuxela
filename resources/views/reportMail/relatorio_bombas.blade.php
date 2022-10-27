@@ -181,7 +181,7 @@
                                         @foreach ($lista->ordem_viatura as $rota)
                                             @if (!empty($rota->rota))
                                                 @foreach ($rota->rota as $rt)
-                                                {{$rt->nome_rota}}
+                                                {{$rt->nome_rota}},
                                                 @endforeach
                                             @else
                                                 <?php echo 'Abastecimento extraordinario'; ?>
