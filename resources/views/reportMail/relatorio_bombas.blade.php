@@ -79,14 +79,13 @@
             background-color: #f2f2f2;
         }
 
-        .row-data {
+        .relatorio_content {
             width: 100%;
-            margin-top: 150px;
-            margin-right: 5px;
+            margin-top: 120px;
+            margin-right: 10px;
             position: relative;
             font-size: 9pt;
             height: auto;
-
         }
 
         .list-vehicle {
@@ -124,7 +123,7 @@
                     width="180px">
             </div>
         </div>
-        <div class="row-data">
+        <div class="relatorio_content">
 
             <?php $total = 0;
             $preco_unit = 0; ?>
