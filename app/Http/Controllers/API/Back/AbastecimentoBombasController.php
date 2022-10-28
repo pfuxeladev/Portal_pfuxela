@@ -53,7 +53,7 @@ class AbastecimentoBombasController extends Controller
 
         $bombas = Bombas::where('id', $request->fornecedor_id)->first();
 
-        $bombas_verify = abastecimento_bomba::whereDate('created_at', Carbon::today())->where('fornecedor', $bombas->nome_bombas)->where('qtd_abastecida',$request->qtd_abastecida)->first();
+        $bombas_verify = abastecimento_bomba::whereDate('created_at', Carbon::today())->where('id', $request->fornecedor_id)->where('qtd_abastecida',$request->qtd_abastecida)->first();
         if($bombas_verify){
             return response()->json(['error'=>'Nao pode abastecer duas vezes a bomba no mesmo dia']);
         }
@@ -78,7 +78,7 @@ class AbastecimentoBombasController extends Controller
 
 
 
-        $emails = responsavelBombas::where('bombas_id', $bombas->id)->first();
+        $emails = responsavelBombas::where('bombas_id', $request->fornecedor_id)->first();
 
         $abastecimento_bomba = new abastecimento_bomba();
 
@@ -102,7 +102,7 @@ class AbastecimentoBombasController extends Controller
 
         // }
 
-        $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $bombas->id)->latest()->first();
+        $abastecimento_bomba::with(['bombas', 'user', 'ordem'])->where('bombas_id', $request->fornecedor_id)->latest()->first();
 
         $data["email"] = ['deize.manuel@i2aconsultoria.onmicrosoft.com', 'mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz'];
         $data["title"] = "info@pfuxela.co.mz";
