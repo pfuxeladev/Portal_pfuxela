@@ -82,6 +82,9 @@ class AbastecimentoBombasController extends Controller
 
         $abastecimento_bomba = new abastecimento_bomba();
 
+        $pfuxela_bombas = Bombas::where('nome_bombas', 'PFUXELA PARQUE')->first();
+        $pfuxela_bombas->qtd_disponivel = $request->qtd_abastecida;
+
         $preco = ($request->preco_combustivel * $request->qtd_abastecida);
         $iva = ((17*$preco)/100);
 
