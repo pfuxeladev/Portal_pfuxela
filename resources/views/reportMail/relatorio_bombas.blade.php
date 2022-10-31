@@ -7,14 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relatorio de bombas</title>
     <style type="text/css">
-        html,body {
-            font-family: 'myriad-pro-1','myriad-pro-2',Helvetica, Arial, Sans-Serif;
-            height:100%;
-            width:100%;
-            overflow:auto;
-            margin-left: 20px;
-            margin-right: 20px;
-        }
         div.container {
             width: 100%;
             background-color: white;
@@ -72,27 +64,46 @@
 
         table.table-content {
             width: 100%;
-            position: relative;
             text-align: justify;
+            /* height: 100vh;*/
             border-collapse: collapse;
         }
-        table.table-content td, table.table-content th {
+
+        table.table-content td,
+        table.table-content th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
-        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
 
-        .row-data {
+        table.table-content tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .relatorio_content {
             width: 100%;
+            margin-top: 120px;
+            margin-right: 10px;
             position: relative;
             font-size: 9pt;
             height: auto;
+        }
 
+        .list-vehicle {
+            list-style: none;
+            display: block;
+        }
+
+        #combustivel-list {
+            display: block;
+            list-style: none;
+        }
+        .card-title{
+            margin-bottom:-10px
         }
     </style>
 </head>
 
-<body style="font-size:10pt;">
+<body style="font-family: sans-serif; font-size:10pt">
     <div class="container">
         <div class="content-header">
             <h3 class="centered-title"
@@ -112,7 +123,7 @@
                     width="180px">
             </div>
         </div>
-        <div class="row-data">
+        <div class="relatorio_content">
 
             <?php $total = 0;
             $preco_unit = 0; ?>
@@ -125,7 +136,7 @@
                         <li>{{ $comb->tipo_combustivel }}</li>
                     @endforeach
                 </ul>
-                <table>
+               
                     <table class="table-content" style="font-size: 6pt;">
                         <thead>
                             <tr>
@@ -198,6 +209,7 @@
                         </tfoot>
                     </table>
             @endforeach
+
         </div>
     </div>
 </body>
