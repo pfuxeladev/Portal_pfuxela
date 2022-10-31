@@ -32,7 +32,7 @@ class ExtraOrder
     }
 
     function CreateWeeklyReport(){
-       $MailOrderSender = $this->extraOrder->Authori()->with(['viatura', 'abastecimento.bombas', 'ordem_viatura'])
+       $MailOrderSender = $this->extraOrder->ExtraType()->with(['viatura', 'abastecimento.bombas', 'ordem_viatura'])
        ->join('abastecimentos', 'ordems.id', '=', 'abastecimentos.ordem_id')
        ->join('abastecimento_extras', 'abastecimentos.id', '=', 'abastecimento_extras.abastecimento_id')
        ->select('ordems.id as id', 'abastecimentos.bombas_id', 'ordems.codigo_ordem', 'ordems.created_at as data_criacao', 'ordems.estado', 'ordems.createdBy', 'ordems.approvedBy', 'abastecimentos.qtd_ant', 'abastecimentos.qtd_rec', 'abastecimento_extras.destino', 'abastecimento_extras.qtd', 'abastecimento_extras.descricao')
