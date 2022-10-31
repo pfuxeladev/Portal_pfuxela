@@ -296,7 +296,7 @@ class BombaController extends Controller
 
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Semanal";
+            $data["title"] = "Relatorio Semanal das ordems de abastecimento feito nas bombas";
 
             $relatorios = $this->ordensBombas->GetWeekReport($ordens);
 
