@@ -7,11 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relatorio de bombas</title>
     <style type="text/css">
+        html,body {
+            font-family: 'myriad-pro-1','myriad-pro-2',Helvetica, Arial, Sans-Serif;
+            height:100%;
+            width:100%;
+            overflow:auto;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
         div.container {
             width: 100%;
             background-color: white;
-            position: absolute;
-            height: auto;
+            position: relative;
             /*float: left;*/
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
             z-index: 1;
@@ -65,46 +72,27 @@
 
         table.table-content {
             width: 100%;
+            position: relative;
             text-align: justify;
-            /* height: 100vh;*/
             border-collapse: collapse;
         }
-
-        table.table-content td,
-        table.table-content th {
+        table.table-content td, table.table-content th {
             border: 0.1px solid rgb(120, 119, 119);
             padding: 2px;
         }
+        table.table-content tr:nth-child(even){background-color: #f2f2f2;}
 
-        table.table-content tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        .relatorio_content {
+        .row-data {
             width: 100%;
-            margin-top: 120px;
-            margin-right: 10px;
             position: relative;
             font-size: 9pt;
             height: auto;
-        }
 
-        .list-vehicle {
-            list-style: none;
-            display: block;
-        }
-
-        #combustivel-list {
-            display: block;
-            list-style: none;
-        }
-        .card-title{
-            margin-bottom:-10px
         }
     </style>
 </head>
 
-<body style="font-family: sans-serif; font-size:10pt">
+<body style="font-size:10pt;">
     <div class="container">
         <div class="content-header">
             <h3 class="centered-title"
@@ -124,7 +112,7 @@
                     width="180px">
             </div>
         </div>
-        <div class="relatorio_content">
+        <div class="row-data">
 
             <?php $total = 0;
             $preco_unit = 0; ?>
