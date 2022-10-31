@@ -296,7 +296,7 @@ class BombaController extends Controller
 
 
             $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Semanal";
+            $data["title"] = "Relatorio Semanal das ordems de abastecimento feito nas bombas";
 
             $relatorios = $this->ordensBombas->GetWeekReport($ordens);
 
@@ -304,7 +304,7 @@ class BombaController extends Controller
             // return view('reportMail.relatorio_bombas', compact('relatorios'));
             $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('relatorios'));
 
-            // return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
+            return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
 
             $path = Storage::put('public/pdf/relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
