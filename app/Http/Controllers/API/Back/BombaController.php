@@ -304,7 +304,7 @@ class BombaController extends Controller
             // return view('reportMail.relatorio_bombas', compact('relatorios'));
             $pdf = PDF::loadView('reportMail.relatorio_bombas', compact('relatorios'));
 
-            return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
+            // return $pdf->download('Relatorio'.date('Y-m-d H:i:s').'.pdf');
 
             $path = Storage::put('public/pdf/relatorio_bombas' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
             Mail::send('reportMail.message_report', $data, function ($message) use ($data, $pdf) {
