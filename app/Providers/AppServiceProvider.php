@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Services\OrderHistoryService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(OrderHistoryService::class);
+
     }
 
     /**

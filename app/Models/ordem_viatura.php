@@ -37,4 +37,8 @@ class ordem_viatura extends Model
         return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }
 
+    function scopePeriodicReport($query, $datesInterval){
+        return $query->where('ordems.created_at','>=', $datesInterval);
+    }
+
 }
