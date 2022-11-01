@@ -6,6 +6,7 @@ use App\Models\abastecimento;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon as SupportCarbon;
 
 class Ordem extends Model
 {
@@ -18,7 +19,6 @@ class Ordem extends Model
     const TIPO_EXTRA = 'extra';
     const TIPO_ROTA = 'rota';
     const TIPO_BOMBA = 'bombas';
-
 
     public function bombas(){
         return $this->belongsTo(Bombas::class);
@@ -71,6 +71,10 @@ class Ordem extends Model
 
     function scopeSumDataBySupply($query, $date, $id){
         return $query->where('ordems.created_at', '>=',$date)->where('ordems.bombas_id',$id);
+    }
+
+    function scopePeriodicReport($query, $date){
+        return $query->where('ordems.created_at', '>=',$date);
     }
 
 }

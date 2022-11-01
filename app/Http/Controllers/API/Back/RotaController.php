@@ -20,8 +20,10 @@ use PDF;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\RotaRequest;
 use App\Http\Resources\rotaResource;
+use App\Http\Services\OrderHistoryService;
 use App\Http\Services\RotaService as ServicesRotaService;
 use App\Services\RotaService;
+use Illuminate\Http\JsonResponse;
 use InvalidArgumentException;
 
 class RotaController extends Controller
@@ -29,10 +31,12 @@ class RotaController extends Controller
     private $rota;
 
     // protected $rotaService;
+    private $OrderReport;
 
-    function __construct(Rota $rota, protected ServicesRotaService $rotaService)
+    function __construct(Rota $rota, protected ServicesRotaService $rotaService, OrderHistoryService $OrderReport)
     {
         $this->rota = $rota;
+        $this->OrderReport = $OrderReport;
 
     }
     public function index()
@@ -130,61 +134,24 @@ class RotaController extends Controller
         $from = date('2022-08-16');
         $to = date('2022-09-01');
         try {
-            $total_km = array();
-            $rota_list = array();
             $ordems = array();
 
-            $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio Semanal de Abastecimentos feitos por Rota e Projectos";
+               $this->OrderReport->getWeekOrderReport($ordems);
+                // return  view('reportMail.rotaReportOrders', compact('lista'));
 
-            $date = \Carbon\Carbon::today()->subDays(8);
-            $ordemViatura = ordem_viatura::with(['rota', 'viatura', 'ordem.bombas.combustivel'])
-            ->join('ordems', 'ordem_viaturas.ordem_id', '=', 'ordems.id')
-            ->join('bombas', 'bombas.id', '=', 'ordems.bombas_id')
-            ->join('viaturas', 'ordem_viaturas.viatura_id', '=','viaturas.id')
-            ->join('ordem_viatura_rotas', 'ordem_viatura_rotas.ordem_viatura_id', '=', 'ordem_viaturas.id')
-            ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')
-            ->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
-            // ->whereBetween('ordems.created_at', [$from, $to])
-            ->where('ordems.created_at', '>=', $date)
-            ->select('ordem_viaturas.id','ordems.codigo_ordem','ordems.created_at', 'ordems.createdBy', 'ordems.estado', 'viaturas.matricula','viaturas.capacidade_media','viaturas.tipo_combustivel as combustivel','projectos.name', 'rotas.nome_rota', 'rotas.distancia_km', 'ordem_viaturas.qtd_abastecida', 'ordem_viaturas.preco_cunsumo as preco_total', 'bombas.nome_bombas')->get();
 
-            foreach ($ordemViatura as $key => $ordVi) {
-               $rotas = OrdemViaturaRota::join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->where('ordem_viatura_rotas.ordem_viatura_id', $ordVi->id)->sum('rotas.distancia_km');
+        } catch (Exception $e) {
+            return "Something went wrong! " . $e->getMessage();
+        }
+    }
+    function enviarRelatorioMensal(){
+        $from = date('2022-08-16');
+        $to = date('2022-09-01');
+        try {
+            $ordems = array();
 
-               $ordems[$key] = [
-                'ordem_viatura_id'=>$ordVi->id,
-                'codigo'=>$ordVi->codigo_ordem,
-                'data_emissao'=>$ordVi->created_at,
-                'criado_por'=>User::where('id', $ordVi->createdBy)->first(),
-                'projecto'=>$ordVi->name,
-                'rota_nome'=>$ordVi->nome_rota,
-                'distancia'=>$ordVi->distancia_km,
-                'matricula'=>$ordVi->matricula,
-                'ltr_km'=>$ordVi->capacidade_media,
-                'combustivel'=>$ordVi->combustivel,
-                'qtd_abastecida'=>$ordVi->qtd_abastecida,
-                'preco_total'=>$ordVi->preco_total,
-                'bombas'=>$ordVi->nome_bombas,
-                'estado'=>$ordVi->estado,
-                'rota'=>$ordVi->rota,
-                'dist_per_order'=>$rotas,
-               ];
-            }
+            $this->OrderReport->CreateMonthlyOrderReport($ordems);
 
-                // return $ordems;
-                // return  view('reportMail.rotaReportOrders', compact('ordems'));
-
-            $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('ordems'))->setOptions(['defaultFont' => 'Times New Roman']);
-            Storage::put('public/pdf/relatorio_por_rota' . date('Y-m-d H:i:s') . '.pdf', $pdf->output());
-
-            Mail::send('orderMail.RelatorioPorRotaMessage', $data, function ($message) use ($data, $pdf) {
-                $message->to($data["email"])
-                    ->subject($data["title"])
-                    ->attachData($pdf->output(), 'relatorio_da_abastecimento_por_rota' . date('Y-m-d H:i:s') . '.pdf');
-            });
-            Log::info('email sent to: Users');
-            return response()->json(['message' => 'email sent to: Users successfully']);
         } catch (Exception $e) {
             return "Something went wrong! " . $e->getMessage();
         }
