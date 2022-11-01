@@ -136,7 +136,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($lista as $key => $item)
+                    @foreach ($ordem as $key => $item)
                     <tr
                     <?php if ($item['estado'] == 'Cancelada') {
                         echo "style='background:rgb(252, 189, 196);'";
