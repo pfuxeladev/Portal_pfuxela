@@ -1,12 +1,8 @@
 <?php
 
-<<<<<<< HEAD
 use App\Models\checklist_vars;
 use App\Models\motorista;
 use App\Models\projecto;
-=======
-use App\Models\motorista;
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
 use App\Models\User;
 use App\Models\Viatura;
 use Illuminate\Database\Migrations\Migration;
@@ -29,37 +25,8 @@ class CreateChecklistOut extends Migration
             $table->boolean('carta_conducao')->default(false);
             $table->bigInteger('km_inicio');
             $table->time('hr_inicio')->nullable();
-<<<<<<< HEAD
             $table->decimal('litros_tanque', 5,2);
             $table->string('estado');
-=======
-            $table->boolean('uniforme')->default(false);
-            $table->string('limpezaState');
-            $table->string('vasoEspansorState');
-            $table->string('LiquidoVidroState');
-            $table->string('OleoMotorState');
-            $table->string('OleoDirecaoState');
-            $table->string('OleoTravoesState');
-            $table->string('ACState');
-            $table->string('SistemaABS_State');
-            $table->boolean('CintoSeguracaState')->default(true);
-            $table->string('tipo_saida');
-            $table->boolean('motorista_dss')->default(false);
-            $table->boolean('lista_presenca')->default(false);
-            $table->boolean('colete_saida')->default(false);
-            $table->boolean('pneu_sobr_saida')->default(false);
-            $table->boolean('macaco_saida')->default(false);
-            $table->boolean('inspencao_saida')->default(false);
-            $table->boolean('triangulo_saida')->default(false);
-            $table->boolean('chave_roda_saida')->default(false);
-            $table->boolean('kit_reboque_saida')->default(false);
-            $table->boolean('kit_1_socorros_saida')->default(false);
-            $table->boolean('extintor_saida')->default(false);
-            $table->boolean('livrete_saida')->default(false);
-            $table->boolean('licenca_saida')->default(false);
-            $table->boolean('seguros_saida')->default(false);
-            $table->boolean('taxaradio_saida')->default(false);
->>>>>>> 6389f522f8adc3ad74827d4fe08232d8d3a2c033
             $table->foreignIdFor(User::class)->constrained()->cascadeOnUpdate();
             $table->timestamps();
         });

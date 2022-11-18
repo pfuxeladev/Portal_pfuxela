@@ -10,12 +10,9 @@ export default {
     fetchOrdemLists(ctx, { queryParams }) {
       return new Promise((resolve, reject) => {
         axios
-          .post(`/api/RelatorioBomba/${router.currentRoute.params.id}`, { params: queryParams })
+          .get(`/api/RelatorioBomba/${router.currentRoute.params.id}`, { params: queryParams })
           .then(response => resolve(response))
           .catch(error => reject(error))
-        // axios.get(`/api/RelatorioBomba/${router.currentRoute.params.id}`, { params: queryParams })
-        //   .then(response => resolve(response))
-        //   .catch(error => reject(error))
       })
     },
   },

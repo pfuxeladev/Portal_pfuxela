@@ -17,12 +17,11 @@ export default function OcorrenciasList() {
     { key: 'codigo', sortable: true },
     { key: 'Data', sortable: true },
     { key: 'Hora', sortable: true },
-    { key: 'motorista', sortable: true },
     { key: 'Desrição', sortable: true },
-    { key: 'viatura', sortable: true },
-    { key: 'motorista', sortable: true },
+    { key: 'viatura.matricula', sortable: true },
+    { key: 'motorista.person.nome_completo', sortable: true },
     { key: 'created_by.email', sortable: true },
-    { key: 'status', sortable: true },
+    { key: 'tipo_ocorrencia', sortable: true },
     { key: 'actions' },
   ]
   const perPage = ref(10)

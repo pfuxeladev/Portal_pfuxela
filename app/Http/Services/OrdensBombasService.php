@@ -18,4 +18,8 @@ class OrdensBombasService {
     function GetWeekReport($ordens){
        return $this->ordensBombas->FetchWeeklyReport($ordens);
     }
+
+    function GetMonthlyReport($ordens){
+        return $this->ordensBombas->FetchMonthlyReport($ordens);
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API\Back;
 
 use App\Http\Controllers\Controller;
 use App\Interfaces\ViaturaAlocadaInterface;
+use App\Models\CheckListOut;
 use Illuminate\Http\Request;
 use App\Models\Viatura;
 use App\Models\viatura_historico;
@@ -51,16 +52,19 @@ class ViaturaAlocadaController extends Controller
     {
         return Viatura::join('checklist_out', 'viaturas.id', 'checklist_out.viatura_id')->where('checklist_out.viatura_id', $viatura_id)->first();
     }
-
+    public function getQtdViatura($viatura_id){
+        return viatura_historico::where('viatura_id', $viatura_id)->latest()
+        ->first();
+    }
     public function store(Request $request)
     {
         $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $rotas = array();
 
-        foreach ($request->rota['id'] as $key => $rota_id) {
+        foreach ($request->rota_id as $key => $rota_id) {
             $rotas[$key] = $rota_id;
         }
-        $viatura_rota = ViaturaRota::where('viatura_id', $request->viatura_id)->whereIn('rota_id', $rotas)->where('created_at', '>=', $datetime)->first();
+        $viatura_rota = ViaturaRota::where('viatura_id', $request->viatura_id)->whereIn('rota_id', $request->rota_id)->where('created_at', '>=', $datetime)->first();
 
         if (!empty($viatura_rota)) {
 
@@ -72,6 +76,8 @@ class ViaturaAlocadaController extends Controller
 
 
         }
+        $last_checklist = CheckListOut::where('viatura_id', $request->viatura_id)->latest()
+        ->first();
 
 
         $viaturaLeitura = new viatura_historico();
@@ -88,23 +94,25 @@ class ViaturaAlocadaController extends Controller
         $viaturaLeitura->save();
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
-        $remanescente = ($viatura->qtd_disponivel - $request->qtdActual);
+
         $km_ant = $viatura->kilometragem + $request->kmPercorridos;
         $viatura->kilometragem_ant = $viatura->kilometragem;
         $viatura->kilometragem = $request->manometro_km;
-        $viatura->qtd_disponivel = $request->manometro_combustivel;
 
-        // if($remanescente < 0){
-        //     $viatura->qtd_disponivel = 0;
-        // }else{
-        //     $viatura->qtd_disponivel = ($viatura->qtd_disponivel - $request->qtdActual);
-        // }
-
+        if($request->manometro_combustivel != null || $request->manometro_combustivel > 0){
+            $viatura->qtd_disponivel = $request->manometro_combustivel;
+        }else{
+            $kmPercorridos = ($last_checklist->km_inicio - $request->manometro_km);
+            if($kmPercorridos >=0){
+                $qtd_consumida = ($viatura->capacidade_media*$kmPercorridos);
+                $remanescente = ($viatura->qtd_disponivel - $qtd_consumida);
+                $viatura->qtd_disponivel = $remanescente;
+            }
+        }
         $viatura->update();
 
-
         if ($viaturaLeitura) {
-            foreach ($request->rota['id'] as $key => $rotas) {
+            foreach ($request->rota_id as $key => $rotas) {
                 ViaturaRota::updateOrCreate([
                     'viatura_id' => $request->viatura_id, 'rota_id' => $rotas, 'createdBy' => auth()->user()->id, 'updatedBy' => auth()->user()->id, 'created_at'=>Carbon::now(),
                     'updated_at'=>Carbon::now()

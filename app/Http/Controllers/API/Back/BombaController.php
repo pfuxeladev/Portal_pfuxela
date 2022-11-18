@@ -261,6 +261,7 @@ class BombaController extends Controller
 
     public function RelatorioBomba(Request $request, $id)
     {
+        // return $request->all();
 
         if ($request->dia) {
             $bomba = Bombas::findOrFail($id);
@@ -276,13 +277,13 @@ class BombaController extends Controller
         } else if ($request->intervalo && $request->perPage) {
             $bomba = Bombas::findOrFail($id);
 
-            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->whereBetween('created_at', $request->intervalo)->orderBy('codigo_ordem', 'desc')->paginate(25);
 
             return response()->json($ordem, 200);
         } else {
             $bomba = Bombas::findOrFail($id);
 
-            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate($request->perPage);
+            $ordem = Ordem::with(['ordem_viatura.rota', 'viatura', 'abastecimento.abastecimento_extra', 'createdBy'])->where('bombas_id', $bomba->id)->orderBy('codigo_ordem', 'desc')->paginate(15);
 
             return response()->json($ordem, 200);
         }
@@ -317,5 +318,12 @@ class BombaController extends Controller
         } catch (Exception $e) {
             return response()->json(['error'=>"Something went wrong! " . $e->getMessage()], 500);
         }
+    }
+
+    function relatorioMensalBombas(){
+        $ordens = array();
+        $relatorio = $this->ordensBombas->GetMonthlyReport($ordens);
+
+        return response()->json($relatorio, 200);
     }
 }

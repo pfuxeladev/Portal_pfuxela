@@ -58,12 +58,12 @@ class OrderReportRepository implements OrderHistoryInterface
             ];
          }
         //  return $ordems;
-         $this->sendEmailOrders($ordems, $periodo);
+        return $this->sendEmailOrders($ordems, $periodo);
     }
 
     protected function sendEmailOrders($ordems, $periodo){
         $data["email"] = ['mauro@pfuxela.co.mz', 'fausia@pfuxela.co.mz', 'supportdesk@pfuxela.co.mz', 'piquete@pfuxela.co.mz', 'financas@pfuxela.co.mz', 'contabilidade@corporategifts.co.mz'];
-            $data["title"] = "Relatorio '.$periodo.' de Abastecimentos feitos por Rota e Projectos";
+            $data["title"] = "Relatorio ".$periodo." de Abastecimentos feitos por Rota e Projectos";
 
 
             $pdf = PDF::loadView('reportMail.rotaReportOrders', compact('ordems'))->setOptions(['defaultFont' => 'Times New Roman']);

@@ -23,10 +23,10 @@ export default function useBombasList() {
 
   ]
 
-  const perPage = ref(10)
+  const perPage = ref(15)
   const totalOrdens = ref(0)
   const currentPage = ref(1)
-  const perPageOptions = [10, 25, 50, 100]
+  const perPageOptions = [15, 30, 55, 100]
   const searchQuery = ref('')
   const sortBy = ref('id')
   const isSortDirDesc = ref(true)
@@ -45,7 +45,7 @@ export default function useBombasList() {
     refOrderListTable.value.refresh()
   }
 
-  watch([currentPage, perPage, searchQuery, intervalo], () => {
+  watch([currentPage, perPage, searchQuery], () => {
     refetchData()
   })
 
@@ -64,6 +64,7 @@ export default function useBombasList() {
 
         callback(ordens.data)
         totalOrdens.value = ordens.total
+        console.log(totalOrdens.value)
       })
       .catch(() => {
         toast({

@@ -268,6 +268,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -314,10 +316,12 @@ __webpack_require__.r(__webpack_exports__);
     });
     var pesquisar = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])('');
     var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
-    var rotas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
+    var rota = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
     var motoristas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
     var dadosViatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
+    var EditMode = false;
     var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(JSON.parse(JSON.stringify({
+      id: null,
       viatura_id: null,
       manometro_km: 0,
       manometro_combustivel: 0,
@@ -325,9 +329,9 @@ __webpack_require__.r(__webpack_exports__);
       qtdActual: 0,
       kmActual: 0,
       kmPercorridos: 0,
-      rota: {
-        id: ''
-      }
+      rota: [{
+        rota_id: ''
+      }]
     }))); // buscar viaturas
 
     function fetchViaturas() {
@@ -345,7 +349,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       this.$http.get('/api/todasRotas').then(function (res) {
-        _this2.rotas = res.data;
+        _this2.rota = res.data;
       })["catch"](function (err) {
         console.log(err);
       });
@@ -367,7 +371,6 @@ __webpack_require__.r(__webpack_exports__);
       //   console.log(this.form.viatura_id)
       this.$http.get("/api/getKmViatura/".concat(this.form.viatura_id)).then(function (res) {
         _this4.form.kmActual = res.data.km_inicio;
-        console.log(_this4.form.kmActual);
       });
       this.$http.get("/api/viaturas/".concat(this.form.viatura_id)).then(function (res) {
         _this4.dadosViatura = res.data;
@@ -375,8 +378,17 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function calculaKm() {
+      var _this5 = this;
+
       this.form.kmPercorridos = this.form.manometro_km - this.form.kmActual;
-      this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media);
+
+      if (this.EditMode === true) {
+        this.$http.get("/api/getQtdViatura/".concat(this.form.viatura_id)).then(function (res) {
+          _this5.form.qtdActual = res.data.qtd_prevista;
+        });
+      } else {
+        this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media);
+      }
     }
 
     function toggleModal() {
@@ -387,18 +399,19 @@ __webpack_require__.r(__webpack_exports__);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])(); // Editar a viatura alocada
 
     function EditarViatura(data) {
-      var _this5 = this;
+      var _this6 = this;
 
       this.$refs.alocateModal.show();
+      this.EditMode = true;
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/ViewAlocatedVehicle', {
         id: data.id
       }).then(function (res) {
-        _this5.form = res.data;
+        _this6.form = res.data;
       });
     }
 
     function alocarViatura() {
-      var _this6 = this;
+      var _this7 = this;
 
       _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/alocateVehicle', this.form).then(function (response) {
         toast({
@@ -410,7 +423,37 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
 
-        _this6.$refs.alocateModal.toggle();
+        _this7.$refs.alocateModal.toggle();
+      })["catch"](function (error) {
+        if (error.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            props: {
+              title: error.response.data.error,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    function atualizarViatura() {
+      var _this8 = this;
+
+      this.EditMode = true; //   console.log(this.form)
+
+      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/UpdateAlocatedVehicle', this.form).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+          props: {
+            title: response.data.message,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+
+        _this8.$refs.alocateModal.toggle();
       })["catch"](function (error) {
         if (error.response.status === 421) {
           toast({
@@ -441,7 +484,7 @@ __webpack_require__.r(__webpack_exports__);
 
     return {
       viatura: viatura,
-      rotas: rotas,
+      rota: rota,
       form: form,
       tableColumns: tableColumns,
       perPage: perPage,
@@ -465,7 +508,9 @@ __webpack_require__.r(__webpack_exports__);
       calculaKm: calculaKm,
       alocarViatura: alocarViatura,
       toggleModal: toggleModal,
-      EditarViatura: EditarViatura
+      EditarViatura: EditarViatura,
+      EditMode: EditMode,
+      atualizarViatura: atualizarViatura
     };
   },
   created: function created() {
@@ -1367,7 +1412,7 @@ var render = function () {
               on: {
                 submit: function ($event) {
                   $event.preventDefault()
-                  return _vm.alocarViatura.apply(null, arguments)
+                  _vm.EditMode ? _vm.atualizarViatura() : _vm.alocarViatura()
                 },
               },
             },
@@ -1375,6 +1420,28 @@ var render = function () {
               _c(
                 "b-form-row",
                 [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.form.id,
+                        expression: "form.id",
+                      },
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "hidden" },
+                    domProps: { value: _vm.form.id },
+                    on: {
+                      input: function ($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.form, "id", $event.target.value)
+                      },
+                    },
+                  }),
+                  _vm._v(" "),
                   _c(
                     "b-col",
                     [
@@ -1601,19 +1668,19 @@ var render = function () {
                         [
                           _c("v-select", {
                             attrs: {
-                              options: _vm.rotas,
+                              options: _vm.rota,
                               label: "nome_rota",
-                              reduce: function (rotas) {
-                                return rotas.id
+                              reduce: function (rota) {
+                                return rota.id
                               },
                               multiple: "",
                             },
                             model: {
-                              value: _vm.form.rota.id,
+                              value: _vm.form.rota_id,
                               callback: function ($$v) {
-                                _vm.$set(_vm.form.rota, "id", $$v)
+                                _vm.$set(_vm.form, "rota_id", $$v)
                               },
-                              expression: "form.rota.id",
+                              expression: "form.rota_id",
                             },
                           }),
                         ],
@@ -1652,8 +1719,33 @@ var render = function () {
                     "b-col",
                     [
                       _c(
+                        "button",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.EditMode,
+                              expression: "EditMode",
+                            },
+                          ],
+                          staticClass: "btn btn-primary",
+                          attrs: { type: "submit" },
+                        },
+                        [_vm._v("Update")]
+                      ),
+                      _vm._v(" "),
+                      _c(
                         "b-button",
                         {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: !_vm.EditMode,
+                              expression: "!EditMode",
+                            },
+                          ],
                           attrs: { type: "submit", variant: "outline-success" },
                         },
                         [
@@ -2153,6 +2245,18 @@ __webpack_require__.r(__webpack_exports__);
       var id = _ref4.id;
       return new Promise(function (resolve, reject) {
         _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturasAlocadas/".concat(id)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5, viatura) {
+      var id = _ref5.id;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), {
+          params: viatura
+        }).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

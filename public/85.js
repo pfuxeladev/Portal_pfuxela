@@ -1886,10 +1886,10 @@ function useBombasList() {
     key: 'autor',
     sortable: true
   }];
-  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(15);
   var totalOrdens = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
   var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
-  var perPageOptions = [10, 25, 50, 100];
+  var perPageOptions = [15, 30, 55, 100];
   var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
   var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
   var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
@@ -1907,7 +1907,7 @@ function useBombasList() {
     refOrderListTable.value.refresh();
   };
 
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, intervalo], function () {
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery], function () {
     refetchData();
   });
 
@@ -1923,6 +1923,7 @@ function useBombasList() {
       var ordens = response.data;
       callback(ordens.data);
       totalOrdens.value = ordens.total;
+      console.log(totalOrdens.value);
     })["catch"](function () {
       toast({
         component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
@@ -1978,15 +1979,13 @@ __webpack_require__.r(__webpack_exports__);
     fetchOrdemLists: function fetchOrdemLists(ctx, _ref) {
       var queryParams = _ref.queryParams;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/RelatorioBomba/".concat(_router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.params.id), {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/RelatorioBomba/".concat(_router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.params.id), {
           params: queryParams
         }).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
-        }); // axios.get(`/api/RelatorioBomba/${router.currentRoute.params.id}`, { params: queryParams })
-        //   .then(response => resolve(response))
-        //   .catch(error => reject(error))
+        });
       });
     }
   }
