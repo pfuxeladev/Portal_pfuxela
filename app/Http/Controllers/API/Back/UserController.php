@@ -176,10 +176,13 @@ class UserController extends Controller
      if($request->role_id !== null && $request->permissions !== ''){
         $user->assignRole($request->role_id);
         $Role = Role::where('id', $request->role_id)->first();
+        foreach($request->permissions as $key => $permission){
+            $user->givePermissionTo($permission['name']);
 
-        $user->givePermissionTo([$request->permissions]);
+           $Role->givePermissionTo($permission['name']); 
+        }
 
-           $Role->givePermissionTo([$request->permissions]);
+       
      }
      return response()->json(['success'=>'utilizador actualizado']);
 
