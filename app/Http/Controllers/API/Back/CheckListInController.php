@@ -76,7 +76,7 @@ class CheckListInController extends Controller
             $checkListIn->km_fim = $request->km_fim;
             $checkListIn->hr_fim = $request->hr_fim;
             $checkListIn->estado = 'ENTRADA';
-            $checkListIn->chefe_operacao = $request->chefe_operacao;
+            $checkListIn->chefe_operacao = auth()->user()->id;
             $checkListIn->user_id = auth()->user()->id;
 
 

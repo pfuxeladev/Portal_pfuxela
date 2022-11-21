@@ -41,6 +41,14 @@ export default
     },
   },
   {
+    path: '/Picket/Occurrences/:id/Occurrence-details',
+    name: 'Occurrence-details',
+    component: () => import('@/views/Gestao-pickete/relatorios/OcorrenciaDetails.vue'),
+    meta: {
+      authOnly: true,
+    },
+  },
+  {
     path: '/Picket/vehicle-movements',
     name: 'Vehicle-movements',
     component: () => import('@/views/Gestao-pickete/relatorios/ocorrencias.vue'),

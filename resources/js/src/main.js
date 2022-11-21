@@ -7,8 +7,9 @@ import '@fortawesome/fontawesome-free/js/all.min'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 import 'sweetalert2/dist/sweetalert2.min.css'
 import axios from 'axios'
-// import Swal from 'sweetalert2'
-// import Permissions from './@core/mixins/Permissions.vue'
+import 'vuejs-datatable/dist/themes/bootstrap-4.esm'
+import { VuejsDatatableFactory } from 'vuejs-datatable'
+
 import LaravelPermissionToVueJS from 'laravel-permission-to-vuejs'
 import i18n from '@/libs/i18n'
 import router from './router'
@@ -58,6 +59,8 @@ Vue.use(VueProgressBar, options)
 
 // Composition API
 Vue.use(VueCompositionAPI)
+
+Vue.use( VuejsDatatableFactory );
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard

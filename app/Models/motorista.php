@@ -24,4 +24,8 @@ class motorista extends Model
     function viatura_historico(){
         return $this->hasMany(viatura_historico::class);
     }
+
+    function ocorrencia(){
+        return $this->hasMany(ocorrencia::class);
+    }
 }

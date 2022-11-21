@@ -125,6 +125,7 @@ Route::group(['middleware' => 'auth:api'], function () {
     // Alocar viaturas
     Route::post('alocarViatura', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'store']);
     Route::get('getKmViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getViatura']);
+    Route::get('getQtdViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getQtdViatura']);
 
     Route::get('/getAlocateRoute/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'rotas']);
 });
@@ -149,6 +150,7 @@ Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBomb
 
 Route::get('SendWeeklyReport', [App\Http\Controllers\API\Back\OrdemController::class, 'SendWeeklyReport']);
 Route::get('RelatorioBombasSemanal', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioDiarioBombas']);
+Route::get('relatorioMensalBombas', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioMensalBombas']);
 Route::get('enviarRelatorioSemanal', [RotaController::class, 'enviarRelatorioSemanal']);
 Route::get('enviarRelatiorioMensal', [RotaController::class, 'enviarRelatorioMensal']);
 Route::get('RelatorioPorRota', [RotaController::class, 'RelatorioPorRota']);

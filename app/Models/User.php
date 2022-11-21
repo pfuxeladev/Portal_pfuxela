@@ -66,6 +66,8 @@ class User extends Authenticatable
     //       }
     //       return $permissions;
     //   }
+
+    protected $guard_name = 'api';
     protected $hidden = [
         'password',
         'remember_token',

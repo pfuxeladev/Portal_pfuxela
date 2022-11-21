@@ -93,8 +93,9 @@
         </b-card-footer>
     </b-card>
     <b-modal id="modal-lg" ref="alocateModal" size="lg" hide-footer hide-backdrop title="Alocar Viaturas para hoje">
-        <b-form @submit.prevent="alocarViatura">
+        <b-form @submit.prevent="EditMode ? atualizarViatura(): alocarViatura()">
             <b-form-row>
+                <input type="hidden" v-model="form.id" class="form-control">
                 <b-col>
                     <b-form-group label="Viatura">
                         <v-select v-model="form.viatura_id" label="matricula" :options="viatura" :reduce="viatura => viatura.id" @input="getKmActual()" />
@@ -138,7 +139,7 @@
                 </b-col>
                 <b-col>
                     <b-form-group label="rotas a percorrer">
-                        <v-select v-model="form.rota.id" :options="rotas" label="nome_rota" :reduce="rotas => rotas.id" multiple />
+                        <v-select v-model="form.rota_id" :options="rota" label="nome_rota" :reduce="rota => rota.id" multiple />
                     </b-form-group>
                 </b-col>
             </b-form-row>
@@ -147,7 +148,8 @@
                     <b-button variant="secondary" type="reset" @click="toggleModal()">cancelar</b-button>
                 </b-col>
                 <b-col>
-                    <b-button type="submit" variant="outline-success">
+                  <button v-show="EditMode" type="submit" class="btn btn-primary">Update</button>
+                    <b-button type="submit" v-show="!EditMode" variant="outline-success">
                         submeter
                     </b-button>
                 </b-col>
@@ -176,7 +178,7 @@ import {
   BDropdownItem,
 } from 'bootstrap-vue'
 import {
-  useToast
+  useToast,
 } from 'vue-toastification/composition'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import {
@@ -228,12 +230,14 @@ export default {
     })
     const pesquisar = ref('')
     const viatura = ref(null)
-    const rotas = ref(null)
+    const rota = ref(null)
     const motoristas = ref(null)
     const dadosViatura = ref(null)
+    const EditMode = false
     const form = ref(
       JSON.parse(
         JSON.stringify({
+          id: null,
           viatura_id: null,
           manometro_km: 0,
           manometro_combustivel: 0,
@@ -241,9 +245,9 @@ export default {
           qtdActual: 0,
           kmActual: 0,
           kmPercorridos: 0,
-          rota: {
-            id: '',
-          },
+          rota: [{
+            rota_id: '',
+          }],
         }),
       ),
     )
@@ -258,7 +262,7 @@ export default {
     // fetch rotas
     function fetchRotas() {
       this.$http.get('/api/todasRotas').then(res => {
-        this.rotas = res.data
+        this.rota = res.data
       }).catch(err => {
         console.log(err)
       })
@@ -276,7 +280,6 @@ export default {
       this.$http.get(`/api/getKmViatura/${this.form.viatura_id}`).then(res => {
         this.form.kmActual = res.data.km_inicio
 
-        console.log(this.form.kmActual)
       })
 
       this.$http.get(`/api/viaturas/${this.form.viatura_id}`).then(res => {
@@ -286,7 +289,13 @@ export default {
 
     function calculaKm() {
       this.form.kmPercorridos = this.form.manometro_km - this.form.kmActual
-      this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media)
+      if (this.EditMode === true) {
+        this.$http.get(`/api/getQtdViatura/${this.form.viatura_id}`).then(res => {
+          this.form.qtdActual = res.data.qtd_prevista
+        })
+      } else {
+        this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media)
+      }
     }
 
     function toggleModal() {
@@ -298,6 +307,7 @@ export default {
     // Editar a viatura alocada
     function EditarViatura(data) {
       this.$refs.alocateModal.show()
+      this.EditMode = true
       store.dispatch('Picket/ViewAlocatedVehicle', { id: data.id })
         .then(res => {
           this.form = res.data
@@ -328,6 +338,36 @@ export default {
           }
         })
     }
+    function atualizarViatura() {
+      this.EditMode = true
+      console.log(form.value.id)
+      return new Promise(() => {
+        this.$http.put(`/api/viaturasAlocadas/${form.value.id}`, form.value)
+        // store.dispatch('Picket/UpdateAlocatedVehicle', form.value)
+          .then(response => {
+            toast({
+              component: ToastificationContent,
+              props: {
+                title: response.data.message,
+                icon: 'CheckSquareIcon',
+                variant: 'success',
+              },
+            })
+            this.$refs.alocateModal.toggle()
+          }).catch(error => {
+            if (error.response.status === 421) {
+              toast({
+                component: ToastificationContent,
+                props: {
+                  title: error.response.data.error,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger',
+                },
+              })
+            }
+          })
+      })
+    }
 
     const {
       fetchViaturasAlocadas,
@@ -346,7 +386,7 @@ export default {
 
     return {
       viatura,
-      rotas,
+      rota,
       form,
       tableColumns,
       perPage,
@@ -371,6 +411,8 @@ export default {
       alocarViatura,
       toggleModal,
       EditarViatura,
+      EditMode,
+      atualizarViatura,
     }
   },
   created() {

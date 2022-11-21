@@ -1,21 +1,30 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[111],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./StoreViaturaModule */ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _storeProjectos__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./storeProjectos */ "./resources/js/src/views/Gestao-abastecimentos/projectos/storeProjectos.js");
+/* harmony import */ var _ReportProjecto__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ReportProjecto */ "./resources/js/src/views/Gestao-abastecimentos/projectos/ReportProjecto.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+
 //
 //
 //
@@ -186,66 +195,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+
+
+
 
 
 
@@ -254,50 +207,84 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
-    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardFooter"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroup"],
-    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroupItem"],
-    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardHeader"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BTable"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BBadge"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownItem"],
+    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BPagination"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BModal"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a
+  },
+  created: function created() {
+    this.moment = moment__WEBPACK_IMPORTED_MODULE_6___default.a;
   },
   setup: function setup() {
-    var viaturaData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(null);
-    var VIATURA_APP_STORE_MODULE = 'Picket'; // Register module
+    var PROJECT_APP_STORE_MODULE_NAME = 'app-projects'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(VIATURA_APP_STORE_MODULE)) _store__WEBPACK_IMPORTED_MODULE_3__["default"].registerModule(VIATURA_APP_STORE_MODULE, _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_5__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(PROJECT_APP_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(PROJECT_APP_STORE_MODULE_NAME, _storeProjectos__WEBPACK_IMPORTED_MODULE_8__["default"]);
+    } // UnRegister on leave
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(VIATURA_APP_STORE_MODULE)) _store__WEBPACK_IMPORTED_MODULE_3__["default"].unregisterModule(VIATURA_APP_STORE_MODULE);
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(PROJECT_APP_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(PROJECT_APP_STORE_MODULE_NAME);
+      }
     });
-    _store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch('Picket/fetchViatura', {
-      id: _router__WEBPACK_IMPORTED_MODULE_4__["default"].currentRoute.params.id
+    var ProjectDta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('app-projects/fetchProjectoDetails', {
+      name: _router__WEBPACK_IMPORTED_MODULE_10__["default"].currentRoute.params.name
     }).then(function (response) {
-      viaturaData.value = response.data;
+      ProjectDta.value = response.data;
     })["catch"](function (error) {
-      if (error.response.status === 421) {
-        viaturaData.value = undefined;
+      if (error.response.status === 404) {
+        ProjectDta.value = undefined;
       }
     });
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_2___default()(value).format('DD/MM/YYYY hh:mm');
+      return moment__WEBPACK_IMPORTED_MODULE_6___default()(value).format('DD/MM/YYYY hh:mm');
     }
 
+    var _useRotasList = Object(_ReportProjecto__WEBPACK_IMPORTED_MODULE_9__["default"])(),
+        tableColumns = _useRotasList.tableColumns,
+        perPage = _useRotasList.perPage,
+        currentPage = _useRotasList.currentPage,
+        totalRotas = _useRotasList.totalRotas,
+        dataMeta = _useRotasList.dataMeta,
+        perPageOptions = _useRotasList.perPageOptions,
+        searchQuery = _useRotasList.searchQuery,
+        sortBy = _useRotasList.sortBy,
+        isSortDirDesc = _useRotasList.isSortDirDesc,
+        refRotatListTable = _useRotasList.refRotatListTable,
+        refetchData = _useRotasList.refetchData,
+        fetchRotas = _useRotasList.fetchRotas;
+
     return {
-      viaturaData: viaturaData,
-      dateTime: dateTime
+      tableColumns: tableColumns,
+      perPage: perPage,
+      currentPage: currentPage,
+      totalRotas: totalRotas,
+      dataMeta: dataMeta,
+      perPageOptions: perPageOptions,
+      searchQuery: searchQuery,
+      sortBy: sortBy,
+      isSortDirDesc: isSortDirDesc,
+      refRotatListTable: refRotatListTable,
+      refetchData: refetchData,
+      ProjectDta: ProjectDta,
+      dateTime: dateTime,
+      fetchRotas: fetchRotas
     };
-  },
-  computed: {// total() {
-    //   return this.viaturaData.ordem_viatura.reduce((carry, item) => carry + Number(item.qtd_abastecida * item.ordem.bmobas.combustivel[0].preco_actual), 0)
-    // },
   }
 });
 
@@ -605,10 +592,10 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece&":
-/*!*****************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece& ***!
-  \*****************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -620,538 +607,228 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "car-details" }, [
-    _c(
-      "section",
-      { staticClass: "invoice-add-wrapper mt-3" },
-      [
-        _c(
-          "b-row",
-          { staticClass: "invoice-add" },
-          [
-            _c(
-              "b-col",
-              [
-                _c(
-                  "b-link",
-                  {
-                    staticClass: "btn btn-md btn-outline-primary",
-                    attrs: { to: { name: "Cars" } },
-                  },
-                  [_vm._v("voltar")]
-                ),
-              ],
-              1
-            ),
+  return _c(
+    "section",
+    [
+      _c(
+        "b-card",
+        { attrs: { "no-body": "" } },
+        [
+          _c("b-card-header", [
+            _c("h3", { staticClass: "card-title" }, [
+              _vm._v(_vm._s(_vm.ProjectDta.name)),
+            ]),
             _vm._v(" "),
-            _c(
-              "b-col",
-              { attrs: { cols: "12" } },
-              [
-                _c(
-                  "b-card",
-                  [
-                    _c("b-card-header", [
-                      _c("h3", { staticClass: "card-title" }, [
+            _c("br"),
+            _vm._v(" "),
+            _c("ul", { staticClass: "list-group list-group-flush" }, [
+              _c("li", { staticClass: "list-group-item active" }, [
+                _c("b", [_vm._v("Endereço")]),
+                _vm._v(
+                  ": " + _vm._s(_vm.ProjectDta.address_xtense) + "\n        "
+                ),
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-group-item" }, [
+                _c("b", [_vm._v("Email")]),
+                _vm._v(": " + _vm._s(_vm.ProjectDta.email)),
+              ]),
+            ]),
+          ]),
+          _vm._v(" "),
+          _c(
+            "b-card-body",
+            [
+              _c(
+                "b-row",
+                { staticClass: "mb-2" },
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "d-flex align-items-center justify-content-start mb-1 mb-md-0",
+                      attrs: { cols: "12", md: "4" },
+                    },
+                    [
+                      _c("label", [_vm._v("mostrar")]),
+                      _vm._v(" "),
+                      _c("v-select", {
+                        staticClass: "per-page-selector d-inline-block mx-50",
+                        attrs: {
+                          dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
+                          options: _vm.perPageOptions,
+                          clearable: false,
+                        },
+                        model: {
+                          value: _vm.perPage,
+                          callback: function ($$v) {
+                            _vm.perPage = $$v
+                          },
+                          expression: "perPage",
+                        },
+                      }),
+                      _vm._v(" "),
+                      _c("label", [_vm._v("entradas")]),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("b-col"),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    [
+                      _c(
+                        "b-form-group",
+                        {
+                          attrs: {
+                            id: "input-group-8",
+                            label: "Dados da lista abaixo:",
+                            "label-for": "input-8",
+                          },
+                        },
+                        [
+                          _c("b-form-input", {
+                            staticClass: "d-inline-block mr-1",
+                            attrs: { placeholder: "pesquisar..." },
+                            model: {
+                              value: _vm.searchQuery,
+                              callback: function ($$v) {
+                                _vm.searchQuery = $$v
+                              },
+                              expression: "searchQuery",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("b-table", {
+                ref: "refRotatListTable",
+                staticClass: "position-relative",
+                attrs: {
+                  items: _vm.fetchRotas,
+                  responsive: "",
+                  fields: _vm.tableColumns,
+                  "primary-key": "id",
+                  "sort-by": _vm.sortBy,
+                  "show-empty": "",
+                  "empty-text": "Nenhum dado encontrado",
+                  "sort-desc": _vm.isSortDirDesc,
+                  "head-variant": "light",
+                },
+                on: {
+                  "update:sortBy": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sort-by": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sortDesc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                  "update:sort-desc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "cell(Rota)",
+                    fn: function (data) {
+                      return [
                         _vm._v(
-                          "\n              Dados da viatura " +
-                            _vm._s(_vm.viaturaData.id) +
-                            "\n            "
+                          "\n          " +
+                            _vm._s(data.item.nome_rota) +
+                            "\n        "
                         ),
-                      ]),
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "b-card-body",
-                      [
+                      ]
+                    },
+                  },
+                  {
+                    key: "cell(Total(MZN))",
+                    fn: function (data) {
+                      return [
+                        _vm._v(
+                          "\n          " +
+                            _vm._s(
+                              _vm._f("toCurrency")(data.item.total_order)
+                            ) +
+                            "\n        "
+                        ),
+                      ]
+                    },
+                  },
+                  {
+                    key: "cell(Total(Ltr))",
+                    fn: function (data) {
+                      return [
+                        _vm._v(
+                          "\n          " +
+                            _vm._s(data.item.total_abastecido) +
+                            "\n        "
+                        ),
+                      ]
+                    },
+                  },
+                  {
+                    key: "cell(acções)",
+                    fn: function (row) {
+                      return [
                         _c(
-                          "b-row",
-                          { attrs: { sm: "" } },
-                          [
-                            _c(
-                              "b-col",
-                              { attrs: { cols: "2", md: "2" } },
-                              [_c("b-img")],
-                              1
+                          "b-dropdown",
+                          {
+                            attrs: {
+                              variant: "link",
+                              "no-caret": "",
+                              right: _vm.$store.state.appConfig.isRTL,
+                            },
+                            scopedSlots: _vm._u(
+                              [
+                                {
+                                  key: "button-content",
+                                  fn: function () {
+                                    return [
+                                      _c("feather-icon", {
+                                        staticClass: "align-middle text-body",
+                                        attrs: {
+                                          icon: "MoreVerticalIcon",
+                                          size: "16",
+                                        },
+                                      }),
+                                    ]
+                                  },
+                                  proxy: true,
+                                },
+                              ],
+                              null,
+                              true
                             ),
+                          },
+                          [
                             _vm._v(" "),
                             _c(
-                              "b-col",
-                              { attrs: { cols: "12", md: "12", lg: "12" } },
+                              "b-dropdown-item",
+                              { on: { click: row.toggleDetails } },
                               [
-                                _c(
-                                  "b-row",
-                                  [
-                                    _c(
-                                      "b-col",
-                                      [
-                                        _c(
-                                          "b-list-group",
-                                          [
-                                            _c("b-list-group-item", [
-                                              _c("strong", [_vm._v("Marca")]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.marca.nome
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [_vm._v("Modelo")]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.modelo
-                                                      .nome_modelo
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Descrição"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.nome_viatura
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Matricula"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.matricula
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Ano de fabrico"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.ano_fabrico
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [_vm._v("Lotação")]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.lotacao
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                          ],
-                                          1
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      [
-                                        _c(
-                                          "b-list-group",
-                                          [
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Tipo de Combustivel"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData
-                                                      .tipo_combustivel
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Kilometragem actual"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.kilometragem
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Capacidade do tanque"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData
-                                                      .capacidade_tanque
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [_vm._v("Ltr/Km")]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData
-                                                      .capacidade_media
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Qtd disponivel"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData
-                                                      .qtd_disponivel
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [_vm._v("Estado")]),
-                                              _vm._v(
-                                                ":\n                        "
-                                              ),
-                                              _vm.viaturaData.estado === 1
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c(
-                                                        "b-badge",
-                                                        {
-                                                          attrs: {
-                                                            variant: "success",
-                                                          },
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Viatura activa"
-                                                          ),
-                                                        ]
-                                                      ),
-                                                    ],
-                                                    1
-                                                  )
-                                                : _vm._e(),
-                                              _vm._v(" "),
-                                              _vm.viaturaData.estado === 0
-                                                ? _c(
-                                                    "span",
-                                                    [
-                                                      _c(
-                                                        "b-badge",
-                                                        {
-                                                          attrs: {
-                                                            variant: "danger",
-                                                          },
-                                                        },
-                                                        [
-                                                          _vm._v(
-                                                            "Viatura Inativa"
-                                                          ),
-                                                        ]
-                                                      ),
-                                                    ],
-                                                    1
-                                                  )
-                                                : _vm._e(),
-                                            ]),
-                                          ],
-                                          1
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "b-col",
-                                      [
-                                        _c(
-                                          "b-list-group",
-                                          [
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Nr do Motor"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.nr_motor
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Nr do Chassi"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.nr_chassi
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("b-list-group-item", [
-                                              _c("strong", [
-                                                _vm._v("Nr do Livrete"),
-                                              ]),
-                                              _vm._v(
-                                                ": " +
-                                                  _vm._s(
-                                                    _vm.viaturaData.nr_livrete
-                                                  ) +
-                                                  "\n                      "
-                                              ),
-                                            ]),
-                                          ],
-                                          1
-                                        ),
-                                      ],
-                                      1
-                                    ),
-                                  ],
-                                  1
-                                ),
-                                _vm._v(" "),
-                                _c("br"),
+                                _c("feather-icon", {
+                                  attrs: { icon: "FileTextIcon" },
+                                }),
                                 _vm._v(" "),
                                 _c(
-                                  "table",
-                                  {
-                                    staticClass:
-                                      "table table-light table-responsive table-bordered",
-                                  },
+                                  "span",
+                                  { staticClass: "align-middle ml-50" },
                                   [
-                                    _c(
-                                      "thead",
-                                      { staticClass: "thead-light" },
-                                      [
-                                        _c(
-                                          "tr",
-                                          { staticClass: "text-center" },
-                                          [
-                                            _c(
-                                              "th",
-                                              { attrs: { colspan: "2" } },
-                                              [
-                                                _vm._v(
-                                                  "\n                        Inspecção\n                      "
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "th",
-                                              { attrs: { colspan: "2" } },
-                                              [
-                                                _vm._v(
-                                                  "\n                        Licença\n                      "
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "th",
-                                              { attrs: { colspan: "2" } },
-                                              [
-                                                _vm._v(
-                                                  "\n                        Manifesto\n                      "
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "th",
-                                              { attrs: { colspan: "2" } },
-                                              [
-                                                _vm._v(
-                                                  "\n                        Seguros\n                      "
-                                                ),
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "th",
-                                              { attrs: { colspan: "2" } },
-                                              [
-                                                _vm._v(
-                                                  "\n                        Taxa de Radio de fusão\n                      "
-                                                ),
-                                              ]
-                                            ),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("tr", [
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Prazo")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Prazo")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Prazo")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Prazo")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Data")]),
-                                          _vm._v(" "),
-                                          _c("th", [_vm._v("Prazo")]),
-                                        ]),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "tbody",
-                                      _vm._l(
-                                        _vm.viaturaData.viatura_document,
-                                        function (docs, index) {
-                                          return _c("tr", { key: index }, [
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.data_inspencao
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.prazo_inspencao
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.data_licenca
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.prazo_licenca
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.data_manifesto
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.prazo_manifesto
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.data_seguros
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.prazo_seguros
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.data_taxa_radio
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                            _vm._v(" "),
-                                            _c("td", [
-                                              _vm._v(
-                                                _vm._s(
-                                                  _vm.dateTime(
-                                                    docs.prazo_taxa_radio
-                                                  )
-                                                )
-                                              ),
-                                            ]),
-                                          ])
-                                        }
-                                      ),
-                                      0
+                                    _vm._v(
+                                      _vm._s(
+                                        row.detailsShowing ? "Hide" : "Show"
+                                      ) + " Detalhes"
                                     ),
                                   ]
                                 ),
@@ -1161,258 +838,190 @@ var render = function () {
                           ],
                           1
                         ),
-                        _vm._v(" "),
-                        _vm.viaturaData.ordem_viatura != null
-                          ? _c(
-                              "b-row",
-                              [
-                                _c(
-                                  "b-col",
-                                  {
-                                    staticClass: "mt-2",
-                                    attrs: { cols: "12" },
-                                  },
-                                  [
-                                    _c("h3", { staticClass: "card-title" }, [
+                      ]
+                    },
+                  },
+                  {
+                    key: "row-details",
+                    fn: function (row) {
+                      return [
+                        _c("b-card", [
+                          _c("table", { staticClass: "table table-light" }, [
+                            _c("thead", { staticClass: "thead-dark" }, [
+                              _c("tr", [
+                                _c("th", [_vm._v("Codigo")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Data")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Viatura")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Qtd")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Preco")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Bombas")]),
+                                _vm._v(" "),
+                                _c("th", [_vm._v("Autor")]),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "tbody",
+                              _vm._l(
+                                row.item.ordem_viatura,
+                                function (orders, index) {
+                                  return _c("tr", { key: "O" + index }, [
+                                    _c("td", [
+                                      _vm._v(_vm._s(orders.ordem.codigo_ordem)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
                                       _vm._v(
-                                        "\n                  Historico das ordems da viatura\n                "
+                                        _vm._s(
+                                          _vm.dateTime(orders.ordem.created_at)
+                                        )
                                       ),
                                     ]),
                                     _vm._v(" "),
-                                    _c(
-                                      "table",
-                                      { staticClass: "table table-light" },
-                                      [
-                                        _c(
-                                          "thead",
-                                          { staticClass: "thead-light" },
-                                          [
-                                            _c("tr", [
-                                              _c("th", [_vm._v("Codigo")]),
-                                              _vm._v(" "),
-                                              _c("th", [_vm._v("Data")]),
-                                              _vm._v(" "),
-                                              _c("th", [
-                                                _vm._v("Qtd abastecida"),
-                                              ]),
-                                              _vm._v(" "),
-                                              _c("th", [_vm._v("Preço /ltr")]),
-                                              _vm._v(" "),
-                                              _c("th", [
-                                                _vm._v("Preço de consumo"),
-                                              ]),
-                                              _vm._v(" "),
-                                              _c("th", [_vm._v("Estado")]),
-                                              _vm._v(" "),
-                                              _c("th", [_vm._v("Bombas")]),
-                                            ]),
-                                          ]
-                                        ),
-                                        _vm._v(" "),
-                                        _c(
-                                          "tbody",
-                                          _vm._l(
-                                            _vm.viaturaData.ordem_viatura,
-                                            function (order, index) {
-                                              return _c("tr", { key: index }, [
-                                                _c("td", [
-                                                  _vm._v(
-                                                    "\n                        " +
-                                                      _vm._s(
-                                                        order.ordem.codigo_ordem
-                                                      ) +
-                                                      "\n                      "
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("td", [
-                                                  _vm._v(
-                                                    "\n                        " +
-                                                      _vm._s(
-                                                        _vm.dateTime(
-                                                          order.updated_at
-                                                        )
-                                                      ) +
-                                                      "\n                      "
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("td", [
-                                                  _vm._v(
-                                                    _vm._s(order.qtd_abastecida)
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "td",
-                                                  _vm._l(
-                                                    order.ordem.bombas
-                                                      .combustivel,
-                                                    function (combustivel) {
-                                                      return _c(
-                                                        "span",
-                                                        { key: combustivel.id },
-                                                        [
-                                                          combustivel.tipo_combustivel ===
-                                                          _vm.viaturaData
-                                                            .tipo_combustivel
-                                                            ? _c("span", [
-                                                                _vm._v(
-                                                                  "\n                            " +
-                                                                    _vm._s(
-                                                                      combustivel.preco_actual
-                                                                    ) +
-                                                                    "\n                          "
-                                                                ),
-                                                              ])
-                                                            : _vm._e(),
-                                                        ]
-                                                      )
-                                                    }
-                                                  ),
-                                                  0
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "td",
-                                                  _vm._l(
-                                                    order.ordem.bombas
-                                                      .combustivel,
-                                                    function (combustivel) {
-                                                      return _c(
-                                                        "span",
-                                                        { key: combustivel.id },
-                                                        [
-                                                          combustivel.tipo_combustivel ===
-                                                          _vm.viaturaData
-                                                            .tipo_combustivel
-                                                            ? _c("span", [
-                                                                _vm._v(
-                                                                  "\n                            " +
-                                                                    _vm._s(
-                                                                      combustivel.preco_actual *
-                                                                        order.qtd_abastecida
-                                                                    ) +
-                                                                    "\n                          "
-                                                                ),
-                                                              ])
-                                                            : _vm._e(),
-                                                        ]
-                                                      )
-                                                    }
-                                                  ),
-                                                  0
-                                                ),
-                                                _vm._v(" "),
-                                                _c("td", [
-                                                  order.ordem.approvedBy ===
-                                                  null
-                                                    ? _c(
-                                                        "span",
-                                                        [
-                                                          _c(
-                                                            "b-badge",
-                                                            {
-                                                              attrs: {
-                                                                variant:
-                                                                  "warning",
-                                                              },
-                                                            },
-                                                            [_vm._v("pendente")]
-                                                          ),
-                                                        ],
-                                                        1
-                                                      )
-                                                    : _vm._e(),
-                                                  _vm._v(" "),
-                                                  order.ordem.approvedBy !==
-                                                  null
-                                                    ? _c(
-                                                        "span",
-                                                        [
-                                                          _c(
-                                                            "b-badge",
-                                                            {
-                                                              attrs: {
-                                                                variant:
-                                                                  "success",
-                                                              },
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Autorizada"
-                                                              ),
-                                                            ]
-                                                          ),
-                                                        ],
-                                                        1
-                                                      )
-                                                    : _vm._e(),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("td", [
-                                                  _vm._v(
-                                                    "\n                        " +
-                                                      _vm._s(
-                                                        order.ordem.bombas
-                                                          .nome_bombas
-                                                      ) +
-                                                      "\n                      "
-                                                  ),
-                                                ]),
-                                              ])
-                                            }
-                                          ),
-                                          0
-                                        ),
-                                      ]
-                                    ),
-                                  ]
-                                ),
-                              ],
-                              1
-                            )
-                          : _vm._e(),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-card-footer",
-                      [
-                        _c(
-                          "b-row",
-                          [
-                            _c("b-col", [
-                              _c("b", [_vm._v("Cadastrado por")]),
-                              _vm._v(":\n                      "),
-                              _c("span", [
-                                _vm._v(
-                                  "\n                          " +
-                                    _vm._s(_vm.viaturaData.created_by.name) +
-                                    "\n                      "
-                                ),
-                              ]),
-                            ]),
-                          ],
-                          1
+                                    _c("td", [
+                                      _vm._v(_vm._s(orders.viatura.matricula)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(orders.qtd_abastecida)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(_vm._s(orders.preco_cunsumo)),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(
+                                        _vm._s(orders.ordem.bombas.nome_bombas)
+                                      ),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("td", [
+                                      _vm._v(
+                                        _vm._s(orders.ordem.approved_by.name)
+                                      ),
+                                    ]),
+                                  ])
+                                }
+                              ),
+                              0
+                            ),
+                          ]),
+                        ]),
+                      ]
+                    },
+                  },
+                ]),
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mx-2 mb-2" },
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-start\n          ",
+                      attrs: { cols: "12", sm: "8" },
+                    },
+                    [
+                      _c("span", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "mostrar " +
+                            _vm._s(_vm.dataMeta.from) +
+                            " de " +
+                            _vm._s(_vm.dataMeta.to) +
+                            " para\n            " +
+                            _vm._s(_vm.dataMeta.of) +
+                            " entradas"
                         ),
-                      ],
-                      1
-                    ),
-                  ],
-                  1
-                ),
-              ],
-              1
-            ),
-          ],
-          1
-        ),
-      ],
-      1
-    ),
-  ])
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-end\n          ",
+                      attrs: { cols: "12", sm: "4" },
+                    },
+                    [
+                      _c("b-pagination", {
+                        staticClass: "mb-0 mt-1 mt-sm-0",
+                        attrs: {
+                          "total-rows": _vm.totalRotas,
+                          "per-page": _vm.perPage,
+                          "first-number": "",
+                          "last-number": "",
+                          "prev-class": "prev-item",
+                          "next-class": "next-item",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "prev-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronLeftIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                          {
+                            key: "next-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronRightIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                        ]),
+                        model: {
+                          value: _vm.currentPage,
+                          callback: function ($$v) {
+                            _vm.currentPage = $$v
+                          },
+                          expression: "currentPage",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1421,128 +1030,128 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js":
-/*!******************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js ***!
-  \******************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/ReportProjecto.js":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/ReportProjecto.js ***!
+  \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
-/* harmony import */ var q__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! q */ "./node_modules/q/q.js");
-/* harmony import */ var q__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(q__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useRotasList; });
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+
+
+ // Notification
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  namespaced: true,
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {
-    fetchViaturas: function fetchViaturas(ctx, queryParams) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/viaturas', {
-          params: queryParams
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
+
+
+function useRotasList() {
+  //   Use toast
+  var refRotatListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(null);
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(25);
+  var totalRotas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(1);
+  var perPageOptions = [10, 25, 50, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["ref"])(true);
+  var tableColumns = [{
+    key: 'Rota',
+    sortable: true
+  }, {
+    key: 'Total(MZN)',
+    sortable: true
+  }, {
+    key: 'Total(Ltr)',
+    sortable: true
+  }, {
+    key: 'acções',
+    sortable: true
+  }];
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["computed"])(function () {
+    var localItemsCount = refRotatListTable.value ? refRotatListTable.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalRotas.value
+    };
+  });
+
+  var refetchData = function refetchData() {
+    refRotatListTable.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_1__["watch"])([currentPage, perPage, searchQuery], function () {
+    refetchData();
+  });
+
+  var fetchRotas = function fetchRotas(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('app-projects/fetchRotaProject', {
+      name: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.name,
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var projects = response.data; // console.log(projects.value)
+
+      callback(projects.data);
+      totalRotas.value = projects.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+        props: {
+          title: 'Error fetching projects list',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
       });
-    },
-    fetchViatura: function fetchViatura(ctx, _ref) {
-      var id = _ref.id;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturas/".concat(id)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addViatura: function addViatura(ctx, userData) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/viatura', {
-          user: userData
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    activateViatura: function activateViatura(ctx, _ref2) {
-      var id = _ref2.id;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activateViatura/".concat(id)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    inactivateViatura: function inactivateViatura(ctx, _ref3) {
-      var id = _ref3.id;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/DesativarViatura/".concat(id)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    alocateVehicle: function alocateVehicle(ctx, viatura) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/alocarViatura', viatura).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    alocatedVehicles: function alocatedVehicles(ctx, queryParams) {
-      // eslint-disable-next-line no-shadow
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/viaturasAlocadas', {
-          params: queryParams
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    ViewAlocatedVehicle: function ViewAlocatedVehicle(ctx, _ref4) {
-      var id = _ref4.id;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturasAlocadas/".concat(id)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    }
-  }
-});
+    });
+  };
+
+  return {
+    tableColumns: tableColumns,
+    refRotatListTable: refRotatListTable,
+    perPage: perPage,
+    currentPage: currentPage,
+    totalRotas: totalRotas,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    refetchData: refetchData,
+    fetchRotas: fetchRotas
+  };
+}
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue":
-/*!****************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue ***!
-  \****************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./viatura-details.vue?vue&type=template&id=0927fece& */ "./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece&");
-/* harmony import */ var _viatura_details_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./viatura-details.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js&");
+/* harmony import */ var _detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./detalhes.vue?vue&type=template&id=39b35b12& */ "./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12&");
+/* harmony import */ var _detalhes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./detalhes.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1552,9 +1161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _viatura_details_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _detalhes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1564,38 +1173,38 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viatura_details_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viatura-details.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_viatura_details_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_detalhes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./detalhes.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_detalhes_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12& ***!
+  \************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./viatura-details.vue?vue&type=template&id=0927fece& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/viatura-details.vue?vue&type=template&id=0927fece&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./detalhes.vue?vue&type=template&id=39b35b12& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/projectos/detalhes.vue?vue&type=template&id=39b35b12&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_viatura_details_vue_vue_type_template_id_0927fece___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_detalhes_vue_vue_type_template_id_39b35b12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
