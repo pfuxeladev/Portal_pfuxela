@@ -340,30 +340,33 @@ export default {
     }
     function atualizarViatura() {
       this.EditMode = true
-      //   console.log(this.form)
-      store.dispatch('Picket/UpdateAlocatedVehicle', this.form)
-        .then(response => {
-          toast({
-            component: ToastificationContent,
-            props: {
-              title: response.data.message,
-              icon: 'CheckSquareIcon',
-              variant: 'success',
-            },
-          })
-          this.$refs.alocateModal.toggle()
-        }).catch(error => {
-          if (error.response.status === 421) {
+      console.log(form.value.id)
+      return new Promise(() => {
+        this.$http.put(`/api/viaturasAlocadas/${form.value.id}`, form.value)
+        // store.dispatch('Picket/UpdateAlocatedVehicle', form.value)
+          .then(response => {
             toast({
               component: ToastificationContent,
               props: {
-                title: error.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                title: response.data.message,
+                icon: 'CheckSquareIcon',
+                variant: 'success',
               },
             })
-          }
-        })
+            this.$refs.alocateModal.toggle()
+          }).catch(error => {
+            if (error.response.status === 421) {
+              toast({
+                component: ToastificationContent,
+                props: {
+                  title: error.response.data.error,
+                  icon: 'AlertTriangleIcon',
+                  variant: 'danger',
+                },
+              })
+            }
+          })
+      })
     }
 
     const {

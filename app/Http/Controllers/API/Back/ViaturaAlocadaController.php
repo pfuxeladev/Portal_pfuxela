@@ -146,7 +146,7 @@ class ViaturaAlocadaController extends Controller
         $viaturaDetails = $request->all();
 
         return response()->json([
-            'data' => $this->viaturaAlocada->EditViaturaHistory($viaturaId, $viaturaDetails)
+            'data' => $this->viaturaAlocada->EditViaturaHistory($viaturaDetails, $viaturaId)
         ]);
     }
 

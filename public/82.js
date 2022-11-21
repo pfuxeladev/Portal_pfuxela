@@ -94,20 +94,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
 /* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./StoreViaturaModule */ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js");
-/* harmony import */ var _viaturaAlocada__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./viaturaAlocada */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaAlocada.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./StoreViaturaModule */ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js");
+/* harmony import */ var _viaturaAlocada__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./viaturaAlocada */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaAlocada.js");
+
 
 //
 //
@@ -284,43 +287,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'AlocarViatura',
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BForm"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRow"],
-    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BModal"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_6___default.a,
-    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BTable"],
-    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BPagination"],
-    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardFooter"],
-    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdown"],
-    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownItem"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BForm"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormRow"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BModal"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_7___default.a,
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BTable"],
+    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BPagination"],
+    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardFooter"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BDropdownItem"]
   },
   setup: function setup() {
     var PIQUETE_APP_STORE_MODULE_NAME = 'Picket'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(PIQUETE_APP_STORE_MODULE_NAME, _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_10__["default"]);
+    if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(PIQUETE_APP_STORE_MODULE_NAME, _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_11__["default"]);
     } // UnRegister on leave
 
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(PIQUETE_APP_STORE_MODULE_NAME);
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_9__["default"].unregisterModule(PIQUETE_APP_STORE_MODULE_NAME);
       }
     });
-    var pesquisar = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])('');
-    var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
-    var rota = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
-    var motoristas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
-    var dadosViatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(null);
+    var pesquisar = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])('');
+    var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
+    var rota = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
+    var motoristas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
+    var dadosViatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
     var EditMode = false;
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_4__["ref"])(JSON.parse(JSON.stringify({
+    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(JSON.parse(JSON.stringify({
       id: null,
       viatura_id: null,
       manometro_km: 0,
@@ -396,14 +399,14 @@ __webpack_require__.r(__webpack_exports__);
     } // Alocar viatura
 
 
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])(); // Editar a viatura alocada
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])(); // Editar a viatura alocada
 
     function EditarViatura(data) {
       var _this6 = this;
 
       this.$refs.alocateModal.show();
       this.EditMode = true;
-      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/ViewAlocatedVehicle', {
+      _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Picket/ViewAlocatedVehicle', {
         id: data.id
       }).then(function (res) {
         _this6.form = res.data;
@@ -413,9 +416,9 @@ __webpack_require__.r(__webpack_exports__);
     function alocarViatura() {
       var _this7 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/alocateVehicle', this.form).then(function (response) {
+      _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Picket/alocateVehicle', this.form).then(function (response) {
         toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
           props: {
             title: response.data.message,
             icon: 'CheckSquareIcon',
@@ -427,7 +430,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         if (error.response.status === 421) {
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
             props: {
               title: error.response.data.error,
               icon: 'AlertTriangleIcon',
@@ -441,34 +444,37 @@ __webpack_require__.r(__webpack_exports__);
     function atualizarViatura() {
       var _this8 = this;
 
-      this.EditMode = true; //   console.log(this.form)
-
-      _store__WEBPACK_IMPORTED_MODULE_8__["default"].dispatch('Picket/UpdateAlocatedVehicle', this.form).then(function (response) {
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-          props: {
-            title: response.data.message,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-
-        _this8.$refs.alocateModal.toggle();
-      })["catch"](function (error) {
-        if (error.response.status === 421) {
+      this.EditMode = true;
+      console.log(form.value.id);
+      return new Promise(function () {
+        _this8.$http.put("/api/viaturasAlocadas/".concat(form.value.id), form.value) // store.dispatch('Picket/UpdateAlocatedVehicle', form.value)
+        .then(function (response) {
           toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
             props: {
-              title: error.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              title: response.data.message,
+              icon: 'CheckSquareIcon',
+              variant: 'success'
             }
           });
-        }
+
+          _this8.$refs.alocateModal.toggle();
+        })["catch"](function (error) {
+          if (error.response.status === 421) {
+            toast({
+              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+              props: {
+                title: error.response.data.error,
+                icon: 'AlertTriangleIcon',
+                variant: 'danger'
+              }
+            });
+          }
+        });
       });
     }
 
-    var _viatursAlocadasList = Object(_viaturaAlocada__WEBPACK_IMPORTED_MODULE_11__["default"])(),
+    var _viatursAlocadasList = Object(_viaturaAlocada__WEBPACK_IMPORTED_MODULE_12__["default"])(),
         fetchViaturasAlocadas = _viatursAlocadasList.fetchViaturasAlocadas,
         tableColumns = _viatursAlocadasList.tableColumns,
         perPage = _viatursAlocadasList.perPage,
@@ -2251,12 +2257,11 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5, viatura) {
-      var id = _ref5.id;
+    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5) {
+      var id = _ref5.id,
+          viatura = _ref5.viatura;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), {
-          params: viatura
-        }).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), viatura).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

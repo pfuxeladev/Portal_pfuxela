@@ -5,8 +5,8 @@ interface ViaturaAlocadaInterface {
 
     public function getAllAlocated($data);
 
-    public function EditViaturaHistory($id, array $newDetails);
-    
+    public function EditViaturaHistory(array $newDetails, $id);
+
 
     public function ViewViaturaAlocada($viaturaId);
 }

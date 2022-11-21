@@ -69,9 +69,9 @@ export default {
           .catch(error => reject(error))
       })
     },
-    UpdateAlocatedVehicle(ctx, { id }, viatura) {
+    UpdateAlocatedVehicle(ctx, { id, viatura }) {
       return new Promise((resolve, reject) => {
-        axios.put(`/api/viaturasAlocadas/${id}`, { params: viatura })
+        axios.put(`/api/viaturasAlocadas/${id}`, viatura)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

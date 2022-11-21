@@ -1527,12 +1527,11 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5, viatura) {
-      var id = _ref5.id;
+    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5) {
+      var id = _ref5.id,
+          viatura = _ref5.viatura;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), {
-          params: viatura
-        }).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), viatura).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);

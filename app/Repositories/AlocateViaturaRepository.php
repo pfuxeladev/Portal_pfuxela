@@ -33,14 +33,15 @@ class AlocateViaturaRepository implements ViaturaAlocadaInterface
     }
 
 
-    function EditViaturaHistory($id, array $newDetails)
+    function EditViaturaHistory(array $newDetails, $id)
     {
+        // return $newDetails['viatura_id'];
         $viatura =  $this->viaturaHistorico->whereId($id)->first();
 
         $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $rotas = array();
 
-        foreach ($newDetails['rota']->rota_id as $key => $rota_id) {
+        foreach ($newDetails['rota_id'] as $key => $rota_id) {
             $rotas[$key] = $rota_id;
         }
         $viatura_rota = ViaturaRota::where('viatura_id', $newDetails['viatura_id'])->whereIn('rota_id', $rotas)->where('created_at', '>=', $datetime)->first();
@@ -75,7 +76,7 @@ class AlocateViaturaRepository implements ViaturaAlocadaInterface
         $viaturaUpdate->update();
 
         if ($viatura) {
-            foreach ($newDetails['rota']->rota_id as $key => $rotas) {
+            foreach ($newDetails['rota_id'] as $key => $rotas) {
                 ViaturaRota::where('viatura_id', $viatura->id)->update([
                     'viatura_id' => $newDetails['viatura_id'], 'rota_id' => $rotas, 'createdBy' => auth()->user()->id, 'updatedBy' => auth()->user()->id, 'created_at' => Carbon::now(),
                     'updated_at' => Carbon::now()
