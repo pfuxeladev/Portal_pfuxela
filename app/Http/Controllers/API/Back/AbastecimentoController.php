@@ -380,7 +380,9 @@ class AbastecimentoController extends Controller
                 return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
             } else if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)) {
                 return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
-            } else {
+            } else if($request->qtd > 15) {
+                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da 20 litros'], 421);
+            }
                 $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd);
 
                 $viatura->qtd_disponivel = $qtdAbastecer;
@@ -452,7 +454,6 @@ class AbastecimentoController extends Controller
                         });
                     }
                 }
-            }
 
             return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
         } else {

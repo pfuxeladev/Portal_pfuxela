@@ -95,21 +95,26 @@ class ViaturaAlocadaController extends Controller
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
-        $km_ant = $viatura->kilometragem + $request->kmPercorridos;
-        $viatura->kilometragem_ant = $viatura->kilometragem;
-        $viatura->kilometragem = $request->manometro_km;
+        // $km_ant = $viatura->kilometragem + $request->kmPercorridos;
+        // $viatura->kilometragem_ant = $viatura->kilometragem;
+        // $viatura->kilometragem = $request->manometro_km;
 
-        if($request->manometro_combustivel != null || $request->manometro_combustivel > 0){
-            $viatura->qtd_disponivel = $request->manometro_combustivel;
-        }else{
-            $kmPercorridos = ($last_checklist->km_inicio - $request->manometro_km);
-            if($kmPercorridos >=0){
-                $qtd_consumida = ($viatura->capacidade_media*$kmPercorridos);
-                $remanescente = ($viatura->qtd_disponivel - $qtd_consumida);
-                $viatura->qtd_disponivel = $remanescente;
-            }
-        }
-        $viatura->update();
+        // if($request->manometro_combustivel != null || $request->manometro_combustivel > 0){
+        //     $viatura->qtd_disponivel = $request->manometro_combustivel;
+        // }else{
+        //     $kmPercorridos = ($last_checklist->km_inicio - $request->manometro_km);
+        //     if($kmPercorridos >=0){
+        //         $qtd_consumida = ($viatura->capacidade_media*$kmPercorridos);
+        //         $remanescente = ($viatura->qtd_disponivel - $qtd_consumida);
+        //         if($remanescente > $viatura->capacidade_tanque){
+        //              $viatura->qtd_disponivel = 0;
+        //         }else{
+        //           $viatura->qtd_disponivel = $remanescente;  
+        //         }
+                
+        //     }
+        // }
+        // $viatura->update();
 
         if ($viaturaLeitura) {
             foreach ($request->rota_id as $key => $rotas) {
