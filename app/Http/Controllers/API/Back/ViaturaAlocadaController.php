@@ -50,7 +50,7 @@ class ViaturaAlocadaController extends Controller
 
     public function getViatura($viatura_id)
     {
-        return Viatura::join('checklist_out', 'viaturas.id', 'checklist_out.viatura_id')->where('checklist_out.viatura_id', $viatura_id)->first();
+        return Viatura::join('checklist_out', 'viaturas.id', 'checklist_out.viatura_id')->where('checklist_out.viatura_id', $viatura_id)->select('viaturas.id', 'viaturas.matricula', 'checklist_out.created_at', 'viaturas.kilometragem', 'checklist_out.km_inicio')->latest()->first();
     }
     public function getQtdViatura($viatura_id){
         return viatura_historico::where('viatura_id', $viatura_id)->latest()

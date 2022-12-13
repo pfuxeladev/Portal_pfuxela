@@ -93,3 +93,4 @@
 [09-Sep-2022 09:34:09 Africa/Maputo] PHP Fatal error:  Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes) in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Cellmap.php on line 655
 [27-Nov-2022 08:01:08 Africa/Maputo] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Frame/FrameListIterator.php on line 49
 [04-Dec-2022 08:01:10 Africa/Maputo] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/FrameDecorator/TableCell.php on line 43
+[11-Dec-2022 08:01:10 Africa/Maputo] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home2/pfuxelaco/public_html/abastecimento/vendor/dompdf/dompdf/src/Css/Style.php on line 1219
