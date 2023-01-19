@@ -95,9 +95,17 @@ class ViaturaAlocadaController extends Controller
 
         $viatura = Viatura::where('id', $request->viatura_id)->first();
 
+<<<<<<< HEAD
         // $km_ant = $viatura->kilometragem + $request->kmPercorridos;
         // $viatura->kilometragem_ant = $viatura->kilometragem;
         // $viatura->kilometragem = $request->manometro_km;
+=======
+        $km_ant = $viatura->kilometragem + $request->kmPercorridos;
+        $viatura->kilometragem_ant = $viatura->kilometragem;
+        $viatura->kilometragem = $request->manometro_km;
+        $viatura->qtd_disponivel = $request->manometro_combustivel;
+        $viatura->update();
+>>>>>>> 892c2738 (alocate)
 
         // if($request->manometro_combustivel != null || $request->manometro_combustivel > 0){
         //     $viatura->qtd_disponivel = $request->manometro_combustivel;
