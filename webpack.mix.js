@@ -74,7 +74,7 @@ mix.copy('resources/scss/loader.css', 'public/css')
    })
    mix.setResourceRoot('/public_html/abastecimento/')
  }
- 
+
 
 // ------------------------------------------------
 // If you are deploying on subdomain/subfolder then comment out below code before running 'yarn prod' or 'npm run production' command.

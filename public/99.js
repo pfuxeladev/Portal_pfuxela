@@ -633,11 +633,11 @@ var render = function () {
                                   data.item.ordem !== null
                                     ? _c("span", [
                                         _vm._v(
-                                          "\r\n                        " +
+                                          "\n                        " +
                                             _vm._s(
                                               data.item.ordem.codigo_ordem
                                             ) +
-                                            "\r\n                        "
+                                            "\n                        "
                                         ),
                                       ])
                                     : _vm._e(),
@@ -651,14 +651,14 @@ var render = function () {
                                   data.item.ordem !== null
                                     ? _c("span", [
                                         _vm._v(
-                                          "\r\n                        " +
+                                          "\n                        " +
                                             _vm._s(data.item.ordem.estado) +
-                                            "\r\n                        "
+                                            "\n                        "
                                         ),
                                       ])
                                     : _c("span", [
                                         _vm._v(
-                                          "\r\n                            -\r\n                        "
+                                          "\n                            -\n                        "
                                         ),
                                       ]),
                                 ]
@@ -669,11 +669,11 @@ var render = function () {
                               fn: function (data) {
                                 return [
                                   _vm._v(
-                                    "\r\n                        " +
+                                    "\n                        " +
                                       _vm._s(
                                         data.item.ordem.bombas.nome_bombas
                                       ) +
-                                      "\r\n                    "
+                                      "\n                    "
                                   ),
                                 ]
                               },
@@ -683,11 +683,11 @@ var render = function () {
                               fn: function (data) {
                                 return [
                                   _vm._v(
-                                    "\r\n                        " +
+                                    "\n                        " +
                                       _vm._s(
                                         _vm.dateTime(data.item.ordem.created_at)
                                       ) +
-                                      "\r\n                    "
+                                      "\n                    "
                                   ),
                                 ]
                               },
@@ -792,7 +792,7 @@ var render = function () {
                           ],
                           null,
                           false,
-                          1550105635
+                          1889232419
                         ),
                       }),
                       _vm._v(" "),
