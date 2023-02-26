@@ -3,9 +3,9 @@
     v-if="data"
     class="card-congratulation-medal"
   >
-    <h5>Congratulations 🎉 {{ data.name }}!</h5>
+    <h5>Parabens 🎉 {{ data.name }}!</h5>
     <b-card-text class="font-small-3">
-      You have won gold medal
+      Conseguiu Aceder ao Portal
     </b-card-text>
     <h3 class="mb-75 mt-2 pt-50">
       <b-link>${{ kFormatter(data.saleToday) }}</b-link>
@@ -14,7 +14,7 @@
       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
       variant="primary"
     >
-      View Sales
+      Ver Minhas Actividades
     </b-button>
     <b-img
       :src="require('@/assets/images/illustration/badge.svg')"

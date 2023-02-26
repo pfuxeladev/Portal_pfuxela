@@ -1313,12 +1313,10 @@ var render = function () {
         "b-card",
         { staticClass: "card-congratulation-medal" },
         [
-          _c("h5", [
-            _vm._v("Congratulations 🎉 " + _vm._s(_vm.data.name) + "!"),
-          ]),
+          _c("h5", [_vm._v("Parabens 🎉 " + _vm._s(_vm.data.name) + "!")]),
           _vm._v(" "),
           _c("b-card-text", { staticClass: "font-small-3" }, [
-            _vm._v("\n    You have won gold medal\n  "),
+            _vm._v("\n    Conseguiu Aceder ao Portal\n  "),
           ]),
           _vm._v(" "),
           _c(
@@ -1346,7 +1344,7 @@ var render = function () {
               ],
               attrs: { variant: "primary" },
             },
-            [_vm._v("\n    View Sales\n  ")]
+            [_vm._v("\n    Ver Minhas Actividades\n  ")]
           ),
           _vm._v(" "),
           _c("b-img", {
@@ -1388,10 +1386,10 @@ var render = function () {
         "b-card",
         { attrs: { "body-class": "pb-50" } },
         [
-          _c("h6", [_vm._v("Ordens de abastecimento")]),
+          _c("h6", [_vm._v("Abastecimento Mensal")]),
           _vm._v(" "),
           _c("h2", { staticClass: "font-weight-bolder mb-1" }, [
-            _vm._v("\n    2,76k MT\n  "),
+            _vm._v("\n    2,76000.00 MT\n  "),
           ]),
           _vm._v(" "),
           _c("vue-apex-charts", {
@@ -1497,7 +1495,7 @@ var render = function () {
                     },
                     [
                       _c("h4", { staticClass: "card-title mb-50 mb-sm-0" }, [
-                        _vm._v("\n          Revenue Report\n        "),
+                        _vm._v("\n          Relatorio das Ordens\n        "),
                       ]),
                       _vm._v(" "),
                       _c("div", { staticClass: "d-flex align-items-center" }, [
@@ -1510,7 +1508,7 @@ var render = function () {
                                 "bullet bullet-primary svg-font-small-3 mr-50 cursor-pointer",
                             }),
                             _vm._v(" "),
-                            _c("span", [_vm._v("Earning")]),
+                            _c("span", [_vm._v("Normal")]),
                           ]
                         ),
                         _vm._v(" "),
@@ -1523,7 +1521,7 @@ var render = function () {
                                 "bullet bullet-warning svg-font-small-3 mr-50 cursor-pointer",
                             }),
                             _vm._v(" "),
-                            _c("span", [_vm._v("Expense")]),
+                            _c("span", [_vm._v("Extraordinarios")]),
                           ]
                         ),
                       ]),
@@ -1571,7 +1569,7 @@ var render = function () {
                   _vm._v(" "),
                   _c("div", { staticClass: "d-flex justify-content-center" }, [
                     _c("span", { staticClass: "font-weight-bolder mr-25" }, [
-                      _vm._v("Budget:"),
+                      _vm._v("Montante:"),
                     ]),
                     _vm._v(" "),
                     _c("span", [_vm._v("56,800")]),
@@ -1601,7 +1599,7 @@ var render = function () {
                       ],
                       attrs: { variant: "primary" },
                     },
-                    [_vm._v("\n        Increase Budget\n      ")]
+                    [_vm._v("\n        Imprimir\n      ")]
                   ),
                 ],
                 1
@@ -2352,14 +2350,15 @@ __webpack_require__.r(__webpack_exports__);
 /*!*******************************************************************************!*\
   !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue ***!
   \*******************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8&");
 /* harmony import */ var _EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceRevenueReport.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -2389,7 +2388,7 @@ component.options.__file = "resources/js/src/views/dashboard/ecommerce/Ecommerce
 /*!********************************************************************************************************!*\
   !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

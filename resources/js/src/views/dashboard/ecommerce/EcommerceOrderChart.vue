@@ -3,9 +3,9 @@
     v-if="data"
     body-class="pb-50"
   >
-    <h6>Ordens de abastecimento</h6>
+    <h6>Abastecimento Mensal</h6>
     <h2 class="font-weight-bolder mb-1">
-      2,76k MT
+      2,76000.00 MT
     </h2>
     <!-- chart -->
     <vue-apex-charts

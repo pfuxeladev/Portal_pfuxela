@@ -11,16 +11,16 @@
       >
         <div class="d-sm-flex justify-content-between align-items-center mb-3">
           <h4 class="card-title mb-50 mb-sm-0">
-            Revenue Report
+            Relatorio das Ordens
           </h4>
           <div class="d-flex align-items-center">
             <div class="d-flex align-items-center mr-2">
               <span class="bullet bullet-primary svg-font-small-3 mr-50 cursor-pointer" />
-              <span>Earning</span>
+              <span>Normal</span>
             </div>
             <div class="d-flex align-items-center ml-75">
               <span class="bullet bullet-warning svg-font-small-3 mr-50 cursor-pointer" />
-              <span>Expense</span>
+              <span>Extraordinarios</span>
             </div>
           </div>
         </div>
@@ -57,7 +57,7 @@
           ${{ data.price }}
         </h2>
         <div class="d-flex justify-content-center">
-          <span class="font-weight-bolder mr-25">Budget:</span>
+          <span class="font-weight-bolder mr-25">Montante:</span>
           <span>56,800</span>
         </div>
         <vue-apex-charts
@@ -72,7 +72,7 @@
           v-ripple.400="'rgba(255, 255, 255, 0.15)'"
           variant="primary"
         >
-          Increase Budget
+          Imprimir
         </b-button>
       </b-col>
     </b-row>
