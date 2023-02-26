@@ -1,4 +1,5 @@
 import axios from '@axios'
+import { reject } from 'q'
 
 export default {
   namespaced: true,
@@ -32,14 +33,45 @@ export default {
     },
     activateViatura(ctx, { id }) {
       return new Promise((resolve, reject) => {
-        axios.get(`/api/activeVehicle/${id}`)
+        axios.get(`/api/activateViatura/${id}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
     inactivateViatura(ctx, { id }) {
       return new Promise((resolve, reject) => {
-        axios.get(`/api/deativateVehicle/${id}`)
+        axios.get(`/api/DesativarViatura/${id}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    alocateVehicle(ctx, viatura) {
+      return new Promise((resolve, reject) => {
+        axios.post('/api/alocarViatura', viatura)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    alocatedVehicles(ctx, queryParams) {
+      // eslint-disable-next-line no-shadow
+      return new Promise((resolve, reject) => {
+        axios.get('/api/viaturasAlocadas', { params: queryParams })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    ViewAlocatedVehicle(ctx, { id }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/viaturasAlocadas/${id}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    UpdateAlocatedVehicle(ctx, { id, viatura }) {
+      return new Promise((resolve, reject) => {
+        axios.put(`/api/viaturasAlocadas/${id}`, viatura)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

@@ -54,6 +54,17 @@
     <template #cell(Desrição)="data">
         {{data.item.descricao_ocorrencia}}
     </template>
+    <template #cell(actions)="data">
+        <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
+                <template #button-content>
+                    <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
+                </template>
+                <b-dropdown-item :to="{ name: 'Occurrence-details', params: { id: data.item.id } }">
+                    <feather-icon icon="FileTextIcon" />
+                    <span class="align-middle ml-50">Detalhes</span>
+                </b-dropdown-item>
+        </b-dropdown>
+    </template>
     </b-table>
     <div class="mx-2 mb-2">
       <b-row>
@@ -300,23 +311,23 @@ import {
   BForm,
   BFormGroup,
   BFormTextarea,
-} from 'bootstrap-vue';
-import { ValidationProvider, ValidationObserver } from 'vee-validate';
-import { required, alphaNum, email } from '@validations'
-import formValidation from '@core/comp-functions/forms/form-validation';
-import Ripple from 'vue-ripple-directive';
-import vSelect from 'vue-select';
-import { ref, onUnmounted } from '@vue/composition-api';
-import Form from 'vform';
-import Cleave from 'vue-cleave-component';
-import DatePicker from 'vue2-datepicker';
-import storeOcorrenciaModule from './storeOcorrenciaModules';
-import OcorrenciasList from './index';
-import 'vue2-datepicker/index.css';
-import { useToast } from 'vue-toastification/composition';
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue';
+} from "bootstrap-vue";
+import { ValidationProvider, ValidationObserver } from "vee-validate";
+import { required, alphaNum, email } from "@validations";
+import formValidation from "@core/comp-functions/forms/form-validation";
+import Ripple from "vue-ripple-directive";
+import vSelect from "vue-select";
+import { ref, onUnmounted } from "@vue/composition-api";
+import Form from "vform";
+import Cleave from "vue-cleave-component";
+import DatePicker from "vue2-datepicker";
+import storeOcorrenciaModule from "./storeOcorrenciaModules";
+import OcorrenciasList from "./index";
+import "vue2-datepicker/index.css";
+import { useToast } from "vue-toastification/composition";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
 
-import store from '@/store';
+import store from "@/store";
 
 export default {
   components: {
@@ -349,29 +360,29 @@ export default {
       email,
       viaturas: [],
       motoristas: [],
-    }
+    };
   },
   directives: {
     Ripple,
   },
   created() {
-    this.listViaturas()
-    this.listMotoristas()
+    this.listViaturas();
+    this.listMotoristas();
   },
   methods: {
     listViaturas() {
-      this.$http.get('/api/listAllViaturas').then(response => {
-        this.viaturas = response.data
-      })
+      this.$http.get("/api/listAllViaturas").then((response) => {
+        this.viaturas = response.data;
+      });
     },
     listMotoristas() {
-      this.$http.get('/api/listMotoristas').then(response => {
-        this.motoristas = response.data
-      })
+      this.$http.get("/api/listMotoristas").then((response) => {
+        this.motoristas = response.data;
+      });
     },
   },
   setup({ emit }) {
-    const PIQUECT_STORE_MODULE_NAME = 'Picket';
+    const PIQUECT_STORE_MODULE_NAME = "Picket";
     const editMode = false;
     // Register module
     if (!store.hasModule(PIQUECT_STORE_MODULE_NAME)) {
@@ -383,26 +394,26 @@ export default {
       if (store.hasModule(PIQUECT_STORE_MODULE_NAME)) {
         store.unregisterModule(PIQUECT_STORE_MODULE_NAME);
       }
-    })
+    });
 
     const statusOptions = [
       {
-        label: 'Resolvido',
-        value: 'Resolvido',
+        label: "Resolvido",
+        value: "Resolvido",
       },
       {
-        label: 'Não Resolvida',
-        value: 'Não Resolvida',
+        label: "Não Resolvida",
+        value: "Não Resolvida",
       },
-    ]
+    ];
 
     function showModal() {
       this.editMode = false;
-      this.$refs['my-modal'].show();
+      this.$refs["my-modal"].show();
     }
 
     function toggleModal() {
-      this.$refs['my-modal'].toggle('#toggle-btn');
+      this.$refs["my-modal"].toggle("#toggle-btn");
     }
 
     function onReset(e) {
@@ -415,51 +426,51 @@ export default {
       JSON.parse(
         JSON.stringify(
           new Form({
-            id: '',
-            viatura_id: '',
-            motorista_id: '',
-            descricao_ocorrencia: '',
-            hora_da_ocorrencia: '',
-            kilometragem: '',
-            tipo_ocorrencia: '',
-            periodo: '',
-            data_ocorrencia: '',
-          }),
-        ),
-      ),
-    )
+            id: "",
+            viatura_id: "",
+            motorista_id: "",
+            descricao_ocorrencia: "",
+            hora_da_ocorrencia: "",
+            kilometragem: "",
+            tipo_ocorrencia: "",
+            periodo: "",
+            data_ocorrencia: "",
+          })
+        )
+      )
+    );
 
     function onSubmit() {
       this.editMode = false;
       store
-        .dispatch('Picket/addOcorrencia', form.value)
+        .dispatch("Picket/addOcorrencia", form.value)
         .then((response) => {
-          this.$emit('refetch-data')
+          this.$emit("refetch-data");
           toast({
             component: ToastificationContent,
             props: {
               title: response.data.message,
-              icon: 'CheckSquareIcon',
-              variant: 'success',
+              icon: "CheckSquareIcon",
+              variant: "success",
             },
-          })
-          this.toggleModal()
+          });
+          this.toggleModal();
         })
-        .catch(err => {
-          console.log(err)
+        .catch((err) => {
+          console.log(err);
           if (err) {
             toast({
               component: ToastificationContent,
               props: {
                 title: err.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                icon: "AlertTriangleIcon",
+                variant: "danger",
               },
-            })
+            });
           }
-        })
+        });
     }
-    const { refFormObserver, getValidationState } = formValidation(form)
+    const { refFormObserver, getValidationState } = formValidation(form);
     const options = {
       time: {
         time: true,
@@ -509,7 +520,7 @@ export default {
       statusFilter,
       refFormObserver,
       getValidationState,
-    }
+    };
   },
 };
 </script>

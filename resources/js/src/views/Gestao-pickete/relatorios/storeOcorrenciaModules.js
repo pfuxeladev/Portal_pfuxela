@@ -28,13 +28,13 @@ export default {
           .then(response => resolve(response)).catch(error => reject(error))
       })
     },
-    // addViatura(ctx, userData) {
-    //   return new Promise((resolve, reject) => {
-    //     axios
-    //       .post('/api/viatura', { user: userData })
-    //       .then(response => resolve(response))
-    //       .catch(error => reject(error))
-    //   })
-    // },
+    OcorrenciaViaturas(ctx, queryParams) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post('/api/ocorrenciaViatura', { params: queryParams })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

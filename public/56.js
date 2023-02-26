@@ -1,21 +1,643 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[56],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _auth_utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/auth/utils */ "./resources/js/src/auth/utils.js");
+/* harmony import */ var _EcommerceMedal_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EcommerceMedal.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue");
+/* harmony import */ var _EcommerceStatistics_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EcommerceStatistics.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue");
+/* harmony import */ var _EcommerceRevenueReport_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./EcommerceRevenueReport.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue");
+/* harmony import */ var _EcommerceOrderChart_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./EcommerceOrderChart.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue");
+/* harmony import */ var _EcommerceProfitChart_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./EcommerceProfitChart.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue");
+/* harmony import */ var _EcommerceCompanyTable_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./EcommerceCompanyTable.vue */ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue");
+
+
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCol"],
+    EcommerceMedal: _EcommerceMedal_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    EcommerceStatistics: _EcommerceStatistics_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    EcommerceRevenueReport: _EcommerceRevenueReport_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    EcommerceOrderChart: _EcommerceOrderChart_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    EcommerceProfitChart: _EcommerceProfitChart_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    EcommerceCompanyTable: _EcommerceCompanyTable_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
+  },
+  data: function data() {
+    return {
+      data: {}
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    // data
+    this.$http.get('/ecommerce/data').then(function (response) {
+      _this.data = response.data; // ? Your API will return name of logged in user or you might just directly get name of logged in user
+      // ? This is just for demo purpose
+
+      var userData = Object(_auth_utils__WEBPACK_IMPORTED_MODULE_4__["getUserData"])();
+      _this.data.congratulations.name = userData[0].name.split(' ')[0] || userData[0].email;
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _FormInputGroupBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupBasic.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue");
-/* harmony import */ var _FormInputGroupMerged_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormInputGroupMerged.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue");
-/* harmony import */ var _FormInputGroupCheckboxRadio_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue");
-/* harmony import */ var _FormInputGroupSize_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormInputGroupSize.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue");
-/* harmony import */ var _FormInputGroupButton_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormInputGroupButton.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue");
-/* harmony import */ var _FormInputGroupDropdown_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
+    BAvatar: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BAvatar"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"]
+  },
+  props: {
+    tableData: {
+      type: Array,
+      "default": function _default() {
+        return [];
+      }
+    }
+  },
+  data: function data() {
+    return {
+      fields: [{
+        key: 'Cliente',
+        label: 'Cliente'
+      }, {
+        key: 'Viaturas',
+        label: 'Viaturas'
+      }, {
+        key: 'Nr_Pessoas',
+        label: 'Nr_Pessoas'
+      }, {
+        key: 'Total_pago',
+        label: 'Total_pago'
+      }, {
+        key: 'Data_reserva',
+        label: 'Data_reserva'
+      }]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"]
+  },
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  props: {
+    data: {
+      type: Object,
+      "default": function _default() {}
+    }
+  },
+  methods: {
+    kFormatter: _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__["kFormatter"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-apexcharts */ "./node_modules/vue-apexcharts/dist/vue-apexcharts.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _themeConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @themeConfig */ "./resources/js/themeConfig.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+var $barColor = '#f3f3f3';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    VueApexCharts: vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
+  props: {
+    data: {
+      type: Object,
+      "default": function _default() {}
+    }
+  },
+  data: function data() {
+    return {
+      statisticsOrder: {
+        chartOptions: {
+          chart: {
+            type: 'bar',
+            stacked: true,
+            toolbar: {
+              show: false
+            }
+          },
+          grid: {
+            show: false,
+            padding: {
+              left: 0,
+              right: 0,
+              top: -15,
+              bottom: -15
+            }
+          },
+          plotOptions: {
+            bar: {
+              horizontal: false,
+              columnWidth: '20%',
+              startingShape: 'rounded',
+              colors: {
+                backgroundBarColors: [$barColor, $barColor, $barColor, $barColor, $barColor],
+                backgroundBarRadius: 5
+              }
+            }
+          },
+          legend: {
+            show: false
+          },
+          dataLabels: {
+            enabled: false
+          },
+          colors: [_themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].warning],
+          xaxis: {
+            labels: {
+              show: false
+            },
+            axisBorder: {
+              show: false
+            },
+            axisTicks: {
+              show: false
+            }
+          },
+          yaxis: {
+            show: false
+          },
+          tooltip: {
+            x: {
+              show: false
+            }
+          }
+        }
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-apexcharts */ "./node_modules/vue-apexcharts/dist/vue-apexcharts.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _themeConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @themeConfig */ "./resources/js/themeConfig.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+var $trackBgColor = '#EBEBEB';
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    VueApexCharts: vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default.a
+  },
+  props: {
+    data: {
+      type: Object,
+      "default": function _default() {}
+    }
+  },
+  data: function data() {
+    return {
+      statisticsProfit: {
+        chartOptions: {
+          chart: {
+            type: 'line',
+            toolbar: {
+              show: false
+            },
+            zoom: {
+              enabled: false
+            }
+          },
+          grid: {
+            borderColor: $trackBgColor,
+            strokeDashArray: 5,
+            xaxis: {
+              lines: {
+                show: true
+              }
+            },
+            yaxis: {
+              lines: {
+                show: false
+              }
+            },
+            padding: {
+              top: -30,
+              bottom: -10
+            }
+          },
+          stroke: {
+            width: 3
+          },
+          colors: [_themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].info],
+          markers: {
+            size: 2,
+            colors: _themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].info,
+            strokeColors: _themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].info,
+            strokeWidth: 2,
+            strokeOpacity: 1,
+            strokeDashArray: 0,
+            fillOpacity: 1,
+            discrete: [{
+              seriesIndex: 0,
+              dataPointIndex: 5,
+              fillColor: '#ffffff',
+              strokeColor: _themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].info,
+              size: 5
+            }],
+            shape: 'circle',
+            radius: 2,
+            hover: {
+              size: 3
+            }
+          },
+          xaxis: {
+            labels: {
+              show: true,
+              style: {
+                fontSize: '0px'
+              }
+            },
+            axisBorder: {
+              show: false
+            },
+            axisTicks: {
+              show: false
+            }
+          },
+          yaxis: {
+            show: false
+          },
+          tooltip: {
+            x: {
+              show: false
+            }
+          }
+        }
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-apexcharts */ "./node_modules/vue-apexcharts/dist/vue-apexcharts.js");
+/* harmony import */ var vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_apexcharts__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _themeConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @themeConfig */ "./resources/js/themeConfig.js");
+/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -43,611 +665,310 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    VueApexCharts: vue_apexcharts__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdownItem"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"]
+  },
+  directives: {
+    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_3__["default"]
+  },
+  props: {
+    data: {
+      type: Object,
+      "default": function _default() {}
+    }
+  },
+  data: function data() {
+    return {
+      revenue_report: {},
+      revenueReport: {
+        chartOptions: {
+          chart: {
+            stacked: true,
+            type: 'bar',
+            toolbar: {
+              show: false
+            }
+          },
+          grid: {
+            padding: {
+              top: -20,
+              bottom: -10
+            },
+            yaxis: {
+              lines: {
+                show: false
+              }
+            }
+          },
+          xaxis: {
+            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+            labels: {
+              style: {
+                colors: '#6E6B7B',
+                fontSize: '0.86rem',
+                fontFamily: 'Montserrat'
+              }
+            },
+            axisTicks: {
+              show: false
+            },
+            axisBorder: {
+              show: false
+            }
+          },
+          legend: {
+            show: false
+          },
+          dataLabels: {
+            enabled: false
+          },
+          colors: [_themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].primary, _themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].warning],
+          plotOptions: {
+            bar: {
+              columnWidth: '17%',
+              endingShape: 'rounded'
+            },
+            distributed: true
+          },
+          yaxis: {
+            labels: {
+              style: {
+                colors: '#6E6B7B',
+                fontSize: '0.86rem',
+                fontFamily: 'Montserrat'
+              }
+            }
+          }
+        }
+      },
+      // budget chart
+      budgetChart: {
+        options: {
+          chart: {
+            height: 80,
+            toolbar: {
+              show: false
+            },
+            zoom: {
+              enabled: false
+            },
+            type: 'line',
+            sparkline: {
+              enabled: true
+            }
+          },
+          stroke: {
+            curve: 'smooth',
+            dashArray: [0, 5],
+            width: [2]
+          },
+          colors: [_themeConfig__WEBPACK_IMPORTED_MODULE_2__["$themeColors"].primary, '#dcdae3'],
+          tooltip: {
+            enabled: false
+          }
+        }
+      }
+    };
+  }
+});
 
+/***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    FormInputGroupBasic: _FormInputGroupBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FormInputGroupMerged: _FormInputGroupMerged_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    FormInputGroupCheckboxRadio: _FormInputGroupCheckboxRadio_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FormInputGroupSize: _FormInputGroupSize_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    FormInputGroupButton: _FormInputGroupButton_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    FormInputGroupDropdown: _FormInputGroupDropdown_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardText"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    BMedia: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BMedia"],
+    BAvatar: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BAvatar"],
+    BMediaAside: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BMediaAside"],
+    BMediaBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BMediaBody"]
   },
-  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__["togglePasswordVisibility"]],
-  data: function data() {
-    return {
-      codeBasic: _code__WEBPACK_IMPORTED_MODULE_3__["codeBasic"]
-    };
-  },
-  computed: {
-    passwordToggleIcon: function passwordToggleIcon() {
-      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon';
+  props: {
+    data: {
+      type: Array,
+      "default": function _default() {
+        return [];
+      }
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "[dir] .card-statistics .statistics-body {\n  padding: 2rem 2.4rem !important;\n}\n@media (max-width: 991.98px) {\n[dir] .card-statistics .card-header, [dir] .card-statistics .statistics-body {\n    padding: 1.5rem !important;\n}\n}\n[dir] .card-company-table thead th {\n  border: 0;\n}\n[dir] .card-company-table td {\n  padding-top: 0.75rem;\n  padding-bottom: 0.75rem;\n}\n[dir] .card-company-table td .avatar {\n  background-color: #f8f8f8;\n}\n[dir=ltr] .card-company-table td .avatar {\n  margin-right: 2rem;\n}\n[dir=rtl] .card-company-table td .avatar {\n  margin-left: 2rem;\n}\n[dir] .card-company-table td .avatar img {\n  border-radius: 0;\n}\n[dir] .card-browser-states .browser-states:first-child {\n  margin-top: 0;\n}\n[dir] .card-browser-states .browser-states:not(:first-child) {\n  margin-top: 1.7rem;\n}\n[dir] .card-transaction .transaction-item:not(:last-child) {\n  margin-bottom: 1.5rem;\n}\n[dir] .card-company-table td .b-avatar.badge-light-company {\n  background-color: #f8f8f8;\n}\n[dir=ltr] .card-company-table td .b-avatar.badge-light-company {\n  margin-right: 2rem;\n}\n[dir=rtl] .card-company-table td .b-avatar.badge-light-company {\n  margin-left: 2rem;\n}\n.apexcharts-canvas line[stroke=transparent] {\n  display: none;\n}\n[dir] .apexcharts-canvas .apexcharts-tooltip {\n  background: #fff;\n  border-color: #ebe9f1;\n}\n.apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {\n  font-weight: 600;\n}\n[dir] .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {\n  background: #fff !important;\n  border-color: #ebe9f1 !important;\n}\n.apexcharts-canvas .apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-text-label,\n.apexcharts-canvas .apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-text-value {\n  color: #fff;\n}\n[dir] .apexcharts-canvas .apexcharts-xaxistooltip, [dir] .apexcharts-canvas .apexcharts-yaxistooltip {\n  background: #f8f8f8;\n  border-color: #ebe9f1;\n}\n[dir] .apexcharts-canvas .apexcharts-xaxistooltip-bottom:before {\n  border-bottom-color: #ebe9f1;\n}\n[dir] .apexcharts-canvas .apexcharts-xaxistooltip-bottom::after {\n  border-bottom-color: #f8f8f8;\n}\n[dir] .apexcharts-canvas .apexcharts-xaxistooltip-top:before {\n  border-top-color: #ebe9f1;\n}\n[dir] .apexcharts-canvas .apexcharts-xaxistooltip-top::after {\n  border-top-color: #f8f8f8;\n}\n[dir=ltr] .apexcharts-canvas .apexcharts-yaxistooltip-left:before {\n  border-left-color: #ebe9f1;\n}\n[dir=rtl] .apexcharts-canvas .apexcharts-yaxistooltip-left:before {\n  border-right-color: #ebe9f1;\n}\n[dir=ltr] .apexcharts-canvas .apexcharts-yaxistooltip-left:after {\n  border-left-color: #f8f8f8;\n}\n[dir=rtl] .apexcharts-canvas .apexcharts-yaxistooltip-left:after {\n  border-right-color: #f8f8f8;\n}\n[dir=ltr] .apexcharts-canvas .apexcharts-yaxistooltip-right:before {\n  border-right-color: #ebe9f1;\n}\n[dir=rtl] .apexcharts-canvas .apexcharts-yaxistooltip-right:before {\n  border-left-color: #ebe9f1;\n}\n[dir=ltr] .apexcharts-canvas .apexcharts-yaxistooltip-right:after {\n  border-right-color: #f8f8f8;\n}\n[dir=rtl] .apexcharts-canvas .apexcharts-yaxistooltip-right:after {\n  border-left-color: #f8f8f8;\n}\n.apexcharts-canvas .apexcharts-text,\n.apexcharts-canvas .apexcharts-tooltip-text,\n.apexcharts-canvas .apexcharts-datalabel-label,\n.apexcharts-canvas .apexcharts-datalabel {\n  font-family: \"Montserrat\", Helvetica, Arial, serif !important;\n  fill: #6e6b7b;\n  font-weight: 400;\n  filter: none;\n}\n.apexcharts-canvas .apexcharts-pie-label {\n  fill: white;\n  filter: none;\n}\n.apexcharts-canvas .apexcharts-pie .apexcharts-pie-series .apexcharts-pie-area {\n  stroke-width: 0;\n}\n.apexcharts-canvas .apexcharts-pie .apexcharts-datalabel-label,\n.apexcharts-canvas .apexcharts-pie .apexcharts-datalabel-value {\n  font-size: 1.5rem;\n}\n[dir] .apexcharts-canvas .apexcharts-marker {\n  box-shadow: none;\n}\n[dir] .apexcharts-canvas .apexcharts-legend-series + .apexcharts-legend-series {\n  margin-top: 0.625rem;\n}\n.apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {\n  color: #6e6b7b !important;\n  font-size: 1rem !important;\n}\n[dir=ltr] .apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {\n  margin-left: 0.5rem;\n}\n[dir=rtl] .apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {\n  margin-right: 0.5rem;\n}\n.apexcharts-canvas .apexcharts-xcrosshairs,\n.apexcharts-canvas .apexcharts-ycrosshairs,\n.apexcharts-canvas .apexcharts-gridline {\n  stroke: #ebe9f1;\n}\n.apexcharts-legend.position-bottom {\n  bottom: 3rem;\n}\n.dark-layout .apexcharts-canvas .apexcharts-xaxis-tick,\n.dark-layout .apexcharts-canvas line {\n  stroke: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-heatmap .apexcharts-heatmap-rect {\n  stroke: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-radialbar .apexcharts-radialbar-track .apexcharts-radialbar-area {\n  stroke: #161d31;\n}\n.dark-layout .apexcharts-canvas .apexcharts-radar-series polygon {\n  fill: #161d31;\n  stroke: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-datalabels-group .apexcharts-datalabel-value {\n  fill: #fff;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-tooltip {\n  background: #283046;\n  border-color: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {\n  color: #fff;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-title {\n  background: #283046 !important;\n  border-color: #3b4253 !important;\n}\n.dark-layout .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-label,\n.dark-layout .apexcharts-canvas .apexcharts-tooltip .apexcharts-tooltip-text-value {\n  color: #fff;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-xaxistooltip-bottom:before {\n  border-bottom-color: #3b4253;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-xaxistooltip-bottom::after {\n  border-bottom-color: #161d31;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-xaxistooltip-top:before {\n  border-top-color: #3b4253;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-xaxistooltip-top::after {\n  border-top-color: #161d31;\n}\n[dir=ltr] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-left:before {\n  border-left-color: #3b4253;\n}\n[dir=rtl] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-left:before {\n  border-right-color: #3b4253;\n}\n[dir=ltr] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-left:after {\n  border-left-color: #161d31;\n}\n[dir=rtl] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-left:after {\n  border-right-color: #161d31;\n}\n[dir=ltr] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-right:before {\n  border-right-color: #3b4253;\n}\n[dir=rtl] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-right:before {\n  border-left-color: #3b4253;\n}\n[dir=ltr] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-right:after {\n  border-right-color: #161d31;\n}\n[dir=rtl] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip-right:after {\n  border-left-color: #161d31;\n}\n[dir] .dark-layout .apexcharts-canvas .apexcharts-xaxistooltip, [dir] .dark-layout .apexcharts-canvas .apexcharts-yaxistooltip {\n  background: #161d31;\n  border-color: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-xaxistooltip .apexcharts-xaxistooltip-text,\n.dark-layout .apexcharts-canvas .apexcharts-xaxistooltip .apexcharts-yaxistooltip-text,\n.dark-layout .apexcharts-canvas .apexcharts-yaxistooltip .apexcharts-xaxistooltip-text,\n.dark-layout .apexcharts-canvas .apexcharts-yaxistooltip .apexcharts-yaxistooltip-text {\n  color: #fff;\n}\n.dark-layout .apexcharts-canvas .apexcharts-xaxistooltip .apexcharts-xaxistooltip-text {\n  color: #fff;\n}\n.dark-layout .apexcharts-canvas .apexcharts-yaxis-label,\n.dark-layout .apexcharts-canvas .apexcharts-xaxis-label,\n.dark-layout .apexcharts-canvas .apexcharts-tooltip-text,\n.dark-layout .apexcharts-canvas .apexcharts-datalabel-label {\n  fill: #b4b7bd;\n}\n.dark-layout .apexcharts-canvas .apexcharts-marker {\n  stroke: #3b4253;\n}\n.dark-layout .apexcharts-canvas .apexcharts-legend-series .apexcharts-legend-text {\n  color: #b4b7bd !important;\n}\n.dark-layout .apexcharts-canvas .apexcharts-xcrosshairs,\n.dark-layout .apexcharts-canvas .apexcharts-ycrosshairs,\n.dark-layout .apexcharts-canvas .apexcharts-gridline {\n  stroke: #3b4253;\n}", ""]);
+// Exports
+module.exports = exports;
 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"]
-  },
-  data: function data() {
-    return {
-      codeButton: _code__WEBPACK_IMPORTED_MODULE_2__["codeButton"]
-    };
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "[dir] .dark-layout .card-company-table[data-v-25880326]  td .b-avatar.badge-light-company {\n  background: #161d31 !important;\n}", ""]);
+// Exports
+module.exports = exports;
 
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BFormRadio: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadio"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"]
-  },
-  data: function data() {
-    return {
-      codeCheckboxRadio: _code__WEBPACK_IMPORTED_MODULE_2__["codeCheckboxRadio"],
-      radio1: 'radio2'
-    };
-  }
-});
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Ecommerce.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"],
-    BDropdownDivider: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownDivider"],
-    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdown"],
-    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BDropdownItem"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
-  },
-  data: function data() {
-    return {
-      codeDropdown: _code__WEBPACK_IMPORTED_MODULE_2__["codeDropdown"]
-    };
-  }
-});
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/mixins/ui/forms */ "./resources/js/src/@core/mixins/ui/forms.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
 
 
 
+var options = {"hmr":true}
 
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroupPrepend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupPrepend"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"]
-  },
-  mixins: [_core_mixins_ui_forms__WEBPACK_IMPORTED_MODULE_2__["togglePasswordVisibility"]],
-  data: function data() {
-    return {
-      codeMerged: _code__WEBPACK_IMPORTED_MODULE_3__["codeMerged"]
-    };
-  },
-  computed: {
-    passwordToggleIcon: function passwordToggleIcon() {
-      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon';
-    }
-  }
-});
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-input-group/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"]
-  },
-  data: function data() {
-    return {
-      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&":
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603& ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -660,238 +981,73 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-row",
-    { staticClass: "match-height" },
-    [
-      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-basic")], 1),
-      _vm._v(" "),
-      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-merged")], 1),
-      _vm._v(" "),
-      _c("b-col", { attrs: { md: "6" } }, [_c("form-input-group-size")], 1),
-      _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { md: "6" } },
-        [_c("form-input-group-checkbox-radio")],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { cols: "12" } },
-        [_c("form-input-group-button")],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-col",
-        { attrs: { cols: "12" } },
-        [_c("form-input-group-dropdown")],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&":
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Basic" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeBasic) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "section",
+    { attrs: { id: "dashboard-ecommerce" } },
     [
       _c(
-        "div",
-        { staticClass: "demo-vertical-spacing" },
+        "b-row",
+        { staticClass: "match-height" },
         [
           _c(
-            "b-input-group",
+            "b-col",
+            { attrs: { xl: "4", md: "6" } },
             [
-              _c(
-                "b-input-group-prepend",
-                { attrs: { "is-text": "" } },
-                [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
-                1
-              ),
-              _vm._v(" "),
-              _c("b-form-input", { attrs: { placeholder: "Search" } }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            [
-              _c("label", { attrs: { for: "basic-password" } }, [
-                _vm._v("Password"),
-              ]),
-              _vm._v(" "),
-              _c(
-                "b-input-group",
-                [
-                  _c("b-form-input", {
-                    attrs: {
-                      id: "basic-password",
-                      type: _vm.passwordFieldType,
-                      placeholder: "Your Password",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "b-input-group-append",
-                    { attrs: { "is-text": "" } },
-                    [
-                      _c("feather-icon", {
-                        staticClass: "cursor-pointer",
-                        attrs: { icon: _vm.passwordToggleIcon },
-                        on: { click: _vm.togglePasswordVisibility },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { attrs: { prepend: "@" } },
-            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { attrs: { append: "@example.com" } },
-            [
-              _c("b-form-input", {
-                attrs: { placeholder: "Recipient's username" },
+              _c("ecommerce-medal", {
+                attrs: { data: _vm.data.congratulations },
               }),
             ],
             1
           ),
           _vm._v(" "),
           _c(
-            "b-input-group",
-            { attrs: { prepend: "https://example.com/users/" } },
-            [_c("b-form-input")],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { attrs: { prepend: "$", append: ".00" } },
-            [_c("b-form-input", { attrs: { placeholder: "100" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { attrs: { prepend: "With textarea" } },
-            [_c("b-form-textarea")],
+            "b-col",
+            { attrs: { xl: "8", md: "6" } },
+            [
+              _c("ecommerce-statistics", {
+                attrs: { data: _vm.data.statisticsItems },
+              }),
+            ],
             1
           ),
         ],
         1
       ),
-    ]
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Input Groups with Buttons" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeButton) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
+      _vm._v(" "),
       _c(
         "b-row",
+        { staticClass: "match-height" },
         [
           _c(
             "b-col",
-            { staticClass: "mb-1", attrs: { lg: "6" } },
+            { attrs: { lg: "4" } },
             [
               _c(
-                "b-input-group",
+                "b-row",
+                { staticClass: "match-height" },
                 [
-                  _c("b-form-input", {
-                    attrs: { placeholder: "Button on right" },
-                  }),
-                  _vm._v(" "),
                   _c(
-                    "b-input-group-append",
+                    "b-col",
+                    { attrs: { lg: "6", md: "3", cols: "6" } },
                     [
-                      _c(
-                        "b-button",
-                        { attrs: { variant: "outline-primary" } },
-                        [_vm._v("\n            GO\n          ")]
-                      ),
+                      _c("ecommerce-order-chart", {
+                        attrs: { data: _vm.data.statisticsOrder },
+                      }),
                     ],
                     1
                   ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    { attrs: { lg: "6", md: "3", cols: "6" } },
+                    [
+                      _c("ecommerce-profit-chart", {
+                        attrs: { data: _vm.data.statisticsProfit },
+                      }),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("b-col", { attrs: { lg: "12", md: "6" } }),
                 ],
                 1
               ),
@@ -901,42 +1057,29 @@ var render = function () {
           _vm._v(" "),
           _c(
             "b-col",
-            { attrs: { lg: "6" } },
+            { attrs: { lg: "8" } },
             [
-              _c(
-                "b-input-group",
-                [
-                  _c(
-                    "b-input-group-prepend",
-                    [
-                      _c(
-                        "b-button",
-                        { attrs: { variant: "outline-primary" } },
-                        [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("b-form-input", {
-                    attrs: { placeholder: "Button on both side" },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "b-input-group-append",
-                    [
-                      _c(
-                        "b-button",
-                        { attrs: { variant: "outline-primary" } },
-                        [_vm._v("\n            Search !\n          ")]
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
+              _c("ecommerce-revenue-report", {
+                attrs: { data: _vm.data.revenue },
+              }),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-row",
+        { staticClass: "match-height" },
+        [
+          _c(
+            "b-col",
+            { attrs: { lg: "12" } },
+            [
+              _c("ecommerce-company-table", {
+                attrs: { "table-data": _vm.data.companyTable },
+              }),
             ],
             1
           ),
@@ -954,10 +1097,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&":
-/*!*****************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -969,448 +1112,496 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Checkbox and radio addons" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeCheckboxRadio) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c(
-        "b-row",
+  return _vm.tableData
+    ? _c(
+        "b-card",
+        { staticClass: "card-company-table", attrs: { "no-body": "" } },
         [
-          _c(
-            "b-col",
-            { attrs: { md: "6" } },
-            [
-              _c(
-                "b-form-group",
-                [
-                  _c(
-                    "b-input-group",
-                    [
-                      _c(
-                        "b-input-group-prepend",
-                        { attrs: { "is-text": "" } },
-                        [
-                          _c("b-form-checkbox", {
-                            attrs: { plain: "", name: "checkbox-input" },
-                          }),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+          _c("b-card-title", { staticClass: "pl-3 mt-2" }, [
+            _vm._v("Lista das reservas recém feitas"),
+          ]),
           _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6" } },
-            [
-              _c(
-                "b-form-group",
-                [
-                  _c(
-                    "b-input-group",
-                    [
+          _c("b-table", {
+            staticClass: "mb-0",
+            attrs: { items: _vm.tableData, responsive: "", fields: _vm.fields },
+            scopedSlots: _vm._u(
+              [
+                {
+                  key: "cell(company)",
+                  fn: function (data) {
+                    return [
                       _c(
-                        "b-input-group-prepend",
-                        { attrs: { "is-text": "" } },
+                        "div",
+                        { staticClass: "d-flex align-items-center" },
                         [
-                          _c("b-form-radio", {
-                            attrs: {
-                              value: "radio2",
-                              plain: "",
-                              name: "radio-input1",
-                            },
-                            model: {
-                              value: _vm.radio1,
-                              callback: function ($$v) {
-                                _vm.radio1 = $$v
+                          _c(
+                            "b-avatar",
+                            {
+                              attrs: {
+                                rounded: "",
+                                size: "32",
+                                variant: "light-company",
                               },
-                              expression: "radio1",
+                            },
+                            [
+                              _c("b-img", {
+                                attrs: {
+                                  src: data.item.avatarImg,
+                                  alt: "avatar img",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c("div", { staticClass: "font-weight-bolder" }, [
+                              _vm._v(
+                                "\n            " +
+                                  _vm._s(data.item.title) +
+                                  "\n          "
+                              ),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "font-small-2 text-muted" },
+                              [
+                                _vm._v(
+                                  "\n            " +
+                                    _vm._s(data.item.subtitle) +
+                                    "\n          "
+                                ),
+                              ]
+                            ),
+                          ]),
+                        ],
+                        1
+                      ),
+                    ]
+                  },
+                },
+                {
+                  key: "cell(category)",
+                  fn: function (data) {
+                    return [
+                      _c(
+                        "div",
+                        { staticClass: "d-flex align-items-center" },
+                        [
+                          _c(
+                            "b-avatar",
+                            {
+                              staticClass: "mr-1",
+                              attrs: { variant: data.item.avatarColor },
+                            },
+                            [
+                              _c("feather-icon", {
+                                attrs: {
+                                  size: "18",
+                                  icon: data.item.avatarIcon,
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("span", [_vm._v(_vm._s(data.item.avatarTitle))]),
+                        ],
+                        1
+                      ),
+                    ]
+                  },
+                },
+                {
+                  key: "cell(views)",
+                  fn: function (data) {
+                    return [
+                      _c("div", { staticClass: "d-flex flex-column" }, [
+                        _c(
+                          "span",
+                          { staticClass: "font-weight-bolder mb-25" },
+                          [_vm._v(_vm._s(data.item.viewTitle))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            staticClass: "font-small-2 text-muted text-nowrap",
+                          },
+                          [_vm._v(_vm._s(data.item.viewsub))]
+                        ),
+                      ]),
+                    ]
+                  },
+                },
+                {
+                  key: "cell(revenue)",
+                  fn: function (data) {
+                    return [
+                      _vm._v(
+                        "\n      " + _vm._s("$" + data.item.revenue) + "\n    "
+                      ),
+                    ]
+                  },
+                },
+                {
+                  key: "cell(sales)",
+                  fn: function (data) {
+                    return [
+                      _c(
+                        "div",
+                        { staticClass: "d-flex align-items-center" },
+                        [
+                          _c(
+                            "span",
+                            { staticClass: "font-weight-bolder mr-1" },
+                            [_vm._v(_vm._s(data.item.sales + "%"))]
+                          ),
+                          _vm._v(" "),
+                          _c("feather-icon", {
+                            class: data.item.loss
+                              ? "text-danger"
+                              : "text-success",
+                            attrs: {
+                              icon: data.item.loss
+                                ? "TrendingDownIcon"
+                                : "TrendingUpIcon",
                             },
                           }),
                         ],
                         1
                       ),
-                      _vm._v(" "),
-                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
+                    ]
+                  },
+                },
+              ],
+              null,
+              false,
+              3310440312
+            ),
+          }),
+        ],
+        1
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.data
+    ? _c(
+        "b-card",
+        { staticClass: "card-congratulation-medal" },
+        [
+          _c("h5", [
+            _vm._v("Congratulations 🎉 " + _vm._s(_vm.data.name) + "!"),
+          ]),
           _vm._v(" "),
-          _c("b-col", { staticClass: " my-1", attrs: { cols: "12" } }, [
-            _c("small", { staticClass: "font-weight-semibold" }, [
-              _vm._v("Custom checkbox and radio"),
-            ]),
+          _c("b-card-text", { staticClass: "font-small-3" }, [
+            _vm._v("\n    You have won gold medal\n  "),
           ]),
           _vm._v(" "),
           _c(
-            "b-col",
-            { attrs: { md: "6" } },
+            "h3",
+            { staticClass: "mb-75 mt-2 pt-50" },
             [
-              _c(
-                "b-form-group",
-                [
-                  _c(
-                    "b-input-group",
-                    [
-                      _c(
-                        "b-input-group-prepend",
-                        { attrs: { "is-text": "" } },
-                        [
-                          _c("b-form-checkbox", {
-                            attrs: { name: "checkbox-input" },
-                          }),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { md: "6" } },
-            [
-              _c(
-                "b-form-group",
-                [
-                  _c(
-                    "b-input-group",
-                    [
-                      _c(
-                        "b-input-group-prepend",
-                        { attrs: { "is-text": "" } },
-                        [
-                          _c("b-form-radio", {
-                            attrs: { value: "radio2", name: "radio-input1" },
-                            model: {
-                              value: _vm.radio1,
-                              callback: function ($$v) {
-                                _vm.radio1 = $$v
-                              },
-                              expression: "radio1",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("b-form-input", { attrs: { placeholder: "Message" } }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Input Groups With Dropdown" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDropdown) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c(
-        "b-row",
-        [
-          _c(
-            "b-col",
-            { staticClass: "mb-1", attrs: { lg: "6" } },
-            [
-              _c(
-                "b-input-group",
-                [
-                  _c(
-                    "b-input-group-prepend",
-                    [
-                      _c(
-                        "b-dropdown",
-                        {
-                          attrs: { text: "Action", variant: "outline-primary" },
-                        },
-                        [
-                          _c("b-dropdown-item", [_vm._v("Action ")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Another Action")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [
-                            _vm._v("Something else here"),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-dropdown-divider"),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Separated link")]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("b-form-input", {
-                    attrs: { placeholder: "Dropdown on left" },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { lg: "6" } },
-            [
-              _c(
-                "b-input-group",
-                [
-                  _c(
-                    "b-input-group-prepend",
-                    [
-                      _c(
-                        "b-dropdown",
-                        {
-                          attrs: { variant: "outline-primary" },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "button-content",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    attrs: { icon: "Edit2Icon" },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ]),
-                        },
-                        [
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Action ")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Another Action")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [
-                            _vm._v("Something else here"),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-dropdown-divider"),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Separated link")]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("b-form-input", {
-                    attrs: { placeholder: "Dropdown on both side" },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "b-input-group-append",
-                    [
-                      _c(
-                        "b-dropdown",
-                        {
-                          attrs: {
-                            text: "Action",
-                            variant: "outline-primary",
-                            right: "",
-                          },
-                        },
-                        [
-                          _c("b-dropdown-item", [_vm._v("Action ")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Another Action")]),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [
-                            _vm._v("Something else here"),
-                          ]),
-                          _vm._v(" "),
-                          _c("b-dropdown-divider"),
-                          _vm._v(" "),
-                          _c("b-dropdown-item", [_vm._v("Separated link")]),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Merged" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeMerged) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c(
-        "div",
-        { staticClass: "demo-vertical-spacing" },
-        [
-          _c(
-            "b-input-group",
-            { staticClass: "input-group-merge" },
-            [
-              _c(
-                "b-input-group-prepend",
-                { attrs: { "is-text": "" } },
-                [_c("feather-icon", { attrs: { icon: "SearchIcon" } })],
-                1
-              ),
-              _vm._v(" "),
-              _c("b-form-input", { attrs: { placeholder: "Search" } }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            [
-              _c("label", { attrs: { for: "basic-password1" } }, [
-                _vm._v("Password"),
+              _c("b-link", [
+                _vm._v("$" + _vm._s(_vm.kFormatter(_vm.data.saleToday))),
               ]),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-button",
+            {
+              directives: [
+                {
+                  name: "ripple",
+                  rawName: "v-ripple.400",
+                  value: "rgba(255, 255, 255, 0.15)",
+                  expression: "'rgba(255, 255, 255, 0.15)'",
+                  modifiers: { 400: true },
+                },
+              ],
+              attrs: { variant: "primary" },
+            },
+            [_vm._v("\n    View Sales\n  ")]
+          ),
+          _vm._v(" "),
+          _c("b-img", {
+            staticClass: "congratulation-medal",
+            attrs: {
+              src: __webpack_require__(/*! @/assets/images/illustration/badge.svg */ "./resources/js/src/assets/images/illustration/badge.svg"),
+              alt: "Medal Pic",
+            },
+          }),
+        ],
+        1
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.data
+    ? _c(
+        "b-card",
+        { attrs: { "body-class": "pb-50" } },
+        [
+          _c("h6", [_vm._v("Ordens de abastecimento")]),
+          _vm._v(" "),
+          _c("h2", { staticClass: "font-weight-bolder mb-1" }, [
+            _vm._v("\n    2,76k MT\n  "),
+          ]),
+          _vm._v(" "),
+          _c("vue-apex-charts", {
+            attrs: {
+              height: "70",
+              options: _vm.statisticsOrder.chartOptions,
+              series: _vm.data.series,
+            },
+          }),
+        ],
+        1
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.data
+    ? _c(
+        "b-card",
+        {
+          staticClass: "card-tiny-line-stats",
+          attrs: { "body-class": "pb-50" },
+        },
+        [
+          _c("h6", [_vm._v("Requisições")]),
+          _vm._v(" "),
+          _c("h2", { staticClass: "font-weight-bolder mb-1" }, [
+            _vm._v("\n    6,24k\n  "),
+          ]),
+          _vm._v(" "),
+          _c("vue-apex-charts", {
+            attrs: {
+              height: "70",
+              options: _vm.statisticsProfit.chartOptions,
+              series: _vm.data.series,
+            },
+          }),
+        ],
+        1
+      )
+    : _vm._e()
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm.data
+    ? _c(
+        "b-card",
+        { staticClass: "card-revenue-budget", attrs: { "no-body": "" } },
+        [
+          _c(
+            "b-row",
+            { staticClass: "mx-0" },
+            [
+              _c(
+                "b-col",
+                { staticClass: "revenue-report-wrapper", attrs: { md: "8" } },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "d-sm-flex justify-content-between align-items-center mb-3",
+                    },
+                    [
+                      _c("h4", { staticClass: "card-title mb-50 mb-sm-0" }, [
+                        _vm._v("\n          Revenue Report\n        "),
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "d-flex align-items-center" }, [
+                        _c(
+                          "div",
+                          { staticClass: "d-flex align-items-center mr-2" },
+                          [
+                            _c("span", {
+                              staticClass:
+                                "bullet bullet-primary svg-font-small-3 mr-50 cursor-pointer",
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("Earning")]),
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          { staticClass: "d-flex align-items-center ml-75" },
+                          [
+                            _c("span", {
+                              staticClass:
+                                "bullet bullet-warning svg-font-small-3 mr-50 cursor-pointer",
+                            }),
+                            _vm._v(" "),
+                            _c("span", [_vm._v("Expense")]),
+                          ]
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("vue-apex-charts", {
+                    attrs: {
+                      id: "revenue-report-chart",
+                      type: "bar",
+                      height: "230",
+                      options: _vm.revenueReport.chartOptions,
+                      series: _vm.data.revenueReport.series,
+                    },
+                  }),
+                ],
+                1
+              ),
               _vm._v(" "),
               _c(
-                "b-input-group",
-                { staticClass: "input-group-merge" },
+                "b-col",
+                { staticClass: "budget-wrapper", attrs: { md: "4" } },
                 [
-                  _c("b-form-input", {
+                  _c(
+                    "b-dropdown",
+                    {
+                      staticClass: "budget-dropdown",
+                      attrs: {
+                        text: "2020",
+                        size: "sm",
+                        variant: "outline-primary",
+                      },
+                    },
+                    _vm._l(_vm.data.years, function (year) {
+                      return _c("b-dropdown-item", { key: year }, [
+                        _vm._v("\n          " + _vm._s(year) + "\n        "),
+                      ])
+                    }),
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("h2", { staticClass: "mb-25" }, [
+                    _vm._v("\n        $" + _vm._s(_vm.data.price) + "\n      "),
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "d-flex justify-content-center" }, [
+                    _c("span", { staticClass: "font-weight-bolder mr-25" }, [
+                      _vm._v("Budget:"),
+                    ]),
+                    _vm._v(" "),
+                    _c("span", [_vm._v("56,800")]),
+                  ]),
+                  _vm._v(" "),
+                  _c("vue-apex-charts", {
                     attrs: {
-                      id: "basic-password1",
-                      type: _vm.passwordFieldType,
-                      placeholder: "Your Password",
+                      id: "budget-chart",
+                      type: "line",
+                      height: "80",
+                      options: _vm.budgetChart.options,
+                      series: _vm.data.budgetChart.series,
                     },
                   }),
                   _vm._v(" "),
                   _c(
-                    "b-input-group-append",
-                    { attrs: { "is-text": "" } },
-                    [
-                      _c("feather-icon", {
-                        staticClass: "cursor-pointer",
-                        attrs: { icon: _vm.passwordToggleIcon },
-                        on: { click: _vm.togglePasswordVisibility },
-                      }),
-                    ],
-                    1
+                    "b-button",
+                    {
+                      directives: [
+                        {
+                          name: "ripple",
+                          rawName: "v-ripple.400",
+                          value: "rgba(255, 255, 255, 0.15)",
+                          expression: "'rgba(255, 255, 255, 0.15)'",
+                          modifiers: { 400: true },
+                        },
+                      ],
+                      attrs: { variant: "primary" },
+                    },
+                    [_vm._v("\n        Increase Budget\n      ")]
                   ),
                 ],
                 1
@@ -1418,62 +1609,10 @@ var render = function () {
             ],
             1
           ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { staticClass: "input-group-merge", attrs: { prepend: "@" } },
-            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            {
-              staticClass: "input-group-merge",
-              attrs: { append: "@example.com" },
-            },
-            [
-              _c("b-form-input", {
-                attrs: { placeholder: "Recipient's username" },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            {
-              staticClass: "input-group-merge",
-              attrs: { prepend: "https://example.com/users/" },
-            },
-            [_c("b-form-input")],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            {
-              staticClass: "input-group-merge",
-              attrs: { prepend: "$", append: ".00" },
-            },
-            [_c("b-form-input", { attrs: { placeholder: "100" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            {
-              staticClass: "input-group-merge",
-              attrs: { prepend: "With textarea" },
-            },
-            [_c("b-form-textarea")],
-            1
-          ),
         ],
         1
-      ),
-    ]
-  )
+      )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1482,10 +1621,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424& ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1497,50 +1636,106 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Sizing" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c(
-        "div",
-        { staticClass: "demo-vertical-spacing" },
+  return _vm.data
+    ? _c(
+        "b-card",
+        { staticClass: "card-statistics", attrs: { "no-body": "" } },
         [
           _c(
-            "b-input-group",
-            { attrs: { prepend: "@", size: "lg" } },
-            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            "b-card-header",
+            [
+              _c("b-card-title", [_vm._v("Estatísticas")]),
+              _vm._v(" "),
+              _c("b-card-text", { staticClass: "font-small-2 mr-25 mb-0" }, [
+                _vm._v("\n      Actualizado 1 mês atrás\n    "),
+              ]),
+            ],
             1
           ),
           _vm._v(" "),
           _c(
-            "b-input-group",
-            { attrs: { prepend: "@" } },
-            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-input-group",
-            { attrs: { size: "sm", prepend: "@" } },
-            [_c("b-form-input", { attrs: { placeholder: "Username" } })],
+            "b-card-body",
+            { staticClass: "statistics-body" },
+            [
+              _c(
+                "b-row",
+                _vm._l(_vm.data, function (item) {
+                  return _c(
+                    "b-col",
+                    {
+                      key: item.icon,
+                      class: item.customClass,
+                      attrs: { xl: "3", sm: "6" },
+                    },
+                    [
+                      _c(
+                        "b-media",
+                        { attrs: { "no-body": "" } },
+                        [
+                          _c(
+                            "b-media-aside",
+                            { staticClass: "mr-2" },
+                            [
+                              _c(
+                                "b-avatar",
+                                { attrs: { size: "48", variant: item.color } },
+                                [
+                                  _c("feather-icon", {
+                                    attrs: { size: "24", icon: item.icon },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-media-body",
+                            { staticClass: "my-auto" },
+                            [
+                              _c(
+                                "h4",
+                                { staticClass: "font-weight-bolder mb-0" },
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(item.title) +
+                                      "\n            "
+                                  ),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-card-text",
+                                { staticClass: "font-small-3 mb-0" },
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(item.subtitle) +
+                                      "\n            "
+                                  ),
+                                ]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  )
+                }),
+                1
+              ),
+            ],
             1
           ),
         ],
         1
-      ),
-    ]
-  )
+      )
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1549,61 +1744,243 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/@core/components/b-card-code/index.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/@core/components/b-card-code/index.js ***!
-  \****************************************************************/
-/*! exports provided: default */
+/***/ "./resources/js/src/@core/utils/filter.js":
+/*!************************************************!*\
+  !*** ./resources/js/src/@core/utils/filter.js ***!
+  \************************************************/
+/*! exports provided: kFormatter, title, avatarText, formatDate, formatDateToMonthShort, filterTags */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kFormatter", function() { return kFormatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "title", function() { return title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "avatarText", function() { return avatarText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDateToMonthShort", function() { return formatDateToMonthShort; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterTags", function() { return filterTags; });
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.to-fixed.js */ "./node_modules/core-js/modules/es.number.to-fixed.js");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.join.js */ "./node_modules/core-js/modules/es.array.join.js");
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/utils/utils.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
-/***/ }),
 
-/***/ "./resources/js/src/@core/mixins/ui/forms.js":
-/*!***************************************************!*\
-  !*** ./resources/js/src/@core/mixins/ui/forms.js ***!
-  \***************************************************/
-/*! exports provided: togglePasswordVisibility, _ */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "togglePasswordVisibility", function() { return togglePasswordVisibility; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-// We haven't added icon's computed property because it makes this mixin coupled with UI
-var togglePasswordVisibility = {
-  data: function data() {
-    return {
-      passwordFieldType: 'password'
-    };
-  },
-  methods: {
-    togglePasswordVisibility: function togglePasswordVisibility() {
-      this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
-    }
-  }
+
+
+
+
+
+
+
+var kFormatter = function kFormatter(num) {
+  return num > 999 ? "".concat((num / 1000).toFixed(1), "k") : num;
 };
-var _ = null;
+var title = function title(value) {
+  var replacer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
+  if (!value) return '';
+  var str = value.toString();
+  var arr = str.split(replacer);
+  var capitalizedArray = [];
+  arr.forEach(function (word) {
+    var capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+    capitalizedArray.push(capitalized);
+  });
+  return capitalizedArray.join(' ');
+};
+var avatarText = function avatarText(value) {
+  if (!value) return '';
+  var nameArray = value.split(' ');
+  return nameArray.map(function (word) {
+    return word.charAt(0).toUpperCase();
+  }).join('');
+};
+/**
+ * Format and return date in Humanize format
+ * Intl docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+ * Intl Constructor: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+ * @param {String} value date to format
+ * @param {Object} formatting Intl object to format with
+ */
+
+var formatDate = function formatDate(value) {
+  var formatting = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+  };
+  if (!value) return value;
+  return new Intl.DateTimeFormat('en-US', formatting).format(new Date(value));
+};
+/**
+ * Return short human friendly month representation of date
+ * Can also convert date to only time if date is of today (Better UX)
+ * @param {String} value date to format
+ * @param {Boolean} toTimeForCurrentDay Shall convert to time if day is today/current
+ */
+
+var formatDateToMonthShort = function formatDateToMonthShort(value) {
+  var toTimeForCurrentDay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var date = new Date(value);
+  var formatting = {
+    month: 'short',
+    day: 'numeric'
+  };
+
+  if (toTimeForCurrentDay && Object(_utils__WEBPACK_IMPORTED_MODULE_10__["isToday"])(date)) {
+    formatting = {
+      hour: 'numeric',
+      minute: 'numeric'
+    };
+  }
+
+  return new Intl.DateTimeFormat('en-US', formatting).format(new Date(value));
+}; // Strip all the tags from markup and return plain text
+
+var filterTags = function filterTags(value) {
+  return value.replace(/<\/?[^>]+(>|$)/g, '');
+};
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue ***!
-  \***************************************************************************************/
+/***/ "./resources/js/src/@core/utils/utils.js":
+/*!***********************************************!*\
+  !*** ./resources/js/src/@core/utils/utils.js ***!
+  \***********************************************/
+/*! exports provided: isObject, isToday, getRandomBsVariant, isDynamicRouteActive, useRouter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return isObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isToday", function() { return isToday; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+
+
+ // eslint-disable-next-line object-curly-newline
+
+
+var isObject = function isObject(obj) {
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+};
+var isToday = function isToday(date) {
+  var today = new Date();
+  return (
+    /* eslint-disable operator-linebreak */
+    date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()
+    /* eslint-enable */
+
+  );
+};
+
+var getRandomFromArray = function getRandomFromArray(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}; // ? Light and Dark variant is not included
+// prettier-ignore
+
+
+var getRandomBsVariant = function getRandomBsVariant() {
+  return getRandomFromArray(['primary', 'secondary', 'success', 'warning', 'danger', 'info']);
+};
+var isDynamicRouteActive = function isDynamicRouteActive(route) {
+  var _router$resolve = _router__WEBPACK_IMPORTED_MODULE_2__["default"].resolve(route),
+      resolvedRoute = _router$resolve.route;
+
+  return resolvedRoute.path === _router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.path;
+}; // Thanks: https://medium.com/better-programming/reactive-vue-routes-with-the-composition-api-18c1abd878d1
+
+var useRouter = function useRouter() {
+  var vm = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["getCurrentInstance"])().proxy;
+  var state = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["reactive"])({
+    route: vm.$route
+  });
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["watch"])(function () {
+    return vm.$route;
+  }, function (r) {
+    state.route = r;
+  });
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+    router: vm.$router
+  });
+};
+/**
+ * This is just enhancement over Object.extend [Gives deep extend]
+ * @param {target} a Object which contains values to be overridden
+ * @param {source} b Object which contains values to override
+ */
+// export const objectExtend = (a, b) => {
+//   // Don't touch 'null' or 'undefined' objects.
+//   if (a == null || b == null) {
+//     return a
+//   }
+//   Object.keys(b).forEach(key => {
+//     if (Object.prototype.toString.call(b[key]) === '[object Object]') {
+//       if (Object.prototype.toString.call(a[key]) !== '[object Object]') {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = b[key]
+//       } else {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = objectExtend(a[key], b[key])
+//       }
+//     } else {
+//       // eslint-disable-next-line no-param-reassign
+//       a[key] = b[key]
+//     }
+//   })
+//   return a
+// }
+
+/***/ }),
+
+/***/ "./resources/js/src/assets/images/illustration/badge.svg":
+/*!***************************************************************!*\
+  !*** ./resources/js/src/assets/images/illustration/badge.svg ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/illustration/badge.svg";
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue ***!
+  \******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroup.vue?vue&type=template&id=62d00603& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&");
-/* harmony import */ var _FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroup.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Ecommerce.vue?vue&type=template&id=0b1dab7c& */ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c&");
+/* harmony import */ var _Ecommerce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Ecommerce.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Ecommerce.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -1611,10 +1988,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Ecommerce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1624,400 +2001,158 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue"
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/Ecommerce.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroup.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603& ***!
-  \**********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroup.vue?vue&type=template&id=62d00603& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroup.vue?vue&type=template&id=62d00603&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroup_vue_vue_type_template_id_62d00603___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupBasic.vue?vue&type=template&id=585a11ca& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&");
-/* harmony import */ var _FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca& ***!
-  \***************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupBasic.vue?vue&type=template&id=585a11ca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupBasic.vue?vue&type=template&id=585a11ca&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupBasic_vue_vue_type_template_id_585a11ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue ***!
-  \*********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupButton.vue?vue&type=template&id=0189a415& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&");
-/* harmony import */ var _FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupButton.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupButton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&":
-/*!****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415& ***!
-  \****************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupButton.vue?vue&type=template&id=0189a415& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupButton.vue?vue&type=template&id=0189a415&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupButton_vue_vue_type_template_id_0189a415___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue":
-/*!****************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue ***!
-  \****************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&");
-/* harmony import */ var _FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&":
-/*!***********************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& ***!
-  \***********************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupCheckboxRadio.vue?vue&type=template&id=5fedf2e5&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupCheckboxRadio_vue_vue_type_template_id_5fedf2e5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&");
-/* harmony import */ var _FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupDropdown.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupDropdown.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& ***!
-  \******************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupDropdown.vue?vue&type=template&id=3a1f92b4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupDropdown_vue_vue_type_template_id_3a1f92b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue ***!
-  \*********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&");
-/* harmony import */ var _FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupMerged.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupMerged.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&":
-/*!****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& ***!
-  \****************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupMerged.vue?vue&type=template&id=a94c59e2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupMerged.vue?vue&type=template&id=a94c59e2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupMerged_vue_vue_type_template_id_a94c59e2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue":
+/***/ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue ***!
+  !*** ./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormInputGroupSize.vue?vue&type=template&id=2c00b424& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&");
-/* harmony import */ var _FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormInputGroupSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Ecommerce.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss& ***!
+  \****************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Ecommerce.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c& ***!
+  \*************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Ecommerce.vue?vue&type=template&id=0b1dab7c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/Ecommerce.vue?vue&type=template&id=0b1dab7c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Ecommerce_vue_vue_type_template_id_0b1dab7c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true&");
+/* harmony import */ var _EcommerceCompanyTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceCompanyTable.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EcommerceCompanyTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "25880326",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceCompanyTable.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&":
+/*!****************************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& ***!
+  \****************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=style&index=0&id=25880326&lang=scss&scoped=true&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_style_index_0_id_25880326_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceCompanyTable.vue?vue&type=template&id=25880326&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceCompanyTable_vue_vue_type_template_id_25880326_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue":
+/*!***********************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceMedal.vue?vue&type=template&id=ece238ea& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea&");
+/* harmony import */ var _EcommerceMedal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceMedal.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -2026,9 +2161,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _EcommerceMedal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2038,66 +2173,316 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue"
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************/
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceMedal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceMedal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceMedal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424& ***!
-  \**************************************************************************************************************************/
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea& ***!
+  \******************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormInputGroupSize.vue?vue&type=template&id=2c00b424& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-input-group/FormInputGroupSize.vue?vue&type=template&id=2c00b424&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceMedal.vue?vue&type=template&id=ece238ea& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceMedal.vue?vue&type=template&id=ece238ea&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormInputGroupSize_vue_vue_type_template_id_2c00b424___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceMedal_vue_vue_type_template_id_ece238ea___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-input-group/code.js":
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue":
 /*!****************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-input-group/code.js ***!
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue ***!
   \****************************************************************************/
-/*! exports provided: codeAddons, codeBasic, codeButton, codeCheckboxRadio, codeDropdown, codeSize, codeMerged */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeAddons", function() { return codeAddons; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeButton", function() { return codeButton; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeCheckboxRadio", function() { return codeCheckboxRadio; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDropdown", function() { return codeDropdown; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMerged", function() { return codeMerged; });
-var codeAddons = "\n<template>\n  <b-row>\n    <b-col\n      md=\"6\"\n      class=\"mb-1\"\n    >\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-input-group-text>$</b-input-group-text>\n          <b-input-group-text>\n            <b-form-checkbox\n              name=\"checkbox-input\"\n              plain\n              class=\"vs-checkbox-con pl-0\"\n            >\n              <span class=\"vs-checkbox\">\n                <span class=\"vs-checkbox--check\">\n                  <i class=\"vs-icon feather icon-check\" />\n                </span>\n              </span>\n            </b-form-checkbox>\n          </b-input-group-text>\n        </b-input-group-prepend>\n        <b-form-input />\n      </b-input-group>\n    </b-col>\n    <b-col\n      md=\"6\"\n    >\n      <b-input-group>\n        <b-form-input />\n        <b-input-group-append>\n          <b-input-group-text>$</b-input-group-text>\n          <b-input-group-text>\n            <b-form-radio\n              class=\"vs-radio-con\"\n              name=\"radio-input\"\n              plain\n            >\n              <span class=\"vs-radio\">\n                <span class=\"vs-radio--border\" />\n                <span class=\"vs-radio--circle\" />\n              </span>\n            </b-form-radio>\n          </b-input-group-text>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {\n  BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BRow, BCol, BFormCheckbox, BInputGroupText, BFormRadio,\n} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n    BFormCheckbox,\n    BFormRadio,\n    BInputGroupText,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
-var codeBasic = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n    <!-- basic search -->\n    <b-input-group>\n      <b-input-group-prepend is-text>\n        <feather-icon icon=\"SearchIcon\" />\n      </b-input-group-prepend>\n      <b-form-input placeholder=\"Search\" />\n    </b-input-group>\n\n    <!-- password -->\n    <b-form-group>\n      <label for=\"basic-password\">Password</label>\n      <b-input-group>\n        <b-form-input\n          id=\"basic-password\"\n          :type=\"passwordFieldType\"\n          placeholder=\"Your Password\"\n        />\n        <b-input-group-append is-text>\n          <feather-icon\n            :icon=\"passwordToggleIcon\"\n            class=\"cursor-pointer\"\n            @click=\"togglePasswordVisibility\"\n          />\n        </b-input-group-append>\n      </b-input-group>\n    </b-form-group>\n\n    <!-- with prop prepend  -->\n    <b-input-group prepend=\"@\">\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- with prop append -->\n    <b-input-group append=\"@example.com\">\n      <b-form-input placeholder=\"Recipient's username\" />\n    </b-input-group>\n\n    <b-input-group prepend=\"https://example.com/users/\">\n      <b-form-input />\n    </b-input-group>\n\n    <!-- append and pepend -->\n    <b-input-group\n      prepend=\"$\"\n      append=\".00\"\n    >\n      <b-form-input placeholder=\"100\" />\n    </b-input-group>\n\n    <!-- textarea -->\n    <b-input-group prepend=\"With textarea\">\n      <b-form-textarea />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {\n  BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea,\n} from 'bootstrap-vue'\nimport { togglePasswordVisibility } from '@core/mixins/ui/forms'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BInputGroup,\n    BFormGroup,\n    BFormInput,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n  },\n  mixins: [togglePasswordVisibility],\n  computed: {\n    passwordToggleIcon() {\n      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'\n    },\n  },\n}\n</script>\n";
-var codeButton = "\n<template>\n  <b-row>\n    <b-col\n      lg=\"6\"\n      class=\"mb-1\"\n    >\n      <!-- button on right -->\n      <b-input-group>\n        <b-form-input placeholder=\"Button on right\" />\n        <b-input-group-append>\n          <b-button variant=\"outline-primary\">\n            GO\n          </b-button>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n    <b-col lg=\"6\">\n      <!-- button on both side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-button variant=\"outline-primary\">\n            <feather-icon icon=\"SearchIcon\" />\n          </b-button>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Button on both side\" />\n        <b-input-group-append>\n          <b-button variant=\"outline-primary\">\n            Search !\n          </b-button>\n        </b-input-group-append>\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupAppend, BInputGroupPrepend, BRow, BCol, BButton} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupAppend,\n    BInputGroupPrepend,\n    BRow,\n    BCol,\n    BButton,\n  },\n}\n</script>\n";
-var codeCheckboxRadio = "\n<template>\n  <b-row>\n    <!-- checkbox -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-checkbox\n              plain\n              name=\"checkbox-input\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- radio -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-radio\n              v-model=\"radio1\"\n              value=\"radio2\"\n              plain\n              name=\"radio-input1\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- custome checkbox and radio -->\n    <b-col\n      cols=\"12\"\n      class=\" my-1\"\n    >\n      <small class=\"font-weight-semibold\">Custom checkbox and radio</small>\n    </b-col>\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-checkbox\n              name=\"checkbox-input\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n\n    <!-- radio -->\n    <b-col md=\"6\">\n      <b-form-group>\n        <b-input-group>\n          <b-input-group-prepend is-text>\n            <b-form-radio\n              v-model=\"radio1\"\n              value=\"radio2\"\n              name=\"radio-input1\"\n            />\n          </b-input-group-prepend>\n          <b-form-input placeholder=\"Message\" />\n        </b-input-group>\n      </b-form-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupPrepend, BRow, BCol, BFormCheckbox, BFormRadio, BFormGroup} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BRow,\n    BCol,\n    BFormCheckbox,\n    BFormRadio,\n    BFormGroup,\n  },\n  data() {\n    return {\n      radio1: 'radio2',\n    }\n  },\n}\n</script>\n";
-var codeDropdown = "\n<template>\n  <b-row>\n    <b-col\n      lg=\"6\"\n      class=\"mb-1\"\n    >\n      <!-- dropdown in right side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-dropdown\n            text=\"Action\"\n            variant=\"outline-primary\"\n          >\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Dropdown on left\" />\n      </b-input-group>\n    </b-col>\n    <b-col lg=\"6\">\n\n      <!-- dropdown in both side -->\n      <b-input-group>\n        <b-input-group-prepend>\n          <b-dropdown variant=\"outline-primary\">\n            <template #button-content>\n              <feather-icon icon=\"Edit2Icon\" />\n            </template>\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-prepend>\n        <b-form-input placeholder=\"Dropdown on both side\" />\n        <b-input-group-append>\n          <b-dropdown\n            text=\"Action\"\n            variant=\"outline-primary\"\n            right\n          >\n            <b-dropdown-item>Action </b-dropdown-item>\n            <b-dropdown-item>Another Action</b-dropdown-item>\n            <b-dropdown-item>Something else here</b-dropdown-item>\n            <b-dropdown-divider />\n            <b-dropdown-item>Separated link</b-dropdown-item>\n          </b-dropdown>\n        </b-input-group-append>\n\n      </b-input-group>\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport {\n  BInputGroup,\n  BFormInput,\n  BInputGroupPrepend,\n  BInputGroupAppend,\n  BDropdown,\n  BDropdownItem,\n  BDropdownDivider,\n  BRow,\n  BCol,\n} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n    BDropdownDivider,\n    BDropdown,\n    BDropdownItem,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
-var codeSize = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n\n    <!-- large -->\n    <b-input-group\n      prepend=\"@\"\n      size=\"lg\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- default -->\n    <b-input-group\n      prepend=\"@\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- small -->\n    <b-input-group\n      size=\"sm\"\n      prepend=\"@\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormInput,\n    BInputGroup,\n  },\n}\n</script>\n";
-var codeMerged = "\n<template>\n  <div class=\"demo-vertical-spacing\">\n    <!-- basic search -->\n    <b-input-group class=\"input-group-merge\">\n      <b-input-group-prepend is-text>\n        <feather-icon icon=\"SearchIcon\" />\n      </b-input-group-prepend>\n      <b-form-input placeholder=\"Search\" />\n    </b-input-group>\n\n    <!-- password -->\n    <b-form-group>\n      <label for=\"basic-password1\">Password</label>\n      <b-input-group class=\"input-group-merge\">\n        <b-form-input\n          id=\"basic-password1\"\n          :type=\"passwordFieldType\"\n          placeholder=\"Your Password\"\n        />\n        <b-input-group-append is-text>\n          <feather-icon\n            :icon=\"passwordToggleIcon\"\n            class=\"cursor-pointer\"\n            @click=\"togglePasswordVisibility\"\n          />\n        </b-input-group-append>\n      </b-input-group>\n    </b-form-group>\n\n    <!-- with prop prepend  -->\n    <b-input-group\n      prepend=\"@\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"Username\" />\n    </b-input-group>\n\n    <!-- with prop append -->\n    <b-input-group\n      append=\"@example.com\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"Recipient's username\" />\n    </b-input-group>\n\n    <b-input-group\n      prepend=\"https://example.com/users/\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input />\n    </b-input-group>\n\n    <!-- append and pepend -->\n    <b-input-group\n      prepend=\"$\"\n      append=\".00\"\n      class=\"input-group-merge\"\n    >\n      <b-form-input placeholder=\"100\" />\n    </b-input-group>\n\n    <!-- textarea -->\n    <b-input-group\n      prepend=\"With textarea\"\n      class=\"input-group-merge\"\n    >\n      <b-form-textarea />\n    </b-input-group>\n  </div>\n</template>\n\n<script>\nimport {BInputGroup, BFormInput, BInputGroupPrepend, BInputGroupAppend, BFormGroup, BFormTextarea} from 'bootstrap-vue'\nimport { togglePasswordVisibility } from '@core/mixins/ui/forms'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BInputGroup,\n    BFormGroup,\n    BFormInput,\n    BInputGroupPrepend,\n    BInputGroupAppend,\n  },\n  mixins: [togglePasswordVisibility],\n  computed: {\n    passwordToggleIcon() {\n      return this.passwordFieldType === 'password' ? 'EyeIcon' : 'EyeOffIcon'\n    },\n  },\n}\n</script>\n";
+/* harmony import */ var _EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceOrderChart.vue?vue&type=template&id=27c15868& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868&");
+/* harmony import */ var _EcommerceOrderChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceOrderChart.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EcommerceOrderChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceOrderChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceOrderChart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceOrderChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceOrderChart.vue?vue&type=template&id=27c15868& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceOrderChart.vue?vue&type=template&id=27c15868&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceOrderChart_vue_vue_type_template_id_27c15868___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4&");
+/* harmony import */ var _EcommerceProfitChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceProfitChart.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EcommerceProfitChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceProfitChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceProfitChart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceProfitChart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceProfitChart.vue?vue&type=template&id=b56fbbe4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceProfitChart_vue_vue_type_template_id_b56fbbe4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8&");
+/* harmony import */ var _EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceRevenueReport.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceRevenueReport.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceRevenueReport_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8& ***!
+  \**************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceRevenueReport.vue?vue&type=template&id=ce7856f8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceRevenueReport_vue_vue_type_template_id_ce7856f8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EcommerceStatistics.vue?vue&type=template&id=d571db82& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82&");
+/* harmony import */ var _EcommerceStatistics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EcommerceStatistics.vue?vue&type=script&lang=js& */ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EcommerceStatistics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceStatistics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceStatistics.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceStatistics_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EcommerceStatistics.vue?vue&type=template&id=d571db82& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/dashboard/ecommerce/EcommerceStatistics.vue?vue&type=template&id=d571db82&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EcommerceStatistics_vue_vue_type_template_id_d571db82___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ })
 

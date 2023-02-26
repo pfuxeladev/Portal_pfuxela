@@ -23,6 +23,7 @@
     <b-card
       no-body
       class="mb-0"
+      v-if="can('View All Users')"
     >
 
       <div class="m-2">
@@ -59,6 +60,7 @@
                 placeholder="Search..."
               />
               <b-button
+                v-if="can('Create User')"
                 variant="primary"
                 @click="isAddNewUserSidebarActive = true"
               >
@@ -125,7 +127,7 @@
             :variant="`light-${resolveUserStatusVariant(data.item.is_active)}`"
             class="text-capitalize"
           >
-            <span v-if="data.item.is_active === true">Activo</span>
+            <span v-if="data.item.is_active === 1">Activo</span>
             <span v-else>Inactivo</span>
           </b-badge>
         </template>
@@ -138,7 +140,7 @@
             :right="$store.state.appConfig.isRTL"
           >
 
-            <template #button-content>
+            <template #button-content v-if="can('Edit All Users')">
               <feather-icon
                 icon="MoreVerticalIcon"
                 size="16"
@@ -319,7 +321,6 @@ export default {
     return {
       // Sidebar
       isAddNewUserSidebarActive,
-
       fetchUsers,
       tableColumns,
       perPage,

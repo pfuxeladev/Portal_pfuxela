@@ -23,6 +23,7 @@ class CreateOrdemsTable extends Migration
             $table->uuid('refs');
             $table->string('codigo_ordem');
             $table->string('estado')->default('pendente');
+            $table->string('tipo_ordem')->nullable();
             $table->foreignIdFor(Bombas::class)->nullable()->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('createdBy');
             $table->unsignedBigInteger('approvedBy')->nullable();

@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\API\Back\AbastecimentoBombasController;
+use App\Http\Controllers\API\BACK\BombaController;
+use App\Http\Controllers\API\Back\CheckListOutController;
+use App\Http\Controllers\API\Back\OrdemController;
+use App\Http\Controllers\API\Back\RotaController;
 use App\Http\Controllers\ChecklistController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -9,7 +14,7 @@ Route::post('login', [\App\Http\Controllers\API\Back\AuthenticationController::c
 Route::get('checklists', [ChecklistController::class, 'index']);
 Route::post('checklist-out', [ChecklistController::class, 'saveChacklistOut']);
 
-Route::middleware('auth:api')->group(function () {
+Route::group(['middleware' => 'auth:api'], function () {
 
     Route::get('/permissions', [App\Http\Controllers\API\Back\UserController::class, 'permissionsIndex'])
         ->name('permissions.index')
@@ -35,10 +40,11 @@ Route::middleware('auth:api')->group(function () {
     Route::get('/listProject', [App\Http\Controllers\API\Back\ProjectoController::class, 'listProjecto']);
     Route::get('/getCombustivel', [App\Http\Controllers\API\Back\ViaturaController::class, 'getCombustivel']);
     Route::get('getQtdDisponivel/{viatura_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getQtdDisponivel']);
+    Route::get('ltrPkm/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'litrosKm']);
     Route::get('viaturaHistorico/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'HistoricoAbastecimento']);
     Route::get('RotaByProject/{projecto_id}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'RotaByProject']);
 
-    Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\BACK\AbastecimentoController::class, 'show']);
+    Route::get('/Abastecimento/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'show']);
 
     Route::get('/Abastecer/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'abastecer']);
 
@@ -57,33 +63,103 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/abastecimento_extra', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecer']);
     Route::get('/listCombustivel', [\App\Http\Controllers\API\Back\BombaController::class, 'fetchCombustivel']);
     Route::post('/updateCombustivel', [App\Http\Controllers\API\Back\BombaController::class, 'updtFuel']);
+    Route::get('/viaturaNaoAlocada', [App\Http\Controllers\API\Back\ViaturaController::class, 'viaturaNaoAlocadas']);
 
     // Aprovar abastecimento e reprovar
     Route::post('/AprovarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'AprovarOrdem']);
     Route::post('/CancelarOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'CancelarOrdem']);
+    Route::post('/DesfazerOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'DesfazerOrdem']);
     Route::get('/AbastecimentoRecorrente', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'abastecimentoRecorrente']);
-    Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'AbstRecDetails']);
-    Route::get('activeVehicle/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'activarViatura']);
-    Route::get('deativateVehicle/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'DesativarViatura']);
+    Route::get('/AbstCorrDetails/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
+    // Abastecer bomba
+
+    Route::get('/abastecimentoPendente/{id}', [AbastecimentoBombasController::class, 'abastecimentoPendente']);
+    // end
+    Route::resource('Ordem', App\Http\Controllers\API\Back\OrdemController::class);
 
     Route::apiResources(
-        ['viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
-        'modelos' => App\Http\Controllers\API\Back\ModeloController::class,
-        'Rotas'=>App\Http\Controllers\API\Back\RotaController::class,
-        'bombas'=> App\Http\Controllers\API\Back\BombaController::class,
-        'Abastecimento'=>App\Http\Controllers\API\Back\AbastecimentoController::class,
-        'Ordems'=>App\Http\Controllers\API\Back\OrdemController::class,
-        // 'Projectos'=>App\Http\Controllers\API\Back\ProjectoController::class,
-        'Ocorrencia'=>App\Http\Controllers\API\Back\OcorrenciaController::class,
-        'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
-        'marca' => App\Http\Controllers\API\MarcaController::class,
-        'combustivel' => App\Http\Controllers\API\CombustivelController::class,
-        'users' => \App\Http\Controllers\API\BACK\UserController::class,
-        'CheckListOut'=> \App\Http\Controllers\API\Back\CheckListOutController::class,
-        'CheckListIn'=> \App\Http\Controllers\API\Back\CheckListInController::class
-        ]);
+        [
+            'viaturas' => App\Http\Controllers\API\Back\ViaturaController::class,
+            'modelos' => App\Http\Controllers\API\Back\ModeloController::class,
+            'Rotas' => App\Http\Controllers\API\Back\RotaController::class,
+            'bombas' => App\Http\Controllers\API\Back\BombaController::class,
+            'Abastecimento' => App\Http\Controllers\API\Back\AbastecimentoController::class,
+            'Ordems' => App\Http\Controllers\API\Back\OrdemController::class,
+            'Projectos' => App\Http\Controllers\API\Back\ProjectoController::class,
+            'Ocorrencia' => App\Http\Controllers\API\Back\OcorrenciaController::class,
+            'motorista' => App\Http\Controllers\API\Back\MotoristaController::class,
+            'marca' => App\Http\Controllers\API\MarcaController::class,
+            'combustivel' => App\Http\Controllers\API\CombustivelController::class,
+            'users' => \App\Http\Controllers\API\Back\UserController::class,
+            'CheckListOut' => \App\Http\Controllers\API\Back\CheckListOutController::class,
+            'CheckListIn' => \App\Http\Controllers\API\Back\CheckListInController::class,
+            'viaturasAlocadas'=>\App\Http\Controllers\API\Back\ViaturaAlocadaController::class
+        ]
+    );
 
-    // Ordem Abastecimento params
-    Route::get('/bomba/{refs}', [\App\Http\Controllers\API\Back\OrdemController::class, 'getBomba']);
+// Rota update
+// Route::put('Rotas/{id}', [App\Http\Controllers\API\Back\RotaController::class, 'update']);
+
+    Route::get('ReabrirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'ReabrirOrdem']);
+    Route::get('removeLine/{refs}', [\App\Http\Controllers\API\Back\AbastecimentoController::class, 'removeLine']);
+
+    Route::get('editOrder/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'editOrder']);
+    Route::post('UpdateOrdem', [App\Http\Controllers\API\Back\OrdemController::class, 'update']);
+
+    Route::get('activateViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'activarViatura']);
+    Route::get('DesativarViatura/{id}', [App\Http\Controllers\API\Back\ViaturaController::class, 'DesativarViatura']);
+
+    Route::post('/storeChecklistVars', [CheckListOutController::class, 'storeChecklistVars']);
+
+    Route::get('/CheckListAttr', [CheckListOutController::class, 'getAttributesCheckList']);
+
+    Route::post('AutorizarSaida', [App\Http\Controllers\API\Back\CheckListOutController::class, 'InstantCheckout']);
+    Route::post('AutorizarEntrada', [App\Http\Controllers\API\Back\CheckListInController::class, 'InstantCheckIn']);
+    // Relatorio Geral de Abastecimentos
+    Route::get('Projecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'show']);
+
+    Route::post('RelatorioProjecto/{name}', [App\Http\Controllers\API\Back\ProjectoController::class, 'RelatorioProjecto']);
+    Route::get('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+    Route::post('RelatorioBomba/{id}', [App\Http\Controllers\API\Back\BombaController::class, 'RelatorioBomba']);
+
+    // Alocar viaturas
+    Route::post('alocarViatura', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'store']);
+    Route::get('getKmViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getViatura']);
+    Route::get('getQtdViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getQtdViatura']);
+
+    Route::get('/getAlocateRoute/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'rotas']);
 });
+Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
+
+Route::get('RelatorioSemanal/{id}', [App\Http\Controllers\API\Back\CheckListOutController::class, 'RelatorioSemanal']);
+
+Route::resource('abastecimentoBomba', AbastecimentoBombasController::class);
+
+Route::post('RelatorioGeral', [App\Http\Controllers\API\Back\OrdemController::class, 'RelatorioGeral']);
+
+Route::post('printRelatorio', [App\Http\Controllers\API\Back\OrdemController::class, 'printRelatorio']);
+
+Route::get('bomba/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'getBomba']);
+Route::get('ordemAberta/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'OrdensAberta']);
+Route::post('/submeterAbst', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'submeterAbst']);
+
+Route::get('imprimirOrdem/{refs}', [App\Http\Controllers\API\Back\OrdemController::class, 'imprimirOrdem']);
+Route::get('OrdemExtra/{refs}', [App\Http\Controllers\API\Back\AbastecimentoController::class, 'requestRecDetails']);
+
+Route::get('/abstDetails/{id}', [App\Http\Controllers\API\Back\AbastecimentoBombasController::class, 'printAbast']);
+
+Route::get('SendWeeklyReport', [App\Http\Controllers\API\Back\OrdemController::class, 'SendWeeklyReport']);
+Route::get('RelatorioBombasSemanal', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioDiarioBombas']);
+Route::get('relatorioMensalBombas', [App\Http\Controllers\API\Back\BombaController::class, 'relatorioMensalBombas']);
+Route::get('enviarRelatorioSemanal', [RotaController::class, 'enviarRelatorioSemanal']);
+Route::get('enviarRelatiorioMensal', [RotaController::class, 'enviarRelatorioMensal']);
+Route::get('RelatorioPorRota', [RotaController::class, 'RelatorioPorRota']);
+
+Route::get('extraOrderReport', [App\Http\Controllers\API\Back\ExtraOrderReportController::class, 'index']);
+Route::post('upload/routes', [RotaController::class, 'uploadRoutes']);
+
+Route::get('rotaByDistance', [App\Http\Controllers\API\Back\ProjectoController::class, 'getDistancesByRoutes']);
+
+Route::get('/invoice', [OrdemController::class, 'printPdf']);
+
 

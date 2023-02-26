@@ -3,8 +3,9 @@
     <b-card no-body>
       <div class="mb-2">
         <b-row>
-          <b-col>
+          <b-col cols="12">
             <b-link
+            v-if="can('Create Checklist_out')"
               :to="{ name: 'CheckList-Out' }"
               class="btn btn-outline-primary"
             >
@@ -13,6 +14,19 @@
               >
             </b-link>
           </b-col>
+          <b-col
+            class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
+          >
+            <label>mostrar</label>
+            <v-select
+              v-model="perPage"
+              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+              :options="perPageOptions"
+              :clearable="false"
+              class="per-page-selector d-inline-block mx-50"
+            />
+            <label>entradas</label>
+          </b-col>
           <b-col>
             <b-form-input
               v-model="searchQuery"
@@ -20,13 +34,10 @@
               placeholder="Search..."
             />
           </b-col>
-          <b-col>
-            <v-select />
-          </b-col>
         </b-row>
       </div>
       <b-table
-        ref="refSaidaTableList"
+        ref="refSaidasTableList"
         :items="fetchSaidas"
         responsive
         :fields="tableColumns"
@@ -40,8 +51,16 @@
         <template #cell(Data_de_registo)="data">
           {{ dateTime(data.item.created_at) }} </template
         >
+        <template #cell(hora_de_saida)="data">
+            {{data.item.hr_inicio}}
+        </template>
         <template #cell(Matricula)="data">
           {{ data.item.viatura.matricula }}
+        </template>
+        <template #cell(Kilometragem_na_saida)="data">
+            <div>
+                {{data.item.km_inicio}}
+            </div>
         </template>
         <template #cell(Motorista)="data">
           {{ data.item.motorista.person.nome_completo }}
@@ -49,17 +68,17 @@
          <template #cell(Tipo)="data">
           {{ data.item.tipo_saida }}
         </template>
-                <template #cell(acções)="data">
+        <template #cell(acções)="data">
             <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
                 <template #button-content>
                     <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                 </template>
-                <b-dropdown-item :to="{ name: 'driver-details', params: { id: data.item.id } }">
+                <b-dropdown-item :to="{ name: 'CheckList-out-details', params: { id: data.item.id } }">
                     <feather-icon icon="FileTextIcon" />
                     <span class="align-middle ml-50">Detalhes</span>
                 </b-dropdown-item>
 
-                <b-dropdown-item :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
+                <b-dropdown-item v-if="data.item.viatura.locate === 'OUT'" :to="{ name: 'CheckList-In', params: { id: data.item.id } }">
                     <feather-icon icon="EditIcon" />
                     <span class="align-middle ml-50">Dar entrada</span>
                 </b-dropdown-item>
@@ -67,6 +86,52 @@
             </b-dropdown>
         </template>
       </b-table>
+      <div class="mx-2 mb-2">
+        <b-row>
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-start
+            "
+          >
+            <span class="text-muted"
+              >mostrar {{ dataMeta.from }} a {{ dataMeta.to }} de
+              {{ dataMeta.of }} entradas</span
+            >
+          </b-col>
+          <!-- Pagination -->
+          <b-col
+            cols="12"
+            sm="6"
+            class="
+              d-flex
+              align-items-center
+              justify-content-center justify-content-sm-end
+            "
+          >
+            <b-pagination
+              v-model="currentPage"
+              :total-rows="totalSaidas"
+              :per-page="perPage"
+              first-number
+              last-number
+              class="mb-0 mt-1 mt-sm-0"
+              prev-class="prev-item"
+              next-class="next-item"
+            >
+              <template #prev-text>
+                <feather-icon icon="ChevronLeftIcon" size="18" />
+              </template>
+              <template #next-text>
+                <feather-icon icon="ChevronRightIcon" size="18" />
+              </template>
+            </b-pagination>
+          </b-col>
+        </b-row>
+      </div>
     </b-card>
   </section>
 </template>
@@ -109,17 +174,16 @@ export default {
     const SAIDAS_STORE_MODULE_NAME = 'Picket'
 
     // Register module
-    if (!store.hasModule(SAIDAS_STORE_MODULE_NAME))
-      store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
+    if (!store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.registerModule(SAIDAS_STORE_MODULE_NAME, storeRelatorioModule)
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(SAIDAS_STORE_MODULE_NAME))
-        store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
+      if (store.hasModule(SAIDAS_STORE_MODULE_NAME)) store.unregisterModule(SAIDAS_STORE_MODULE_NAME)
     })
     function dateTime(value) {
       return moment(value).format('DD/MM/YYYY hh:mm')
     }
+
     const {
       fetchSaidas,
       tableColumns,

@@ -68,7 +68,6 @@ mix.copy('resources/scss/loader.css', 'public/css')
    mix.version()
    mix.webpackConfig({
      output: {
-<<<<<<< HEAD:portal/webpack.mix.js
        publicPath: '/C:\wamp64\www\portal_pfuxela\abastecimento.pfuxela.co.mz/',
        chunkFilename: 'js/chunks/[name].[chunkhash].js'
      }
@@ -76,15 +75,6 @@ mix.copy('resources/scss/loader.css', 'public/css')
    mix.setResourceRoot('/C:\wamp64\www\portal_pfuxela\abastecimento.pfuxela.co.mz/')
  }
 
-=======
-       publicPath: '/public_html/abastecimento/',
-       chunkFilename: 'js/chunks/[name].[chunkhash].js'
-     }
-   })
-   mix.setResourceRoot('/public_html/abastecimento/')
- }
- 
->>>>>>> 0aa533085b79a18993e77cda295e70067ff588d1:webpack.mix.js
 
 // ------------------------------------------------
 // If you are deploying on subdomain/subfolder then comment out below code before running 'yarn prod' or 'npm run production' command.

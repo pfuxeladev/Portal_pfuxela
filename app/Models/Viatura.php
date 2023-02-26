@@ -11,6 +11,11 @@ class Viatura extends Model
 
     protected $guard = 'api';
 
+    protected $fillable = [
+        'qtd_disponivel',
+        'kilometragem'
+    ];
+
     public function marca(){
         return $this->belongsTo(marca::class);
     }
@@ -27,7 +32,7 @@ class Viatura extends Model
     }
 
     public function rota(){
-        return $this->belongsToMany(Rota::class);
+        return $this->belongsToMany(Rota::class,'viatura_rotas', 'viatura_id', 'rota_id');
     }
 
     function anexo(){
@@ -37,8 +42,21 @@ class Viatura extends Model
     function ordem(){
         return $this->belongsToMany(Ordem::class, 'ordem_viaturas', 'viatura_id', 'ordem_id');
     }
+    function ordem_viatura(){
+        return $this->hasMany(ordem_viatura::class, 'viatura_id', 'id');
+    }
+    function check_list_in(){
+        return $this->hasMany(checkListIn::class);
+    }
 
+     function viatura_historico(){
+        return $this->hasMany(viatura_historico::class, 'viatura_id', 'id');
+    }
 
-
-
+    function viatura_rota(){
+        return $this->hasMany(ViaturaRota::class);
+    }
+ function ocorrencia(){
+    return $this->hasMany(ocorrencia::class);
+ }
 }

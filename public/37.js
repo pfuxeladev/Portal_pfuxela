@@ -1,26 +1,498 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[37],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/bar */ "./node_modules/echarts/lib/chart/bar.js");
+/* harmony import */ var echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_bar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        legend: {
+          left: 0
+        },
+        grid: this.optionData.grid,
+        xAxis: this.optionData.xAxis,
+        yAxis: this.optionData.yAxis,
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/pie */ "./node_modules/echarts/lib/chart/pie.js");
+/* harmony import */ var echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_pie__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    series: {
+      type: Array,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        tooltip: {
+          trigger: 'item',
+          formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        legend: {
+          left: 10,
+          bottom: '0'
+        },
+        series: this.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/line */ "./node_modules/echarts/lib/chart/line.js");
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      line: {
+        // Make gradient line here
+        visualMap: [{
+          show: true,
+          type: 'continuous',
+          min: 0,
+          max: 400
+        }],
+        grid: {
+          width: '96%',
+          left: '30px',
+          top: '10px',
+          show: false
+        },
+        tooltip: {
+          trigger: 'axis'
+        },
+        xAxis: [{
+          boundaryGap: false,
+          data: this.optionData.xAxisData
+        }],
+        yAxis: {
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        },
+        series: {
+          type: 'line',
+          showSymbol: false,
+          data: this.optionData.series
+        }
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/radar */ "./node_modules/echarts/lib/chart/radar.js");
+/* harmony import */ var echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_radar__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        title: {
+          text: 'Basic radar chart'
+        },
+        tooltip: {},
+        legend: {
+          data: ['Point One', 'Point Two'],
+          bottom: '0',
+          left: '0'
+        },
+        radar: {
+          name: {
+            textStyle: {
+              color: '#626262',
+              fontWeight: 'bold',
+              borderRadius: 3,
+              padding: [3, 5]
+            }
+          },
+          indicator: this.optionData.indicator,
+          splitArea: {
+            show: false
+          },
+          splitLine: {
+            lineStyle: {
+              color: ['#eeeeee']
+            }
+          },
+          axisLine: {
+            lineStyle: {
+              color: '#eeeeee'
+            }
+          }
+        },
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/scatter */ "./node_modules/echarts/lib/chart/scatter.js");
+/* harmony import */ var echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_scatter__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        grid: {
+          width: '95%',
+          left: '30px',
+          right: '40px',
+          containLabel: false
+        },
+        legend: {
+          enable: true,
+          left: '0'
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        xAxis: {
+          boundaryGap: false,
+          scale: true,
+          splitNumber: 10,
+          min: 0
+        },
+        yAxis: {
+          splitLine: {
+            show: false
+          },
+          scale: true
+        },
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue_echarts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-echarts */ "./node_modules/vue-echarts/components/ECharts.vue");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! echarts/lib/component/tooltip */ "./node_modules/echarts/lib/component/tooltip.js");
+/* harmony import */ var echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_tooltip__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! echarts/lib/component/legend */ "./node_modules/echarts/lib/component/legend.js");
+/* harmony import */ var echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_component_legend__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! echarts/lib/chart/line */ "./node_modules/echarts/lib/chart/line.js");
+/* harmony import */ var echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(echarts_lib_chart_line__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _theme_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json");
+var _theme_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./theme.json */ "./resources/js/src/@core/components/charts/echart/theme.json", 1);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"].registerTheme('theme-color', _theme_json__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    ECharts: vue_echarts__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  props: {
+    optionData: {
+      type: Object,
+      "default": null
+    }
+  },
+  data: function data() {
+    return {
+      option: {
+        title: {
+          text: 'Stacked area chart'
+        },
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'cross',
+            label: {
+              backgroundColor: '#6a7985'
+            }
+          }
+        },
+        legend: {
+          left: '0'
+        },
+        grid: {
+          width: '95%',
+          left: '40px',
+          right: '4%',
+          containLabel: false
+        },
+        xAxis: [{
+          type: 'category',
+          boundaryGap: false,
+          data: this.optionData.xAxisData
+        }],
+        yAxis: [{
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        }],
+        series: this.optionData.series
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _FormTextAreaDefault_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaDefault.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue");
-/* harmony import */ var _FormTextAreaRows_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormTextAreaRows.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue");
-/* harmony import */ var _FormTextAreaFloatingLabel_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormTextAreaFloatingLabel.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue");
-/* harmony import */ var _FormTextAreaStates_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormTextAreaStates.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue");
-/* harmony import */ var _FormTextAreaSize_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormTextAreaSize.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue");
-/* harmony import */ var _FormTextAreaDisableResize_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormTextAreaDisableResize.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue");
-/* harmony import */ var _FormTextAreaAutoHeight_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormTextAreaAutoHeight.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue");
-/* harmony import */ var _FormTextAreaFormatter_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormTextAreaFormatter.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue");
-/* harmony import */ var _FormTextAreaReadonly_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormTextAreaReadonly.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue");
-/* harmony import */ var _FormTextAreaDebounce_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FormTextAreaDebounce.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue");
-/* harmony import */ var _FormTextAreaCounter_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FormTextAreaCounter.vue */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue");
+/* harmony import */ var _EchartLine_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartLine.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue");
+/* harmony import */ var _EchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartStackedArea.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue");
+/* harmony import */ var _EchartArea_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./EchartArea.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue");
+/* harmony import */ var _EchartBar_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./EchartBar.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue");
+/* harmony import */ var _EchartBarHorizontal_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./EchartBarHorizontal.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue");
+/* harmony import */ var _EchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./EchartDoughnut.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue");
+/* harmony import */ var _EchartRadar_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./EchartRadar.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue");
+/* harmony import */ var _EchartScatter_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./EchartScatter.vue */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue");
 //
 //
 //
@@ -39,9 +511,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
-
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -55,34 +535,30 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    FormTextAreaDefault: _FormTextAreaDefault_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FormTextAreaRows: _FormTextAreaRows_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    FormTextAreaFloatingLabel: _FormTextAreaFloatingLabel_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FormTextAreaStates: _FormTextAreaStates_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    FormTextAreaSize: _FormTextAreaSize_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    FormTextAreaDisableResize: _FormTextAreaDisableResize_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    FormTextAreaAutoHeight: _FormTextAreaAutoHeight_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    FormatterTextArea: _FormTextAreaFormatter_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    FormTextAreaReadonly: _FormTextAreaReadonly_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
-    FormTextAreaDebounce: _FormTextAreaDebounce_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
-    FormTextAreaCounter: _FormTextAreaCounter_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+    EchartLine: _EchartLine_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    EchartStackedArea: _EchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    EchartArea: _EchartArea_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    EchartBar: _EchartBar_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    EchartBarHorizontal: _EchartBarHorizontal_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    EchartDoughnut: _EchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    EchartRadar: _EchartRadar_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    EchartScatter: _EchartScatter_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartStackedArea.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue");
 //
 //
 //
@@ -90,94 +566,78 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartStackedArea: _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      codeAutoHeight: _code__WEBPACK_IMPORTED_MODULE_2__["codeAutoHeight"]
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: [{
+          name: 'Point One',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#84d0ff'
+          },
+          color: '#84d0ff',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [120, 432, 281, 434, 590, 330, 210, 150, 110, 150, 420, 650, 560, 250]
+        }, {
+          name: 'Point Two',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#299aff'
+          },
+          color: '#299aff',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [20, 32, 281, 634, 490, 430, 310, 450, 900, 1250, 1180, 750, 560, 550]
+        }, {
+          name: 'Point Three',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {
+            color: '#eef1f4'
+          },
+          color: '#eef1f4',
+          showSymbol: false,
+          smooth: 0.4,
+          lineStyle: {
+            width: 0
+          },
+          data: [120, 132, 981, 134, 100, 80, 410, 550, 50, 0, 0, 0, 80, 550]
+        }]
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartBar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue");
 //
 //
 //
@@ -186,424 +646,81 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartBar: _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      value: '',
-      maxChar: 20,
-      codeCounter: _code__WEBPACK_IMPORTED_MODULE_2__["codeCounter"]
+      option: {
+        xAxis: [{
+          type: 'category',
+          data: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12']
+        }],
+        yAxis: [{
+          type: 'value',
+          splitLine: {
+            show: false
+          }
+        }],
+        grid: {
+          left: '40px',
+          right: '30px',
+          bottom: '30px'
+        },
+        series: [{
+          name: 'Point One',
+          type: 'bar',
+          stack: 'advertising',
+          data: [220, 232, 201, 334, 290, 230, 220, 360, 80, 130, 310, 460, 110, 80],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Two',
+          type: 'bar',
+          stack: 'advertising',
+          data: [220, 232, 201, 234, 190, 130, 210, 163, 105, 120, 220, 102, 150, 130],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Three',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 102, 101, 134, 190, 130, 210, 102, 80, 50, 90, 50, 40, 30],
+          barMaxWidth: '20%',
+          barMinWidth: '10px'
+        }, {
+          name: 'Point Four',
+          type: 'bar',
+          stack: 'advertising',
+          data: [350, 432, 301, 392, 90, 230, 310, 130, 50, 250, 50, 120, 50, 110],
+          barMaxWidth: '20%',
+          barMinWidth: '10px',
+          itemStyle: {
+            barBorderRadius: [10, 10, 0, 0]
+          }
+        }]
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
-  },
-  data: function data() {
-    return {
-      value: '',
-      codeDebounce: _code__WEBPACK_IMPORTED_MODULE_2__["codeDebounce"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"]
-  },
-  data: function data() {
-    return {
-      codeDefault: _code__WEBPACK_IMPORTED_MODULE_2__["codeDefault"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
-  },
-  data: function data() {
-    return {
-      codeDisableResize: _code__WEBPACK_IMPORTED_MODULE_2__["codeDisableResize"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"]
-  },
-  data: function data() {
-    return {
-      codeFloatingLabel: _code__WEBPACK_IMPORTED_MODULE_2__["codeFloatingLabel"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"]
-  },
-  data: function data() {
-    return {
-      text1: '',
-      text2: '',
-      codeFormatter: _code__WEBPACK_IMPORTED_MODULE_2__["codeFormatter"]
-    };
-  },
-  methods: {
-    formatter: function formatter(value) {
-      return value.toLowerCase();
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
-  },
-  data: function data() {
-    return {
-      text: "This is some text.\nIt is read only and doesn't look like an input.",
-      codeReadonly: _code__WEBPACK_IMPORTED_MODULE_2__["codeReadonly"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartBar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue");
 //
 //
 //
@@ -612,50 +729,77 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartBar: _core_components_charts_echart_AppEchartBar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      codeRows: _code__WEBPACK_IMPORTED_MODULE_2__["codeRows"]
+      option: {
+        xAxis: [{
+          type: 'value'
+        }],
+        yAxis: [{
+          type: 'category',
+          data: ['Sunday, 17', 'Saturday, 16', 'Friday, 15', 'Thursday, 14', 'wednesday, 13', 'Tuesday, 12', 'Monday,11'],
+          splitLine: {
+            show: false
+          }
+        }],
+        grid: {
+          left: '100px',
+          right: '30px',
+          bottom: '30px'
+        },
+        series: [{
+          name: 'Point One',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 132, 101, 134, 150, 130, 120],
+          barWidth: '30%'
+        }, {
+          name: 'Point Two',
+          type: 'bar',
+          stack: 'advertising',
+          data: [120, 132, 101, 134, 90, 30, 110],
+          barWidth: '30%'
+        }, {
+          name: 'Point Three',
+          type: 'bar',
+          stack: 'advertising',
+          data: [50, 82, 81, 84, 100, 100, 110],
+          barWidth: '30%'
+        }, {
+          name: 'Point Four',
+          type: 'bar',
+          stack: 'advertising',
+          data: [150, 132, 101, 92, 90, 130, 310],
+          barWidth: '30%',
+          itemStyle: {
+            barBorderRadius: [0, 10, 10, 0]
+          }
+        }]
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartDoughnut.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue");
 //
 //
 //
@@ -671,93 +815,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartDoughnut: _core_components_charts_echart_AppEchartDoughnut_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   },
   data: function data() {
     return {
-      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+      series: [{
+        name: 'Visit source',
+        type: 'pie',
+        radius: ['50%', '70%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false
+        },
+        labelLine: {
+          show: false
+        },
+        data: [{
+          value: 335,
+          name: 'Point One'
+        }, {
+          value: 310,
+          name: 'Point Two'
+        }, {
+          value: 234,
+          name: 'Point Three'
+        }, {
+          value: 435,
+          name: 'Point Four'
+        }]
+      }]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-textarea/code.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartLine_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartLine.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue");
 //
 //
 //
@@ -782,29 +890,609 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartLine: _core_components_charts_echart_AppEchartLine_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"]
   },
   data: function data() {
     return {
-      text: '',
-      codeStates: _code__WEBPACK_IMPORTED_MODULE_2__["codeStates"]
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: ['290', '200', '210', '190', '250', '220', '80', '90', '200', '150', '160', '100', '140', '100', '30']
+      }
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartRadar_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartRadar.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue");
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartRadar: _core_components_charts_echart_AppEchartRadar_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      option: {
+        series: [{
+          name: 'Point One vs Point Two',
+          type: 'radar',
+          lineStyle: {
+            width: 0
+          },
+          symbolSize: 0,
+          data: [{
+            value: [3500, 5000, 7000, 9500, 12000, 40000, 55000, 65000],
+            name: 'Point Two',
+            itemStyle: {
+              color: '#ffe800'
+            },
+            areaStyle: {
+              color: '#ffe800',
+              opacity: 0.8
+            }
+          }, {
+            value: [4300, 6500, 20000, 25000, 30000, 19000, 30000, 40000],
+            name: 'Point One',
+            itemStyle: {
+              color: '#7367F0'
+            },
+            areaStyle: {
+              color: '#7367F0',
+              opacity: 0.8
+            }
+          }]
+        }],
+        indicator: [{
+          name: 'One',
+          max: 6500
+        }, {
+          name: 'Two',
+          max: 16000
+        }, {
+          name: 'Three',
+          max: 30000
+        }, {
+          name: 'Four',
+          max: 38000
+        }, {
+          name: 'Five',
+          max: 52000
+        }, {
+          name: 'Six',
+          max: 75000
+        }, {
+          name: 'Sever',
+          max: 65000
+        }, {
+          name: 'Eight',
+          max: 85000
+        }]
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartScatter_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartScatter.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartScatter: _core_components_charts_echart_AppEchartScatter_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRadioGroup"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"]
+  },
+  data: function data() {
+    return {
+      selected: 'radio1',
+      radioOption: [{
+        text: 'Daily',
+        value: 'radio1'
+      }, {
+        text: 'Monthly',
+        value: 'radio2'
+      }, {
+        text: 'Yearly',
+        value: 'radio4'
+      }],
+      option: {
+        series: [{
+          name: 'iPhone',
+          symbolSize: 10,
+          data: [[72, 225], [81, 270], [90, 230], [103, 305], [103, 245], [108, 275], [110, 290], [111, 315], [109, 350], [116, 340], [113, 260], [117, 275], [117, 295], [126, 280], [127, 340], [133, 330]],
+          type: 'scatter'
+        }, {
+          name: 'Samsung Note',
+          symbolSize: 10,
+          data: [[13, 95], [22, 105], [17, 115], [19, 130], [21, 125], [35, 125], [13, 155], [21, 165], [25, 155], [18, 190], [26, 180], [43, 180], [53, 202], [61, 165], [67, 225]],
+          type: 'scatter',
+          itemStyle: {
+            color: '#FF9F43'
+          }
+        }, {
+          name: 'OnePlus',
+          symbolSize: 10,
+          data: [[70, 195], [72, 270], [98, 255], [100, 215], [87, 240], [94, 280], [99, 300], [102, 290], [110, 275], [111, 250], [94, 280], [92, 340], [100, 335], [108, 330]],
+          type: 'scatter',
+          itemStyle: {
+            color: '#00CFE8'
+          }
+        }]
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/charts/echart/AppEchartStackedArea.vue */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    AppEchartStackedArea: _core_components_charts_echart_AppEchartStackedArea_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  data: function data() {
+    return {
+      option: {
+        xAxisData: ['7/12', '8/12', '9/12', '10/12', '11/12', '12/12', '13/12', '14/12', '15/12', '16/12', '17/12', '18/12', '19/12', '20/12'],
+        series: [{
+          name: 'Point One',
+          type: 'line',
+          stack: 'Total',
+          areaStyle: {},
+          showSymbol: false,
+          lineStyle: {
+            width: 0
+          },
+          data: [220, 332, 281, 334, 290, 430, 310, 350, 510, 550, 720, 650, 760, 850]
+        }, {
+          name: 'Point Two',
+          type: 'line',
+          stack: 'Total',
+          showSymbol: false,
+          areaStyle: {},
+          lineStyle: {
+            width: 0
+          },
+          data: [220, 282, 191, 534, 290, 430, 350, 300, 580, 463, 380, 600, 560, 840]
+        }, {
+          name: 'Point Three',
+          type: 'line',
+          stack: 'Total',
+          showSymbol: false,
+          areaStyle: {},
+          lineStyle: {
+            width: 0
+          },
+          data: [750, 232, 601, 154, 390, 330, 410, 510, 420, 320, 580, 690, 650, 800]
+        }]
+      }
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".card-body {\n  position: relative;\n}\n.card-body .pie-text {\n  width: 105px;\n  position: absolute;\n  top: 44%;\n  bottom: 0;\n}\n[dir] .card-body .pie-text {\n  margin: auto;\n}\n[dir=ltr] .card-body .pie-text {\n  left: 0;\n  right: 0;\n}\n[dir=rtl] .card-body .pie-text {\n  right: 0;\n  left: 0;\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, ".switch-button {\n  position: relative;\n  z-index: 1;\n}\n@media (min-width: 576px) {\nhtml[dir=rtl] .switch-button {\n    float: right !important;\n}\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "\n.echarts {\r\n  width: 100% !important;\n}\r\n", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&":
+/*!***************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5& ***!
+  \***************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&":
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& ***!
+  \********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&":
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12& ***!
+  \****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.line,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: { options: _vm.option, theme: "theme-color", "auto-resize": "" },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&":
 /*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& ***!
   \***********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("e-charts", {
+    ref: "line",
+    attrs: {
+      autoresize: "",
+      options: _vm.option,
+      theme: "theme-color",
+      "auto-resize": "",
+    },
+  })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -819,34 +1507,21 @@ var render = function () {
   return _c(
     "b-row",
     [
-      _c(
-        "b-col",
-        { attrs: { cols: "12" } },
-        [
-          _c("form-text-area-default"),
-          _vm._v(" "),
-          _c("form-text-area-rows"),
-          _vm._v(" "),
-          _c("form-text-area-floating-label"),
-          _vm._v(" "),
-          _c("form-text-area-states"),
-          _vm._v(" "),
-          _c("form-text-area-size"),
-          _vm._v(" "),
-          _c("form-text-area-disable-resize"),
-          _vm._v(" "),
-          _c("form-text-area-auto-height"),
-          _vm._v(" "),
-          _c("formatter-text-area"),
-          _vm._v(" "),
-          _c("form-text-area-readonly"),
-          _vm._v(" "),
-          _c("form-text-area-debounce"),
-          _vm._v(" "),
-          _c("form-text-area-counter"),
-        ],
-        1
-      ),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-line")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-stacked-area")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-area")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-bar")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-bar-Horizontal")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { md: "6" } }, [_c("echart-doughnut")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { md: "6" } }, [_c("echart-radar")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("echart-scatter")], 1),
     ],
     1
   )
@@ -858,10 +1533,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c&":
-/*!*********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -874,118 +1549,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Auto height" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeAutoHeight) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v("To set the initial minimum height (in rows), set the"),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("rows")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " prop to the desired number of lines (or leave it at the default of "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("2")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "), And then set maximum rows that the text area will grow to (before showing a scrollbar) by setting the\n    "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("max-rows")]),
-        _vm._v(" "),
-        _c("span", [_vm._v("prop to the maximum number of lines of text.")]),
-      ]),
-      _vm._v(" "),
-      _c("b-card-text", [
-        _c("span", [_vm._v("To make the height ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("sticky")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" (i.e. never shrink), set the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("no-auto-shrink")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("true")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(". The ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("no-auto-shrink")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" props has no effect if ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("max-rows")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" is not set or is equal to or less than rows.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c(
-            "b-col",
-            { attrs: { xl: "6", cols: "12" } },
-            [
-              _c("label", { attrs: { for: "textarea-auto-height" } }, [
-                _vm._v("Auto height:"),
-              ]),
-              _vm._v(" "),
-              _c("b-form-textarea", {
-                staticClass: "mb-1 mb-xl-0",
-                attrs: {
-                  id: "textarea-auto-height",
-                  placeholder: "Auto height textarea",
-                  rows: "3",
-                  "max-rows": "8",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { attrs: { xl: "6", cols: "12" } },
-            [
-              _c("label", { attrs: { for: "textarea-no-auto-shrink" } }, [
-                _vm._v("No auto-shrink:"),
-              ]),
-              _vm._v(" "),
-              _c("b-form-textarea", {
-                attrs: {
-                  id: "textarea-no-auto-shrink",
-                  placeholder: "Auto height (no-shrink) textarea",
-                  rows: "3",
-                  "max-rows": "8",
-                  "no-auto-shrink": "",
-                },
-              }),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-    ],
+    "b-card",
+    { attrs: { title: "Area Chart" } },
+    [_c("app-echart-stacked-area", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -996,10 +1562,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1012,57 +1578,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Counter" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeCounter) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _vm._v(
-          "\n    There are times when we need the user to only enter a certain number of characters for it, we have the property\n    counter, the value is a number and determines the maximum.\n  "
-        ),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        staticClass: "char-textarea",
-        class: _vm.value.length >= _vm.maxChar ? "text-danger" : "",
-        attrs: {
-          placeholder: "Counter",
-          rows: "3",
-          state: _vm.value.length <= _vm.maxChar,
-        },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
-      _vm._v(" "),
-      _c(
-        "small",
-        {
-          staticClass: "textarea-counter-value float-right",
-          class: _vm.value.length >= _vm.maxChar ? "bg-danger" : "",
-        },
-        [
-          _c("span", { staticClass: "char-count" }, [
-            _vm._v(_vm._s(_vm.value.length)),
-          ]),
-          _vm._v(" / " + _vm._s(_vm.maxChar) + "\n  "),
-        ]
-      ),
-    ],
+    "b-card",
+    { attrs: { title: "Data Science" } },
+    [_c("app-echart-bar", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1073,461 +1591,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856&":
-/*!*******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Debounce support" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDebounce) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("To enable debouncing, set the prop ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("debounce")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " to any integer greater than zero. The value is specified in milliseconds. Setting "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("debounce")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("0")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" will disable debouncing.")]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: { debounce: "500", rows: "3", "max-rows": "5" },
-        model: {
-          value: _vm.value,
-          callback: function ($$v) {
-            _vm.value = $$v
-          },
-          expression: "value",
-        },
-      }),
-      _vm._v(" "),
-      _c("b-card-text", { staticClass: "mt-1 mb-0" }, [
-        _vm._v("\n    " + _vm._s(_vm.value) + "\n  "),
-      ]),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65&":
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65& ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Default" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDefault) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _vm._v(
-          "\n    Create multi-line text inputs with support for auto height sizing, minimum and maximum number of rows, and\n    contextual states.\n  "
-        ),
-      ]),
-      _vm._v(" "),
-      _c("label", { attrs: { for: "textarea-default" } }, [_vm._v("Textarea")]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: { id: "textarea-default", placeholder: "Textarea", rows: "3" },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Disable resize handle" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDisableResize) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "\n      Some web browsers will allow the user to re-size the height of the textarea. To disable this feature, set the\n    "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("no-resize")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("true")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(".")]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: {
-          id: "textarea-no-resize",
-          placeholder: "Fixed height textarea",
-          rows: "3",
-          "no-resize": "",
-        },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Floating Label" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeFloatingLabel) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("Use ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v(".form-label-group")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" to add a Floating Label with Textarea.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "form-label-group mt-2 mb-0" },
-        [
-          _c("b-form-textarea", {
-            attrs: {
-              id: "textarea",
-              rows: "3",
-              placeholder: "Label in Textarea",
-            },
-          }),
-          _vm._v(" "),
-          _c("label", { attrs: { for: "label-textarea" } }, [
-            _vm._v("Label in Textarea"),
-          ]),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e&":
-/*!********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e& ***!
-  \********************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Formatter support" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeFormatter) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("code", [_vm._v("<b-form-textarea>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "optionally supports formatting by passing a function reference to the "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("formatter")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c(
-            "b-form-group",
-            {
-              attrs: {
-                label: "Textarea with formatter (on input)",
-                "label-for": "textarea-formatter",
-                description: "We will convert your text to lowercase instantly",
-              },
-            },
-            [
-              _c("b-form-textarea", {
-                attrs: {
-                  id: "textarea-formatter",
-                  placeholder: "Enter your text",
-                  formatter: _vm.formatter,
-                },
-                model: {
-                  value: _vm.text1,
-                  callback: function ($$v) {
-                    _vm.text1 = $$v
-                  },
-                  expression: "text1",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-card-text", [
-            _c("strong", [_vm._v("Value:")]),
-            _vm._v(" " + _vm._s(_vm.text1)),
-          ]),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            {
-              attrs: {
-                label: "Textarea with lazy formatter (on blur)",
-                "label-for": "textarea-lazy",
-                description: "This one is a little lazy!",
-              },
-            },
-            [
-              _c("b-form-textarea", {
-                attrs: {
-                  id: "textarea-lazy",
-                  placeholder: "Enter your text",
-                  "lazy-formatter": "",
-                  formatter: _vm.formatter,
-                },
-                model: {
-                  value: _vm.text2,
-                  callback: function ($$v) {
-                    _vm.text2 = $$v
-                  },
-                  expression: "text2",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-card-text", [
-            _c("strong", [_vm._v("Value:")]),
-            _vm._v(" " + _vm._s(_vm.text2)),
-          ]),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164&":
-/*!*******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164& ***!
-  \*******************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Readonly plain text" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeReadonly) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("If you want to have ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-textarea readonly>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(" elements in your form styled as plain text, set the "),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("plaintext")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop (no need to set ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("readonly")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      as it will be set automatically) to remove the default form field styling and preserve the correct text size,\n      margin, padding and height.\n    "
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: { id: "textarea-plaintext", readonly: "", value: _vm.text },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&":
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& ***!
   \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1541,40 +1607,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Displayed rows" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeRows) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("To set the height of ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-textarea>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(", set the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("rows")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " prop to the desired number of rows. If no value is provided to rows, then it will default to 2."
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: { id: "textarea-rows", placeholder: "Tall textarea", rows: "8" },
-      }),
-    ],
+    "b-card",
+    { attrs: { title: "Horizontal Bar Chart" } },
+    [_c("app-echart-bar", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1585,10 +1620,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6&":
-/*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6& ***!
-  \***************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1601,104 +1636,169 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Control sizing" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "b-card",
+    { attrs: { title: "Doughnut Chart" } },
     [
-      _c("b-card-text", [
-        _c("span", [_vm._v("Set text height using the ")]),
+      _c("div", { staticClass: "pie-text text-center" }, [
+        _c("h2", { staticClass: "font-weight-bolder" }, [
+          _vm._v("\n      $23,994\n    "),
+        ]),
         _vm._v(" "),
-        _c("code", [_vm._v("size")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop to ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("sm")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" or ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("lg")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" for small or large respectively.")]),
+        _c("span", { staticClass: "font-weight-bold" }, [_vm._v("Total")]),
       ]),
       _vm._v(" "),
-      _c(
-        "b-row",
-        [
-          _c("b-col", { attrs: { sm: "2" } }, [
-            _c(
-              "label",
-              { staticClass: "text-nowrap", attrs: { for: "textarea-small" } },
-              [_vm._v("Small:")]
-            ),
+      _c("app-echart-doughnut", { attrs: { series: _vm.series } }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&":
+/*!******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d& ***!
+  \******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card",
+    { attrs: { title: "Balance" } },
+    [
+      _c("div", { staticClass: "d-flex justify-content-between flex-wrap" }, [
+        _c("div", { staticClass: "mb-1 mb-sm-0" }, [
+          _c("span", { staticClass: "text-muted" }, [
+            _vm._v("Commercial networks and enterprises"),
+          ]),
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "d-flex align-content-center mb-1 mb-sm-0" }, [
+          _c("h1", { staticClass: "font-weight-bolder " }, [
+            _vm._v("\n        $ 183,382\n      "),
           ]),
           _vm._v(" "),
           _c(
-            "b-col",
-            { staticClass: "mb-1", attrs: { sm: "10" } },
+            "div",
+            { staticClass: "pt-25 ml-75" },
             [
-              _c("b-form-textarea", {
+              _c(
+                "b-badge",
+                { attrs: { variant: "light-secondary" } },
+                [
+                  _c("feather-icon", {
+                    staticClass: "text-danger align-middle",
+                    attrs: { icon: "ArrowDownIcon", size: "12" },
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    { staticClass: "font-weight-bolder align-middle" },
+                    [_vm._v(" 24%")]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("app-echart-line", { attrs: { "option-data": _vm.option } }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card",
+    { attrs: { title: "Radar Chart" } },
+    [_c("app-echart-radar", { attrs: { "option-data": _vm.option } })],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&":
+/*!*********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036& ***!
+  \*********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card",
+    { attrs: { title: "New Technologies Data" } },
+    [
+      _c(
+        "div",
+        { staticClass: "switch-button float-sm-right" },
+        [
+          _c(
+            "b-form-group",
+            [
+              _c("b-form-radio-group", {
                 attrs: {
-                  id: "textarea-small",
+                  id: "btn-radios-1",
+                  "button-variant": "outline-primary",
+                  options: _vm.radioOption,
+                  buttons: "",
                   size: "sm",
-                  placeholder: "Small textarea",
+                  name: "radios-btn-default",
                 },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-col", { attrs: { sm: "2" } }, [
-            _c(
-              "label",
-              {
-                staticClass: "text-nowrap",
-                attrs: { for: "textarea-default" },
-              },
-              [_vm._v("Default:")]
-            ),
-          ]),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { staticClass: "mb-1", attrs: { sm: "10" } },
-            [
-              _c("b-form-textarea", {
-                attrs: {
-                  id: "textarea-default",
-                  placeholder: "Default textarea",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-col", { attrs: { sm: "2" } }, [
-            _c(
-              "label",
-              { staticClass: "text-nowrap", attrs: { for: "textarea-large" } },
-              [_vm._v("Large:")]
-            ),
-          ]),
-          _vm._v(" "),
-          _c(
-            "b-col",
-            { staticClass: "mb-1", attrs: { sm: "10" } },
-            [
-              _c("b-form-textarea", {
-                attrs: {
-                  id: "textarea-large",
-                  size: "lg",
-                  placeholder: "Large textarea",
+                model: {
+                  value: _vm.selected,
+                  callback: function ($$v) {
+                    _vm.selected = $$v
+                  },
+                  expression: "selected",
                 },
               }),
             ],
@@ -1707,6 +1807,8 @@ var render = function () {
         ],
         1
       ),
+      _vm._v(" "),
+      _c("app-echart-scatter", { attrs: { "option-data": _vm.option } }),
     ],
     1
   )
@@ -1718,10 +1820,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1734,48 +1836,9 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Contextual states" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeStates) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [_vm._v("Bootstrap includes validation styles for ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("valid")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" and ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("invalid")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" states on most form controls.")]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-textarea", {
-        attrs: {
-          id: "textarea-state",
-          state: _vm.text.length <= 10,
-          placeholder: "Enter only 10 characters",
-          rows: "3",
-        },
-        model: {
-          value: _vm.text,
-          callback: function ($$v) {
-            _vm.text = $$v
-          },
-          expression: "text",
-        },
-      }),
-    ],
+    "b-card",
+    { attrs: { title: "Data Science" } },
+    [_c("app-echart-stacked-area", { attrs: { "option-data": _vm.option } })],
     1
   )
 }
@@ -1786,32 +1849,380 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/@core/components/b-card-code/index.js":
-/*!****************************************************************!*\
-  !*** ./resources/js/src/@core/components/b-card-code/index.js ***!
-  \****************************************************************/
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue":
+/*!**************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue ***!
+  \**************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BCardCode.vue */ "./resources/js/src/@core/components/b-card-code/BCardCode.vue");
+/* harmony import */ var _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartBar.vue?vue&type=template&id=37aa4fe5& */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&");
+/* harmony import */ var _AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartBar.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-/* harmony default export */ __webpack_exports__["default"] = (_BCardCode_vue__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue":
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5& ***!
+  \*********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartBar.vue?vue&type=template&id=37aa4fe5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartBar.vue?vue&type=template&id=37aa4fe5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartBar_vue_vue_type_template_id_37aa4fe5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue":
+/*!*******************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue ***!
+  \*******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&");
+/* harmony import */ var _AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartDoughnut.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartDoughnut.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& ***!
+  \**************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartDoughnut.vue?vue&type=template&id=6d5dc320& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartDoughnut.vue?vue&type=template&id=6d5dc320&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartDoughnut_vue_vue_type_template_id_6d5dc320___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue":
+/*!***************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=template&id=6fb03d12& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&");
+/* harmony import */ var _AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartLine.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js??ref--6-1!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--6-2!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12& ***!
+  \**********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartLine.vue?vue&type=template&id=6fb03d12& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartLine.vue?vue&type=template&id=6fb03d12&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartLine_vue_vue_type_template_id_6fb03d12___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartRadar.vue?vue&type=template&id=a6972250& */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&");
+/* harmony import */ var _AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartRadar.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartRadar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartRadar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartRadar.vue?vue&type=template&id=a6972250& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartRadar.vue?vue&type=template&id=a6972250&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartRadar_vue_vue_type_template_id_a6972250___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartScatter.vue?vue&type=template&id=e1f93fe0& */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&");
+/* harmony import */ var _AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartScatter.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartScatter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartScatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartScatter.vue?vue&type=template&id=e1f93fe0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartScatter.vue?vue&type=template&id=e1f93fe0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartScatter_vue_vue_type_template_id_e1f93fe0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue":
 /*!**********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue ***!
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue ***!
   \**********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextArea.vue?vue&type=template&id=6f81f9ec& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec&");
-/* harmony import */ var _FormTextArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextArea.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js&");
+/* harmony import */ var _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&");
+/* harmony import */ var _AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppEchartStackedArea.vue?vue&type=script&lang=js& */ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1821,9 +2232,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1833,833 +2244,708 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue"
+component.options.__file = "resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js& ***!
   \***********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartStackedArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec&":
+/***/ "./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&":
 /*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec& ***!
+  !*** ./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& ***!
   \*****************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextArea.vue?vue&type=template&id=6f81f9ec& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextArea.vue?vue&type=template&id=6f81f9ec&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/charts/echart/AppEchartStackedArea.vue?vue&type=template&id=e9edd0b4&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextArea_vue_vue_type_template_id_6f81f9ec___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c&");
-/* harmony import */ var _FormTextAreaAutoHeight_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaAutoHeight.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaAutoHeight_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaAutoHeight_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaAutoHeight.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaAutoHeight_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c&":
-/*!***************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c& ***!
-  \***************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaAutoHeight.vue?vue&type=template&id=368c047c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaAutoHeight_vue_vue_type_template_id_368c047c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppEchartStackedArea_vue_vue_type_template_id_e9edd0b4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue":
-/*!*****************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./resources/js/src/@core/components/charts/echart/theme.json":
+/*!********************************************************************!*\
+  !*** ./resources/js/src/@core/components/charts/echart/theme.json ***!
+  \********************************************************************/
+/*! exports provided: color, backgroundColor, textStyle, title, line, radar, bar, pie, scatter, boxplot, parallel, sankey, funnel, gauge, candlestick, graph, map, geo, categoryAxis, valueAxis, logAxis, timeAxis, toolbox, legend, tooltip, timeline, visualMap, dataZoom, markPoint, default */
+/***/ (function(module) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaCounter.vue?vue&type=template&id=1f6436c0& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0&");
-/* harmony import */ var _FormTextAreaCounter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaCounter.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaCounter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+module.exports = JSON.parse("{\"color\":[\"#826AF9\",\"#9F87FF\",\"#D2B0FF\",\"#F8D3FF\"],\"backgroundColor\":\"rgba(0,0,0,0)\",\"textStyle\":{},\"title\":{\"textStyle\":{\"color\":\"#666666\"},\"subtextStyle\":{\"color\":\"#999999\"}},\"line\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"1\"}},\"lineStyle\":{\"normal\":{\"width\":\"1\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":false},\"radar\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"2\"}},\"lineStyle\":{\"normal\":{\"width\":\"3\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":true},\"bar\":{\"itemStyle\":{\"normal\":{\"barBorderWidth\":\"0\",\"barBorderColor\":\"#444444\"},\"emphasis\":{\"barBorderWidth\":\"0\",\"barBorderColor\":\"#444444\"}}},\"pie\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"scatter\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"boxplot\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"parallel\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"sankey\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"funnel\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"gauge\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"},\"emphasis\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}}},\"candlestick\":{\"itemStyle\":{\"normal\":{\"color\":\"#d0648a\",\"color0\":\"#ffffff\",\"borderColor\":\"#d0648a\",\"borderColor0\":\"#22c3aa\",\"borderWidth\":1}}},\"graph\":{\"itemStyle\":{\"normal\":{\"borderWidth\":\"0\",\"borderColor\":\"#444444\"}},\"lineStyle\":{\"normal\":{\"width\":1,\"color\":\"#aaa\"}},\"symbolSize\":\"10\",\"symbol\":\"emptyCircle\",\"smooth\":true,\"color\":[\"#4ea397\",\"#22c3aa\",\"#7bd9a5\"],\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#ffffff\"}}}},\"map\":{\"itemStyle\":{\"normal\":{\"areaColor\":\"#eeeeee\",\"borderColor\":\"#999999\",\"borderWidth\":\"0.5\"},\"emphasis\":{\"areaColor\":\"rgba(34,195,170,0.25)\",\"borderColor\":\"#22c3aa\",\"borderWidth\":\"0.5\"}},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#28544e\"}},\"emphasis\":{\"textStyle\":{\"color\":\"rgb(52,158,142)\"}}}},\"geo\":{\"itemStyle\":{\"normal\":{\"areaColor\":\"#eeeeee\",\"borderColor\":\"#999999\",\"borderWidth\":\"0.5\"},\"emphasis\":{\"areaColor\":\"rgba(34,195,170,0.25)\",\"borderColor\":\"#22c3aa\",\"borderWidth\":\"0.5\"}},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#28544e\"}},\"emphasis\":{\"textStyle\":{\"color\":\"rgb(52,158,142)\"}}}},\"categoryAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"valueAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"logAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"timeAxis\":{\"axisLine\":{\"show\":true,\"lineStyle\":{\"color\":\"#cccccc\"}},\"axisTick\":{\"show\":false,\"lineStyle\":{\"color\":\"#333333\"}},\"axisLabel\":{\"show\":true,\"textStyle\":{\"color\":\"#999999\"}},\"splitLine\":{\"show\":true,\"lineStyle\":{\"color\":[\"#eeeeee\"]}},\"splitArea\":{\"show\":false,\"areaStyle\":{\"color\":[\"rgba(250,250,250,0.3)\",\"rgba(200,200,200,0.3)\"]}}},\"toolbox\":{\"iconStyle\":{\"normal\":{\"borderColor\":\"#aaaaaa\"},\"emphasis\":{\"borderColor\":\"#666\"}}},\"legend\":{\"textStyle\":{\"color\":\"#999999\"}},\"tooltip\":{\"axisPointer\":{\"lineStyle\":{\"color\":\"#ccc\",\"width\":1},\"crossStyle\":{\"color\":\"#ccc\",\"width\":1}}},\"timeline\":{\"lineStyle\":{\"color\":\"#349e8e\",\"width\":1},\"itemStyle\":{\"normal\":{\"color\":\"#349e8e\",\"borderWidth\":\"1\"},\"emphasis\":{\"color\":\"#57e8d2\"}},\"controlStyle\":{\"normal\":{\"color\":\"#349e8e\",\"borderColor\":\"#349e8e\",\"borderWidth\":\"0\"}},\"checkpointStyle\":{\"color\":\"#22c3aa\",\"borderColor\":\"rgba(34,195,170,0.25)\"},\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#349e8e\"}}}},\"visualMap\":{\"color\":[\"#d0648a\",\"#22c3aa\",\"rgba(123,217,165,0.2)\"]},\"dataZoom\":{\"backgroundColor\":\"#fff\",\"dataBackgroundColor\":\"#dedede\",\"fillerColor\":\"rgba(34,195,170,0.25)\",\"handleColor\":\"#dddddd\",\"handleSize\":\"100%\",\"textStyle\":{\"color\":\"#999\"}},\"markPoint\":{\"label\":{\"normal\":{\"textStyle\":{\"color\":\"#ffffff\"}},\"emphasis\":{\"textStyle\":{\"color\":\"#ffffff\"}}}}}");
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaCounter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaCounter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaCounter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0& ***!
-  \************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaCounter.vue?vue&type=template&id=1f6436c0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaCounter.vue?vue&type=template&id=1f6436c0&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaCounter_vue_vue_type_template_id_1f6436c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856&");
-/* harmony import */ var _FormTextAreaDebounce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaDebounce.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaDebounce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDebounce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDebounce.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDebounce_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856& ***!
-  \*************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDebounce.vue?vue&type=template&id=1f6d6856&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDebounce_vue_vue_type_template_id_1f6d6856___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue":
-/*!*****************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue ***!
-  \*****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaDefault.vue?vue&type=template&id=44d6ba65& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65&");
-/* harmony import */ var _FormTextAreaDefault_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaDefault.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaDefault_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDefault_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDefault.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDefault_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65& ***!
-  \************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDefault.vue?vue&type=template&id=44d6ba65& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDefault.vue?vue&type=template&id=44d6ba65&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDefault_vue_vue_type_template_id_44d6ba65___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaDisableResize.vue?vue&type=template&id=120e5940& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940&");
-/* harmony import */ var _FormTextAreaDisableResize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaDisableResize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaDisableResize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDisableResize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDisableResize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDisableResize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940& ***!
-  \******************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaDisableResize.vue?vue&type=template&id=120e5940& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaDisableResize.vue?vue&type=template&id=120e5940&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaDisableResize_vue_vue_type_template_id_120e5940___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732&");
-/* harmony import */ var _FormTextAreaFloatingLabel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaFloatingLabel.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaFloatingLabel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFloatingLabel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaFloatingLabel.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFloatingLabel_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732& ***!
-  \******************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFloatingLabel.vue?vue&type=template&id=6b83d732&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFloatingLabel_vue_vue_type_template_id_6b83d732___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue ***!
-  \*******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaFormatter.vue?vue&type=template&id=0964d56e& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e&");
-/* harmony import */ var _FormTextAreaFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaFormatter.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaFormatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e&":
-/*!**************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e& ***!
-  \**************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaFormatter.vue?vue&type=template&id=0964d56e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaFormatter.vue?vue&type=template&id=0964d56e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaFormatter_vue_vue_type_template_id_0964d56e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaReadonly.vue?vue&type=template&id=ac16f164& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164&");
-/* harmony import */ var _FormTextAreaReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaReadonly.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaReadonly.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164& ***!
-  \*************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaReadonly.vue?vue&type=template&id=ac16f164& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaReadonly.vue?vue&type=template&id=ac16f164&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaReadonly_vue_vue_type_template_id_ac16f164___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaRows.vue?vue&type=template&id=9300fd36& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36&");
-/* harmony import */ var _FormTextAreaRows_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaRows.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaRows_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaRows_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaRows.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaRows_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36& ***!
-  \*********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaRows.vue?vue&type=template&id=9300fd36& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaRows.vue?vue&type=template&id=9300fd36&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaRows_vue_vue_type_template_id_9300fd36___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue ***!
-  \**************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaSize.vue?vue&type=template&id=3556e8e6& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6&");
-/* harmony import */ var _FormTextAreaSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6&":
-/*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6& ***!
-  \*********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaSize.vue?vue&type=template&id=3556e8e6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaSize.vue?vue&type=template&id=3556e8e6&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaSize_vue_vue_type_template_id_3556e8e6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue ***!
-  \****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTextAreaStates.vue?vue&type=template&id=d93df7e4& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4&");
-/* harmony import */ var _FormTextAreaStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTextAreaStates.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTextAreaStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaStates.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4&":
-/*!***********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4& ***!
-  \***********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTextAreaStates.vue?vue&type=template&id=d93df7e4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-textarea/FormTextAreaStates.vue?vue&type=template&id=d93df7e4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTextAreaStates_vue_vue_type_template_id_d93df7e4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-textarea/code.js":
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue":
 /*!*************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-textarea/code.js ***!
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue ***!
   \*************************************************************************/
-/*! exports provided: codeAutoHeight, codeDebounce, codeDefault, codeDisableResize, codeFloatingLabel, codeFormatter, codeRows, codeReadonly, codeSize, codeStates, codeCounter */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeAutoHeight", function() { return codeAutoHeight; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDebounce", function() { return codeDebounce; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDefault", function() { return codeDefault; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDisableResize", function() { return codeDisableResize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFloatingLabel", function() { return codeFloatingLabel; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFormatter", function() { return codeFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeRows", function() { return codeRows; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeReadonly", function() { return codeReadonly; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeStates", function() { return codeStates; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeCounter", function() { return codeCounter; });
-var codeAutoHeight = "\n<template>\n  <b-row>\n    <b-col\n      xl=\"6\"\n      cols=\"12\"\n    >\n      <label for=\"textarea-auto-height\">Auto height:</label>\n      <b-form-textarea\n        id=\"textarea-auto-height\"\n        placeholder=\"Auto height textarea\"\n        rows=\"3\"\n        max-rows=\"8\"\n      />\n    </b-col>\n    <b-col\n      xl=\"6\"\n      cols=\"12\"\n    >\n      <label for=\"textarea-no-auto-shrink\">No auto-shrink:</label>\n      <b-form-textarea\n        id=\"textarea-no-auto-shrink\"\n        placeholder=\"Auto height (no-shrink) textarea\"\n        rows=\"3\"\n        max-rows=\"8\"\n        no-auto-shrink\n      />\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport { BFormTextarea, BRow, BCol } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
-var codeDebounce = "\n<template>\n  <div>\n    <b-form-textarea\n      v-model=\"value\"\n      debounce=\"500\"\n      rows=\"3\"\n      max-rows=\"5\"\n    />\n    <pre class=\"mt-1\">{{ value }}</pre>\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n  data: () => ({\n    value: '',\n  }),\n}\n</script>\n";
-var codeDefault = "\n<template>\n  <div>\n    <label for=\"textarea-default\">Textarea</label>\n    <b-form-textarea\n      id=\"textarea-default\"\n      placeholder=\"Textarea\"\n      rows=\"3\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea, BCardText } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardText,\n    BFormTextarea,\n  },\n}\n</script>\n\n";
-var codeDisableResize = "\n<template>\n  <div>\n    <b-form-textarea\n      id=\"textarea-no-resize\"\n      placeholder=\"Fixed height textarea\"\n      rows=\"3\"\n      no-resize\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n}\n</script>\n";
-var codeFloatingLabel = "\n<template>\n  <div class=\"form-label-group\">\n    <b-form-textarea\n      id=\"textarea\"\n      rows=\"3\"\n      placeholder=\"Label in Textarea\"\n    />\n    <label for=\"label-textarea\">Label in Textarea</label>\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n}\n</script>\n";
-var codeFormatter = "\n<template>\n  <div>\n    <b-form-group\n      class=\"mb-0\"\n      label=\"Textarea with formatter (on input)\"\n      label-for=\"textarea-formatter\"\n      description=\"We will convert your text to lowercase instantly\"\n    >\n      <b-form-textarea\n        id=\"textarea-formatter\"\n        v-model=\"text1\"\n        placeholder=\"Enter your text\"\n        :formatter=\"formatter\"\n      />\n    </b-form-group>\n    <p><b>Value:</b> {{ text1 }}</p>\n\n    <b-form-group\n      class=\"mb-0\"\n      label=\"Textarea with lazy formatter (on blur)\"\n      label-for=\"textarea-lazy\"\n      description=\"This one is a little lazy!\"\n    >\n      <b-form-textarea\n        id=\"textarea-lazy\"\n        v-model=\"text2\"\n        placeholder=\"Enter your text\"\n        lazy-formatter\n        :formatter=\"formatter\"\n      />\n    </b-form-group>\n    <p><b>Value:</b> {{ text2 }}</p>\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea, BFormGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BFormGroup,\n  },\n  data: () => ({\n    text1: '',\n    text2: '',\n  }),\n  methods: {\n    formatter(value) {\n      return value.toLowerCase()\n    },\n  },\n}\n</script>\n";
-var codeRows = "\n<template>\n  <b-form-textarea\n    id=\"textarea-rows\"\n    placeholder=\"Tall textarea\"\n    rows=\"8\"\n  />\n</template>\n\n<script>\nimport { BFormTextarea} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n}\n</script>\n";
-var codeReadonly = "\n<template>\n  <div>\n    <b-form-textarea\n      id=\"textarea-plaintext\"\n      plaintext\n      :value=\"text\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n  data: () => ({\n    text: \"This is some text.\nIt is read only and doesn't look like an input.\",\n  }),\n}\n</script>\n";
-var codeSize = "\n<template>\n  <b-row>\n    <b-col sm=\"2\">\n      <label\n        for=\"textarea-small\"\n        class=\"text-nowrap\"\n      >Small:</label>\n    </b-col>\n    <b-col\n      sm=\"10\"\n      class=\"mb-1\"\n    >\n      <b-form-textarea\n        id=\"textarea-small\"\n        size=\"sm\"\n        placeholder=\"Small textarea\"\n      />\n    </b-col>\n    <b-col sm=\"2\">\n      <label\n        for=\"textarea-default\"\n        class=\"text-nowrap\"\n      >Default:</label>\n    </b-col>\n    <b-col\n      sm=\"10\"\n      class=\"mb-1\"\n    >\n      <b-form-textarea\n        id=\"textarea-default\"\n        placeholder=\"Default textarea\"\n      />\n    </b-col>\n    <b-col sm=\"2\">\n      <label\n        for=\"textarea-large\"\n        class=\"text-nowrap\"\n      >Large:</label>\n    </b-col>\n    <b-col\n      sm=\"10\"\n      class=\"mb-1\"\n    >\n      <b-form-textarea\n        id=\"textarea-large\"\n        size=\"lg\"\n        placeholder=\"Large textarea\"\n      />\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport { BFormTextarea, BRow, BCol } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n    BRow,\n    BCol,\n  },\n}\n</script>\n";
-var codeStates = "\n<template>\n  <b-form-textarea\n    id=\"textarea-state\"\n    v-model=\"text\"\n    :state=\"text.length <= 10\"\n    placeholder=\"Enter only 10 characters\"\n    rows=\"3\"\n  />\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n  data() {\n    return {\n      text: '',\n    }\n  },\n}\n</script>\n";
-var codeCounter = "\n<template>\n  <div>\n    <b-form-textarea\n      id=\"textarea-state\"\n      v-model=\"text\"\n      :state=\"text.length <= 10\"\n      placeholder=\"Enter only 10 characters\"\n      rows=\"3\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormTextarea } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTextarea,\n  },\n  data: () => ({\n    value: '',\n    maxChar: 20,\n  }),\n}\n</script>\n";
+/* harmony import */ var _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Echart.vue?vue&type=template&id=1131086e& */ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&");
+/* harmony import */ var _Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Echart.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/Echart.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Echart.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&":
+/*!********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e& ***!
+  \********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./Echart.vue?vue&type=template&id=1131086e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/Echart.vue?vue&type=template&id=1131086e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Echart_vue_vue_type_template_id_1131086e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartArea.vue?vue&type=template&id=fa1ebd14& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&");
+/* harmony import */ var _EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartArea.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartArea.vue?vue&type=template&id=fa1ebd14& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartArea.vue?vue&type=template&id=fa1ebd14&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartArea_vue_vue_type_template_id_fa1ebd14___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartBar.vue?vue&type=template&id=9d393b8c& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&");
+/* harmony import */ var _EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartBar.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBar.vue?vue&type=template&id=9d393b8c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBar.vue?vue&type=template&id=9d393b8c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBar_vue_vue_type_template_id_9d393b8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&");
+/* harmony import */ var _EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartBarHorizontal.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBarHorizontal.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartBarHorizontal.vue?vue&type=template&id=7c9f65fe&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartBarHorizontal_vue_vue_type_template_id_7c9f65fe___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=template&id=678bddeb& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&");
+/* harmony import */ var _EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss& ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartDoughnut.vue?vue&type=template&id=678bddeb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartDoughnut.vue?vue&type=template&id=678bddeb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartDoughnut_vue_vue_type_template_id_678bddeb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartLine.vue?vue&type=template&id=2d19755d& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&");
+/* harmony import */ var _EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartLine.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartLine.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&":
+/*!************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartLine.vue?vue&type=template&id=2d19755d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartLine.vue?vue&type=template&id=2d19755d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartLine_vue_vue_type_template_id_2d19755d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartRadar.vue?vue&type=template&id=c71b8026& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&");
+/* harmony import */ var _EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartRadar.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartRadar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026& ***!
+  \*************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartRadar.vue?vue&type=template&id=c71b8026& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartRadar.vue?vue&type=template&id=c71b8026&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartRadar_vue_vue_type_template_id_c71b8026___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue":
+/*!********************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue ***!
+  \********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=template&id=f2dd8036& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&");
+/* harmony import */ var _EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss& ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/style-loader!../../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=style&index=0&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=style&index=0&lang=scss&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036& ***!
+  \***************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartScatter.vue?vue&type=template&id=f2dd8036& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartScatter.vue?vue&type=template&id=f2dd8036&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartScatter_vue_vue_type_template_id_f2dd8036___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EchartStackedArea.vue?vue&type=template&id=464904fb& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&");
+/* harmony import */ var _EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EchartStackedArea.vue?vue&type=script&lang=js& */ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartStackedArea.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb& ***!
+  \*******************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./EchartStackedArea.vue?vue&type=template&id=464904fb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/charts-and-maps/charts/echart/EchartStackedArea.vue?vue&type=template&id=464904fb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_EchartStackedArea_vue_vue_type_template_id_464904fb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ })
 

@@ -9,18 +9,18 @@
     <b-table
       striped
       responsive
-      :items="permissionsData"
+      :items="rolesData"
+      :fields="permissionsData"
       class="mb-0"
     >
 
-      <template #cell(module)="data">
-        {{ data.value }}
+      <template #cell(name)="data">
+        {{ data.item.name }}
       </template>
-      <template #cell()="data">
-        <b-form-checkbox
-          disabled
-          :checked="data.value"
-        />
+      <template #cell(permissions)="data">
+        <span v-for="(p, i) in data.item.permissions" :key="'i'+i">
+        <b-badge class="ml-1" variant="success">{{p.name}}</b-badge>
+        </span>
       </template>
 
     </b-table>
@@ -29,54 +29,38 @@
 
 <script>
 import {
-  BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
+  BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox, BBadge
 } from 'bootstrap-vue'
-
+import useUsersList from '../users-list/useUsersList'
 export default {
   components: {
-    BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox,
+    BCard, BTable, BCardBody, BCardTitle, BCardSubTitle, BFormCheckbox, BBadge
+  },
+  props: {
+    rolesData: {
+      type: Object,
+      required: true,
+      permissions: {
+        type: Object,
+        required: true,
+      },
+    },
   },
   setup() {
     const permissionsData = [
+      { key: 'name', sortable: true },
       {
-        module: 'Admin',
-        read: true,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Staff',
-        read: false,
-        write: true,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'Author',
-        read: true,
-        write: false,
-        create: true,
-        delete: false,
-      },
-      {
-        module: 'Contributor',
-        read: false,
-        write: false,
-        create: false,
-        delete: false,
-      },
-      {
-        module: 'User',
-        read: false,
-        write: false,
-        create: false,
-        delete: true,
+        key: 'permissions',
+        permissions: [{
+          key: 'name', sortable: true,
+        }],
+        sortable: false,
       },
     ]
-
+    const { resolveUserRoleVariant } = useUsersList()
     return {
       permissionsData,
+      resolveUserRoleVariant,
     }
   },
 }

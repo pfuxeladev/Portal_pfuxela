@@ -33,14 +33,20 @@
               />
             </div>
           </b-col>
-          <b-col cols="6" md="3">
+
+          <b-col cols="6" md="3" v-if="can('Create Abastecimento_recorrente')">
             <b-button @click="showModal" variant="outline-primary">criar pedido de abastecimento</b-button>
           </b-col>
         </b-row>
       </div>
       <b-row>
-        <b-col cols="12" >
+        <b-col cols="12" class="table-responsive" >
           <b-table  ref="refAbstRecorrente" :items="fetchAbstRecorrente" responsive :fields="fieldCollumns" primary-key="id" :sort-by.sync="sortBy" show-empty empty-text="Nenhum registo feito" :sort-desc.sync="isSortDirDesc" class="position-relative">
+            <template #cell(data_submissao)="data">
+                <div>
+                    {{dateTime(data.item.created_at) }}
+                </div>
+            </template>
                      <template #cell(ordem)="data">
                         {{data.item.abastecimento.ordem.codigo_ordem}}
                     </template>
@@ -50,19 +56,28 @@
                      <template #cell(viatura)="data">
                         {{data.item.viatura.matricula}}
                     </template>
+                    <template #cell(qtd_disponivel)="data">
+                        {{data.item.qtd_disponivel}}
+                    </template>
+                    <template #cell(qtd_abastecida)="data">
+                        {{data.item.qtd}}
+                    </template>
                     <template #cell(motorista)="data">
                         {{data.item.motorista.person.nome_completo}}
                     </template>
                     <template #cell(hora_de_saida)="data">
                         {{data.item.horaSaida}}
                     </template>
+                     <template #cell(user)="data">
+                        {{data.item.abastecimento.user.name}}
+                    </template>
                     <template #cell(acções)="data">
-                        <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL">
+                        <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL"  v-if="can('Aprove Extra Order')">
 
                             <template #button-content>
                                 <feather-icon icon="MoreVerticalIcon" size="16" class="align-middle text-body" />
                             </template>
-                            <b-dropdown-item @click="details(data.item.abastecimento.ordem.refs)">
+                            <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
                                 <feather-icon icon="FileTextIcon" />
                                 <span class="align-middle ml-50">Mostrar</span>
                             </b-dropdown-item>
@@ -103,12 +118,11 @@
       >
         <div class="d-block">
           <validation-observer
-            #default="{ handleSubmit }"
             ref="refFormObserver"
           >
             <b-form
               ref="form"
-              @submit.prevent="handleSubmit(submitSupply)"
+              @submit.prevent="submitSupply"
             >
               <b-form-row>
                 <b-col cols="6" md="6">
@@ -141,16 +155,15 @@
                     name="Viatura"
                     rules="required"
                   >
-                    <b-form-group label="Viatura" label-for="Viatura">
+                    <b-form-group label="Viatura">
                       <v-select
                         id="Viatura"
-                        v-model="OrderForm.viatura_id"
+                        v-model="OrderForm.viatura_matricula"
                         :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                         label="matricula"
                         :options="viaturas"
-                        :reduce="viaturas => viaturas.id"
+                        :reduce="viaturas => viaturas.matricula"
                         :clearable="false"
-                        input-id="viatura"
                         :state="getValidationState(validationContext)"
                       ></v-select>
                       <b-form-invalid-feedback>
@@ -394,7 +407,7 @@ export default {
     if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
     const toast = useToast();
     const form = new Form({
-      viatura_id: null,
+      viatura_matricula: '',
       bombas_id: null,
       qtd: null,
       horaSaida: '',
@@ -407,8 +420,7 @@ export default {
       OrderForm.value = JSON.parse(JSON.stringify(form));
     };
     onUnmounted(() => {
-      if (store.hasModule(SUPPLY_STORE_MODULE_NAME))
-        store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
 
     function submitSupply() {
@@ -425,6 +437,7 @@ export default {
             },
           })
           this.$refs.AbastecimentoForm.hide()
+          window.location.reload()
         })
         .catch(err => {
           if (err.response.status === 421) {
@@ -470,6 +483,9 @@ export default {
     function hideModal() {
       this.$refs.AbastecimentoForm.hide();
     }
+    function dateTime(value) {
+      return moment(value).format('DD/MM/YYYY hh:mm')
+    }
 
     const {
       fetchAbstRecorrente,
@@ -514,6 +530,7 @@ export default {
       AbstDetails,
       // show details
       details,
+      dateTime,
     }
   },
 }

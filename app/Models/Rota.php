@@ -10,6 +10,16 @@ class Rota extends Model
     use HasFactory;
 
     protected $guard = 'api';
+    protected $table = 'rotas';
+
+    protected $fillable = [
+        'id',
+        'nome_rota',
+        'projecto_id',
+        'tipoRota',
+        'endereco',
+        'distancia_km'
+    ];
 
     public function projecto(){
         return $this->belongsTo(projecto::class);
@@ -19,8 +29,12 @@ class Rota extends Model
         return $this->hasMany(Abastecimento_rota::class);
     }
 
+    public function ordem_viatura(){
+        return $this->belongsToMany(ordem_viatura::class,'ordem_viatura_rotas', 'rota_id', 'ordem_viatura_id');
+    }
+
     public function viatura(){
-        return $this->belongsToMany(viatura::class);
+        return $this->belongsToMany(viatura::class, 'viatura_rotas', 'rota_id', 'viatura_id');
     }
 
     function ordemViaturaRota(){
@@ -30,4 +44,9 @@ class Rota extends Model
     public function horario(){
         return $this->hasMany(Horario::class);
     }
+
+
+
+
+
 }

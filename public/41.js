@@ -1,24 +1,28 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[41],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _FormTagsBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsBasic.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue");
-/* harmony import */ var _FormTagsSeparators_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormTagsSeparators.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue");
-/* harmony import */ var _FormTagsRemoval_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormTagsRemoval.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue");
-/* harmony import */ var _FormTagsStyling_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormTagsStyling.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue");
-/* harmony import */ var _FormTagsValidation_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormTagsValidation.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue");
-/* harmony import */ var _FormTagsDetecting_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormTagsDetecting.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue");
-/* harmony import */ var _FormTagsNativeInput_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormTagsNativeInput.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue");
-/* harmony import */ var _FormTagsCustom_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormTagsCustom.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue");
-/* harmony import */ var _FormTagsAdvanceCustom_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormTagsAdvanceCustom.vue */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue");
+/* harmony import */ var _FormSpinbuttonBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonBasic.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue");
+/* harmony import */ var _FormSpinbuttonMinMax_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormSpinbuttonMinMax.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue");
+/* harmony import */ var _FormSpinbuttonStep_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormSpinbuttonStep.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue");
+/* harmony import */ var _FormSpinbuttonWrap_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormSpinbuttonWrap.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue");
+/* harmony import */ var _FormSpinbuttonSize_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormSpinbuttonSize.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue");
+/* harmony import */ var _FormSpinbuttonInline_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormSpinbuttonInline.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue");
+/* harmony import */ var _FormSpinbuttonVertical_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormSpinbuttonVertical.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue");
+/* harmony import */ var _FormSpinbuttonLocale_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormSpinbuttonLocale.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue");
+/* harmony import */ var _FormSpinbuttonDisabledReadonly_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormSpinbuttonDisabledReadonly.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue");
+/* harmony import */ var _FormSpinbuttonWidth_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FormSpinbuttonWidth.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue");
+/* harmony import */ var _FormSpinbuttonValidation_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./FormSpinbuttonValidation.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue");
+/* harmony import */ var _FormSpinbuttonFormater_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./FormSpinbuttonFormater.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue");
+/* harmony import */ var _FormSpinbuttonSlots_vue__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./FormSpinbuttonSlots.vue */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue");
 //
 //
 //
@@ -35,6 +39,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
 
 
 
@@ -49,212 +85,28 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    BasicFormTags: _FormTagsBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    SeparatorsFormTags: _FormTagsSeparators_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    RemovalFormTags: _FormTagsRemoval_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    StylingFormTags: _FormTagsStyling_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    ValidationFormTags: _FormTagsValidation_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    DetectingFormTags: _FormTagsDetecting_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    NativeInputFormTags: _FormTagsNativeInput_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    CustomFormTags: _FormTagsCustom_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
-    AdvanceCustomFormTags: _FormTagsAdvanceCustom_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    FormSpinbuttonBasic: _FormSpinbuttonBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    FormSpinbuttonMinMax: _FormSpinbuttonMinMax_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    FormSpinbuttonStep: _FormSpinbuttonStep_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    FormSpinbuttonWrap: _FormSpinbuttonWrap_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    FormSpinbuttonSize: _FormSpinbuttonSize_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    FormSpinbuttonInline: _FormSpinbuttonInline_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    FormSpinbuttonVertical: _FormSpinbuttonVertical_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    FormSpinbuttonLocale: _FormSpinbuttonLocale_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    FormSpinbuttonDisabledReadonly: _FormSpinbuttonDisabledReadonly_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    FormSpinbuttonWidth: _FormSpinbuttonWidth_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+    FormSpinbuttonValidation: _FormSpinbuttonValidation_vue__WEBPACK_IMPORTED_MODULE_11__["default"],
+    FormSpinbuttonFormater: _FormSpinbuttonFormater_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
+    FormSpinbuttonSlots: _FormSpinbuttonSlots_vue__WEBPACK_IMPORTED_MODULE_13__["default"]
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.string.trim.js */ "./node_modules/core-js/modules/es.string.trim.js");
-/* harmony import */ var core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_trim_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
-/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.string.search.js */ "./node_modules/core-js/modules/es.string.search.js");
-/* harmony import */ var core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_search_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
-
-
-
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_5__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormTags"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormGroup"],
-    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BDropdown"],
-    BDropdownForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BDropdownForm"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormInput"],
-    BDropdownDivider: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BDropdownDivider"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BCardText"],
-    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BDropdownItem"],
-    BFormTag: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BFormTag"],
-    BDropdownText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_6__["BDropdownText"]
-  },
-  data: function data() {
-    return {
-      options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
-      search: '',
-      value: [],
-      codeAdvanceCustom: _code__WEBPACK_IMPORTED_MODULE_7__["codeAdvanceCustom"]
-    };
-  },
-  computed: {
-    criteria: function criteria() {
-      // Compute the search criteria
-      return this.search.trim().toLowerCase();
-    },
-    availableOptions: function availableOptions() {
-      var _this = this;
-
-      var criteria = this.criteria; // Filter out already selected options
-
-      var options = this.options.filter(function (opt) {
-        return _this.value.indexOf(opt) === -1;
-      });
-
-      if (criteria) {
-        // Show only options that match criteria
-        return options.filter(function (opt) {
-          return opt.toLowerCase().indexOf(criteria) > -1;
-        });
-      } // Show all options available
-
-
-      return options;
-    },
-    searchDesc: function searchDesc() {
-      if (this.criteria && this.availableOptions.length === 0) {
-        return 'There are no tags matching your search criteria';
-      }
-
-      return '';
-    }
-  },
-  methods: {
-    onOptionClick: function onOptionClick(_ref) {
-      var option = _ref.option,
-          addTag = _ref.addTag;
-      addTag(option);
-      this.search = '';
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -262,7 +114,14 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -298,13 +157,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BAlert: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BAlert"]
   },
   data: function data() {
     return {
-      value: ['apple', 'orange'],
+      value: 50,
       codeBasic: _code__WEBPACK_IMPORTED_MODULE_2__["codeBasic"]
     };
   }
@@ -312,127 +172,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.filter.js */ "./node_modules/core-js/modules/es.array.filter.js");
-/* harmony import */ var core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_filter_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
-
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_2__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BFormTags"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BFormGroup"],
-    BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BFormSelect"],
-    BFormTag: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BFormTag"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_3__["BCardText"]
-  },
-  data: function data() {
-    return {
-      options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],
-      value: [],
-      codeCustom: _code__WEBPACK_IMPORTED_MODULE_4__["codeCustom"]
-    };
-  },
-  computed: {
-    availableOptions: function availableOptions() {
-      var _this = this;
-
-      return this.options.filter(function (opt) {
-        return _this.value.indexOf(opt) === -1;
-      });
-    }
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -440,7 +183,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -486,37 +237,94 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
   },
   data: function data() {
     return {
-      tags: [],
-      validTags: [],
-      invalidTags: [],
-      duplicateTags: [],
-      codeDetecting: _code__WEBPACK_IMPORTED_MODULE_2__["codeDetecting"]
+      value: 50,
+      codeDisabledReadonly: _code__WEBPACK_IMPORTED_MODULE_2__["codeDisabledReadonly"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      value: 0,
+      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      codeFormater: _code__WEBPACK_IMPORTED_MODULE_2__["codeFormater"]
     };
   },
   methods: {
-    onTagState: function onTagState(valid, invalid, duplicate) {
-      this.validTags = valid;
-      this.invalidTags = invalid;
-      this.duplicateTags = duplicate;
-    },
-    validator: function validator(tag) {
-      return tag.length > 2 && tag.length < 6;
+    dayFormatter: function dayFormatter(value) {
+      return this.days[value];
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -524,55 +332,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
 //
 //
 //
@@ -605,28 +365,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"],
-    BInputGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroup"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BInputGroupAppend: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BInputGroupAppend"]
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: function data() {
     return {
-      value: ['apple', 'orange', 'banana', 'pear', 'peach'],
-      codeNativeInput: _code__WEBPACK_IMPORTED_MODULE_2__["codeNativeInput"]
+      value: 50,
+      codeInline: _code__WEBPACK_IMPORTED_MODULE_2__["codeInline"]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -634,7 +390,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -678,25 +443,42 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"],
-    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormText"],
+    BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSelect"],
     BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
   data: function data() {
     return {
-      value: ['apple', 'orange', 'grape'],
-      codeRemoval: _code__WEBPACK_IMPORTED_MODULE_2__["codeRemoval"]
+      value: 0,
+      locale: 'fr-CA',
+      locales: [{
+        value: 'en',
+        text: 'English'
+      }, {
+        value: 'de',
+        text: 'German'
+      }, {
+        value: 'fr-CA',
+        text: 'French (Canadian)'
+      }, {
+        value: 'fa',
+        text: 'Persian'
+      }, {
+        value: 'ar-EG',
+        text: 'Arabic (Egyptian)'
+      }],
+      codeLocale: _code__WEBPACK_IMPORTED_MODULE_2__["codeLocale"]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -704,13 +486,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
 //
 //
 //
@@ -745,24 +521,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"]
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
   data: function data() {
     return {
-      value: ['one', 'two'],
-      codeSeparators: _code__WEBPACK_IMPORTED_MODULE_2__["codeSeparators"]
+      value: 5,
+      codeMinMax: _code__WEBPACK_IMPORTED_MODULE_2__["codeMinMax"]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -770,68 +546,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"]
-  },
-  data: function data() {
-    return {
-      value: ['apple', 'orange', 'grape'],
-      codeStyling: _code__WEBPACK_IMPORTED_MODULE_2__["codeStyling"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-tag/code.js");
 //
 //
 //
@@ -881,163 +599,420 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormTags: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTags"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"]
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
   data: function data() {
     return {
-      tags: [],
-      dirty: false,
+      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"]
+  },
+  data: function data() {
+    return {
+      value: 50,
+      codeSlots: _code__WEBPACK_IMPORTED_MODULE_2__["codeSlots"],
+      day: 0,
+      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    };
+  },
+  methods: {
+    dayFormatter: function dayFormatter(value) {
+      return this.days[value];
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      value1: 50,
+      codeStep: _code__WEBPACK_IMPORTED_MODULE_2__["codeStep"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      value: 50,
       codeValidation: _code__WEBPACK_IMPORTED_MODULE_2__["codeValidation"]
     };
-  },
-  computed: {
-    state: function state() {
-      // Overall component validation state
-      return this.dirty ? this.tags.length > 2 && this.tags.length < 9 : null;
-    }
-  },
-  watch: {
-    tags: function tags() {
-      // Set the dirty flag on first change to the tags array
-      this.dirty = true;
-    }
-  },
-  methods: {
-    tagValidator: function tagValidator(tag) {
-      // Individual tag validator function
-      return tag === tag.toLowerCase() && tag.length > 2 && tag.length < 6;
-    }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/same-value.js":
-/*!******************************************************!*\
-  !*** ./node_modules/core-js/internals/same-value.js ***!
-  \******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// `SameValue` abstract operation
-// https://tc39.es/ecma262/#sec-samevalue
-// eslint-disable-next-line es/no-object-is -- safe
-module.exports = Object.is || function is(x, y) {
-  // eslint-disable-next-line no-self-compare -- NaN check
-  return x === y ? x !== 0 || 1 / x === 1 / y : x != x && y != y;
-};
-
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/es.string.search.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.string.search.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
-var fixRegExpWellKnownSymbolLogic = __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
-var sameValue = __webpack_require__(/*! ../internals/same-value */ "./node_modules/core-js/internals/same-value.js");
-var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
-var getMethod = __webpack_require__(/*! ../internals/get-method */ "./node_modules/core-js/internals/get-method.js");
-var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
-
-// @@search logic
-fixRegExpWellKnownSymbolLogic('search', function (SEARCH, nativeSearch, maybeCallNative) {
-  return [
-    // `String.prototype.search` method
-    // https://tc39.es/ecma262/#sec-string.prototype.search
-    function search(regexp) {
-      var O = requireObjectCoercible(this);
-      var searcher = regexp == undefined ? undefined : getMethod(regexp, SEARCH);
-      return searcher ? call(searcher, regexp, O) : new RegExp(regexp)[SEARCH](toString(O));
-    },
-    // `RegExp.prototype[@@search]` method
-    // https://tc39.es/ecma262/#sec-regexp.prototype-@@search
-    function (string) {
-      var rx = anObject(this);
-      var S = toString(string);
-      var res = maybeCallNative(nativeSearch, rx, S);
-
-      if (res.done) return res.value;
-
-      var previousLastIndex = rx.lastIndex;
-      if (!sameValue(previousLastIndex, 0)) rx.lastIndex = 0;
-      var result = regExpExec(rx, S);
-      if (!sameValue(rx.lastIndex, previousLastIndex)) rx.lastIndex = previousLastIndex;
-      return result === null ? -1 : result.index;
-    }
-  ];
-});
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c&":
-/*!*************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c& ***!
-  \*************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-row",
-    [
-      _c(
-        "b-col",
-        { attrs: { cols: "12" } },
-        [
-          _c("basic-form-tags"),
-          _vm._v(" "),
-          _c("separators-form-tags"),
-          _vm._v(" "),
-          _c("removal-form-tags"),
-          _vm._v(" "),
-          _c("styling-form-tags"),
-          _vm._v(" "),
-          _c("validation-form-tags"),
-          _vm._v(" "),
-          _c("detecting-form-tags"),
-          _vm._v(" "),
-          _c("native-input-form-tags"),
-          _vm._v(" "),
-          _c("custom-form-tags"),
-          _vm._v(" "),
-          _c("advance-custom-form-tags"),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      value: 50,
+      codeVertical: _code__WEBPACK_IMPORTED_MODULE_2__["codeVertical"]
+    };
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  data: function data() {
+    return {
+      value: 0,
+      codeWidth: _code__WEBPACK_IMPORTED_MODULE_2__["codeWidth"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BFormSpinbutton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormSpinbutton"],
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      codeWrap: _code__WEBPACK_IMPORTED_MODULE_2__["codeWrap"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc&":
 /*!***************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc& ***!
   \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1051,226 +1026,44 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Advanced custom rendering usage" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeAdvanceCustom) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
+    "b-row",
+    { staticClass: "match-height" },
     [
-      _c("b-card-text", [
-        _c("span", [_vm._v("In situations where the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("inputHandlers")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      will not work with your custom input, or if you need greater control over tag creation, you can take advantage\n      of the additional properties provided via the default slot's scope.\n    "
-          ),
-        ]),
-      ]),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-basic")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-size")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-min-max")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-step")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-wrap")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-vertical")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-locale")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-width")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-inline")], 1),
       _vm._v(" "),
       _c(
-        "div",
-        [
-          _c(
-            "b-form-group",
-            { attrs: { label: "Tagged input using dropdown" } },
-            [
-              _c("b-form-tags", {
-                attrs: { "no-outer-focus": "" },
-                scopedSlots: _vm._u([
-                  {
-                    key: "default",
-                    fn: function (ref) {
-                      var tags = ref.tags
-                      var disabled = ref.disabled
-                      var addTag = ref.addTag
-                      var removeTag = ref.removeTag
-                      return [
-                        tags.length > 0
-                          ? _c(
-                              "ul",
-                              {
-                                staticClass: "list-inline d-inline-block mb-1",
-                              },
-                              _vm._l(tags, function (tag) {
-                                return _c(
-                                  "li",
-                                  { key: tag, staticClass: "list-inline-item" },
-                                  [
-                                    _c(
-                                      "b-form-tag",
-                                      {
-                                        attrs: {
-                                          title: tag,
-                                          disabled: disabled,
-                                          variant: "primary",
-                                        },
-                                        on: {
-                                          remove: function ($event) {
-                                            return removeTag(tag)
-                                          },
-                                        },
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                " +
-                                            _vm._s(tag) +
-                                            "\n              "
-                                        ),
-                                      ]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              }),
-                              0
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _c(
-                          "b-dropdown",
-                          {
-                            attrs: {
-                              size: "sm",
-                              variant: "outline-secondary",
-                              block: "",
-                              "menu-class": "w-100",
-                            },
-                            scopedSlots: _vm._u(
-                              [
-                                {
-                                  key: "button-content",
-                                  fn: function () {
-                                    return [
-                                      _c("feather-icon", {
-                                        attrs: { icon: "LinkIcon" },
-                                      }),
-                                      _vm._v(" "),
-                                      _c("span", { staticClass: "ml-25" }, [
-                                        _vm._v("Choose tags"),
-                                      ]),
-                                    ]
-                                  },
-                                  proxy: true,
-                                },
-                              ],
-                              null,
-                              true
-                            ),
-                          },
-                          [
-                            _vm._v(" "),
-                            _c(
-                              "b-dropdown-form",
-                              {
-                                on: {
-                                  submit: function ($event) {
-                                    $event.stopPropagation()
-                                    $event.preventDefault()
-                                    return function () {}.apply(null, arguments)
-                                  },
-                                },
-                              },
-                              [
-                                _c(
-                                  "b-form-group",
-                                  {
-                                    staticClass: "mb-0",
-                                    attrs: {
-                                      "label-for": "tag-search-input",
-                                      label: "Search tags",
-                                      "label-cols-md": "auto",
-                                      "label-size": "sm",
-                                      description: _vm.searchDesc,
-                                      disabled: disabled,
-                                    },
-                                  },
-                                  [
-                                    _c("b-form-input", {
-                                      attrs: {
-                                        id: "tag-search-input",
-                                        type: "search",
-                                        size: "sm",
-                                        autocomplete: "off",
-                                      },
-                                      model: {
-                                        value: _vm.search,
-                                        callback: function ($$v) {
-                                          _vm.search = $$v
-                                        },
-                                        expression: "search",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c("b-dropdown-divider"),
-                            _vm._v(" "),
-                            _vm._l(_vm.availableOptions, function (option) {
-                              return _c(
-                                "b-dropdown-item",
-                                {
-                                  key: option,
-                                  on: {
-                                    click: function ($event) {
-                                      return _vm.onOptionClick({
-                                        option: option,
-                                        addTag: addTag,
-                                      })
-                                    },
-                                  },
-                                },
-                                [
-                                  _vm._v(
-                                    "\n              " +
-                                      _vm._s(option) +
-                                      "\n            "
-                                  ),
-                                ]
-                              )
-                            }),
-                            _vm._v(" "),
-                            _vm.availableOptions.length === 0
-                              ? _c("b-dropdown-text", [
-                                  _vm._v(
-                                    "\n              There are no tags available to select\n            "
-                                  ),
-                                ])
-                              : _vm._e(),
-                          ],
-                          2
-                        ),
-                      ]
-                    },
-                  },
-                ]),
-                model: {
-                  value: _vm.value,
-                  callback: function ($$v) {
-                    _vm.value = $$v
-                  },
-                  expression: "value",
-                },
-              }),
-            ],
-            1
-          ),
-        ],
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-spinbutton-validation")],
         1
       ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("form-spinbutton-formater")], 1),
+      _vm._v(" "),
+      _c(
+        "b-col",
+        { attrs: { lg: "6" } },
+        [_c("form-spinbutton-disabled-readonly")],
+        1
+      ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { cols: "12" } }, [_c("form-spinbutton-slots")], 1),
     ],
     1
   )
@@ -1282,10 +1075,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396&":
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396& ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1300,7 +1093,7 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Tags Basic" },
+      attrs: { title: "Basic Spinbutton" },
       scopedSlots: _vm._u([
         {
           key: "code",
@@ -1313,31 +1106,19 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _c("span", [_vm._v("Tags are added by clicking the")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("Add")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" button, pressing the")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("Enter")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" key or optionally when the")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("change")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" event fires on the new tag input.")]),
+        _vm._v(
+          "\n    Spin buttons allow for incrementing or decrementing a numerical value within a range of a minimum and maximum number, with optional step value.\n  "
+        ),
       ]),
       _vm._v(" "),
       _c(
         "div",
+        { staticClass: "mt-2" },
         [
-          _c("label", { attrs: { for: "tags-basic" } }, [
-            _vm._v("Type a new tag and press enter"),
-          ]),
+          _c("label", { attrs: { for: "demo-sb" } }, [_vm._v("Spin Button")]),
           _vm._v(" "),
-          _c("b-form-tags", {
-            staticClass: "mb-2",
-            attrs: { "input-id": "tags-basic" },
+          _c("b-form-spinbutton", {
+            attrs: { id: "demo-sb", min: "1", max: "100" },
             model: {
               value: _vm.value,
               callback: function ($$v) {
@@ -1347,7 +1128,21 @@ var render = function () {
             },
           }),
           _vm._v(" "),
-          _c("b-card-text", [_vm._v("Value: " + _vm._s(_vm.value))]),
+          _c("b-card-text", { staticClass: "mt-1" }, [
+            _vm._v("\n      Value: " + _vm._s(_vm.value) + "\n    "),
+          ]),
+          _vm._v(" "),
+          _c(
+            "b-alert",
+            { staticClass: "mb-0", attrs: { show: "", variant: "success" } },
+            [
+              _c("div", { staticClass: "alert-body" }, [
+                _vm._v(
+                  "\n        The ArrowUp and ArrowDown keys can be used to increment or decrement the value.\n      "
+                ),
+              ]),
+            ]
+          ),
         ],
         1
       ),
@@ -1362,10 +1157,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c&":
-/*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c& ***!
-  \********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1380,12 +1175,14 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Using custom form components" },
+      attrs: { title: "Disabled and readonly states" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeCustom) + "\n  ")]
+            return [
+              _vm._v("\n    " + _vm._s(_vm.codeDisabledReadonly) + "\n  "),
+            ]
           },
           proxy: true,
         },
@@ -1393,126 +1190,60 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _vm._v(
-          "\n    The scope contains attributes and event handlers that can be directly bound to most custom inputs or select\n    components.\n  "
-        ),
+        _c("span", [_vm._v("Setting the prop ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("disabled")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " places the component in a disabled, non-interactive state. The "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("readonly")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "\n      prop places the component in a readonly state (focusable, but the value cannot be changed by the user).\n    "
+          ),
+        ]),
       ]),
       _vm._v(" "),
       _c(
-        "div",
+        "b-row",
         [
           _c(
-            "b-form-group",
-            { attrs: { label: "Tagged input using select" } },
+            "b-col",
+            { staticClass: "mb-2", attrs: { md: "6" } },
             [
-              _c("b-form-tags", {
-                attrs: {
-                  size: "lg",
-                  "add-on-change": "",
-                  "no-outer-focus": "",
-                },
-                scopedSlots: _vm._u([
-                  {
-                    key: "default",
-                    fn: function (ref) {
-                      var tags = ref.tags
-                      var inputAttrs = ref.inputAttrs
-                      var inputHandlers = ref.inputHandlers
-                      var disabled = ref.disabled
-                      var removeTag = ref.removeTag
-                      return [
-                        tags.length > 0
-                          ? _c(
-                              "ul",
-                              {
-                                staticClass: "list-inline d-inline-block mb-1",
-                              },
-                              _vm._l(tags, function (tag) {
-                                return _c(
-                                  "li",
-                                  { key: tag, staticClass: "list-inline-item" },
-                                  [
-                                    _c(
-                                      "b-form-tag",
-                                      {
-                                        attrs: {
-                                          title: tag,
-                                          disabled: disabled,
-                                          variant: "primary",
-                                        },
-                                        on: {
-                                          remove: function ($event) {
-                                            return removeTag(tag)
-                                          },
-                                        },
-                                      },
-                                      [
-                                        _vm._v(
-                                          "\n                " +
-                                            _vm._s(tag) +
-                                            "\n              "
-                                        ),
-                                      ]
-                                    ),
-                                  ],
-                                  1
-                                )
-                              }),
-                              0
-                            )
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _c(
-                          "b-form-select",
-                          _vm._g(
-                            _vm._b(
-                              {
-                                attrs: {
-                                  disabled:
-                                    disabled ||
-                                    _vm.availableOptions.length === 0,
-                                  options: _vm.availableOptions,
-                                },
-                                scopedSlots: _vm._u(
-                                  [
-                                    {
-                                      key: "first",
-                                      fn: function () {
-                                        return [
-                                          _c(
-                                            "option",
-                                            {
-                                              attrs: {
-                                                disabled: "",
-                                                value: "",
-                                              },
-                                            },
-                                            [
-                                              _vm._v(
-                                                "\n                Choose a tag...\n              "
-                                              ),
-                                            ]
-                                          ),
-                                        ]
-                                      },
-                                      proxy: true,
-                                    },
-                                  ],
-                                  null,
-                                  true
-                                ),
-                              },
-                              "b-form-select",
-                              inputAttrs,
-                              false
-                            ),
-                            inputHandlers
-                          )
-                        ),
-                      ]
-                    },
+              _c("label", { attrs: { for: "sb-disabled" } }, [
+                _vm._v("Disabled spin button"),
+              ]),
+              _vm._v(" "),
+              _c("b-form-spinbutton", {
+                attrs: { id: "sb-disabled", disabled: "" },
+                model: {
+                  value: _vm.value,
+                  callback: function ($$v) {
+                    _vm.value = $$v
                   },
-                ]),
+                  expression: "value",
+                },
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { staticClass: "mb-2", attrs: { md: "6" } },
+            [
+              _c("label", { attrs: { for: "sb-readonly" } }, [
+                _vm._v("Readonly spin button"),
+              ]),
+              _vm._v(" "),
+              _c("b-form-spinbutton", {
+                attrs: { id: "sb-readonly", readonly: "" },
                 model: {
                   value: _vm.value,
                   callback: function ($$v) {
@@ -1538,10 +1269,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66&":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66& ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1556,12 +1287,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Detecting new, invalid, and duplicate tags" },
+      attrs: { title: "Spinbutton with Formater" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeDetecting) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeFormater) + "\n  ")]
           },
           proxy: true,
         },
@@ -1569,55 +1300,39 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _c("span", [_vm._v("The event ")]),
+        _c("span", [_vm._v("To provide a formatter function, set the prop ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("tag-state")]),
+        _c("code", [_vm._v("formatter-fn")]),
         _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "will be emitted whenever new tags are entered into the new tag input element, tags that do not pass validation,\n      or duplicate tags are detected. The event handler will receive three arrays as its arguments:\n    "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("validTags, invalidTags , duplicateTags ")]),
+        _c("span", [_vm._v(" to a method reference.")]),
       ]),
       _vm._v(" "),
       _c(
         "div",
         [
-          _c("label", { attrs: { for: "tags-state-event" } }, [
-            _vm._v("Enter tags"),
+          _c("label", { attrs: { for: "sb-days" } }, [
+            _vm._v("Spin button with formatter"),
           ]),
           _vm._v(" "),
-          _c("b-form-tags", {
+          _c("b-form-spinbutton", {
             attrs: {
-              "input-id": "tags-state-event",
-              "tag-validator": _vm.validator,
-              placeholder: "Enter tags (3-5 characters) separated by space",
-              separator: " ",
+              id: "sb-days",
+              "formatter-fn": _vm.dayFormatter,
+              min: "0",
+              max: "6",
+              wrap: "",
             },
-            on: { "tag-state": _vm.onTagState },
             model: {
-              value: _vm.tags,
+              value: _vm.value,
               callback: function ($$v) {
-                _vm.tags = $$v
+                _vm.value = $$v
               },
-              expression: "tags",
+              expression: "value",
             },
           }),
           _vm._v(" "),
-          _c("b-card-text", { staticClass: "mt-2" }, [
-            _vm._v("\n      Tags: " + _vm._s(_vm.tags) + "\n    "),
-          ]),
-          _vm._v(" "),
-          _c("b-card-text", [_vm._v("Event values:")]),
-          _vm._v(" "),
-          _c("ul", [
-            _c("li", [_vm._v("validTags: " + _vm._s(_vm.validTags))]),
-            _vm._v(" "),
-            _c("li", [_vm._v("invalidTags: " + _vm._s(_vm.invalidTags))]),
-            _vm._v(" "),
-            _c("li", [_vm._v("duplicateTags: " + _vm._s(_vm.duplicateTags))]),
+          _c("b-card-text", { staticClass: "mt-1 mb-0" }, [
+            _vm._v("\n      Value: " + _vm._s(_vm.value) + "\n    "),
           ]),
         ],
         1
@@ -1633,10 +1348,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c&":
-/*!*************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c& ***!
-  \*************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1651,12 +1366,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Using native browser inputs" },
+      attrs: { title: "Inline" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeNativeInput) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeInline) + "\n  ")]
           },
           proxy: true,
         },
@@ -1666,146 +1381,444 @@ var render = function () {
       _c("b-card-text", [
         _c("span", [
           _vm._v(
-            "The scope contains attributes and event handlers that can be directly bound to native "
+            "The spin button will automatically adjust it's width to fit the displayed value. Use the prop "
           ),
         ]),
         _vm._v(" "),
-        _c("code", [_vm._v("<input>")]),
+        _c("code", [_vm._v("inline")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { staticClass: "mr-1", attrs: { for: "sb-inline" } }, [
+            _vm._v("Inline spin button"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-spinbutton", {
+            attrs: { id: "sb-inline", inline: "" },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
+              },
+              expression: "value",
+            },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Locale" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeLocale) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("By default ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("<b-form-spinbutton>")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "\n      will format the displayed number in the users browser default locale. You can change the localized formatting by\n      specifying a locale (or array of locales) via the\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("locale")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("\n      prop.\n    ")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        [
+          _c("label", { attrs: { for: "sb-locales" } }, [_vm._v("Locale")]),
+          _vm._v(" "),
+          _c("b-form-select", {
+            attrs: { id: "sb-locales", options: _vm.locales },
+            model: {
+              value: _vm.locale,
+              callback: function ($$v) {
+                _vm.locale = $$v
+              },
+              expression: "locale",
+            },
+          }),
+          _vm._v(" "),
+          _c("label", { staticClass: "mt-2", attrs: { for: "sb-local" } }, [
+            _vm._v("Spin button with locale"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-spinbutton", {
+            attrs: {
+              id: "sb-locale",
+              locale: _vm.locale,
+              min: "0",
+              max: "10",
+              step: "0.125",
+            },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
+              },
+              expression: "value",
+            },
+          }),
+          _vm._v(" "),
+          _c("b-card-text", { staticClass: "mt-1" }, [
+            _vm._v("\n      Value: " + _vm._s(_vm.value) + "\n    "),
+          ]),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Min and Max" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeMinMax) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Spinbuttons have a default range from")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("1")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" to")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("100")]),
+        _vm._v(", which can be changed by setting the\n    "),
+        _c("code", [_vm._v("min")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" and ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("max")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" props.")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "sb-maxmin" } }, [
+        _vm._v("Spin button with min 0 and max 10"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-spinbutton", {
+        attrs: { id: "sb-maxmin", min: "0", max: "10" },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Size" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("As with other form controls, ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("<b-form-spinbutton>")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(" supports small and large sizing via setting the "),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("size")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop to either ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("'sm'")]),
         _vm._v(" "),
         _c("span", [_vm._v(" or ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("<select>")]),
+        _c("code", [_vm._v("'lg'")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" elements.")]),
+        _c("span", [_vm._v(", respectively.")]),
       ]),
       _vm._v(" "),
       _c(
         "div",
         [
-          _c("b-form-tags", {
-            attrs: { "no-outer-focus": "" },
-            scopedSlots: _vm._u([
-              {
-                key: "default",
-                fn: function (ref) {
-                  var tags = ref.tags
-                  var inputAttrs = ref.inputAttrs
-                  var inputHandlers = ref.inputHandlers
-                  var addTag = ref.addTag
-                  var removeTag = ref.removeTag
-                  return [
-                    _c(
-                      "b-input-group",
-                      { attrs: { "aria-controls": "my-custom-tags-list" } },
-                      [
-                        _c(
-                          "input",
-                          _vm._g(
-                            _vm._b(
-                              {
-                                staticClass: "form-control",
-                                attrs: {
-                                  placeholder: "New tag - Press enter to add",
-                                },
-                              },
-                              "input",
-                              inputAttrs,
-                              false
-                            ),
-                            inputHandlers
-                          )
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "b-input-group-append",
-                          [
-                            _c(
-                              "b-button",
-                              {
-                                attrs: { variant: "primary" },
-                                on: {
-                                  click: function ($event) {
-                                    return addTag()
-                                  },
-                                },
-                              },
-                              [_vm._v("\n              Add\n            ")]
-                            ),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "ul",
-                      {
-                        staticClass:
-                          "list-unstyled d-inline-flex flex-wrap mb-0",
-                        attrs: {
-                          id: "my-custom-tags-list",
-                          "aria-live": "polite",
-                          "aria-atomic": "false",
-                          "aria-relevant": "additions removals",
-                        },
-                      },
-                      _vm._l(tags, function (tag) {
-                        return _c(
-                          "b-card",
-                          {
-                            key: tag,
-                            staticClass: "shadow-none border mt-1 mr-1 mb-0",
-                            attrs: {
-                              id:
-                                "my-custom-tags-tag_" +
-                                tag.replace(/\s/g, "_") +
-                                "_",
-                              tag: "li",
-                              "body-class": "py-1 pr-2 text-nowrap",
-                            },
-                          },
-                          [
-                            _c("strong", [_vm._v(_vm._s(tag))]),
-                            _vm._v(" "),
-                            _c(
-                              "b-button",
-                              {
-                                staticClass: "py-0",
-                                attrs: {
-                                  variant: "link",
-                                  size: "sm",
-                                  "aria-controls":
-                                    "my-custom-tags-tag_" +
-                                    tag.replace(/\s/g, "_") +
-                                    "_",
-                                },
-                                on: {
-                                  click: function ($event) {
-                                    return removeTag(tag)
-                                  },
-                                },
-                              },
-                              [_vm._v("\n              remove\n            ")]
-                            ),
-                          ],
-                          1
-                        )
-                      }),
-                      1
-                    ),
-                  ]
+          _c("label", { attrs: { for: "sb-small" } }, [
+            _vm._v("Spin button - Small size"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-spinbutton", {
+            staticClass: "mb-1",
+            attrs: { id: "sb-small", size: "sm", placeholder: "--" },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "sb-default" } }, [
+            _vm._v("Spin button - Default size"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-spinbutton", {
+            staticClass: "mb-1",
+            attrs: { id: "sb-default", placeholder: "--" },
+          }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "sb-large" } }, [
+            _vm._v("Spin button - Large size"),
+          ]),
+          _vm._v(" "),
+          _c("b-form-spinbutton", {
+            staticClass: "mb-1",
+            attrs: { id: "sb-large", size: "lg", placeholder: "--" },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Slot" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSlots) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Spin buttons provides two slots ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("increment")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" and ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("decrement")]),
+      ]),
+      _vm._v(" "),
+      _c(
+        "b-row",
+        [
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c("b-form-spinbutton", {
+                staticClass: "mb-md-0 mb-2",
+                attrs: { min: "1", max: "100" },
+                scopedSlots: _vm._u([
+                  {
+                    key: "increment",
+                    fn: function () {
+                      return [
+                        _c("feather-icon", {
+                          attrs: { icon: "ChevronUpIcon" },
+                        }),
+                      ]
+                    },
+                    proxy: true,
+                  },
+                  {
+                    key: "decrement",
+                    fn: function () {
+                      return [
+                        _c("feather-icon", {
+                          attrs: { icon: "ChevronDownIcon" },
+                        }),
+                      ]
+                    },
+                    proxy: true,
+                  },
+                ]),
+                model: {
+                  value: _vm.value,
+                  callback: function ($$v) {
+                    _vm.value = $$v
+                  },
+                  expression: "value",
                 },
-              },
-            ]),
-            model: {
-              value: _vm.value,
-              callback: function ($$v) {
-                _vm.value = $$v
-              },
-              expression: "value",
-            },
-          }),
+              }),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "b-col",
+            { attrs: { md: "6" } },
+            [
+              _c("b-form-spinbutton", {
+                attrs: {
+                  min: "0",
+                  max: "6",
+                  wrap: "",
+                  "formatter-fn": _vm.dayFormatter,
+                },
+                scopedSlots: _vm._u([
+                  {
+                    key: "increment",
+                    fn: function () {
+                      return [
+                        _c("feather-icon", {
+                          attrs: { icon: "ChevronRightIcon" },
+                        }),
+                      ]
+                    },
+                    proxy: true,
+                  },
+                  {
+                    key: "decrement",
+                    fn: function () {
+                      return [
+                        _c("feather-icon", {
+                          attrs: { icon: "ChevronLeftIcon" },
+                        }),
+                      ]
+                    },
+                    proxy: true,
+                  },
+                ]),
+                model: {
+                  value: _vm.day,
+                  callback: function ($$v) {
+                    _vm.day = $$v
+                  },
+                  expression: "day",
+                },
+              }),
+            ],
+            1
+          ),
         ],
         1
       ),
@@ -1820,10 +1833,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1838,12 +1851,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Last tag removal via backspace keypress" },
+      attrs: { title: "Step" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeRemoval) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeStep) + "\n  ")]
           },
           proxy: true,
         },
@@ -1851,157 +1864,41 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _c("span", [_vm._v("When the prop ")]),
+        _c("span", [_vm._v("The default step increment is ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("remove-on-delete")]),
+        _c("code", [_vm._v("1")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" is set, and the user presses ")]),
+        _c("span", [_vm._v(", and can be changed via the ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("Backspace")]),
+        _c("code", [_vm._v("step")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" (or ")]),
+        _c("span", [_vm._v("prop (decimal values allowed).")]),
         _vm._v(" "),
-        _c("code", [_vm._v("Del")]),
+        _c("span", [_vm._v("When ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("step")]),
         _vm._v(" "),
         _c("span", [
           _vm._v(
-            ") and the input value is empty, the last tag in the tag list will be removed. "
+            " is set, the value will always be a multiple of the step size plus the minimum value."
           ),
         ]),
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "tags-remove-on-delete" } }, [
-            _vm._v("Enter new tags separated by space"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-tags", {
-            staticClass: "mb-2",
-            attrs: {
-              "input-id": "tags-remove-on-delete",
-              "input-attrs": {
-                "aria-describedby": "tags-remove-on-delete-help",
-              },
-              separator: " ",
-              placeholder: "Enter new tags separated by space",
-              "remove-on-delete": "",
-              "no-add-on-enter": "",
-            },
-            model: {
-              value: _vm.value,
-              callback: function ($$v) {
-                _vm.value = $$v
-              },
-              expression: "value",
-            },
-          }),
-          _vm._v(" "),
-          _c("b-form-text", { attrs: { id: "tags-remove-on-delete-help" } }, [
-            _vm._v("\n      Press "),
-            _c("code", [_vm._v("Backspace")]),
-            _vm._v(" to remove the last tag entered\n    "),
-          ]),
-          _vm._v(" "),
-          _c("b-card-text", [_vm._v("Value: " + _vm._s(_vm.value))]),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Tag creation using separators" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeSeparators) + "\n  ")]
+      _c("label", { attrs: { for: "sb-step" } }, [
+        _vm._v("Spin button with step of 0.25"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-spinbutton", {
+        attrs: { id: "sb-step", step: "0.25" },
+        model: {
+          value: _vm.value1,
+          callback: function ($$v) {
+            _vm.value1 = $$v
           },
-          proxy: true,
+          expression: "value1",
         },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "To auto create tags when a separator character is typed (i.e. "
-          ),
-        ]),
-        _vm._v(" "),
-        _c("b", [_vm._v("Space")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(", ")]),
-        _vm._v(" "),
-        _c("b", [_vm._v(",")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(", etc), set the")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("separator")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      prop to the character that will trigger the tag to be added.\n    "
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "tags-separators" } }, [
-            _vm._v("Enter tags separated by space, comma or semicolon"),
-          ]),
-          _vm._v(" "),
-          _c("b-form-tags", {
-            staticClass: "mb-2",
-            attrs: {
-              "input-id": "tags-separators",
-              separator: " ,;",
-              placeholder:
-                "Enter new tags separated by space, comma or semicolon",
-              "no-add-on-enter": "",
-            },
-            model: {
-              value: _vm.value,
-              callback: function ($$v) {
-                _vm.value = $$v
-              },
-              expression: "value",
-            },
-          }),
-          _vm._v(" "),
-          _c("b-card-text", [_vm._v("Value: " + _vm._s(_vm.value))]),
-        ],
-        1
-      ),
+      }),
     ],
     1
   )
@@ -2013,10 +1910,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716&":
-/*!*********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716& ***!
-  \*********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2031,88 +1928,7 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Styling Options" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeStyling) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", [
-        _c("span", [
-          _vm._v(
-            "Several props are available to alter the basic styling of the default tagged interface:"
-          ),
-        ]),
-        _vm._v(" "),
-        _c("code", [
-          _vm._v("tag-pills, tag-variant, size, placeholder, state, disabled"),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("label", { attrs: { for: "tags-pills" } }, [_vm._v("Enter tags")]),
-          _vm._v(" "),
-          _c("b-form-tags", {
-            staticClass: "mb-2",
-            attrs: {
-              "input-id": "tags-pills",
-              "tag-variant": "primary",
-              "tag-pills": "",
-              size: "lg",
-              separator: " ",
-              placeholder: "Enter new tags separated by space",
-            },
-            model: {
-              value: _vm.value,
-              callback: function ($$v) {
-                _vm.value = $$v
-              },
-              expression: "value",
-            },
-          }),
-          _vm._v(" "),
-          _c("b-card-text", [_vm._v("Value: " + _vm._s(_vm.value))]),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82&":
-/*!************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82& ***!
-  \************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Tag validation" },
+      attrs: { title: "Validation states" },
       scopedSlots: _vm._u([
         {
           key: "code",
@@ -2125,76 +1941,279 @@ var render = function () {
     },
     [
       _c("b-card-text", [
+        _c("span", [_vm._v("When you default to a ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("null")]),
+        _vm._v(" "),
         _c("span", [
-          _vm._v("You can optionally provide a tag validator method via the "),
+          _vm._v(
+            " value, and the user has not selected a value, you can use the "
+          ),
         ]),
         _vm._v(" "),
-        _c("code", [_vm._v("tag-validator")]),
+        _c("code", [_vm._v("state")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" prop.")]),
+        _c("span", [
+          _vm._v(
+            " prop to apply one of the contextual validation styles to the component."
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-spinbutton", {
+        attrs: { id: "sb-inline", state: Boolean(_vm.value >= 50) },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c&":
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Vertical" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeVertical) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _vm._v("Spinbuttons can be oriented in vertical mode:"),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "sb-vertical" } }, [
+        _vm._v("Vertical spin button"),
+      ]),
+      _c("br"),
+      _vm._v(" "),
+      _c("b-form-spinbutton", {
+        attrs: { id: "sb-vertical", vertical: "" },
+        model: {
+          value: _vm.value,
+          callback: function ($$v) {
+            _vm.value = $$v
+          },
+          expression: "value",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a&":
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a& ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Width" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeWidth) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("The control (when not ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("vertical")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" or ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("inline")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            ") will expand to the maximum width of the parent container You can control width via utility classes such as\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("w-50, w-75, w-100")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(", or use styles to set the width.")]),
       ]),
       _vm._v(" "),
       _c(
-        "div",
+        "b-form-group",
         [
-          _c(
-            "b-form-group",
-            {
-              attrs: {
-                state: _vm.state,
-                label: "Tags validation example",
-                "label-for": "tags-validation",
+          _c("b-form-spinbutton", {
+            staticClass: "w-100",
+            attrs: { min: "0", max: "10", step: "0.125" },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
               },
-              scopedSlots: _vm._u([
-                {
-                  key: "invalid-feedback",
-                  fn: function () {
-                    return [
-                      _vm._v(
-                        "\n        You must provide at least 3 tags and no more than 8\n      "
-                      ),
-                    ]
-                  },
-                  proxy: true,
-                },
-                {
-                  key: "description",
-                  fn: function () {
-                    return [
-                      _c("div", { attrs: { id: "tags-validation-help" } }, [
-                        _vm._v(
-                          "\n          Tags must be 3 to 5 characters in length and all lower case. Enter tags separated by spaces or press enter.\n        "
-                        ),
-                      ]),
-                    ]
-                  },
-                  proxy: true,
-                },
-              ]),
+              expression: "value",
             },
-            [
-              _c("b-form-tags", {
-                attrs: {
-                  "input-id": "tags-validation",
-                  "input-attrs": { "aria-describedby": "tags-validation-help" },
-                  state: _vm.state,
-                  "tag-validator": _vm.tagValidator,
-                  separator: " ",
-                },
-                model: {
-                  value: _vm.tags,
-                  callback: function ($$v) {
-                    _vm.tags = $$v
-                  },
-                  expression: "tags",
-                },
-              }),
-            ],
-            1
-          ),
+          }),
         ],
         1
       ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        [
+          _c("b-form-spinbutton", {
+            staticClass: "w-75",
+            attrs: { min: "0", max: "10", step: "0.125" },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
+              },
+              expression: "value",
+            },
+          }),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        [
+          _c("b-form-spinbutton", {
+            staticClass: "w-50",
+            attrs: { min: "0", max: "10", step: "0.125" },
+            model: {
+              value: _vm.value,
+              callback: function ($$v) {
+                _vm.value = $$v
+              },
+              expression: "value",
+            },
+          }),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Number wrapping" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeWrap) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "To allow the spin button to wrap from max to min when incrementing (or min to max when decrementing), set the\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("wrap")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop to ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("true")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(".")]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "sb-wrap" } }, [
+        _vm._v("Wrapping value spin button"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-spinbutton", {
+        attrs: {
+          id: "sb-wrap",
+          wrap: "",
+          min: "1",
+          max: "25",
+          placeholder: "--",
+        },
+      }),
     ],
     1
   )
@@ -2221,86 +2240,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTag.vue":
-/*!************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTag.vue ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTag.vue?vue&type=template&id=aec86c8c& */ "./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c&");
-/* harmony import */ var _FormTag_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTag.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTag_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTag.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTag_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTag.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTag_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c& ***!
-  \*******************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTag.vue?vue&type=template&id=aec86c8c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTag.vue?vue&type=template&id=aec86c8c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTag_vue_vue_type_template_id_aec86c8c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue":
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue":
 /*!**************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue ***!
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue ***!
   \**************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc&");
-/* harmony import */ var _FormTagsAdvanceCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsAdvanceCustom.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbutton.vue?vue&type=template&id=4f8a77cc& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc&");
+/* harmony import */ var _FormSpinbutton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbutton.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2310,9 +2260,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsAdvanceCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbutton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2322,54 +2272,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsAdvanceCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsAdvanceCustom.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsAdvanceCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbutton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbutton.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbutton_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc&":
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc&":
 /*!*********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc& ***!
   \*********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsAdvanceCustom.vue?vue&type=template&id=980ba1cc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbutton.vue?vue&type=template&id=4f8a77cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbutton.vue?vue&type=template&id=4f8a77cc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsAdvanceCustom_vue_vue_type_template_id_980ba1cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbutton_vue_vue_type_template_id_4f8a77cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue":
-/*!******************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue ***!
-  \******************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue ***!
+  \*******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsBasic.vue?vue&type=template&id=14793396& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396&");
-/* harmony import */ var _FormTagsBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c&");
+/* harmony import */ var _FormSpinbuttonBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2379,9 +2329,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2391,54 +2341,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c& ***!
+  \**************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsBasic.vue?vue&type=template&id=14793396& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsBasic.vue?vue&type=template&id=14793396&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonBasic.vue?vue&type=template&id=14158a1c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsBasic_vue_vue_type_template_id_14793396___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonBasic_vue_vue_type_template_id_14158a1c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue ***!
-  \*******************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue ***!
+  \******************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsCustom.vue?vue&type=template&id=abfd760c& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c&");
-/* harmony import */ var _FormTagsCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsCustom.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c&");
+/* harmony import */ var _FormSpinbuttonDisabledReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2448,9 +2398,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonDisabledReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2460,54 +2410,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsCustom.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonDisabledReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonDisabledReadonly_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c&":
-/*!**************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c& ***!
-  \**************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c&":
+/*!*************************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c& ***!
+  \*************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsCustom.vue?vue&type=template&id=abfd760c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsCustom.vue?vue&type=template&id=abfd760c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonDisabledReadonly.vue?vue&type=template&id=bc1b746c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsCustom_vue_vue_type_template_id_abfd760c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonDisabledReadonly_vue_vue_type_template_id_bc1b746c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue ***!
-  \**********************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue ***!
+  \**********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsDetecting.vue?vue&type=template&id=68390c66& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66&");
-/* harmony import */ var _FormTagsDetecting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsDetecting.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60&");
+/* harmony import */ var _FormSpinbuttonFormater_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonFormater.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2517,9 +2467,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsDetecting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonFormater_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2529,54 +2479,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsDetecting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsDetecting.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsDetecting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonFormater_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonFormater.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonFormater_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66& ***!
-  \*****************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60& ***!
+  \*****************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsDetecting.vue?vue&type=template&id=68390c66& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsDetecting.vue?vue&type=template&id=68390c66&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonFormater.vue?vue&type=template&id=e295ae60&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsDetecting_vue_vue_type_template_id_68390c66___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonFormater_vue_vue_type_template_id_e295ae60___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue":
-/*!************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue ***!
-  \************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsNativeInput.vue?vue&type=template&id=3daa338c& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c&");
-/* harmony import */ var _FormTagsNativeInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsNativeInput.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05&");
+/* harmony import */ var _FormSpinbuttonInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonInline.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2586,9 +2536,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsNativeInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2598,54 +2548,261 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsNativeInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsNativeInput.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsNativeInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonInline.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c&":
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonInline.vue?vue&type=template&id=3cb14b05&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonInline_vue_vue_type_template_id_3cb14b05___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46&");
+/* harmony import */ var _FormSpinbuttonLocale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonLocale.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormSpinbuttonLocale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonLocale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonLocale.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonLocale_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonLocale.vue?vue&type=template&id=5c4bee46&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonLocale_vue_vue_type_template_id_5c4bee46___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e&");
+/* harmony import */ var _FormSpinbuttonMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonMinMax.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormSpinbuttonMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonMinMax.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonMinMax_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonMinMax.vue?vue&type=template&id=19f1819e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonMinMax_vue_vue_type_template_id_19f1819e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d&");
+/* harmony import */ var _FormSpinbuttonSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormSpinbuttonSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsNativeInput.vue?vue&type=template&id=3daa338c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsNativeInput.vue?vue&type=template&id=3daa338c&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsNativeInput_vue_vue_type_template_id_3daa338c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue":
-/*!********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue ***!
-  \********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsRemoval.vue?vue&type=template&id=29de899a& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a&");
-/* harmony import */ var _FormTagsRemoval_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsRemoval.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSize.vue?vue&type=template&id=6f2b196d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSize_vue_vue_type_template_id_6f2b196d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e&");
+/* harmony import */ var _FormSpinbuttonSlots_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonSlots.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2655,9 +2812,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsRemoval_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonSlots_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2667,54 +2824,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsRemoval_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsRemoval.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsRemoval_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSlots_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonSlots.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSlots_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e& ***!
+  \**************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsRemoval.vue?vue&type=template&id=29de899a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsRemoval.vue?vue&type=template&id=29de899a&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonSlots.vue?vue&type=template&id=f5893d0e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsRemoval_vue_vue_type_template_id_29de899a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonSlots_vue_vue_type_template_id_f5893d0e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue ***!
-  \***********************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue ***!
+  \******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsSeparators.vue?vue&type=template&id=79cb6cb7& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7&");
-/* harmony import */ var _FormTagsSeparators_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsSeparators.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonStep.vue?vue&type=template&id=dc563a90& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90&");
+/* harmony import */ var _FormSpinbuttonStep_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonStep.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2724,9 +2881,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsSeparators_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonStep_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2736,54 +2893,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsSeparators_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsSeparators.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsSeparators_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonStep_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonStep.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonStep_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7& ***!
-  \******************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90& ***!
+  \*************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsSeparators.vue?vue&type=template&id=79cb6cb7& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsSeparators.vue?vue&type=template&id=79cb6cb7&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonStep.vue?vue&type=template&id=dc563a90& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonStep.vue?vue&type=template&id=dc563a90&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsSeparators_vue_vue_type_template_id_79cb6cb7___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonStep_vue_vue_type_template_id_dc563a90___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue":
-/*!********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue ***!
-  \********************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue ***!
+  \************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsStyling.vue?vue&type=template&id=1be77716& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716&");
-/* harmony import */ var _FormTagsStyling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsStyling.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonValidation.vue?vue&type=template&id=69809236& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236&");
+/* harmony import */ var _FormSpinbuttonValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonValidation.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2793,9 +2950,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsStyling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2805,54 +2962,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsStyling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsStyling.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsStyling_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonValidation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716&":
-/*!***************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716& ***!
-  \***************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236& ***!
+  \*******************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsStyling.vue?vue&type=template&id=1be77716& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsStyling.vue?vue&type=template&id=1be77716&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonValidation.vue?vue&type=template&id=69809236& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonValidation.vue?vue&type=template&id=69809236&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsStyling_vue_vue_type_template_id_1be77716___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonValidation_vue_vue_type_template_id_69809236___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue":
-/*!***********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue ***!
-  \***********************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue ***!
+  \**********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTagsValidation.vue?vue&type=template&id=4ee91d82& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82&");
-/* harmony import */ var _FormTagsValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTagsValidation.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c&");
+/* harmony import */ var _FormSpinbuttonVertical_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonVertical.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2862,9 +3019,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTagsValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FormSpinbuttonVertical_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2874,70 +3031,216 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsValidation.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsValidation_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonVertical_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonVertical.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonVertical_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82&":
-/*!******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82& ***!
-  \******************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c&":
+/*!*****************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c& ***!
+  \*****************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormTagsValidation.vue?vue&type=template&id=4ee91d82& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-tag/FormTagsValidation.vue?vue&type=template&id=4ee91d82&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonVertical.vue?vue&type=template&id=0951d73c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTagsValidation_vue_vue_type_template_id_4ee91d82___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonVertical_vue_vue_type_template_id_0951d73c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-tag/code.js":
-/*!********************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-tag/code.js ***!
-  \********************************************************************/
-/*! exports provided: codeAdvanceCustom, codeBasic, codeCustom, codeDetecting, codeNativeInput, codeRemoval, codeSeparators, codeStyling, codeValidation */
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeAdvanceCustom", function() { return codeAdvanceCustom; });
+/* harmony import */ var _FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonWidth.vue?vue&type=template&id=582a088a& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a&");
+/* harmony import */ var _FormSpinbuttonWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonWidth.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormSpinbuttonWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonWidth.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWidth_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a&":
+/*!**************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a& ***!
+  \**************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonWidth.vue?vue&type=template&id=582a088a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWidth.vue?vue&type=template&id=582a088a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWidth_vue_vue_type_template_id_582a088a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue ***!
+  \******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594&");
+/* harmony import */ var _FormSpinbuttonWrap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormSpinbuttonWrap.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FormSpinbuttonWrap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWrap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonWrap.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWrap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-spinbutton/FormSpinbuttonWrap.vue?vue&type=template&id=7e8c8594&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormSpinbuttonWrap_vue_vue_type_template_id_7e8c8594___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-spinbutton/code.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-spinbutton/code.js ***!
+  \***************************************************************************/
+/*! exports provided: codeBasic, codeDisabledReadonly, codeInline, codeLocale, codeMinMax, codeSize, codeVertical, codeWrap, codeWidth, codeValidation, codeStep, codeFormater, codeSlots */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeCustom", function() { return codeCustom; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDetecting", function() { return codeDetecting; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeNativeInput", function() { return codeNativeInput; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeRemoval", function() { return codeRemoval; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSeparators", function() { return codeSeparators; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeStyling", function() { return codeStyling; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDisabledReadonly", function() { return codeDisabledReadonly; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeInline", function() { return codeInline; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeLocale", function() { return codeLocale; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMinMax", function() { return codeMinMax; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeVertical", function() { return codeVertical; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeWrap", function() { return codeWrap; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeWidth", function() { return codeWidth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeValidation", function() { return codeValidation; });
-var codeAdvanceCustom = "\n<template>\n  <div>\n    <b-form-group label=\"Tagged input using dropdown\">\n      <b-form-tags\n        v-model=\"value\"\n        no-outer-focus\n      >\n        <template v-slot=\"{ tags, disabled, addTag, removeTag }\">\n          <ul\n            v-if=\"tags.length > 0\"\n            class=\"list-inline d-inline-block mb-1\"\n          >\n            <li\n              v-for=\"tag in tags\"\n              :key=\"tag\"\n              class=\"list-inline-item\"\n            >\n              <b-form-tag\n                :title=\"tag\"\n                :disabled=\"disabled\"\n                variant=\"primary\"\n                @remove=\"removeTag(tag)\"\n              >\n                {{ tag }}\n              </b-form-tag>\n            </li>\n          </ul>\n\n          <b-dropdown\n            size=\"sm\"\n            variant=\"outline-secondary\"\n            block\n            menu-class=\"w-100\"\n          >\n            <template v-slot:button-content>\n              <b-icon icon=\"tag-fill\" /> Choose tags\n            </template>\n            <b-dropdown-form @submit.stop.prevent=\"() => {}\">\n              <b-form-group\n                label-for=\"tag-search-input\"\n                label=\"Search tags\"\n                label-cols-md=\"auto\"\n                class=\"mb-0\"\n                label-size=\"sm\"\n                :description=\"searchDesc\"\n                :disabled=\"disabled\"\n              >\n                <b-form-input\n                  id=\"tag-search-input\"\n                  v-model=\"search\"\n                  type=\"search\"\n                  size=\"sm\"\n                  autocomplete=\"off\"\n                />\n              </b-form-group>\n            </b-dropdown-form>\n            <b-dropdown-divider />\n            <b-dropdown-item\n              v-for=\"option in availableOptions\"\n              :key=\"option\"\n              @click=\"onOptionClick({ option, addTag })\"\n            >\n              {{ option }}\n            </b-dropdown-item>\n            <b-dropdown-text v-if=\"availableOptions.length === 0\">\n              There are no tags available to select\n            </b-dropdown-text>\n          </b-dropdown>\n        </template>\n      </b-form-tags>\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport {BFormTags,BFormGroup,BDropdown,BDropdownForm,BFormInput,BDropdownDivider,BDropdownItem,BFormTag,BDropdownText} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n    BFormGroup,\n    BDropdown,\n    BDropdownForm,\n    BFormInput,\n    BDropdownDivider,\n    BDropdownItem,\n    BFormTag,\n    BDropdownText,\n  },\n  data: () => ({\n    options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],\n    search: '',\n    value: [],\n    codeAdvanceCustom,\n  }),\n  computed: {\n    criteria() {\n      // Compute the search criteria\n      return this.search.trim().toLowerCase()\n    },\n    availableOptions() {\n      const { criteria } = this\n\n      // Filter out already selected options\n      const options = this.options.filter(opt => this.value.indexOf(opt) === -1)\n      if (criteria) {\n        // Show only options that match criteria\n        return options.filter(opt => opt.toLowerCase().indexOf(criteria) > -1)\n      }\n\n      // Show all options available\n      return options\n    },\n    searchDesc() {\n      if (this.criteria && this.availableOptions.length === 0) {\n        return 'There are no tags matching your search criteria'\n      }\n      return ''\n    },\n  },\n  methods: {\n    onOptionClick({ option, addTag }) {\n      addTag(option)\n      this.search = ''\n    },\n  },\n}\n</script>\n";
-var codeBasic = "\n<template>\n  <div>\n    <label for=\"tags-basic\">Type a new tag and press enter</label>\n    <b-form-tags\n      v-model=\"value\"\n      input-id=\"tags-basic\"\n      class=\"mb-2\"\n    />\n    <p>Value: {{ value }}</p>\n  </div>\n</template>\n\n<script>\nimport { BFormTags } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n  },\n  data: () => ({\n    value: ['apple', 'orange'],\n  }),\n}\n</script>\n";
-var codeCustom = "\n<template>\n  <div>\n    <b-form-group label=\"Tagged input using select\">\n      <!-- prop `add-on - change` is needed to enable adding tags vie the `change` event -->\n      <b-form-tags\n        v-model=\"value\"\n        size=\"lg\"\n        add-on-change\n        no-outer-focus\n      >\n        <template v-slot=\"{ tags, inputAttrs, inputHandlers, disabled, removeTag }\">\n          <ul\n            v-if=\"tags.length > 0\"\n            class=\"list-inline d-inline-block mb-1\"\n          >\n            <li\n              v-for=\"tag in tags\"\n              :key=\"tag\"\n              class=\"list-inline-item\"\n            >\n              <b-form-tag\n                :title=\"tag\"\n                :disabled=\"disabled\"\n                variant=\"primary\"\n                @remove=\"removeTag(tag)\"\n              >\n                {{ tag }}\n              </b-form-tag>\n            </li>\n          </ul>\n          <b-form-select\n            v-bind=\"inputAttrs\"\n            :disabled=\"disabled || availableOptions.length === 0\"\n            :options=\"availableOptions\"\n            v-on=\"inputHandlers\"\n          >\n            <template v-slot:first>\n              <!-- This is required to prevent bugs with Safari -->\n              <option\n                disabled\n                value=\"\"\n              >\n                Choose a tag...\n              </option>\n            </template>\n          </b-form-select>\n        </template>\n      </b-form-tags>\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport {BFormTags, BFormTag, BFormGroup, BFormSelect} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n    BFormGroup,\n    BFormSelect,\n    BFormTag,\n  },\n  data: () => ({\n    options: ['Apple', 'Orange', 'Banana', 'Lime', 'Peach', 'Chocolate', 'Strawberry'],\n    value: [],\n    codeCustom,\n  }),\n  computed: {\n    availableOptions() {\n      return this.options.filter(opt => this.value.indexOf(opt) === -1)\n    },\n  },\n}\n</script>\n";
-var codeDetecting = "\n<template>\n  <div>\n    <label for=\"tags-state-event\">Enter tags</label>\n    <b-form-tags\n      v-model=\"tags\"\n      input-id=\"tags-state-event\"\n      :tag-validator=\"validator\"\n      placeholder=\"Enter tags (3-5 characters) separated by space\"\n      separator=\" \"\n      @tag-state=\"onTagState\"\n    />\n    <p class=\"mt-2\">\n      Tags: {{ tags }}\n    </p>\n    <p>Event values:</p>\n    <ul>\n      <li>validTags: {{ validTags }}</li>\n      <li>invalidTags: {{ invalidTags }}</li>\n      <li>duplicateTags: {{ duplicateTags }}</li>\n    </ul>\n  </div>\n</template>\n\n<script>\nimport { BFormTags } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n  },\n  data: () => ({\n    tags: [],\n    validTags: [],\n    invalidTags: [],\n    duplicateTags: [],\n    codeDetecting,\n  }),\n  methods: {\n    onTagState(valid, invalid, duplicate) {\n      this.validTags = valid\n      this.invalidTags = invalid\n      this.duplicateTags = duplicate\n    },\n    validator(tag) {\n      return tag.length > 2 && tag.length < 6\n    },\n  },\n}\n</script>\n";
-var codeNativeInput = "\n<template>\n  <div>\n    <b-form-tags\n      v-model=\"value\"\n      no-outer-focus\n    >\n      <template #\"{ tags, inputAttrs, inputHandlers, addTag, removeTag }\">\n        <b-input-group aria-controls=\"my-custom-tags-list\">\n          <input\n            v-bind=\"inputAttrs\"\n            placeholder=\"New tag - Press enter to add\"\n            class=\"form-control\"\n            v-on=\"inputHandlers\"\n          >\n          <b-input-group-append>\n            <b-button\n              variant=\"primary\"\n              @click=\"addTag()\"\n            >\n              Add\n            </b-button>\n          </b-input-group-append>\n        </b-input-group>\n        <ul\n          id=\"my-custom-tags-list\"\n          class=\"list-unstyled d-inline-flex flex-wrap mb-0\"\n          aria-live=\"polite\"\n          aria-atomic=\"false\"\n          aria-relevant=\"additions removals\"\n        >\n          <!-- Always use the tag value as the :key, not the index! -->\n          <!-- Otherwise screen readers will not read the tag\n             additions and removals correctly -->\n          <b-card\n            v-for=\"tag in tags\"\n            :id=\"`my-custom-tags-tag_${tag.replace(/\\s/g, '_')}_`\"\n            :key=\"tag\"\n            tag=\"li\"\n            class=\"shadow-none border mt-1 mr-1 mb-0\"\n            body-class=\"py-1 pr-2 text-nowrap\"\n          >\n            <strong>{{ tag }}</strong>\n            <b-button\n              variant=\"link\"\n              size=\"sm\"\n              :aria-controls=\"`my-custom-tags-tag_${tag.replace(/\\s/g, '_')}_`\"\n              class=\"py-0\"\n              @click=\"removeTag(tag)\"\n            >\n              remove\n            </b-button>\n          </b-card>\n        </ul>\n      </template>\n    </b-form-tags>\n  </div>\n</template>\n\n<script>\nimport {\n  BFormTags, BInputGroup, BInputGroupAppend, BCard, BButton,\n} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n    BInputGroup,\n    BCard,\n    BButton,\n    BInputGroupAppend,\n  },\n  data: () => ({\n    value: ['apple', 'orange', 'banana', 'pear', 'peach'],\n  }),\n}\n</script>\n";
-var codeRemoval = "\n<template>\n  <div>\n    <label for=\"tags-remove-on-delete\">Enter new tags separated by space</label>\n    <b-form-tags\n      v-model=\"value\"\n      input-id=\"tags-remove-on-delete\"\n      :input-attrs=\"{ 'aria-describedby': 'tags-remove-on-delete-help' }\"\n      separator=\" \"\n      placeholder=\"Enter new tags separated by space\"\n      remove-on-delete\n      no-add-on-enter\n      class=\"mb-2\"\n    />\n    <b-form-text id=\"tags-remove-on-delete-help\">\n      Press <kbd>Backspace</kbd> to remove the last tag entered\n    </b-form-text>\n    <p>Value: {{ value }}</p>\n  </div>\n</template>\n\n<script>\nimport { BFormTags, BFormText } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n    BFormText,\n  },\n  data: () => ({\n    value: ['apple', 'orange', 'grape'],\n  }),\n}\n</script>\n";
-var codeSeparators = "\n<template>\n  <div>\n    <label for=\"tags-separators\">Enter tags separated by space, comma or semicolon</label>\n    <b-form-tags\n      v-model=\"value\"\n      input-id=\"tags-separators\"\n      separator=\" ,;\"\n      placeholder=\"Enter new tags separated by space, comma or semicolon\"\n      no-add-on-enter\n      class=\"mb-2\"\n    />\n    <p>Value: {{ value }}</p>\n  </div>\n</template>\n\n<script>\nimport { BFormTags } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n  },\n  data: () => ({\n    value: ['one', 'two'],\n  }),\n}\n</script>\n\n";
-var codeStyling = "\n<template>\n  <div>\n    <label for=\"tags-pills\">Enter tags</label>\n    <b-form-tags\n      v-model=\"value\"\n      input-id=\"tags-pills\"\n      tag-variant=\"primary\"\n      tag-pills\n      size=\"lg\"\n      separator=\" \"\n      placeholder=\"Enter new tags separated by space\"\n      class=\"mb-2\"\n    />\n    <p>Value: {{ value }}</p>\n  </div>\n</template>\n\n<script>\nimport { BFormTags } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n  },\n  data: () => ({\n    value: ['apple', 'orange', 'grape'],\n  }),\n}\n</script>\n";
-var codeValidation = "\n<template>\n  <div>\n    <b-form-group\n      :state=\"state\"\n      label=\"Tags validation example\"\n      label-for=\"tags-validation\"\n    >\n      <b-form-tags\n        v-model=\"tags\"\n        input-id=\"tags-validation\"\n        :input-attrs=\"{ 'aria-describedby': 'tags-validation-help' }\"\n        :state=\"state\"\n        :tag-validator=\"tagValidator\"\n        separator=\" \"\n      />\n      <!-- The following slots are for b-form-group -->\n      <template #invalid-feedback>\n        You must provide at least 3 tags and no more than 8\n      </template>\n      <template #description>\n        <div id=\"tags-validation-help\">\n          Tags must be 3 to 5 characters in length and all lower case. Enter tags separated by spaces or press enter.\n        </div>\n      </template>\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport { BFormTags, BFormGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormTags,\n    BFormGroup,\n  },\n  data: () => ({\n    tags: [],\n    dirty: false,\n    codeValidation,\n  }),\n  computed: {\n    state() {\n      // Overall component validation state\n      return this.dirty ? this.tags.length > 2 && this.tags.length < 9 : null\n    },\n  },\n  watch: {\n    tags() {\n      // Set the dirty flag on first change to the tags array\n      this.dirty = true\n    },\n  },\n  methods: {\n    tagValidator(tag) {\n      // Individual tag validator function\n      return tag === tag.toLowerCase() && tag.length > 2 && tag.length < 6\n    },\n  },\n}\n</script>\n";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeStep", function() { return codeStep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFormater", function() { return codeFormater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSlots", function() { return codeSlots; });
+var codeBasic = "\n<template>\n  <div>\n    <label for=\"demo-sb\">Spin Button</label>\n    <b-form-spinbutton\n      id=\"demo-sb\"\n      v-model=\"value\"\n      min=\"1\"\n      max=\"100\"\n    />\n    <p class=\"mt-1\">\n      Value: {{ value }}\n    </p>\n    <b-alert\n      class=\"mb-0\"\n      show\n      variant=\"success\"\n    >\n      <div class=\"alert-body\">\n        <span>The </span>\n        <code>ArrowUp</code>\n        <span> and </span>\n        <code>ArrowDown</code>\n        <span> keys can be used to increment or decrement the value.</span>\n      </div>\n    </b-alert>\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton, BAlert } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n    BAlert,\n  },\n  data: () => ({\n    value: 50,\n    codeBasic,\n  }),\n}\n</script>\n";
+var codeDisabledReadonly = "\n<template>\n  <b-row>\n    <b-col\n      md=\"6\"\n      class=\"mb-2\"\n    >\n      <label for=\"sb-disabled\">Disabled spin button</label>\n      <b-form-spinbutton\n        id=\"sb-disabled\"\n        v-model=\"value\"\n        disabled\n      />\n    </b-col>\n    <b-col\n      md=\"6\"\n      class=\"mb-2\"\n    >\n      <label\n        for=\"sb-readonly\"\n        class=\"\"\n      >Readonly spin button</label>\n      <b-form-spinbutton\n        id=\"sb-readonly\"\n        v-model=\"value\"\n        readonly\n      />\n    </b-col>\n  </b-row>\n</template>\n\n<script>\nimport { BFormSpinbutton, BRow, BCol } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n    BRow,\n    BCol,\n  },\n  data: () => ({\n    value: 50,\n    codeDisabledReadonly,\n  }),\n}\n</script>\n";
+var codeInline = "\n<template>\n  <div>\n    <label\n      for=\"sb-inline\"\n      class=\"mr-1\"\n    >Inline spin button</label>\n    <b-form-spinbutton\n      id=\"sb-inline\"\n      v-model=\"value\"\n      inline\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value: 50,\n  }),\n}\n</script>\n";
+var codeLocale = "\n<template>\n  <div>\n    <label for=\"sb-locales\">Locale</label>\n    <b-form-select\n      id=\"sb-locales\"\n      v-model=\"locale\"\n      :options=\"locales\"\n    />\n    <label\n      for=\"sb-local\"\n      class=\"mt-2\"\n    >Spin button with locale</label>\n    <b-form-spinbutton\n      id=\"sb-locale\"\n      v-model=\"value\"\n      :locale=\"locale\"\n      min=\"0\"\n      max=\"10\"\n      step=\"0.125\"\n    />\n    <p class=\"mt-1\">\n      Value: {{ value }}\n    </p>\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton, BFormSelect } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n    BFormSelect,\n  },\n  data: () => ({\n    value: 0,\n    locale: 'fr-CA',\n    locales: [\n      { value: 'en', text: 'English' },\n      { value: 'de', text: 'German' },\n      { value: 'fr-CA', text: 'French (Canadian)' },\n      { value: 'fa', text: 'Persian' },\n      { value: 'ar-EG', text: 'Arabic (Egyptian)' },\n    ],\n  }),\n}\n</script>\n";
+var codeMinMax = "\n<template>\n  <div>\n    <label for=\"sb-maxmin\">Spin button with min 0 and max 10</label>\n    <b-form-spinbutton\n      id=\"sb-maxmin\"\n      v-model=\"value\"\n      min=\"0\"\n      max=\"10\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value: 50,\n  }),\n}\n</script>\n";
+var codeSize = "\n<template>\n  <div>\n    <div>\n      <label for=\"sb-small\">Spin button - Small size</label>\n      <b-form-spinbutton\n        id=\"sb-small\"\n        size=\"sm\"\n        placeholder=\"--\"\n        class=\"mb-1\"\n      />\n\n      <label for=\"sb-default\">Spin button - Default size</label>\n      <b-form-spinbutton\n        id=\"sb-default\"\n        placeholder=\"--\"\n        class=\"mb-1\"\n      />\n\n      <label for=\"sb-large\">Spin button - Large size</label>\n      <b-form-spinbutton\n        id=\"sb-large\"\n        size=\"lg\"\n        placeholder=\"--\"\n        class=\"mb-1\"\n      />\n    </div>\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n}\n</script>\n";
+var codeVertical = "\n<template>\n  <div>\n    <label for=\"sb-vertical\">Vertical spin button</label><br>\n    <b-form-spinbutton\n      id=\"sb-vertical\"\n      v-model=\"value\"\n      vertical\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value: 50,\n  }),\n}\n</script>\n";
+var codeWrap = "\n<template>\n  <div>\n    <label for=\"sb-wrap\">Wrapping value spin button</label>\n    <b-form-spinbutton\n      id=\"sb-wrap\"\n      wrap\n      min=\"1\"\n      max=\"25\"\n      placeholder=\"--\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n}\n</script>\n";
+var codeWidth = "\n<template>\n  <div>\n    <b-form-group>\n      <b-form-spinbutton\n        v-model=\"value\"\n        min=\"0\"\n        max=\"10\"\n        step=\"0.125\"\n        class=\"w-100\"\n      />\n    </b-form-group>\n    <b-form-group>\n      <b-form-spinbutton\n        v-model=\"value\"\n        min=\"0\"\n        max=\"10\"\n        step=\"0.125\"\n        class=\"w-75\"\n      />\n    </b-form-group>\n    <b-form-group>\n      <b-form-spinbutton\n        v-model=\"value\"\n        min=\"0\"\n        max=\"10\"\n        step=\"0.125\"\n        class=\"w-50\"\n      />\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton, BFormGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n    BFormGroup,\n  },\n  data: () => ({\n    value: 0,\n  }),\n}\n</script>\n";
+var codeValidation = "\n<template>\n  <div>\n    <b-form-spinbutton\n      id=\"sb-inline\"\n      v-model=\"value\"\n      :state=\"Boolean(value >= 50)\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value: 50,\n  }),\n}\n</script>\n";
+var codeStep = "\n<template>\n  <div>\n    <label for=\"sb-step\">Spin button with step of 0.25</label>\n    <b-form-spinbutton\n      id=\"sb-step\"\n      v-model=\"value1\"\n      step=\"0.25\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value1: 50,\n  }),\n}\n</script>\n";
+var codeFormater = "\n<template>\n  <div>\n    <label\n      for=\"sb-days\"\n      class=\"mt-2\"\n    >Spin button with formatter</label>\n    <b-form-spinbutton\n      id=\"sb-days\"\n      v-model=\"value\"\n      :formatter-fn=\"dayFormatter\"\n      min=\"0\"\n      max=\"6\"\n      wrap\n    />\n    <p class=\"mt-1 mb-0\">\n      Value: {{ value }}\n    </p>\n  </div>\n</template>\n\n<script>\nimport { BFormSpinbutton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n  },\n  data: () => ({\n    value: 0,\n    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],\n  }),\n  methods: {\n    dayFormatter(value) {\n      return this.days[value]\n    },\n  },\n}\n</script>\n";
+var codeSlots = "\n<template>\n  <b-card-code\n    title=\"Basic Spinbutton\"\n  >\n    <b-row>\n      <b-col md=\"6\">\n        <b-form-spinbutton\n          v-model=\"value\"\n          class=\"mb-md-0 mb-2\"\n          min=\"1\"\n          max=\"100\"\n        >\n          <template #increment>\n            <feather-icon icon=\"ChevronUpIcon\" />\n          </template>\n          <template #decrement>\n            <feather-icon icon=\"ChevronDownIcon\" />\n          </template>\n        </b-form-spinbutton>\n      </b-col>\n      <b-col md=\"6\">\n        <b-form-spinbutton\n          v-model=\"day\"\n          min=\"0\"\n          max=\"6\"\n          wrap\n          :formatter-fn=\"dayFormatter\"\n        >\n          <template #increment>\n            <feather-icon icon=\"ChevronRightIcon\" />\n          </template>\n          <template #decrement>\n            <feather-icon icon=\"ChevronLeftIcon\" />\n          </template>\n        </b-form-spinbutton>\n      </b-col>\n    </b-row>\n  </b-card-code>\n</template>\n\n<script>\nimport BCardCode from '@core/components/b-card-code'\nimport { BFormSpinbutton, BRow, BCol } from 'bootstrap-vue'\nimport { codeBasic } from './code'\n\nexport default {\n  components: {\n    BFormSpinbutton,\n    BCardCode,\n    BRow,\n    BCol,\n  },\n  data: () => ({\n    value: 50,\n    codeBasic,\n    day: 0,\n    days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],\n  }),\n  methods: {\n    dayFormatter(value) {\n      return this.days[value]\n    },\n  },\n}\n</script>\n";
 
 /***/ })
 

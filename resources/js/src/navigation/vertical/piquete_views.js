@@ -6,12 +6,17 @@ export default [
       {
         title: 'Cars',
         route: 'Cars',
-        icon: 'truckIcon',
+        icon: 'TruckIcon',
       },
       {
         title: 'New Car',
         route: 'New-car',
-        icon: 'plusCircleIcon',
+        icon: 'PlusSquareIcon',
+      },
+      {
+        title: 'allocate vehicles',
+        route: 'allocate-vehicles',
+        icon: 'TruckIcon',
       },
       {
         title: 'Occurrences',

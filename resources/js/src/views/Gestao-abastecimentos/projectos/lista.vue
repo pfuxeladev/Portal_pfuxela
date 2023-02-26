@@ -68,28 +68,14 @@
                 </template>
                 <b-dropdown-item
                   :to="{
-                    name: 'apps-users-view',
-                    params: { id: data.item.id },
+                    name: 'Project Report',
+                    params: { name: data.item.name },
                   }"
                 >
                   <feather-icon icon="FileTextIcon" />
-                  <span class="align-middle ml-50">Detalhes</span>
+                  <span class="align-middle ml-50">Relatorios</span>
                 </b-dropdown-item>
 
-                <b-dropdown-item
-                  :to="{
-                    name: 'apps-users-edit',
-                    params: { id: data.item.id },
-                  }"
-                >
-                  <feather-icon icon="EditIcon" />
-                  <span class="align-middle ml-50">Editar</span>
-                </b-dropdown-item>
-
-                <b-dropdown-item>
-                  <feather-icon icon="TrashIcon" />
-                  <span class="align-middle ml-50">Delete</span>
-                </b-dropdown-item>
               </b-dropdown>
             </template>
           </b-table>

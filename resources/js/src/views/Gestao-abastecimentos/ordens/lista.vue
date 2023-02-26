@@ -86,7 +86,7 @@
                 placeholder="Search..."
               />
               <b-button
-              
+              v-if="can('Create Ordem')"
                 variant="primary"
                 @click="showModal"
               >
@@ -108,14 +108,11 @@
         empty-text="Nenhuma ordem listada"
         :sort-desc.sync="isSortDirDesc"
       >
-        <template #cell(cogido_ordem)="data">
+        <template #cell(codigo_ordem)="data">
           {{ data.item.codigo_ordem }}
         </template>
-        <template #cell(data_de_emissao)="data">
+        <template #cell(created_at)="data">
           {{ dateTime(data.item.created_at) }}
-        </template>
-        <template #cell(bomba)="data">
-          {{ data.item.bombas.nome_bombas }}
         </template>
         <template #cell(status)="data">
              <b-badge
@@ -142,25 +139,23 @@
                 class="align-middle text-body"
               />
             </template>
-            <b-dropdown-item
-            v-if="data.item.estado !=='aberta'"  :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
+            <b-dropdown-item v-if="data.item.estado !== 'Aberta'"
+              :to="{ name: 'supply-details', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="FileTextIcon" />
               <span class="align-middle ml-50">Detalhes</span>
             </b-dropdown-item>
-
-            <b-dropdown-item v-if="data.item.estado !=='aberta'"
+             <b-dropdown-item  v-if="data.item.estado === 'Aberta'"
+              :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
+            >
+              <feather-icon icon="RepeatIcon" />
+              <span class="align-middle ml-50">continuar</span>
+            </b-dropdown-item>
+            <b-dropdown-item v-if="data.item.estado === 'Pendente'"
               :to="{ name: 'Edit-Order', params: { refs: data.item.refs } }"
             >
               <feather-icon icon="EditIcon" />
               <span class="align-middle ml-50">Editar</span>
-            </b-dropdown-item>
-              <b-dropdown-item
-              :to="{ name: 'New-supply-order', params: { refs: data.item.refs } }"
-
-            >
-              <feather-icon icon="RepeatIcon" />
-              <span class="align-middle ml-50">Continuar</span>
             </b-dropdown-item>
           </b-dropdown>
         </template>
@@ -306,30 +301,30 @@ export default {
     })
   },
   setup() {
-    const ORDER_SUPPLY_STORE_MODULE_NAME = 'Supply'
+    const ORDER_STORE_MODULE_NAME = 'Supply'
     // Register module
-    if (!store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.registerModule(ORDER_SUPPLY_STORE_MODULE_NAME, storeOrderModule) }
+    if (!store.hasModule(ORDER_STORE_MODULE_NAME)) { store.registerModule(ORDER_STORE_MODULE_NAME, storeOrderModule) }
 
     // UnRegister on leave
     onUnmounted(() => {
-      if (store.hasModule(ORDER_SUPPLY_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_SUPPLY_STORE_MODULE_NAME) }
+      if (store.hasModule(ORDER_STORE_MODULE_NAME)) { store.unregisterModule(ORDER_STORE_MODULE_NAME) }
     })
     const statusOptions = [
       {
         label: 'aberta',
-        value: 'aberta',
+        value: 'Aberta',
       },
       {
         label: 'pendente',
-        value: 'pendente',
+        value: 'Pendente',
       },
       {
         label: 'aprovado',
-        value: 'aprovado',
+        value: 'Autorizado',
       },
       {
         label: 'cancelada',
-        value: 'cancelada',
+        value: 'Cancelada',
       },
     ]
 
@@ -350,11 +345,12 @@ export default {
       this.form.post('./../api/Ordems').then(res => {
         //   console.log(res.data)
         this.$router.push({ name: 'New-supply-order', params: { refs: res.data } })
-      }).catch(err => {
+      }).catch(({ err }) => {
+        console.log(err.response)
         if (err) {
           this.$swal.fire({
             icon: 'error',
-            title: err.data.erro,
+            title: err.response.error,
           })
         }
       })

@@ -307,8 +307,9 @@
                           >
                             <date-picker
                               v-model="form.data_radio_difusao"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -324,8 +325,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_radio_difusao"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -345,8 +347,9 @@
                           >
                             <date-picker
                               v-model="form.data_seguros"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -364,8 +367,9 @@
                           >
                             <date-picker
                               v-model="form.prazo_seguros"
-                              class="form-control mb-1"
+                              class="mb-1"
                               value-type="format"
+                              locate="pt-Br"
                               format="YYYY-MM-DD"
                               style="width: 100%"
                             />
@@ -499,6 +503,7 @@
                   </b-col>
                   <b-col cols="6">
                     <b-button
+                    v-if="can('Create Viatura')"
                       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
                       variant="success"
                       class="mr-2"
@@ -539,8 +544,8 @@ import {
 } from 'bootstrap-vue'
 import vSelect from 'vue-select'
 import flatPickr from 'vue-flatpickr-component'
-import store from '@/store'
 import DatePicker from 'vue2-datepicker'
+import store from '@/store'
 import 'vue2-datepicker/index.css'
 export default {
   components: {
@@ -636,7 +641,7 @@ export default {
       this.$Progress.start()
       this.form
         .post('/api/viaturas')
-        .then((response) => {
+        .then(response => {
           this.$swal.fire({
             icon: 'success',
             title: response.data.success,
@@ -649,7 +654,7 @@ export default {
             name: 'Cars',
           })
         })
-        .catch((error) => {
+        .catch(error => {
           if (error.response.data.status === 401) {
             this.$swal.fire({
               icon: 'error',

@@ -10,6 +10,7 @@ class projecto extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'name',
         'email',
         'telephone',
@@ -21,6 +22,6 @@ class projecto extends Model
         'updatedBy',
     ];
     public function rota(){
-        return $this->hasMany(rota::class);
+        return $this->hasMany(Rota::class);
     }
 }

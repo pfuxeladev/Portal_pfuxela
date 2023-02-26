@@ -17,7 +17,7 @@
             <b-col cols="12" md="6" class="mb-md-0 mb-2">
               <label>Bombas Registadas</label>
               <v-select
-                v-model="form.tipo_bomba"
+                v-model="tipo_bomba"
                 :options="['interna', 'externa']"
               />
             </b-col>
@@ -56,6 +56,7 @@
                   <th>disponibilidade</th>
                   <th>tipo</th>
                   <th>Combustivel</th>
+                  <th>Qtd disponivel</th>
                   <th>Cadastrado por</th>
                   <th>
                     <i class="fas fa-cogs" />
@@ -84,6 +85,7 @@
                       {{ comb.tipo_combustivel }},
                     </span>
                   </td>
+                  <td> {{ b.qtd_disponivel }} </td>
                   <td>{{ b.created_by.name }}</td>
                   <td class="d-flex justify-content-around">
                     <span
@@ -91,7 +93,7 @@
                       class="btn btn-sm btn-outline-primary"
                       @click="openDetails(b)"
                     >
-                      <i class="fas fa-users" />
+                      <i class="fas fa-folder-open" />
                     </span>
                     <span
                       class="btn btn-sm btn-outline-warning ml-1"
@@ -101,6 +103,7 @@
                     </span>
                     <span
                       v-if="b.tipo_bomba === 'interna'"
+                      @click="abastecerBomba(b)"
                       class="btn btn-sm btn-outline-success ml-1"
                     >
                       <i class="fas fa-gas-pump" />
@@ -283,66 +286,6 @@
             </b-row>
           </form>
         </b-modal>
-        <b-modal
-          id="ResponsavelBomba"
-          ref="responsavel"
-          size="lg"
-          hide-footer
-          title="Responsavel da bomba"
-        >
-          <b-card>
-            <b-row>
-              <b-col
-                v-for="responsaveis in details.responsavel"
-                :key="responsaveis.id"
-                cols="6"
-                md="6"
-              >
-                <b-list-group>
-                  <b-list-group-item
-                    >Nome: {{ responsaveis.nome }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Email: {{ responsaveis.email_bomba }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Contacto: {{ responsaveis.contacto }}</b-list-group-item
-                  >
-                  <b-list-group-item
-                    >Contacto alternativo:
-                    {{ responsaveis.contacto_alt }}</b-list-group-item
-                  >
-                </b-list-group>
-              </b-col>
-            </b-row>
-            <b-form>
-              <b-row class="mt-1">
-                <b-col cols="12" md="12">
-                  <b-list-group>
-                    <b-list-group-item
-                      v-for="comb in details.combustivel_bomba"
-                      :key="comb.id"
-                    >
-                      <div class="form-group">
-                        <label for="combustivel">
-                          {{ comb.combustivel.tipo_combustivel }}
-                        </label>
-                        <b-form-input v-model="comb.preco_actual" />
-                      </div>
-                    </b-list-group-item>
-                  </b-list-group>
-                </b-col>
-              </b-row>
-              <b-row>
-                <b-col>
-                  <b-button type="submit" variant="success">
-                    actualizar pre&ccedil;o de combustivel
-                  </b-button>
-                </b-col>
-              </b-row>
-            </b-form>
-          </b-card>
-        </b-modal>
       </b-card>
     </section>
   </div>
@@ -411,10 +354,11 @@ export default {
           name: 'Gasolina',
         },
         {
-          item: 'Gasoleo',
+          item: 'Diesel',
           name: 'Diesel',
         },
       ],
+      tipo_bomba: null,
       bombas: [],
       details: {
         responsavel: [],
@@ -528,9 +472,7 @@ export default {
       this.editMode = true;
     },
     openDetails(b) {
-      this.details = b;
-      //   document.getElementById('ResponsavelBomba').show()
-      this.$refs.responsavel.toggle('#open-dtl');
+      this.$router.push({ name: 'Fuel Reports', params: { id: b.id } })
     },
     onUpdateForm() {
       this.$Progress.start();
@@ -566,6 +508,9 @@ export default {
       this.$nextTick(() => {
         this.show = true;
       });
+    },
+    abastecerBomba(b) {
+      this.$router.push({ name: 'Fill the pump', params: { id: b.id } })
     },
   },
 };

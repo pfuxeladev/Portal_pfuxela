@@ -12,6 +12,9 @@ class Handler extends ExceptionHandler
      *
      * @var array<int, class-string<Throwable>>
      */
+
+    // use Throwable;
+
     protected $dontReport = [
         //
     ];
@@ -38,4 +41,17 @@ class Handler extends ExceptionHandler
             //
         });
     }
+
+    // public function report(Throwable $exception)
+    // {
+    // }
+    // public function shouldReport(Throwable $exception)
+    // {
+    // }
+    // public function render($request, Throwable $exception)
+    // {
+    // }
+    // public function renderForConsole($output, Throwable $exception)
+    // {
+    // }
 }

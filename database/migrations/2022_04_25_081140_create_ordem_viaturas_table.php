@@ -26,7 +26,7 @@ class CreateOrdemViaturasTable extends Migration
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('updatedBy')->nullable();
             $table->foreign('updatedBy')->references('id')->on('users')->onDelete('cascade');
-
+            $table->text('justificacao')->nullable();
             $table->timestamps();
         });
     }

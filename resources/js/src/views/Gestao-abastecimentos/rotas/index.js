@@ -85,34 +85,6 @@ export default function useRotaList() {
       })
   }
 
-  // *===============================================---*
-  // *--------- UI ---------------------------------------*
-  // *===============================================---*
-
-  const resolveUserRoleVariant = role => {
-    if (role === 'subscriber') return 'primary'
-    if (role === 'author') return 'warning'
-    if (role === 'maintainer') return 'success'
-    if (role === 'editor') return 'info'
-    if (role === 'admin') return 'danger'
-    return 'primary'
-  }
-
-  const resolveUserRoleIcon = role => {
-    if (role === 'subscriber') return 'UserIcon'
-    if (role === 'author') return 'SettingsIcon'
-    if (role === 'maintainer') return 'DatabaseIcon'
-    if (role === 'editor') return 'Edit2Icon'
-    if (role === 'admin') return 'ServerIcon'
-    return 'UserIcon'
-  }
-
-  const resolveUserStatusVariant = status => {
-    if (status === 'pending') return 'warning'
-    if (status === 'active') return 'success'
-    if (status === 'inactive') return 'secondary'
-    return 'primary'
-  }
 
   return {
     fetchRotas,

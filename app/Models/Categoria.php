@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Categoria extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'nome_categoria',
+        'createdBy'
+    ];
+
+    public function checklist_vars(){
+        return $this->hasMany(checklist_vars::class, 'categoria', 'id');
+    }
+
+
 }

@@ -4,6 +4,7 @@
     no-body
     class="card-company-table"
   >
+    <b-card-title class="pl-3 mt-2">Lista das reservas rec&eacute;m feitas</b-card-title>
     <b-table
       :items="tableData"
       responsive
@@ -78,12 +79,13 @@
 
 <script>
 import {
-  BCard, BTable, BAvatar, BImg,
+  BCard, BTable, BAvatar, BImg, BCardTitle,
 } from 'bootstrap-vue'
 
 export default {
   components: {
     BCard,
+    BCardTitle,
     BTable,
     BAvatar,
     BImg,
@@ -98,11 +100,11 @@ export default {
   data() {
     return {
       fields: [
-        { key: 'company', label: 'COMPANY' },
-        { key: 'category', label: 'CATEGORY' },
-        { key: 'views', label: 'VIEWS' },
-        { key: 'revenue', label: 'REVENUE' },
-        { key: 'sales', label: 'SALES' },
+        { key: 'Cliente', label: 'Cliente' },
+        { key: 'Viaturas', label: 'Viaturas' },
+        { key: 'Nr_Pessoas', label: 'Nr_Pessoas' },
+        { key: 'Total_pago', label: 'Total_pago' },
+        { key: 'Data_reserva', label: 'Data_reserva' },
       ],
     }
   },

@@ -14,9 +14,9 @@ export default function useOrdersList() {
 
   // Table Handlers
   const tableColumns = [
-    { key: 'cogido_ordem', sortable: true },
-    { key: 'data_de_emissao', sortable: true },
-    { key: 'bomba', sortable: true },
+    { key: 'codigo_ordem', sortable: true },
+    { key: 'created_at', sortable: true },
+    { key: 'bombas.nome_bombas', sortable: true },
     { key: 'status', sortable: true },
     { Key: 'emitida_por', sortable: true },
     { key: 'acções' },
@@ -31,6 +31,7 @@ export default function useOrdersList() {
   const rangeDate = ref(null)
   const bombasFilter = ref(null)
   const statusFilter = ref(null)
+  const statusOptions = ref(null)
 
   const dataMeta = computed(() => {
     const localItemsCount = refOrdersListTable.value ? refOrdersListTable.value.localItems.length : 0
@@ -56,7 +57,7 @@ export default function useOrdersList() {
         perPage: perPage.value,
         page: currentPage.value,
         sortBy: sortBy.value,
-        sortDesc: isSortDirDesc.value,
+        sort: isSortDirDesc.value,
         orderDate: rangeDate.value,
         bombasFilter: bombasFilter.value,
         status: statusFilter.value,
@@ -86,7 +87,7 @@ export default function useOrdersList() {
   const resolveOrdersStatusVariant = status => {
     if (status === 'pendente') return 'warning'
     if (status === 'aprovada') return 'success'
-    if (status === 'cancelada') return 'secondary'
+    if (status === 'cancelada') return 'danger'
     return 'primary'
   }
 

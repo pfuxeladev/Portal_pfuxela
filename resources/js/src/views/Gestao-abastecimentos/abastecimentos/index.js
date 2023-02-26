@@ -14,12 +14,13 @@ export default function useAbastecimentoList() {
   const refAbstRecorrente = ref(null)
   // Table Handlers
   const tableColumns = [
-    { key: 'ordem', sortable: true },
+    { key: 'ordem.codigo_ordem', sortable: true },
     { key: 'qtd_ant', sortable: true },
     { key: 'qtd_rec', sortable: true },
     { key: 'estado', sortable: true },
     { key: 'bombas', sortable: true },
-    // { key: 'rota', sortable: true },
+    { key: 'Data_de_emissao', sortable: true },
+    { key: 'user.name', sortable: true },
     { key: 'acções' },
   ]
 
@@ -27,9 +28,11 @@ export default function useAbastecimentoList() {
     { key: 'ordem', sortable: true },
     { key: 'bombas', sortable: true },
     { key: 'viatura', sortable: true },
+    { key: 'destino', sortable: true },
+    { key: 'descricao', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'hora_de_saida', sortable: true },
-    // { key: 'rota', sortable: true },
+    { key: 'user', sortable: true },
     { key: 'acções' },
   ]
   const perPage = ref(10)
@@ -119,13 +122,14 @@ export default function useAbastecimentoList() {
         toast({
           component: ToastificationContent,
           props: {
-            title: 'Erro na listagem de abastecimentos',
+            title: 'Erro na listagem',
             icon: 'AlertTriangleIcon',
             variant: 'danger',
           },
         })
       })
   }
+
   // *===============================================---*
   // *--------- UI ---------------------------------------*
   // *===============================================---*
@@ -153,5 +157,6 @@ export default function useAbastecimentoList() {
     roleFilter,
     planFilter,
     statusFilter,
+
   }
 }

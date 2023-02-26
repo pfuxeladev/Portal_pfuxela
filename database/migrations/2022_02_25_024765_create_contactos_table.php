@@ -15,7 +15,7 @@ class CreateContactosTable extends Migration
     {
         Schema::create('contactos', function (Blueprint $table) {
             $table->id();
-            $table->string('cont_type');
+            $table->string('cont_type')->default('mobile')->nullable();
             $table->string('content')->unique();
             $table->foreignIdFor(\App\Models\Empresa::class)->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->foreignIdFor(\App\Models\Person::class)->nullable()->constrained()->onDelete('cascade')->onUpdate('cascade');

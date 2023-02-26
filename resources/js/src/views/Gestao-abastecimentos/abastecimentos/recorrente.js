@@ -13,12 +13,15 @@ export default function useAbstTecorrenteList() {
   const refAbstRecorrente = ref(null)
   // Table Handlers
   const fieldCollumns = [
+    { key: 'data_submissao', sortable: true },
     { key: 'ordem', sortable: true },
     { key: 'bombas', sortable: true },
     { key: 'viatura', sortable: true },
+    { key: 'qtd_disponivel', sortable: true },
+    { key: 'qtd_abastecida', sortable: true },
     { key: 'motorista', sortable: true },
     { key: 'hora_de_saida', sortable: true },
-    // { key: 'rota', sortable: true },
+
     { key: 'acções' },
   ]
   const perPage = ref(10)

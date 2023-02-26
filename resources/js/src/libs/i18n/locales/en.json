@@ -193,6 +193,17 @@
   "New Driver":"New Driver",
   "CheckList-Out": "CheckList-Out",
   "CheckList-In":"CheckList-In",
+  "CheckList-out-details":"CheckList-out-details",
+  "CheckList-in-details":"CheckList-in-details",
   "recurring supply":"recurring supply",
-  "Edit-Order":"Edit-Order"
+  "Edit-Order":"Edit-Order",
+  "Fuel Reports":"Fuel Reports",
+  "Edit car": "Edit car",
+  "Supply history": "Supply history",
+  "Project Report": "Project Report",
+  "allocate vehicles": "allocate vehicles",
+  "Routes-update": "Routes update",
+  "Occurrence-details":"Occurrence details",
+  "Route Distances":"Route Distances",
+  "route-details-demo":"route-details-demo"
 }

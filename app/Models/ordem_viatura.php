@@ -13,7 +13,10 @@ class ordem_viatura extends Model
         'ordem_id',
         'viatura_id',
         'qtd_abastecida',
-        'user_id'
+        'preco_cunsumo',
+        'user_id',
+        'justificacao',
+        'updatedBy'
     ];
     public function viatura()
     {
@@ -21,13 +24,21 @@ class ordem_viatura extends Model
     }
     public function ordem()
     {
-        return $this->belongsTo(Ordem::class, 'ordem_id', 'id')->withPivot('qtd_abastecida');
+        return $this->belongsTo(Ordem::class);
     }
 
     public function ordemAbastecer(){
-        return $this->belongsTo(ordem::class, 'ordem_id', 'id');
+        return $this->belongsTo(Ordem::class, 'ordem_id', 'id');
+    }
+    public function rota(){
+        return $this->belongsToMany(Rota::class, 'ordem_viatura_rotas','ordem_viatura_id', 'rota_id');
     }
     function ordemViaturaRota(){
-        return $this->hasMany(OrdemViaturaRota::class);
+        return $this->hasMany(OrdemViaturaRota::class, 'ordem_viatura_id', 'id');
     }
+
+    function scopePeriodicReport($query, $datesInterval){
+        return $query->where('ordems.created_at','>=', $datesInterval);
+    }
+
 }

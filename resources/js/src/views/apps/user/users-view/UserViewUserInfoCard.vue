@@ -32,12 +32,6 @@
               >
                 Edit
               </b-button>
-              <b-button
-                variant="outline-danger"
-                class="ml-1"
-              >
-                Delete
-              </b-button>
             </div>
           </div>
         </div>
@@ -58,7 +52,7 @@
               <h5 class="mb-0">
                 23.3k
               </h5>
-              <small>Monthly Sales</small>
+              <small>Ordens Mensais</small>
             </div>
           </div>
 
@@ -76,7 +70,7 @@
               <h5 class="mb-0">
                 $99.87k
               </h5>
-              <small>Annual Profit</small>
+              <small>Ordens Mensais(MT)</small>
             </div>
           </div>
         </div>
@@ -97,7 +91,7 @@
               <span class="font-weight-bold">Username</span>
             </th>
             <td class="pb-50">
-              {{ userData.username }}
+              {{ userData.name }}
             </td>
           </tr>
           <tr>
@@ -109,7 +103,10 @@
               <span class="font-weight-bold">Status</span>
             </th>
             <td class="pb-50 text-capitalize">
-              {{ userData.status }}
+                <span v-if="userData.is_active === 0">Inactivo</span>
+                <span v-else>
+                    Activo
+                </span>
             </td>
           </tr>
           <tr>
@@ -120,8 +117,8 @@
               />
               <span class="font-weight-bold">Role</span>
             </th>
-            <td class="pb-50 text-capitalize">
-              {{ userData.role }}
+            <td class="pb-50 text-capitalize" v-for="(role, r) in userData.roles" :key="'r'+r">
+              {{ role.name }}
             </td>
           </tr>
           <tr>
@@ -130,10 +127,10 @@
                 icon="FlagIcon"
                 class="mr-75"
               />
-              <span class="font-weight-bold">Country</span>
+              <span class="font-weight-bold">departamento</span>
             </th>
             <td class="pb-50">
-              {{ userData.country }}
+              {{ userData.departamento.nome }}
             </td>
           </tr>
           <tr>

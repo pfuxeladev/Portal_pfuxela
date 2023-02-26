@@ -14,22 +14,25 @@ export default {
           .catch(error => reject(error))
       })
     },
+
     fetchAbastecimentoDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios
-          .get(`/api/Abastecimento/${refs}`)
+          .get(`/api/Ordems/${refs}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
+
     addAbastecimento(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
-          .post('/api/Abastecimento', { abastecimento: SupplyDatas })
+          .post('/api/submeterAbst', SupplyDatas)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
     },
+
     addAbastecimentoRecorrente(ctx, SupplyDatas) {
       return new Promise((resolve, reject) => {
         axios
@@ -38,9 +41,17 @@ export default {
           .catch(error => reject(error))
       })
     },
+
     ApproveOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/AprovarOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    UndoOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.post(`/api/DesfazerOrdem/${refs}`)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
@@ -52,6 +63,7 @@ export default {
           .catch(error => reject(error))
       })
     },
+
     AbastecimentoRecorrente(ctx, abstData) {
       return new Promise((resolve, reject) => {
         axios.get('/api/AbastecimentoRecorrente', abstData)
@@ -59,6 +71,7 @@ export default {
           .catch(error => reject(error))
       })
     },
+
     fetchAbstRecDetails(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios
@@ -66,6 +79,39 @@ export default {
           .then(response => resolve(response))
           .catch(error => reject(error))
       })
-    }
+    },
+    getHistory(ctx, queryParams) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post('/api/RelatorioGeral', { params: queryParams })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+    // ReabrirOrdem
+    ReopenOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/ReabrirOrdem/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    // verOrdensAbertas
+    getOpenOrder(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/Ordems/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    removeLine(ctx, { refs }) {
+      return new Promise((resolve, reject) => {
+        axios.get(`/api/removeLine/${refs}`)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
   },
 }

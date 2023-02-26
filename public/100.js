@@ -1,430 +1,24 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[100],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./storaRelatorioModule */ "./resources/js/src/views/Gestao-pickete/relatorios/storaRelatorioModule.js");
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_7__);
 //
 //
 //
@@ -522,213 +116,392 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
-    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardHeader"],
-    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardTitle"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BForm"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BLink"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInput"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTextarea"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
-    BFormTimepicker: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormTimepicker"],
-    BFormRadioGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormRadioGroup"]
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BPagination"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdownItem"]
   },
   data: function data() {
     return {
-      rota: [],
-      motoristas: [],
-      viatura: [],
-      value: null,
-      options: [{
-        text: 'Ok',
-        value: 'Ok'
-      }, {
-        text: 'No',
-        value: 'No'
-      }, {
-        text: 'Parcial',
-        value: 'Parcial'
-      }, {
-        text: 'Em Falta',
-        value: 'Em Falta'
-      }],
-      options2: [{
-        text: 'Rota',
-        value: false
-      }, {
-        text: 'Outros Servicos',
-        value: false
-      }, {
-        text: 'Expediente',
-        value: false
-      }]
+      abastecimentos: [],
+      bombas: {},
+      searchQuery: null,
+      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({}),
+      moment: moment__WEBPACK_IMPORTED_MODULE_7___default.a
     };
   },
-  computed: {
-    state: function state() {
-      return Boolean(this.value);
-    }
+  created: function created() {
+    this.moment = moment__WEBPACK_IMPORTED_MODULE_7___default.a;
   },
-  mounted: function mounted() {
-    this.getRotas();
-    this.getMotoristas();
-    this.getViaturas();
-    this.changeOption();
-    this.getKmActual();
-  },
-  methods: {
-    getRotas: function getRotas() {
-      var _this = this;
+  setup: function setup() {
+    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
 
-      this.$http.get('/api/todasRotas').then(function (res) {
-        _this.rota = res.data;
-      });
-    },
-    getViaturas: function getViaturas() {
-      var _this2 = this;
+    if (!_store__WEBPACK_IMPORTED_MODULE_6__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_6__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_3__["default"]); // UnRegister on leave
 
-      this.$http.get('/api/listViaturaDentro').then(function (res) {
-        _this2.viatura = res.data;
-      });
-    },
-    getMotoristas: function getMotoristas() {
-      var _this3 = this;
-
-      this.$http.get('/api/listMotoristas').then(function (res) {
-        _this3.motoristas = res.data;
-      });
-    },
-    getKmActual: function getKmActual() {
-      var _this4 = this;
-
-      //   console.log(this.form.viatura_id)
-      this.$http.get("/api/kmActual/".concat(this.form.viatura_id)).then(function (res) {
-        _this4.form.km_inicio = res.data.kilometragem;
-      });
-    },
-    changeOption: function changeOption() {
-      if (this.form.isRota === true) {
-        this.form.isOuthers = false;
-      }
-    },
-    changeOption1: function changeOption1() {
-      if (this.form.isOuthers === true) {
-        this.form.isRota = false;
-      }
-    }
-  },
-  setup: function setup(props) {
-    var CHECKLISTOUT_STORE_MODULE_NAME = 'Picket';
-    if (!_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].registerModule(CHECKLISTOUT_STORE_MODULE_NAME, _storaRelatorioModule__WEBPACK_IMPORTED_MODULE_8__["default"]); // UnRegister on leave
-
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_7__["default"].hasModule(CHECKLISTOUT_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_7__["default"].unregisterModule(CHECKLISTOUT_STORE_MODULE_NAME);
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_6__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_6__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__["useToast"])();
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_6__["ref"])(JSON.parse(JSON.stringify(new vform__WEBPACK_IMPORTED_MODULE_3__["default"]({
-      motorista_id: null,
-      viatura_id: null,
-      isRota: false,
-      isOuthers: false,
-      carta_conducao: true,
-      km_inicio: 0,
-      hora_inicio: '0:00',
-      limpezaState: '',
-      vasoEspansorState: '',
-      LiquidoVidroState: '',
-      OleoMotorState: '',
-      OleoDirecaoState: '',
-      OleoTravoesState: '',
-      SistemaABS_State: '',
-      ACState: '',
-      tipo_saida: null,
-      uniforme: false,
-      CintoSeguracaState: false,
-      colete_saida: false,
-      lista_presenca: false,
-      pneu_sobr_saida: false,
-      macaco_saida: false,
-      inspencao_saida: false,
-      triangulo_saida: false,
-      chave_roda_saida: false,
-      kit_reboque_saida: false,
-      kit_1_socorro_saida: false,
-      licenca_saida: false,
-      extintor_saida: false,
-      livrete_saida: false,
-      seguros_saida: false,
-      taxaradio_saida: false,
-      motorista_dss: false,
-      // rotas
-      rotas_Lista: [{
-        rota_id: null
-      }],
-      // outro trajecto
-      trajecto: '',
-      horaPrevistaSaida: '0:00',
-      horaPrevistaEntrada: '0:00'
-    }))));
 
-    function OnSubmit() {
-      var _this5 = this;
-
-      _store__WEBPACK_IMPORTED_MODULE_7__["default"].dispatch('Picket/addCheckListOut', form.value).then(function (response) {
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-          props: {
-            title: response.data.message,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-
-        _this5.$router.push({
-          name: 'Vehicle-movements'
-        });
-      })["catch"](function (err) {
-        if (err.response.status === 421) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-            props: {
-              title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (err.response.status === 422) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-            props: {
-              title: 'Erro..! verifique se seus campos estao devidamente preenchidos',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-            props: {
-              title: err.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        }
-      });
+    function dateTime(value) {
+      return moment__WEBPACK_IMPORTED_MODULE_7___default()(value).format('DD/MM/YYYY hh:mm');
     }
+
+    function PrintOrder(ordem) {
+      console.log(ordem);
+    }
+
+    var _useAbastecimentoList = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+        fetchAbastecimentos = _useAbastecimentoList.fetchAbastecimentos,
+        tableColumns = _useAbastecimentoList.tableColumns,
+        perPage = _useAbastecimentoList.perPage,
+        currentPage = _useAbastecimentoList.currentPage,
+        totalAbastecimentos = _useAbastecimentoList.totalAbastecimentos,
+        dataMeta = _useAbastecimentoList.dataMeta,
+        perPageOptions = _useAbastecimentoList.perPageOptions,
+        searchQuery = _useAbastecimentoList.searchQuery,
+        sortBy = _useAbastecimentoList.sortBy,
+        isSortDirDesc = _useAbastecimentoList.isSortDirDesc,
+        refAbastecimentoListTable = _useAbastecimentoList.refAbastecimentoListTable,
+        refetchData = _useAbastecimentoList.refetchData;
 
     return {
-      OnSubmit: OnSubmit,
-      form: form
+      fetchAbastecimentos: fetchAbastecimentos,
+      tableColumns: tableColumns,
+      perPage: perPage,
+      currentPage: currentPage,
+      totalAbastecimentos: totalAbastecimentos,
+      dataMeta: dataMeta,
+      perPageOptions: perPageOptions,
+      searchQuery: searchQuery,
+      sortBy: sortBy,
+      isSortDirDesc: isSortDirDesc,
+      refAbastecimentoListTable: refAbastecimentoListTable,
+      refetchData: refetchData,
+      dateTime: dateTime,
+      PrintOrder: PrintOrder
     };
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-mx": "./node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "./node_modules/moment/locale/es-mx.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
@@ -750,10 +523,10 @@ var e=Object.defineProperty,t=Object.prototype.hasOwnProperty,s=Object.getOwnPro
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&":
-/*!**************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606& ***!
-  \**************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -769,102 +542,42 @@ var render = function () {
     "section",
     [
       _c(
-        "b-row",
-        { staticClass: "content-header" },
+        "b-card",
+        { attrs: { "no-body": "" } },
         [
+          _c("b-card-header", { staticClass: "pb-50" }, [
+            _c("h3", [_vm._v("Relatório de abastacimentos")]),
+          ]),
+          _vm._v(" "),
           _c(
-            "b-col",
-            {
-              staticClass: "content-header-left mb-2",
-              attrs: { cols: "12", md: "9" },
-            },
+            "div",
+            { staticClass: "m-2" },
             [
               _c(
                 "b-row",
-                { staticClass: "breadcrumb-top" },
                 [
-                  _c("b-col", { attrs: { cols: "12" } }, [
+                  _c("b-col", { attrs: { cols: "6", md: "6" } }, [
                     _c(
-                      "h2",
+                      "div",
                       {
                         staticClass:
-                          "content-header-title float-left pr-1 mb-0",
+                          "d-flex align-items-center justify-content-end",
                       },
                       [
-                        _vm._v(
-                          "\n            Pedido de Autorização de Saida\n          "
-                        ),
-                      ]
+                        _c("b-form-input", {
+                          staticClass: "d-inline-block mr-1",
+                          attrs: { placeholder: "pesquisar..." },
+                          model: {
+                            value: _vm.searchQuery,
+                            callback: function ($$v) {
+                              _vm.searchQuery = $$v
+                            },
+                            expression: "searchQuery",
+                          },
+                        }),
+                      ],
+                      1
                     ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "breadcrumb-wrapper" }, [
-                      _c("ol", { staticClass: "breadcrumb" }, [
-                        _c(
-                          "li",
-                          { staticClass: "breadcrumb-item" },
-                          [
-                            _c(
-                              "b-link",
-                              {
-                                staticClass: "router-link-active",
-                                attrs: {
-                                  to: { name: "vehicle-movements" },
-                                  target: "_self",
-                                },
-                              },
-                              [
-                                _c(
-                                  "svg",
-                                  {
-                                    staticClass:
-                                      "align-text-top feather feather-home",
-                                    attrs: {
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      width: "16px",
-                                      height: "16px",
-                                      viewBox: "0 0 24 24",
-                                      fill: "none",
-                                      stroke: "currentColor",
-                                      "stroke-width": "2",
-                                      "stroke-linecap": "round",
-                                      "stroke-linejoin": "round",
-                                    },
-                                  },
-                                  [
-                                    _c("path", {
-                                      attrs: {
-                                        d: "M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("polyline", {
-                                      attrs: {
-                                        points: "9 22 9 12 15 12 15 22",
-                                      },
-                                    }),
-                                  ]
-                                ),
-                              ]
-                            ),
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "breadcrumb-item" }, [
-                          _c("a", { attrs: { href: "#", target: "_self" } }, [
-                            _vm._v(" Saida de viatura "),
-                          ]),
-                        ]),
-                        _vm._v(" "),
-                        _c("li", { staticClass: "breadcrumb-item active" }, [
-                          _c(
-                            "span",
-                            { attrs: { "aria-current": "location" } },
-                            [_vm._v(" Autorização ")]
-                          ),
-                        ]),
-                      ]),
-                    ]),
                   ]),
                 ],
                 1
@@ -872,1100 +585,312 @@ var render = function () {
             ],
             1
           ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-card",
-        { attrs: { "no-body": "" } },
-        [
-          _c(
-            "b-card-header",
-            [
-              _c("b-card-title", [
-                _vm._v("\n        Formulário de inspenção\n      "),
-              ]),
-            ],
-            1
-          ),
           _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c(
-            "b-card-body",
-            [
-              _c(
-                "b-form",
-                {
-                  on: {
-                    submit: function ($event) {
-                      $event.preventDefault()
-                      return _vm.OnSubmit.apply(null, arguments)
-                    },
-                  },
-                },
+          _vm.can("View Report")
+            ? _c(
+                "b-row",
                 [
                   _c(
-                    "b-row",
+                    "b-col",
+                    {
+                      staticClass: "table-responsive",
+                      attrs: { cols: "12", xl: "12", md: "12" },
+                    },
                     [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "Matricula" } },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  label: "matricula",
-                                  options: _vm.viatura,
-                                  reduce: function (viatura) {
-                                    return viatura.id
-                                  },
-                                },
-                                on: {
-                                  input: function ($event) {
-                                    return _vm.getKmActual()
-                                  },
-                                },
-                                model: {
-                                  value: _vm.form.viatura_id,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "viatura_id", $$v)
-                                  },
-                                  expression: "form.viatura_id",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "Motorista" } },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  label: "nome",
-                                  options: _vm.motoristas,
-                                  reduce: function (motoristas) {
-                                    return motoristas.id
-                                  },
-                                },
-                                model: {
-                                  value: _vm.form.motorista_id,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "motorista_id", $$v)
-                                  },
-                                  expression: "form.motorista_id",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "Kilometragem actual" } },
-                            [
-                              _c("b-form-input", {
-                                attrs: { type: "text", readonly: "" },
-                                model: {
-                                  value: _vm.form.km_inicio,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "km_inicio", $$v)
-                                  },
-                                  expression: "form.km_inicio",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "3", lg: "6", xl: "6" } },
-                        [
-                          _c(
-                            "b-form-group",
-                            { attrs: { label: "hora de partida" } },
-                            [
-                              _c("b-form-timepicker", {
-                                attrs: { locale: "pt-Br" },
-                                model: {
-                                  value: _vm.form.hora_inicio,
-                                  callback: function ($$v) {
-                                    _vm.$set(_vm.form, "hora_inicio", $$v)
-                                  },
-                                  expression: "form.hora_inicio",
-                                },
-                              }),
-                            ],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "12", md: "6", lg: "8", xl: "10" } },
-                        [
-                          _c("table", { staticClass: "table table-bordered" }, [
-                            _c("tbody", [
-                              _c("tr", [
-                                _c("td", [_vm._v("Limpeza")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.limpezaState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "limpezaState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.limpezaState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível do Vaso Expansor")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.vasoEspansorState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "vasoEspansorState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.vasoEspansorState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Liquido Vidro")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.LiquidoVidroState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "LiquidoVidroState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.LiquidoVidroState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Motor")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoMotorState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoMotorState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoMotorState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Direcção")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoDirecaoState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoDirecaoState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoDirecaoState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Nível Oleo de Travões")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.OleoTravoesState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "OleoTravoesState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.OleoTravoesState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Ar Condicionado")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.ACState,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "ACState", $$v)
-                                        },
-                                        expression: "form.ACState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Sistema ABS")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-radio-group", {
-                                      attrs: {
-                                        options: _vm.options,
-                                        state: _vm.state,
-                                      },
-                                      model: {
-                                        value: _vm.form.SistemaABS_State,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "SistemaABS_State",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.SistemaABS_State",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Cinto de Segurança")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.CintoSeguracaState,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "CintoSeguracaState",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.CintoSeguracaState",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tinha Carta de condução")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.carta_conducao,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "carta_conducao",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.carta_conducao",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [
-                                  _vm._v("O Motorista Paticipou no DSS?"),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.motorista_dss,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "motorista_dss",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.motorista_dss",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Kit de primeiros socorros")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.kit_1_socorro_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "kit_1_socorro_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.kit_1_socorro_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Extintor na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.extintor_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "extintor_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.extintor_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Livrete da viatura")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.livrete_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "livrete_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.livrete_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [
-                                  _vm._v("Documento de seguros em dia"),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.seguros_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "seguros_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.seguros_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Taxa de radio de fusão")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.taxaradio_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "taxaradio_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.taxaradio_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tinha uniforme")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.uniforme,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "uniforme", $$v)
-                                        },
-                                        expression: "form.uniforme",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Lista de presença")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.lista_presenca,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "lista_presenca",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.lista_presenca",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Colete na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.colete_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "colete_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.colete_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Pneu sobressalente")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.pneu_sobr_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "pneu_sobr_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.pneu_sobr_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Macaco na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.macaco_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "macaco_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.macaco_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Licença na saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.licenca_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "licenca_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.licenca_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Documento de inspenção")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.inspencao_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "inspencao_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.inspencao_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Triângulo")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.triangulo_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "triangulo_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.triangulo_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Chave de rodas")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.chave_roda_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "chave_roda_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.chave_roda_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Kit de reboque")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      model: {
-                                        value: _vm.form.kit_reboque_saida,
-                                        callback: function ($$v) {
-                                          _vm.$set(
-                                            _vm.form,
-                                            "kit_reboque_saida",
-                                            $$v
-                                          )
-                                        },
-                                        expression: "form.kit_reboque_saida",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c("tr", [
-                                _c("td", [_vm._v("Tipo de saida")]),
-                                _vm._v(" "),
-                                _c(
-                                  "td",
-                                  [
-                                    _vm._v("\n                    Rota: "),
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      on: { input: _vm.changeOption },
-                                      model: {
-                                        value: _vm.form.isRota,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "isRota", $$v)
-                                        },
-                                        expression: "form.isRota",
-                                      },
-                                    }),
-                                    _vm._v(" "),
-                                    _c("br"),
-                                    _vm._v("\n                    Outros: "),
-                                    _c("b-form-checkbox", {
-                                      attrs: { switch: "", size: "lg" },
-                                      on: { input: _vm.changeOption1 },
-                                      model: {
-                                        value: _vm.form.isOuthers,
-                                        callback: function ($$v) {
-                                          _vm.$set(_vm.form, "isOuthers", $$v)
-                                        },
-                                        expression: "form.isOuthers",
-                                      },
-                                    }),
-                                  ],
-                                  1
-                                ),
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "tr",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: _vm.form.isRota === true,
-                                      expression: "form.isRota === true",
-                                    },
-                                  ],
-                                  attrs: { id: "rotas" },
-                                },
-                                [
-                                  _c(
-                                    "td",
-                                    { attrs: { colspan: "2" } },
-                                    [
-                                      _c(
-                                        "b-form-group",
-                                        { attrs: { label: "Rotas a tomar" } },
-                                        [
-                                          _c("v-select", {
-                                            attrs: {
-                                              multiple: "",
-                                              label: "nome_rota",
-                                              options: _vm.rota,
-                                              reduce: function (rota) {
-                                                return rota.id
-                                              },
-                                            },
-                                            model: {
-                                              value: _vm.form.rota_id,
-                                              callback: function ($$v) {
-                                                _vm.$set(
-                                                  _vm.form,
-                                                  "rota_id",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "form.rota_id",
-                                            },
-                                          }),
-                                        ],
-                                        1
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "tr",
-                                {
-                                  directives: [
-                                    {
-                                      name: "show",
-                                      rawName: "v-show",
-                                      value: _vm.form.isOuthers === true,
-                                      expression: "form.isOuthers === true",
-                                    },
-                                  ],
-                                  attrs: { id: "others" },
-                                },
-                                [
-                                  _c(
-                                    "td",
-                                    { attrs: { colspan: "2" } },
-                                    [
-                                      _c(
-                                        "b-row",
-                                        [
-                                          _c(
-                                            "b-col",
-                                            [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    label:
-                                                      "Descreva o proposito do seu trajecto",
-                                                  },
-                                                },
-                                                [
-                                                  _c("b-form-textarea", {
-                                                    attrs: {
-                                                      id: "textarea-small",
-                                                      size: "sm",
-                                                      placeholder:
-                                                        "descreva o trajeto a tomar",
-                                                    },
-                                                    model: {
-                                                      value: _vm.form.trajecto,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "trajecto",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.trajecto",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
-                                              ),
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "b-col",
-                                            [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    label:
-                                                      "hora prevista de partida",
-                                                  },
-                                                },
-                                                [
-                                                  _c("b-form-timepicker", {
-                                                    attrs: { locale: "pt-Br" },
-                                                    model: {
-                                                      value:
-                                                        _vm.form
-                                                          .horaPrevistaSaida,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "horaPrevistaSaida",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.horaPrevistaSaida",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
-                                              ),
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "b-col",
-                                            [
-                                              _c(
-                                                "b-form-group",
-                                                {
-                                                  attrs: {
-                                                    label:
-                                                      "hora prevista de chagada",
-                                                  },
-                                                },
-                                                [
-                                                  _c("b-form-timepicker", {
-                                                    attrs: { locale: "pt-Br" },
-                                                    model: {
-                                                      value:
-                                                        _vm.form
-                                                          .horaPrevistaEntrada,
-                                                      callback: function ($$v) {
-                                                        _vm.$set(
-                                                          _vm.form,
-                                                          "horaPrevistaEntrada",
-                                                          $$v
-                                                        )
-                                                      },
-                                                      expression:
-                                                        "form.horaPrevistaEntrada",
-                                                    },
-                                                  }),
-                                                ],
-                                                1
-                                              ),
-                                            ],
-                                            1
-                                          ),
-                                        ],
-                                        1
-                                      ),
-                                    ],
-                                    1
-                                  ),
-                                ]
-                              ),
-                            ]),
-                          ]),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-row",
-                    { staticClass: "mt-2" },
-                    [
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "6", md: "6" } },
-                        [
-                          _c("b-button", { attrs: { type: "reset" } }, [
-                            _vm._v("\n              limpar\n            "),
-                          ]),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-col",
-                        { attrs: { cols: "6", md: "6" } },
-                        [
-                          _c(
-                            "b-button",
+                      _c("b-table", {
+                        ref: "refAbastecimentoListTable",
+                        staticClass: "position-relative",
+                        attrs: {
+                          items: _vm.fetchAbastecimentos,
+                          responsive: "",
+                          fields: _vm.tableColumns,
+                          "primary-key": "id",
+                          "sort-by": _vm.sortBy,
+                          "show-empty": "",
+                          "empty-text": "No matching records found",
+                          "sort-desc": _vm.isSortDirDesc,
+                        },
+                        on: {
+                          "update:sortBy": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sort-by": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sortDesc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                          "update:sort-desc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                        },
+                        scopedSlots: _vm._u(
+                          [
                             {
-                              attrs: {
-                                type: "submit",
-                                variant: "outline-primary",
+                              key: "cell(ordem)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(
+                                              data.item.ordem.codigo_ordem
+                                            ) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _vm._e(),
+                                ]
                               },
                             },
-                            [_vm._v("\n              submeter\n            ")]
+                            {
+                              key: "cell(estado)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(data.item.ordem.estado) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _c("span", [
+                                        _vm._v(
+                                          "\n                            -\n                        "
+                                        ),
+                                      ]),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(bombas)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        data.item.ordem.bombas.nome_bombas
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(Data_de_emissao)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        _vm.dateTime(data.item.ordem.created_at)
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(acções)",
+                              fn: function (data) {
+                                return [
+                                  _c(
+                                    "b-dropdown",
+                                    {
+                                      attrs: {
+                                        variant: "link",
+                                        "no-caret": "",
+                                        right: _vm.$store.state.appConfig.isRTL,
+                                      },
+                                      scopedSlots: _vm._u(
+                                        [
+                                          {
+                                            key: "button-content",
+                                            fn: function () {
+                                              return [
+                                                _c("feather-icon", {
+                                                  staticClass:
+                                                    "align-middle text-body",
+                                                  attrs: {
+                                                    icon: "MoreVerticalIcon",
+                                                    size: "16",
+                                                  },
+                                                }),
+                                              ]
+                                            },
+                                            proxy: true,
+                                          },
+                                        ],
+                                        null,
+                                        true
+                                      ),
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          attrs: {
+                                            to: {
+                                              name: "supply-details",
+                                              params: {
+                                                refs: data.item.ordem.refs,
+                                              },
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "FileTextIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("Details")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.PrintOrder(
+                                                data.item.ordem
+                                              )
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "PrinterIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("imprimir")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ]
+                              },
+                            },
+                          ],
+                          null,
+                          false,
+                          1889232419
+                        ),
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "mx-2 mb-2" },
+                        [
+                          _c(
+                            "b-row",
+                            [
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-start",
+                                  attrs: { cols: "12", sm: "8" },
+                                },
+                                [
+                                  _c("span", { staticClass: "text-muted" }, [
+                                    _vm._v(
+                                      "mostrar " +
+                                        _vm._s(_vm.dataMeta.from) +
+                                        " de " +
+                                        _vm._s(_vm.dataMeta.to) +
+                                        " para " +
+                                        _vm._s(_vm.dataMeta.of) +
+                                        " entradas"
+                                    ),
+                                  ]),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-end",
+                                  attrs: { cols: "12", sm: "4" },
+                                },
+                                [
+                                  _c("b-pagination", {
+                                    staticClass: "mb-0 mt-1 mt-sm-0",
+                                    attrs: {
+                                      "total-rows": _vm.totalAbastecimentos,
+                                      "per-page": _vm.perPage,
+                                      "first-number": "",
+                                      "last-number": "",
+                                      "prev-class": "prev-item",
+                                      "next-class": "next-item",
+                                    },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "prev-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronLeftIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                        {
+                                          key: "next-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronRightIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                      ],
+                                      null,
+                                      false,
+                                      1308952388
+                                    ),
+                                    model: {
+                                      value: _vm.currentPage,
+                                      callback: function ($$v) {
+                                        _vm.currentPage = $$v
+                                      },
+                                      expression: "currentPage",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
                           ),
                         ],
                         1
@@ -1975,10 +900,8 @@ var render = function () {
                   ),
                 ],
                 1
-              ),
-            ],
-            1
-          ),
+              )
+            : _vm._e(),
         ],
         1
       ),
@@ -1993,17 +916,229 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue":
-/*!*************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue ***!
-  \*************************************************************************/
+/***/ "./resources/js/src/@core/utils/filter.js":
+/*!************************************************!*\
+  !*** ./resources/js/src/@core/utils/filter.js ***!
+  \************************************************/
+/*! exports provided: kFormatter, title, avatarText, formatDate, formatDateToMonthShort, filterTags */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "kFormatter", function() { return kFormatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "title", function() { return title; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "avatarText", function() { return avatarText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDate", function() { return formatDate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "formatDateToMonthShort", function() { return formatDateToMonthShort; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterTags", function() { return filterTags; });
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.number.to-fixed.js */ "./node_modules/core-js/modules/es.number.to-fixed.js");
+/* harmony import */ var core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_number_to_fixed_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.regexp.to-string.js */ "./node_modules/core-js/modules/es.regexp.to-string.js");
+/* harmony import */ var core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.regexp.exec.js */ "./node_modules/core-js/modules/es.regexp.exec.js");
+/* harmony import */ var core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_regexp_exec_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.string.split.js */ "./node_modules/core-js/modules/es.string.split.js");
+/* harmony import */ var core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_split_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! core-js/modules/es.array.slice.js */ "./node_modules/core-js/modules/es.array.slice.js");
+/* harmony import */ var core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_slice_js__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! core-js/modules/es.array.join.js */ "./node_modules/core-js/modules/es.array.join.js");
+/* harmony import */ var core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_join_js__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! core-js/modules/es.array.map.js */ "./node_modules/core-js/modules/es.array.map.js");
+/* harmony import */ var core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_map_js__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! core-js/modules/es.string.replace.js */ "./node_modules/core-js/modules/es.string.replace.js");
+/* harmony import */ var core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_string_replace_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/utils/utils.js");
+
+
+
+
+
+
+
+
+
+
+
+var kFormatter = function kFormatter(num) {
+  return num > 999 ? "".concat((num / 1000).toFixed(1), "k") : num;
+};
+var title = function title(value) {
+  var replacer = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : ' ';
+  if (!value) return '';
+  var str = value.toString();
+  var arr = str.split(replacer);
+  var capitalizedArray = [];
+  arr.forEach(function (word) {
+    var capitalized = word.charAt(0).toUpperCase() + word.slice(1);
+    capitalizedArray.push(capitalized);
+  });
+  return capitalizedArray.join(' ');
+};
+var avatarText = function avatarText(value) {
+  if (!value) return '';
+  var nameArray = value.split(' ');
+  return nameArray.map(function (word) {
+    return word.charAt(0).toUpperCase();
+  }).join('');
+};
+/**
+ * Format and return date in Humanize format
+ * Intl docs: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
+ * Intl Constructor: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
+ * @param {String} value date to format
+ * @param {Object} formatting Intl object to format with
+ */
+
+var formatDate = function formatDate(value) {
+  var formatting = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric'
+  };
+  if (!value) return value;
+  return new Intl.DateTimeFormat('en-US', formatting).format(new Date(value));
+};
+/**
+ * Return short human friendly month representation of date
+ * Can also convert date to only time if date is of today (Better UX)
+ * @param {String} value date to format
+ * @param {Boolean} toTimeForCurrentDay Shall convert to time if day is today/current
+ */
+
+var formatDateToMonthShort = function formatDateToMonthShort(value) {
+  var toTimeForCurrentDay = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+  var date = new Date(value);
+  var formatting = {
+    month: 'short',
+    day: 'numeric'
+  };
+
+  if (toTimeForCurrentDay && Object(_utils__WEBPACK_IMPORTED_MODULE_10__["isToday"])(date)) {
+    formatting = {
+      hour: 'numeric',
+      minute: 'numeric'
+    };
+  }
+
+  return new Intl.DateTimeFormat('en-US', formatting).format(new Date(value));
+}; // Strip all the tags from markup and return plain text
+
+var filterTags = function filterTags(value) {
+  return value.replace(/<\/?[^>]+(>|$)/g, '');
+};
+
+/***/ }),
+
+/***/ "./resources/js/src/@core/utils/utils.js":
+/*!***********************************************!*\
+  !*** ./resources/js/src/@core/utils/utils.js ***!
+  \***********************************************/
+/*! exports provided: isObject, isToday, getRandomBsVariant, isDynamicRouteActive, useRouter */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isObject", function() { return isObject; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isToday", function() { return isToday; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+
+
+ // eslint-disable-next-line object-curly-newline
+
+
+var isObject = function isObject(obj) {
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+};
+var isToday = function isToday(date) {
+  var today = new Date();
+  return (
+    /* eslint-disable operator-linebreak */
+    date.getDate() === today.getDate() && date.getMonth() === today.getMonth() && date.getFullYear() === today.getFullYear()
+    /* eslint-enable */
+
+  );
+};
+
+var getRandomFromArray = function getRandomFromArray(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}; // ? Light and Dark variant is not included
+// prettier-ignore
+
+
+var getRandomBsVariant = function getRandomBsVariant() {
+  return getRandomFromArray(['primary', 'secondary', 'success', 'warning', 'danger', 'info']);
+};
+var isDynamicRouteActive = function isDynamicRouteActive(route) {
+  var _router$resolve = _router__WEBPACK_IMPORTED_MODULE_2__["default"].resolve(route),
+      resolvedRoute = _router$resolve.route;
+
+  return resolvedRoute.path === _router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.path;
+}; // Thanks: https://medium.com/better-programming/reactive-vue-routes-with-the-composition-api-18c1abd878d1
+
+var useRouter = function useRouter() {
+  var vm = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["getCurrentInstance"])().proxy;
+  var state = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["reactive"])({
+    route: vm.$route
+  });
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["watch"])(function () {
+    return vm.$route;
+  }, function (r) {
+    state.route = r;
+  });
+  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+    router: vm.$router
+  });
+};
+/**
+ * This is just enhancement over Object.extend [Gives deep extend]
+ * @param {target} a Object which contains values to be overridden
+ * @param {source} b Object which contains values to override
+ */
+// export const objectExtend = (a, b) => {
+//   // Don't touch 'null' or 'undefined' objects.
+//   if (a == null || b == null) {
+//     return a
+//   }
+//   Object.keys(b).forEach(key => {
+//     if (Object.prototype.toString.call(b[key]) === '[object Object]') {
+//       if (Object.prototype.toString.call(a[key]) !== '[object Object]') {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = b[key]
+//       } else {
+//         // eslint-disable-next-line no-param-reassign
+//         a[key] = objectExtend(a[key], b[key])
+//       }
+//     } else {
+//       // eslint-disable-next-line no-param-reassign
+//       a[key] = b[key]
+//     }
+//   })
+//   return a
+// }
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue ***!
+  \************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nova_saida.vue?vue&type=template&id=25f0d606& */ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&");
-/* harmony import */ var _nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nova_saida.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&");
+/* harmony import */ var _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./historicos.vue?vue&type=template&id=78d13bee& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&");
+/* harmony import */ var _historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./historicos.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2013,9 +1148,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2025,40 +1160,236 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js& ***!
-  \**************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./nova_saida.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./historicos.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&":
-/*!********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606& ***!
-  \********************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./nova_saida.vue?vue&type=template&id=25f0d606& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/nova_saida.vue?vue&type=template&id=25f0d606&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./historicos.vue?vue&type=template&id=78d13bee& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_nova_saida_vue_vue_type_template_id_25f0d606___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js":
+/*!******************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js ***!
+  \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useAbastecimentoList; });
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+
+ // Notification
+
+
+
+
+function useAbastecimentoList() {
+  // Use toast
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])();
+  var refAbastecimentoListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var refAbstRecorrente = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
+
+  var tableColumns = [{
+    key: 'ordem.codigo_ordem',
+    sortable: true
+  }, {
+    key: 'qtd_ant',
+    sortable: true
+  }, {
+    key: 'qtd_rec',
+    sortable: true
+  }, {
+    key: 'estado',
+    sortable: true
+  }, {
+    key: 'bombas',
+    sortable: true
+  }, {
+    key: 'Data_de_emissao',
+    sortable: true
+  }, {
+    key: 'user.name',
+    sortable: true
+  }, {
+    key: 'acções'
+  }];
+  var fieldCollumns = [{
+    key: 'ordem',
+    sortable: true
+  }, {
+    key: 'bombas',
+    sortable: true
+  }, {
+    key: 'viatura',
+    sortable: true
+  }, {
+    key: 'destino',
+    sortable: true
+  }, {
+    key: 'descricao',
+    sortable: true
+  }, {
+    key: 'motorista',
+    sortable: true
+  }, {
+    key: 'hora_de_saida',
+    sortable: true
+  }, {
+    key: 'user',
+    sortable: true
+  }, {
+    key: 'acções'
+  }];
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var totalAbastecimentos = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var perPageOptions = [10, 25, 50, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
+  var roleFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var planFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var statusFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refAbastecimentoListTable.value ? refAbastecimentoListTable.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalAbastecimentos.value
+    };
+  });
+  var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refAbstRecorrente.value ? refAbstRecorrente.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalAbastecimentos.value
+    };
+  });
+
+  var refetchData2 = function refetchData2() {
+    refAbstRecorrente.value.refresh();
+  };
+
+  var refetchData = function refetchData() {
+    refAbastecimentoListTable.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, roleFilter, planFilter, statusFilter], function () {
+    refetchData();
+    refetchData2();
+  });
+
+  var fetchAbastecimentos = function fetchAbastecimentos(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('Supply/fetchAbastecimentos', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var abastecimento = response.data;
+      callback(abastecimento.data);
+      totalAbastecimentos.value = abastecimento.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+        props: {
+          title: 'Erro na listagem de abastecimentos',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  }; //   fetch abastecimento recorrente
+
+
+  var fetchAbstRecorrente = function fetchAbstRecorrente(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('Supply/AbastecimentoRecorrente', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var abastecimento = response.data;
+      callback(abastecimento.data);
+      totalAbastecimentos.value = abastecimento.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+        props: {
+          title: 'Erro na listagem',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  }; // *===============================================---*
+  // *--------- UI ---------------------------------------*
+  // *===============================================---*
+
+
+  return {
+    fetchAbastecimentos: fetchAbastecimentos,
+    tableColumns: tableColumns,
+    perPage: perPage,
+    currentPage: currentPage,
+    totalAbastecimentos: totalAbastecimentos,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    refAbastecimentoListTable: refAbastecimentoListTable,
+    refetchData: refetchData,
+    fetchAbstRecorrente: fetchAbstRecorrente,
+    refAbstRecorrente: refAbstRecorrente,
+    fieldCollumns: fieldCollumns,
+    dataMeta2: dataMeta2,
+    refetchData2: refetchData2,
+    // Extra Filters
+    roleFilter: roleFilter,
+    planFilter: planFilter,
+    statusFilter: statusFilter
+  };
+}
 
 /***/ })
 

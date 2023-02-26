@@ -1,23 +1,25 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[46],{
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _FormCheckboxBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxBasic.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue");
-/* harmony import */ var _FormCheckboxCustom_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FormCheckboxCustom.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue");
-/* harmony import */ var _FormCheckboxColor_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormCheckboxColor.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue");
-/* harmony import */ var _FormCheckboxStates_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormCheckboxStates.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue");
-/* harmony import */ var _FormCheckboxMultiple_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormCheckboxMultiple.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue");
-/* harmony import */ var _FormCheckboxChangeNames_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormCheckboxChangeNames.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue");
-/* harmony import */ var _FormCheckboxStackedInline_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormCheckboxStackedInline.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue");
-/* harmony import */ var _FormCheckboxIndeterminate_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormCheckboxIndeterminate.vue */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue");
+/* harmony import */ var _FileInputBasic_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputBasic.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue");
+/* harmony import */ var _FileInputMultiple_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FileInputMultiple.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue");
+/* harmony import */ var _FileInputDragDrop_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FileInputDragDrop.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue");
+/* harmony import */ var _FileInputLimiting_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FileInputLimiting.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue");
+/* harmony import */ var _FileInputSize_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FileInputSize.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue");
+/* harmony import */ var _FileInputFormatter_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FileInputFormatter.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue");
+/* harmony import */ var _FileInputContextualState_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FileInputContextualState.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue");
+/* harmony import */ var _FileInputClearing_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FileInputClearing.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue");
+/* harmony import */ var _FileInputDirectory_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FileInputDirectory.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue");
+/* harmony import */ var _FileInputSlot_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./FileInputSlot.vue */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue");
 //
 //
 //
@@ -33,6 +35,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 
@@ -46,23 +70,25 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    FormCheckboxBasic: _FormCheckboxBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
-    FormCheckboxCustom: _FormCheckboxCustom_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    FormCheckboxColor: _FormCheckboxColor_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FormCheckboxStates: _FormCheckboxStates_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-    FormCheckboxMultiple: _FormCheckboxMultiple_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-    FormCheckboxChangeNames: _FormCheckboxChangeNames_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
-    FormCheckboxStackedInline: _FormCheckboxStackedInline_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    FormCheckboxIndeterminate: _FormCheckboxIndeterminate_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    FileInputBasic: _FileInputBasic_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
+    FileInputMultiple: _FileInputMultiple_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    FileInputDragDrop: _FileInputDragDrop_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    FileInputLimiting: _FileInputLimiting_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+    FileInputSize: _FileInputSize_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+    FileInputFormatter: _FileInputFormatter_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+    FileInputContextualState: _FileInputContextualState_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
+    FileInputClearing: _FileInputClearing_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    FileInputDirectory: _FileInputDirectory_vue__WEBPACK_IMPORTED_MODULE_9__["default"],
+    FileInputSlot: _FileInputSlot_vue__WEBPACK_IMPORTED_MODULE_10__["default"]
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70,11 +96,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
 //
 //
 //
@@ -126,12 +148,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"]
   },
   data: function data() {
     return {
-      selected: ['A', 'C'],
+      file: null,
+      file2: null,
       codeBasic: _code__WEBPACK_IMPORTED_MODULE_2__["codeBasic"]
     };
   }
@@ -139,265 +162,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckboxGroup"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  data: function data() {
-    return {
-      codeChangeNames: _code__WEBPACK_IMPORTED_MODULE_2__["codeChangeNames"],
-      selected: [],
-      options: [{
-        item: 'A',
-        name: 'Option A'
-      }, {
-        item: 'B',
-        name: 'Option B'
-      }, {
-        item: 'D',
-        name: 'Option C',
-        notEnabled: true
-      }, {
-        item: {
-          d: 1
-        },
-        name: 'Option D'
-      }]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js&":
-/*!************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js& ***!
-  \************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
-  },
-  data: function data() {
-    return {
-      selected: ['A', 'C', 'CC', 'B', 'D', 'E', 'F', 'G'],
-      codeColor: _code__WEBPACK_IMPORTED_MODULE_2__["codeColor"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
-  },
-  data: function data() {
-    return {
-      selected: ['B', 'C'],
-      codeCustom: _code__WEBPACK_IMPORTED_MODULE_2__["codeCustom"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -406,7 +174,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
 /* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -459,8 +235,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
     BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
     BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
@@ -469,23 +245,83 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      checked: true,
-      indeterminate: true,
-      codeIndeterminate: _code__WEBPACK_IMPORTED_MODULE_3__["codeIndeterminate"]
+      file: null,
+      codeClearing: _code__WEBPACK_IMPORTED_MODULE_3__["codeClearing"]
     };
   },
   methods: {
-    toggleIndeterminate: function toggleIndeterminate() {
-      this.indeterminate = !this.indeterminate;
+    clearFiles: function clearFiles() {
+      this.$refs['file-input'].reset();
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      file: null,
+      codeContextualState: _code__WEBPACK_IMPORTED_MODULE_2__["codeContextualState"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js& ***!
   \***************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -494,33 +330,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
 //
 //
 //
@@ -547,39 +357,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckboxGroup"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
     BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
   data: function data() {
     return {
-      selected: [],
-      options: [{
-        text: 'Orange',
-        value: 'orange'
-      }, {
-        text: 'Apple',
-        value: 'apple'
-      }, {
-        text: 'Pineapple',
-        value: 'pineapple'
-      }, {
-        text: 'Grape',
-        value: 'grape'
-      }],
-      codemultipleChoice: _code__WEBPACK_IMPORTED_MODULE_2__["codemultipleChoice"]
+      file: null,
+      codeDirectory: _code__WEBPACK_IMPORTED_MODULE_2__["codeDirectory"]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -587,55 +382,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
 //
 //
 //
@@ -663,63 +410,34 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckboxGroup"],
-    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckbox"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
     BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
     BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
   },
   data: function data() {
     return {
-      codeInlineStacked: _code__WEBPACK_IMPORTED_MODULE_2__["codeInlineStacked"],
-      selected: [],
-      options: [{
-        text: 'Orange',
-        value: 'orange'
-      }, {
-        text: 'Apple',
-        value: 'apple'
-      }, {
-        text: 'Pineapple',
-        value: 'pineapple'
-      }, {
-        text: 'Grape',
-        value: 'grape'
-      }]
+      codeDragDrop: _code__WEBPACK_IMPORTED_MODULE_2__["codeDragDrop"]
     };
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-checkbox/code.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.function.name.js */ "./node_modules/core-js/modules/es.function.name.js");
+/* harmony import */ var core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_function_name_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+
 //
 //
 //
@@ -744,41 +462,313 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormCheckboxGroup"],
-    BFormInvalidFeedback: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormInvalidFeedback"],
-    BFormValidFeedback: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormValidFeedback"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"]
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_1__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormFile"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardText"]
   },
   data: function data() {
     return {
-      value: [],
-      options: [{
-        text: 'First Check',
-        value: 'first'
-      }, {
-        text: 'Second Check',
-        value: 'second'
-      }, {
-        text: 'Third Check',
-        value: 'third'
-      }],
-      codeStates: _code__WEBPACK_IMPORTED_MODULE_2__["codeStates"]
+      codeFormatter: _code__WEBPACK_IMPORTED_MODULE_3__["codeFormatter"]
     };
   },
-  computed: {
-    state: function state() {
-      return this.value.length === 2;
+  methods: {
+    formatNames: function formatNames(files) {
+      if (files.length === 1) {
+        return files[0].name;
+      }
+
+      return "".concat(files.length, " files selected");
     }
   }
 });
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728&":
-/*!***********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728& ***!
-  \***********************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      codeLimiting: _code__WEBPACK_IMPORTED_MODULE_2__["codeLimiting"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      codeMultiple: _code__WEBPACK_IMPORTED_MODULE_2__["codeMultiple"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormGroup"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"]
+  },
+  data: function data() {
+    return {
+      codeSize: _code__WEBPACK_IMPORTED_MODULE_2__["codeSize"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @core/components/b-card-code */ "./resources/js/src/@core/components/b-card-code/index.js");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var _code__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./code */ "./resources/js/src/views/forms/form-element/form-file-input/code.js");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCardCode: _core_components_b_card_code__WEBPACK_IMPORTED_MODULE_0__["default"],
+    BFormFile: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BFormFile"],
+    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BBadge"]
+  },
+  data: function data() {
+    return {
+      codeSlot: _code__WEBPACK_IMPORTED_MODULE_2__["codeSlot"]
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -792,29 +782,32 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "b-row",
+    { staticClass: "match-height" },
     [
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-basic")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-limiting")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-multiple")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-drag-drop")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-formatter")], 1),
+      _vm._v(" "),
       _c(
         "b-col",
-        { attrs: { cols: "12" } },
-        [
-          _c("form-checkbox-basic"),
-          _vm._v(" "),
-          _c("form-checkbox-custom"),
-          _vm._v(" "),
-          _c("form-checkbox-color"),
-          _vm._v(" "),
-          _c("form-checkbox-multiple"),
-          _vm._v(" "),
-          _c("form-checkbox-change-names"),
-          _vm._v(" "),
-          _c("form-checkbox-stacked-inline"),
-          _vm._v(" "),
-          _c("form-checkbox-states"),
-          _vm._v(" "),
-          _c("form-checkbox-indeterminate"),
-        ],
+        { attrs: { lg: "6" } },
+        [_c("file-input-contextual-state")],
         1
       ),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-directory")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-slot")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-size")], 1),
+      _vm._v(" "),
+      _c("b-col", { attrs: { lg: "6" } }, [_c("file-input-clearing")], 1),
     ],
     1
   )
@@ -826,10 +819,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52&":
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52& ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af&":
+/*!***************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af& ***!
+  \***************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -844,7 +837,7 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Basic Checkbox" },
+      attrs: { title: "File Input Basic" },
       scopedSlots: _vm._u([
         {
           key: "code",
@@ -856,85 +849,64 @@ var render = function () {
       ]),
     },
     [
-      _c("b-card-text", { staticClass: "mb-0" }, [
-        _c("span", [_vm._v("You can have ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox-group>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" or ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(" render a browser native checkbox input by setting the "),
-          _c("code", [_vm._v("plain")]),
-          _vm._v(" prop."),
-        ]),
+      _c("b-card-text", [
+        _vm._v(
+          "\n    Customized, cross-browser consistent, file input control that supports single file, multiple files, and directory\n    upload (for browsers that support directory mode)\n  "
+        ),
       ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "demo-inline-spacing" },
         [
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "A", plain: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
+          _c("b-form-file", {
+            attrs: {
+              placeholder: "Choose a file or drop it here...",
+              "drop-placeholder": "Drop file here...",
             },
-            [_vm._v("\n      Checked\n    ")]
-          ),
+            model: {
+              value: _vm.file,
+              callback: function ($$v) {
+                _vm.file = $$v
+              },
+              expression: "file",
+            },
+          }),
           _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "B", plain: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Unchecked\n    ")]
-          ),
+          _c("b-card-text", { staticClass: "my-1" }, [
+            _vm._v("\n      Selected file: "),
+            _c("strong", [_vm._v(_vm._s(_vm.file ? _vm.file.name : ""))]),
+          ]),
           _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "C", plain: "", disabled: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Checked disabled\n    ")]
-          ),
+          _c("b-card-text", [
+            _c("span", [_vm._v("You can have ")]),
+            _vm._v(" "),
+            _c("code", [_vm._v("<b-form-file>")]),
+            _vm._v(" "),
+            _c("span", [
+              _vm._v(" render a browser native file input by setting the "),
+            ]),
+            _vm._v(" "),
+            _c("code", [_vm._v("plain")]),
+            _vm._v(" "),
+            _c("span", [_vm._v(" prop.")]),
+          ]),
           _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "D", plain: "", disabled: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
+          _c("b-form-file", {
+            staticClass: "mt-1",
+            attrs: { plain: "" },
+            model: {
+              value: _vm.file2,
+              callback: function ($$v) {
+                _vm.file2 = $$v
               },
+              expression: "file2",
             },
-            [_vm._v("\n      Unchecked disabled\n    ")]
-          ),
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "mt-1" }, [
+            _vm._v("\n      Selected file: "),
+            _c("strong", [_vm._v(_vm._s(_vm.file2 ? _vm.file2.name : ""))]),
+          ]),
         ],
         1
       ),
@@ -949,10 +921,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8&":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -967,12 +939,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Changing the option field names" },
+      attrs: { title: "Clearing the file selection" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeChangeNames) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeClearing) + "\n  ")]
           },
           proxy: true,
         },
@@ -982,210 +954,89 @@ var render = function () {
       _c("b-card-text", [
         _c("span", [
           _vm._v(
-            "If you want to customize the field property names (for example using "
+            "\n      You can clear the file input's\n      selected files by setting the\n    "
           ),
         ]),
         _vm._v(" "),
-        _c("code", [_vm._v("name")]),
+        _c("code", [_vm._v("v-model")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" field for display ")]),
+        _c("span", [_vm._v(" to either ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("text")]),
+        _c("code", [_vm._v("null")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" ) you can easily change them by setting the ")]),
+        _c("span", [_vm._v(" (for single mode) or an empty array ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("text-field")]),
+        _c("code", [_vm._v("[]")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" , ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("html-field")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" , ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("value-field")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" , and ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("disabled-field")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " props to a string that contains the property name you would like to use:"
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c("b-form-checkbox-group", {
-        staticClass: "demo-inline-spacing",
-        attrs: {
-          options: _vm.options,
-          "value-field": "item",
-          "text-field": "name",
-          "disabled-field": "notEnabled",
-        },
-        model: {
-          value: _vm.selected,
-          callback: function ($$v) {
-            _vm.selected = $$v
-          },
-          expression: "selected",
-        },
-      }),
-      _vm._v(" "),
-      _c("b-card-text", { staticClass: "mt-1 mb-0" }, [
-        _vm._v("\n    Selected: "),
-        _c("strong", [_vm._v(_vm._s(_vm.selected))]),
-      ]),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307&":
-/*!****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307& ***!
-  \****************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Color" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeColor) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", { staticClass: "mb-0" }, [
-        _c("span", [_vm._v("To change the color of the checkBox use the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v(".custom-control-{value}")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(" for primary, secondary, success, danger, info, warning."),
-        ]),
+        _c("span", [_vm._v(" (for multiple/directory mode).")]),
       ]),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "demo-inline-spacing" },
         [
-          _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-primary",
-              attrs: { value: "A" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
+          _c("b-form-file", {
+            ref: "file-input",
+            model: {
+              value: _vm.file,
+              callback: function ($$v) {
+                _vm.file = $$v
               },
+              expression: "file",
             },
-            [_vm._v("\n      Primary\n    ")]
-          ),
+          }),
           _vm._v(" "),
           _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-secondary",
-              attrs: { value: "CC" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
+            "div",
+            { staticClass: "demo-inline-spacing" },
+            [
+              _c(
+                "b-button",
+                {
+                  directives: [
+                    {
+                      name: "ripple",
+                      rawName: "v-ripple.400",
+                      value: "rgba(113, 102, 240, 0.15)",
+                      expression: "'rgba(113, 102, 240, 0.15)'",
+                      modifiers: { 400: true },
+                    },
+                  ],
+                  staticClass: "mr-2 mb-25",
+                  attrs: { variant: "outline-primary" },
+                  on: { click: _vm.clearFiles },
                 },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Secondary\n    ")]
+                [_vm._v("\n        Reset via method\n      ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "b-button",
+                {
+                  directives: [
+                    {
+                      name: "ripple",
+                      rawName: "v-ripple.400",
+                      value: "rgba(113, 102, 240, 0.15)",
+                      expression: "'rgba(113, 102, 240, 0.15)'",
+                      modifiers: { 400: true },
+                    },
+                  ],
+                  attrs: { variant: "outline-primary" },
+                  on: {
+                    click: function ($event) {
+                      _vm.file = null
+                    },
+                  },
+                },
+                [_vm._v("\n        Reset via v-model\n      ")]
+              ),
+            ],
+            1
           ),
           _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-success",
-              attrs: { value: "C" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Success\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-danger",
-              attrs: { value: "F" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Danger\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-warning",
-              attrs: { value: "D" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Warning\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              staticClass: "custom-control-info",
-              attrs: { value: "G" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Info\n    ")]
-          ),
+          _c("b-card-text", { staticClass: "mt-1 mb-0" }, [
+            _vm._v("\n      Selected file: "),
+            _c("strong", [_vm._v(_vm._s(_vm.file ? _vm.file.name : ""))]),
+          ]),
         ],
         1
       ),
@@ -1200,10 +1051,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01&":
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1218,135 +1069,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Custom Checkboxes" },
+      attrs: { title: "Contextual state feedback" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeCustom) + "\n  ")]
-          },
-          proxy: true,
-        },
-      ]),
-    },
-    [
-      _c("b-card-text", { staticClass: "mb-0" }, [
-        _c("span", [_vm._v("For cross browser consistency, ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox-group>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" and ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox>")]),
-        _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            "\n      use Bootstrap's custom checkbox input to replace the browser default checkbox input.\n    "
-          ),
-        ]),
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "demo-inline-spacing" },
-        [
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "A" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Checked\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "B" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Unchecked\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "C", disabled: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Checked disabled\n    ")]
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-checkbox",
-            {
-              attrs: { value: "D", disabled: "" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [_vm._v("\n      Unchecked disabled\n    ")]
-          ),
-        ],
-        1
-      ),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "b-card-code",
-    {
-      attrs: { title: "Indeterminate (tri-state) support" },
-      scopedSlots: _vm._u([
-        {
-          key: "code",
-          fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeIndeterminate) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeContextualState) + "\n  ")]
           },
           proxy: true,
         },
@@ -1354,87 +1082,43 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _c("code", [_vm._v("<b-form-checkbox>")]),
+        _c("span", [_vm._v("To apply one of the contextual state icons on ")]),
         _vm._v(" "),
-        _c("span", [
-          _vm._v(" supports setting this visual indeterminate state via the "),
-        ]),
+        _c("code", [_vm._v("<b-form-file>")]),
         _vm._v(" "),
-        _c("code", [_vm._v("indeterminate")]),
+        _c("span", [_vm._v(", set the ")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" prop (defaults to ")]),
+        _c("code", [_vm._v("state")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" prop to ")]),
         _vm._v(" "),
         _c("code", [_vm._v("false")]),
         _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " ). Clicking the checkbox will clear its indeterminate state. The "
-          ),
-        ]),
+        _c("span", [_vm._v(" (for invalid), ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("indeterminate")]),
+        _c("code", [_vm._v("true")]),
         _vm._v(" "),
-        _c("span", [
-          _vm._v(
-            " prop can be synced to the checkbox's state by v-binding the "
-          ),
-        ]),
+        _c("span", [_vm._v(" (for valid), or ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("indeterminate")]),
+        _c("code", [_vm._v("null")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" prop with the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v(".sync")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" modifier.")]),
+        _c("span", [_vm._v(" (no validation state).")]),
       ]),
       _vm._v(" "),
-      _c(
-        "b-form-checkbox",
-        {
-          attrs: { indeterminate: _vm.indeterminate },
-          on: {
-            "update:indeterminate": function ($event) {
-              _vm.indeterminate = $event
-            },
-          },
-          model: {
-            value: _vm.checked,
-            callback: function ($$v) {
-              _vm.checked = $$v
-            },
-            expression: "checked",
-          },
+      _c("b-form-file", {
+        attrs: {
+          state: Boolean(_vm.file),
+          placeholder: "Choose a file or drop it here...",
+          "drop-placeholder": "Drop file here...",
         },
-        [_vm._v("\n    Click me to see what happens\n  ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "b-button",
-        {
-          directives: [
-            {
-              name: "ripple",
-              rawName: "v-ripple.400",
-              value: "rgba(113, 102, 240, 0.15)",
-              expression: "'rgba(113, 102, 240, 0.15)'",
-              modifiers: { 400: true },
-            },
-          ],
-          staticClass: "mt-1",
-          attrs: { variant: "outline-primary" },
-          on: { click: _vm.toggleIndeterminate },
+        model: {
+          value: _vm.file,
+          callback: function ($$v) {
+            _vm.file = $$v
+          },
+          expression: "file",
         },
-        [_vm._v("\n    Toggle Indeterminate State\n  ")]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "mt-1" }, [
-        _vm._v("\n    Checked: "),
-        _c("strong", [_vm._v(_vm._s(_vm.checked))]),
-        _c("br"),
-        _vm._v("\n    Indeterminate: "),
-        _c("strong", [_vm._v(_vm._s(_vm.indeterminate))]),
-      ]),
+      }),
     ],
     1
   )
@@ -1446,9 +1130,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24&":
 /*!*******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24& ***!
   \*******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -1464,85 +1148,42 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Multiple choice checkboxes" },
+      attrs: { title: "Directory mode" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codemultipleChoice) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeDirectory) + "\n  ")]
           },
           proxy: true,
         },
       ]),
     },
     [
-      _c(
-        "b-form-group",
-        { attrs: { label: "Using options array:" } },
-        [
-          _c("b-form-checkbox-group", {
-            staticClass: "demo-inline-spacing",
-            attrs: {
-              id: "checkbox-group-1",
-              options: _vm.options,
-              name: "flavour-1",
-            },
-            model: {
-              value: _vm.selected,
-              callback: function ($$v) {
-                _vm.selected = $$v
-              },
-              expression: "selected",
-            },
-          }),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-form-group",
-        { attrs: { label: "Using sub-components:" } },
-        [
-          _c(
-            "b-form-checkbox-group",
-            {
-              staticClass: "demo-inline-spacing",
-              attrs: { id: "checkbox-group-2", name: "flavour-2" },
-              model: {
-                value: _vm.selected,
-                callback: function ($$v) {
-                  _vm.selected = $$v
-                },
-                expression: "selected",
-              },
-            },
-            [
-              _c("b-form-checkbox", { attrs: { value: "orange" } }, [
-                _vm._v("\n        Orange\n      "),
-              ]),
-              _vm._v(" "),
-              _c("b-form-checkbox", { attrs: { value: "apple" } }, [
-                _vm._v("\n        Apple\n      "),
-              ]),
-              _vm._v(" "),
-              _c("b-form-checkbox", { attrs: { value: "pineapple" } }, [
-                _vm._v("\n        Pineapple\n      "),
-              ]),
-              _vm._v(" "),
-              _c("b-form-checkbox", { attrs: { value: "grape" } }, [
-                _vm._v("\n        Grape\n      "),
-              ]),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-card-text", { staticClass: "mb-0" }, [
-        _vm._v("\n    Selected: "),
-        _c("strong", [_vm._v(_vm._s(_vm.selected))]),
+      _c("b-card-text", [
+        _c("span", [_vm._v("By adding ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("directory")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(" prop, the user can select directories instead of files."),
+        ]),
       ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: {
+          directory: "",
+          placeholder: "Choose a file or drop it here...",
+          "drop-placeholder": "Drop file here...",
+        },
+        model: {
+          value: _vm.file,
+          callback: function ($$v) {
+            _vm.file = $$v
+          },
+          expression: "file",
+        },
+      }),
     ],
     1
   )
@@ -1554,10 +1195,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4&":
-/*!************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4& ***!
-  \************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1572,12 +1213,72 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Inline and stacked checkboxes" },
+      attrs: { title: "Drag and Drop support" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeInlineStacked) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeDragDrop) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [
+          _vm._v(
+            "Drop mode is enabled by default. It can disabled by setting the "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("no-drop")]),
+        _vm._v(" "),
+        _c("span", [_vm._v("prop. ")]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: {
+          placeholder: "Choose a file or drop it here...",
+          "drop-placeholder": "Drop file here...",
+          "no-drop": "",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb&":
+/*!*******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "File name formatter function" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeFormatter) + "\n  ")]
           },
           proxy: true,
         },
@@ -1587,132 +1288,18 @@ var render = function () {
       _c("b-card-text", [
         _c("span", [_vm._v("Set the prop ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("stacked")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" on ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox-group>")]),
+        _c("code", [_vm._v("file-name-formatter")]),
         _vm._v(" "),
         _c("span", [
           _vm._v(
-            " to place each form control one over the other, or if using individual checkboxes not inside a "
+            " to a function that accepts a single argument which is an array of File objects."
           ),
         ]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox-group>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(", set the ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("inline")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(" prop on ")]),
-        _vm._v(" "),
-        _c("code", [_vm._v("<b-form-checkbox>")]),
-        _vm._v(" "),
-        _c("span", [_vm._v(".")]),
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c(
-            "b-form-group",
-            {
-              attrs: {
-                label: "Form-checkbox-group inline checkboxes (default)",
-              },
-            },
-            [
-              _c("b-form-checkbox-group", {
-                staticClass: "demo-inline-spacing",
-                attrs: { options: _vm.options, name: "flavour-1a" },
-                model: {
-                  value: _vm.selected,
-                  callback: function ($$v) {
-                    _vm.selected = $$v
-                  },
-                  expression: "selected",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            { attrs: { label: "Form-checkbox-group stacked checkboxes" } },
-            [
-              _c("b-form-checkbox-group", {
-                staticClass: "demo-inline-spacing",
-                attrs: {
-                  options: _vm.options,
-                  name: "flavour-2a",
-                  stacked: "",
-                },
-                model: {
-                  value: _vm.selected,
-                  callback: function ($$v) {
-                    _vm.selected = $$v
-                  },
-                  expression: "selected",
-                },
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            { attrs: { label: "Individual stacked checkboxes (default)" } },
-            _vm._l(_vm.options, function (option) {
-              return _c(
-                "b-form-checkbox",
-                {
-                  key: option.value,
-                  attrs: { value: option.value, name: "flavour-3a" },
-                  model: {
-                    value: _vm.selected,
-                    callback: function ($$v) {
-                      _vm.selected = $$v
-                    },
-                    expression: "selected",
-                  },
-                },
-                [_vm._v("\n        " + _vm._s(option.text) + "\n      ")]
-              )
-            }),
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-form-group",
-            { attrs: { label: "Individual inline checkboxes" } },
-            _vm._l(_vm.options, function (option) {
-              return _c(
-                "b-form-checkbox",
-                {
-                  key: option.value,
-                  attrs: {
-                    value: option.value,
-                    name: "flavour-4a",
-                    inline: "",
-                  },
-                  model: {
-                    value: _vm.selected,
-                    callback: function ($$v) {
-                      _vm.selected = $$v
-                    },
-                    expression: "selected",
-                  },
-                },
-                [_vm._v("\n        " + _vm._s(option.text) + "\n      ")]
-              )
-            }),
-            1
-          ),
-        ],
-        1
-      ),
+      _c("b-form-file", {
+        attrs: { multiple: "", "file-name-formatter": _vm.formatNames },
+      }),
     ],
     1
   )
@@ -1724,10 +1311,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e&":
-/*!*****************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1742,12 +1329,12 @@ var render = function () {
   return _c(
     "b-card-code",
     {
-      attrs: { title: "Contextual state and validation" },
+      attrs: { title: "Limiting to certain file types" },
       scopedSlots: _vm._u([
         {
           key: "code",
           fn: function () {
-            return [_vm._v("\n    " + _vm._s(_vm.codeStates) + "\n  ")]
+            return [_vm._v("\n    " + _vm._s(_vm.codeLimiting) + "\n  ")]
           },
           proxy: true,
         },
@@ -1755,51 +1342,279 @@ var render = function () {
     },
     [
       _c("b-card-text", [
-        _c("span", [_vm._v("Bootstrap includes validation styles for ")]),
+        _c("span", [_vm._v("You can limit the file types by setting the ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("valid")]),
+        _c("code", [_vm._v("accept")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" and ")]),
+        _c("span", [
+          _vm._v(
+            "\n      prop to a string containing the allowed file type(s). To specify more than one type, separate the values with a\n      comma.\n    "
+          ),
+        ]),
+      ]),
+      _vm._v(" "),
+      _c("label", { attrs: { for: "wildcard" } }, [_vm._v("Accept all image")]),
+      _vm._v(" "),
+      _c("b-form-file", { attrs: { id: "wildcard", accept: "image/*" } }),
+      _vm._v(" "),
+      _c("label", { staticClass: "mt-1", attrs: { for: "IANA" } }, [
+        _vm._v("Accept specific image formats by IANA type"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: { id: "IANA", accept: "image/jpeg, image/png, image/gif" },
+      }),
+      _vm._v(" "),
+      _c("label", { staticClass: "mt-1", attrs: { for: "extension" } }, [
+        _vm._v("Accept specific image formats by extension"),
+      ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: { id: "extension", accept: ".jpg, .png, .gif" },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2&":
+/*!******************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2& ***!
+  \******************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Multiple files" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeMultiple) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Multiple file uploading is supported by adding ")]),
         _vm._v(" "),
-        _c("code", [_vm._v("invalid")]),
+        _c("code", [_vm._v("multiple")]),
         _vm._v(" "),
-        _c("span", [_vm._v(" states on most form controls.")]),
+        _c("span", [_vm._v(" prop to component.")]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: {
+          placeholder: "Choose a file or drop it here...",
+          "drop-placeholder": "Drop file here...",
+          multiple: "",
+        },
+      }),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410&":
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410& ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "Control sizing" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSize) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("Use the ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("size")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            "\n      prop to control the visual size of the input. The default size is considered md (medium). Optional sizes are\n    "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("lg")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" (large) and ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("sm")]),
+        _vm._v(" "),
+        _c("span", [_vm._v(" (small).")]),
       ]),
       _vm._v(" "),
       _c(
-        "div",
-        [
-          _c(
-            "b-form-checkbox-group",
-            {
-              staticClass: "demo-inline-spacing",
-              attrs: {
-                options: _vm.options,
-                state: _vm.state,
-                name: "checkbox-validation",
-              },
-              model: {
-                value: _vm.value,
-                callback: function ($$v) {
-                  _vm.value = $$v
-                },
-                expression: "value",
-              },
-            },
-            [
-              _c("b-form-invalid-feedback", { attrs: { state: _vm.state } }, [
-                _vm._v("\n        Please select two\n      "),
-              ]),
-              _vm._v(" "),
-              _c("b-form-valid-feedback", { attrs: { state: _vm.state } }, [
-                _vm._v("\n        Thank you\n      "),
-              ]),
-            ],
-            1
-          ),
-        ],
+        "b-form-group",
+        {
+          attrs: {
+            label: "Small:",
+            "label-for": "file-small",
+            "label-cols-sm": "2",
+            "label-size": "sm",
+          },
+        },
+        [_c("b-form-file", { attrs: { id: "file-small", size: "sm" } })],
         1
       ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        {
+          attrs: {
+            label: "Default:",
+            "label-for": "file-default",
+            "label-cols-sm": "2",
+          },
+        },
+        [_c("b-form-file", { attrs: { id: "file-default" } })],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-form-group",
+        {
+          staticClass: "mb-0",
+          attrs: {
+            label: "Large:",
+            "label-for": "file-large",
+            "label-cols-sm": "2",
+            "label-size": "lg",
+          },
+        },
+        [_c("b-form-file", { attrs: { id: "file-large", size: "lg" } })],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d&":
+/*!**************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d& ***!
+  \**************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "b-card-code",
+    {
+      attrs: { title: "File name formatting via scoped slot" },
+      scopedSlots: _vm._u([
+        {
+          key: "code",
+          fn: function () {
+            return [_vm._v("\n    " + _vm._s(_vm.codeSlot) + "\n  ")]
+          },
+          proxy: true,
+        },
+      ]),
+    },
+    [
+      _c("b-card-text", [
+        _c("span", [_vm._v("You can use the scoped slot ")]),
+        _vm._v(" "),
+        _c("code", [_vm._v("file-name")]),
+        _vm._v(" "),
+        _c("span", [
+          _vm._v(
+            " to render the file names. The scoped slot will receive the following properties: "
+          ),
+        ]),
+        _vm._v(" "),
+        _c("code", [_vm._v("files,names")]),
+      ]),
+      _vm._v(" "),
+      _c("b-form-file", {
+        attrs: { multiple: "" },
+        scopedSlots: _vm._u([
+          {
+            key: "file-name",
+            fn: function (ref) {
+              var names = ref.names
+              return [
+                _c("b-badge", { attrs: { variant: "primary" } }, [
+                  _vm._v("\n        " + _vm._s(names[0]) + "\n      "),
+                ]),
+                _vm._v(" "),
+                names.length > 1
+                  ? _c(
+                      "b-badge",
+                      { staticClass: "ml-1", attrs: { variant: "dark" } },
+                      [
+                        _vm._v(
+                          "\n        + " +
+                            _vm._s(names.length - 1) +
+                            " More files\n      "
+                        ),
+                      ]
+                    )
+                  : _vm._e(),
+              ]
+            },
+          },
+        ]),
+      }),
     ],
     1
   )
@@ -1826,17 +1641,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue ***!
-  \**********************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue ***!
+  \*********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckbox.vue?vue&type=template&id=1bb2a728& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728&");
-/* harmony import */ var _FormCheckbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckbox.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInput.vue?vue&type=template&id=2e1e4bef& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef&");
+/* harmony import */ var _FileInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInput.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1846,9 +1661,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1858,123 +1673,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInput.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckbox.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckbox_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInput.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInput_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728& ***!
-  \*****************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckbox.vue?vue&type=template&id=1bb2a728& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckbox.vue?vue&type=template&id=1bb2a728&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckbox_vue_vue_type_template_id_1bb2a728___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue ***!
-  \***************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxBasic.vue?vue&type=template&id=61e0ea52& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52&");
-/* harmony import */ var _FormCheckboxBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef&":
 /*!****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef& ***!
   \****************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52& ***!
-  \**********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxBasic.vue?vue&type=template&id=61e0ea52& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxBasic.vue?vue&type=template&id=61e0ea52&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInput.vue?vue&type=template&id=2e1e4bef& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInput.vue?vue&type=template&id=2e1e4bef&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxBasic_vue_vue_type_template_id_61e0ea52___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInput_vue_vue_type_template_id_2e1e4bef___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue ***!
-  \*********************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue ***!
+  \**************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8&");
-/* harmony import */ var _FormCheckboxChangeNames_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxChangeNames.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputBasic.vue?vue&type=template&id=3a5f84af& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af&");
+/* harmony import */ var _FileInputBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputBasic.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -1984,9 +1730,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxChangeNames_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInputBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1996,54 +1742,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxChangeNames_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxChangeNames.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxChangeNames_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputBasic.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputBasic_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8&":
-/*!****************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8& ***!
-  \****************************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af& ***!
+  \*********************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxChangeNames.vue?vue&type=template&id=b2042cc8&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputBasic.vue?vue&type=template&id=3a5f84af& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputBasic.vue?vue&type=template&id=3a5f84af&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxChangeNames_vue_vue_type_template_id_b2042cc8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputBasic_vue_vue_type_template_id_3a5f84af___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue":
-/*!***************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue ***!
-  \***************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue ***!
+  \*****************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxColor.vue?vue&type=template&id=3d3aa307& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307&");
-/* harmony import */ var _FormCheckboxColor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxColor.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputClearing.vue?vue&type=template&id=cca58df8& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8&");
+/* harmony import */ var _FileInputClearing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputClearing.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2053,9 +1799,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxColor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInputClearing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2065,192 +1811,123 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js&":
-/*!****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js& ***!
-  \****************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxColor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxColor.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxColor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputClearing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputClearing.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputClearing_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307&":
-/*!**********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307& ***!
-  \**********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxColor.vue?vue&type=template&id=3d3aa307& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxColor.vue?vue&type=template&id=3d3aa307&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxColor_vue_vue_type_template_id_3d3aa307___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue ***!
-  \****************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxCustom.vue?vue&type=template&id=7cd77706& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706&");
-/* harmony import */ var _FormCheckboxCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxCustom.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxCustom.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxCustom_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706&":
-/*!***********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706& ***!
-  \***********************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxCustom.vue?vue&type=template&id=7cd77706& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxCustom.vue?vue&type=template&id=7cd77706&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxCustom_vue_vue_type_template_id_7cd77706___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue ***!
-  \***********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42&");
-/* harmony import */ var _FormCheckboxIndeterminate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxIndeterminate.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxIndeterminate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8&":
 /*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8& ***!
   \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxIndeterminate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxIndeterminate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxIndeterminate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42& ***!
-  \******************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxIndeterminate.vue?vue&type=template&id=84b6af42&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputClearing.vue?vue&type=template&id=cca58df8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputClearing.vue?vue&type=template&id=cca58df8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxIndeterminate_vue_vue_type_template_id_84b6af42___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputClearing_vue_vue_type_template_id_cca58df8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue":
+/*!************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue ***!
+  \************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputContextualState.vue?vue&type=template&id=46fb8c01& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01&");
+/* harmony import */ var _FileInputContextualState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputContextualState.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FileInputContextualState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputContextualState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputContextualState.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputContextualState_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01&":
+/*!*******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01& ***!
+  \*******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputContextualState.vue?vue&type=template&id=46fb8c01& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputContextualState.vue?vue&type=template&id=46fb8c01&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputContextualState_vue_vue_type_template_id_46fb8c01___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue":
 /*!******************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue ***!
   \******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8&");
-/* harmony import */ var _FormCheckboxMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxMultiple.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputDirectory.vue?vue&type=template&id=32fe0a24& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24&");
+/* harmony import */ var _FileInputDirectory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputDirectory.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2260,9 +1937,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInputDirectory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2272,54 +1949,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js& ***!
   \*******************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxMultiple.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDirectory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputDirectory.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDirectory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8&":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24&":
 /*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24& ***!
   \*************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxMultiple.vue?vue&type=template&id=36a7eac8&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputDirectory.vue?vue&type=template&id=32fe0a24& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDirectory.vue?vue&type=template&id=32fe0a24&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxMultiple_vue_vue_type_template_id_36a7eac8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDirectory_vue_vue_type_template_id_32fe0a24___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue ***!
-  \***********************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue ***!
+  \*****************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4&");
-/* harmony import */ var _FormCheckboxStackedInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxStackedInline.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputDragDrop.vue?vue&type=template&id=09f4d45c& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c&");
+/* harmony import */ var _FileInputDragDrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputDragDrop.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2329,9 +2006,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxStackedInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInputDragDrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2341,54 +2018,54 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDragDrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputDragDrop.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDragDrop_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c&":
 /*!************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c& ***!
   \************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStackedInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxStackedInline.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStackedInline_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4&":
-/*!******************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4& ***!
-  \******************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStackedInline.vue?vue&type=template&id=2d7c63c4&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputDragDrop.vue?vue&type=template&id=09f4d45c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputDragDrop.vue?vue&type=template&id=09f4d45c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStackedInline_vue_vue_type_template_id_2d7c63c4___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputDragDrop_vue_vue_type_template_id_09f4d45c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue ***!
-  \****************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue ***!
+  \******************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormCheckboxStates.vue?vue&type=template&id=1355d68e& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e&");
-/* harmony import */ var _FormCheckboxStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormCheckboxStates.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js&");
+/* harmony import */ var _FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputFormatter.vue?vue&type=template&id=5d6116cb& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb&");
+/* harmony import */ var _FileInputFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputFormatter.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2398,9 +2075,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormCheckboxStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _FileInputFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2410,70 +2087,348 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue"
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js&":
-/*!*****************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js& ***!
-  \*****************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxStates.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStates_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputFormatter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputFormatter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e&":
-/*!***********************************************************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e& ***!
-  \***********************************************************************************************************************/
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb& ***!
+  \*************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FormCheckboxStates.vue?vue&type=template&id=1355d68e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-checkbox/FormCheckboxStates.vue?vue&type=template&id=1355d68e&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputFormatter.vue?vue&type=template&id=5d6116cb& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputFormatter.vue?vue&type=template&id=5d6116cb&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormCheckboxStates_vue_vue_type_template_id_1355d68e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputFormatter_vue_vue_type_template_id_5d6116cb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/forms/form-element/form-checkbox/code.js":
-/*!*************************************************************************!*\
-  !*** ./resources/js/src/views/forms/form-element/form-checkbox/code.js ***!
-  \*************************************************************************/
-/*! exports provided: codeColor, codeCustom, codeSize, codeStates, codeBasic, codemultipleChoice, codeChangeNames, codeInlineStacked, codeIndeterminate */
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeColor", function() { return codeColor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeCustom", function() { return codeCustom; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeStates", function() { return codeStates; });
+/* harmony import */ var _FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputLimiting.vue?vue&type=template&id=346f4bd6& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6&");
+/* harmony import */ var _FileInputLimiting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputLimiting.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FileInputLimiting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputLimiting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputLimiting.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputLimiting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6& ***!
+  \************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputLimiting.vue?vue&type=template&id=346f4bd6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputLimiting.vue?vue&type=template&id=346f4bd6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputLimiting_vue_vue_type_template_id_346f4bd6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputMultiple.vue?vue&type=template&id=cccd11c2& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2&");
+/* harmony import */ var _FileInputMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputMultiple.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FileInputMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputMultiple.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputMultiple_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2& ***!
+  \************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputMultiple.vue?vue&type=template&id=cccd11c2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputMultiple.vue?vue&type=template&id=cccd11c2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputMultiple_vue_vue_type_template_id_cccd11c2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputSize.vue?vue&type=template&id=79a22410& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410&");
+/* harmony import */ var _FileInputSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputSize.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FileInputSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputSize.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSize_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410& ***!
+  \********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputSize.vue?vue&type=template&id=79a22410& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSize.vue?vue&type=template&id=79a22410&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSize_vue_vue_type_template_id_79a22410___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FileInputSlot.vue?vue&type=template&id=0662e78d& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d&");
+/* harmony import */ var _FileInputSlot_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FileInputSlot.vue?vue&type=script&lang=js& */ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _FileInputSlot_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSlot_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputSlot.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSlot_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d& ***!
+  \********************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./FileInputSlot.vue?vue&type=template&id=0662e78d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/forms/form-element/form-file-input/FileInputSlot.vue?vue&type=template&id=0662e78d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FileInputSlot_vue_vue_type_template_id_0662e78d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/forms/form-element/form-file-input/code.js":
+/*!***************************************************************************!*\
+  !*** ./resources/js/src/views/forms/form-element/form-file-input/code.js ***!
+  \***************************************************************************/
+/*! exports provided: codeBasic, codeDragDrop, codeFormatter, codeLimiting, codeMultiple, codeSize, codeContextualState, codeClearing, codeDirectory, codeSlot */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeBasic", function() { return codeBasic; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codemultipleChoice", function() { return codemultipleChoice; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeChangeNames", function() { return codeChangeNames; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeInlineStacked", function() { return codeInlineStacked; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeIndeterminate", function() { return codeIndeterminate; });
-var codeColor = "\n<template>\n  <div class=\"demo-inline-spacing\">\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"A\"\n      class=\"custom-control-primary\"\n    >\n      Primary\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"CC\"\n      class=\"custom-control-secondary\"\n    >\n      Secondary\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"C\"\n      class=\"custom-control-success\"\n    >\n      Success\n    </b-form-checkbox>\n\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"F\"\n      class=\"custom-control-danger\"\n    >\n      Danger\n    </b-form-checkbox>\n\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"D\"\n      class=\"custom-control-warning\"\n    >\n      Warning\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"G\"\n      class=\"custom-control-info\"\n    >\n      Info\n    </b-form-checkbox>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckbox,\n  },\n  data() {\n    return {\n      selected: ['A', 'C', 'CC', 'B', 'D', 'E', 'F', 'G'],\n    }\n  },\n}\n</script>\n";
-var codeCustom = "\n<template>\n  <div class=\"demo-inline-spacing\">\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"A\"\n    >\n      Checked\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"B\"\n    >\n      Unchecked\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"C\"\n      disabled\n    >\n      Checked disabled\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"D\"\n      disabled\n    >\n      Unchecked disabled\n    </b-form-checkbox>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckbox,\n  },\n   data() {\n    return {\n      selected: ['B', 'C'],\n    }\n  },\n}\n</script>\n";
-var codeSize = "\n<template>\n  <div>\n  <h1>Custom Chekbox Sizes</h1>\n   <ul class=\"list-unstyled mb-0\">\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          size=\"sm\"\n          value=\"x\"\n        >\n          Small\n        </b-form-checkbox>\n      </li>\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          value=\"z\"\n        >\n          Default\n        </b-form-checkbox>\n      </li>\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          size=\"lg\"\n          value=\"y\"\n        >\n          Large\n        </b-form-checkbox>\n      </li>\n    </ul>\n\n    <h1>Vuexy Chekbox Sizes</h1>\n    <ul class=\"list-unstyled mb-0\">\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          value=\"a\"\n          plain\n          class=\"vs-checkbox-con pl-0\"\n        >\n          <span class=\"vs-checkbox vs-checkbox-sm\">\n            <span class=\"vs-checkbox--check\">\n              <i class=\"vs-icon feather icon-check\" />\n            </span>\n          </span>\n          <span class=\"vs-label\">small</span>\n        </b-form-checkbox>\n      </li>\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          value=\"b\"\n          plain\n          class=\"vs-checkbox-con pl-0\"\n        >\n          <span class=\"vs-checkbox\">\n            <span class=\"vs-checkbox--check\">\n              <i class=\"vs-icon feather icon-check\" />\n            </span>\n          </span>\n          <span class=\"vs-label\">Default</span>\n        </b-form-checkbox>\n      </li>\n      <li class=\"d-inline-block mr-2 mb-1\">\n        <b-form-checkbox\n          v-model=\"selected\"\n          value=\"c\"\n          plain\n          class=\"vs-checkbox-con pl-0\"\n        >\n          <span class=\"vs-checkbox vs-checkbox-lg\">\n            <span class=\"vs-checkbox--check\">\n              <i class=\"vs-icon feather icon-check\" />\n            </span>\n          </span>\n          <span class=\"vs-label\">Large</span>\n        </b-form-checkbox>\n      </li>\n    </ul>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormCheckbox,\n  },\n  data: () => ({\n    selected: ['y', 'x', 'z', 'c'],\n  }),\n}\n</script>\n";
-var codeStates = "\n<template>\n  <div>\n    <b-form-checkbox-group\n      v-model=\"value\"\n      :options=\"options\"\n      :state=\"state\"\n      class=\"demo-inline-spacing\"\n      name=\"checkbox-validation\"\n    >\n      <b-form-invalid-feedback :state=\"state\">\n        Please select two\n      </b-form-invalid-feedback>\n      <b-form-valid-feedback :state=\"state\">\n        Thank you\n      </b-form-valid-feedback>\n    </b-form-checkbox-group>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckboxGroup, BFormInvalidFeedback, BFormValidFeedback } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckboxGroup,\n    BFormInvalidFeedback,\n    BFormValidFeedback,\n    BCardCode,\n  },\n  data() {\n    return {\n      value: [],\n      options: [\n        { text: 'First Check', value: 'first' },\n        { text: 'Second Check', value: 'second' },\n        { text: 'Third Check', value: 'third' },\n      ],\n    }\n  },\n  computed: {\n    state() {\n      return this.value.length === 2\n    },\n  },\n}\n</script>\n";
-var codeBasic = "\n<template>\n  <div class=\"demo-inline-spacing\">\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"A\"\n      plain\n    >\n      Checked\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"B\"\n      plain\n    >\n      Unchecked\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"C\"\n      plain\n      disabled\n    >\n      Checked disabled\n    </b-form-checkbox>\n    <b-form-checkbox\n      v-model=\"selected\"\n      value=\"D\"\n      plain\n      disabled\n    >\n      Unchecked disabled\n    </b-form-checkbox>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckbox } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckbox,\n    BCardCode,\n  },\n data() {\n    return {\n      selected: ['A', 'C']\n    }\n  },\n}\n</script>\n";
-var codemultipleChoice = "\n<template>\n  <div>\n     <!-- custom checkbox -->\n    <b-form-group label=\"Using options array:\">\n      <b-form-checkbox-group\n        id=\"checkbox-group-1\"\n        v-model=\"selected\"\n        :options=\"options\"\n        name=\"flavour-1\"\n        class=\"demo-inline-spacing\"\n      />\n    </b-form-group>\n\n    <!-- using sub-components -->\n    <b-form-group label=\"Using sub-components:\">\n      <b-form-checkbox-group\n        id=\"checkbox-group-2\"\n        v-model=\"selected\"\n        name=\"flavour-2\"\n        class=\"demo-inline-spacing\"\n      >\n        <b-form-checkbox value=\"orange\">\n          Orange\n        </b-form-checkbox>\n        <b-form-checkbox value=\"apple\">\n          Apple\n        </b-form-checkbox>\n        <b-form-checkbox value=\"pineapple\">\n          Pineapple\n        </b-form-checkbox>\n        <b-form-checkbox value=\"grape\">\n          Grape\n        </b-form-checkbox>\n      </b-form-checkbox-group>\n    </b-form-group>\n\n    <b-card-text class=\"mb-0\">\n      Selected: <strong>{{ selected }}</strong>\n    </b-card-text>\n  </div>\n</template>\n\n<script>\nimport {BFormGroup, BFormCheckboxGroup, BCardText, BFormCheckbox} from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckbox,\n    BFormCheckboxGroup,\n    BCardCode,\n    BFormGroup,\n  },\n  data() {\n    return {\n      selected: [],\n      options: [\n        { text: 'Orange', value: 'orange' },\n        { text: 'Apple', value: 'apple' },\n        { text: 'Pineapple', value: 'pineapple' },\n        { text: 'Grape', value: 'grape' },\n      ],\n    }\n  },\n}\n</script>\n";
-var codeChangeNames = "\n<template>\n  <b-form-checkbox-group\n    v-model=\"selected\"\n    :options=\"options\"\n    value-field=\"item\"\n    text-field=\"name\"\n    disabled-field=\"notEnabled\"\n    class=\"demo-inline-spacing\"\n  />\n</template>\n\n<script>\nimport { BFormCheckboxGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckboxGroup,\n    BCardCode,\n  },\n  data() {\n    return {\n      selected: [],\n      options: [\n        { item: 'A', name: 'Option A' },\n        { item: 'B', name: 'Option B' },\n        { item: 'D', name: 'Option C', notEnabled: true },\n        { item: { d: 1 }, name: 'Option D' },\n      ],\n    }\n  },\n}\n</script>\n";
-var codeInlineStacked = "\n<template>\n  <div>\n    <b-form-group label=\"Form-checkbox-group inline checkboxes (default)\">\n      <b-form-checkbox-group\n        v-model=\"selected\"\n        :options=\"options\"\n        name=\"flavour-1a\"\n        class=\"demo-inline-spacing\"\n      />\n    </b-form-group>\n\n    <b-form-group label=\"Form-checkbox-group stacked checkboxes\">\n      <b-form-checkbox-group\n        v-model=\"selected\"\n        :options=\"options\"\n        name=\"flavour-2a\"\n        class=\"demo-inline-spacing\"\n        stacked\n      />\n    </b-form-group>\n\n    <b-form-group label=\"Individual stacked checkboxes (default)\">\n      <b-form-checkbox\n        v-for=\"option in options\"\n        :key=\"option.value\"\n        v-model=\"selected\"\n        :value=\"option.value\"\n        name=\"flavour-3a\"\n      >\n        {{ option.text }}\n      </b-form-checkbox>\n    </b-form-group>\n\n    <b-form-group label=\"Individual inline checkboxes\">\n      <b-form-checkbox\n        v-for=\"option in options\"\n        :key=\"option.value\"\n        v-model=\"selected\"\n        :value=\"option.value\"\n        name=\"flavour-4a\"\n        inline\n      >\n        {{ option.text }}\n      </b-form-checkbox>\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckboxGroup, BFormCheckbox, BFormGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckboxGroup,\n    BFormCheckbox,\n    BFormGroup,\n    BCardCode,\n  },\n  data() {\n    return {\n      selected: [],\n      options: [\n        { text: 'Orange', value: 'orange' },\n        { text: 'Apple', value: 'apple' },\n        { text: 'Pineapple', value: 'pineapple' },\n        { text: 'Grape', value: 'grape' },\n      ],\n    }\n  },\n}\n</script>\n";
-var codeIndeterminate = "\n<template>\n  <div>\n    <!-- checkbox -->\n    <b-form-checkbox\n      v-model=\"checked\"\n      :indeterminate.sync=\"indeterminate\"\n    >\n      Click me to see what happens\n    </b-form-checkbox>\n\n    <!-- button -->\n    <b-button\n      v-ripple.400=\"'rgba(113, 102, 240, 0.15)'\"\n      class=\"mt-1\"\n      variant=\"outline-primary\"\n      @click=\"toggleIndeterminate\"\n    >\n      Toggle Indeterminate State\n    </b-button>\n\n    <div class=\"mt-1\">\n      Checked: <strong>{{ checked }}</strong><br>\n      Indeterminate: <strong>{{ indeterminate }}</strong>\n    </div>\n  </div>\n</template>\n\n<script>\nimport { BFormCheckbox, BButton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormCheckbox,\n    BCardCode,\n    BButton,\n  },\n   directives: {\n    Ripple,\n  },\n  data() {\n    return {\n      checked: true,\n      indeterminate: true,\n    }\n  },\n  methods: {\n    toggleIndeterminate() {\n      this.indeterminate = !this.indeterminate\n    },\n  },\n}\n</script>\n";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDragDrop", function() { return codeDragDrop; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeFormatter", function() { return codeFormatter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeLimiting", function() { return codeLimiting; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeMultiple", function() { return codeMultiple; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSize", function() { return codeSize; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeContextualState", function() { return codeContextualState; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeClearing", function() { return codeClearing; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeDirectory", function() { return codeDirectory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "codeSlot", function() { return codeSlot; });
+var codeBasic = "\n<template>\n  <div>\n\n    <!-- Styled -->\n    <b-form-file\n      v-model=\"file\"\n      placeholder=\"Choose a file or drop it here...\"\n      drop-placeholder=\"Drop file here...\"\n    />\n\n    <b-card-text class=\"my-1\">\n      Selected file: <strong>{{ file ? file.name : '' }}</strong>\n    </b-card-text>\n\n    <b-card-text>\n      <span>You can have </span>\n      <code>&lt;b-form-file&gt;</code>\n      <span> render a browser native file input by setting the </span>\n      <code>plain</code>\n      <span> prop.</span>\n    </b-card-text>\n\n    <!-- Plain mode -->\n    <b-form-file\n      v-model=\"file2\"\n      class=\"mt-1\"\n      plain\n    />\n    <div class=\"mt-1\">\n      Selected file: <strong>{{ file2 ? file2.name : '' }}</strong>\n    </div>\n  </div>\n</template>\n\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n  },\n data() {\n    return {\n      file: null,\n      file2: null,\n    }\n  },\n}\n</script>\n";
+var codeDragDrop = "\n<template>\n  <div>\n    <!-- Styled -->\n    <b-form-file\n      placeholder=\"Choose a file or drop it here...\"\n      drop-placeholder=\"Drop file here...\"\n      no-drop\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n  },\n}\n</script>\n";
+var codeFormatter = "\n<template>\n  <div>\n    <div>\n      <b-form-file\n        multiple\n        :file-name-formatter=\"formatNames\"\n      />\n    </div>\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n  },\n  methods: {\n    formatNames(files) {\n      if (files.length === 1) {\n        return files[0].name\n      }\n      return `${ files.length } files selected`\n    },\n  },\n}\n</script>\n";
+var codeLimiting = "\n<template>\n  <div>\n    <div>\n      <!-- Accept all image formats by IANA media type wildcard-->\n      <label for=\"wildcard\">Accept all image</label>\n      <b-form-file\n        id=\"wildcard\"\n        accept=\"image/*\"\n      />\n\n      <!-- Accept specific image formats by IANA type -->\n      <label\n        for=\"IANA\"\n        class=\"mt-1\"\n      >Accept specific image formats by IANA type</label>\n      <b-form-file\n        id=\"IANA\"\n        accept=\"image/jpeg, image/png, image/gif\"\n      />\n\n      <!-- Accept specific image formats by extension -->\n      <label\n        for=\"extension\"\n        class=\"mt-1\"\n      >Accept specific image formats by extension</label>\n      <b-form-file\n        id=\"extension\"\n        accept=\".jpg, .png, .gif\"\n      />\n    </div>\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BCardCode,\n    BFormFile,\n  },\n}\n</script>\n";
+var codeMultiple = "\n<template>\n  <div>\n    <b-form-file\n      placeholder=\"Choose a file or drop it here...\"\n      drop-placeholder=\"Drop file here...\"\n      multiple\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n  },\n}\n</script>\n";
+var codeSize = "\n<template>\n  <div>\n    <b-form-group\n      label=\"Small:\"\n      label-for=\"file-small\"\n      label-cols-sm=\"2\"\n      label-size=\"sm\"\n    >\n      <b-form-file\n        id=\"file-small\"\n        size=\"sm\"\n      />\n    </b-form-group>\n\n    <b-form-group\n      label=\"Default:\"\n      label-for=\"file-default\"\n      label-cols-sm=\"2\"\n    >\n      <b-form-file id=\"file-default\" />\n    </b-form-group>\n\n    <b-form-group\n      label=\"Large:\"\n      label-for=\"file-large\"\n      label-cols-sm=\"2\"\n      label-size=\"lg\"\n    >\n      <b-form-file\n        id=\"file-large\"\n        size=\"lg\"\n      />\n    </b-form-group>\n  </div>\n</template>\n\n<script>\nimport { BFormFile, BFormGroup } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n    BFormGroup,\n  },\n}\n</script>\n";
+var codeContextualState = "\n<template>\n  <div>\n    <!-- Styled -->\n    <b-form-file\n      v-model=\"file\"\n      :state=\"Boolean(file)\"\n      placeholder=\"Choose a file or drop it here...\"\n      drop-placeholder=\"Drop file here...\"\n    />\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n  },\n  data: () => ({\n    file: null,\n  }),\n}\n</script>\n";
+var codeClearing = "\n<template>\n  <div>\n    <b-form-file\n      ref=\"file-input\"\n      v-model=\"file\"\n      class=\"mb-2\"\n    />\n\n    <b-button\n      class=\"mr-2\"\n      variant=\"primary\"\n      @click=\"clearFiles\"\n    >\n      Reset via method\n    </b-button>\n    <b-button\n      variant=\"primary\"\n      @click=\"file = null\"\n    >\n      Reset via v-model\n    </b-button>\n\n    <p class=\"mt-2\">\n      Selected file: <strong>{{ file ? file.name : '' }}</strong>\n    </p>\n  </div>\n</template>\n\n<script>\nimport { BFormFile, BButton } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n    BButton,\n  },\n  data: () => ({\n    file: null,\n  }),\n  methods: {\n    clearFiles() {\n      this.$refs['file-input'].reset()\n    },\n  },\n}\n</script>\n";
+var codeDirectory = "\n<template>\n  <div>\n    <b-form-file\n        v-model=\"file\"\n        directory\n        placeholder=\"Choose a file or drop it here...\"\n        drop-placeholder=\"Drop file here...\"\n      />\n    </b-card-code>\n  </div>\n</template>\n\n<script>\nimport { BFormFile } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n    file:null\n  },\n}\n</script>\n";
+var codeSlot = "\n<template>\n  <b-form-file multiple>\n    <template\n      slot=\"file-name\"\n      slot-scope=\"{ names }\"\n    >\n      <b-badge variant=\"primary\">\n        {{ names[0] }}\n      </b-badge>\n      <b-badge\n        v-if=\"names.length > 1\"\n        variant=\"dark\"\n        class=\"ml-1\"\n      >\n        + {{ names.length - 1 }} More files\n      </b-badge>\n    </template>\n  </b-form-file>\n</template>\n\n\n<script>\nimport { BFormFile, BBadge } from 'bootstrap-vue'\n\nexport default {\n  components: {\n    BFormFile,\n    BBadge,\n  },\n}\n</script>\n";
 
 /***/ })
 

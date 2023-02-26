@@ -14,6 +14,11 @@ export default [
         icon: 'circleIcon',
       },
       {
+        title: 'Supply history',
+        route: 'Supply history',
+        icon: 'folderOpenIcon',
+      },
+      {
         title: 'Fuel pumps',
         route: 'Fuel pumps',
         icon: 'circleIcon',
@@ -29,9 +34,23 @@ export default [
         icon: 'mapIcon',
       },
       {
+        title: 'Route Distances',
+        route: 'Route Distances',
+        icon: 'MapIcon',
+      },
+      {
         title: 'recurring supply',
         route: 'recurring supply',
         icon: 'folderIcon',
+      },
+    ],
+  },
+  {
+    title: 'Inventory',
+    icon: 'folderIcon',
+    children: [
+      {
+        title: 'stock management',
       },
     ],
   },

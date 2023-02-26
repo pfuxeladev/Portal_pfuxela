@@ -1,473 +1,1513 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[109],{
 
-/***/ "./node_modules/@babel/runtime/helpers/esm/typeof.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/typeof.js ***!
-  \***********************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _typeof; });
-function _typeof(obj) {
-  "@babel/helpers - typeof";
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.array.splice.js */ "./node_modules/core-js/modules/es.array.splice.js");
+/* harmony import */ var core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_splice_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.fill.js */ "./node_modules/core-js/modules/es.array.fill.js");
+/* harmony import */ var core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_fill_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
 
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, _typeof(obj);
-}
 
-/***/ }),
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-/***/ "./node_modules/core-js/internals/get-substitution.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/internals/get-substitution.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
 
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
 
-var floor = Math.floor;
-var charAt = uncurryThis(''.charAt);
-var replace = uncurryThis(''.replace);
-var stringSlice = uncurryThis(''.slice);
-var SUBSTITUTION_SYMBOLS = /\$([$&'`]|\d{1,2}|<[^>]*>)/g;
-var SUBSTITUTION_SYMBOLS_NO_NAMED = /\$([$&'`]|\d{1,2})/g;
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: 'Bombas',
+  show: true,
+  editMode: false,
+  components: {
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BBadge"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_3___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormText"],
+    BFormCheckboxGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormCheckboxGroup"],
+    BFormCheckbox: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormCheckbox"],
+    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BListGroup"],
+    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BListGroupItem"]
+  },
+  data: function data() {
+    return {
+      show: false,
+      editMode: false,
+      options: [{
+        item: 'Gasolina',
+        name: 'Gasolina'
+      }, {
+        item: 'Diesel',
+        name: 'Diesel'
+      }],
+      tipo_bomba: null,
+      bombas: [],
+      details: {
+        responsavel: [],
+        combustivel: [],
+        combustivel_bomba: []
+      },
+      combustivel: [],
+      form: new vform__WEBPACK_IMPORTED_MODULE_4__["default"]({
+        id: null,
+        nome_bombas: '',
+        capacidade: '',
+        tipo_bomba: '',
+        combustivel_tipos: [],
+        //   responsavel
+        preco_diesel: 0,
+        preco_gasolina: 0,
+        responsavel: [{
+          nome: '',
+          email_bomba: '',
+          contacto: '',
+          contacto_alt: ''
+        }],
+        unit_measure: null
+      })
+    };
+  },
+  created: function created() {
+    var _this = this;
 
-// `GetSubstitution` abstract operation
-// https://tc39.es/ecma262/#sec-getsubstitution
-module.exports = function (matched, str, position, captures, namedCaptures, replacement) {
-  var tailPos = position + matched.length;
-  var m = captures.length;
-  var symbols = SUBSTITUTION_SYMBOLS_NO_NAMED;
-  if (namedCaptures !== undefined) {
-    namedCaptures = toObject(namedCaptures);
-    symbols = SUBSTITUTION_SYMBOLS;
-  }
-  return replace(replacement, symbols, function (match, ch) {
-    var capture;
-    switch (charAt(ch, 0)) {
-      case '$': return '$';
-      case '&': return matched;
-      case '`': return stringSlice(str, 0, position);
-      case "'": return stringSlice(str, tailPos);
-      case '<':
-        capture = namedCaptures[stringSlice(ch, 1, -1)];
-        break;
-      default: // \d\d?
-        var n = +ch;
-        if (n === 0) return match;
-        if (n > m) {
-          var f = floor(n / 10);
-          if (f === 0) return match;
-          if (f <= m) return captures[f - 1] === undefined ? charAt(ch, 1) : captures[f - 1] + charAt(ch, 1);
-          return match;
+    this.$http.get('/api/bombas').then(function (res) {
+      _this.bombas = res.data;
+    });
+    this.$http.get('/api/listCombustivel').then(function (res) {
+      _this.combustivel = res.data;
+    });
+  },
+  methods: {
+    OpenForm: function OpenForm() {
+      this.show = true;
+    },
+    closeForm: function closeForm() {
+      this.show = false;
+    },
+    showModal: function showModal() {
+      this.editMode = false;
+      this.$refs['my-modal'].show();
+      this.form.reset();
+    },
+    hideModal: function hideModal() {
+      this.$refs['my-modal'].hide();
+    },
+    toggleModal: function toggleModal() {
+      this.$refs['my-modal'].toggle('#toggle-btn');
+    },
+    add: function add() {
+      this.form.responsavel.push({
+        nome: '',
+        email_bomba: '',
+        contacto: '',
+        contacto_alt: ''
+      });
+    },
+    rmRow: function rmRow(index) {
+      this.form.responsavel.splice(index, 1);
+    },
+    returnBombas: function returnBombas() {
+      var _this2 = this;
+
+      this.$http.get('/api/bombas').then(function (res) {
+        _this2.bombas = res.data;
+      });
+    },
+    onSubmit: function onSubmit(event) {
+      var _this3 = this;
+
+      this.$Progress.start();
+      this.form.post('/api/bombas').then(function (res) {
+        _this3.$swal.fire({
+          icon: 'success',
+          title: res.data.message
+        });
+
+        Fire.$emit('afterAction');
+
+        _this3.form.clear();
+
+        _this3.form.reset();
+
+        _this3.$Progress.finish();
+
+        _this3.returnBombas();
+
+        _this3.hideModal();
+      })["catch"](function (err) {
+        _this3.$swal.fire({
+          icon: 'error',
+          title: 'Erro ao tentar adicionar!'
+        });
+
+        _this3.$Progress.fail();
+      });
+    },
+    // actualizar ,combustivel
+    updateFuel: function updateFuel() {
+      var _this4 = this;
+
+      console.log(this.combustivel);
+      this.$http.post('/api/updateCombustivel', this.combustivel).then(function (res) {
+        _this4.show = false;
+
+        _this4.$swal.fire({
+          icon: 'success',
+          title: res.data.success
+        });
+      });
+    },
+    // end metodo
+    openUpdate: function openUpdate(b) {
+      this.$refs['my-modal'].show();
+      this.form.fill(b);
+      this.editMode = true;
+    },
+    openDetails: function openDetails(b) {
+      this.$router.push({
+        name: 'Fuel Reports',
+        params: {
+          id: b.id
         }
-        capture = captures[n - 1];
-    }
-    return capture === undefined ? '' : capture;
-  });
-};
+      });
+    },
+    onUpdateForm: function onUpdateForm() {
+      var _this5 = this;
 
+      this.$Progress.start();
+      this.form.put("/api/bombas/".concat(this.form.id)).then(function (res) {
+        _this5.$swal.fire({
+          icon: 'success',
+          title: res.data.message
+        });
+
+        _this5.form.clear();
+
+        _this5.$Progress.finish();
+
+        _this5.returnBombas();
+
+        _this5.hideModal();
+      })["catch"](function (err) {
+        if (err) {
+          _this5.$swal.fire({
+            icon: 'error',
+            title: 'Erro ao tentar adicionar!'
+          });
+        }
+
+        _this5.$Progress.fail();
+      });
+    },
+    onReset: function onReset(event) {
+      var _this6 = this;
+
+      event.preventDefault(); // Reset our form values
+
+      this.form.reset(); // Trick to reset/clear native browser form validation state
+
+      this.show = false;
+      this.$nextTick(function () {
+        _this6.show = true;
+      });
+    },
+    abastecerBomba: function abastecerBomba(b) {
+      this.$router.push({
+        name: 'Fill the pump',
+        params: {
+          id: b.id
+        }
+      });
+    }
+  }
+});
 
 /***/ }),
 
-/***/ "./node_modules/core-js/internals/string-repeat.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/core-js/internals/string-repeat.js ***!
-  \*********************************************************/
+/***/ "./node_modules/core-js/internals/array-fill.js":
+/*!******************************************************!*\
+  !*** ./node_modules/core-js/internals/array-fill.js ***!
+  \******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
-var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
+var toObject = __webpack_require__(/*! ../internals/to-object */ "./node_modules/core-js/internals/to-object.js");
+var toAbsoluteIndex = __webpack_require__(/*! ../internals/to-absolute-index */ "./node_modules/core-js/internals/to-absolute-index.js");
+var lengthOfArrayLike = __webpack_require__(/*! ../internals/length-of-array-like */ "./node_modules/core-js/internals/length-of-array-like.js");
 
-var RangeError = global.RangeError;
-
-// `String.prototype.repeat` method implementation
-// https://tc39.es/ecma262/#sec-string.prototype.repeat
-module.exports = function repeat(count) {
-  var str = toString(requireObjectCoercible(this));
-  var result = '';
-  var n = toIntegerOrInfinity(count);
-  if (n < 0 || n == Infinity) throw RangeError('Wrong number of repetitions');
-  for (;n > 0; (n >>>= 1) && (str += str)) if (n & 1) result += str;
-  return result;
+// `Array.prototype.fill` method implementation
+// https://tc39.es/ecma262/#sec-array.prototype.fill
+module.exports = function fill(value /* , start = 0, end = @length */) {
+  var O = toObject(this);
+  var length = lengthOfArrayLike(O);
+  var argumentsLength = arguments.length;
+  var index = toAbsoluteIndex(argumentsLength > 1 ? arguments[1] : undefined, length);
+  var end = argumentsLength > 2 ? arguments[2] : undefined;
+  var endPos = end === undefined ? length : toAbsoluteIndex(end, length);
+  while (endPos > index) O[index++] = value;
+  return O;
 };
 
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.array.join.js":
+/***/ "./node_modules/core-js/modules/es.array.fill.js":
 /*!*******************************************************!*\
-  !*** ./node_modules/core-js/modules/es.array.join.js ***!
+  !*** ./node_modules/core-js/modules/es.array.fill.js ***!
   \*******************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
 var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var IndexedObject = __webpack_require__(/*! ../internals/indexed-object */ "./node_modules/core-js/internals/indexed-object.js");
-var toIndexedObject = __webpack_require__(/*! ../internals/to-indexed-object */ "./node_modules/core-js/internals/to-indexed-object.js");
-var arrayMethodIsStrict = __webpack_require__(/*! ../internals/array-method-is-strict */ "./node_modules/core-js/internals/array-method-is-strict.js");
+var fill = __webpack_require__(/*! ../internals/array-fill */ "./node_modules/core-js/internals/array-fill.js");
+var addToUnscopables = __webpack_require__(/*! ../internals/add-to-unscopables */ "./node_modules/core-js/internals/add-to-unscopables.js");
 
-var un$Join = uncurryThis([].join);
-
-var ES3_STRINGS = IndexedObject != Object;
-var STRICT_METHOD = arrayMethodIsStrict('join', ',');
-
-// `Array.prototype.join` method
-// https://tc39.es/ecma262/#sec-array.prototype.join
-$({ target: 'Array', proto: true, forced: ES3_STRINGS || !STRICT_METHOD }, {
-  join: function join(separator) {
-    return un$Join(toIndexedObject(this), separator === undefined ? ',' : separator);
-  }
+// `Array.prototype.fill` method
+// https://tc39.es/ecma262/#sec-array.prototype.fill
+$({ target: 'Array', proto: true }, {
+  fill: fill
 });
+
+// https://tc39.es/ecma262/#sec-array.prototype-@@unscopables
+addToUnscopables('fill');
 
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.number.to-fixed.js":
-/*!************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.number.to-fixed.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/vform/dist/vform.es.js":
+/*!*********************************************!*\
+  !*** ./node_modules/vform/dist/vform.es.js ***!
+  \*********************************************/
+/*! exports provided: default, Errors, Form */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-var $ = __webpack_require__(/*! ../internals/export */ "./node_modules/core-js/internals/export.js");
-var global = __webpack_require__(/*! ../internals/global */ "./node_modules/core-js/internals/global.js");
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
-var thisNumberValue = __webpack_require__(/*! ../internals/this-number-value */ "./node_modules/core-js/internals/this-number-value.js");
-var $repeat = __webpack_require__(/*! ../internals/string-repeat */ "./node_modules/core-js/internals/string-repeat.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-
-var RangeError = global.RangeError;
-var String = global.String;
-var floor = Math.floor;
-var repeat = uncurryThis($repeat);
-var stringSlice = uncurryThis(''.slice);
-var un$ToFixed = uncurryThis(1.0.toFixed);
-
-var pow = function (x, n, acc) {
-  return n === 0 ? acc : n % 2 === 1 ? pow(x, n - 1, acc * x) : pow(x * x, n / 2, acc);
-};
-
-var log = function (x) {
-  var n = 0;
-  var x2 = x;
-  while (x2 >= 4096) {
-    n += 12;
-    x2 /= 4096;
-  }
-  while (x2 >= 2) {
-    n += 1;
-    x2 /= 2;
-  } return n;
-};
-
-var multiply = function (data, n, c) {
-  var index = -1;
-  var c2 = c;
-  while (++index < 6) {
-    c2 += n * data[index];
-    data[index] = c2 % 1e7;
-    c2 = floor(c2 / 1e7);
-  }
-};
-
-var divide = function (data, n) {
-  var index = 6;
-  var c = 0;
-  while (--index >= 0) {
-    c += data[index];
-    data[index] = floor(c / n);
-    c = (c % n) * 1e7;
-  }
-};
-
-var dataToString = function (data) {
-  var index = 6;
-  var s = '';
-  while (--index >= 0) {
-    if (s !== '' || index === 0 || data[index] !== 0) {
-      var t = String(data[index]);
-      s = s === '' ? t : s + repeat('0', 7 - t.length) + t;
-    }
-  } return s;
-};
-
-var FORCED = fails(function () {
-  return un$ToFixed(0.00008, 3) !== '0.000' ||
-    un$ToFixed(0.9, 0) !== '1' ||
-    un$ToFixed(1.255, 2) !== '1.25' ||
-    un$ToFixed(1000000000000000128.0, 0) !== '1000000000000000128';
-}) || !fails(function () {
-  // V8 ~ Android 4.3-
-  un$ToFixed({});
-});
-
-// `Number.prototype.toFixed` method
-// https://tc39.es/ecma262/#sec-number.prototype.tofixed
-$({ target: 'Number', proto: true, forced: FORCED }, {
-  toFixed: function toFixed(fractionDigits) {
-    var number = thisNumberValue(this);
-    var fractDigits = toIntegerOrInfinity(fractionDigits);
-    var data = [0, 0, 0, 0, 0, 0];
-    var sign = '';
-    var result = '0';
-    var e, z, j, k;
-
-    // TODO: ES2018 increased the maximum number of fraction digits to 100, need to improve the implementation
-    if (fractDigits < 0 || fractDigits > 20) throw RangeError('Incorrect fraction digits');
-    // eslint-disable-next-line no-self-compare -- NaN check
-    if (number != number) return 'NaN';
-    if (number <= -1e21 || number >= 1e21) return String(number);
-    if (number < 0) {
-      sign = '-';
-      number = -number;
-    }
-    if (number > 1e-21) {
-      e = log(number * pow(2, 69, 1)) - 69;
-      z = e < 0 ? number * pow(2, -e, 1) : number / pow(2, e, 1);
-      z *= 0x10000000000000;
-      e = 52 - e;
-      if (e > 0) {
-        multiply(data, 0, z);
-        j = fractDigits;
-        while (j >= 7) {
-          multiply(data, 1e7, 0);
-          j -= 7;
-        }
-        multiply(data, pow(10, j, 1), 0);
-        j = e - 1;
-        while (j >= 23) {
-          divide(data, 1 << 23);
-          j -= 23;
-        }
-        divide(data, 1 << j);
-        multiply(data, 1, 1);
-        divide(data, 2);
-        result = dataToString(data);
-      } else {
-        multiply(data, 0, z);
-        multiply(data, 1 << -e, 0);
-        result = dataToString(data) + repeat('0', fractDigits);
-      }
-    }
-    if (fractDigits > 0) {
-      k = result.length;
-      result = sign + (k <= fractDigits
-        ? '0.' + repeat('0', fractDigits - k) + result
-        : stringSlice(result, 0, k - fractDigits) + '.' + stringSlice(result, k - fractDigits));
-    } else {
-      result = sign + result;
-    } return result;
-  }
-});
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Errors", function() { return y; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Form", function() { return g; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+var e=Object.defineProperty,t=Object.prototype.hasOwnProperty,s=Object.getOwnPropertySymbols,r=Object.prototype.propertyIsEnumerable,o=(t,s,r)=>s in t?e(t,s,{enumerable:!0,configurable:!0,writable:!0,value:r}):t[s]=r,i=(e,i)=>{for(var a in i||(i={}))t.call(i,a)&&o(e,a,i[a]);if(s)for(var a of s(i))r.call(i,a)&&o(e,a,i[a]);return e};const n=e=>void 0===e,c=e=>Array.isArray(e),l=e=>e&&"number"==typeof e.size&&"string"==typeof e.type&&"function"==typeof e.slice,u=(e,t,s,r)=>((t=t||{}).indices=!n(t.indices)&&t.indices,t.nullsAsUndefineds=!n(t.nullsAsUndefineds)&&t.nullsAsUndefineds,t.booleansAsIntegers=!n(t.booleansAsIntegers)&&t.booleansAsIntegers,t.allowEmptyArrays=!n(t.allowEmptyArrays)&&t.allowEmptyArrays,s=s||new FormData,n(e)||(null===e?t.nullsAsUndefineds||s.append(r,""):(e=>"boolean"==typeof e)(e)?t.booleansAsIntegers?s.append(r,e?1:0):s.append(r,e):c(e)?e.length?e.forEach(((e,o)=>{const i=r+"["+(t.indices?o:"")+"]";u(e,t,s,i)})):t.allowEmptyArrays&&s.append(r+"[]",""):(e=>e instanceof Date)(e)?s.append(r,e.toISOString()):!(e=>e===Object(e))(e)||(e=>l(e)&&"string"==typeof e.name&&("object"==typeof e.lastModifiedDate||"number"==typeof e.lastModified))(e)||l(e)?s.append(r,e):Object.keys(e).forEach((o=>{const i=e[o];if(c(i))for(;o.length>2&&o.lastIndexOf("[]")===o.length-2;)o=o.substring(0,o.length-2);u(i,t,s,r?r+"["+o+"]":o)}))),s);var h={serialize:u};function d(e){if(null===e||"object"!=typeof e)return e;const t=Array.isArray(e)?[]:{};return Object.keys(e).forEach((s=>{t[s]=d(e[s])})),t}function f(e){return Array.isArray(e)?e:[e]}function p(e){return e instanceof File||e instanceof Blob||e instanceof FileList||"object"==typeof e&&null!==e&&void 0!==Object.values(e).find((e=>p(e)))}class y{constructor(){this.errors={},this.errors={}}set(e,t){"object"==typeof e?this.errors=e:this.set(i(i({},this.errors),{[e]:f(t)}))}all(){return this.errors}has(e){return Object.prototype.hasOwnProperty.call(this.errors,e)}hasAny(...e){return e.some((e=>this.has(e)))}any(){return Object.keys(this.errors).length>0}get(e){if(this.has(e))return this.getAll(e)[0]}getAll(e){return f(this.errors[e]||[])}only(...e){const t=[];return e.forEach((e=>{const s=this.get(e);s&&t.push(s)})),t}flatten(){return Object.values(this.errors).reduce(((e,t)=>e.concat(t)),[])}clear(e){const t={};e&&Object.keys(this.errors).forEach((s=>{s!==e&&(t[s]=this.errors[s])})),this.set(t)}}class g{constructor(e={}){this.originalData={},this.busy=!1,this.successful=!1,this.recentlySuccessful=!1,this.recentlySuccessfulTimeoutId=void 0,this.errors=new y,this.progress=void 0,this.update(e)}static make(e){return new this(e)}update(e){this.originalData=Object.assign({},this.originalData,d(e)),Object.assign(this,e)}fill(e={}){this.keys().forEach((t=>{this[t]=e[t]}))}data(){return this.keys().reduce(((e,t)=>i(i({},e),{[t]:this[t]})),{})}keys(){return Object.keys(this).filter((e=>!g.ignore.includes(e)))}startProcessing(){this.errors.clear(),this.busy=!0,this.successful=!1,this.progress=void 0,this.recentlySuccessful=!1,clearTimeout(this.recentlySuccessfulTimeoutId)}finishProcessing(){this.busy=!1,this.successful=!0,this.progress=void 0,this.recentlySuccessful=!0,this.recentlySuccessfulTimeoutId=setTimeout((()=>{this.recentlySuccessful=!1}),g.recentlySuccessfulTimeout)}clear(){this.errors.clear(),this.successful=!1,this.recentlySuccessful=!1,this.progress=void 0,clearTimeout(this.recentlySuccessfulTimeoutId)}reset(){Object.keys(this).filter((e=>!g.ignore.includes(e))).forEach((e=>{this[e]=d(this.originalData[e])}))}get(e,t={}){return this.submit("get",e,t)}post(e,t={}){return this.submit("post",e,t)}patch(e,t={}){return this.submit("patch",e,t)}put(e,t={}){return this.submit("put",e,t)}delete(e,t={}){return this.submit("delete",e,t)}submit(e,t,s={}){return this.startProcessing(),s=i({data:{},params:{},url:this.route(t),method:e,onUploadProgress:this.handleUploadProgress.bind(this)},s),"get"===e.toLowerCase()?s.params=i(i({},this.data()),s.params):(s.data=i(i({},this.data()),s.data),p(s.data)&&!s.transformRequest&&(s.transformRequest=[e=>h.serialize(e)])),new Promise(((e,t)=>{(g.axios||axios__WEBPACK_IMPORTED_MODULE_0___default.a).request(s).then((t=>{this.finishProcessing(),e(t)})).catch((e=>{this.handleErrors(e),t(e)}))}))}handleErrors(e){this.busy=!1,this.progress=void 0,e.response&&this.errors.set(this.extractErrors(e.response))}extractErrors(e){return e.data&&"object"==typeof e.data?e.data.errors?i({},e.data.errors):e.data.message?{error:e.data.message}:i({},e.data):{error:g.errorMessage}}handleUploadProgress(e){this.progress={total:e.total,loaded:e.loaded,percentage:Math.round(100*e.loaded/e.total)}}route(e,t={}){let s=e;return Object.prototype.hasOwnProperty.call(g.routes,e)&&(s=decodeURI(g.routes[e])),"object"!=typeof t&&(t={id:t}),Object.keys(t).forEach((e=>{s=s.replace(`{${e}}`,t[e])})),s}onKeydown(e){const t=e.target;t.name&&this.errors.clear(t.name)}}g.routes={},g.errorMessage="Something went wrong. Please try again.",g.recentlySuccessfulTimeout=2e3,g.ignore=["busy","successful","errors","progress","originalData","recentlySuccessful","recentlySuccessfulTimeoutId"];/* harmony default export */ __webpack_exports__["default"] = (g);
 
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.regexp.to-string.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/core-js/modules/es.regexp.to-string.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var PROPER_FUNCTION_NAME = __webpack_require__(/*! ../internals/function-name */ "./node_modules/core-js/internals/function-name.js").PROPER;
-var redefine = __webpack_require__(/*! ../internals/redefine */ "./node_modules/core-js/internals/redefine.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var isPrototypeOf = __webpack_require__(/*! ../internals/object-is-prototype-of */ "./node_modules/core-js/internals/object-is-prototype-of.js");
-var $toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-var regExpFlags = __webpack_require__(/*! ../internals/regexp-flags */ "./node_modules/core-js/internals/regexp-flags.js");
-
-var TO_STRING = 'toString';
-var RegExpPrototype = RegExp.prototype;
-var n$ToString = RegExpPrototype[TO_STRING];
-var getFlags = uncurryThis(regExpFlags);
-
-var NOT_GENERIC = fails(function () { return n$ToString.call({ source: 'a', flags: 'b' }) != '/a/b'; });
-// FF44- RegExp#toString has a wrong name
-var INCORRECT_NAME = PROPER_FUNCTION_NAME && n$ToString.name != TO_STRING;
-
-// `RegExp.prototype.toString` method
-// https://tc39.es/ecma262/#sec-regexp.prototype.tostring
-if (NOT_GENERIC || INCORRECT_NAME) {
-  redefine(RegExp.prototype, TO_STRING, function toString() {
-    var R = anObject(this);
-    var p = $toString(R.source);
-    var rf = R.flags;
-    var f = $toString(rf === undefined && isPrototypeOf(RegExpPrototype, R) && !('flags' in RegExpPrototype) ? getFlags(R) : rf);
-    return '/' + p + '/' + f;
-  }, { unsafe: true });
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { attrs: { id: "bombas" } }, [
+    _c(
+      "section",
+      [
+        _c(
+          "b-card",
+          { attrs: { "no-body": "" } },
+          [
+            _c(
+              "b-card-header",
+              { staticClass: "pb-50" },
+              [
+                _c("h5", [_vm._v("Filtros")]),
+                _vm._v(" "),
+                _c("span", { staticClass: "floa-right pull-right" }),
+                _vm._v(" "),
+                _c(
+                  "b-button",
+                  {
+                    attrs: { variant: "outline-primary" },
+                    on: {
+                      click: function ($event) {
+                        return _vm.$bvModal.show("formBombas")
+                      },
+                    },
+                  },
+                  [_vm._v("\n          Adicionar nova\n        ")]
+                ),
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "b-card-body",
+              [
+                _c(
+                  "b-row",
+                  [
+                    _c(
+                      "b-col",
+                      {
+                        staticClass: "mb-md-0 mb-2",
+                        attrs: { cols: "12", md: "6" },
+                      },
+                      [
+                        _c("label", [_vm._v("Bombas Registadas")]),
+                        _vm._v(" "),
+                        _c("v-select", {
+                          attrs: { options: ["interna", "externa"] },
+                          model: {
+                            value: _vm.tipo_bomba,
+                            callback: function ($$v) {
+                              _vm.tipo_bomba = $$v
+                            },
+                            expression: "tipo_bomba",
+                          },
+                        }),
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "b-col",
+                      {
+                        staticClass: "mb-md-0 mb-2",
+                        attrs: { cols: "12", md: "6" },
+                      },
+                      [
+                        _c(
+                          "b-button",
+                          {
+                            staticClass: "mt-2",
+                            attrs: { variant: "primary" },
+                            on: {
+                              click: function ($event) {
+                                return _vm.OpenForm()
+                              },
+                            },
+                          },
+                          [_vm._v("Actualizar preços de combustivel")]
+                        ),
+                        _vm._v(" "),
+                        _vm.show === true
+                          ? _c(
+                              "b-form",
+                              {
+                                on: {
+                                  submit: function ($event) {
+                                    $event.preventDefault()
+                                    return _vm.updateFuel()
+                                  },
+                                },
+                              },
+                              [
+                                _c(
+                                  "b-form-row",
+                                  [
+                                    _vm._l(_vm.combustivel, function (c) {
+                                      return _c(
+                                        "b-col",
+                                        {
+                                          key: c.id,
+                                          attrs: { cols: "12", md: "12" },
+                                        },
+                                        [
+                                          _c(
+                                            "b-form-group",
+                                            {
+                                              attrs: {
+                                                label: c.tipo_combustivel,
+                                              },
+                                            },
+                                            [
+                                              _c("b-form-input", {
+                                                model: {
+                                                  value: c.preco_actual,
+                                                  callback: function ($$v) {
+                                                    _vm.$set(
+                                                      c,
+                                                      "preco_actual",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression: "c.preco_actual",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      )
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "b-col",
+                                      { attrs: { cols: "12", md: "12" } },
+                                      [
+                                        _c(
+                                          "b-button",
+                                          {
+                                            on: {
+                                              click: function ($event) {
+                                                return _vm.closeForm()
+                                              },
+                                            },
+                                          },
+                                          [_vm._v(" fechar ")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "b-button",
+                                          {
+                                            attrs: {
+                                              type: "submit",
+                                              variant: "outline-success",
+                                            },
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                    submit\n                  "
+                                            ),
+                                          ]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ],
+                                  2
+                                ),
+                              ],
+                              1
+                            )
+                          : _vm._e(),
+                      ],
+                      1
+                    ),
+                  ],
+                  1
+                ),
+              ],
+              1
+            ),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "b-card",
+          { staticClass: "mb-0", attrs: { "no-body": "" } },
+          [
+            _c("b-row", [
+              _c("div", { staticClass: "col-12 col-md-12 table-responsive" }, [
+                _c(
+                  "table",
+                  {
+                    staticClass:
+                      "table table-striped table-bordered table-inverse",
+                  },
+                  [
+                    _c("thead", { staticClass: "thead-inverse" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("#")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Nome da bomba")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Capacidade")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("disponibilidade")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("tipo")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Combustivel")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Qtd disponivel")]),
+                        _vm._v(" "),
+                        _c("th", [_vm._v("Cadastrado por")]),
+                        _vm._v(" "),
+                        _c("th", [_c("i", { staticClass: "fas fa-cogs" })]),
+                      ]),
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "tbody",
+                      _vm._l(_vm.bombas, function (b, index) {
+                        return _c("tr", { key: b.id }, [
+                          _c("td", [_vm._v(_vm._s(1 + index))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(b.nome_bombas))]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(b.capacidade))]),
+                          _vm._v(" "),
+                          _c("td", [
+                            b.status == "disponivel"
+                              ? _c(
+                                  "span",
+                                  [
+                                    _c(
+                                      "b-badge",
+                                      { attrs: { variant: "success" } },
+                                      [_vm._v("disponivel")]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            b.status == "indisponivel"
+                              ? _c(
+                                  "span",
+                                  [
+                                    _c(
+                                      "b-badge",
+                                      { attrs: { variant: "danger" } },
+                                      [_vm._v("indiponivel")]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
+                            _vm._v(" "),
+                            b.status == "manutencao"
+                              ? _c(
+                                  "span",
+                                  [
+                                    _c(
+                                      "b-badge",
+                                      { attrs: { variant: "danger" } },
+                                      [_vm._v("Sub manutencao")]
+                                    ),
+                                  ],
+                                  1
+                                )
+                              : _vm._e(),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(b.tipo_bomba))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            _vm._l(b.combustivel, function (comb) {
+                              return _c("span", { key: comb.id }, [
+                                _vm._v(
+                                  "\n                    " +
+                                    _vm._s(comb.tipo_combustivel) +
+                                    ",\n                  "
+                                ),
+                              ])
+                            }),
+                            0
+                          ),
+                          _vm._v(" "),
+                          _c("td", [
+                            _vm._v(" " + _vm._s(b.qtd_disponivel) + " "),
+                          ]),
+                          _vm._v(" "),
+                          _c("td", [_vm._v(_vm._s(b.created_by.name))]),
+                          _vm._v(" "),
+                          _c(
+                            "td",
+                            { staticClass: "d-flex justify-content-around" },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass: "btn btn-sm btn-outline-primary",
+                                  attrs: { id: "open-dtl" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.openDetails(b)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-folder-open" })]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "btn btn-sm btn-outline-warning ml-1",
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.openUpdate(b)
+                                    },
+                                  },
+                                },
+                                [_c("i", { staticClass: "fas fa-edit" })]
+                              ),
+                              _vm._v(" "),
+                              b.tipo_bomba === "interna"
+                                ? _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "btn btn-sm btn-outline-success ml-1",
+                                      on: {
+                                        click: function ($event) {
+                                          return _vm.abastecerBomba(b)
+                                        },
+                                      },
+                                    },
+                                    [
+                                      _c("i", {
+                                        staticClass: "fas fa-gas-pump",
+                                      }),
+                                    ]
+                                  )
+                                : _vm._e(),
+                            ]
+                          ),
+                        ])
+                      }),
+                      0
+                    ),
+                  ]
+                ),
+              ]),
+            ]),
+            _vm._v(" "),
+            _c(
+              "b-modal",
+              {
+                ref: "my-modal",
+                attrs: {
+                  id: "formBombas",
+                  size: "lg",
+                  "hide-footer": "",
+                  title: "Bomba",
+                },
+              },
+              [
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function ($event) {
+                        $event.preventDefault()
+                        _vm.editMode ? _vm.onUpdateForm() : _vm.onSubmit()
+                      },
+                      reset: _vm.onReset,
+                      keydown: function ($event) {
+                        return _vm.form.onKeydown($event)
+                      },
+                    },
+                  },
+                  [
+                    _c(
+                      "b-row",
+                      [
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "4" } },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.form.id,
+                                  expression: "form.id",
+                                },
+                              ],
+                              attrs: { type: "hidden" },
+                              domProps: { value: _vm.form.id },
+                              on: {
+                                input: function ($event) {
+                                  if ($event.target.composing) {
+                                    return
+                                  }
+                                  _vm.$set(_vm.form, "id", $event.target.value)
+                                },
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-1",
+                                  label: "Nome da bomba:",
+                                  "label-for": "input-1",
+                                },
+                              },
+                              [
+                                _c("b-form-input", {
+                                  attrs: {
+                                    id: "input-1",
+                                    type: "text",
+                                    placeholder: "Digite o nome da bomba",
+                                  },
+                                  model: {
+                                    value: _vm.form.nome_bombas,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.form, "nome_bombas", $$v)
+                                    },
+                                    expression: "form.nome_bombas",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("nome_bombas")
+                                  ? _c("small", {
+                                      staticClass: "alert text-danger",
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.form.errors.get("nome_bombas")
+                                        ),
+                                      },
+                                    })
+                                  : _vm._e(),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-1",
+                                  label: "Capacidade:",
+                                  "label-for": "input-1",
+                                },
+                              },
+                              [
+                                _c("b-form-input", {
+                                  attrs: { id: "input-1", type: "text" },
+                                  model: {
+                                    value: _vm.form.capacidade,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.form, "capacidade", $$v)
+                                    },
+                                    expression: "form.capacidade",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("capacidade")
+                                  ? _c("small", {
+                                      staticClass: "alert text-danger",
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.form.errors.get("capacidade")
+                                        ),
+                                      },
+                                    })
+                                  : _vm._e(),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "4" } },
+                          [
+                            _c(
+                              "b-form-group",
+                              {
+                                attrs: {
+                                  id: "input-group-1",
+                                  label: "Tipo:",
+                                  "label-for": "input-1",
+                                },
+                              },
+                              [
+                                _c("v-select", {
+                                  attrs: { options: ["interna", "externa"] },
+                                  model: {
+                                    value: _vm.form.tipo_bomba,
+                                    callback: function ($$v) {
+                                      _vm.$set(_vm.form, "tipo_bomba", $$v)
+                                    },
+                                    expression: "form.tipo_bomba",
+                                  },
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("tipo_bomba")
+                                  ? _c("small", {
+                                      staticClass: "alert text-danger",
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.form.errors.get("tipo_bomba")
+                                        ),
+                                      },
+                                    })
+                                  : _vm._e(),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "12" } },
+                          [
+                            _c("b-form-checkbox-group", {
+                              staticClass: "mb-1 d-block",
+                              attrs: {
+                                options: _vm.options,
+                                "value-field": "item",
+                                "text-field": "name",
+                                "disabled-field": "notEnabled",
+                              },
+                              model: {
+                                value: _vm.form.combustivel_tipos,
+                                callback: function ($$v) {
+                                  _vm.$set(_vm.form, "combustivel_tipos", $$v)
+                                },
+                                expression: "form.combustivel_tipos",
+                              },
+                            }),
+                            _vm._v(" "),
+                            _c("hr"),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("b-col", { attrs: { cols: "12" } }, [
+                          _c("h4", { staticClass: "card-title" }, [
+                            _vm._v("Responsavel"),
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            {
+                              staticClass: "btn btn-sm btn-outline-primary",
+                              on: {
+                                click: function ($event) {
+                                  return _vm.add()
+                                },
+                              },
+                            },
+                            [_c("i", { staticClass: "fas fa-plus" })]
+                          ),
+                        ]),
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _vm._l(_vm.form.responsavel, function (resp, index) {
+                      return _c(
+                        "b-row",
+                        { key: index, ref: "responsavel", refInFor: true },
+                        [
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "6" } },
+                            [
+                              _c(
+                                "b-form-group",
+                                {
+                                  attrs: {
+                                    id: "input-group-2",
+                                    label: "Nome do responsavel:",
+                                    "label-for": "input-2",
+                                  },
+                                },
+                                [
+                                  _c("b-form-input", {
+                                    attrs: { id: "input-2", type: "text" },
+                                    model: {
+                                      value: resp.nome,
+                                      callback: function ($$v) {
+                                        _vm.$set(resp, "nome", $$v)
+                                      },
+                                      expression: "resp.nome",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "6" } },
+                            [
+                              _c(
+                                "b-form-group",
+                                {
+                                  attrs: {
+                                    id: "input-group-3",
+                                    label: "Email:",
+                                    "label-for": "input-3",
+                                  },
+                                },
+                                [
+                                  _c("b-form-input", {
+                                    attrs: {
+                                      id: "input-3",
+                                      type: "email",
+                                      placeholder: "Digite endereco",
+                                    },
+                                    model: {
+                                      value: resp.email_bomba,
+                                      callback: function ($$v) {
+                                        _vm.$set(resp, "email_bomba", $$v)
+                                      },
+                                      expression: "resp.email_bomba",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "6" } },
+                            [
+                              _c(
+                                "b-form-group",
+                                {
+                                  attrs: {
+                                    id: "input-group-4",
+                                    label: "Contacto:",
+                                    "label-for": "input-4",
+                                  },
+                                },
+                                [
+                                  _c("b-form-input", {
+                                    attrs: {
+                                      id: "input-4",
+                                      type: "tel",
+                                      placeholder: "Digite contacto",
+                                    },
+                                    model: {
+                                      value: resp.contacto,
+                                      callback: function ($$v) {
+                                        _vm.$set(resp, "contacto", $$v)
+                                      },
+                                      expression: "resp.contacto",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "6" } },
+                            [
+                              _c(
+                                "b-form-group",
+                                {
+                                  attrs: {
+                                    id: "input-group-4",
+                                    label: "Contacto alternativo:",
+                                    "label-for": "input-4",
+                                  },
+                                },
+                                [
+                                  _c("b-form-input", {
+                                    attrs: {
+                                      id: "input-4",
+                                      type: "tel",
+                                      placeholder: "Digite contacto",
+                                    },
+                                    model: {
+                                      value: resp.contacto_alt,
+                                      callback: function ($$v) {
+                                        _vm.$set(resp, "contacto_alt", $$v)
+                                      },
+                                      expression: "resp.contacto_alt",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c("b-col", [
+                            _c(
+                              "span",
+                              {
+                                staticClass: "btn btn-sm btn-outline-primary",
+                                on: { click: _vm.rmRow },
+                              },
+                              [_c("i", { staticClass: "fas fa-remove" })]
+                            ),
+                          ]),
+                        ],
+                        1
+                      )
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "b-row",
+                      [
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "2" } },
+                          [
+                            _c(
+                              "b-button",
+                              {
+                                staticClass: "mt-2",
+                                attrs: {
+                                  variant: "outline-warning",
+                                  block: "",
+                                },
+                                on: { click: _vm.toggleModal },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                Fechar\n              "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "b-col",
+                          { attrs: { cols: "10" } },
+                          [
+                            _c(
+                              "b-button",
+                              {
+                                staticClass: "mt-2 pull-right",
+                                attrs: {
+                                  type: "submit",
+                                  variant: "outline-primary",
+                                },
+                              },
+                              [
+                                _vm._v(
+                                  "\n                " +
+                                    _vm._s(
+                                      _vm.editMode ? "Actualizar" : "Adicionar"
+                                    ) +
+                                    "\n              "
+                                ),
+                              ]
+                            ),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
+                  ],
+                  2
+                ),
+              ]
+            ),
+          ],
+          1
+        ),
+      ],
+      1
+    ),
+  ])
 }
+var staticRenderFns = []
+render._withStripped = true
+
 
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es.string.replace.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/core-js/modules/es.string.replace.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue":
+/*!************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue ***!
+  \************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bombas.vue?vue&type=template&id=237da572& */ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572&");
+/* harmony import */ var _bombas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bombas.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var apply = __webpack_require__(/*! ../internals/function-apply */ "./node_modules/core-js/internals/function-apply.js");
-var call = __webpack_require__(/*! ../internals/function-call */ "./node_modules/core-js/internals/function-call.js");
-var uncurryThis = __webpack_require__(/*! ../internals/function-uncurry-this */ "./node_modules/core-js/internals/function-uncurry-this.js");
-var fixRegExpWellKnownSymbolLogic = __webpack_require__(/*! ../internals/fix-regexp-well-known-symbol-logic */ "./node_modules/core-js/internals/fix-regexp-well-known-symbol-logic.js");
-var fails = __webpack_require__(/*! ../internals/fails */ "./node_modules/core-js/internals/fails.js");
-var anObject = __webpack_require__(/*! ../internals/an-object */ "./node_modules/core-js/internals/an-object.js");
-var isCallable = __webpack_require__(/*! ../internals/is-callable */ "./node_modules/core-js/internals/is-callable.js");
-var toIntegerOrInfinity = __webpack_require__(/*! ../internals/to-integer-or-infinity */ "./node_modules/core-js/internals/to-integer-or-infinity.js");
-var toLength = __webpack_require__(/*! ../internals/to-length */ "./node_modules/core-js/internals/to-length.js");
-var toString = __webpack_require__(/*! ../internals/to-string */ "./node_modules/core-js/internals/to-string.js");
-var requireObjectCoercible = __webpack_require__(/*! ../internals/require-object-coercible */ "./node_modules/core-js/internals/require-object-coercible.js");
-var advanceStringIndex = __webpack_require__(/*! ../internals/advance-string-index */ "./node_modules/core-js/internals/advance-string-index.js");
-var getMethod = __webpack_require__(/*! ../internals/get-method */ "./node_modules/core-js/internals/get-method.js");
-var getSubstitution = __webpack_require__(/*! ../internals/get-substitution */ "./node_modules/core-js/internals/get-substitution.js");
-var regExpExec = __webpack_require__(/*! ../internals/regexp-exec-abstract */ "./node_modules/core-js/internals/regexp-exec-abstract.js");
-var wellKnownSymbol = __webpack_require__(/*! ../internals/well-known-symbol */ "./node_modules/core-js/internals/well-known-symbol.js");
 
-var REPLACE = wellKnownSymbol('replace');
-var max = Math.max;
-var min = Math.min;
-var concat = uncurryThis([].concat);
-var push = uncurryThis([].push);
-var stringIndexOf = uncurryThis(''.indexOf);
-var stringSlice = uncurryThis(''.slice);
 
-var maybeToString = function (it) {
-  return it === undefined ? it : String(it);
-};
 
-// IE <= 11 replaces $0 with the whole match, as if it was $&
-// https://stackoverflow.com/questions/6024666/getting-ie-to-replace-a-regex-with-the-literal-string-0
-var REPLACE_KEEPS_$0 = (function () {
-  // eslint-disable-next-line regexp/prefer-escape-replacement-dollar-char -- required for testing
-  return 'a'.replace(/./, '$0') === '$0';
-})();
 
-// Safari <= 13.0.3(?) substitutes nth capture where n>m with an empty string
-var REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE = (function () {
-  if (/./[REPLACE]) {
-    return /./[REPLACE]('a', '$0') === '';
-  }
-  return false;
-})();
+/* normalize component */
 
-var REPLACE_SUPPORTS_NAMED_GROUPS = !fails(function () {
-  var re = /./;
-  re.exec = function () {
-    var result = [];
-    result.groups = { a: '7' };
-    return result;
-  };
-  // eslint-disable-next-line regexp/no-useless-dollar-replacements -- false positive
-  return ''.replace(re, '$<a>') !== '7';
-});
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _bombas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
 
-// @@replace logic
-fixRegExpWellKnownSymbolLogic('replace', function (_, nativeReplace, maybeCallNative) {
-  var UNSAFE_SUBSTITUTE = REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE ? '$' : '$0';
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
-  return [
-    // `String.prototype.replace` method
-    // https://tc39.es/ecma262/#sec-string.prototype.replace
-    function replace(searchValue, replaceValue) {
-      var O = requireObjectCoercible(this);
-      var replacer = searchValue == undefined ? undefined : getMethod(searchValue, REPLACE);
-      return replacer
-        ? call(replacer, searchValue, O, replaceValue)
-        : call(nativeReplace, toString(O), searchValue, replaceValue);
-    },
-    // `RegExp.prototype[@@replace]` method
-    // https://tc39.es/ecma262/#sec-regexp.prototype-@@replace
-    function (string, replaceValue) {
-      var rx = anObject(this);
-      var S = toString(string);
+/***/ }),
 
-      if (
-        typeof replaceValue == 'string' &&
-        stringIndexOf(replaceValue, UNSAFE_SUBSTITUTE) === -1 &&
-        stringIndexOf(replaceValue, '$<') === -1
-      ) {
-        var res = maybeCallNative(nativeReplace, rx, S, replaceValue);
-        if (res.done) return res.value;
-      }
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-      var functionalReplace = isCallable(replaceValue);
-      if (!functionalReplace) replaceValue = toString(replaceValue);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bombas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./bombas.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bombas_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-      var global = rx.global;
-      if (global) {
-        var fullUnicode = rx.unicode;
-        rx.lastIndex = 0;
-      }
-      var results = [];
-      while (true) {
-        var result = regExpExec(rx, S);
-        if (result === null) break;
+/***/ }),
 
-        push(results, result);
-        if (!global) break;
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572& ***!
+  \*******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-        var matchStr = toString(result[0]);
-        if (matchStr === '') rx.lastIndex = advanceStringIndex(S, toLength(rx.lastIndex), fullUnicode);
-      }
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./bombas.vue?vue&type=template&id=237da572& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombas.vue?vue&type=template&id=237da572&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-      var accumulatedResult = '';
-      var nextSourcePosition = 0;
-      for (var i = 0; i < results.length; i++) {
-        result = results[i];
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombas_vue_vue_type_template_id_237da572___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
-        var matched = toString(result[0]);
-        var position = max(min(toIntegerOrInfinity(result.index), S.length), 0);
-        var captures = [];
-        // NOTE: This is equivalent to
-        //   captures = result.slice(1).map(maybeToString)
-        // but for some reason `nativeSlice.call(result, 1, result.length)` (called in
-        // the slice polyfill when slicing native arrays) "doesn't work" in safari 9 and
-        // causes a crash (https://pastebin.com/N21QzeQA) when trying to debug it.
-        for (var j = 1; j < result.length; j++) push(captures, maybeToString(result[j]));
-        var namedCaptures = result.groups;
-        if (functionalReplace) {
-          var replacerArgs = concat([matched], captures, position, S);
-          if (namedCaptures !== undefined) push(replacerArgs, namedCaptures);
-          var replacement = toString(apply(replaceValue, undefined, replacerArgs));
-        } else {
-          replacement = getSubstitution(matched, S, position, captures, namedCaptures, replaceValue);
-        }
-        if (position >= nextSourcePosition) {
-          accumulatedResult += stringSlice(S, nextSourcePosition, position) + replacement;
-          nextSourcePosition = position + matched.length;
-        }
-      }
-      return accumulatedResult + stringSlice(S, nextSourcePosition);
-    }
-  ];
-}, !REPLACE_SUPPORTS_NAMED_GROUPS || !REPLACE_KEEPS_$0 || REGEXP_REPLACE_SUBSTITUTES_UNDEFINED_CAPTURE);
 
 
 /***/ })

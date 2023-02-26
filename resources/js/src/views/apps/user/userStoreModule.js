@@ -30,5 +30,14 @@ export default {
           .catch(error => reject(error))
       })
     },
+    updateUser(ctx, { id, userData }) {
+      return new Promise((resolve, reject) => {
+        axios
+          .put(`/api/users/${id}`, { userData })
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
   },
 }
