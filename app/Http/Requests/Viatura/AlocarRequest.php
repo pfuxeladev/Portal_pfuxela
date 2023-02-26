@@ -25,10 +25,10 @@ class AlocarRequest extends FormRequest
     {
         return [
            'viatura_id'=>'required|integer|min:1',
-           'kmPercorridos'=>'required|numeric|min:1',
+           'kmPercorridos'=>'required|numeric|min:0',
            'manometro_combustivel'=>'required',
            'motorista_id'=>'required|integer|min:1',
-           'manometro_km'=>'required|numeric|min:1',
+           'manometro_km'=>'required|numeric|min:0',
            'rota'=> [
             'required',
             'array', // input must be an array

@@ -346,7 +346,7 @@ export default {
         //   console.log(res.data)
         this.$router.push({ name: 'New-supply-order', params: { refs: res.data } })
       }).catch(({ err }) => {
-        console.log(err.response)
+        console.log(err)
         if (err) {
           this.$swal.fire({
             icon: 'error',
