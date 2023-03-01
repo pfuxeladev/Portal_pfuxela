@@ -66,7 +66,7 @@ class CheckListInController extends Controller
                 return response()->json(['Erro'=> 'A leitura actual nao deve sem menor que a kilometragem anterior da viatura'], 421);
             }
             $LitroConsumidos = $viatura1->capacidade_media * ($viatura1->kilometragem - $request->km_fim);
-            if($LitroConsumidos > $viatura1->capacidade_tanque || $LitroConsumidos < $viatura1->capacidade_tanque){
+            if($LitroConsumidos < $viatura1->capacidade_tanque){
                 return response()->json(['Erro'=>'A Quilometragem inserida está incorreta, verifique os dados de inserção'], 421);
             }
 
