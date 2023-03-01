@@ -14,13 +14,15 @@ export default function useAbstTecorrenteList() {
   // Table Handlers
   const fieldCollumns = [
     { key: 'data_submissao', sortable: true },
-    { key: 'ordem', sortable: true },
+    { key: 'codigo', sortable: true },
     { key: 'bombas', sortable: true },
     { key: 'viatura', sortable: true },
     { key: 'qtd_disponivel', sortable: true },
     { key: 'qtd_abastecida', sortable: true },
-    { key: 'motorista', sortable: true },
+    { key: 'destino', sortable: true },
+    { key: 'categoria', sortable: true },
     { key: 'hora_de_saida', sortable: true },
+    { key: 'estado', sortable: true },
 
     { key: 'acções' },
   ]

@@ -24,6 +24,7 @@ class CreateAbastecimentoExtrasTable extends Migration
             $table->decimal('qtd', 5,2);
             $table->time('horaSaida');
             $table->string('destino');
+            $table->string('categoria_abastecimento');
             $table->text('descricao');
             $table->string('estado')->default('pendente');
             $table->unsignedBigInteger('createdBy');

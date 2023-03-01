@@ -51,7 +51,7 @@ class AbastecimentoController extends Controller
 
         $datetime = \Carbon\Carbon::now()->subHours(8)->format("Y-m-d H:i:s");
 
-        $viatura_rota = ViaturaRota::where('created_at','>=',Carbon::now()->subHours(5)->format("Y-m-d H:i:s"))->get();
+        $viatura_rota = ViaturaRota::where('created_at', '>=', Carbon::now()->subHours(5)->format("Y-m-d H:i:s"))->get();
 
         foreach ($viatura_rota as $key => $vr) {
             $viatura[$key] = $vr->viatura_id;
@@ -327,138 +327,6 @@ class AbastecimentoController extends Controller
     function abastecer(Request $request)
     {
 
-        // return $request->all();
-
-        $ordem = new Ordem();
-        $abastecimento = new abastecimento();
-        $ordem_viatura = new ordem_viatura();
-
-        $counter = 10000;
-        $uuid = Str::uuid()->toString();
-
-
-        $last_order = Ordem::latest()->first();
-
-
-
-        if (auth()->user()->role('Gestor de Frotas') || auth()->user()->role('SuperAdmin') || auth()->user()->email === 'piquete@pfuxela.co.mz') {
-            if (!empty($last_order)) {
-                $new_code = ($last_order->codigo_ordem + 1);
-                $ordem->codigo_ordem = $new_code;
-            } else {
-                $ordem->codigo_ordem = $counter;
-            }
-
-            $viatura = Viatura::where('matricula', $request->viatura_matricula)->first();
-
-            $ordem->refs = $uuid;
-            $ordem->bombas_id = $request->bombas_id;
-            $ordem->estado = 'Pendente';
-            $ordem->tipo_ordem = 'extra';
-            $ordem->createdBy = auth()->user()->id;
-            $ordem->save();
-
-
-            $combustivel = combustivelBomba::join('combustivels', 'combustivel_bombas.combustivel_id', '=', 'combustivels.id')->where('bomba_id', $request->bombas_id)
-                ->select('combustivels.tipo_combustivel', 'combustivel_bombas.preco_actual')->where('combustivels.tipo_combustivel', $viatura->tipo_combustivel)->first();
-
-            
-
-            // if ($combustivel) {
-            if (!empty($combustivel->tipo_combustivel)) {
-
-                $preco = ($combustivel->preco_actual * $request->qtd);
-                $ordem_viatura->preco_cunsumo = $preco;
-            } else {
-                return response()->json(['erro', 'A Bomba nao tem ' . $viatura->tipo_combustivel . ' so pode abastecer ' . $combustivel->tipo_combustivel], 421);
-            }
-
-
-            // verificar disponibilidade da viatura
-
-            if ($viatura->capacidade_tanque < $request->qtd) {
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
-            } else if ($viatura->capacidade_tanque < ($viatura->qtd_disponivel + $request->qtd)) {
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da capacidade do tanque da viatua'], 421);
-            } else if($request->qtd > 15) {
-                return response()->json(['erro' => 'Erro! Nao pode abastecer acima da 20 litros'], 421);
-            }
-                $qtdAbastecer = ($viatura->qtd_disponivel + $request->qtd);
-
-                $viatura->qtd_disponivel = $qtdAbastecer;
-                $viatura->update();
-            }
-
-            // try {
-            $ordem_viatura->viatura_id = $viatura->id;
-            $ordem_viatura->ordem_id = $ordem->id;
-            $ordem_viatura->qtd_abastecida = $request->qtd;
-
-            $ordem_viatura->justificacao = $request->descricao;
-            $ordem_viatura->user_id = auth()->user()->id;
-            $ordem_viatura->save();
-
-            $abastecimento_extra = new abastecimentoExtra();
-
-            $abastecimento_ant = Abastecimento::where('bombas_id', $ordem->bombas_id)->orderBy('id', 'desc')->first();
-            if (!empty($abastecimento_ant)) {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->bombas_id = $request->bombas_id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = $abastecimento_ant->qtd_rec;
-                $abastecimento->qtd_rec = $request->qtd;
-                $abastecimento->user_id = auth()->user()->id;
-                $abastecimento->save();
-                $abastecimento_extra->abastecimento_id = $abastecimento->id;
-            } else {
-                $abastecimento->ordem_id = $ordem->id;
-                $abastecimento->bombas_id = $request->bombas_id;
-                $abastecimento->refs = $uuid;
-                $abastecimento->qtd_ant = 0;
-                $abastecimento->qtd_rec = $request->qtd;
-                $abastecimento->user_id = auth()->user()->id;
-                $abastecimento->save();
-
-                $abastecimento_extra->abastecimento_id = $abastecimento->id;
-            }
-
-            $abastecimento_extra->viatura_id = $viatura->id;
-            $abastecimento_extra->motorista_id = $request->motorista_id;
-            $abastecimento_extra->qtd = $request->qtd;
-            $abastecimento_extra->horaSaida = date('h:i:s', strtotime($request->horaSaida));
-            $abastecimento_extra->destino = $request->destino;
-            $abastecimento_extra->descricao = $request->descricao;
-            $abastecimento_extra->createdBy = auth()->user()->id;
-            $abastecimento_extra->save();
-
-            if ($ordem) {
-                $abastecimento_extra = abastecimentoExtra::with(['abastecimento.ordem', 'viatura', 'motorista.person'])->join('abastecimentos', 'abastecimento_extras.abastecimento_id', '=', 'abastecimentos.id')->join('bombas', 'abastecimentos.bombas_id', '=', 'bombas.id')->join('ordems', 'abastecimentos.ordem_id', '=', 'ordems.id')->where('ordems.id', $ordem->id)->first();
-
-                $responsavel = responsavelBombas::where('bombas_id', $ordem->bombas_id)->get();
-                foreach (User::all() as $key => $user) {
-
-
-                    if ($user->email === 'contratos@pfuxela.co.mz' && $user->email === 'fausia@pfuxela.co.mz' && $user->email === 'mauro@pfuxela.co.mz') {
-                        $data["email"] = $user->email;
-                        $data["title"] = "info@pfuxela.co.mz";
-                        $data["body"] = "Ordem de abastecimento nr " . $ordem->codigo_ordem;
-
-                        $pdf = PDF::loadView('orderMail.mail_order', compact('ordem'))->setOptions(['defaultFont' => 'sans-serif']);
-                        $path = Storage::put('public/pdf/ordem_abastecimento' . $ordem->codigo_ordem . '.pdf', $pdf->output());
-
-                        Mail::send('http://abastecimento.pfuxela.co.mz/Supply/' . $ordem->refs . '/supply-details', function ($message) use ($data, $pdf) {
-                            $message->from(env('MAIL_USERNAME'));
-                            $message->to($data["email"], $data['email'])
-                                ->subject($data["title"])
-                                ->attachData($pdf->output(), "ordem" . date('Y-m-d H:i:s') . ".pdf");
-                        });
-                    }
-                }
-
-            return response()->json(['success' => 'Requisicao feita com sucesso!'], 200);
-        } else {
-            return response()->json(['erro' => 'Nao tem permissao para fazer abastecimento extraordinario contacte o administrador'], 421);
-        }
     }
 
     public function show($refs)

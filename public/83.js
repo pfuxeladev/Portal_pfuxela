@@ -49,10 +49,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -401,15 +397,10 @@ var render = function () {
         ),
       ]),
       _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "bookmark-wrapper align-items-center flex-grow-1 d-none d-lg-flex",
-        },
-        [_c("bookmarks")],
-        1
-      ),
+      _c("div", {
+        staticClass:
+          "bookmark-wrapper align-items-center flex-grow-1 d-none d-lg-flex",
+      }),
       _vm._v(" "),
       _c(
         "b-navbar-nav",
@@ -418,12 +409,6 @@ var render = function () {
           _c("locale"),
           _vm._v(" "),
           _c("dark-Toggler", { staticClass: "d-none d-lg-block" }),
-          _vm._v(" "),
-          _c("search-bar"),
-          _vm._v(" "),
-          _c("cart-dropdown"),
-          _vm._v(" "),
-          _c("notification-dropdown"),
           _vm._v(" "),
           _c("user-dropdown"),
         ],

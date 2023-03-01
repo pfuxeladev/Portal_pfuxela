@@ -46,10 +46,10 @@
 
                     <div style="margin-left: 20px">
                         <h3 class='mb-0 card-title'>ORDEM DE ABASTECIMENTO #
-                            <b style='color:#eb691e;'>{{ $abastecimento_bomba->ordem->codigo_ordem; }}</b></h3>
+                            <b style='color:#eb691e;'>{{ $ordem->ordem->codigo_ordem; }}</b></h3>
                                 <hr>
-                        <div>Data de Emissão: <b>{{ $abastecimento_bomba->updated_at->format('d/m/Y') }}</b></div>
-                        <div>Hora da Emissão: <b>{{ $abastecimento_bomba->updated_at->format('h:i:s') }}</b></div>
+                        <div>Data de Emissão: <b>{{ $ordem->updated_at->format('d/m/Y') }}</b></div>
+                        <div>Hora da Emissão: <b>{{ $ordem->updated_at->format('h:i:s') }}</b></div>
 
 
 
@@ -70,7 +70,7 @@
                     <div class='row ml-4 mb-3'>
                         <div class='col-sm-6'>
 
-                            <h3 class='mb-1'>Para:  {{ $abastecimento_bomba->fornecedor }}</h3>
+                            <h3 class='mb-1'>Para:  {{ $ordem->fornecedor }}</h3>
 
                         </div>
 
@@ -100,14 +100,14 @@
                         <tbody>
 
                                 <tr>
-                                    <td>{{ $abastecimento_bomba->bombas->nome_bombas }}</td>
-                                    <td>{{ $abastecimento_bomba->tipo_de_combustivel }}</td>
-                                    <td>{{ $abastecimento_bomba->qtd_abastecida }}</td>
-                                    <td>{{ $abastecimento_bomba->preco_combustivel}}</td>
-                                    <td>{{ $abastecimento_bomba->sub_total }}</td>
+                                    <td>{{ $ordem->bombas->nome_bombas }}</td>
+                                    <td>{{ $ordem->tipo_de_combustivel }}</td>
+                                    <td>{{ $ordem->qtd_abastecida }}</td>
+                                    <td>{{ $ordem->preco_combustivel}}</td>
+                                    <td>{{ $ordem->sub_total }}</td>
 
                                 </tr>
-                                <?php $total += $abastecimento_bomba->sub_total; ?>
+                                <?php $total += $ordem->sub_total; ?>
 
                         </tbody>
                         <tfoot>

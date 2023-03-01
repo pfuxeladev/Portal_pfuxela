@@ -128,6 +128,22 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::get('getQtdViatura/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'getQtdViatura']);
 
     Route::get('/getAlocateRoute/{viatura_id}', [App\Http\Controllers\API\Back\ViaturaAlocadaController::class, 'rotas']);
+
+    // Gestao de Abastecimento Extraordinarios, ou abastecimento fora da Rota
+
+    Route::get('ListAbastecimentoExtras', [App\Http\Controllers\API\Back\AbastecimentoExtraController::class, 'index']);
+
+    Route::post('CreateExtraOrder', [App\Http\Controllers\API\Back\AbastecimentoExtraController::class, 'store']);
+
+    Route::get('ViewExtraOrder/{ordem}', [App\Http\Controllers\API\Back\AbastecimentoExtraController::class, 'show']);
+    Route::get('ApproveExtraOrder/{ordem}', [App\Http\Controllers\API\Back\AbastecimentoExtraController::class, 'ApproveOrder']);
+
+    // Fim Abastecimento Fora da rota
+
+    // Inicio Dashboard
+    Route::resource('dashboard', App\Http\Controllers\API\Back\DashboardController::class);
+    Route::get('LastFuelOrderSupplies', [App\Http\Controllers\API\Back\DashboardController::class, 'LastFuelOrderSupplies']);
+
 });
 Route::get('relactorioRota', [App\Http\Controllers\API\Back\RotaController::class, 'relactorioRota']);
 

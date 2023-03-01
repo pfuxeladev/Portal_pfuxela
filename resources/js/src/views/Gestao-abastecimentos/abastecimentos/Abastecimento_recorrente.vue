@@ -47,14 +47,14 @@
                     {{dateTime(data.item.created_at) }}
                 </div>
             </template>
-                     <template #cell(ordem)="data">
-                        {{data.item.abastecimento.ordem.codigo_ordem}}
+                     <template #cell(codigo)="data">
+                        {{data.item.codigo_ordem}}
                     </template>
                     <template #cell(bombas)="data">
-                        {{data.item.nome_bombas}}
+                        {{data.item.bombas}}
                     </template>
                      <template #cell(viatura)="data">
-                        {{data.item.viatura.matricula}}
+                        {{data.item.viaturas}}
                     </template>
                     <template #cell(qtd_disponivel)="data">
                         {{data.item.qtd_disponivel}}
@@ -62,14 +62,14 @@
                     <template #cell(qtd_abastecida)="data">
                         {{data.item.qtd}}
                     </template>
-                    <template #cell(motorista)="data">
-                        {{data.item.motorista.person.nome_completo}}
+                    <template #cell(categoria)="data">
+                        {{data.item.categoria}}
                     </template>
                     <template #cell(hora_de_saida)="data">
-                        {{data.item.horaSaida}}
+                        {{data.item.hora_de_saida}}
                     </template>
-                     <template #cell(user)="data">
-                        {{data.item.abastecimento.user.name}}
+                     <template #cell(estado)="data">
+                        {{data.item.estado}}
                     </template>
                     <template #cell(acções)="data">
                         <b-dropdown variant="link" no-caret :right="$store.state.appConfig.isRTL"  v-if="can('Aprove Extra Order')">
@@ -256,6 +256,16 @@
                     </b-form-group>
                   </validation-provider>
                 </b-col>
+                <BCol cols="6" md="6">
+                    <validation-provider #default="validationContext" name="Finalidade" rule="required">
+                    <BFormGroup id="Finalidade" label="Finalidade">
+                        <v-select v-model="OrderForm.finalidade" :state="getValidationState(validationContext)" :options="finalidadeOptions"></v-select>
+                        <b-form-invalid-feedback>
+                        {{ validationContext.errors[0] }}
+                      </b-form-invalid-feedback>
+                    </BFormGroup>
+                    </validation-provider>
+                </Bcol>
                 <b-col cols="6" md="6">
                   <validation-provider
                     #default="validationContext"
@@ -413,8 +423,10 @@ export default {
       horaSaida: '',
       destino: '',
       descricao: '',
+      finalidade: '',
       motorista_id: null,
     });
+    const finalidadeOptions = ['Apoio a Rota', 'Expediente', 'Test Drive', 'Compra de Peças', 'Reposição de Combustivel', 'GERADOR']
     const OrderForm = ref(JSON.parse(JSON.stringify(form)));
     const resetsupplyFormData = () => {
       OrderForm.value = JSON.parse(JSON.stringify(form));
@@ -531,6 +543,7 @@ export default {
       // show details
       details,
       dateTime,
+      finalidadeOptions,
     }
   },
 }

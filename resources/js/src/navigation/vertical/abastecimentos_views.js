@@ -45,13 +45,4 @@ export default [
       },
     ],
   },
-  {
-    title: 'Inventory',
-    icon: 'folderIcon',
-    children: [
-      {
-        title: 'stock management',
-      },
-    ],
-  },
 ]

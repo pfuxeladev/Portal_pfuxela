@@ -138,16 +138,7 @@
               </b-form-group>
 
               <!-- checkbox -->
-              <b-form-group>
-                <b-form-checkbox
-                  id="remember-me"
-                  v-model="status"
-                  name="checkbox-1"
-                >
-                  Remember Me
-                </b-form-checkbox>
-              </b-form-group>
-
+             
               <!-- submit buttons -->
               <b-button
                 type="submit"
@@ -155,52 +146,10 @@
                 block
                 :disabled="invalid"
               >
-                Sign in
+                Entrar
               </b-button>
             </b-form>
           </validation-observer>
-
-          <b-card-text class="text-center mt-2">
-            <span>New on our platform? </span>
-            <b-link :to="{name:'auth-register'}">
-              <span>&nbsp;Create an account</span>
-            </b-link>
-          </b-card-text>
-
-          <!-- divider -->
-          <div class="divider my-2">
-            <div class="divider-text">
-              or
-            </div>
-          </div>
-
-          <!-- social buttons -->
-          <div class="auth-footer-btn d-flex justify-content-center">
-            <b-button
-              variant="facebook"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="FacebookIcon" />
-            </b-button>
-            <b-button
-              variant="twitter"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="TwitterIcon" />
-            </b-button>
-            <b-button
-              variant="google"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="MailIcon" />
-            </b-button>
-            <b-button
-              variant="github"
-              href="javascript:void(0)"
-            >
-              <feather-icon icon="GithubIcon" />
-            </b-button>
-          </div>
         </b-col>
       </b-col>
       <!-- /Login-->

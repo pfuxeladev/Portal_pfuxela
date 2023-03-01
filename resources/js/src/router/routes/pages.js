@@ -22,31 +22,6 @@ export default [
   },
 
   {
-    path: '/pages/miscellaneous/not-authorized',
-    name: 'misc-not-authorized',
-    component: () => import('@/views/pages/miscellaneous/NotAuthorized.vue'),
-    meta: {
-      layout: 'full',
-      resource: 'Auth',
-    },
-  },
-  {
-    path: '/pages/miscellaneous/under-maintenance',
-    name: 'misc-under-maintenance',
-    component: () => import('@/views/pages/miscellaneous/UnderMaintenance.vue'),
-    meta: {
-      layout: 'full',
-    },
-  },
-  {
-    path: '/pages/miscellaneous/error',
-    name: 'misc-error',
-    component: () => import('@/views/pages/miscellaneous/Error.vue'),
-    meta: {
-      layout: 'full',
-    },
-  },
-  {
     path: '/pages/account-setting',
     name: 'pages-account-setting',
     component: () => import('@/views/pages/account-setting/AccountSetting.vue'),
@@ -80,64 +55,5 @@ export default [
       ],
     },
   },
-  {
-    path: '/pages/blog/list',
-    name: 'pages-blog-list',
-    component: () => import('@/views/pages/blog/BlogList.vue'),
-    meta: {
-      pageTitle: 'Blog List',
-      breadcrumb: [
-        {
-          text: 'Pages',
-        },
-        {
-          text: 'Blog',
-        },
-        {
-          text: 'List',
-          active: true,
-        },
-      ],
-    },
-  },
-  {
-    path: '/pages/blog/:id',
-    name: 'pages-blog-detail',
-    component: () => import('@/views/pages/blog/BlogDetail.vue'),
-    meta: {
-      pageTitle: 'Blog Detail',
-      breadcrumb: [
-        {
-          text: 'Pages',
-        },
-        {
-          text: 'Blog',
-        },
-        {
-          text: 'Detail',
-          active: true,
-        },
-      ],
-    },
-  },
-  {
-    path: '/pages/blog/edit/:id',
-    name: 'pages-blog-edit',
-    component: () => import('@/views/pages/blog/BlogEdit.vue'),
-    meta: {
-      pageTitle: 'Blog Edit',
-      breadcrumb: [
-        {
-          text: 'Pages',
-        },
-        {
-          text: 'Blog',
-        },
-        {
-          text: 'Edit',
-          active: true,
-        },
-      ],
-    },
-  },
+
 ]

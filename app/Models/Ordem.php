@@ -66,7 +66,7 @@ class Ordem extends Model
     }
      function scopeExtraType( $query )
     {
-        return $query->where( 'tipo_ordem', self::TIPO_EXTRA );
+        return $query->where( 'ordems.tipo_ordem', self::TIPO_EXTRA );
     }
 
     function scopeSumDataBySupply($query, $date, $id){

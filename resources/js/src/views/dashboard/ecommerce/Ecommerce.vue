@@ -86,17 +86,21 @@ export default {
   data() {
     return {
       data: {},
+      lastOrders: {},
     }
   },
   created() {
     // data
-    this.$http.get('/ecommerce/data').then(response => {
+    this.$http.get('/api/dashboard').then(response => {
       this.data = response.data
-
+        console.log(this.data)
       // ? Your API will return name of logged in user or you might just directly get name of logged in user
       // ? This is just for demo purpose
       const userData = getUserData()
       this.data.congratulations.name = userData[0].name.split(' ')[0] || userData[0].email
+    })
+    this.$http.get('/api/LastFuelOrderSupplies').then(response => {
+        this.lastOrders = response.data
     })
   },
 }

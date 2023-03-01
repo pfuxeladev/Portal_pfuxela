@@ -33,15 +33,6 @@ export default {
       })
     },
 
-    addAbastecimentoRecorrente(ctx, SupplyDatas) {
-      return new Promise((resolve, reject) => {
-        axios
-          .post('/api/abastecimento_extra', SupplyDatas)
-          .then(response => resolve(response))
-          .catch(error => reject(error))
-      })
-    },
-
     ApproveOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios.post(`/api/AprovarOrdem/${refs}`)
@@ -63,10 +54,19 @@ export default {
           .catch(error => reject(error))
       })
     },
-
+// Abastecimento Extraordinario
     AbastecimentoRecorrente(ctx, abstData) {
       return new Promise((resolve, reject) => {
-        axios.get('/api/AbastecimentoRecorrente', abstData)
+        axios.get('/api/ListAbastecimentoExtras', abstData)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
+
+    addAbastecimentoRecorrente(ctx, SupplyDatas) {
+      return new Promise((resolve, reject) => {
+        axios
+          .post('/api/CreateExtraOrder', SupplyDatas)
           .then(response => resolve(response))
           .catch(error => reject(error))
       })

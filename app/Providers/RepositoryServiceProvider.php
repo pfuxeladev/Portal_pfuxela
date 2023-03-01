@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Http\Services\ManageExtraOrderService;
 use App\Http\Services\OrderHistoryService;
+use App\Interfaces\ExtraOrderInterface;
 use App\Interfaces\OcorrenciasInterface;
 use App\Interfaces\OrdensBombasInterface;
 use App\Interfaces\OrderHistoryInterface;
@@ -25,6 +27,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(OrdensBombasInterface::class, OrdensBombasRepository::class);
         $this->app->bind(OrderHistoryInterface::class, OrderReportRepository::class);
         $this->app->bind(OcorrenciasInterface::class, OcorrenciasRepository::class);
+        $this->app->bind(ExtraOrderInterface::class, ManageExtraOrderService::class);
     }
 
     /**

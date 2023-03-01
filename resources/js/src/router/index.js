@@ -4,12 +4,9 @@ import VueRouter from 'vue-router'
 // Routes
 import { canNavigate } from '@/libs/acl/routeProtection'
 import { isUserLoggedIn, getUserData, getHomeRouteForLoggedInUser } from '@/auth/utils'
-import apps from './routes/apps'
 import dashboard from './routes/dashboard'
-// import uiElements from './routes/ui-elements/index'
-import pages from './routes/pages'
 import chartsMaps from './routes/charts-maps'
-import formsTable from './routes/forms-tables'
+import pages from './routes/pages'
 // eslint-disable-next-line camelcase
 import abastecimentos_rotas from './routes/abastecimentos_rotas'
 import piquectsRotas from './routes/piquects_rotas'
@@ -29,11 +26,8 @@ const router = new VueRouter({
       redirect: { name: 'dashboard-ecommerce' },
       meta: { authOnly: true },
     },
-    ...apps,
-    ...dashboard,
     ...pages,
-    // ...chartsMaps,
-    // ...formsTable,
+    ...dashboard,
     // eslint-disable-next-line camelcase
     ...abastecimentos_rotas,
     ...piquectsRotas,

@@ -8,7 +8,7 @@
       Conseguiu Aceder ao Portal
     </b-card-text>
     <h3 class="mb-75 mt-2 pt-50">
-      <b-link>${{ kFormatter(data.saleToday) }}</b-link>
+      <b-link>MZN{{ kFormatter(data.saleToday) }}</b-link>
     </h3>
     <b-button
       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
