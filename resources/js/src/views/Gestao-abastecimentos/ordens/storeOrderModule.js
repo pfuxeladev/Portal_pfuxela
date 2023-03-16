@@ -16,6 +16,13 @@ export default {
           .catch(error => reject(error))
       })
     },
+    addNewOrder(ctx, OrderParams) {
+      return new Promise((resolve, reject) => {
+        axios.post('api/Ordems', OrderParams)
+          .then(response => resolve(response))
+          .catch(error => reject(error))
+      })
+    },
     fetchOrder(ctx, { refs }) {
       return new Promise((resolve, reject) => {
         axios

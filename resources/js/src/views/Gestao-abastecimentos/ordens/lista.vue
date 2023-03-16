@@ -2,7 +2,7 @@
   <section class="container-fluid">
     <b-card no-body>
       <b-card-header class="pb-50">
-        <h5>Filters</h5>
+        <h5>Filtrar por:</h5>
       </b-card-header>
       <b-card-body>
         <b-row>
@@ -11,7 +11,7 @@
             md="4"
             class="mb-md-0 mb-2"
           >
-            <label>Estado</label>
+            <b class="text-bold">Estado</b>
             <v-select
               v-model="statusFilter"
               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
@@ -28,7 +28,7 @@
             class="mb-md-0 mb-2"
           >
             <b-form-group>
-              <h5>Filtrar por intervalos</h5>
+              <h5>Intervalos</h5>
               <flat-pickr
                 v-model="rangeDate"
                 class="form-control"
@@ -41,7 +41,7 @@
             md="4"
             class="mb-md-0 mb-2"
           >
-            <label>Bombas</label>
+            <b class="text-bold">Bombas</b>
             <v-select
               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
               class="w-100"
@@ -85,13 +85,13 @@
                 class="d-inline-block mr-1"
                 placeholder="Search..."
               />
-              <b-button
+              <!-- <b-button
               v-if="can('Create Ordem')"
                 variant="primary"
                 @click="showModal"
               >
                 <span class="text-nowrap">Nova Ordem</span>
-              </b-button>
+              </b-button> -->
             </div>
           </b-col>
         </b-row>
@@ -114,6 +114,7 @@
         <template #cell(created_at)="data">
           {{ dateTime(data.item.created_at) }}
         </template>
+        <template #cell(bombas)="data">{{ data.item.bombas.nome_bombas }}</template>
         <template #cell(status)="data">
              <b-badge
             pill
@@ -345,7 +346,7 @@ export default {
       this.form.post('./../api/Ordems').then(res => {
         //   console.log(res.data)
         this.$router.push({ name: 'New-supply-order', params: { refs: res.data } })
-      }).catch(({ err }) => {
+      }).catch(err => {
         console.log(err)
         if (err) {
           this.$swal.fire({

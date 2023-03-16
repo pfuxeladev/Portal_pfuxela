@@ -1,15 +1,8 @@
 export default [
   {
-    path: '/dashboard/analytics',
-    name: 'dashboard-analytics',
-    component: () => import('@/views/dashboard/analytics/Analytics.vue'),
-    meta: {
-      authOnly: true,
-    },
-  },
-  {
     path: '/dashboard/ecommerce',
     name: 'dashboard-ecommerce',
+    // eslint-disable-next-line import/no-unresolved
     component: () => import('@/views/dashboard/ecommerce/Ecommerce.vue'),
     meta: {
       authOnly: true,

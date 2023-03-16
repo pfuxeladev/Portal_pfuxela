@@ -38,13 +38,7 @@
       <b-row>
         <b-col
           cols="12"
-          lg="6"
-        >
-          <user-view-user-timeline-card />
-        </b-col>
-        <b-col
-          cols="12"
-          lg="6"
+          lg="12"
         >
           <user-view-user-permissions-card :roles-data="userData.roles"/>
         </b-col>

@@ -4,8 +4,8 @@
     no-body
     class="card-company-table"
   >
-    <b-card-title class="pl-3 mt-2">
-      Lista das ultimas ordens
+    <b-card-title class="pl-3 mt-2" style="display: flex; flex-direction: column; align-items: center">
+      Lista das ultimas ordens de abastecimentos
     </b-card-title>
     <b-table
       :items="tableData"
@@ -16,8 +16,7 @@
       <!-- company -->
       <template #cell(DATA_DE_SUBMISSAO)="data">
         <div class="d-flex align-items-center">
-          {{ dateTime(data.item.created_at) }}
-        </div>
+          {{ dateTime(data.item.created_at)}}
         </div>
       </template>
     </b-table>
@@ -26,7 +25,7 @@
 
 <script>
 import {
-  BCard, BTable, BAvatar, BImg, BCardTitle,
+  BCard, BTable, BCardTitle,
 } from 'bootstrap-vue'
 import moment from 'moment'
 
@@ -35,8 +34,6 @@ export default {
     BCard,
     BCardTitle,
     BTable,
-    BAvatar,
-    BImg,
   },
   props: {
     tableData: {

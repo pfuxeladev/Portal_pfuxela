@@ -3,9 +3,9 @@
     <b-row class="auth-inner m-0">
 
       <!-- Brand logo-->
-      <b-link class="brand-logo">
+      <b-link class="brand-logo d-flex ">
         <vuexy-logo />
-        <h2 class="brand-text text-primary ml-1">
+        <h2 class="brand-text text-primary ml-1 py-3">
           PORTAL PFUXELA EXHIBITION
         </h2>
       </b-link>
@@ -138,7 +138,7 @@
               </b-form-group>
 
               <!-- checkbox -->
-             
+
               <!-- submit buttons -->
               <b-button
                 type="submit"

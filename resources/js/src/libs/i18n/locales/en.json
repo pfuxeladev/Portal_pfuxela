@@ -195,7 +195,7 @@
   "CheckList-In":"CheckList-In",
   "CheckList-out-details":"CheckList-out-details",
   "CheckList-in-details":"CheckList-in-details",
-  "recurring supply":"recurring supply",
+  "recurring":"recurring",
   "Edit-Order":"Edit-Order",
   "Fuel Reports":"Fuel Reports",
   "Edit car": "Edit car",
@@ -205,5 +205,10 @@
   "Routes-update": "Routes update",
   "Occurrence-details":"Occurrence details",
   "Route Distances":"Route Distances",
-  "route-details-demo":"route-details-demo"
+  "route-details-demo":"route-details-demo",
+  "Parametrization":"Parametrization",
+  "Workshop Supplies":"Workshop Supplies",
+  "For Special Services":"For Special Services",
+  "New Order Service":"New Order Service",
+  "Administrative Order":"Administrative Order"
 }

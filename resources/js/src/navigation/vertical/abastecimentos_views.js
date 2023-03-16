@@ -1,47 +1,72 @@
 export default [
   {
     title: 'Supply',
-    icon: 'folderIcon',
+    icon: 'TruckIcon',
     children: [
       {
         title: 'Orders',
         route: 'Orders',
-        icon: 'mapIcon',
+        icon: 'PlusCircleIcon',
+      },
+      {
+        title: 'New-supply-order',
+        route: 'New-supply-order',
+        icon: 'PlusIcon',
+      },
+      {
+        title: 'Workshop Supplies',
+        route: 'Workshop Supplies',
+        icon: 'PlusCircleIcon',
+      },
+      {
+        title: 'recurring',
+        route: 'recurring',
+        icon: 'PlusCircleIcon',
+      },
+      {
+        title: 'For Special Services',
+        route: 'For Special Services',
+        icon: 'PlusCircleIcon',
+      },
+      {
+        title: 'Administrative Order',
+        route: 'Administrative Order',
+        icon: 'CircleIcon',
       },
       {
         title: 'Supply',
         route: 'Supply',
-        icon: 'circleIcon',
+        icon: 'CircleIcon',
       },
       {
         title: 'Supply history',
         route: 'Supply history',
-        icon: 'folderOpenIcon',
+        icon: 'FolderOpenIcon',
       },
+    ],
+  },
+  {
+    title: 'Parametrization',
+    icon: 'FolderPlusIcon',
+    children: [
       {
         title: 'Fuel pumps',
         route: 'Fuel pumps',
-        icon: 'circleIcon',
+        icon: 'CircleIcon',
       },
       {
         title: 'Projects',
-        route: 'Projects',
-        icon: 'homeIcon',
+        route: 'UsersIcon',
       },
       {
         title: 'Routes Supply',
         route: 'Routes Supply',
-        icon: 'mapIcon',
+        icon: 'MapIcon',
       },
       {
         title: 'Route Distances',
         route: 'Route Distances',
         icon: 'MapIcon',
-      },
-      {
-        title: 'recurring supply',
-        route: 'recurring supply',
-        icon: 'folderIcon',
       },
     ],
   },

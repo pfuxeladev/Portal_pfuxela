@@ -3,8 +3,8 @@
     no-body
   >
     <b-card-body>
-      <b-card-title>Permissions</b-card-title>
-      <b-card-sub-title>Permission according to roles</b-card-sub-title>
+      <b-card-title>Permiss&otilde;s</b-card-title>
+      <b-card-sub-title>Permiss&otilde;s de acordo com as fun&ccedil;&otilde;s</b-card-sub-title>
     </b-card-body>
     <b-table
       striped

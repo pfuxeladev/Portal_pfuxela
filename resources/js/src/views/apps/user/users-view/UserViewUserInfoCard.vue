@@ -35,45 +35,6 @@
             </div>
           </div>
         </div>
-
-        <!-- User Stats -->
-        <div class="d-flex align-items-center mt-2">
-          <div class="d-flex align-items-center mr-2">
-            <b-avatar
-              variant="light-primary"
-              rounded
-            >
-              <feather-icon
-                icon="DollarSignIcon"
-                size="18"
-              />
-            </b-avatar>
-            <div class="ml-1">
-              <h5 class="mb-0">
-                23.3k
-              </h5>
-              <small>Ordens Mensais</small>
-            </div>
-          </div>
-
-          <div class="d-flex align-items-center">
-            <b-avatar
-              variant="light-success"
-              rounded
-            >
-              <feather-icon
-                icon="TrendingUpIcon"
-                size="18"
-              />
-            </b-avatar>
-            <div class="ml-1">
-              <h5 class="mb-0">
-                $99.87k
-              </h5>
-              <small>Ordens Mensais(MT)</small>
-            </div>
-          </div>
-        </div>
       </b-col>
 
       <!-- Right Col: Table -->

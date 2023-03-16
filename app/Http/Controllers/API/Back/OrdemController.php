@@ -36,7 +36,8 @@ class OrdemController extends Controller
     }
     public function index(Request $request)
     {
-        $ordems = $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->newQuery();
+
+        $ordems = $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('created_at', '>=', Carbon::now()->subDay(2)->toDateTimeString())->newQuery();
 
 
         if ($request->q) {
@@ -47,33 +48,10 @@ class OrdemController extends Controller
             $ordems->where('estado', $request->status);
         }
 
-        if (request()->query('sort')) {
-            $attribute = request()->query('sort');
-            $sort_order = 'ASC';
-            if (strncmp($attribute, '-', 1) === 0) {
-                $sort_order = 'DESC';
-                $attribute = substr($attribute, 1);
-            }
-            $ordems->orderBy($request->sortBy, $sort_order);
-        } else {
-            $ordems->latest();
-        }
-
-        $ordem = $ordems->where('tipo_ordem', 'rota')->paginate($request->perPage)->onEachSide(2)->appends(request()->query());
+        $ordem = $ordems->where('tipo_ordem', 'rota')->orderBy('created_at', 'DESC')->paginate($request->perPage)->onEachSide(2)->appends(request()->query());
 
         return response()->json($ordem, 200);
-        // if($request->q){
-        //     $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->orWhere('estado', $request->status)->paginate($request->perPage);
-        // return response()->json($ordem, 200);
-        // }else if($request->status){
-        //     $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')
-        //     ->where('estado', $request->status)->orderBy('id', 'desc')->paginate($request->perPage);
-        // return response()->json($ordem, 200);
-        // }else{
-        //     $ordem =  $this->ordem->with(['bombas', 'createdBy', 'approvedBy'])->where('tipo_ordem', 'rota')->orderBy('id', 'desc')->paginate($request->perPage);
 
-        //     return response()->json($ordem, 200);
-        // }
 
     }
 
@@ -485,7 +463,7 @@ class OrdemController extends Controller
                 ->join('ordem_viatura_rotas', 'ordem_viaturas.id', '=', 'ordem_viatura_rotas.ordem_viatura_id')
                 ->join('rotas', 'ordem_viatura_rotas.rota_id', '=', 'rotas.id')->join('projectos', 'rotas.projecto_id', '=', 'projectos.id')
                 ->where('bombas.nome_bombas', $request->params['bombaNome'])
-                ->where('ordems.codigo_ordem', 'like', '%' . $request->params['q'] . '%')
+                ->orWhere('ordems.codigo_ordem', 'like', '%' . $request->params['q'] . '%')
                 ->orWhere('viaturas.matricula', 'like', '%' . $request->params['q'] . '%')
 
                 ->orWhere('viaturas.tipo_combustivel', 'like', '%' . $request->params['q'] . '%')
@@ -687,6 +665,10 @@ class OrdemController extends Controller
         } catch (Exception $e) {
             return "Something went wrong! " . $e->getMessage();
         }
+    }
+
+    function dailyReportTest(){
+
     }
 
     public function printPdf()

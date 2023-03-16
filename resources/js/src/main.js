@@ -60,7 +60,7 @@ Vue.use(VueProgressBar, options)
 // Composition API
 Vue.use(VueCompositionAPI)
 
-Vue.use( VuejsDatatableFactory );
+Vue.use(VuejsDatatableFactory)
 
 Vue.use(LaravelPermissionToVueJS)
 // Feather font icon - For form-wizard

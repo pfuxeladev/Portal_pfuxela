@@ -157,7 +157,7 @@ import ToastificationContent from '@core/components/toastification/Toastificatio
 import { useToast } from 'vue-toastification/composition'
 import store from '@/store'
 import router from '@/router'
-import storeAbastecimentos from './storeAbastecimentos'
+import storeAbastecimentos from "../abastecimentos/storeAbastecimentos"
 import 'animate.css'
 import moment from 'moment'
 export default {

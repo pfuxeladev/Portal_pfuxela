@@ -23,7 +23,6 @@ export default function useAbstTecorrenteList() {
     { key: 'categoria', sortable: true },
     { key: 'hora_de_saida', sortable: true },
     { key: 'estado', sortable: true },
-
     { key: 'acções' },
   ]
   const perPage = ref(10)

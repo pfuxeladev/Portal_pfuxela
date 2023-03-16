@@ -1,7 +1,7 @@
 export default [
   {
     title: 'Picket',
-    icon: 'folderPlus',
+    icon: 'ClipboardIcon',
     children: [
       {
         title: 'Cars',

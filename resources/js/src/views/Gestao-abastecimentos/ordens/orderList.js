@@ -16,7 +16,7 @@ export default function useOrdersList() {
   const tableColumns = [
     { key: 'codigo_ordem', sortable: true },
     { key: 'created_at', sortable: true },
-    { key: 'bombas.nome_bombas', sortable: true },
+    { key: 'bombas', sortable: true },
     { key: 'status', sortable: true },
     { Key: 'emitida_por', sortable: true },
     { key: 'acções' },

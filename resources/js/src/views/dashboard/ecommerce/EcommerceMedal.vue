@@ -3,18 +3,18 @@
     v-if="data"
     class="card-congratulation-medal"
   >
-    <h5>Parabens 🎉 {{ data.name }}!</h5>
+    <h5> 🎉 {{ data.name }}!</h5>
     <b-card-text class="font-small-3">
-      Conseguiu Aceder ao Portal
+      Conseguiu Emitir
     </b-card-text>
     <h3 class="mb-75 mt-2 pt-50">
-      <b-link>MZN{{ kFormatter(data.saleToday) }}</b-link>
+      <b-link>{{ kFormatter(data.saleToday) }} </b-link>
     </h3>
     <b-button
       v-ripple.400="'rgba(255, 255, 255, 0.15)'"
       variant="primary"
     >
-      Ver Minhas Actividades
+      Ordens do m&ecirc;s actual
     </b-button>
     <b-img
       :src="require('@/assets/images/illustration/badge.svg')"
@@ -47,6 +47,11 @@ export default {
       type: Object,
       default: () => {},
     },
+  },
+  data() {
+    return {
+      currentMonth: new Date().getMonth(),
+    }
   },
   methods: {
     kFormatter,

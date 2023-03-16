@@ -1,6 +1,6 @@
 export default [
   {
-    header: 'Users & Permissions',
+    header: 'Acessos',
   },
   {
     title: 'User',

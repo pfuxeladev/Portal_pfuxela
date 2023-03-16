@@ -178,4 +178,8 @@ Route::get('rotaByDistance', [App\Http\Controllers\API\Back\ProjectoController::
 
 Route::get('/invoice', [OrdemController::class, 'printPdf']);
 
+Route::get('/RelatorioDiario', function(){
+    return view('DailyReport.RelatorioDiario');
+});
+
 
