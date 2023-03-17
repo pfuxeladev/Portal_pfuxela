@@ -60,7 +60,9 @@
           </BFormGroup>
         </BCol>
       </BFormRow>
-      <BFormRow>
+      <hr>
+      <BFormRow class="d-flex justify-content-between">
+        <BButton type="reset" variant="secondary">Cancelar</BButton>
         <BButton
           type="submit"
           variant="success"

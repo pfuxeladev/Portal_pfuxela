@@ -51,7 +51,7 @@
       ref="FormAbastecimento"
       size="lg"
       hide-footer
-      title="Criar nova Requisicao"
+      title="Novo abastecimento para serviços administrativos"
     >
       <new-order />
     </BModal>
@@ -77,7 +77,7 @@ import vSelect from "vue-select";
 import { ref, onUnmounted } from "@vue/composition-api";
 import moment from "moment";
 import AdministrativeService from "./index";
-import store from "@/store";
+import store from '@/store'
 import AdministrativeModule from "./AdministrativeModule";
 import newOrder from "./newOrder.vue";
 

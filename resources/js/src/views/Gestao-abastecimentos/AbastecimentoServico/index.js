@@ -1,6 +1,6 @@
 import { ref, watch, computed } from '@vue/composition-api'
 
-function AbastecimentoService() {
+export default function AbastecimentoService() {
   const TableAbastecimentoServicoRef = ref(null)
   const perPage = ref(10)
   const totalOrderServices = ref(0)
@@ -60,4 +60,4 @@ function AbastecimentoService() {
   }
 }
 
-export default AbastecimentoService()
+// export default AbastecimentoService()

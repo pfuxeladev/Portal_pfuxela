@@ -1,9 +1,9 @@
 <template>
   <BCard>
     <BCardHeader class="d-flex flex-container justify-content-between">
-      <BCardTitle>Abastecimento relativos a servi&ccedil;os</BCardTitle>
+      <BCardTitle>Abastecimento relativo a servi&ccedil;os</BCardTitle>
       <span>
-        <b-link variant="primary" :to="{name: 'New Order Service'}">Criar Novo</b-link>
+        <b-link variant="primary" class="btn btn-primary" :to="{name: 'New Order Service'}">Novo Pedido</b-link>
       </span>
     </BCardHeader>
     <BCardBody>

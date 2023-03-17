@@ -87,6 +87,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -159,6 +161,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
 /* harmony import */ var _FormOrder__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormOrder */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoOficina/FormOrder.vue");
 
+//
 //
 //
 //
@@ -848,9 +851,18 @@ var render = function () {
             1
           ),
           _vm._v(" "),
+          _c("hr"),
+          _vm._v(" "),
           _c(
             "BFormRow",
+            { staticClass: "d-flex justify-content-between" },
             [
+              _c(
+                "BButton",
+                { attrs: { type: "reset", variant: "secondary" } },
+                [_vm._v("Cancelar")]
+              ),
+              _vm._v(" "),
               _c("BButton", { attrs: { type: "submit", variant: "success" } }, [
                 _vm._v("\n        Requisitar\n      "),
               ]),
@@ -916,6 +928,7 @@ var render = function () {
               _c("BTable", {
                 attrs: {
                   fields: _vm.CollumnFields,
+                  responsive: "",
                   "primary-key": "id",
                   "sort-by": _vm.sortBy,
                   "show-empty": "",
@@ -951,7 +964,7 @@ var render = function () {
           attrs: {
             size: "lg",
             "hide-footer": "",
-            title: "Criar Ordem de abastecimento",
+            title: "Ordem de abastecimento para oficina",
           },
         },
         [
@@ -1149,7 +1162,7 @@ function WorkShopOrders() {
     key: 'Viatura',
     sortable: true
   }, {
-    key: 'Qtd',
+    key: 'Qtd_requisitada',
     sortable: true
   }, {
     key: 'Bombas',

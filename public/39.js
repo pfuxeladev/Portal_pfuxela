@@ -266,8 +266,14 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _AdministrativeModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AdministrativeModule */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/AdministrativeModule.js");
 //
 //
 //
@@ -328,11 +334,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
     BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
     BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
@@ -340,8 +394,82 @@ __webpack_require__.r(__webpack_exports__);
     BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormSelect"],
     BFormSelectOption: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormSelectOption"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
-    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormTextarea"]
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_2___default.a,
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormTextarea"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BIconPlus: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconPlus"]
+  },
+  setup: function setup() {
+    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+
+    if (!_store__WEBPACK_IMPORTED_MODULE_1__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_1__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _AdministrativeModule__WEBPACK_IMPORTED_MODULE_6__["default"]);
+    } // UnRegister on leave
+
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_1__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_1__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
+      }
+    });
+    var form = {
+      bombas_id: '',
+      viatura_id: '',
+      motorista_id: '',
+      qtd_abastecer: 1,
+      previsao_saida: '',
+      passenger: [{
+        passageiro_id: '',
+        destino: '',
+        justificacao: ''
+      }]
+    };
+    var errors = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])([]);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__["useToast"])();
+
+    function handleSubmit() {
+      var _this = this;
+
+      _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch('Supply/createAbastecimentoServico', form).then(function (response) {
+        toast({
+          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+          props: {
+            title: response.data.message,
+            icon: 'CheckSquareIcon',
+            variant: 'success'
+          }
+        });
+
+        _this.$refs.alocateModal.toggle();
+      })["catch"](function (error) {
+        if (error.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            props: {
+              title: error.response.data.error,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        } else if (error.response.status === 422) {
+          errors.value = error.response.data.errors;
+          console.log(errors.value);
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+            props: {
+              title: 'Erro ...! Por Favor valide os campos nao preenchidos',
+              icon: 'CheckSquareIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    return {
+      form: form,
+      handleSubmit: handleSubmit
+    };
   }
 });
 
@@ -952,7 +1080,7 @@ var render = function () {
           attrs: {
             size: "lg",
             "hide-footer": "",
-            title: "Criar nova Requisicao",
+            title: "Novo abastecimento para serviços administrativos",
           },
         },
         [_c("new-order")],
@@ -990,6 +1118,7 @@ var render = function () {
     [
       _c(
         "BRow",
+        { staticClass: "m-1" },
         [
           _c(
             "BCol",
@@ -1032,6 +1161,7 @@ var render = function () {
                                             {
                                               attrs: {
                                                 value: null,
+                                                selected: "",
                                                 disabled: "",
                                               },
                                             },
@@ -1118,15 +1248,85 @@ var render = function () {
                   _c(
                     "BFormRow",
                     [
+                      _c("BCol", { attrs: { cols: "12" } }, [
+                        _c("table", { staticClass: "table" }, [
+                          _c("thead", { staticClass: "thead-light" }, [
+                            _c("tr", [
+                              _c("th", [_vm._v("Passageiro")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("Destino")]),
+                              _vm._v(" "),
+                              _c("th", [_vm._v("Justificação")]),
+                              _vm._v(" "),
+                              _c("th", [
+                                _c("i", { staticClass: "fas fa-remove" }),
+                              ]),
+                            ]),
+                          ]),
+                          _vm._v(" "),
+                          _c("tbody", [
+                            _c("tr", [
+                              _c(
+                                "td",
+                                { staticStyle: { width: "30%" } },
+                                [_c("v-select")],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("td", [_c("BFormInput")], 1),
+                              _vm._v(" "),
+                              _c("td", [_c("BFormTextarea")], 1),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "text-danger" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    on: {
+                                      click: function ($event) {
+                                        return _vm.remove(_vm.counter)
+                                      },
+                                    },
+                                  },
+                                  [_c("i", { staticClass: "fas fa-trash" })]
+                                ),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c("tr", [
+                              _c("td", { attrs: { colspan: "4" } }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "btn btn-primary btn-sm",
+                                    on: { click: _vm.addRow },
+                                  },
+                                  [
+                                    _c("BIconPlus"),
+                                    _vm._v(" add\n                    "),
+                                  ],
+                                  1
+                                ),
+                              ]),
+                            ]),
+                          ]),
+                        ]),
+                      ]),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "BFormRow",
+                    { staticClass: "d-flex justify-content-between" },
+                    [
                       _c(
                         "BCol",
-                        { attrs: { cols: "6" } },
+                        { attrs: { cols: "3" } },
                         [
                           _c(
-                            "BFormGroup",
-                            { attrs: { label: "Motivos da saida" } },
-                            [_c("BFormInput", { attrs: { type: "text" } })],
-                            1
+                            "BButton",
+                            { attrs: { type: "reset", variant: "secondary" } },
+                            [_vm._v("Cancelar")]
                           ),
                         ],
                         1
@@ -1134,35 +1334,22 @@ var render = function () {
                       _vm._v(" "),
                       _c(
                         "BCol",
-                        { attrs: { cols: "6" } },
+                        { attrs: { cols: "3" } },
                         [
                           _c(
-                            "BFormGroup",
+                            "BButton",
                             {
                               attrs: {
-                                label: "Numero de passageiros a transportar",
+                                type: "submit",
+                                block: "",
+                                variant: "success",
                               },
                             },
-                            [_c("BFormInput", { attrs: { type: "text" } })],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "BCol",
-                        { attrs: { cols: "6" } },
-                        [
-                          _c(
-                            "BFormGroup",
-                            { attrs: { label: "Descrição do expediente" } },
                             [
-                              _c("BFormTextarea", {
-                                attrs: { placeholder: "" },
-                              }),
-                            ],
-                            1
+                              _vm._v(
+                                "\n              Enviar pedido\n            "
+                              ),
+                            ]
                           ),
                         ],
                         1

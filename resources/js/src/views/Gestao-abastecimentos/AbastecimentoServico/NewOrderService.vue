@@ -4,12 +4,17 @@
       <b-card-header class="d-flex justify-content-between">
         <b-card-title>Abastecimento para serviços especiais</b-card-title>
         <b-button variant="outline-primary">
-          <BIconChevronBarLeft /> voltar
+          <BIconChevronLeft /> voltar
         </b-button>
       </b-card-header>
+      <hr>
+      <h4 class="align-item-center text-center">
+        Dados do Cliente
+      </h4>
+      <hr>
       <b-card-body>
         <b-form>
-          <b-row class="d-flex flex-container justify-content-between">
+          <b-row>
             <b-col cols="4">
               <BFormGroup label="Nome do Cliente">
                 <BFormInput type="text" />
@@ -17,6 +22,8 @@
               <BFormGroup label="Contacto do Cliente">
                 <BFormInput type="text" />
               </BFormGroup>
+            </b-col>
+            <b-col cols="4">
               <BFormGroup label="Local de Recolha">
                 <BFormInput type="text" />
               </BFormGroup>
@@ -31,33 +38,45 @@
               <BFormGroup label="Hora de Chegada ao local">
                 <BFormInput type="text" />
               </BFormGroup>
-              <BFormGroup label="Bombas de abastecimento">
-                <BFormSelect label="Bombas">
-                  <BFormSelectOption>Nome Bombas</BFormSelectOption>
-                </BFormSelect>
-              </BFormGroup>
             </b-col>
           </b-row>
-          <BFormRow>
+          <hr>
+          <h4 class="align-item-center text-center">
+            Abastecer
+          </h4>
+          <hr>
+          <BFormRow v-for="(abst, counter) in form.abastecimentoDatas" :key="counter">
             <BCol cols="4">
+              <BFormGroup label="Bombas">
+                <BFormSelect v-model="abst.bombas_id">
+                  <BFormSelectOption value="bombas">
+                    Nome Bombas
+                  </BFormSelectOption>
+                </BFormSelect>
+              </BFormGroup>
+            </BCol>
+            <BCol cols="3">
               <BFormGroup label="Viaturas">
                 <v-select />
               </BFormGroup>
             </BCol>
-            <BCol cols="3">
+            <BCol cols="2">
               <BFormGroup label="Qtd existente">
                 <BFormInput type="number" />
               </BFormGroup>
             </BCol>
-            <BCol cols="3">
+            <BCol cols="2">
               <BFormGroup label="Qtd a abastecer">
                 <BFormInput type="number" />
               </BFormGroup>
             </BCol>
-            <BCol cols="2">
+            <BCol
+              cols="1"
+              class="justify-content-end d-flex"
+            >
               <BButton
-              class="mt-2"
-                sm
+                class="mt-2"
+                size="sm"
                 variant="outline-danger"
               >
                 <BIconTrash />
@@ -71,6 +90,22 @@
               </BButton>
             </BCol>
           </BFormRow>
+          <hr>
+          <BFormRow class="d-flex justify-content-between flex-container">
+            <BCol cols="3">
+              <BButton
+                variant="secondary"
+                @click="voltar"
+              >
+                Cancelar
+              </BButton>
+            </BCol>
+            <BCol cols="2">
+              <BButton block variant="success">
+                Enviar pedido
+              </BButton>
+            </BCol>
+          </BFormRow>
         </b-form>
       </b-card-body>
     </b-card>
@@ -79,8 +114,22 @@
 
 <script>
 import {
-  BCard, BCardBody, BCardHeader, BCardTitle, BForm, BFormGroup, BFormInput, BButton, BFormSelect, BFormSelectOption, BRow, BCol, BFormRow, BIconChevronBarLeft,
-  BIconTrash, BIconPlus,
+  BCard,
+  BCardBody,
+  BCardHeader,
+  BCardTitle,
+  BForm,
+  BFormGroup,
+  BFormInput,
+  BButton,
+  BFormSelect,
+  BFormSelectOption,
+  BRow,
+  BCol,
+  BFormRow,
+  BIconChevronLeft,
+  BIconTrash,
+  BIconPlus,
 } from 'bootstrap-vue'
 
 import vSelect from 'vue-select'
@@ -100,25 +149,34 @@ export default {
     BRow,
     BCol,
     BFormRow,
-    BIconChevronBarLeft,
+    BIconChevronLeft,
     BIconTrash,
     BIconPlus,
     vSelect,
   },
   data() {
-    return {
-
-    }
+    return {}
   },
-  methods() {
-
+  methods: {
+    voltar() {
+      this.$router.push({ name: 'For Special Services' })
+    },
   },
   setup() {
     const form = {
-      viatura_id: null,
-      cliente: '',
+      name_cliente: '',
       contact_cliente: '',
-
+      pickup_place: '',
+      dropoff_place: '',
+      pickup_time: '',
+      dropoff_time: '',
+      // array datas to push ou remove row
+      abastecimentoDatas: [{
+        viatura_id: null,
+        bombas_id: null,
+        qtd: 0,
+        qtd_existente: 0,
+      }],
     }
 
     return {

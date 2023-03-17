@@ -14,13 +14,14 @@
         >
           <b-card no-body class="invoice-preview-card p-2">
             <b-row>
-              <b-col cols="6" md="6">
-                <b>bombas</b>:
+              <b-col cols="7" md="7" class="d-flex justify-content-center">
+                <b class="mr-1 mt-1">Bombas:</b>
                 <v-select
                   v-model="form.bombas_id"
                   label="nome_bombas"
                   :options="bomba"
                   :reduce="(bomba) => bomba.id"
+                  style="width:100%"
                 ></v-select>
               </b-col>
               <hr />
@@ -29,7 +30,7 @@
                   <table class="table table-bordered table-stripped">
                     <thead class="thead-light">
                       <tr>
-                        <th class="text-danger">matricula_viatura</th>
+                        <th>matricula_viatura</th>
                         <th>Rotas e projecto</th>
                         <th>Km(s)</th>
                         <th>Qtd(<small class="text-lowercase">ltr</small>)</th>
@@ -76,8 +77,8 @@
                             v-model="form.qtd_abastecer"
                           >
                           </b-form-input>
-                          <br />
-                          {{ qtdAbastecer }}
+
+                          {{ qtdAbastecer }} ltr's. necess&aacute;rios
                         </td>
                         <td style="width: 25%">
                           <v-select
@@ -102,13 +103,13 @@
               </b-card-body>
             </b-row>
               <b-row>
-              <div class="d-flex justify-content-between m-1" style="width:100%">
-                
+              <div class="d-flex justify-content-between m-1" style="width:100%; margin-top: -10px;">
+
                     <b-button type="reset" variant="secondary">
-                    limpar campos
+                    Limpar campos
                   </b-button>
                     <b-button type="submit" variant="success">
-                    adicionar a ordem
+                    Adicionar &aacute; ordem
                   </b-button>
               </div>
             </b-row>

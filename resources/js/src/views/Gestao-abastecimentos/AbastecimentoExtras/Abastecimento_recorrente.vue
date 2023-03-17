@@ -1,33 +1,36 @@
 <template>
   <section>
     <b-card no-body>
-      <b-card-header class="pb-50">
-        <h3>abastecimentos fora do projecto</h3>
+      <b-card-header class="pb-50 d-flex justify-content-between">
+        <h3>Abastecimentos extraordinários</h3>
+        <b-button
+          v-if="can('Create Abastecimento_recorrente')"
+          variant="outline-primary"
+          @click="showModal"
+        >
+          Novo pedido
+        </b-button>
       </b-card-header>
       <div class="m-2">
         <!-- Table Top -->
-        <b-row>
+        <b-row class="d-flex justify-content-between">
           <!-- Per Page --><b-col
-                             cols="12"
-                             md="3"
-                             class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
-                           >
-                             <label>Mostrar</label>
-                             <v-select
-                               v-model="perPage"
-                               :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                               :options="perPageOptions"
-                               :clearable="false"
-                               class="per-page-selector d-inline-block mx-50"
-                             />
-                             <label>entradas</label>
-                           </b-col>
-
-          <!-- Search -->
-          <b-col
-            cols="6"
-            md="6"
+            cols="12"
+            md="3"
+            class="d-flex align-items-center justify-content-start mb-1 mb-md-0"
           >
+            <label>Mostrar</label>
+            <v-select
+              v-model="perPage"
+              :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+              :options="perPageOptions"
+              :clearable="false"
+              class="per-page-selector d-inline-block mx-50"
+            />
+            <label>entradas</label>
+          </b-col>
+          <!-- Search -->
+          <b-col cols="12" md="5">
             <div class="d-flex align-items-center justify-content-end">
               <b-form-input
                 v-model="searchQuery"
@@ -36,26 +39,10 @@
               />
             </div>
           </b-col>
-
-          <b-col
-            v-if="can('Create Abastecimento_recorrente')"
-            cols="6"
-            md="3"
-          >
-            <b-button
-              variant="outline-primary"
-              @click="showModal"
-            >
-              criar pedido de abastecimento
-            </b-button>
-          </b-col>
         </b-row>
       </div>
       <b-row>
-        <b-col
-          cols="12"
-          class="table-responsive"
-        >
+        <b-col cols="12">
           <b-table
             ref="refAbstRecorrente"
             :items="fetchAbstRecorrente"
@@ -104,7 +91,6 @@
                 no-caret
                 :right="$store.state.appConfig.isRTL"
               >
-
                 <template #button-content>
                   <feather-icon
                     icon="MoreVerticalIcon"
@@ -112,7 +98,12 @@
                     class="align-middle text-body"
                   />
                 </template>
-                <b-dropdown-item :to="{ name: 'supply-details', params: { refs: data.item.refs } }">
+                <b-dropdown-item
+                  :to="{
+                    name: 'supply-details',
+                    params: { refs: data.item.refs },
+                  }"
+                >
                   <feather-icon icon="FileTextIcon" />
                   <span class="align-middle ml-50">Mostrar</span>
                 </b-dropdown-item>
@@ -123,13 +114,15 @@
         <b-col cols="12">
           <div class="mx-2 mb-2">
             <b-row>
-
               <b-col
                 cols="12"
                 sm="6"
                 class="d-flex align-items-center justify-content-center justify-content-sm-start"
               >
-                <span class="text-muted">mostrar {{ dataMeta2.from }} de {{ dataMeta2.to }} para {{ dataMeta2.of }} entradas</span>
+                <span class="text-muted"
+                  >mostrar {{ dataMeta2.from }} de {{ dataMeta2.to }} para
+                  {{ dataMeta2.of }} entradas</span
+                >
               </b-col>
               <!-- Pagination -->
               <b-col
@@ -137,7 +130,6 @@
                 sm="6"
                 class="d-flex align-items-center justify-content-center justify-content-sm-end"
               >
-
                 <b-pagination
                   v-model="currentPage"
                   :total-rows="totalAbastecimentos"
@@ -149,21 +141,13 @@
                   next-class="next-item"
                 >
                   <template #prev-text>
-                    <feather-icon
-                      icon="ChevronLeftIcon"
-                      size="18"
-                    />
+                    <feather-icon icon="ChevronLeftIcon" size="18" />
                   </template>
                   <template #next-text>
-                    <feather-icon
-                      icon="ChevronRightIcon"
-                      size="18"
-                    />
+                    <feather-icon icon="ChevronRightIcon" size="18" />
                   </template>
                 </b-pagination>
-
               </b-col>
-
             </b-row>
           </div>
         </b-col>
@@ -172,21 +156,13 @@
         ref="AbastecimentoForm"
         size="lg"
         hide-footer
-        title="Pedido de abastecimento"
+        title="Pedido de abastecimento extraordinário"
       >
         <div class="d-block">
-          <validation-observer
-            ref="refFormObserver"
-          >
-            <b-form
-              ref="form"
-              @submit.prevent="submitSupply"
-            >
+          <validation-observer ref="refFormObserver">
+            <b-form ref="form" @submit.prevent="submitSupply">
               <b-form-row>
-                <b-col
-                  cols="6"
-                  md="6"
-                >
+                <b-col cols="6" md="6">
                   <validation-provider
                     #default="validationContext"
                     name="Bombas"
@@ -199,7 +175,7 @@
                         :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                         label="nome_bombas"
                         :options="bombas"
-                        :reduce="bombas => bombas.id"
+                        :reduce="(bombas) => bombas.id"
                         :clearable="false"
                         input-id="bombas"
                         :state="getValidationState(validationContext)"
@@ -207,12 +183,10 @@
                       <b-form-invalid-feedback>
                         {{ validationContext.errors[0] }}
                       </b-form-invalid-feedback>
-                    </b-form-group></validation-provider>
+                    </b-form-group></validation-provider
+                  >
                 </b-col>
-                <b-col
-                  cols="6"
-                  md="6"
-                >
+                <b-col cols="6" md="6">
                   <validation-provider
                     #default="validationContext"
                     name="Viatura"
@@ -225,7 +199,7 @@
                         :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
                         label="matricula"
                         :options="viaturas"
-                        :reduce="viaturas => viaturas.matricula"
+                        :reduce="(viaturas) => viaturas.matricula"
                         :clearable="false"
                         :state="getValidationState(validationContext)"
                       />
@@ -236,10 +210,7 @@
                   </validation-provider>
                 </b-col>
 
-                <b-col
-                  cols="6"
-                  md="6"
-                >
+                <b-col cols="6" md="6">
                   <validation-provider
                     #default="validationContext"
                     name="Qtd a abastecer"
@@ -261,10 +232,7 @@
                     </b-form-group>
                   </validation-provider>
                 </b-col>
-                <b-col
-                  cols="6"
-                  md="6"
-                >
+                <b-col cols="6" md="6">
                   <validation-provider
                     #default="validationContext"
                     name="Hora prevista de saida"
@@ -290,92 +258,33 @@
                     </b-form-group>
                   </validation-provider>
                 </b-col>
-                <b-col
-                  cols="6"
-                  md="6"
-                >
-                  <validation-provider
-                    #default="validationContext"
-                    name="Destino"
-                    rules="required"
-                  >
-                    <b-form-group
-                      label="Destino"
-                      label-for="destino"
-                    >
-                      <b-form-input
-                        id="Destino"
-                        v-model="OrderForm.destino"
-                        :state="getValidationState(validationContext)"
-                        trim
-                      />
-                      <b-form-invalid-feedback>
-                        {{ validationContext.errors[0] }}
-                      </b-form-invalid-feedback>
-                    </b-form-group>
-                  </validation-provider>
-                </b-col>
-                <BCol
-                  cols="6"
-                  md="6"
-                >
-                  <validation-provider
-                    #default="validationContext"
-                    name="Finalidade"
-                    rule="required"
-                  >
-                    <BFormGroup
-                      id="Finalidade"
-                      label="Finalidade"
-                    >
-                      <BFormSelect
-                        v-model="OrderForm.finalidade"
-                        :options="finalidadeOptions"
-                        :state="getValidationState(validationContext)"
-                        trim
-                      />
-                      <b-form-invalid-feedback>
-                        {{ validationContext.errors[0] }}
-                      </b-form-invalid-feedback>
-                    </BFormGroup>
-                  </validation-provider>
-                </Bcol>
                 <BCol>
-                    <validation-provider
+                  <validation-provider
                     #default="validationContext"
                     name="Rota"
                     rule="required"
                   >
-                    <BFormGroup
-                      id="Rota"
-                      label="Rota"
-                    >
+                    <BFormGroup id="Rota" label="Rota a apoiar">
                       <v-select
                         v-model="form.rota_id"
                         label="nome_rota"
                         :options="rota"
-                        :reduce="rota => rota.id"
+                        :reduce="(rota) => rota.id"
                         :state="getValidationState(validationContext)"
                         trim
                       />
                     </BFormGroup>
                   </validation-provider>
-                </Bcol>
-                <b-col
-                  cols="6"
-                  md="6"
-                >
+                </BCol>
+                <b-col cols="12" md="6">
                   <validation-provider
                     #default="validationContext"
                     name="Descricao"
                     rules="required"
                   >
-                    <b-form-group
-                      label="Descricao"
-                      label-for="Descricao"
-                    >
+                    <b-form-group label="Justificação" label-for="Justificação">
                       <b-form-textarea
-                        id="Descricao"
+                        id="Justificação"
                         v-model="OrderForm.descricao"
                         :state="getValidationState(validationContext)"
                         trim
@@ -386,8 +295,8 @@
                     </b-form-group>
                   </validation-provider>
                 </b-col>
-
               </b-form-row>
+              <hr />
               <b-form-row>
                 <b-col>
                   <b-button
@@ -395,28 +304,22 @@
                     variant="secondary"
                     @click="hideModal"
                   >
-                    cancelar
+                    Cancelar
                   </b-button>
                 </b-col>
-                <b-col>
-                  <b-button
-                    type="submit"
-                    variant="success"
-                  >
-                    enviar pedido
+                <b-col class="d-flex justify-content-end">
+                  <b-button type="submit" variant="success">
+                    Enviar pedido
                   </b-button>
                 </b-col>
               </b-form-row>
+              <hr />
             </b-form>
           </validation-observer>
         </div>
       </b-modal>
     </b-card>
-    <b-modal
-      ref="AbastecimentoDetails"
-      title="Informacao da Ordem"
-      size="xl"
-    />
+    <b-modal ref="AbastecimentoDetails" title="Informacao da Ordem" size="xl" />
   </section>
 </template>
 
@@ -440,23 +343,23 @@ import {
   BDropdown,
   BDropdownItem,
   BFormSelect,
-} from 'bootstrap-vue'
-import { ValidationProvider, ValidationObserver } from 'vee-validate'
-import { ref, onUnmounted } from '@vue/composition-api'
-import { required, alphaNum } from '@validations'
-import formValidation from '@core/comp-functions/forms/form-validation'
-import Cleave from 'vue-cleave-component'
-import DatePicker from 'vue2-datepicker'
-import moment from 'moment'
-import vSelect from 'vue-select'
-import Form from 'vform'
-import 'vue2-datepicker/index.css'
-import { useToast } from 'vue-toastification/composition'
-import Ripple from 'vue-ripple-directive'
-import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
-import storeAbastecimentos from '../abastecimentos/storeAbastecimentos'
-import useAbstTecorrenteList from './recorrente'
-import store from '@/store'
+} from "bootstrap-vue";
+import { ValidationProvider, ValidationObserver } from "vee-validate";
+import { ref, onUnmounted } from "@vue/composition-api";
+import { required, alphaNum } from "@validations";
+import formValidation from "@core/comp-functions/forms/form-validation";
+import Cleave from "vue-cleave-component";
+import DatePicker from "vue2-datepicker";
+import moment from "moment";
+import vSelect from "vue-select";
+import Form from "vform";
+import "vue2-datepicker/index.css";
+import { useToast } from "vue-toastification/composition";
+import Ripple from "vue-ripple-directive";
+import ToastificationContent from "@core/components/toastification/ToastificationContent.vue";
+import storeAbastecimentos from "../abastecimentos/storeAbastecimentos";
+import useAbstTecorrenteList from "./recorrente";
+import store from "@/store";
 
 export default {
   components: {
@@ -497,119 +400,126 @@ export default {
       moment,
       required,
       alphaNum,
-    }
+    };
   },
   created() {
-    this.moment = moment
-    this.fetchBombas()
-    this.fetchViaturas()
-    this.fetchRotas()
+    this.moment = moment;
+    this.fetchBombas();
+    this.fetchViaturas();
+    this.fetchRotas();
   },
   methods: {
     fetchBombas() {
-      this.$http.get('/api/bombas').then(res => {
-        this.bombas = res.data
-      })
+      this.$http.get("/api/bombas").then((res) => {
+        this.bombas = res.data;
+      });
     },
     fetchViaturas() {
-      this.$http.get('/api/listAllViaturas').then(res => {
-        this.viaturas = res.data
-      })
+      this.$http.get("/api/listAllViaturas").then((res) => {
+        this.viaturas = res.data;
+      });
     },
     fetchRotas() {
-      this.$http.get('/api/todasRotas').then(res => {
-        this.rota = res.data
-      }).catch(err => {
-        console.log(err)
-      })
+      this.$http
+        .get("/api/todasRotas")
+        .then((res) => {
+          this.rota = res.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     },
   },
   setup() {
-    const SUPPLY_STORE_MODULE_NAME = 'Supply'
+    const SUPPLY_STORE_MODULE_NAME = "Supply";
 
     // Register module
-    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos)
-    const toast = useToast()
+    if (!store.hasModule(SUPPLY_STORE_MODULE_NAME))
+      store.registerModule(SUPPLY_STORE_MODULE_NAME, storeAbastecimentos);
+    const toast = useToast();
     const form = new Form({
-      viatura_matricula: '',
+      viatura_matricula: "",
       bombas_id: null,
       qtd: null,
-      horaSaida: '',
-      destino: '',
-      descricao: '',
-      finalidade: '',
+      horaSaida: "",
+      destino: "",
+      descricao: "",
+      finalidade: "",
       rota_id: null,
-    })
-    const finalidadeOptions = ['Apoio a Rota']
-    const OrderForm = ref(JSON.parse(JSON.stringify(form)))
+    });
+    const finalidadeOptions = ["Apoio a Rota"];
+    const OrderForm = ref(JSON.parse(JSON.stringify(form)));
     const resetsupplyFormData = () => {
-      OrderForm.value = JSON.parse(JSON.stringify(form))
-    }
+      OrderForm.value = JSON.parse(JSON.stringify(form));
+    };
     onUnmounted(() => {
-      if (store.hasModule(SUPPLY_STORE_MODULE_NAME)) store.unregisterModule(SUPPLY_STORE_MODULE_NAME)
-    })
+      if (store.hasModule(SUPPLY_STORE_MODULE_NAME))
+        store.unregisterModule(SUPPLY_STORE_MODULE_NAME);
+    });
 
     function submitSupply() {
       store
-        .dispatch('Supply/addAbastecimentoRecorrente', OrderForm.value)
-        .then(response => {
-          this.$emit('refetch-data2')
+        .dispatch("Supply/addAbastecimentoRecorrente", OrderForm.value)
+        .then((response) => {
+          this.$emit("refetch-data2");
           toast({
             component: ToastificationContent,
             props: {
               title: response.data.success,
-              icon: 'CheckSquareIcon',
-              variant: 'success',
+              icon: "CheckSquareIcon",
+              variant: "success",
             },
-          })
-          this.$refs.AbastecimentoForm.hide()
-          window.location.reload()
+          });
+          this.$refs.AbastecimentoForm.hide();
+          window.location.reload();
         })
-        .catch(err => {
+        .catch((err) => {
           if (err.response.status === 421) {
             toast({
               component: ToastificationContent,
               props: {
                 title: err.response.data.erro,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger',
+                icon: "AlertTriangleIcon",
+                variant: "danger",
               },
-            })
+            });
           }
-        })
+        });
     }
-    const AbstDetails = ref(null)
+    const AbstDetails = ref(null);
     function details(refs) {
-      console.log(refs)
-      store.dispatch('Supply/fetchAbstRecDetails', { refs })
-        .then(response => {
-          AbstDetails.value = response.data
+      console.log(refs);
+      store
+        .dispatch("Supply/fetchAbstRecDetails", { refs })
+        .then((response) => {
+          AbstDetails.value = response.data;
         })
-        .catch(error => {
+        .catch((error) => {
           if (error.response.status === 404) {
-            AbstDetails.value = undefined
+            AbstDetails.value = undefined;
           }
-        })
-    //   this.form.fill(datas)
-    //   this.showModal()
+        });
+      //   this.form.fill(datas)
+      //   this.showModal()
     }
-    const { refFormObserver, getValidationState, resetForm } = formValidation(resetsupplyFormData)
+    const { refFormObserver, getValidationState, resetForm } =
+      formValidation(resetsupplyFormData);
     const options = {
       time: {
         time: true,
-        timePattern: ['h', 'm', 's'],
+        timePattern: ["h", "m", "s"],
       },
-    }
+    };
 
     function showModal() {
-      this.$refs.AbastecimentoForm.show()
+      this.$refs.AbastecimentoForm.show();
     }
 
     function hideModal() {
-      this.$refs.AbastecimentoForm.hide()
+      this.$refs.AbastecimentoForm.hide();
     }
     function dateTime(value) {
-      return moment(value).format('DD/MM/YYYY hh:mm')
+      return moment(value).format("DD/MM/YYYY hh:mm");
     }
 
     const {
@@ -625,7 +535,7 @@ export default {
       searchQuery,
       sortBy,
       isSortDirDesc,
-    } = useAbstTecorrenteList()
+    } = useAbstTecorrenteList();
 
     return {
       OrderForm,
@@ -657,7 +567,7 @@ export default {
       details,
       dateTime,
       finalidadeOptions,
-    }
+    };
   },
-}
+};
 </script>

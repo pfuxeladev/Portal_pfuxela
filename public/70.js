@@ -91,6 +91,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -108,7 +143,7 @@ __webpack_require__.r(__webpack_exports__);
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
     BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
-    BIconChevronBarLeft: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconChevronBarLeft"],
+    BIconChevronLeft: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconChevronLeft"],
     BIconTrash: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconTrash"],
     BIconPlus: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconPlus"],
     vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
@@ -116,12 +151,28 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {};
   },
-  methods: function methods() {},
+  methods: {
+    voltar: function voltar() {
+      this.$router.push({
+        name: 'For Special Services'
+      });
+    }
+  },
   setup: function setup() {
     var form = {
-      viatura_id: null,
-      cliente: '',
-      contact_cliente: ''
+      name_cliente: '',
+      contact_cliente: '',
+      pickup_place: '',
+      dropoff_place: '',
+      pickup_time: '',
+      dropoff_time: '',
+      // array datas to push ou remove row
+      abastecimentoDatas: [{
+        viatura_id: null,
+        bombas_id: null,
+        qtd: 0,
+        qtd_existente: 0
+      }]
     };
     return {
       form: form
@@ -165,12 +216,20 @@ var render = function () {
               _c(
                 "b-button",
                 { attrs: { variant: "outline-primary" } },
-                [_c("BIconChevronBarLeft"), _vm._v(" voltar\n      ")],
+                [_c("BIconChevronLeft"), _vm._v(" voltar\n      ")],
                 1
               ),
             ],
             1
           ),
+          _vm._v(" "),
+          _c("hr"),
+          _vm._v(" "),
+          _c("h4", { staticClass: "align-item-center text-center" }, [
+            _vm._v("\n      Dados do Cliente\n    "),
+          ]),
+          _vm._v(" "),
+          _c("hr"),
           _vm._v(" "),
           _c(
             "b-card-body",
@@ -180,10 +239,6 @@ var render = function () {
                 [
                   _c(
                     "b-row",
-                    {
-                      staticClass:
-                        "d-flex flex-container justify-content-between",
-                    },
                     [
                       _c(
                         "b-col",
@@ -202,7 +257,14 @@ var render = function () {
                             [_c("BFormInput", { attrs: { type: "text" } })],
                             1
                           ),
-                          _vm._v(" "),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "b-col",
+                        { attrs: { cols: "4" } },
+                        [
                           _c(
                             "BFormGroup",
                             { attrs: { label: "Local de Recolha" } },
@@ -241,24 +303,6 @@ var render = function () {
                             [_c("BFormInput", { attrs: { type: "text" } })],
                             1
                           ),
-                          _vm._v(" "),
-                          _c(
-                            "BFormGroup",
-                            { attrs: { label: "Bombas de abastecimento" } },
-                            [
-                              _c(
-                                "BFormSelect",
-                                { attrs: { label: "Bombas" } },
-                                [
-                                  _c("BFormSelectOption", [
-                                    _vm._v("Nome Bombas"),
-                                  ]),
-                                ],
-                                1
-                              ),
-                            ],
-                            1
-                          ),
                         ],
                         1
                       ),
@@ -266,70 +310,126 @@ var render = function () {
                     1
                   ),
                   _vm._v(" "),
-                  _c(
-                    "BFormRow",
-                    [
-                      _c(
-                        "BCol",
-                        { attrs: { cols: "4" } },
-                        [
-                          _c(
-                            "BFormGroup",
-                            { attrs: { label: "Viaturas" } },
-                            [_c("v-select")],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "BCol",
-                        { attrs: { cols: "3" } },
-                        [
-                          _c(
-                            "BFormGroup",
-                            { attrs: { label: "Qtd existente" } },
-                            [_c("BFormInput", { attrs: { type: "number" } })],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "BCol",
-                        { attrs: { cols: "3" } },
-                        [
-                          _c(
-                            "BFormGroup",
-                            { attrs: { label: "Qtd a abastecer" } },
-                            [_c("BFormInput", { attrs: { type: "number" } })],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "BCol",
-                        { attrs: { cols: "2" } },
-                        [
-                          _c(
-                            "BButton",
-                            {
-                              staticClass: "mt-2",
-                              attrs: { sm: "", variant: "outline-danger" },
-                            },
-                            [_c("BIconTrash")],
-                            1
-                          ),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c("h4", { staticClass: "align-item-center text-center" }, [
+                    _vm._v("\n          Abastecer\n        "),
+                  ]),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _vm._l(_vm.form.abastecimentoDatas, function (abst, counter) {
+                    return _c(
+                      "BFormRow",
+                      { key: counter },
+                      [
+                        _c(
+                          "BCol",
+                          { attrs: { cols: "4" } },
+                          [
+                            _c(
+                              "BFormGroup",
+                              { attrs: { label: "Bombas" } },
+                              [
+                                _c(
+                                  "BFormSelect",
+                                  {
+                                    model: {
+                                      value: abst.bombas_id,
+                                      callback: function ($$v) {
+                                        _vm.$set(abst, "bombas_id", $$v)
+                                      },
+                                      expression: "abst.bombas_id",
+                                    },
+                                  },
+                                  [
+                                    _c(
+                                      "BFormSelectOption",
+                                      { attrs: { value: "bombas" } },
+                                      [
+                                        _vm._v(
+                                          "\n                  Nome Bombas\n                "
+                                        ),
+                                      ]
+                                    ),
+                                  ],
+                                  1
+                                ),
+                              ],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "BCol",
+                          { attrs: { cols: "3" } },
+                          [
+                            _c(
+                              "BFormGroup",
+                              { attrs: { label: "Viaturas" } },
+                              [_c("v-select")],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "BCol",
+                          { attrs: { cols: "2" } },
+                          [
+                            _c(
+                              "BFormGroup",
+                              { attrs: { label: "Qtd existente" } },
+                              [_c("BFormInput", { attrs: { type: "number" } })],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "BCol",
+                          { attrs: { cols: "2" } },
+                          [
+                            _c(
+                              "BFormGroup",
+                              { attrs: { label: "Qtd a abastecer" } },
+                              [_c("BFormInput", { attrs: { type: "number" } })],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "BCol",
+                          {
+                            staticClass: "justify-content-end d-flex",
+                            attrs: { cols: "1" },
+                          },
+                          [
+                            _c(
+                              "BButton",
+                              {
+                                staticClass: "mt-2",
+                                attrs: {
+                                  size: "sm",
+                                  variant: "outline-danger",
+                                },
+                              },
+                              [_c("BIconTrash")],
+                              1
+                            ),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    )
+                  }),
                   _vm._v(" "),
                   _c(
                     "BFormRow",
@@ -350,8 +450,53 @@ var render = function () {
                     ],
                     1
                   ),
+                  _vm._v(" "),
+                  _c("hr"),
+                  _vm._v(" "),
+                  _c(
+                    "BFormRow",
+                    {
+                      staticClass:
+                        "d-flex justify-content-between flex-container",
+                    },
+                    [
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "3" } },
+                        [
+                          _c(
+                            "BButton",
+                            {
+                              attrs: { variant: "secondary" },
+                              on: { click: _vm.voltar },
+                            },
+                            [_vm._v("\n              Cancelar\n            ")]
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "2" } },
+                        [
+                          _c(
+                            "BButton",
+                            { attrs: { block: "", variant: "success" } },
+                            [
+                              _vm._v(
+                                "\n              Enviar pedido\n            "
+                              ),
+                            ]
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
                 ],
-                1
+                2
               ),
             ],
             1

@@ -10,7 +10,7 @@ export default function WorkShopOrders() {
     { key: 'Leitura (Km)', sortable: true },
     { key: 'Qtd_disp(trs)', sortable: true },
     { key: 'Viatura', sortable: true },
-    { key: 'Qtd', sortable: true },
+    { key: 'Qtd_requisitada', sortable: true },
     { key: 'Bombas', sortable: true },
     { key: 'Chefe_Oficina', sortable: true },
     { key: 'Submetido_por', sortable: true },

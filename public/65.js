@@ -108,7 +108,7 @@ var render = function () {
         "BCardHeader",
         { staticClass: "d-flex flex-container justify-content-between" },
         [
-          _c("BCardTitle", [_vm._v("Abastecimento relativos a serviços")]),
+          _c("BCardTitle", [_vm._v("Abastecimento relativo a serviços")]),
           _vm._v(" "),
           _c(
             "span",
@@ -116,12 +116,13 @@ var render = function () {
               _c(
                 "b-link",
                 {
+                  staticClass: "btn btn-primary",
                   attrs: {
                     variant: "primary",
                     to: { name: "New Order Service" },
                   },
                 },
-                [_vm._v("Criar Novo")]
+                [_vm._v("Novo Pedido")]
               ),
             ],
             1
@@ -196,8 +197,8 @@ render._withStripped = true
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AbastecimentoService; });
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-
 
 function AbastecimentoService() {
   var TableAbastecimentoServicoRef = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
@@ -280,9 +281,7 @@ function AbastecimentoService() {
     bombasFilter: bombasFilter,
     columnField: columnField
   };
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (AbastecimentoService());
+} // export default AbastecimentoService()
 
 /***/ }),
 

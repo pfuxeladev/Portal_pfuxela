@@ -1193,7 +1193,6 @@ var render = function () {
                               id: "input-group-8",
                               label: "Intervalo de datas:",
                               "label-for": "input-8",
-                              description: "Intervalo de datas.",
                             },
                           },
                           [
@@ -1213,6 +1212,44 @@ var render = function () {
                                   _vm.intervalo = $$v
                                 },
                                 expression: "intervalo",
+                              },
+                            }),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "b-col",
+                      [
+                        _c(
+                          "b-form-group",
+                          {
+                            attrs: {
+                              label: "Filtrar por periodo:",
+                              "label-for": "input-8",
+                            },
+                          },
+                          [
+                            _c("v-select", {
+                              attrs: {
+                                dir: _vm.$store.state.appConfig.isRTL
+                                  ? "rtl"
+                                  : "ltr",
+                                options: _vm.dateOptions,
+                                reduce: function (dateOptions) {
+                                  return dateOptions.value
+                                },
+                                clearable: false,
+                              },
+                              model: {
+                                value: _vm.dateReport,
+                                callback: function ($$v) {
+                                  _vm.dateReport = $$v
+                                },
+                                expression: "dateReport",
                               },
                             }),
                           ],
@@ -1261,45 +1298,7 @@ var render = function () {
                       1
                     ),
                     _vm._v(" "),
-                    _c(
-                      "b-col",
-                      { attrs: { cols: "5", md: "5" } },
-                      [
-                        _c(
-                          "b-form-group",
-                          {
-                            attrs: {
-                              label: "Filtrar por periodo:",
-                              "label-for": "input-8",
-                              description: "Datas periodicas.",
-                            },
-                          },
-                          [
-                            _c("v-select", {
-                              attrs: {
-                                dir: _vm.$store.state.appConfig.isRTL
-                                  ? "rtl"
-                                  : "ltr",
-                                options: _vm.dateOptions,
-                                reduce: function (dateOptions) {
-                                  return dateOptions.value
-                                },
-                                clearable: false,
-                              },
-                              model: {
-                                value: _vm.dateReport,
-                                callback: function ($$v) {
-                                  _vm.dateReport = $$v
-                                },
-                                expression: "dateReport",
-                              },
-                            }),
-                          ],
-                          1
-                        ),
-                      ],
-                      1
-                    ),
+                    _c("b-col", { attrs: { cols: "5", md: "5" } }),
                     _vm._v(" "),
                     _c(
                       "b-col",

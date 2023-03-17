@@ -15,6 +15,7 @@
       <BCardBody>
         <BTable
           :fields="CollumnFields"
+          responsive
           primary-key="id"
           :sort-by.sync="sortBy"
           show-empty
@@ -27,7 +28,7 @@
       ref="my-modal"
       size="lg"
       hide-footer
-      title="Criar Ordem de abastecimento"
+      title="Ordem de abastecimento para oficina"
     >
       <FormOrder
         :form="OrderForm"
@@ -126,7 +127,7 @@ export default {
     function OpenModal() {
       this.$refs['my-modal'].show()
 
-    
+
     }
 
     return {
@@ -145,7 +146,7 @@ export default {
       OpenModal,
       resetsupplyFormData,
       OrderForm,
-    
+
     }
   },
 }

@@ -359,103 +359,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -524,21 +427,21 @@ __webpack_require__.r(__webpack_exports__);
     fetchBombas: function fetchBombas() {
       var _this = this;
 
-      this.$http.get('/api/bombas').then(function (res) {
+      this.$http.get("/api/bombas").then(function (res) {
         _this.bombas = res.data;
       });
     },
     fetchViaturas: function fetchViaturas() {
       var _this2 = this;
 
-      this.$http.get('/api/listAllViaturas').then(function (res) {
+      this.$http.get("/api/listAllViaturas").then(function (res) {
         _this2.viaturas = res.data;
       });
     },
     fetchRotas: function fetchRotas() {
       var _this3 = this;
 
-      this.$http.get('/api/todasRotas').then(function (res) {
+      this.$http.get("/api/todasRotas").then(function (res) {
         _this3.rota = res.data;
       })["catch"](function (err) {
         console.log(err);
@@ -546,21 +449,21 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   setup: function setup() {
-    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
 
     if (!_store__WEBPACK_IMPORTED_MODULE_17__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_17__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _abastecimentos_storeAbastecimentos__WEBPACK_IMPORTED_MODULE_15__["default"]);
     var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_12__["useToast"])();
     var form = new vform__WEBPACK_IMPORTED_MODULE_10__["default"]({
-      viatura_matricula: '',
+      viatura_matricula: "",
       bombas_id: null,
       qtd: null,
-      horaSaida: '',
-      destino: '',
-      descricao: '',
-      finalidade: '',
+      horaSaida: "",
+      destino: "",
+      descricao: "",
+      finalidade: "",
       rota_id: null
     });
-    var finalidadeOptions = ['Apoio a Rota'];
+    var finalidadeOptions = ["Apoio a Rota"];
     var OrderForm = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(JSON.parse(JSON.stringify(form)));
 
     var resetsupplyFormData = function resetsupplyFormData() {
@@ -574,15 +477,15 @@ __webpack_require__.r(__webpack_exports__);
     function submitSupply() {
       var _this4 = this;
 
-      _store__WEBPACK_IMPORTED_MODULE_17__["default"].dispatch('Supply/addAbastecimentoRecorrente', OrderForm.value).then(function (response) {
-        _this4.$emit('refetch-data2');
+      _store__WEBPACK_IMPORTED_MODULE_17__["default"].dispatch("Supply/addAbastecimentoRecorrente", OrderForm.value).then(function (response) {
+        _this4.$emit("refetch-data2");
 
         toast({
           component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
           props: {
             title: response.data.success,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
+            icon: "CheckSquareIcon",
+            variant: "success"
           }
         });
 
@@ -595,8 +498,8 @@ __webpack_require__.r(__webpack_exports__);
             component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_14__["default"],
             props: {
               title: err.response.data.erro,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
+              icon: "AlertTriangleIcon",
+              variant: "danger"
             }
           });
         }
@@ -607,7 +510,7 @@ __webpack_require__.r(__webpack_exports__);
 
     function details(refs) {
       console.log(refs);
-      _store__WEBPACK_IMPORTED_MODULE_17__["default"].dispatch('Supply/fetchAbstRecDetails', {
+      _store__WEBPACK_IMPORTED_MODULE_17__["default"].dispatch("Supply/fetchAbstRecDetails", {
         refs: refs
       }).then(function (response) {
         AbstDetails.value = response.data;
@@ -627,7 +530,7 @@ __webpack_require__.r(__webpack_exports__);
     var options = {
       time: {
         time: true,
-        timePattern: ['h', 'm', 's']
+        timePattern: ["h", "m", "s"]
       }
     };
 
@@ -640,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
     }
 
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_8___default()(value).format('DD/MM/YYYY hh:mm');
+      return moment__WEBPACK_IMPORTED_MODULE_8___default()(value).format("DD/MM/YYYY hh:mm");
     }
 
     var _useAbstTecorrenteLis = Object(_recorrente__WEBPACK_IMPORTED_MODULE_16__["default"])(),
@@ -1015,9 +918,25 @@ var render = function () {
         "b-card",
         { attrs: { "no-body": "" } },
         [
-          _c("b-card-header", { staticClass: "pb-50" }, [
-            _c("h3", [_vm._v("abastecimentos fora do projecto")]),
-          ]),
+          _c(
+            "b-card-header",
+            { staticClass: "pb-50 d-flex justify-content-between" },
+            [
+              _c("h3", [_vm._v("Abastecimentos extraordinários")]),
+              _vm._v(" "),
+              _vm.can("Create Abastecimento_recorrente")
+                ? _c(
+                    "b-button",
+                    {
+                      attrs: { variant: "outline-primary" },
+                      on: { click: _vm.showModal },
+                    },
+                    [_vm._v("\n        Novo pedido\n      ")]
+                  )
+                : _vm._e(),
+            ],
+            1
+          ),
           _vm._v(" "),
           _c(
             "div",
@@ -1025,6 +944,7 @@ var render = function () {
             [
               _c(
                 "b-row",
+                { staticClass: "d-flex justify-content-between" },
                 [
                   _c(
                     "b-col",
@@ -1057,7 +977,7 @@ var render = function () {
                     1
                   ),
                   _vm._v(" "),
-                  _c("b-col", { attrs: { cols: "6", md: "6" } }, [
+                  _c("b-col", { attrs: { cols: "12", md: "5" } }, [
                     _c(
                       "div",
                       {
@@ -1080,28 +1000,6 @@ var render = function () {
                       1
                     ),
                   ]),
-                  _vm._v(" "),
-                  _vm.can("Create Abastecimento_recorrente")
-                    ? _c(
-                        "b-col",
-                        { attrs: { cols: "6", md: "3" } },
-                        [
-                          _c(
-                            "b-button",
-                            {
-                              attrs: { variant: "outline-primary" },
-                              on: { click: _vm.showModal },
-                            },
-                            [
-                              _vm._v(
-                                "\n            criar pedido de abastecimento\n          "
-                              ),
-                            ]
-                          ),
-                        ],
-                        1
-                      )
-                    : _vm._e(),
                 ],
                 1
               ),
@@ -1114,7 +1012,7 @@ var render = function () {
             [
               _c(
                 "b-col",
-                { staticClass: "table-responsive", attrs: { cols: "12" } },
+                { attrs: { cols: "12" } },
                 [
                   _c("b-table", {
                     ref: "refAbstRecorrente",
@@ -1350,7 +1248,7 @@ var render = function () {
                                   _vm._s(_vm.dataMeta2.from) +
                                   " de " +
                                   _vm._s(_vm.dataMeta2.to) +
-                                  " para " +
+                                  " para\n                " +
                                   _vm._s(_vm.dataMeta2.of) +
                                   " entradas"
                               ),
@@ -1435,7 +1333,7 @@ var render = function () {
               attrs: {
                 size: "lg",
                 "hide-footer": "",
-                title: "Pedido de abastecimento",
+                title: "Pedido de abastecimento extraordinário",
               },
             },
             [
@@ -1755,145 +1653,6 @@ var render = function () {
                               ),
                               _vm._v(" "),
                               _c(
-                                "b-col",
-                                { attrs: { cols: "6", md: "6" } },
-                                [
-                                  _c("validation-provider", {
-                                    attrs: {
-                                      name: "Destino",
-                                      rules: "required",
-                                    },
-                                    scopedSlots: _vm._u([
-                                      {
-                                        key: "default",
-                                        fn: function (validationContext) {
-                                          return [
-                                            _c(
-                                              "b-form-group",
-                                              {
-                                                attrs: {
-                                                  label: "Destino",
-                                                  "label-for": "destino",
-                                                },
-                                              },
-                                              [
-                                                _c("b-form-input", {
-                                                  attrs: {
-                                                    id: "Destino",
-                                                    state:
-                                                      _vm.getValidationState(
-                                                        validationContext
-                                                      ),
-                                                    trim: "",
-                                                  },
-                                                  model: {
-                                                    value:
-                                                      _vm.OrderForm.destino,
-                                                    callback: function ($$v) {
-                                                      _vm.$set(
-                                                        _vm.OrderForm,
-                                                        "destino",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "OrderForm.destino",
-                                                  },
-                                                }),
-                                                _vm._v(" "),
-                                                _c("b-form-invalid-feedback", [
-                                                  _vm._v(
-                                                    "\n                      " +
-                                                      _vm._s(
-                                                        validationContext
-                                                          .errors[0]
-                                                      ) +
-                                                      "\n                    "
-                                                  ),
-                                                ]),
-                                              ],
-                                              1
-                                            ),
-                                          ]
-                                        },
-                                      },
-                                    ]),
-                                  }),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "BCol",
-                                { attrs: { cols: "6", md: "6" } },
-                                [
-                                  _c("validation-provider", {
-                                    attrs: {
-                                      name: "Finalidade",
-                                      rule: "required",
-                                    },
-                                    scopedSlots: _vm._u([
-                                      {
-                                        key: "default",
-                                        fn: function (validationContext) {
-                                          return [
-                                            _c(
-                                              "BFormGroup",
-                                              {
-                                                attrs: {
-                                                  id: "Finalidade",
-                                                  label: "Finalidade",
-                                                },
-                                              },
-                                              [
-                                                _c("BFormSelect", {
-                                                  attrs: {
-                                                    options:
-                                                      _vm.finalidadeOptions,
-                                                    state:
-                                                      _vm.getValidationState(
-                                                        validationContext
-                                                      ),
-                                                    trim: "",
-                                                  },
-                                                  model: {
-                                                    value:
-                                                      _vm.OrderForm.finalidade,
-                                                    callback: function ($$v) {
-                                                      _vm.$set(
-                                                        _vm.OrderForm,
-                                                        "finalidade",
-                                                        $$v
-                                                      )
-                                                    },
-                                                    expression:
-                                                      "OrderForm.finalidade",
-                                                  },
-                                                }),
-                                                _vm._v(" "),
-                                                _c("b-form-invalid-feedback", [
-                                                  _vm._v(
-                                                    "\n                      " +
-                                                      _vm._s(
-                                                        validationContext
-                                                          .errors[0]
-                                                      ) +
-                                                      "\n                    "
-                                                  ),
-                                                ]),
-                                              ],
-                                              1
-                                            ),
-                                          ]
-                                        },
-                                      },
-                                    ]),
-                                  }),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
                                 "BCol",
                                 [
                                   _c("validation-provider", {
@@ -1908,7 +1667,7 @@ var render = function () {
                                               {
                                                 attrs: {
                                                   id: "Rota",
-                                                  label: "Rota",
+                                                  label: "Rota a apoiar",
                                                 },
                                               },
                                               [
@@ -1951,7 +1710,7 @@ var render = function () {
                               _vm._v(" "),
                               _c(
                                 "b-col",
-                                { attrs: { cols: "6", md: "6" } },
+                                { attrs: { cols: "12", md: "6" } },
                                 [
                                   _c("validation-provider", {
                                     attrs: {
@@ -1967,14 +1726,14 @@ var render = function () {
                                               "b-form-group",
                                               {
                                                 attrs: {
-                                                  label: "Descricao",
-                                                  "label-for": "Descricao",
+                                                  label: "Justificação",
+                                                  "label-for": "Justificação",
                                                 },
                                               },
                                               [
                                                 _c("b-form-textarea", {
                                                   attrs: {
-                                                    id: "Descricao",
+                                                    id: "Justificação",
                                                     state:
                                                       _vm.getValidationState(
                                                         validationContext
@@ -2021,6 +1780,8 @@ var render = function () {
                             1
                           ),
                           _vm._v(" "),
+                          _c("hr"),
+                          _vm._v(" "),
                           _c(
                             "b-form-row",
                             [
@@ -2038,7 +1799,7 @@ var render = function () {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                  cancelar\n                "
+                                        "\n                  Cancelar\n                "
                                       ),
                                     ]
                                   ),
@@ -2048,6 +1809,7 @@ var render = function () {
                               _vm._v(" "),
                               _c(
                                 "b-col",
+                                { staticClass: "d-flex justify-content-end" },
                                 [
                                   _c(
                                     "b-button",
@@ -2059,7 +1821,7 @@ var render = function () {
                                     },
                                     [
                                       _vm._v(
-                                        "\n                  enviar pedido\n                "
+                                        "\n                  Enviar pedido\n                "
                                       ),
                                     ]
                                   ),
@@ -2069,6 +1831,8 @@ var render = function () {
                             ],
                             1
                           ),
+                          _vm._v(" "),
+                          _c("hr"),
                         ],
                         1
                       ),

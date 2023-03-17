@@ -35,7 +35,6 @@
                 id="input-group-8"
                 label="Intervalo de datas:"
                 label-for="input-8"
-                description="Intervalo de datas."
               >
                 <date-picker
                   id="example-datepicker1"
@@ -49,7 +48,20 @@
                 />
               </b-form-group>
             </b-col>
-
+            <b-col>
+                <b-form-group
+                label="Filtrar por periodo:"
+                label-for="input-8"
+              >
+                <v-select
+                  v-model="dateReport"
+                  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
+                  :options="dateOptions"
+                  :reduce="(dateOptions) => dateOptions.value"
+                  :clearable="false"
+                />
+              </b-form-group>
+            </b-col>
           </b-row>
           <b-row>
             <b-col
@@ -76,19 +88,7 @@
               cols="5"
               md="5"
             >
-              <b-form-group
-                label="Filtrar por periodo:"
-                label-for="input-8"
-                description="Datas periodicas."
-              >
-                <v-select
-                  v-model="dateReport"
-                  :dir="$store.state.appConfig.isRTL ? 'rtl' : 'ltr'"
-                  :options="dateOptions"
-                  :reduce="(dateOptions) => dateOptions.value"
-                  :clearable="false"
-                />
-              </b-form-group>
+
             </b-col>
             <!-- Search -->
             <b-col

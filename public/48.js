@@ -300,6 +300,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
  // eslint-disable-next-line import/no-extraneous-dependencies
 
@@ -839,11 +840,17 @@ var render = function () {
                         [
                           _c(
                             "b-col",
-                            { attrs: { cols: "6", md: "6" } },
+                            {
+                              staticClass: "d-flex justify-content-center",
+                              attrs: { cols: "7", md: "7" },
+                            },
                             [
-                              _c("b", [_vm._v("bombas")]),
-                              _vm._v(":\n              "),
+                              _c("b", { staticClass: "mr-1 mt-1" }, [
+                                _vm._v("Bombas:"),
+                              ]),
+                              _vm._v(" "),
                               _c("v-select", {
+                                staticStyle: { width: "100%" },
                                 attrs: {
                                   label: "nome_bombas",
                                   options: _vm.bomba,
@@ -876,9 +883,7 @@ var render = function () {
                                 [
                                   _c("thead", { staticClass: "thead-light" }, [
                                     _c("tr", [
-                                      _c("th", { staticClass: "text-danger" }, [
-                                        _vm._v("matricula_viatura"),
-                                      ]),
+                                      _c("th", [_vm._v("matricula_viatura")]),
                                       _vm._v(" "),
                                       _c("th", [_vm._v("Rotas e projecto")]),
                                       _vm._v(" "),
@@ -1024,12 +1029,10 @@ var render = function () {
                                               expression: "form.qtd_abastecer",
                                             },
                                           }),
-                                          _vm._v(" "),
-                                          _c("br"),
                                           _vm._v(
-                                            "\n                        " +
+                                            "\n\n                        " +
                                               _vm._s(_vm.qtdAbastecer) +
-                                              "\n                      "
+                                              " ltr's. necessários\n                      "
                                           ),
                                         ],
                                         1
@@ -1107,7 +1110,10 @@ var render = function () {
                           "div",
                           {
                             staticClass: "d-flex justify-content-between m-1",
-                            staticStyle: { width: "100%" },
+                            staticStyle: {
+                              width: "100%",
+                              "margin-top": "-10px",
+                            },
                           },
                           [
                             _c(
@@ -1117,7 +1123,7 @@ var render = function () {
                               },
                               [
                                 _vm._v(
-                                  "\n                  limpar campos\n                "
+                                  "\n                  Limpar campos\n                "
                                 ),
                               ]
                             ),
@@ -1127,7 +1133,7 @@ var render = function () {
                               { attrs: { type: "submit", variant: "success" } },
                               [
                                 _vm._v(
-                                  "\n                  adicionar a ordem\n                "
+                                  "\n                  Adicionar á ordem\n                "
                                 ),
                               ]
                             ),
