@@ -83,35 +83,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js&":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.json.stringify.js */ "./node_modules/core-js/modules/es.json.stringify.js");
-/* harmony import */ var core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_json_stringify_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js");
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./StoreViaturaModule */ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js");
-/* harmony import */ var _viaturaAlocada__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./viaturaAlocada */ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaAlocada.js");
-
-
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_7__);
 //
 //
 //
@@ -199,87 +189,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
 
 
 
@@ -289,259 +198,89 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'AlocarViatura',
   components: {
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardBody"],
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCol"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BButton"],
-    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormInput"],
-    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BForm"],
-    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormGroup"],
-    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BFormRow"],
-    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BModal"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_7___default.a,
-    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BTable"],
-    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BPagination"],
-    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BCardFooter"],
-    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BDropdown"],
-    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_2__["BDropdownItem"]
+    BCollapse: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCollapse"],
+    BCardSubTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardSubTitle"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BFormText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormText"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BPagination"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
+    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdown"],
+    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdownItem"]
+  },
+  data: function data() {
+    return {
+      abastecimentos: [],
+      bombas: {},
+      searchQuery: null,
+      form: new vform__WEBPACK_IMPORTED_MODULE_2__["default"]({}),
+      moment: moment__WEBPACK_IMPORTED_MODULE_7___default.a
+    };
+  },
+  created: function created() {
+    this.moment = moment__WEBPACK_IMPORTED_MODULE_7___default.a;
   },
   setup: function setup() {
-    var PIQUETE_APP_STORE_MODULE_NAME = 'Picket'; // Register module
+    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_9__["default"].registerModule(PIQUETE_APP_STORE_MODULE_NAME, _StoreViaturaModule__WEBPACK_IMPORTED_MODULE_11__["default"]);
-    } // UnRegister on leave
-
+    if (!_store__WEBPACK_IMPORTED_MODULE_6__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_6__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _storeAbastecimentos__WEBPACK_IMPORTED_MODULE_3__["default"]); // UnRegister on leave
 
     Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_9__["default"].hasModule(PIQUETE_APP_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_9__["default"].unregisterModule(PIQUETE_APP_STORE_MODULE_NAME);
-      }
+      if (_store__WEBPACK_IMPORTED_MODULE_6__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_6__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
     });
-    var pesquisar = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])('');
-    var viatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var rota = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var motoristas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var dadosViatura = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var EditMode = false;
-    var errors = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(null);
-    var form = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_5__["ref"])(JSON.parse(JSON.stringify({
-      id: null,
-      created_at: null,
-      viatura_id: null,
-      manometro_km: 0,
-      manometro_combustivel: 0,
-      motorista_id: 0,
-      qtdActual: 0,
-      kmActual: 0,
-      kmPercorridos: 0,
-      rota: [{
-        rota_id: ''
-      }]
-    }))); // buscar viaturas
 
-    function fetchViaturas() {
-      var _this = this;
-
-      this.$http.get('/api/viaturaNaoAlocada').then(function (res) {
-        _this.viatura = res.data;
-      })["catch"](function (err) {
-        console.log(err);
-      });
-    } // fetch rotas
-
-
-    function fetchRotas() {
-      var _this2 = this;
-
-      this.$http.get('/api/todasRotas').then(function (res) {
-        _this2.rota = res.data;
-      })["catch"](function (err) {
-        console.log(err);
-      });
-    } // fetch Motoristas
-
-
-    function fetchMotoristas() {
-      var _this3 = this;
-
-      this.$http.get('/api/listMotoristas').then(function (res) {
-        _this3.motoristas = res.data;
-      });
-    } // get km by viatura
-
-
-    function getKmActual() {
-      var _this4 = this;
-
-      //   console.log(this.form.viatura_id)
-      this.$http.get("/api/getKmViatura/".concat(this.form.viatura_id)).then(function (res) {
-        _this4.form.kmActual = res.data.km_inicio;
-      });
-      this.$http.get("/api/viaturas/".concat(this.form.viatura_id)).then(function (res) {
-        _this4.dadosViatura = res.data;
-      });
+    function dateTime(value) {
+      return moment__WEBPACK_IMPORTED_MODULE_7___default()(value).format('DD/MM/YYYY hh:mm');
     }
 
-    function calculaKm() {
-      var _this5 = this;
-
-      this.form.kmPercorridos = this.form.manometro_km - this.form.kmActual;
-
-      if (this.EditMode === true) {
-        this.$http.get("/api/getQtdViatura/".concat(this.form.viatura_id)).then(function (res) {
-          _this5.form.qtdActual = res.data.qtd_prevista;
-        });
-      } else {
-        this.form.qtdActual = parseFloat(this.form.kmPercorridos * this.dadosViatura.capacidade_media);
-      }
+    function PrintOrder(ordem) {
+      console.log(ordem);
     }
 
-    function toggleModal() {
-      this.$refs.alocateModal.toggle('#toggle-btn');
-    } // Alocar viatura
-
-
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])(); // Editar a viatura alocada
-
-    function EditarViatura(data) {
-      var _this6 = this;
-
-      this.$refs.alocateModal.show();
-      this.EditMode = true;
-      _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Picket/ViewAlocatedVehicle', {
-        id: data.created_at
-      }).then(function (res) {
-        _this6.form = res.data;
-      });
-    }
-
-    function alocarViatura() {
-      var _this7 = this;
-
-      _store__WEBPACK_IMPORTED_MODULE_9__["default"].dispatch('Picket/alocateVehicle', this.form).then(function (response) {
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-          props: {
-            title: response.data.message,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-
-        _this7.$refs.alocateModal.toggle();
-      })["catch"](function (error) {
-        if (error.response.status === 421) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-            props: {
-              title: error.response.data.error,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (error.response.status === 422) {
-          errors.value = error.response.data.errors;
-          console.log(errors.value);
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-            props: {
-              title: 'Erro ...! Por Favor valide os campos nao preenchidos',
-              icon: 'CheckSquareIcon',
-              variant: 'danger'
-            }
-          });
-        }
-      });
-    }
-
-    function atualizarViatura() {
-      var _this8 = this;
-
-      this.EditMode = true;
-      console.log(form.value.id);
-      return new Promise(function () {
-        _this8.$http.put("/api/viaturasAlocadas/".concat(form.value.created_at), form.value) // store.dispatch('Picket/UpdateAlocatedVehicle', form.value)
-        .then(function (response) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-            props: {
-              title: response.data.data,
-              icon: 'CheckSquareIcon',
-              variant: 'success'
-            }
-          });
-
-          _this8.$refs.alocateModal.toggle();
-        })["catch"](function (error) {
-          if (error.response.status === 421) {
-            toast({
-              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-              props: {
-                title: error.response.data.error,
-                icon: 'AlertTriangleIcon',
-                variant: 'danger'
-              }
-            });
-          }
-        });
-      });
-    }
-
-    var _viatursAlocadasList = Object(_viaturaAlocada__WEBPACK_IMPORTED_MODULE_12__["default"])(),
-        fetchViaturasAlocadas = _viatursAlocadasList.fetchViaturasAlocadas,
-        tableColumns = _viatursAlocadasList.tableColumns,
-        perPage = _viatursAlocadasList.perPage,
-        currentPage = _viatursAlocadasList.currentPage,
-        totalViaturas = _viatursAlocadasList.totalViaturas,
-        dataMeta = _viatursAlocadasList.dataMeta,
-        perPageOptions = _viatursAlocadasList.perPageOptions,
-        searchQuery = _viatursAlocadasList.searchQuery,
-        sortBy = _viatursAlocadasList.sortBy,
-        isSortDirDesc = _viatursAlocadasList.isSortDirDesc,
-        refViaturaListTable = _viatursAlocadasList.refViaturaListTable,
-        refetchData = _viatursAlocadasList.refetchData;
+    var _useAbastecimentoList = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+        fetchAbastecimentos = _useAbastecimentoList.fetchAbastecimentos,
+        tableColumns = _useAbastecimentoList.tableColumns,
+        perPage = _useAbastecimentoList.perPage,
+        currentPage = _useAbastecimentoList.currentPage,
+        totalAbastecimentos = _useAbastecimentoList.totalAbastecimentos,
+        dataMeta = _useAbastecimentoList.dataMeta,
+        perPageOptions = _useAbastecimentoList.perPageOptions,
+        searchQuery = _useAbastecimentoList.searchQuery,
+        sortBy = _useAbastecimentoList.sortBy,
+        isSortDirDesc = _useAbastecimentoList.isSortDirDesc,
+        refAbastecimentoListTable = _useAbastecimentoList.refAbastecimentoListTable,
+        refetchData = _useAbastecimentoList.refetchData;
 
     return {
-      errors: errors,
-      viatura: viatura,
-      rota: rota,
-      form: form,
+      fetchAbastecimentos: fetchAbastecimentos,
       tableColumns: tableColumns,
       perPage: perPage,
       currentPage: currentPage,
-      totalViaturas: totalViaturas,
+      totalAbastecimentos: totalAbastecimentos,
       dataMeta: dataMeta,
       perPageOptions: perPageOptions,
       searchQuery: searchQuery,
       sortBy: sortBy,
       isSortDirDesc: isSortDirDesc,
-      refViaturaListTable: refViaturaListTable,
+      refAbastecimentoListTable: refAbastecimentoListTable,
       refetchData: refetchData,
-      fetchViaturasAlocadas: fetchViaturasAlocadas,
-      pesquisar: pesquisar,
-      motoristas: motoristas,
-      dadosViatura: dadosViatura,
-      fetchMotoristas: fetchMotoristas,
-      fetchViaturas: fetchViaturas,
-      fetchRotas: fetchRotas,
-      getKmActual: getKmActual,
-      calculaKm: calculaKm,
-      alocarViatura: alocarViatura,
-      toggleModal: toggleModal,
-      EditarViatura: EditarViatura,
-      EditMode: EditMode,
-      atualizarViatura: atualizarViatura
+      dateTime: dateTime,
+      PrintOrder: PrintOrder
     };
-  },
-  created: function created() {
-    this.getKmActual();
-    this.fetchMotoristas();
-    this.fetchViaturas();
-    this.fetchRotas();
   }
 });
 
@@ -996,10 +735,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34&":
-/*!***************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34& ***!
-  \***************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&":
+/*!*************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee& ***!
+  \*************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1013,820 +752,368 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c(
     "section",
-    { staticClass: "invoice-add-wrapper mt-3" },
     [
       _c(
         "b-card",
-        { staticClass: "mb-0", attrs: { "no-body": "" } },
+        { attrs: { "no-body": "" } },
         [
+          _c("b-card-header", { staticClass: "pb-50" }, [
+            _c("h3", [_vm._v("Relatório de abastacimentos")]),
+          ]),
+          _vm._v(" "),
           _c(
             "div",
             { staticClass: "m-2" },
             [
               _c(
                 "b-row",
-                { staticClass: "invoice-add" },
                 [
-                  _c(
-                    "b-col",
-                    { attrs: { cols: "12", xl: "3", md: "3" } },
-                    [
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "b-modal",
-                              rawName: "v-b-modal.modal-lg",
-                              modifiers: { "modal-lg": true },
-                            },
-                          ],
-                          attrs: { variant: "outline-primary" },
-                        },
-                        [
-                          _vm._v(
-                            "\n                        Alocar nova viatura\n                    "
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-row",
-            { staticClass: "m-1" },
-            [
-              _c(
-                "b-col",
-                {
-                  staticClass:
-                    "d-flex align-items-center justify-content-start mb-1 mb-md-0",
-                  attrs: { cols: "12", md: "3" },
-                },
-                [
-                  _c("label", [_vm._v("mostrar")]),
-                  _vm._v(" "),
-                  _c("v-select", {
-                    staticClass: "per-page-selector d-inline-block mx-50",
-                    attrs: {
-                      dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
-                      options: _vm.perPageOptions,
-                      clearable: false,
-                    },
-                    model: {
-                      value: _vm.perPage,
-                      callback: function ($$v) {
-                        _vm.perPage = $$v
-                      },
-                      expression: "perPage",
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c("label", [_vm._v("entradas")]),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("b-col", { attrs: { cols: "12", md: "5" } }),
-              _vm._v(" "),
-              _c(
-                "b-col",
-                { attrs: { cols: "12", md: "4" } },
-                [
-                  _c("b-form-input", {
-                    staticClass: "d-inline-block mr-1",
-                    attrs: { placeholder: "Search..." },
-                    model: {
-                      value: _vm.searchQuery,
-                      callback: function ($$v) {
-                        _vm.searchQuery = $$v
-                      },
-                      expression: "searchQuery",
-                    },
-                  }),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "b-card-body",
-            [
-              _c("b-table", {
-                ref: "refViaturaListTable",
-                staticClass: "position-relative",
-                attrs: {
-                  items: _vm.fetchViaturasAlocadas,
-                  responsive: "",
-                  fields: _vm.tableColumns,
-                  "primary-key": "id",
-                  "sort-by": _vm.sortBy,
-                  "show-empty": "",
-                  "empty-text": "No matching records found",
-                  "sort-desc": _vm.isSortDirDesc,
-                },
-                on: {
-                  "update:sortBy": function ($event) {
-                    _vm.sortBy = $event
-                  },
-                  "update:sort-by": function ($event) {
-                    _vm.sortBy = $event
-                  },
-                  "update:sortDesc": function ($event) {
-                    _vm.isSortDirDesc = $event
-                  },
-                  "update:sort-desc": function ($event) {
-                    _vm.isSortDirDesc = $event
-                  },
-                },
-                scopedSlots: _vm._u([
-                  {
-                    key: "cell(matricula)",
-                    fn: function (data) {
-                      return [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(data.item.matricula) +
-                            "\n                "
-                        ),
-                      ]
-                    },
-                  },
-                  {
-                    key: "cell(ltr_por_km)",
-                    fn: function (data) {
-                      return [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(data.item.capacidade_media) +
-                            "\n                "
-                        ),
-                      ]
-                    },
-                  },
-                  {
-                    key: "cell(combustivel)",
-                    fn: function (data) {
-                      return [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(data.item.tipo_combustivel) +
-                            "\n                "
-                        ),
-                      ]
-                    },
-                  },
-                  {
-                    key: "cell(kilometragem_ant)",
-                    fn: function (data) {
-                      return [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(data.item.kilometragem_ant) +
-                            "\n                "
-                        ),
-                      ]
-                    },
-                  },
-                  {
-                    key: "cell(km_percorridos)",
-                    fn: function (data) {
-                      return [
-                        _vm._v(
-                          "\n                    " +
-                            _vm._s(data.item.km_percorridos) +
-                            "\n                "
-                        ),
-                      ]
-                    },
-                  },
-                  {
-                    key: "cell(rotas)",
-                    fn: function (data) {
-                      return _vm._l(data.item.viatura.rota, function (rota, r) {
-                        return _c(
-                          "div",
-                          { key: "r" + r },
-                          [
-                            _c(
-                              "b-badge",
-                              {
-                                staticClass: "m-1",
-                                attrs: { variant: "primary" },
-                              },
-                              [_vm._v(_vm._s(rota.nome_rota) + ",")]
-                            ),
-                          ],
-                          1
-                        )
-                      })
-                    },
-                  },
-                  {
-                    key: "cell(actions)",
-                    fn: function (data) {
-                      return [
-                        _c(
-                          "b-dropdown",
-                          {
-                            attrs: {
-                              variant: "link",
-                              "no-caret": "",
-                              right: _vm.$store.state.appConfig.isRTL,
-                            },
-                            scopedSlots: _vm._u(
-                              [
-                                {
-                                  key: "button-content",
-                                  fn: function () {
-                                    return [
-                                      _c("feather-icon", {
-                                        staticClass: "align-middle text-body",
-                                        attrs: {
-                                          icon: "MoreVerticalIcon",
-                                          size: "16",
-                                        },
-                                      }),
-                                    ]
-                                  },
-                                  proxy: true,
-                                },
-                              ],
-                              null,
-                              true
-                            ),
-                          },
-                          [
-                            _vm._v(" "),
-                            _c(
-                              "b-dropdown-item",
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "FileTextIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("Details")]
-                                ),
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "b-dropdown-item",
-                              {
-                                on: {
-                                  click: function ($event) {
-                                    return _vm.EditarViatura(data.item)
-                                  },
-                                },
-                              },
-                              [
-                                _c("feather-icon", {
-                                  attrs: { icon: "EditIcon" },
-                                }),
-                                _vm._v(" "),
-                                _c(
-                                  "span",
-                                  { staticClass: "align-middle ml-50" },
-                                  [_vm._v("Editar")]
-                                ),
-                              ],
-                              1
-                            ),
-                          ],
-                          1
-                        ),
-                      ]
-                    },
-                  },
-                ]),
-              }),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("b-card-footer", [
-            _c(
-              "div",
-              { staticClass: "mx-2 mb-2" },
-              [
-                _c(
-                  "b-row",
-                  [
+                  _c("b-col", { attrs: { cols: "6", md: "6" } }, [
                     _c(
-                      "b-col",
+                      "div",
                       {
                         staticClass:
-                          "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
-                        attrs: { cols: "12", sm: "6" },
+                          "d-flex align-items-center justify-content-end",
                       },
                       [
-                        _c("span", { staticClass: "text-muted" }, [
-                          _vm._v(
-                            "Showing " +
-                              _vm._s(_vm.dataMeta.from) +
-                              " to " +
-                              _vm._s(_vm.dataMeta.to) +
-                              " of\n                            " +
-                              _vm._s(_vm.dataMeta.of) +
-                              " entries"
-                          ),
-                        ]),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-col",
-                      {
-                        staticClass:
-                          "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
-                        attrs: { cols: "12", sm: "6" },
-                      },
-                      [
-                        _c("b-pagination", {
-                          staticClass: "mb-0 mt-1 mt-sm-0",
-                          attrs: {
-                            "total-rows": _vm.totalViaturas,
-                            "per-page": _vm.perPage,
-                            "first-number": "",
-                            "last-number": "",
-                            "prev-class": "prev-item",
-                            "next-class": "next-item",
-                          },
-                          scopedSlots: _vm._u([
-                            {
-                              key: "prev-text",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    attrs: {
-                                      icon: "ChevronLeftIcon",
-                                      size: "18",
-                                    },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                            {
-                              key: "next-text",
-                              fn: function () {
-                                return [
-                                  _c("feather-icon", {
-                                    attrs: {
-                                      icon: "ChevronRightIcon",
-                                      size: "18",
-                                    },
-                                  }),
-                                ]
-                              },
-                              proxy: true,
-                            },
-                          ]),
+                        _c("b-form-input", {
+                          staticClass: "d-inline-block mr-1",
+                          attrs: { placeholder: "pesquisar..." },
                           model: {
-                            value: _vm.currentPage,
+                            value: _vm.searchQuery,
                             callback: function ($$v) {
-                              _vm.currentPage = $$v
+                              _vm.searchQuery = $$v
                             },
-                            expression: "currentPage",
+                            expression: "searchQuery",
                           },
                         }),
                       ],
                       1
                     ),
-                  ],
-                  1
-                ),
-              ],
-              1
-            ),
-          ]),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "b-modal",
-        {
-          ref: "alocateModal",
-          attrs: {
-            id: "modal-lg",
-            size: "lg",
-            "hide-footer": "",
-            "hide-backdrop": "",
-            title: "Alocar Viaturas para hoje",
-          },
-        },
-        [
-          _c(
-            "b-form",
-            {
-              on: {
-                submit: function ($event) {
-                  $event.preventDefault()
-                  _vm.EditMode ? _vm.atualizarViatura() : _vm.alocarViatura()
-                },
-              },
-            },
-            [
-              _c(
-                "b-form-row",
-                [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.form.created_at,
-                        expression: "form.created_at",
-                      },
-                    ],
-                    staticClass: "form-control",
-                    attrs: { type: "hidden" },
-                    domProps: { value: _vm.form.created_at },
-                    on: {
-                      input: function ($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.form, "created_at", $event.target.value)
-                      },
-                    },
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "Viatura" } },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              label: "matricula",
-                              options: _vm.viatura,
-                              reduce: function (viatura) {
-                                return viatura.id
-                              },
-                            },
-                            on: {
-                              input: function ($event) {
-                                return _vm.getKmActual()
-                              },
-                            },
-                            model: {
-                              value: _vm.form.viatura_id,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "viatura_id", $$v)
-                              },
-                              expression: "form.viatura_id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _vm.errors !== null
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass: "alert alert-danger text-danger",
-                                },
-                                [_vm._v(_vm._s(_vm.errors.viatura_id[0]))]
-                              )
-                            : _vm._e(),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "Kilometragem anterior" } },
-                        [
-                          _c("b-form-input", {
-                            attrs: { readonly: "" },
-                            model: {
-                              value: _vm.form.kmActual,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "kmActual", $$v)
-                              },
-                              expression: "form.kmActual",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-row",
-                [
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "Leitura da kilometragem actual" } },
-                        [
-                          _c("b-form-input", {
-                            attrs: { type: "number" },
-                            on: {
-                              input: function ($event) {
-                                return _vm.calculaKm()
-                              },
-                            },
-                            model: {
-                              value: _vm.form.manometro_km,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "manometro_km", $$v)
-                              },
-                              expression: "form.manometro_km",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "km percorridos" } },
-                        [
-                          _c("b-form-input", {
-                            attrs: { readonly: "" },
-                            model: {
-                              value: _vm.form.kmPercorridos,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "kmPercorridos", $$v)
-                              },
-                              expression: "form.kmPercorridos",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _vm.errors !== null
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass: "alert alert-danger text-danger",
-                                },
-                                [_vm._v(_vm._s(_vm.errors.kmPercorridos[0]))]
-                              )
-                            : _vm._e(),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-row",
-                [
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            label:
-                              "estimativa de consumo pela distancia percorrida",
-                          },
-                        },
-                        [
-                          _c("b-form-input", {
-                            attrs: { type: "text", readonly: "" },
-                            model: {
-                              value: _vm.form.qtdActual,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "qtdActual", $$v)
-                              },
-                              expression: "form.qtdActual",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        {
-                          attrs: {
-                            label: "Informe a qtd de combustivel existente",
-                          },
-                        },
-                        [
-                          _c("b-form-input", {
-                            attrs: { type: "number", step: "0.00" },
-                            model: {
-                              value: _vm.form.manometro_combustivel,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "manometro_combustivel", $$v)
-                              },
-                              expression: "form.manometro_combustivel",
-                            },
-                          }),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-row",
-                [
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "motorista escalado" } },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              label: "nome",
-                              options: _vm.motoristas,
-                              reduce: function (motoristas) {
-                                return motoristas.id
-                              },
-                            },
-                            model: {
-                              value: _vm.form.motorista_id,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "motorista_id", $$v)
-                              },
-                              expression: "form.motorista_id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _vm.errors !== null
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass: "alert alert-danger text-danger",
-                                },
-                                [_vm._v(_vm._s(_vm.errors.motorista_id[0]))]
-                              )
-                            : _vm._e(),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-form-group",
-                        { attrs: { label: "rotas a percorrer" } },
-                        [
-                          _c("v-select", {
-                            attrs: {
-                              options: _vm.rota,
-                              label: "nome_rota",
-                              reduce: function (rota) {
-                                return rota.id
-                              },
-                              multiple: "",
-                            },
-                            model: {
-                              value: _vm.form.rota_id,
-                              callback: function ($$v) {
-                                _vm.$set(_vm.form, "rota_id", $$v)
-                              },
-                              expression: "form.rota_id",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _vm.errors !== null
-                            ? _c(
-                                "span",
-                                {
-                                  staticClass: "alert alert-danger text-danger",
-                                },
-                                [_vm._v(_vm._s(_vm.errors.rota[0]))]
-                              )
-                            : _vm._e(),
-                        ],
-                        1
-                      ),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-form-row",
-                [
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "b-button",
-                        {
-                          attrs: { variant: "secondary", type: "reset" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.toggleModal()
-                            },
-                          },
-                        },
-                        [_vm._v("cancelar")]
-                      ),
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "b-col",
-                    [
-                      _c(
-                        "button",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.EditMode,
-                              expression: "EditMode",
-                            },
-                          ],
-                          staticClass: "btn btn-primary",
-                          attrs: { type: "submit" },
-                        },
-                        [_vm._v("Update")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "b-button",
-                        {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: !_vm.EditMode,
-                              expression: "!EditMode",
-                            },
-                          ],
-                          attrs: { type: "submit", variant: "outline-success" },
-                        },
-                        [
-                          _vm._v(
-                            "\n                        submeter\n                    "
-                          ),
-                        ]
-                      ),
-                    ],
-                    1
-                  ),
+                  ]),
                 ],
                 1
               ),
             ],
             1
           ),
+          _vm._v(" "),
+          _vm.can("View Report")
+            ? _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass: "table-responsive",
+                      attrs: { cols: "12", xl: "12", md: "12" },
+                    },
+                    [
+                      _c("b-table", {
+                        ref: "refAbastecimentoListTable",
+                        staticClass: "position-relative",
+                        attrs: {
+                          items: _vm.fetchAbastecimentos,
+                          responsive: "",
+                          fields: _vm.tableColumns,
+                          "primary-key": "id",
+                          "sort-by": _vm.sortBy,
+                          "show-empty": "",
+                          "empty-text": "No matching records found",
+                          "sort-desc": _vm.isSortDirDesc,
+                        },
+                        on: {
+                          "update:sortBy": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sort-by": function ($event) {
+                            _vm.sortBy = $event
+                          },
+                          "update:sortDesc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                          "update:sort-desc": function ($event) {
+                            _vm.isSortDirDesc = $event
+                          },
+                        },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "cell(ordem)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(
+                                              data.item.ordem.codigo_ordem
+                                            ) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _vm._e(),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(estado)",
+                              fn: function (data) {
+                                return [
+                                  data.item.ordem !== null
+                                    ? _c("span", [
+                                        _vm._v(
+                                          "\n                        " +
+                                            _vm._s(data.item.ordem.estado) +
+                                            "\n                        "
+                                        ),
+                                      ])
+                                    : _c("span", [
+                                        _vm._v(
+                                          "\n                            -\n                        "
+                                        ),
+                                      ]),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(bombas)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        data.item.ordem.bombas.nome_bombas
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(Data_de_emissao)",
+                              fn: function (data) {
+                                return [
+                                  _vm._v(
+                                    "\n                        " +
+                                      _vm._s(
+                                        _vm.dateTime(data.item.ordem.created_at)
+                                      ) +
+                                      "\n                    "
+                                  ),
+                                ]
+                              },
+                            },
+                            {
+                              key: "cell(acções)",
+                              fn: function (data) {
+                                return [
+                                  _c(
+                                    "b-dropdown",
+                                    {
+                                      attrs: {
+                                        variant: "link",
+                                        "no-caret": "",
+                                        right: _vm.$store.state.appConfig.isRTL,
+                                      },
+                                      scopedSlots: _vm._u(
+                                        [
+                                          {
+                                            key: "button-content",
+                                            fn: function () {
+                                              return [
+                                                _c("feather-icon", {
+                                                  staticClass:
+                                                    "align-middle text-body",
+                                                  attrs: {
+                                                    icon: "MoreVerticalIcon",
+                                                    size: "16",
+                                                  },
+                                                }),
+                                              ]
+                                            },
+                                            proxy: true,
+                                          },
+                                        ],
+                                        null,
+                                        true
+                                      ),
+                                    },
+                                    [
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          attrs: {
+                                            to: {
+                                              name: "supply-details",
+                                              params: {
+                                                refs: data.item.ordem.refs,
+                                              },
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "FileTextIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("Details")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "b-dropdown-item",
+                                        {
+                                          on: {
+                                            click: function ($event) {
+                                              return _vm.PrintOrder(
+                                                data.item.ordem
+                                              )
+                                            },
+                                          },
+                                        },
+                                        [
+                                          _c("feather-icon", {
+                                            attrs: { icon: "PrinterIcon" },
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "span",
+                                            {
+                                              staticClass: "align-middle ml-50",
+                                            },
+                                            [_vm._v("imprimir")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ]
+                              },
+                            },
+                          ],
+                          null,
+                          false,
+                          1889232419
+                        ),
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "mx-2 mb-2" },
+                        [
+                          _c(
+                            "b-row",
+                            [
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-start",
+                                  attrs: { cols: "12", sm: "8" },
+                                },
+                                [
+                                  _c("span", { staticClass: "text-muted" }, [
+                                    _vm._v(
+                                      "mostrar " +
+                                        _vm._s(_vm.dataMeta.from) +
+                                        " de " +
+                                        _vm._s(_vm.dataMeta.to) +
+                                        " para " +
+                                        _vm._s(_vm.dataMeta.of) +
+                                        " entradas"
+                                    ),
+                                  ]),
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "b-col",
+                                {
+                                  staticClass:
+                                    "d-flex align-items-center justify-content-center justify-content-sm-end",
+                                  attrs: { cols: "12", sm: "4" },
+                                },
+                                [
+                                  _c("b-pagination", {
+                                    staticClass: "mb-0 mt-1 mt-sm-0",
+                                    attrs: {
+                                      "total-rows": _vm.totalAbastecimentos,
+                                      "per-page": _vm.perPage,
+                                      "first-number": "",
+                                      "last-number": "",
+                                      "prev-class": "prev-item",
+                                      "next-class": "next-item",
+                                    },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "prev-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronLeftIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                        {
+                                          key: "next-text",
+                                          fn: function () {
+                                            return [
+                                              _c("feather-icon", {
+                                                attrs: {
+                                                  icon: "ChevronRightIcon",
+                                                  size: "18",
+                                                },
+                                              }),
+                                            ]
+                                          },
+                                          proxy: true,
+                                        },
+                                      ],
+                                      null,
+                                      false,
+                                      1308952388
+                                    ),
+                                    model: {
+                                      value: _vm.currentPage,
+                                      callback: function ($$v) {
+                                        _vm.currentPage = $$v
+                                      },
+                                      expression: "currentPage",
+                                    },
+                                  }),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              )
+            : _vm._e(),
         ],
         1
       ),
@@ -2140,17 +1427,17 @@ var useRouter = function useRouter() {
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue":
-/*!**************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue ***!
-  \**************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue":
+/*!************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue ***!
+  \************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AlocarViatura.vue?vue&type=template&id=58595d34& */ "./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34&");
-/* harmony import */ var _AlocarViatura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AlocarViatura.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js&");
+/* harmony import */ var _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./historicos.vue?vue&type=template&id=78d13bee& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&");
+/* harmony import */ var _historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./historicos.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&");
 /* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -2160,9 +1447,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _AlocarViatura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -2172,47 +1459,243 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js&":
-/*!***************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js& ***!
-  \***************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AlocarViatura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AlocarViatura.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AlocarViatura_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./historicos.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34&":
-/*!*********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34& ***!
-  \*********************************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&":
+/*!*******************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee& ***!
+  \*******************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./AlocarViatura.vue?vue&type=template&id=58595d34& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/Viaturas/AlocarViatura.vue?vue&type=template&id=58595d34&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./historicos.vue?vue&type=template&id=78d13bee& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/abastecimentos/historicos.vue?vue&type=template&id=78d13bee&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AlocarViatura_vue_vue_type_template_id_58595d34___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_historicos_vue_vue_type_template_id_78d13bee___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js":
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js":
 /*!******************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/StoreViaturaModule.js ***!
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/index.js ***!
   \******************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useAbastecimentoList; });
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+
+ // Notification
+
+
+
+
+function useAbastecimentoList() {
+  // Use toast
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])();
+  var refAbastecimentoListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var refAbstRecorrente = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
+
+  var tableColumns = [{
+    key: 'ordem.codigo_ordem',
+    sortable: true
+  }, {
+    key: 'qtd_ant',
+    sortable: true
+  }, {
+    key: 'qtd_rec',
+    sortable: true
+  }, {
+    key: 'estado',
+    sortable: true
+  }, {
+    key: 'bombas',
+    sortable: true
+  }, {
+    key: 'Data_de_emissao',
+    sortable: true
+  }, {
+    key: 'user.name',
+    sortable: true
+  }, {
+    key: 'acções'
+  }];
+  var fieldCollumns = [{
+    key: 'ordem',
+    sortable: true
+  }, {
+    key: 'bombas',
+    sortable: true
+  }, {
+    key: 'viatura',
+    sortable: true
+  }, {
+    key: 'destino',
+    sortable: true
+  }, {
+    key: 'descricao',
+    sortable: true
+  }, {
+    key: 'motorista',
+    sortable: true
+  }, {
+    key: 'hora_de_saida',
+    sortable: true
+  }, {
+    key: 'user',
+    sortable: true
+  }, {
+    key: 'acções'
+  }];
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var totalAbastecimentos = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var perPageOptions = [10, 25, 50, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
+  var roleFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var planFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var statusFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refAbastecimentoListTable.value ? refAbastecimentoListTable.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalAbastecimentos.value
+    };
+  });
+  var dataMeta2 = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refAbstRecorrente.value ? refAbstRecorrente.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalAbastecimentos.value
+    };
+  });
+
+  var refetchData2 = function refetchData2() {
+    refAbstRecorrente.value.refresh();
+  };
+
+  var refetchData = function refetchData() {
+    refAbastecimentoListTable.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, roleFilter, planFilter, statusFilter], function () {
+    refetchData();
+    refetchData2();
+  });
+
+  var fetchAbastecimentos = function fetchAbastecimentos(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('Supply/fetchAbastecimentos', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var abastecimento = response.data;
+      callback(abastecimento.data);
+      totalAbastecimentos.value = abastecimento.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+        props: {
+          title: 'Erro na listagem de abastecimentos',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  }; //   fetch abastecimento recorrente
+
+
+  var fetchAbstRecorrente = function fetchAbstRecorrente(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('Supply/AbastecimentoRecorrente', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var abastecimento = response.data;
+      callback(abastecimento.data);
+      totalAbastecimentos.value = abastecimento.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+        props: {
+          title: 'Erro na listagem',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  }; // *===============================================---*
+  // *--------- UI ---------------------------------------*
+  // *===============================================---*
+
+
+  return {
+    fetchAbastecimentos: fetchAbastecimentos,
+    tableColumns: tableColumns,
+    perPage: perPage,
+    currentPage: currentPage,
+    totalAbastecimentos: totalAbastecimentos,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    refAbastecimentoListTable: refAbastecimentoListTable,
+    refetchData: refetchData,
+    fetchAbstRecorrente: fetchAbstRecorrente,
+    refAbstRecorrente: refAbstRecorrente,
+    fieldCollumns: fieldCollumns,
+    dataMeta2: dataMeta2,
+    refetchData2: refetchData2,
+    // Extra Filters
+    roleFilter: roleFilter,
+    planFilter: planFilter,
+    statusFilter: statusFilter
+  };
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js ***!
+  \********************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2221,9 +1704,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
-/* harmony import */ var q__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! q */ "./node_modules/q/q.js");
-/* harmony import */ var q__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(q__WEBPACK_IMPORTED_MODULE_2__);
-
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2232,9 +1712,9 @@ __webpack_require__.r(__webpack_exports__);
   getters: {},
   mutations: {},
   actions: {
-    fetchViaturas: function fetchViaturas(ctx, queryParams) {
+    fetchAbastecimentos: function fetchAbastecimentos(ctx, queryParams) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/viaturas', {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/Abastecimento', {
           params: queryParams
         }).then(function (response) {
           return resolve(response);
@@ -2243,60 +1723,87 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    fetchViatura: function fetchViatura(ctx, _ref) {
-      var id = _ref.id;
+    fetchAbastecimentoDetails: function fetchAbastecimentoDetails(ctx, _ref) {
+      var refs = _ref.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturas/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordems/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    addViatura: function addViatura(ctx, userData) {
+    addAbastecimento: function addAbastecimento(ctx, SupplyDatas) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/viatura', {
-          user: userData
-        }).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/submeterAbst', SupplyDatas).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    activateViatura: function activateViatura(ctx, _ref2) {
-      var id = _ref2.id;
+    ApproveOrder: function ApproveOrder(ctx, _ref2) {
+      var refs = _ref2.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/activateViatura/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/AprovarOrdem/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    inactivateViatura: function inactivateViatura(ctx, _ref3) {
-      var id = _ref3.id;
+    UndoOrder: function UndoOrder(ctx, _ref3) {
+      var refs = _ref3.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/DesativarViatura/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/DesfazerOrdem/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    alocateVehicle: function alocateVehicle(ctx, viatura) {
+    CancelOrder: function CancelOrder(ctx, _ref4) {
+      var refs = _ref4.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/alocarViatura', viatura).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/CancelarOrdem/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    alocatedVehicles: function alocatedVehicles(ctx, queryParams) {
-      // eslint-disable-next-line no-shadow
+    // Abastecimento Extraordinario
+    AbastecimentoRecorrente: function AbastecimentoRecorrente(ctx, abstData) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/viaturasAlocadas', {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/ListAbastecimentoExtras', abstData).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    addAbastecimentoRecorrente: function addAbastecimentoRecorrente(ctx, SupplyDatas) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/CreateExtraOrder', SupplyDatas).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    fetchAbstRecDetails: function fetchAbstRecDetails(ctx, _ref5) {
+      var refs = _ref5.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/AbstCorrDetails/".concat(refs)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    getHistory: function getHistory(ctx, queryParams) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/RelatorioGeral', {
           params: queryParams
         }).then(function (response) {
           return resolve(response);
@@ -2305,21 +1812,32 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    ViewAlocatedVehicle: function ViewAlocatedVehicle(ctx, _ref4) {
-      var id = _ref4.id;
+    // ReabrirOrdem
+    ReopenOrder: function ReopenOrder(ctx, _ref6) {
+      var refs = _ref6.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/viaturasAlocadas/".concat(id)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ReabrirOrdem/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
         });
       });
     },
-    UpdateAlocatedVehicle: function UpdateAlocatedVehicle(ctx, _ref5) {
-      var id = _ref5.id,
-          viatura = _ref5.viatura;
+    // verOrdensAbertas
+    getOpenOrder: function getOpenOrder(ctx, _ref7) {
+      var refs = _ref7.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].put("/api/viaturasAlocadas/".concat(id), viatura).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordems/".concat(refs)).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    removeLine: function removeLine(ctx, _ref8) {
+      var refs = _ref8.refs;
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/removeLine/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -2328,130 +1846,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-pickete/Viaturas/viaturaAlocada.js":
-/*!**************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/Viaturas/viaturaAlocada.js ***!
-  \**************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return viatursAlocadasList; });
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-
-
- // Notification
-
-
-
-function viatursAlocadasList() {
-  // Use toast
-  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
-  var refViaturaAlocadaListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var tableColumns = [{
-    key: 'matricula',
-    sortable: true
-  }, {
-    key: 'ltr_por_km',
-    sortable: true
-  }, {
-    key: 'combustivel',
-    sortable: true
-  }, {
-    key: 'capacidade_tanque',
-    sortable: true
-  }, {
-    key: 'kilometragem_ant',
-    sortable: true
-  }, {
-    key: 'kilometragem',
-    sortable: true
-  }, {
-    key: 'km_percorridos',
-    sortable: true
-  }, {
-    Key: 'qtd_disponivel',
-    sortable: true
-  }, {
-    key: 'qtd_prevista',
-    sortable: true
-  }, {
-    Key: 'rotas',
-    sortable: true
-  }, {
-    key: 'actions'
-  }];
-  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
-  var totalViaturas = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
-  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
-  var perPageOptions = [10, 25, 50, 100];
-  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
-  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
-  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
-  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount = refViaturaAlocadaListTable.value ? refViaturaAlocadaListTable.value.localItems.length : 0;
-    return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalViaturas.value
-    };
-  });
-
-  var refetchData = function refetchData() {
-    refViaturaAlocadaListTable.value.refresh();
-  };
-
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery], function () {
-    refetchData();
-  });
-
-  var fetchViaturasAlocadas = function fetchViaturasAlocadas(ctx, callback) {
-    _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch('Picket/alocatedVehicles', {
-      q: searchQuery.value,
-      perPage: perPage.value,
-      page: currentPage.value,
-      sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value
-    }).then(function (response) {
-      var viaturas = response.data;
-      callback(viaturas.data);
-      totalViaturas.value = viaturas.total;
-    })["catch"](function () {
-      toast({
-        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-        props: {
-          title: 'Error fetching users list',
-          icon: 'AlertTriangleIcon',
-          variant: 'danger'
-        }
-      });
-    });
-  };
-
-  return {
-    tableColumns: tableColumns,
-    perPage: perPage,
-    currentPage: currentPage,
-    totalViaturas: totalViaturas,
-    dataMeta: dataMeta,
-    perPageOptions: perPageOptions,
-    refetchData: refetchData,
-    searchQuery: searchQuery,
-    sortBy: sortBy,
-    isSortDirDesc: isSortDirDesc,
-    fetchViaturasAlocadas: fetchViaturasAlocadas,
-    refViaturaAlocadaListTable: refViaturaAlocadaListTable
-  };
-}
 
 /***/ })
 

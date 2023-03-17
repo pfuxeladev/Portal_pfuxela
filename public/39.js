@@ -83,28 +83,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_ripple_directive__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-ripple-directive */ "./node_modules/vue-ripple-directive/src/ripple.js");
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
-/* harmony import */ var _abastecimentos_storeAbastecimentos__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../abastecimentos/storeAbastecimentos */ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js");
-/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! animate.css */ "./node_modules/animate.css/animate.css");
-/* harmony import */ var animate_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(animate_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _AdministrativeModule__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AdministrativeModule */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/AdministrativeModule.js");
+/* harmony import */ var _newOrder_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./newOrder.vue */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue");
 //
 //
 //
@@ -164,82 +161,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
 
 
 
@@ -249,245 +170,178 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  directives: {
-    Ripple: vue_ripple_directive__WEBPACK_IMPORTED_MODULE_2__["default"],
-    'b-toggle': bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["VBToggle"]
-  },
   components: {
-    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BRow"],
-    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCol"],
-    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCard"],
-    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardBody"],
-    BTableLite: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BTableLite"],
-    BCardText: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BCardText"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BButton"],
-    BAlert: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BAlert"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BLink"],
-    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BListGroup"],
-    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BListGroupItem"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_1__["BBadge"]
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardTitle: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardTitle"],
+    BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BIconList: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BIconList"],
+    BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
+    newOrder: _newOrder_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+  },
+  data: function data() {
+    return {
+      bombas: []
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    this.moment = moment__WEBPACK_IMPORTED_MODULE_3___default.a;
+    this.$http.get("/api/bombas").then(function (response) {
+      _this.bombas = response.data;
+    });
+  },
+  methods: {
+    AbrirModal: function AbrirModal() {
+      this.$refs.FormAbastecimento.show();
+    }
   },
   setup: function setup() {
-    var SupplyData = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_4__["useToast"])();
-    var SUPPLY_STORE_MODULE_NAME = 'Supply'; // Register module
+    var SUPPLY_STORE_MODULE_NAME = "Supply"; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_5__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_5__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _abastecimentos_storeAbastecimentos__WEBPACK_IMPORTED_MODULE_7__["default"]); // UnRegister on leave
+    if (!_store__WEBPACK_IMPORTED_MODULE_5__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_5__["default"].registerModule(SUPPLY_STORE_MODULE_NAME, _AdministrativeModule__WEBPACK_IMPORTED_MODULE_6__["default"]);
+    } // UnRegister on leave
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_5__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) _store__WEBPACK_IMPORTED_MODULE_5__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
-    });
-    _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/fetchAbastecimentoDetails', {
-      refs: _router__WEBPACK_IMPORTED_MODULE_6__["default"].currentRoute.params.refs
-    }).then(function (response) {
-      SupplyData.value = response.data;
-    })["catch"](function (error) {
-      if (error.response.status === 404) {
-        SupplyData.value = undefined;
+
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_2__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_5__["default"].hasModule(SUPPLY_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_5__["default"].unregisterModule(SUPPLY_STORE_MODULE_NAME);
       }
     });
 
-    function Aprovar(refs) {
-      var _this = this;
-
-      this.$swal({
-        title: 'Permitir envio da ordem?',
-        showCancelButton: true,
-        showClass: {
-          popup: 'animate__animated animate__flipInX'
-        },
-        confirmButtonText: 'Sim'
-      }).then(function (result) {
-        if (result.isConfirmed) {
-          _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ApproveOrder', {
-            refs: refs
-          }).then(function (res) {
-            _this.$emit('refetch-data');
-
-            toast({
-              component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-              props: {
-                title: res.data.success,
-                icon: 'CheckSquareIcon',
-                variant: 'success'
-              }
-            });
-            window.location.reload();
-          })["catch"](function (err) {
-            if (err.response.status === 421) {
-              toast({
-                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-                props: {
-                  title: err.response.data.erro,
-                  icon: 'AlertTriangleIcon',
-                  variant: 'danger'
-                }
-              });
-            } else if (err.response.status === 500) {
-              toast({
-                component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-                props: {
-                  title: 'Erro do sistema contacte o administrador',
-                  icon: 'AlertTriangleIcon',
-                  variant: 'danger'
-                }
-              });
-            }
-          }); //   this.$swal('Saved!', '', 'success')
-        } else if (result.isDenied) {
-          _this.$swal('Nenhuma ordem foi enviada', '', 'info');
-        }
-      });
-    }
-
     function dateTime(value) {
-      return moment__WEBPACK_IMPORTED_MODULE_9___default()(value).format('DD/MM/YYYY hh:mm');
+      return moment__WEBPACK_IMPORTED_MODULE_3___default()(value).format("DD/MM/YYYY hh:mm");
     }
 
-    function Desfazer(refs) {
-      var _this2 = this;
+    var _AdministrativeServic = Object(_index__WEBPACK_IMPORTED_MODULE_4__["default"])(),
+        AdministrativeTableRef = _AdministrativeServic.AdministrativeTableRef,
+        FieldColumn = _AdministrativeServic.FieldColumn,
+        perPage = _AdministrativeServic.perPage,
+        dataMeta = _AdministrativeServic.dataMeta,
+        perPageOptions = _AdministrativeServic.perPageOptions,
+        searchQuery = _AdministrativeServic.searchQuery,
+        sortBy = _AdministrativeServic.sortBy,
+        isSortDirDesc = _AdministrativeServic.isSortDirDesc,
+        bombasFilter = _AdministrativeServic.bombasFilter,
+        fetchAdminOrders = _AdministrativeServic.fetchAdminOrders,
+        refetchData = _AdministrativeServic.refetchData;
 
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/UndoOrder', {
-        refs: refs
-      }).then(function (res) {
-        _this2.$emit('refetch-data');
-
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-          props: {
-            title: res.data.message,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
-          name: 'Orders'
-        });
-      })["catch"](function (err) {
-        if (err.response.status === 421) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: err.response.data.erro,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (err.response.status === 500) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: 'Erro do sistema contacte o administrador',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        }
-      });
-    }
-
-    function Reprovar(refs) {
-      var _this3 = this;
-
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/CancelOrder', {
-        refs: refs
-      }).then(function (res) {
-        _this3.$emit('refetch-data');
-
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-          props: {
-            title: res.data.success,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
-          name: 'Orders'
-        });
-      })["catch"](function (err) {
-        if (err.response.status === 421) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: err.response.data.erro,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (err.response.status === 500) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: 'Erro do sistema contacte o administrador',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        }
-      });
-    }
-
-    function reabrirOrdem(refs) {
-      var _this4 = this;
-
-      _store__WEBPACK_IMPORTED_MODULE_5__["default"].dispatch('Supply/ReopenOrder', {
-        refs: refs
-      }).then(function (res) {
-        _this4.$emit('refetch-data');
-
-        toast({
-          component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-          props: {
-            title: res.data.success,
-            icon: 'CheckSquareIcon',
-            variant: 'success'
-          }
-        });
-        _router__WEBPACK_IMPORTED_MODULE_6__["default"].push({
-          name: 'New-supply-order',
-          params: {
-            refs: refs
-          }
-        });
-      })["catch"](function (err) {
-        if (err.response.status === 421) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: err.response.data.erro,
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        } else if (err.response.status === 500) {
-          toast({
-            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
-            props: {
-              title: 'Erro do sistema contacte o administrador',
-              icon: 'AlertTriangleIcon',
-              variant: 'danger'
-            }
-          });
-        }
-      });
-    }
-
-    var printInvoice = function printInvoice() {
-      window.print();
-    };
-
-    var fields = ['Rota', 'turno'];
     return {
-      SupplyData: SupplyData,
-      printInvoice: printInvoice,
-      fields: fields,
-      Aprovar: Aprovar,
-      Reprovar: Reprovar,
       dateTime: dateTime,
-      reabrirOrdem: reabrirOrdem,
-      Desfazer: Desfazer
+      AdministrativeTableRef: AdministrativeTableRef,
+      FieldColumn: FieldColumn,
+      perPage: perPage,
+      dataMeta: dataMeta,
+      perPageOptions: perPageOptions,
+      sortBy: sortBy,
+      isSortDirDesc: isSortDirDesc,
+      searchQuery: searchQuery,
+      bombasFilter: bombasFilter,
+      AdministrativeService: _index__WEBPACK_IMPORTED_MODULE_4__["default"],
+      fetchAdminOrders: fetchAdminOrders,
+      refetchData: refetchData
     };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BForm: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BForm"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
+    BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
+    BFormRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormRow"],
+    BFormSelect: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormSelect"],
+    BFormSelectOption: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormSelectOption"],
+    BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a,
+    BFormTextarea: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormTextarea"]
   }
 });
 
@@ -505,42 +359,6 @@ var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
 exports.push([module.i, ".toastification-close-icon[data-v-7834b2fa],\n.toastification-title[data-v-7834b2fa] {\n  line-height: 26px;\n}\n.toastification-title[data-v-7834b2fa] {\n  color: inherit;\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "[dir=ltr] .invoice-preview .invoice-padding[data-v-ea88db46], [dir=ltr] .invoice-edit .invoice-padding[data-v-ea88db46], [dir=ltr] .invoice-add .invoice-padding[data-v-ea88db46] {\n  padding-left: 2.5rem;\n  padding-right: 2.5rem;\n}[dir=rtl] .invoice-preview .invoice-padding[data-v-ea88db46], [dir=rtl] .invoice-edit .invoice-padding[data-v-ea88db46], [dir=rtl] .invoice-add .invoice-padding[data-v-ea88db46] {\n  padding-right: 2.5rem;\n  padding-left: 2.5rem;\n}\n[dir=ltr] .invoice-preview .table th[data-v-ea88db46]:first-child, [dir=ltr] .invoice-preview .table td[data-v-ea88db46]:first-child, [dir=ltr] .invoice-edit .table th[data-v-ea88db46]:first-child, [dir=ltr] .invoice-edit .table td[data-v-ea88db46]:first-child, [dir=ltr] .invoice-add .table th[data-v-ea88db46]:first-child, [dir=ltr] .invoice-add .table td[data-v-ea88db46]:first-child {\n  padding-left: 2.5rem;\n}\n[dir=rtl] .invoice-preview .table th[data-v-ea88db46]:first-child, [dir=rtl] .invoice-preview .table td[data-v-ea88db46]:first-child, [dir=rtl] .invoice-edit .table th[data-v-ea88db46]:first-child, [dir=rtl] .invoice-edit .table td[data-v-ea88db46]:first-child, [dir=rtl] .invoice-add .table th[data-v-ea88db46]:first-child, [dir=rtl] .invoice-add .table td[data-v-ea88db46]:first-child {\n  padding-right: 2.5rem;\n}\n.invoice-preview .logo-wrapper[data-v-ea88db46],\n.invoice-edit .logo-wrapper[data-v-ea88db46],\n.invoice-add .logo-wrapper[data-v-ea88db46] {\n  display: flex;\n  align-items: center;\n}\n[dir] .invoice-preview .logo-wrapper[data-v-ea88db46], [dir] .invoice-edit .logo-wrapper[data-v-ea88db46], [dir] .invoice-add .logo-wrapper[data-v-ea88db46] {\n  margin-bottom: 1.9rem;\n}\n.invoice-preview .logo-wrapper .invoice-logo[data-v-ea88db46],\n.invoice-edit .logo-wrapper .invoice-logo[data-v-ea88db46],\n.invoice-add .logo-wrapper .invoice-logo[data-v-ea88db46] {\n  font-size: 2.142rem;\n  font-weight: bold;\n  letter-spacing: -0.54px;\n}\n[dir] .invoice-preview .logo-wrapper .invoice-logo[data-v-ea88db46], [dir] .invoice-edit .logo-wrapper .invoice-logo[data-v-ea88db46], [dir] .invoice-add .logo-wrapper .invoice-logo[data-v-ea88db46] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-preview .logo-wrapper .invoice-logo[data-v-ea88db46], [dir=ltr] .invoice-edit .logo-wrapper .invoice-logo[data-v-ea88db46], [dir=ltr] .invoice-add .logo-wrapper .invoice-logo[data-v-ea88db46] {\n  margin-left: 1rem;\n}\n[dir=rtl] .invoice-preview .logo-wrapper .invoice-logo[data-v-ea88db46], [dir=rtl] .invoice-edit .logo-wrapper .invoice-logo[data-v-ea88db46], [dir=rtl] .invoice-add .logo-wrapper .invoice-logo[data-v-ea88db46] {\n  margin-right: 1rem;\n}\n.invoice-preview .invoice-title[data-v-ea88db46],\n.invoice-edit .invoice-title[data-v-ea88db46],\n.invoice-add .invoice-title[data-v-ea88db46] {\n  font-size: 1.285rem;\n}\n[dir] .invoice-preview .invoice-title[data-v-ea88db46], [dir] .invoice-edit .invoice-title[data-v-ea88db46], [dir] .invoice-add .invoice-title[data-v-ea88db46] {\n  margin-bottom: 1rem;\n}\n.invoice-preview .invoice-title .invoice-number[data-v-ea88db46],\n.invoice-edit .invoice-title .invoice-number[data-v-ea88db46],\n.invoice-add .invoice-title .invoice-number[data-v-ea88db46] {\n  font-weight: 600;\n}\n.invoice-preview .invoice-date-wrapper[data-v-ea88db46],\n.invoice-edit .invoice-date-wrapper[data-v-ea88db46],\n.invoice-add .invoice-date-wrapper[data-v-ea88db46] {\n  display: flex;\n  align-items: center;\n}\n[dir] .invoice-preview .invoice-date-wrapper[data-v-ea88db46]:not(:last-of-type), [dir] .invoice-edit .invoice-date-wrapper[data-v-ea88db46]:not(:last-of-type), [dir] .invoice-add .invoice-date-wrapper[data-v-ea88db46]:not(:last-of-type) {\n  margin-bottom: 0.5rem;\n}\n.invoice-preview .invoice-date-wrapper .invoice-date-title[data-v-ea88db46],\n.invoice-edit .invoice-date-wrapper .invoice-date-title[data-v-ea88db46],\n.invoice-add .invoice-date-wrapper .invoice-date-title[data-v-ea88db46] {\n  width: 7rem;\n}\n[dir] .invoice-preview .invoice-date-wrapper .invoice-date-title[data-v-ea88db46], [dir] .invoice-edit .invoice-date-wrapper .invoice-date-title[data-v-ea88db46], [dir] .invoice-add .invoice-date-wrapper .invoice-date-title[data-v-ea88db46] {\n  margin-bottom: 0;\n}\n.invoice-preview .invoice-date-wrapper .invoice-date[data-v-ea88db46],\n.invoice-edit .invoice-date-wrapper .invoice-date[data-v-ea88db46],\n.invoice-add .invoice-date-wrapper .invoice-date[data-v-ea88db46] {\n  font-weight: 600;\n}\n[dir] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir] .invoice-add .invoice-date-wrapper .invoice-date[data-v-ea88db46] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir=ltr] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir=ltr] .invoice-add .invoice-date-wrapper .invoice-date[data-v-ea88db46] {\n  margin-left: 0.5rem;\n}\n[dir=rtl] .invoice-preview .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir=rtl] .invoice-edit .invoice-date-wrapper .invoice-date[data-v-ea88db46], [dir=rtl] .invoice-add .invoice-date-wrapper .invoice-date[data-v-ea88db46] {\n  margin-right: 0.5rem;\n}\n[dir] .invoice-preview .invoice-spacing[data-v-ea88db46], [dir] .invoice-edit .invoice-spacing[data-v-ea88db46], [dir] .invoice-add .invoice-spacing[data-v-ea88db46] {\n  margin: 1.45rem 0;\n}\n.invoice-preview .invoice-number-date .title[data-v-ea88db46],\n.invoice-edit .invoice-number-date .title[data-v-ea88db46],\n.invoice-add .invoice-number-date .title[data-v-ea88db46] {\n  width: 115px;\n}\n.invoice-preview .invoice-total-wrapper[data-v-ea88db46],\n.invoice-edit .invoice-total-wrapper[data-v-ea88db46],\n.invoice-add .invoice-total-wrapper[data-v-ea88db46] {\n  width: 100%;\n  max-width: 12rem;\n}\n.invoice-preview .invoice-total-wrapper .invoice-total-item[data-v-ea88db46],\n.invoice-edit .invoice-total-wrapper .invoice-total-item[data-v-ea88db46],\n.invoice-add .invoice-total-wrapper .invoice-total-item[data-v-ea88db46] {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n[dir] .invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-ea88db46], [dir] .invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-ea88db46], [dir] .invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-title[data-v-ea88db46] {\n  margin-bottom: 0.35rem;\n}\n.invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46],\n.invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46],\n.invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46] {\n  font-weight: 600;\n}\n[dir] .invoice-preview .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46], [dir] .invoice-edit .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46], [dir] .invoice-add .invoice-total-wrapper .invoice-total-item .invoice-total-amount[data-v-ea88db46] {\n  margin-bottom: 0.35rem;\n}\n@media (min-width: 768px) {\n[dir] .invoice-preview .invoice-title[data-v-ea88db46], [dir] .invoice-edit .invoice-title[data-v-ea88db46], [dir] .invoice-add .invoice-title[data-v-ea88db46] {\n    margin-bottom: 3rem;\n}\n[dir=ltr] .invoice-preview .invoice-title[data-v-ea88db46], [dir=ltr] .invoice-edit .invoice-title[data-v-ea88db46], [dir=ltr] .invoice-add .invoice-title[data-v-ea88db46] {\n    text-align: right;\n}\n[dir=rtl] .invoice-preview .invoice-title[data-v-ea88db46], [dir=rtl] .invoice-edit .invoice-title[data-v-ea88db46], [dir=rtl] .invoice-add .invoice-title[data-v-ea88db46] {\n    text-align: left;\n}\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46], [dir] .invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n  margin-bottom: 0;\n}\n[dir=ltr] .invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46], [dir=ltr] .invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n  text-align: left;\n  margin-right: 3.5rem;\n}\n[dir=rtl] .invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46], [dir=rtl] .invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n  text-align: right;\n  margin-left: 3.5rem;\n}\n.invoice-edit .invoice-preview-card .invoice-edit-input[data-v-ea88db46],\n.invoice-edit .invoice-preview-card .invoice-edit-input-group[data-v-ea88db46],\n.invoice-add .invoice-preview-card .invoice-edit-input[data-v-ea88db46],\n.invoice-add .invoice-preview-card .invoice-edit-input-group[data-v-ea88db46] {\n  max-width: 11.21rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-product-details[data-v-ea88db46], [dir] .invoice-add .invoice-preview-card .invoice-product-details[data-v-ea88db46] {\n  background-color: #fcfcfc;\n  padding: 3.75rem 3.45rem 2.3rem 3.45rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-product-details .product-details-border[data-v-ea88db46], [dir] .invoice-add .invoice-preview-card .invoice-product-details .product-details-border[data-v-ea88db46] {\n  border: 1px solid #ebe9f1;\n  border-radius: 0.357rem;\n}\n[dir] .invoice-edit .invoice-preview-card .invoice-to-title[data-v-ea88db46], [dir] .invoice-add .invoice-preview-card .invoice-to-title[data-v-ea88db46] {\n  margin-bottom: 1.9rem;\n}\n.invoice-edit .invoice-preview-card .col-title[data-v-ea88db46],\n.invoice-add .invoice-preview-card .col-title[data-v-ea88db46] {\n  position: absolute;\n  top: -3.2rem;\n}\n.invoice-edit .invoice-preview-card .item-options-menu[data-v-ea88db46],\n.invoice-add .invoice-preview-card .item-options-menu[data-v-ea88db46] {\n  min-width: 20rem;\n}\n[dir] .invoice-edit .invoice-preview-card .repeater-wrapper[data-v-ea88db46]:not(:last-child), [dir] .invoice-add .invoice-preview-card .repeater-wrapper[data-v-ea88db46]:not(:last-child) {\n  margin-bottom: 3rem;\n}\n.invoice-edit .invoice-preview-card .invoice-calculations .total-amt-title[data-v-ea88db46],\n.invoice-add .invoice-preview-card .invoice-calculations .total-amt-title[data-v-ea88db46] {\n  width: 100px;\n}\n@media (max-width: 769px) {\n.invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46],\n.invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n    width: 115px;\n}\n[dir=ltr] .invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46], [dir=ltr] .invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n    margin-right: 0;\n}\n[dir=rtl] .invoice-edit .invoice-preview-card .invoice-title[data-v-ea88db46], [dir=rtl] .invoice-add .invoice-preview-card .invoice-title[data-v-ea88db46] {\n    margin-left: 0;\n}\n.invoice-edit .invoice-preview-card .invoice-edit-input[data-v-ea88db46],\n.invoice-add .invoice-preview-card .invoice-edit-input[data-v-ea88db46] {\n    max-width: 100%;\n}\n}\n@media (max-width: 992px) {\n.invoice-edit .col-title[data-v-ea88db46],\n.invoice-add .col-title[data-v-ea88db46] {\n    top: -1.5rem !important;\n}\n}\n@media print {\n[dir] .invoice-edit hr[data-v-ea88db46], [dir] .invoice-add hr[data-v-ea88db46] {\n    margin-top: 1rem !important;\n    margin-bottom: 1rem !important;\n}\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&":
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "@media print {\n[dir] body {\n    background-color: transparent !important;\n}\nnav.header-navbar {\n    display: none;\n}\n.main-menu {\n    display: none;\n}\n.header-navbar-shadow {\n    display: none !important;\n}\n[dir] .content.app-content {\n    padding-top: 2rem !important;\n}\n[dir=ltr] .content.app-content {\n    margin-left: 0;\n}\n[dir=rtl] .content.app-content {\n    margin-right: 0;\n}\nfooter.footer {\n    display: none;\n}\n[dir] .card {\n    background-color: transparent;\n    box-shadow: none;\n}\n.customizer-toggle {\n    display: none !important;\n}\n.invoice-preview-wrapper .row.invoice-preview .col-md-8 {\n    max-width: 100%;\n    flex-grow: 1;\n}\n.invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row > .col-12 {\n    max-width: 50% !important;\n}\n.invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row .col-12:nth-child(2) {\n    display: flex;\n    align-items: flex-start;\n    justify-content: flex-end;\n}\n[dir] .invoice-preview-wrapper .row.invoice-preview .invoice-preview-card .card-body:nth-of-type(2) .row .col-12:nth-child(2) {\n    margin-top: 0 !important;\n}\n.invoice-preview-wrapper .invoice-actions {\n    display: none;\n}\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -879,66 +697,6 @@ if(false) {}
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&":
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--7-2!./node_modules/sass-loader/dist/cjs.js??ref--7-3!./node_modules/sass-loader/dist/cjs.js??ref--11-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(/*! !../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& */ "./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&");
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(/*! ../../../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {}
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/@core/components/toastification/ToastificationContent.vue?vue&type=template&id=7834b2fa&scoped=true&":
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/@core/components/toastification/ToastificationContent.vue?vue&type=template&id=7834b2fa&scoped=true& ***!
@@ -1020,10 +778,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5&":
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1036,159 +794,265 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "section",
-    { staticClass: "invoice-preview-wrapper" },
+    "div",
+    { staticClass: "container-fluid" },
     [
-      _vm.SupplyData
-        ? _c(
-            "b-row",
+      _c(
+        "BCard",
+        { attrs: { "no-wrap": "" } },
+        [
+          _c(
+            "BCardHeader",
+            { staticClass: "d-flex justify-content-between flex-row" },
             [
               _c(
-                "b-col",
-                { attrs: { cols: "12", lg: "12", md: "10" } },
+                "BCardTitle",
+                [
+                  _c("BIconList"),
+                  _vm._v(
+                    " Lista de abastecimento feitos para serviços\n        administrativos"
+                  ),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "BButton",
+                {
+                  ref: "btnShow",
+                  attrs: { variant: "primary" },
+                  on: { click: _vm.AbrirModal },
+                },
+                [_vm._v(" Abrir novo abastecimento ")]
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "BCardBody",
+            [
+              _c(
+                "BRow",
+                { staticClass: "d-flex justify-content-between" },
                 [
                   _c(
-                    "b-card",
-                    {
-                      staticClass: "invoice-preview-card",
-                      attrs: { "no-body": "" },
-                    },
+                    "BCol",
+                    { attrs: { cols: "4" } },
                     [
                       _c(
-                        "b-card-body",
-                        { staticClass: "mt-2" },
+                        "b-form-group",
+                        {
+                          attrs: {
+                            label: "Filtrar por Bombas:",
+                            "label-for": "input-10",
+                          },
+                        },
+                        [
+                          _c("v-select", {
+                            attrs: {
+                              dir: _vm.$store.state.appConfig.isRTL
+                                ? "rtl"
+                                : "ltr",
+                              label: "nome_bombas",
+                              options: _vm.bombas,
+                              reduce: function (bombas) {
+                                return bombas.nome_bombas
+                              },
+                              clearable: false,
+                            },
+                            model: {
+                              value: _vm.bombasFilter,
+                              callback: function ($$v) {
+                                _vm.bombasFilter = $$v
+                              },
+                              expression: "bombasFilter",
+                            },
+                          }),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("BCol", { attrs: { cols: "4" } }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "d-flex align-items-center justify-content-end",
+                      },
+                      [
+                        _c(
+                          "b-form-group",
+                          { attrs: { label: "Pesquisar" } },
+                          [
+                            _c("b-form-input", {
+                              staticClass: "d-inline-block mr-1",
+                              attrs: { placeholder: "pesquisar..." },
+                              model: {
+                                value: _vm.searchQuery,
+                                callback: function ($$v) {
+                                  _vm.searchQuery = $$v
+                                },
+                                expression: "searchQuery",
+                              },
+                            }),
+                          ],
+                          1
+                        ),
+                      ],
+                      1
+                    ),
+                  ]),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("BTable", {
+                ref: "AdministrativeTableRef",
+                attrs: {
+                  items: _vm.fetchAdminOrders,
+                  fields: _vm.FieldColumn,
+                  responsive: "",
+                  "primary-key": "id",
+                  "sort-by": _vm.sortBy,
+                  "show-empty": "",
+                  "empty-text": "Nenhum dado encontrado",
+                  "sort-desc": _vm.isSortDirDesc,
+                  "head-variant": "light",
+                },
+                on: {
+                  "update:sortBy": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sort-by": function ($event) {
+                    _vm.sortBy = $event
+                  },
+                  "update:sortDesc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                  "update:sort-desc": function ($event) {
+                    _vm.isSortDirDesc = $event
+                  },
+                },
+              }),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "BModal",
+        {
+          ref: "FormAbastecimento",
+          attrs: {
+            size: "lg",
+            "hide-footer": "",
+            title: "Criar nova Requisicao",
+          },
+        },
+        [_c("new-order")],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b&":
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b& ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "BCard",
+    { attrs: { "no-body": "" } },
+    [
+      _c(
+        "BRow",
+        [
+          _c(
+            "BCol",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "BForm",
+                {
+                  ref: "form",
+                  on: {
+                    submit: function ($event) {
+                      $event.stopPropagation()
+                      $event.preventDefault()
+                      return _vm.handleSubmit.apply(null, arguments)
+                    },
+                  },
+                },
+                [
+                  _c(
+                    "BFormRow",
+                    [
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
                         [
                           _c(
-                            "b-row",
+                            "BFormGroup",
+                            { attrs: { label: "Selecione a Bomba" } },
                             [
                               _c(
-                                "b-col",
-                                { attrs: { cols: "6" } },
-                                [
-                                  _c(
-                                    "b-list-group",
-                                    [
-                                      _c("b-list-group-item", [
-                                        _c("b", [_vm._v("Ref")]),
-                                        _vm._v(
-                                          ": " + _vm._s(_vm.SupplyData.refs)
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-list-group-item", [
-                                        _c("b", [_vm._v("Ordem")]),
-                                        _vm._v(
-                                          ":\n                  " +
-                                            _vm._s(_vm.SupplyData.codigo_ordem)
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-list-group-item", [
-                                        _c("b", [_vm._v("Bombas")]),
-                                        _vm._v(
-                                          ": " +
-                                            _vm._s(
-                                              _vm.SupplyData.bombas.nome_bombas
-                                            ) +
-                                            "\n                "
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-list-group-item", [
-                                        _c("b", [
-                                          _vm._v("Qtd total requisitad0"),
-                                        ]),
-                                        _vm._v(
-                                          ":\n                  " +
-                                            _vm._s(
-                                              _vm.SupplyData.abastecimento[0]
-                                                .qtd_rec
-                                            )
-                                        ),
-                                      ]),
-                                    ],
-                                    1
-                                  ),
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "b-col",
+                                "BFormSelect",
                                 {
-                                  staticClass: "pull-right ml-auto",
-                                  attrs: { cols: "4" },
+                                  scopedSlots: _vm._u([
+                                    {
+                                      key: "first",
+                                      fn: function () {
+                                        return [
+                                          _c(
+                                            "b-form-select-option",
+                                            {
+                                              attrs: {
+                                                value: null,
+                                                disabled: "",
+                                              },
+                                            },
+                                            [_vm._v("-- Selecione a bomba --")]
+                                          ),
+                                        ]
+                                      },
+                                      proxy: true,
+                                    },
+                                  ]),
                                 },
                                 [
+                                  _vm._v(" "),
                                   _c(
-                                    "b-list-group",
+                                    "b-form-select-option",
+                                    { attrs: { value: "C" } },
                                     [
-                                      _c("b-list-group-item", [
-                                        _c("b", [_vm._v("Requisitado por")]),
-                                        _vm._v(
-                                          ":\n                  " +
-                                            _vm._s(
-                                              _vm.SupplyData.created_by.name
-                                            )
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c("b-list-group-item", [
-                                        _c("b", [_vm._v("Estado")]),
-                                        _vm._v(":\n                  "),
-                                        _vm.SupplyData.estado === "Pendente"
-                                          ? _c(
-                                              "span",
-                                              [
-                                                _c(
-                                                  "b-badge",
-                                                  {
-                                                    attrs: {
-                                                      variant: "warning",
-                                                    },
-                                                  },
-                                                  [_vm._v("Pendende")]
-                                                ),
-                                              ],
-                                              1
-                                            )
-                                          : _vm.SupplyData.estado ===
-                                            "Autorizado"
-                                          ? _c(
-                                              "span",
-                                              [
-                                                _c(
-                                                  "b-badge",
-                                                  {
-                                                    attrs: {
-                                                      variant: "success",
-                                                    },
-                                                  },
-                                                  [_vm._v("Autorizada")]
-                                                ),
-                                              ],
-                                              1
-                                            )
-                                          : _c("span", [
-                                              _vm._v("Ordem rejeitada"),
-                                            ]),
-                                      ]),
-                                      _vm._v(" "),
-                                      _vm.SupplyData.approved_by !== null
-                                        ? _c("b-list-group-item", [
-                                            _c("b", [_vm._v("Autorizado por")]),
-                                            _vm._v(
-                                              ": " +
-                                                _vm._s(
-                                                  _vm.SupplyData.approved_by
-                                                    .name
-                                                ) +
-                                                "\n                "
-                                            ),
-                                          ])
-                                        : _vm._e(),
-                                    ],
-                                    1
+                                      _vm._v(
+                                        "\n                  Option C\n                "
+                                      ),
+                                    ]
                                   ),
                                 ],
                                 1
@@ -1200,281 +1064,121 @@ var render = function () {
                         1
                       ),
                       _vm._v(" "),
-                      _vm.SupplyData.ordem_viatura.length > 0
-                        ? _c("span", [
-                            _c(
-                              "table",
-                              {
-                                staticClass:
-                                  "table table-bordered table-stripped table-light",
-                              },
-                              [
-                                _c("thead", { staticClass: "thead-light" }, [
-                                  _c("tr", [
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("Matricula"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("tipo(combustivel)"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("km(actual)"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("Qtd disponivel"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("qtd"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { rowspan: "2" } }, [
-                                      _vm._v("Val. a pagar"),
-                                    ]),
-                                    _vm._v(" "),
-                                    _c("th", { attrs: { colspan: "2" } }, [
-                                      _vm._v("Rota & projecto"),
-                                    ]),
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("tr", [
-                                    _c("th", [_vm._v("rota")]),
-                                    _vm._v(" "),
-                                    _c("th", [_vm._v("projecto")]),
-                                  ]),
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "tbody",
-                                  _vm._l(
-                                    _vm.SupplyData.ordem_viatura,
-                                    function (ordem_viatura) {
-                                      return _c("tr", { key: ordem_viatura }, [
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(
-                                              ordem_viatura.viatura.matricula
-                                            )
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(
-                                              ordem_viatura.viatura
-                                                .tipo_combustivel
-                                            )
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(
-                                              ordem_viatura.viatura.kilometragem
-                                            )
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(
-                                              ordem_viatura.viatura
-                                                .qtd_disponivel
-                                            )
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(ordem_viatura.qtd_abastecida)
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("td", [
-                                          _vm._v(
-                                            _vm._s(ordem_viatura.preco_cunsumo)
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "td",
-                                          { attrs: { colspan: "2" } },
-                                          _vm._l(
-                                            ordem_viatura.ordem_viatura_rota,
-                                            function (viatura_rota, index) {
-                                              return _c("tr", { key: index }, [
-                                                _c("td", [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      viatura_rota.rota
-                                                        .nome_rota
-                                                    )
-                                                  ),
-                                                ]),
-                                                _vm._v(" "),
-                                                _c("td", [
-                                                  _vm._v(
-                                                    _vm._s(
-                                                      viatura_rota.rota.projecto
-                                                        .name
-                                                    )
-                                                  ),
-                                                ]),
-                                              ])
-                                            }
-                                          ),
-                                          0
-                                        ),
-                                      ])
-                                    }
-                                  ),
-                                  0
-                                ),
-                              ]
-                            ),
-                          ])
-                        : _vm._e(),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "b-col",
-                { attrs: { cols: "12", xl: "2", md: "2" } },
-                [
-                  _c(
-                    "b-link",
-                    {
-                      staticClass: "btn btn-md btn-outline-primary",
-                      attrs: { to: { name: "Supply" } },
-                    },
-                    [_vm._v("\n        Voltar\n      ")]
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Pendente"
-                  ? _c(
-                      "span",
-                      [
-                        _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-success" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.Aprovar(_vm.SupplyData.refs)
-                              },
-                            },
-                          },
-                          [_vm._v("\n          Autorizar\n        ")]
-                        ),
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.SupplyData.estado === "Autorizado"
-                  ? _c(
-                      "span",
-                      [
-                        _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-success" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.Aprovar(_vm.SupplyData.refs)
-                              },
-                            },
-                          },
-                          [_vm._v("\n          Reenviar\n        ")]
-                        ),
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-              ]),
-              _vm._v(" "),
-              _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Autorizado"
-                  ? _c(
-                      "span",
-                      [
-                        _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-danger" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.Reprovar(_vm.SupplyData.refs)
-                              },
-                            },
-                          },
-                          [_vm._v("\n          Cancelar\n        ")]
-                        ),
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-              ]),
-              _vm._v(" "),
-              _vm.SupplyData.estado === "Autorizado"
-                ? _c(
-                    "b-col",
-                    { attrs: { cols: "12", xl: "2", md: "2" } },
-                    [
                       _c(
-                        "b-button",
-                        {
-                          attrs: { variant: "warning" },
-                          on: {
-                            click: function ($event) {
-                              return _vm.reabrirOrdem(_vm.SupplyData.refs)
-                            },
-                          },
-                        },
-                        [_vm._v("Reabrir")]
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            { attrs: { label: "Viatura" } },
+                            [_c("v-select")],
+                            1
+                          ),
+                        ],
+                        1
                       ),
                     ],
                     1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _c("b-col", { attrs: { cols: "12", xl: "2", md: "2" } }, [
-                _vm.SupplyData.estado === "Pendente"
-                  ? _c(
-                      "span",
-                      [
-                        _c(
-                          "b-button",
-                          {
-                            attrs: { variant: "outline-danger" },
-                            on: {
-                              click: function ($event) {
-                                return _vm.Desfazer(_vm.SupplyData.refs)
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "BFormRow",
+                    [
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            { attrs: { label: "Motorista" } },
+                            [_c("v-select")],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            { attrs: { label: "Qtd a abastecer" } },
+                            [_c("BFormInput", { attrs: { type: "number" } })],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "BFormRow",
+                    [
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            { attrs: { label: "Motivos da saida" } },
+                            [_c("BFormInput", { attrs: { type: "text" } })],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            {
+                              attrs: {
+                                label: "Numero de passageiros a transportar",
                               },
                             },
-                          },
-                          [_vm._v("\n          cancelar envio\n        ")]
-                        ),
-                      ],
-                      1
-                    )
-                  : _vm._e(),
-              ]),
+                            [_c("BFormInput", { attrs: { type: "text" } })],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "BCol",
+                        { attrs: { cols: "6" } },
+                        [
+                          _c(
+                            "BFormGroup",
+                            { attrs: { label: "Descrição do expediente" } },
+                            [
+                              _c("BFormTextarea", {
+                                attrs: { placeholder: "" },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
             ],
             1
-          )
-        : _vm._e(),
+          ),
+        ],
+        1
+      ),
     ],
     1
   )
@@ -1573,115 +1277,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue":
-/*!************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue ***!
-  \************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true&");
-/* harmony import */ var _abastecimentoDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./abastecimentoDetail.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&");
-/* harmony import */ var _abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_4__["default"])(
-  _abastecimentoDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "ea88db46",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js&":
-/*!*************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&":
-/*!**********************************************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& ***!
-  \**********************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=0&id=ea88db46&lang=scss&scoped=true&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_0_id_ea88db46_lang_scss_scoped_true___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&":
-/*!**********************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& ***!
-  \**********************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/style-loader!../../../../../../node_modules/css-loader/dist/cjs.js!../../../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../../../node_modules/postcss-loader/src??ref--7-2!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--7-3!../../../../../../node_modules/sass-loader/dist/cjs.js??ref--11-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=style&index=1&lang=scss& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/dist/cjs.js!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=style&index=1&lang=scss&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_dist_cjs_js_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_7_2_node_modules_sass_loader_dist_cjs_js_ref_7_3_node_modules_sass_loader_dist_cjs_js_ref_11_0_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_style_index_1_lang_scss___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true&":
-/*!*******************************************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true& ***!
-  \*******************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoRota/abastecimentoDetail.vue?vue&type=template&id=ea88db46&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_abastecimentoDetail_vue_vue_type_template_id_ea88db46_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js":
-/*!********************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-abastecimentos/abastecimentos/storeAbastecimentos.js ***!
-  \********************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/AdministrativeModule.js":
+/*!**********************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/AdministrativeModule.js ***!
+  \**********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1691,6 +1290,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
 
+ // import { resolve } from 'path'
+// import { reject } from 'q'
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   namespaced: true,
@@ -1698,9 +1299,9 @@ __webpack_require__.r(__webpack_exports__);
   getters: {},
   mutations: {},
   actions: {
-    fetchAbastecimentos: function fetchAbastecimentos(ctx, queryParams) {
+    getAbastecimentoServicos: function getAbastecimentoServicos(ctx, queryParams) {
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/Abastecimento', {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/abastecimentoServicos', {
           params: queryParams
         }).then(function (response) {
           return resolve(response);
@@ -1709,121 +1310,19 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    fetchAbastecimentoDetails: function fetchAbastecimentoDetails(ctx, _ref) {
+    createAbastecimentoServico: function createAbastecimentoServico(ctx, dataRequest) {
+      return new Promise(function (resolve, reject) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/submitAdmniService', dataRequest).then(function (response) {
+          return resolve(response);
+        })["catch"](function (error) {
+          return reject(error);
+        });
+      });
+    },
+    viewAdministrativeOrder: function viewAdministrativeOrder(ctx, _ref) {
       var refs = _ref.refs;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordems/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addAbastecimento: function addAbastecimento(ctx, SupplyDatas) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/submeterAbst', SupplyDatas).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    ApproveOrder: function ApproveOrder(ctx, _ref2) {
-      var refs = _ref2.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/AprovarOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    UndoOrder: function UndoOrder(ctx, _ref3) {
-      var refs = _ref3.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/DesfazerOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    CancelOrder: function CancelOrder(ctx, _ref4) {
-      var refs = _ref4.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/api/CancelarOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    // Abastecimento Extraordinario
-    AbastecimentoRecorrente: function AbastecimentoRecorrente(ctx, abstData) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/ListAbastecimentoExtras', abstData).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addAbastecimentoRecorrente: function addAbastecimentoRecorrente(ctx, SupplyDatas) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/CreateExtraOrder', SupplyDatas).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    fetchAbstRecDetails: function fetchAbstRecDetails(ctx, _ref5) {
-      var refs = _ref5.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/AbstCorrDetails/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    getHistory: function getHistory(ctx, queryParams) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/RelatorioGeral', {
-          params: queryParams
-        }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    // ReabrirOrdem
-    ReopenOrder: function ReopenOrder(ctx, _ref6) {
-      var refs = _ref6.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/ReabrirOrdem/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    // verOrdensAbertas
-    getOpenOrder: function getOpenOrder(ctx, _ref7) {
-      var refs = _ref7.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/Ordems/".concat(refs)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    removeLine: function removeLine(ctx, _ref8) {
-      var refs = _ref8.refs;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/removeLine/".concat(refs)).then(function (response) {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/abastecimentoServicos/".concat(refs)).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1832,6 +1331,269 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.js":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.js ***!
+  \*******************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AdministrativeService; });
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+ // Notification
+
+
+
+
+function AdministrativeService() {
+  var AdministrativeTableRef = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__["useToast"])();
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
+  var totalOrders = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var perPageOptions = [10, 25, 50, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
+  var bombasFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var FieldColumn = [{
+    key: 'Data_submissao',
+    sortable: true
+  }, {
+    key: 'Codigo',
+    sortable: true
+  }, {
+    key: 'Viatura',
+    sortable: true
+  }, {
+    key: 'Leitura (Km)',
+    sortable: true
+  }, {
+    key: 'Qtd_disp(trs)',
+    sortable: true
+  }, {
+    key: 'Viatura',
+    sortable: true
+  }, {
+    key: 'Qtd',
+    sortable: true
+  }, {
+    key: 'Bombas',
+    sortable: true
+  }, {
+    key: 'Nr_passageiros',
+    sortable: true
+  }, {
+    key: 'descricao_do_expediente',
+    sortable: true
+  }, {
+    key: 'Submetido_por',
+    sortable: true
+  }, {
+    key: 'Aprovado_por',
+    sortable: true
+  }];
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = AdministrativeTableRef.value ? AdministrativeTableRef.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalOrders.value
+    };
+  });
+
+  var refetchData = function refetchData() {
+    AdministrativeTableRef.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, bombasFilter], function () {
+    refetchData();
+  });
+
+  var fetchAdminOrders = function fetchAdminOrders(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch('Supply/getAbastecimentoServicos', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value
+    }).then(function (response) {
+      var adminOrderService = response.data;
+      callback(adminOrderService.data);
+      totalOrders.value = adminOrderService.total;
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+        props: {
+          title: 'Erro na listagem de abastecimentos',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  };
+
+  return {
+    AdministrativeTableRef: AdministrativeTableRef,
+    FieldColumn: FieldColumn,
+    perPage: perPage,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    bombasFilter: bombasFilter,
+    fetchAdminOrders: fetchAdminOrders,
+    refetchData: refetchData
+  };
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue ***!
+  \********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.vue?vue&type=template&id=3b44e1a5& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5&");
+/* harmony import */ var _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5&":
+/*!***************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5& ***!
+  \***************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./index.vue?vue&type=template&id=3b44e1a5& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/index.vue?vue&type=template&id=3b44e1a5&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_index_vue_vue_type_template_id_3b44e1a5___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue ***!
+  \***********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./newOrder.vue?vue&type=template&id=1ed3e00b& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b&");
+/* harmony import */ var _newOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./newOrder.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _newOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_newOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./newOrder.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_newOrder_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b&":
+/*!******************************************************************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b& ***!
+  \******************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./newOrder.vue?vue&type=template&id=1ed3e00b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/AbastecimentoAdministrativo/newOrder.vue?vue&type=template&id=1ed3e00b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_newOrder_vue_vue_type_template_id_1ed3e00b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ })
 

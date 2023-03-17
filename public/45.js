@@ -83,9 +83,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js&":
 /*!****************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js& ***!
   \****************************************************************************************************************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -93,12 +93,115 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap-vue */ "./node_modules/bootstrap-vue/esm/index.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
-/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _useMotoristasList__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./useMotoristasList */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js");
-/* harmony import */ var _storeMotoritaModules__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./storeMotoritaModules */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-flatpickr-component */ "./node_modules/vue-flatpickr-component/dist/vue-flatpickr.min.js");
+/* harmony import */ var vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(vue_flatpickr_component__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
+/* harmony import */ var vform__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! vform */ "./node_modules/vform/dist/vform.es.js");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! vue-select */ "./node_modules/vue-select/dist/vue-select.js");
+/* harmony import */ var vue_select__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(vue_select__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _bombasIndex__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./bombasIndex */ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasIndex.js");
+/* harmony import */ var _storeBombaIndex__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./storeBombaIndex */ "./resources/js/src/views/Gestao-abastecimentos/bombas/storeBombaIndex.js");
+/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
+/* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_13__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -222,75 +325,116 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+ // import Table from '../../table/bs-table/Table.vue'
+
+
+
+
+
+var newLocal = 'DD/MM/YYYY hh:mm';
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     BCard: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCard"],
+    BCardHeader: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardHeader"],
+    BCardBody: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardBody"],
+    BCardFooter: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCardFooter"],
+    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
+    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
     BRow: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BRow"],
     BCol: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BCol"],
+    BListGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroup"],
+    BListGroupItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BListGroupItem"],
     BFormInput: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormInput"],
-    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BImg: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BImg"],
+    BFormGroup: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BFormGroup"],
     BTable: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTable"],
-    BLink: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BLink"],
-    BBadge: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BBadge"],
-    BDropdown: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdown"],
-    BDropdownItem: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BDropdownItem"],
-    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BPagination"],
-    BTooltip: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BTooltip"],
-    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_1___default.a
+    BModal: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BModal"],
+    vSelect: vue_select__WEBPACK_IMPORTED_MODULE_10___default.a,
+    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_6__["default"],
+    BButton: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BButton"],
+    BPagination: bootstrap_vue__WEBPACK_IMPORTED_MODULE_0__["BPagination"]
   },
-  setup: function setup(props) {
-    var DRIVER_STORE_MODULE_NAME = "Picket"; // Register module
+  setup: function setup() {
+    var bomba = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["ref"])(null);
+    var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_1__["useToast"])();
+    var ORDENS_APP_STORE_MODULE_NAME = 'app-bombas'; // Register module
 
-    if (!_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(DRIVER_STORE_MODULE_NAME)) {
-      _store__WEBPACK_IMPORTED_MODULE_3__["default"].registerModule(DRIVER_STORE_MODULE_NAME, _storeMotoritaModules__WEBPACK_IMPORTED_MODULE_5__["default"]);
+    if (!_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(ORDENS_APP_STORE_MODULE_NAME)) {
+      _store__WEBPACK_IMPORTED_MODULE_8__["default"].registerModule(ORDENS_APP_STORE_MODULE_NAME, _storeBombaIndex__WEBPACK_IMPORTED_MODULE_12__["default"]);
     } // UnRegister on leave
 
 
-    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_2__["onUnmounted"])(function () {
-      if (_store__WEBPACK_IMPORTED_MODULE_3__["default"].hasModule(DRIVER_STORE_MODULE_NAME)) {
-        _store__WEBPACK_IMPORTED_MODULE_3__["default"].unregisterModule(DRIVER_STORE_MODULE_NAME);
+    Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["onUnmounted"])(function () {
+      if (_store__WEBPACK_IMPORTED_MODULE_8__["default"].hasModule(ORDENS_APP_STORE_MODULE_NAME)) {
+        _store__WEBPACK_IMPORTED_MODULE_8__["default"].unregisterModule(ORDENS_APP_STORE_MODULE_NAME);
       }
     });
-    var statusOptions = [{
-      label: "Active",
-      value: "active"
-    }, {
-      label: "Inactive",
-      value: "inactive"
-    }];
 
-    var _useMotoristasList = Object(_useMotoristasList__WEBPACK_IMPORTED_MODULE_4__["default"])(),
-        fetctDriver = _useMotoristasList.fetctDriver,
-        tableColumns = _useMotoristasList.tableColumns,
-        perPage = _useMotoristasList.perPage,
-        currentPage = _useMotoristasList.currentPage,
-        totalDrivers = _useMotoristasList.totalDrivers,
-        dataMeta = _useMotoristasList.dataMeta,
-        perPageOptions = _useMotoristasList.perPageOptions,
-        searchQuery = _useMotoristasList.searchQuery,
-        sortBy = _useMotoristasList.sortBy,
-        isSortDirDesc = _useMotoristasList.isSortDirDesc,
-        refDriverTableList = _useMotoristasList.refDriverTableList,
-        refetchData = _useMotoristasList.refetchData,
-        departmentFilter = _useMotoristasList.departmentFilter;
+    function getBombasDetails() {
+      var _this = this;
+
+      this.$http.get("/api/bombas/".concat(_router__WEBPACK_IMPORTED_MODULE_9__["default"].currentRoute.params.id)).then(function (response) {
+        _this.bomba = response.data;
+      })["catch"](function (err) {
+        if (err.response.status === 421) {
+          toast({
+            component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+            props: {
+              title: err.response.data.error,
+              icon: 'AlertTriangleIcon',
+              variant: 'danger'
+            }
+          });
+        }
+      });
+    }
+
+    function dateTime(value) {
+      return moment__WEBPACK_IMPORTED_MODULE_4___default()(value).format(newLocal);
+    }
+
+    var _useBombasList = Object(_bombasIndex__WEBPACK_IMPORTED_MODULE_11__["default"])(),
+        fetchOrdens = _useBombasList.fetchOrdens,
+        perPage = _useBombasList.perPage,
+        tableColumns = _useBombasList.tableColumns,
+        totalOrdens = _useBombasList.totalOrdens,
+        currentPage = _useBombasList.currentPage,
+        dataMeta = _useBombasList.dataMeta,
+        perPageOptions = _useBombasList.perPageOptions,
+        intervalo = _useBombasList.intervalo,
+        searchQuery = _useBombasList.searchQuery,
+        sortBy = _useBombasList.sortBy,
+        isSortDirDesc = _useBombasList.isSortDirDesc,
+        refOrderListTable = _useBombasList.refOrderListTable,
+        refetchData = _useBombasList.refetchData; // end submittion
+
 
     return {
-      fetctDriver: fetctDriver,
-      tableColumns: tableColumns,
+      // ordens
+      fetchOrdens: fetchOrdens,
+      intervalo: intervalo,
       perPage: perPage,
-      currentPage: currentPage,
-      totalDrivers: totalDrivers,
+      tableColumns: tableColumns,
+      totalOrdens: totalOrdens,
       dataMeta: dataMeta,
       perPageOptions: perPageOptions,
       searchQuery: searchQuery,
       sortBy: sortBy,
       isSortDirDesc: isSortDirDesc,
-      refDriverTableList: refDriverTableList,
+      currentPage: currentPage,
       refetchData: refetchData,
-      // Extra Filters
-      statusOptions: statusOptions,
-      departmentFilter: departmentFilter
+      refOrderListTable: refOrderListTable,
+      // fin ordens
+      getBombasDetails: getBombasDetails,
+      dateTime: dateTime,
+      bomba: bomba
     };
+  },
+  created: function created() {
+    this.getBombasDetails();
   }
 });
 
@@ -311,6 +455,308 @@ exports.push([module.i, ".toastification-close-icon[data-v-7834b2fa],\n.toastifi
 // Exports
 module.exports = exports;
 
+
+/***/ }),
+
+/***/ "./node_modules/moment/locale sync recursive ^\\.\\/.*$":
+/*!**************************************************!*\
+  !*** ./node_modules/moment/locale sync ^\.\/.*$ ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./af": "./node_modules/moment/locale/af.js",
+	"./af.js": "./node_modules/moment/locale/af.js",
+	"./ar": "./node_modules/moment/locale/ar.js",
+	"./ar-dz": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-dz.js": "./node_modules/moment/locale/ar-dz.js",
+	"./ar-kw": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-kw.js": "./node_modules/moment/locale/ar-kw.js",
+	"./ar-ly": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ly.js": "./node_modules/moment/locale/ar-ly.js",
+	"./ar-ma": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-ma.js": "./node_modules/moment/locale/ar-ma.js",
+	"./ar-sa": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-sa.js": "./node_modules/moment/locale/ar-sa.js",
+	"./ar-tn": "./node_modules/moment/locale/ar-tn.js",
+	"./ar-tn.js": "./node_modules/moment/locale/ar-tn.js",
+	"./ar.js": "./node_modules/moment/locale/ar.js",
+	"./az": "./node_modules/moment/locale/az.js",
+	"./az.js": "./node_modules/moment/locale/az.js",
+	"./be": "./node_modules/moment/locale/be.js",
+	"./be.js": "./node_modules/moment/locale/be.js",
+	"./bg": "./node_modules/moment/locale/bg.js",
+	"./bg.js": "./node_modules/moment/locale/bg.js",
+	"./bm": "./node_modules/moment/locale/bm.js",
+	"./bm.js": "./node_modules/moment/locale/bm.js",
+	"./bn": "./node_modules/moment/locale/bn.js",
+	"./bn-bd": "./node_modules/moment/locale/bn-bd.js",
+	"./bn-bd.js": "./node_modules/moment/locale/bn-bd.js",
+	"./bn.js": "./node_modules/moment/locale/bn.js",
+	"./bo": "./node_modules/moment/locale/bo.js",
+	"./bo.js": "./node_modules/moment/locale/bo.js",
+	"./br": "./node_modules/moment/locale/br.js",
+	"./br.js": "./node_modules/moment/locale/br.js",
+	"./bs": "./node_modules/moment/locale/bs.js",
+	"./bs.js": "./node_modules/moment/locale/bs.js",
+	"./ca": "./node_modules/moment/locale/ca.js",
+	"./ca.js": "./node_modules/moment/locale/ca.js",
+	"./cs": "./node_modules/moment/locale/cs.js",
+	"./cs.js": "./node_modules/moment/locale/cs.js",
+	"./cv": "./node_modules/moment/locale/cv.js",
+	"./cv.js": "./node_modules/moment/locale/cv.js",
+	"./cy": "./node_modules/moment/locale/cy.js",
+	"./cy.js": "./node_modules/moment/locale/cy.js",
+	"./da": "./node_modules/moment/locale/da.js",
+	"./da.js": "./node_modules/moment/locale/da.js",
+	"./de": "./node_modules/moment/locale/de.js",
+	"./de-at": "./node_modules/moment/locale/de-at.js",
+	"./de-at.js": "./node_modules/moment/locale/de-at.js",
+	"./de-ch": "./node_modules/moment/locale/de-ch.js",
+	"./de-ch.js": "./node_modules/moment/locale/de-ch.js",
+	"./de.js": "./node_modules/moment/locale/de.js",
+	"./dv": "./node_modules/moment/locale/dv.js",
+	"./dv.js": "./node_modules/moment/locale/dv.js",
+	"./el": "./node_modules/moment/locale/el.js",
+	"./el.js": "./node_modules/moment/locale/el.js",
+	"./en-au": "./node_modules/moment/locale/en-au.js",
+	"./en-au.js": "./node_modules/moment/locale/en-au.js",
+	"./en-ca": "./node_modules/moment/locale/en-ca.js",
+	"./en-ca.js": "./node_modules/moment/locale/en-ca.js",
+	"./en-gb": "./node_modules/moment/locale/en-gb.js",
+	"./en-gb.js": "./node_modules/moment/locale/en-gb.js",
+	"./en-ie": "./node_modules/moment/locale/en-ie.js",
+	"./en-ie.js": "./node_modules/moment/locale/en-ie.js",
+	"./en-il": "./node_modules/moment/locale/en-il.js",
+	"./en-il.js": "./node_modules/moment/locale/en-il.js",
+	"./en-in": "./node_modules/moment/locale/en-in.js",
+	"./en-in.js": "./node_modules/moment/locale/en-in.js",
+	"./en-nz": "./node_modules/moment/locale/en-nz.js",
+	"./en-nz.js": "./node_modules/moment/locale/en-nz.js",
+	"./en-sg": "./node_modules/moment/locale/en-sg.js",
+	"./en-sg.js": "./node_modules/moment/locale/en-sg.js",
+	"./eo": "./node_modules/moment/locale/eo.js",
+	"./eo.js": "./node_modules/moment/locale/eo.js",
+	"./es": "./node_modules/moment/locale/es.js",
+	"./es-do": "./node_modules/moment/locale/es-do.js",
+	"./es-do.js": "./node_modules/moment/locale/es-do.js",
+	"./es-mx": "./node_modules/moment/locale/es-mx.js",
+	"./es-mx.js": "./node_modules/moment/locale/es-mx.js",
+	"./es-us": "./node_modules/moment/locale/es-us.js",
+	"./es-us.js": "./node_modules/moment/locale/es-us.js",
+	"./es.js": "./node_modules/moment/locale/es.js",
+	"./et": "./node_modules/moment/locale/et.js",
+	"./et.js": "./node_modules/moment/locale/et.js",
+	"./eu": "./node_modules/moment/locale/eu.js",
+	"./eu.js": "./node_modules/moment/locale/eu.js",
+	"./fa": "./node_modules/moment/locale/fa.js",
+	"./fa.js": "./node_modules/moment/locale/fa.js",
+	"./fi": "./node_modules/moment/locale/fi.js",
+	"./fi.js": "./node_modules/moment/locale/fi.js",
+	"./fil": "./node_modules/moment/locale/fil.js",
+	"./fil.js": "./node_modules/moment/locale/fil.js",
+	"./fo": "./node_modules/moment/locale/fo.js",
+	"./fo.js": "./node_modules/moment/locale/fo.js",
+	"./fr": "./node_modules/moment/locale/fr.js",
+	"./fr-ca": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ca.js": "./node_modules/moment/locale/fr-ca.js",
+	"./fr-ch": "./node_modules/moment/locale/fr-ch.js",
+	"./fr-ch.js": "./node_modules/moment/locale/fr-ch.js",
+	"./fr.js": "./node_modules/moment/locale/fr.js",
+	"./fy": "./node_modules/moment/locale/fy.js",
+	"./fy.js": "./node_modules/moment/locale/fy.js",
+	"./ga": "./node_modules/moment/locale/ga.js",
+	"./ga.js": "./node_modules/moment/locale/ga.js",
+	"./gd": "./node_modules/moment/locale/gd.js",
+	"./gd.js": "./node_modules/moment/locale/gd.js",
+	"./gl": "./node_modules/moment/locale/gl.js",
+	"./gl.js": "./node_modules/moment/locale/gl.js",
+	"./gom-deva": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-deva.js": "./node_modules/moment/locale/gom-deva.js",
+	"./gom-latn": "./node_modules/moment/locale/gom-latn.js",
+	"./gom-latn.js": "./node_modules/moment/locale/gom-latn.js",
+	"./gu": "./node_modules/moment/locale/gu.js",
+	"./gu.js": "./node_modules/moment/locale/gu.js",
+	"./he": "./node_modules/moment/locale/he.js",
+	"./he.js": "./node_modules/moment/locale/he.js",
+	"./hi": "./node_modules/moment/locale/hi.js",
+	"./hi.js": "./node_modules/moment/locale/hi.js",
+	"./hr": "./node_modules/moment/locale/hr.js",
+	"./hr.js": "./node_modules/moment/locale/hr.js",
+	"./hu": "./node_modules/moment/locale/hu.js",
+	"./hu.js": "./node_modules/moment/locale/hu.js",
+	"./hy-am": "./node_modules/moment/locale/hy-am.js",
+	"./hy-am.js": "./node_modules/moment/locale/hy-am.js",
+	"./id": "./node_modules/moment/locale/id.js",
+	"./id.js": "./node_modules/moment/locale/id.js",
+	"./is": "./node_modules/moment/locale/is.js",
+	"./is.js": "./node_modules/moment/locale/is.js",
+	"./it": "./node_modules/moment/locale/it.js",
+	"./it-ch": "./node_modules/moment/locale/it-ch.js",
+	"./it-ch.js": "./node_modules/moment/locale/it-ch.js",
+	"./it.js": "./node_modules/moment/locale/it.js",
+	"./ja": "./node_modules/moment/locale/ja.js",
+	"./ja.js": "./node_modules/moment/locale/ja.js",
+	"./jv": "./node_modules/moment/locale/jv.js",
+	"./jv.js": "./node_modules/moment/locale/jv.js",
+	"./ka": "./node_modules/moment/locale/ka.js",
+	"./ka.js": "./node_modules/moment/locale/ka.js",
+	"./kk": "./node_modules/moment/locale/kk.js",
+	"./kk.js": "./node_modules/moment/locale/kk.js",
+	"./km": "./node_modules/moment/locale/km.js",
+	"./km.js": "./node_modules/moment/locale/km.js",
+	"./kn": "./node_modules/moment/locale/kn.js",
+	"./kn.js": "./node_modules/moment/locale/kn.js",
+	"./ko": "./node_modules/moment/locale/ko.js",
+	"./ko.js": "./node_modules/moment/locale/ko.js",
+	"./ku": "./node_modules/moment/locale/ku.js",
+	"./ku.js": "./node_modules/moment/locale/ku.js",
+	"./ky": "./node_modules/moment/locale/ky.js",
+	"./ky.js": "./node_modules/moment/locale/ky.js",
+	"./lb": "./node_modules/moment/locale/lb.js",
+	"./lb.js": "./node_modules/moment/locale/lb.js",
+	"./lo": "./node_modules/moment/locale/lo.js",
+	"./lo.js": "./node_modules/moment/locale/lo.js",
+	"./lt": "./node_modules/moment/locale/lt.js",
+	"./lt.js": "./node_modules/moment/locale/lt.js",
+	"./lv": "./node_modules/moment/locale/lv.js",
+	"./lv.js": "./node_modules/moment/locale/lv.js",
+	"./me": "./node_modules/moment/locale/me.js",
+	"./me.js": "./node_modules/moment/locale/me.js",
+	"./mi": "./node_modules/moment/locale/mi.js",
+	"./mi.js": "./node_modules/moment/locale/mi.js",
+	"./mk": "./node_modules/moment/locale/mk.js",
+	"./mk.js": "./node_modules/moment/locale/mk.js",
+	"./ml": "./node_modules/moment/locale/ml.js",
+	"./ml.js": "./node_modules/moment/locale/ml.js",
+	"./mn": "./node_modules/moment/locale/mn.js",
+	"./mn.js": "./node_modules/moment/locale/mn.js",
+	"./mr": "./node_modules/moment/locale/mr.js",
+	"./mr.js": "./node_modules/moment/locale/mr.js",
+	"./ms": "./node_modules/moment/locale/ms.js",
+	"./ms-my": "./node_modules/moment/locale/ms-my.js",
+	"./ms-my.js": "./node_modules/moment/locale/ms-my.js",
+	"./ms.js": "./node_modules/moment/locale/ms.js",
+	"./mt": "./node_modules/moment/locale/mt.js",
+	"./mt.js": "./node_modules/moment/locale/mt.js",
+	"./my": "./node_modules/moment/locale/my.js",
+	"./my.js": "./node_modules/moment/locale/my.js",
+	"./nb": "./node_modules/moment/locale/nb.js",
+	"./nb.js": "./node_modules/moment/locale/nb.js",
+	"./ne": "./node_modules/moment/locale/ne.js",
+	"./ne.js": "./node_modules/moment/locale/ne.js",
+	"./nl": "./node_modules/moment/locale/nl.js",
+	"./nl-be": "./node_modules/moment/locale/nl-be.js",
+	"./nl-be.js": "./node_modules/moment/locale/nl-be.js",
+	"./nl.js": "./node_modules/moment/locale/nl.js",
+	"./nn": "./node_modules/moment/locale/nn.js",
+	"./nn.js": "./node_modules/moment/locale/nn.js",
+	"./oc-lnc": "./node_modules/moment/locale/oc-lnc.js",
+	"./oc-lnc.js": "./node_modules/moment/locale/oc-lnc.js",
+	"./pa-in": "./node_modules/moment/locale/pa-in.js",
+	"./pa-in.js": "./node_modules/moment/locale/pa-in.js",
+	"./pl": "./node_modules/moment/locale/pl.js",
+	"./pl.js": "./node_modules/moment/locale/pl.js",
+	"./pt": "./node_modules/moment/locale/pt.js",
+	"./pt-br": "./node_modules/moment/locale/pt-br.js",
+	"./pt-br.js": "./node_modules/moment/locale/pt-br.js",
+	"./pt.js": "./node_modules/moment/locale/pt.js",
+	"./ro": "./node_modules/moment/locale/ro.js",
+	"./ro.js": "./node_modules/moment/locale/ro.js",
+	"./ru": "./node_modules/moment/locale/ru.js",
+	"./ru.js": "./node_modules/moment/locale/ru.js",
+	"./sd": "./node_modules/moment/locale/sd.js",
+	"./sd.js": "./node_modules/moment/locale/sd.js",
+	"./se": "./node_modules/moment/locale/se.js",
+	"./se.js": "./node_modules/moment/locale/se.js",
+	"./si": "./node_modules/moment/locale/si.js",
+	"./si.js": "./node_modules/moment/locale/si.js",
+	"./sk": "./node_modules/moment/locale/sk.js",
+	"./sk.js": "./node_modules/moment/locale/sk.js",
+	"./sl": "./node_modules/moment/locale/sl.js",
+	"./sl.js": "./node_modules/moment/locale/sl.js",
+	"./sq": "./node_modules/moment/locale/sq.js",
+	"./sq.js": "./node_modules/moment/locale/sq.js",
+	"./sr": "./node_modules/moment/locale/sr.js",
+	"./sr-cyrl": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr-cyrl.js": "./node_modules/moment/locale/sr-cyrl.js",
+	"./sr.js": "./node_modules/moment/locale/sr.js",
+	"./ss": "./node_modules/moment/locale/ss.js",
+	"./ss.js": "./node_modules/moment/locale/ss.js",
+	"./sv": "./node_modules/moment/locale/sv.js",
+	"./sv.js": "./node_modules/moment/locale/sv.js",
+	"./sw": "./node_modules/moment/locale/sw.js",
+	"./sw.js": "./node_modules/moment/locale/sw.js",
+	"./ta": "./node_modules/moment/locale/ta.js",
+	"./ta.js": "./node_modules/moment/locale/ta.js",
+	"./te": "./node_modules/moment/locale/te.js",
+	"./te.js": "./node_modules/moment/locale/te.js",
+	"./tet": "./node_modules/moment/locale/tet.js",
+	"./tet.js": "./node_modules/moment/locale/tet.js",
+	"./tg": "./node_modules/moment/locale/tg.js",
+	"./tg.js": "./node_modules/moment/locale/tg.js",
+	"./th": "./node_modules/moment/locale/th.js",
+	"./th.js": "./node_modules/moment/locale/th.js",
+	"./tk": "./node_modules/moment/locale/tk.js",
+	"./tk.js": "./node_modules/moment/locale/tk.js",
+	"./tl-ph": "./node_modules/moment/locale/tl-ph.js",
+	"./tl-ph.js": "./node_modules/moment/locale/tl-ph.js",
+	"./tlh": "./node_modules/moment/locale/tlh.js",
+	"./tlh.js": "./node_modules/moment/locale/tlh.js",
+	"./tr": "./node_modules/moment/locale/tr.js",
+	"./tr.js": "./node_modules/moment/locale/tr.js",
+	"./tzl": "./node_modules/moment/locale/tzl.js",
+	"./tzl.js": "./node_modules/moment/locale/tzl.js",
+	"./tzm": "./node_modules/moment/locale/tzm.js",
+	"./tzm-latn": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm-latn.js": "./node_modules/moment/locale/tzm-latn.js",
+	"./tzm.js": "./node_modules/moment/locale/tzm.js",
+	"./ug-cn": "./node_modules/moment/locale/ug-cn.js",
+	"./ug-cn.js": "./node_modules/moment/locale/ug-cn.js",
+	"./uk": "./node_modules/moment/locale/uk.js",
+	"./uk.js": "./node_modules/moment/locale/uk.js",
+	"./ur": "./node_modules/moment/locale/ur.js",
+	"./ur.js": "./node_modules/moment/locale/ur.js",
+	"./uz": "./node_modules/moment/locale/uz.js",
+	"./uz-latn": "./node_modules/moment/locale/uz-latn.js",
+	"./uz-latn.js": "./node_modules/moment/locale/uz-latn.js",
+	"./uz.js": "./node_modules/moment/locale/uz.js",
+	"./vi": "./node_modules/moment/locale/vi.js",
+	"./vi.js": "./node_modules/moment/locale/vi.js",
+	"./x-pseudo": "./node_modules/moment/locale/x-pseudo.js",
+	"./x-pseudo.js": "./node_modules/moment/locale/x-pseudo.js",
+	"./yo": "./node_modules/moment/locale/yo.js",
+	"./yo.js": "./node_modules/moment/locale/yo.js",
+	"./zh-cn": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-cn.js": "./node_modules/moment/locale/zh-cn.js",
+	"./zh-hk": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-hk.js": "./node_modules/moment/locale/zh-hk.js",
+	"./zh-mo": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-mo.js": "./node_modules/moment/locale/zh-mo.js",
+	"./zh-tw": "./node_modules/moment/locale/zh-tw.js",
+	"./zh-tw.js": "./node_modules/moment/locale/zh-tw.js"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 
 /***/ }),
 
@@ -425,9 +871,9 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&":
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0&":
 /*!********************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc& ***!
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0& ***!
   \********************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -441,28 +887,187 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "b-card",
-    { attrs: { "no-body": "" } },
+    "section",
+    { staticClass: "invoice-add-wrapper mt-3" },
     [
       _c(
-        "div",
-        { staticClass: "m-2" },
+        "b-row",
+        { staticClass: "invoice-add" },
+        [
+          _c(
+            "b-col",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "b-card",
+                { attrs: { "no-body": "" } },
+                [
+                  _c("b-card-header", [
+                    _c("h3", { staticClass: "card-title" }, [
+                      _vm._v(
+                        "Dados da Bomba: " + _vm._s(_vm.bomba.nome_bombas)
+                      ),
+                    ]),
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "b-card-body",
+                    [
+                      _c(
+                        "b-row",
+                        { attrs: { sm: "" } },
+                        [
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "5", md: "5" } },
+                            [
+                              _c(
+                                "b-list-group",
+                                [
+                                  _c("b-list-group-item", [
+                                    _c("span", [_vm._v("Capacidade: ")]),
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(_vm.bomba.capacidade)
+                                    ),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("b-list-group-item", [
+                                    _c("span", [_vm._v("Tipo: ")]),
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(_vm.bomba.tipo_bomba)
+                                    ),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("b-list-group-item", [
+                                    _c("span", [_vm._v("Qtd disponivel: ")]),
+                                    _vm._v(
+                                      "\n                  " +
+                                        _vm._s(_vm.bomba.qtd_disponivel)
+                                    ),
+                                  ]),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "4", md: "4" } },
+                            [
+                              _c(
+                                "b-list-group",
+                                _vm._l(_vm.bomba.responsavel, function (resp) {
+                                  return _c(
+                                    "b-list-group-item",
+                                    { key: resp.id },
+                                    [
+                                      _c("span", [_vm._v("Email: ")]),
+                                      _vm._v(
+                                        "\n                  " +
+                                          _vm._s(resp.email_bomba)
+                                      ),
+                                    ]
+                                  )
+                                }),
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "3", md: "3" } },
+                            [
+                              _c(
+                                "b-list-group",
+                                _vm._l(_vm.bomba.combustivel, function (comb) {
+                                  return _c(
+                                    "b-list-group-item",
+                                    { key: comb.id },
+                                    [
+                                      _c("span", [_vm._v("Combustivel: ")]),
+                                      _vm._v(
+                                        "\n                  " +
+                                          _vm._s(comb.tipo_combustivel) +
+                                          "\n                  "
+                                      ),
+                                      _c("br"),
+                                      _vm._v(" "),
+                                      _c("span", [_vm._v("Preço actual: ")]),
+                                      _vm._v(
+                                        " " +
+                                          _vm._s(comb.preco_actual) +
+                                          "\n                "
+                                      ),
+                                    ]
+                                  )
+                                }),
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "b-col",
+                            { attrs: { cols: "8" } },
+                            [
+                              _c(
+                                "b-button",
+                                {
+                                  attrs: { id: "show-btn" },
+                                  on: {
+                                    click: function ($event) {
+                                      return _vm.$bvModal.show("modal-xl")
+                                    },
+                                  },
+                                },
+                                [_vm._v("Abrir Relatorio")]
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "b-modal",
+        {
+          attrs: {
+            id: "modal-xl",
+            size: "xl",
+            title: "Relatorio de abastecimento",
+          },
+        },
         [
           _c(
             "b-row",
             [
               _c(
                 "b-col",
-                {
-                  staticClass:
-                    "d-flex align-items-center justify-content-start mb-1 mb-md-0",
-                  attrs: { cols: "12", md: "6" },
-                },
                 [
-                  _c("label", [_vm._v("Entradas")]),
+                  _c("label", [_vm._v("mostrar")]),
                   _vm._v(" "),
                   _c("v-select", {
-                    staticClass: "per-page-selector d-inline-block ml-50 mr-1",
+                    staticClass: "per-page-selector d-inline-block mx-50",
                     attrs: {
                       dir: _vm.$store.state.appConfig.isRTL ? "rtl" : "ltr",
                       options: _vm.perPageOptions,
@@ -477,328 +1082,374 @@ var render = function () {
                     },
                   }),
                   _vm._v(" "),
+                  _c("label", [_vm._v("entradas")]),
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "b-col",
+                [
                   _c(
-                    "b-button",
-                    {
-                      attrs: {
-                        variant: "outline-primary",
-                        to: { name: "New-Driver" },
-                      },
-                    },
+                    "b-form-group",
+                    { attrs: { label: "Pesquisar por codigo" } },
                     [
-                      _vm._v(
-                        "\r\n                    Novo motorista\r\n                "
-                      ),
-                    ]
+                      _c("b-form-input", {
+                        staticClass: "d-inline-block mr-1",
+                        attrs: { type: "search", placeholder: "Search..." },
+                        model: {
+                          value: _vm.searchQuery,
+                          callback: function ($$v) {
+                            _vm.searchQuery = $$v
+                          },
+                          expression: "searchQuery",
+                        },
+                      }),
+                    ],
+                    1
                   ),
                 ],
                 1
               ),
               _vm._v(" "),
-              _c("b-col", { attrs: { cols: "12", md: "6" } }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex align-items-center justify-content-end",
-                  },
-                  [
-                    _c("b-form-input", {
-                      staticClass: "d-inline-block mr-1",
-                      attrs: { placeholder: "Search..." },
-                      model: {
-                        value: _vm.searchQuery,
-                        callback: function ($$v) {
-                          _vm.searchQuery = $$v
-                        },
-                        expression: "searchQuery",
-                      },
-                    }),
-                  ],
-                  1
-                ),
-              ]),
-            ],
-            1
-          ),
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c("b-table", {
-        ref: "refDriverTableList",
-        staticClass: "position-relative",
-        attrs: {
-          items: _vm.fetctDriver,
-          responsive: "",
-          fields: _vm.tableColumns,
-          "primary-key": "id",
-          "sort-by": _vm.sortBy,
-          "show-empty": "",
-          "empty-text": "Nenhum motorista registado",
-          "sort-desc": _vm.isSortDirDesc,
-        },
-        on: {
-          "update:sortBy": function ($event) {
-            _vm.sortBy = $event
-          },
-          "update:sort-by": function ($event) {
-            _vm.sortBy = $event
-          },
-          "update:sortDesc": function ($event) {
-            _vm.isSortDirDesc = $event
-          },
-          "update:sort-desc": function ($event) {
-            _vm.isSortDirDesc = $event
-          },
-        },
-        scopedSlots: _vm._u([
-          {
-            key: "cell(nome_completo)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.person.nome_completo) +
-                    " " +
-                    _vm._s(data.item.person.apelido) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(Endereço)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.person.endereco) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(cargo)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.person.cargo) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(NUIT)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.person.NUIT) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(Documento)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.doc_type) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(Nr_do_documento)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.nr_documento) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(Carta_de_Condução)",
-            fn: function (data) {
-              return [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(data.item.carta_conducao) +
-                    "\r\n        "
-                ),
-              ]
-            },
-          },
-          {
-            key: "cell(acções)",
-            fn: function (data) {
-              return [
-                _c(
-                  "b-dropdown",
-                  {
-                    attrs: {
-                      variant: "link",
-                      "no-caret": "",
-                      right: _vm.$store.state.appConfig.isRTL,
-                    },
-                    scopedSlots: _vm._u(
-                      [
-                        {
-                          key: "button-content",
-                          fn: function () {
-                            return [
-                              _c("feather-icon", {
-                                staticClass: "align-middle text-body",
-                                attrs: { icon: "MoreVerticalIcon", size: "16" },
-                              }),
-                            ]
-                          },
-                          proxy: true,
-                        },
-                      ],
-                      null,
-                      true
-                    ),
-                  },
-                  [
-                    _vm._v(" "),
-                    _c(
-                      "b-dropdown-item",
-                      {
-                        attrs: {
-                          to: {
-                            name: "driver-details",
-                            params: { id: data.item.id },
-                          },
-                        },
-                      },
-                      [
-                        _c("feather-icon", { attrs: { icon: "FileTextIcon" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "align-middle ml-50" }, [
-                          _vm._v("Detalhes"),
-                        ]),
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "b-dropdown-item",
-                      {
-                        attrs: {
-                          to: {
-                            name: "driver-edit",
-                            params: { id: data.item.id },
-                          },
-                        },
-                      },
-                      [
-                        _c("feather-icon", { attrs: { icon: "EditIcon" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "align-middle ml-50" }, [
-                          _vm._v("Editar"),
-                        ]),
-                      ],
-                      1
-                    ),
-                  ],
-                  1
-                ),
-              ]
-            },
-          },
-        ]),
-      }),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "mx-2 mb-2" },
-        [
-          _c(
-            "b-row",
-            [
               _c(
                 "b-col",
-                {
-                  staticClass:
-                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-start\r\n            ",
-                  attrs: { cols: "12", sm: "6" },
-                },
                 [
-                  _c("span", { staticClass: "text-muted" }, [
-                    _vm._v(
-                      "mostrar " +
-                        _vm._s(_vm.dataMeta.from) +
-                        " para " +
-                        _vm._s(_vm.dataMeta.to) +
-                        " de\r\n              " +
-                        _vm._s(_vm.dataMeta.of) +
-                        " entradas"
-                    ),
-                  ]),
-                ]
+                  _c(
+                    "b-form-group",
+                    { attrs: { label: "Intervalo de datas" } },
+                    [
+                      _c("date-picker", {
+                        staticClass: "mb-1",
+                        staticStyle: { width: "100%" },
+                        attrs: {
+                          "value-type": "format",
+                          format: "YYYY-MM-DD",
+                          id: "example-datepicker1",
+                          range: "",
+                          locale: "pt",
+                        },
+                        model: {
+                          value: _vm.intervalo,
+                          callback: function ($$v) {
+                            _vm.intervalo = $$v
+                          },
+                          expression: "intervalo",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
+                ],
+                1
               ),
               _vm._v(" "),
               _c(
                 "b-col",
-                {
-                  staticClass:
-                    "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-end\r\n            ",
-                  attrs: { cols: "12", sm: "6" },
-                },
                 [
-                  _c("b-pagination", {
-                    staticClass: "mb-0 mt-1 mt-sm-0",
-                    attrs: {
-                      "total-rows": _vm.totalDrivers,
-                      "per-page": _vm.perPage,
-                      "first-number": "",
-                      "last-number": "",
-                      "prev-class": "prev-item",
-                      "next-class": "next-item",
+                  _c(
+                    "b-button",
+                    {
+                      staticClass: "mt-2",
+                      attrs: { variant: "outline-primary" },
                     },
-                    scopedSlots: _vm._u([
-                      {
-                        key: "prev-text",
-                        fn: function () {
-                          return [
-                            _c("feather-icon", {
-                              attrs: { icon: "ChevronLeftIcon", size: "18" },
+                    [
+                      _vm._v("\n          imprimir "),
+                      _c("i", { staticClass: "fas fa-print" }),
+                    ]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("b-table", {
+            ref: "refOrderListTable",
+            staticClass: "position-relative",
+            staticStyle: { "font-size": "8pt" },
+            attrs: {
+              items: _vm.fetchOrdens,
+              responsive: "",
+              fields: _vm.tableColumns,
+              "primary-key": "id",
+              "sort-by": _vm.sortBy,
+              "show-empty": "",
+              "empty-text": "Nenhuma Ordem encontrada",
+              "sort-desc": _vm.isSortDirDesc,
+            },
+            on: {
+              "update:sortBy": function ($event) {
+                _vm.sortBy = $event
+              },
+              "update:sort-by": function ($event) {
+                _vm.sortBy = $event
+              },
+              "update:sortDesc": function ($event) {
+                _vm.isSortDirDesc = $event
+              },
+              "update:sort-desc": function ($event) {
+                _vm.isSortDirDesc = $event
+              },
+            },
+            scopedSlots: _vm._u([
+              {
+                key: "cell(codigo)",
+                fn: function (data) {
+                  return [
+                    _vm._v(
+                      "\n      " + _vm._s(data.item.codigo_ordem) + "\n    "
+                    ),
+                  ]
+                },
+              },
+              {
+                key: "cell(viaturas)",
+                fn: function (data) {
+                  return [
+                    data.item.viatura.length > 0
+                      ? _c("span", [
+                          _c(
+                            "ul",
+                            { staticClass: "list-group" },
+                            _vm._l(data.item.viatura, function (via, v) {
+                              return _c(
+                                "li",
+                                {
+                                  key: "v" + v,
+                                  staticClass: "list-group-item",
+                                },
+                                [
+                                  _vm._v(
+                                    "\n          " +
+                                      _vm._s(via.matricula) +
+                                      "\n          "
+                                  ),
+                                ]
+                              )
                             }),
-                          ]
-                        },
-                        proxy: true,
-                      },
-                      {
-                        key: "next-text",
-                        fn: function () {
-                          return [
-                            _c("feather-icon", {
-                              attrs: { icon: "ChevronRightIcon", size: "18" },
-                            }),
-                          ]
-                        },
-                        proxy: true,
-                      },
-                    ]),
-                    model: {
-                      value: _vm.currentPage,
-                      callback: function ($$v) {
-                        _vm.currentPage = $$v
-                      },
-                      expression: "currentPage",
+                            0
+                          ),
+                        ])
+                      : _c("span", [_vm._v("\n          -\n      ")]),
+                  ]
+                },
+              },
+              {
+                key: "cell(qtd)",
+                fn: function (data) {
+                  return [
+                    data.item.ordem_viatura.length > 0
+                      ? _c("span", [
+                          _c(
+                            "ul",
+                            { staticClass: "list-group" },
+                            _vm._l(
+                              data.item.ordem_viatura,
+                              function (ordVi, v) {
+                                return _c(
+                                  "li",
+                                  {
+                                    key: "v" + v,
+                                    staticClass: "list-group-item",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n          " +
+                                        _vm._s(ordVi.qtd_abastecida) +
+                                        "\n          "
+                                    ),
+                                  ]
+                                )
+                              }
+                            ),
+                            0
+                          ),
+                        ])
+                      : _c("span", [_vm._v("\n        0\n      ")]),
+                  ]
+                },
+              },
+              {
+                key: "cell(subtotal)",
+                fn: function (data) {
+                  return [
+                    data.item.ordem_viatura.length > 0
+                      ? _c("span", [
+                          _c(
+                            "ul",
+                            { staticClass: "list-group" },
+                            _vm._l(
+                              data.item.ordem_viatura,
+                              function (ordVi, v) {
+                                return _c(
+                                  "li",
+                                  {
+                                    key: "p" + v,
+                                    staticClass: "list-group-item",
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n          " +
+                                        _vm._s(ordVi.preco_cunsumo) +
+                                        "\n          "
+                                    ),
+                                  ]
+                                )
+                              }
+                            ),
+                            0
+                          ),
+                        ])
+                      : _c("span", [_vm._v("\n        0\n      ")]),
+                  ]
+                },
+              },
+              {
+                key: "cell(rota)",
+                fn: function (data) {
+                  return [
+                    data.item.ordem_viatura.length > 0
+                      ? _c(
+                          "span",
+                          _vm._l(data.item.ordem_viatura, function (v, i) {
+                            return _c("span", { key: "p" + i }, [
+                              v.rota !== null
+                                ? _c(
+                                    "div",
+                                    { staticClass: "m-2" },
+                                    [
+                                      _vm._l(v.rota, function (rota, r) {
+                                        return _c("span", { key: "r" + r }, [
+                                          _vm._v(
+                                            "\n                          " +
+                                              _vm._s(rota.nome_rota) +
+                                              ",\n                      "
+                                          ),
+                                        ])
+                                      }),
+                                      _vm._v(" "),
+                                      _c("br"),
+                                    ],
+                                    2
+                                  )
+                                : _vm._e(),
+                            ])
+                          }),
+                          0
+                        )
+                      : _c("span", [_vm._v(" --")]),
+                  ]
+                },
+              },
+              {
+                key: "cell(autor)",
+                fn: function (data) {
+                  return [
+                    data.item.created_by !== null
+                      ? _c("div", [
+                          _vm._v(
+                            "\n          " +
+                              _vm._s(data.item.created_by.name) +
+                              "\n      "
+                          ),
+                        ])
+                      : _vm._e(),
+                  ]
+                },
+              },
+            ]),
+          }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mx-2 mb-2" },
+            [
+              _c(
+                "b-row",
+                [
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-start\n          ",
+                      attrs: { cols: "12", sm: "6" },
                     },
-                  }),
+                    [
+                      _c("span", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Showing " +
+                            _vm._s(_vm.dataMeta.from) +
+                            " to " +
+                            _vm._s(_vm.dataMeta.to) +
+                            " of\n            " +
+                            _vm._s(_vm.dataMeta.of) +
+                            " entries"
+                        ),
+                      ]),
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "b-col",
+                    {
+                      staticClass:
+                        "\n            d-flex\n            align-items-center\n            justify-content-center justify-content-sm-end\n          ",
+                      attrs: { cols: "12", sm: "6" },
+                    },
+                    [
+                      _c("b-pagination", {
+                        staticClass: "mb-0 mt-1 mt-sm-0",
+                        attrs: {
+                          "total-rows": _vm.totalOrdens,
+                          "per-page": _vm.perPage,
+                          "first-number": "",
+                          "last-number": "",
+                          "prev-class": "prev-item",
+                          "next-class": "next-item",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "prev-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronLeftIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                          {
+                            key: "next-text",
+                            fn: function () {
+                              return [
+                                _c("feather-icon", {
+                                  attrs: {
+                                    icon: "ChevronRightIcon",
+                                    size: "18",
+                                  },
+                                }),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                        ]),
+                        model: {
+                          value: _vm.currentPage,
+                          callback: function ($$v) {
+                            _vm.currentPage = $$v
+                          },
+                          expression: "currentPage",
+                        },
+                      }),
+                    ],
+                    1
+                  ),
                 ],
                 1
               ),
@@ -1118,18 +1769,18 @@ var useRouter = function useRouter() {
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue":
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue":
 /*!*******************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue ***!
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue ***!
   \*******************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lista.vue?vue&type=template&id=55e2aadc& */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&");
-/* harmony import */ var _lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./lista.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bombasDetails.vue?vue&type=template&id=cb9140c0& */ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0&");
+/* harmony import */ var _bombasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./bombasDetails.vue?vue&type=script&lang=js& */ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -1138,9 +1789,9 @@ __webpack_require__.r(__webpack_exports__);
 /* normalize component */
 
 var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  _bombasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -1150,47 +1801,163 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue"
+component.options.__file = "resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&":
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js& ***!
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js& ***!
   \********************************************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bombasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./bombasDetails.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_bombasDetails_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&":
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0&":
 /*!**************************************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc& ***!
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0& ***!
   \**************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../node_modules/vue-loader/lib??vue-loader-options!./lista.vue?vue&type=template&id=55e2aadc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-pickete/relatorios/motoristas/lista.vue?vue&type=template&id=55e2aadc&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../node_modules/vue-loader/lib??vue-loader-options!./bombasDetails.vue?vue&type=template&id=cb9140c0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/src/views/Gestao-abastecimentos/bombas/bombasDetails.vue?vue&type=template&id=cb9140c0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_lista_vue_vue_type_template_id_55e2aadc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_bombasDetails_vue_vue_type_template_id_cb9140c0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js":
-/*!*********************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/storeMotoritaModules.js ***!
-  \*********************************************************************************************/
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/bombasIndex.js":
+/*!****************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/bombasIndex.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useBombasList; });
+/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
+/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
+/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
+
+ // Notification
+
+
+
+
+function useBombasList() {
+  // Use toast
+  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_2__["useToast"])();
+  var refOrderListTable = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
+  var tableColumns = [{
+    key: 'Codigo',
+    sortable: true
+  }, {
+    key: 'estado',
+    sortable: true
+  }, {
+    key: 'viaturas',
+    sortable: true
+  }, {
+    key: 'qtd',
+    sortable: true
+  }, {
+    key: 'subtotal',
+    sortable: true
+  }, {
+    key: 'rota',
+    sortable: true
+  }, {
+    key: 'autor',
+    sortable: true
+  }];
+  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(15);
+  var totalOrdens = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
+  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
+  var perPageOptions = [15, 30, 55, 100];
+  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
+  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
+  var intervalo = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
+  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
+    var localItemsCount = refOrderListTable.value ? refOrderListTable.value.localItems.length : 0;
+    return {
+      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
+      to: perPage.value * (currentPage.value - 1) + localItemsCount,
+      of: totalOrdens.value
+    };
+  });
+
+  var refetchData = function refetchData() {
+    refOrderListTable.value.refresh();
+  };
+
+  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery], function () {
+    refetchData();
+  });
+
+  var fetchOrdens = function fetchOrdens(ctx, callback) {
+    _store__WEBPACK_IMPORTED_MODULE_4__["default"].dispatch('app-bombas/fetchOrdemLists', {
+      q: searchQuery.value,
+      perPage: perPage.value,
+      page: currentPage.value,
+      sortBy: sortBy.value,
+      sortDesc: isSortDirDesc.value,
+      intervalo: intervalo.value
+    }).then(function (response) {
+      var ordens = response.data;
+      callback(ordens.data);
+      totalOrdens.value = ordens.total;
+      console.log(totalOrdens.value);
+    })["catch"](function () {
+      toast({
+        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+        props: {
+          title: 'Erro na listagem das ordens',
+          icon: 'AlertTriangleIcon',
+          variant: 'danger'
+        }
+      });
+    });
+  };
+
+  return {
+    fetchOrdens: fetchOrdens,
+    perPage: perPage,
+    tableColumns: tableColumns,
+    currentPage: currentPage,
+    totalOrdens: totalOrdens,
+    intervalo: intervalo,
+    dataMeta: dataMeta,
+    perPageOptions: perPageOptions,
+    searchQuery: searchQuery,
+    sortBy: sortBy,
+    isSortDirDesc: isSortDirDesc,
+    refetchData: refetchData
+  };
+}
+
+/***/ }),
+
+/***/ "./resources/js/src/views/Gestao-abastecimentos/bombas/storeBombaIndex.js":
+/*!********************************************************************************!*\
+  !*** ./resources/js/src/views/Gestao-abastecimentos/bombas/storeBombaIndex.js ***!
+  \********************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1199,6 +1966,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
 /* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @axios */ "./resources/js/src/libs/axios.js");
+/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1207,30 +1976,12 @@ __webpack_require__.r(__webpack_exports__);
   getters: {},
   mutations: {},
   actions: {
-    fetchDrivers: function fetchDrivers(ctx, queryParams) {
+    fetchOrdemLists: function fetchOrdemLists(ctx, _ref) {
+      var queryParams = _ref.queryParams;
       return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('/api/motorista', {
+        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/RelatorioBomba/".concat(_router__WEBPACK_IMPORTED_MODULE_2__["default"].currentRoute.params.id), {
           params: queryParams
         }).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    fetchDriver: function fetchDriver(ctx, _ref) {
-      var id = _ref.id;
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].get("/api/motorista/".concat(id)).then(function (response) {
-          return resolve(response);
-        })["catch"](function (error) {
-          return reject(error);
-        });
-      });
-    },
-    addDriver: function addDriver(ctx, driverData) {
-      return new Promise(function (resolve, reject) {
-        _axios__WEBPACK_IMPORTED_MODULE_1__["default"].post('/api/motorista', driverData).then(function (response) {
           return resolve(response);
         })["catch"](function (error) {
           return reject(error);
@@ -1239,129 +1990,6 @@ __webpack_require__.r(__webpack_exports__);
     }
   }
 });
-
-/***/ }),
-
-/***/ "./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/src/views/Gestao-pickete/relatorios/motoristas/useMotoristasList.js ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return useMotoristasList; });
-/* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store */ "./resources/js/src/store/index.js");
-/* harmony import */ var _core_utils_filter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @core/utils/filter */ "./resources/js/src/@core/utils/filter.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-toastification/composition */ "./node_modules/vue-toastification/composition/index.js");
-/* harmony import */ var vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @core/components/toastification/ToastificationContent.vue */ "./resources/js/src/@core/components/toastification/ToastificationContent.vue");
-
-
- // Notification
-
-
-
-function useMotoristasList() {
-  // Use toast
-  var toast = Object(vue_toastification_composition__WEBPACK_IMPORTED_MODULE_3__["useToast"])();
-  var refDriverTableList = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null); // Table Handlers
-
-  var tableColumns = [{
-    key: 'nome_completo',
-    sortable: true
-  }, {
-    key: 'Endereço',
-    sortable: true
-  }, {
-    key: 'Cargo',
-    sortable: true
-  }, {
-    Key: 'NUIT',
-    sortable: true
-  }, {
-    key: 'Documento',
-    sortable: true
-  }, {
-    key: 'Nr_do_documento',
-    sortable: true
-  }, {
-    Key: 'Carta_de_Condução',
-    sortable: true
-  }, {
-    key: 'acções'
-  }];
-  var perPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(10);
-  var totalDrivers = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(0);
-  var currentPage = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(1);
-  var perPageOptions = [10, 25, 50, 100];
-  var searchQuery = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('');
-  var sortBy = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])('id');
-  var isSortDirDesc = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(true);
-  var departmentFilter = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["ref"])(null);
-  var dataMeta = Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["computed"])(function () {
-    var localItemsCount = refDriverTableList.value ? refDriverTableList.value.localItems.length : 0;
-    return {
-      from: perPage.value * (currentPage.value - 1) + (localItemsCount ? 1 : 0),
-      to: perPage.value * (currentPage.value - 1) + localItemsCount,
-      of: totalDrivers.value
-    };
-  });
-
-  var refetchData = function refetchData() {
-    refDriverTableList.value.refresh();
-  };
-
-  Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_0__["watch"])([currentPage, perPage, searchQuery, departmentFilter], function () {
-    refetchData();
-  });
-
-  var fetctDriver = function fetctDriver(ctx, callback) {
-    _store__WEBPACK_IMPORTED_MODULE_1__["default"].dispatch('Picket/fetchDrivers', {
-      q: searchQuery.value,
-      perPage: perPage.value,
-      page: currentPage.value,
-      sortBy: sortBy.value,
-      sortDesc: isSortDirDesc.value,
-      departamento: departmentFilter.value
-    }).then(function (response) {
-      var motoristas = response.data;
-      callback(motoristas.data);
-      totalDrivers.value = motoristas.total;
-    })["catch"](function () {
-      toast({
-        component: _core_components_toastification_ToastificationContent_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
-        props: {
-          title: 'Erro na listagem de motoristas',
-          icon: 'AlertTriangleIcon',
-          variant: 'danger'
-        }
-      });
-    });
-  }; // *===============================================---*
-  // *--------- UI ---------------------------------------*
-  // *===============================================---*
-
-
-  return {
-    fetctDriver: fetctDriver,
-    tableColumns: tableColumns,
-    perPage: perPage,
-    currentPage: currentPage,
-    totalDrivers: totalDrivers,
-    dataMeta: dataMeta,
-    perPageOptions: perPageOptions,
-    searchQuery: searchQuery,
-    sortBy: sortBy,
-    isSortDirDesc: isSortDirDesc,
-    refDriverTableList: refDriverTableList,
-    refetchData: refetchData,
-    // Extra Filters
-    departmentFilter: departmentFilter
-  };
-}
 
 /***/ })
 

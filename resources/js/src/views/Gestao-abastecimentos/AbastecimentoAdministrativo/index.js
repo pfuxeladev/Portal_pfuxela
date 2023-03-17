@@ -4,7 +4,7 @@ import { useToast } from 'vue-toastification/composition'
 import ToastificationContent from '@core/components/toastification/ToastificationContent.vue'
 import store from '@/store'
 
-function AdministrativeService() {
+export default function AdministrativeService() {
   const AdministrativeTableRef = ref(null)
   const toast = useToast()
   const perPage = ref(10)
@@ -48,7 +48,7 @@ function AdministrativeService() {
   })
 
   const fetchAdminOrders = (ctx, callback) => {
-    store.dispatch('Supply/abastecimentoServicos', {
+    store.dispatch('Supply/getAbastecimentoServicos', {
       q: searchQuery.value,
       perPage: perPage.value,
       page: currentPage.value,
@@ -78,11 +78,11 @@ function AdministrativeService() {
     perPage,
     dataMeta,
     perPageOptions,
+    searchQuery,
     sortBy,
     isSortDirDesc,
     bombasFilter,
     fetchAdminOrders,
+    refetchData,
   }
 }
-
-export default AdministrativeService()
