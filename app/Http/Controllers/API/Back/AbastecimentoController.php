@@ -113,11 +113,21 @@ class AbastecimentoController extends Controller
 
         $uuid = Str::uuid()->toString();
 
-        $ordem = Ordem::where('refs', $request->ordem_id)->first();
-        if ($request->bombas_id != null) {
+            $ordem = new Ordem();
+            $counter = 10000;
+            $uuid = Str::uuid()->toString();
+
+            $last_order = Ordem::latest()->first();
+            if (!empty($last_order)) {
+                $new_code = ($last_order->codigo_ordem + 1);
+                $ordem->codigo_ordem = $new_code;
+            } else {
+                $ordem->codigo_ordem = $counter;
+            }
             $ordem->bombas_id = $request->bombas_id;
-            $ordem->update();
-        }
+            $ordem->refs = $uuid;
+            $ordem->save();
+
 
         $datetime = \Carbon\Carbon::now()->subHours(5)->format("Y-m-d H:i:s");
         $viatura = Viatura::where('id', $request->viatura_id)->first();
