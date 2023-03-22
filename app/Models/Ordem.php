@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\abastecimento;
+use App\Models\NewModule\AdministrativeOrder;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -52,6 +53,11 @@ class Ordem extends Model
     public function abastecimentoExtra(){
         return $this->hasMany(abastecimentoExtra::class, 'ordem_id', 'id');
     }
+
+     function administrative(){
+        return $this->hasOne(AdministrativeOrder::class);
+    }
+    // Query params
     public function scopeAuthorized( $query )
     {
         return $query->where( 'estado', self::ESTADO_AUTH );

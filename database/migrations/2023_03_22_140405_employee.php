@@ -1,11 +1,12 @@
 <?php
 
-use App\Models\fichaObra;
+use App\Models\Departamento;
+use App\Models\Person;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFichaObraServicesTable extends Migration
+class Employee extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +15,11 @@ class CreateFichaObraServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ficha_obra_services', function (Blueprint $table) {
+        Schema::create('employees', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(fichaObra::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
-            $table->string('Servico');
-            $table->timestamps();
+            $table->foreignIdFor(Person::class)->constrained()->cascadeOnUpdate();
+            $table->foreignIdFor(Departamento::class)->constrained()->cascadeOnUpdate();
+            $table->string('position');
         });
     }
 
@@ -29,6 +30,6 @@ class CreateFichaObraServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ficha_obra_services');
+        //
     }
 }

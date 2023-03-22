@@ -22,7 +22,7 @@ class CreateOrdemViaturasTable extends Migration
             $table->foreignIdFor(Ordem::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreignIdFor(Viatura::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->bigInteger('qtd_abastecida');
-            $table->decimal('preco_cunsumo', 10,2)->default(1);
+            $table->decimal('preco_consumo', 10,2)->default(1);
             $table->foreignIdFor(User::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedBigInteger('updatedBy')->nullable();
             $table->foreign('updatedBy')->references('id')->on('users')->onDelete('cascade');
