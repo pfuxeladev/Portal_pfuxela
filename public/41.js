@@ -845,11 +845,11 @@ var render = function () {
                                   data.item.ordem !== null
                                     ? _c("span", [
                                         _vm._v(
-                                          "\n                        " +
+                                          "\r\n                        " +
                                             _vm._s(
                                               data.item.ordem.codigo_ordem
                                             ) +
-                                            "\n                        "
+                                            "\r\n                        "
                                         ),
                                       ])
                                     : _vm._e(),
@@ -863,14 +863,14 @@ var render = function () {
                                   data.item.ordem !== null
                                     ? _c("span", [
                                         _vm._v(
-                                          "\n                        " +
+                                          "\r\n                        " +
                                             _vm._s(data.item.ordem.estado) +
-                                            "\n                        "
+                                            "\r\n                        "
                                         ),
                                       ])
                                     : _c("span", [
                                         _vm._v(
-                                          "\n                            -\n                        "
+                                          "\r\n                            -\r\n                        "
                                         ),
                                       ]),
                                 ]
@@ -881,11 +881,11 @@ var render = function () {
                               fn: function (data) {
                                 return [
                                   _vm._v(
-                                    "\n                        " +
+                                    "\r\n                        " +
                                       _vm._s(
                                         data.item.ordem.bombas.nome_bombas
                                       ) +
-                                      "\n                    "
+                                      "\r\n                    "
                                   ),
                                 ]
                               },
@@ -895,11 +895,11 @@ var render = function () {
                               fn: function (data) {
                                 return [
                                   _vm._v(
-                                    "\n                        " +
+                                    "\r\n                        " +
                                       _vm._s(
                                         _vm.dateTime(data.item.ordem.created_at)
                                       ) +
-                                      "\n                    "
+                                      "\r\n                    "
                                   ),
                                 ]
                               },
@@ -1004,7 +1004,7 @@ var render = function () {
                           ],
                           null,
                           false,
-                          1889232419
+                          1550105635
                         ),
                       }),
                       _vm._v(" "),
@@ -1346,8 +1346,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getRandomBsVariant", function() { return getRandomBsVariant; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isDynamicRouteActive", function() { return isDynamicRouteActive; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useRouter", function() { return useRouter; });
-/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
-/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/router */ "./resources/js/src/router/index.js");
 /* harmony import */ var _vue_composition_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @vue/composition-api */ "./node_modules/@vue/composition-api/dist/vue-composition-api.mjs");
 
@@ -1356,7 +1356,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var isObject = function isObject(obj) {
-  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
+  return Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_typeof_js__WEBPACK_IMPORTED_MODULE_1__["default"])(obj) === 'object' && obj !== null;
 };
 var isToday = function isToday(date) {
   var today = new Date();
@@ -1394,7 +1394,7 @@ var useRouter = function useRouter() {
   }, function (r) {
     state.route = r;
   });
-  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
+  return Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])(Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, Object(_vue_composition_api__WEBPACK_IMPORTED_MODULE_3__["toRefs"])(state)), {}, {
     router: vm.$router
   });
 };

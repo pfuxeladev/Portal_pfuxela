@@ -2664,12 +2664,12 @@ function useLayoutHorizontal(navbarMenuType, footerType, isVerticalMenuActive) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "useUtils", function() { return useUtils; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_", function() { return _; });
-/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+/* harmony import */ var C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils */ "./resources/js/src/@core/libs/acl/utils.js");
 
 
 var useUtils = function useUtils() {
-  return Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
+  return Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_objectSpread2_js__WEBPACK_IMPORTED_MODULE_0__["default"])({}, _utils__WEBPACK_IMPORTED_MODULE_1__);
 };
 var _ = null;
 
@@ -3113,7 +3113,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
+/* harmony import */ var C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.array.concat.js */ "./node_modules/core-js/modules/es.array.concat.js");
 /* harmony import */ var core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_array_concat_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _dashboard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dashboard */ "./resources/js/src/navigation/horizontal/dashboard.js");
@@ -3159,7 +3159,7 @@ route: [route_obj/route_name] (I have to resolve name somehow from the route obj
 
  // Array of sections
 
-/* harmony default export */ __webpack_exports__["default"] = ([].concat(Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_apps__WEBPACK_IMPORTED_MODULE_3__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_elements__WEBPACK_IMPORTED_MODULE_6__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_forms_and_table__WEBPACK_IMPORTED_MODULE_7__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_pages__WEBPACK_IMPORTED_MODULE_4__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_charts_and_maps__WEBPACK_IMPORTED_MODULE_5__["default"]), Object(C_wamp64_www_portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_others__WEBPACK_IMPORTED_MODULE_8__["default"])));
+/* harmony default export */ __webpack_exports__["default"] = ([].concat(Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_dashboard__WEBPACK_IMPORTED_MODULE_2__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_apps__WEBPACK_IMPORTED_MODULE_3__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_ui_elements__WEBPACK_IMPORTED_MODULE_6__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_forms_and_table__WEBPACK_IMPORTED_MODULE_7__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_pages__WEBPACK_IMPORTED_MODULE_4__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_charts_and_maps__WEBPACK_IMPORTED_MODULE_5__["default"]), Object(C_Users_digit_OneDrive_Documents_Digital_developer_My_Repository_Abastecimento_System_Portal_pfuxela_node_modules_babel_runtime_helpers_esm_toConsumableArray_js__WEBPACK_IMPORTED_MODULE_0__["default"])(_others__WEBPACK_IMPORTED_MODULE_8__["default"])));
 
 /***/ }),
 

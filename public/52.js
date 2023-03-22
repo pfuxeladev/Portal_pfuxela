@@ -974,7 +974,7 @@ var _ = null;
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/pages/login-v2-dark.svg";
+module.exports = "/images/_/_/_/_/Portal_pfuxela/resources/js/src/assets/images/pages/login-v2-dark.svg";
 
 /***/ }),
 
@@ -985,7 +985,7 @@ module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/pages/login-v2.svg";
+module.exports = "/images/_/_/_/_/Portal_pfuxela/resources/js/src/assets/images/pages/login-v2.svg";
 
 /***/ }),
 

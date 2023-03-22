@@ -584,7 +584,7 @@ var render = function () {
                               },
                               [
                                 _vm._v(
-                                  "\n                                Actualizar\n                            "
+                                  "\r\n                                Actualizar\r\n                            "
                                 ),
                               ]
                             ),

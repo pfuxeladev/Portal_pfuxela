@@ -643,9 +643,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(_vm.dateTime(data.item.created_at)) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -655,9 +655,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(data.item.check_list_out.hr_inicio) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -667,9 +667,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(data.item.hr_fim) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -679,9 +679,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(data.item.check_list_out.viatura.matricula) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -691,9 +691,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(data.item.km_fim) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -703,9 +703,9 @@ var render = function () {
                 fn: function (data) {
                   return [
                     _vm._v(
-                      "\n                " +
+                      "\r\n                " +
                         _vm._s(data.item.user.name) +
-                        "\n            "
+                        "\r\n            "
                     ),
                   ]
                 },
@@ -791,7 +791,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-start\n            ",
+                        "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-start\r\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [
@@ -801,7 +801,7 @@ var render = function () {
                             _vm._s(_vm.dataMeta.from) +
                             " a " +
                             _vm._s(_vm.dataMeta.to) +
-                            " de\n              " +
+                            " de\r\n              " +
                             _vm._s(_vm.dataMeta.of) +
                             " entradas"
                         ),
@@ -813,7 +813,7 @@ var render = function () {
                     "b-col",
                     {
                       staticClass:
-                        "\n              d-flex\n              align-items-center\n              justify-content-center justify-content-sm-end\n            ",
+                        "\r\n              d-flex\r\n              align-items-center\r\n              justify-content-center justify-content-sm-end\r\n            ",
                       attrs: { cols: "12", sm: "6" },
                     },
                     [

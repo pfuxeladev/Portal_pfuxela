@@ -1764,7 +1764,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/images/_/_/_/_/portal_pfuxela/resources/js/src/assets/images/icons/pdf.png";
+module.exports = "/images/_/_/_/_/Portal_pfuxela/resources/js/src/assets/images/icons/pdf.png";
 
 /***/ }),
 
